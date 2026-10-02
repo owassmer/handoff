@@ -1,0 +1,2299 @@
+
+
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+GoGreen Business Energy Financing Regulations | State of California Office of the State Treasurer
+
+    
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+
+    
+
+    
+
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+
+      gtag('config', 'G-N5Y60EJBHF');
+
+
+      /*
+       * GA4 Chatbot Event Tracker
+       */
+      function trackChatbotEvent(eventName, params = {}) {
+
+        if (typeof gtag === 'function') {
+
+          gtag('event', eventName, {
+            event_category: 'Chatbot',
+            chatbot_name: 'Chatbase',
+            ...params
+          });
+
+          console.log('GA4 Event Fired:', eventName, params);
+        }
+
+      }
+
+
+
+      /*
+       * Load Chatbase Widget
+       */
+      (function () {
+
+
+        if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+
+
+          window.chatbase = (...arguments) => {
+
+            if (!window.chatbase.q) {
+              window.chatbase.q = [];
+            }
+
+            window.chatbase.q.push(arguments);
+
+          };
+
+
+          window.chatbase = new Proxy(window.chatbase, {
+
+            get(target, prop) {
+
+              if (prop === "q") {
+                return target.q;
+              }
+
+              return (...args) => target(prop, ...args);
+
+            }
+
+          });
+
+        }
+
+
+
+        const loadChatbase = function () {
+
+
+          const script = document.createElement("script");
+
+          script.src = "https://www.chatbase.co/embed.min.js";
+
+          script.id = "2LnHEs0hvBPvzTTuTeJw9";
+
+          script.domain = "www.chatbase.co";
+
+
+          document.body.appendChild(script);
+
+
+
+          /*
+           * Chatbot loaded event
+           */
+          trackChatbotEvent('chatbot_loaded');
+
+
+
+          /*
+           * Detect chatbot button clicks
+           */
+          document.addEventListener(
+            'click',
+            function(event) {
+
+
+              let element = event.target;
+
+
+              console.log(
+                'Clicked:',
+                element
+              );
+
+
+              /*
+               * Chatbase launcher detection
+               */
+              if (
+
+                element.closest('iframe') ||
+
+                element.closest('[id*="chat"]') ||
+
+                element.closest('[class*="chat"]')
+
+              ) {
+
+
+                trackChatbotEvent(
+                  'chatbot_open'
+                );
+
+
+              }
+
+
+            },
+            true
+          );
+
+
+        };
+
+
+
+        if (document.readyState === "complete") {
+
+          loadChatbase();
+
+        } else {
+
+          window.addEventListener(
+            "load",
+            loadChatbase
+          );
+
+        }
+
+
+
+      })();
+
+
+
+
+      /*
+       * Capture Chatbase iframe events
+       */
+      window.addEventListener(
+        "message",
+        function(event) {
+
+
+          console.log(
+            "Chatbase Message Received:",
+            event.data
+          );
+
+
+
+          if (!event.data) {
+            return;
+          }
+
+
+
+          let message = event.data;
+
+
+
+          if (typeof message === "object") {
+
+            message = JSON.stringify(message);
+
+          }
+
+
+
+          message = message.toLowerCase();
+
+
+
+          /*
+           * Chatbase open/start events
+           */
+          if (
+
+            message.includes('open') ||
+
+            message.includes('started') ||
+
+            message.includes('start')
+
+          ) {
+
+
+            trackChatbotEvent(
+              'chatbot_open'
+            );
+
+
+          }
+
+
+
+          /*
+           * Chatbase message events
+           */
+          if (
+
+            message.includes('message') ||
+
+            message.includes('user')
+
+          ) {
+
+
+            trackChatbotEvent(
+              'chatbot_message',
+              {
+                action: message.substring(0,100)
+              }
+            );
+
+
+          }
+
+
+
+          /*
+           * Generic Chatbase interaction
+           */
+          if (
+
+            message.includes('chatbase')
+
+          ) {
+
+
+            trackChatbotEvent(
+              'chatbot_interaction',
+              {
+                action: message.substring(0,100)
+              }
+            );
+
+
+          }
+
+
+        }
+      );
+
+      
+
+  
+
+  
+
+    
+
+      Skip to main content
+    
+
+    
+      
+
+    
+
+
+  
+
+                
+
+
+
+
+
+
+  
+
+    
+
+      
+
+        
+
+          
+
+            
+
+              
+CA.gov
+
+              
+
+            
+
+          
+
+          
+
+            
+Official website of the State of California
+
+      
+
+        
+
+              
+
+    
+
+  
+
+  
+
+    
+
+      
+
+        
+
+          
+
+        
+
+      
+
+    
+
+  
+
+  
+
+  
+
+    
+
+      
+
+        
+
+        
+
+        
+
+        
+
+        
+Menu
+
+      
+
+    
+
+  
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+    
+
+
+        
+
+          
+
+            
+
+              
+
+                
+
+              
+
+            
+
+          
+
+        
+
+      
+
+            
+
+    
+      
+                              
+        
+        
+
+                                                      
+                                                      
+                      
+
+              The Treasurer
+            
+
+                          
+
+                
+
+                
+Toggle submenu
+
+              
+
+                      
+                                            
+
+    
+              
+
+          
+
+            
+ MAIN MENU
+          
+
+          
+
+            
+
+          
+
+        
+
+
+        
+
+          
+The Treasurer
+
+        
+
+      
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              Biography
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+               Senior Staff Biographies
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              Treasurer Fiona Ma's Official State Portraits
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+               Responsibilities and Functions
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              Boards and Commissions Directory
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                                                      
+                      
+
+              Policy and Initiatives
+            
+
+                          
+
+                
+
+                
+Toggle submenu
+
+              
+
+                      
+                                            
+
+    
+              
+
+          
+
+            
+ MAIN MENU
+          
+
+          
+
+            
+
+          
+
+        
+
+
+        
+
+          
+Policy and Initiatives
+
+        
+
+      
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              6 Housing and Economic Development Goals
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              Core Principles
+            
+
+                      
+                            
+
+          
+
+  
+                  
+
+          
+
+  
+                  
+
+                              
+        
+        
+
+                                                      
+                                                      
+                      
+
+              Divisions
+            
+
+                          
+
+                
+
+                
+Toggle submenu
+
+              
+
+                      
+                                            
+
+    
+              
+
+          
+
+            
+ MAIN MENU
+          
+
+          
+
+            
+
+          
+
+        
+
+
+        
+
+          
+Divisions
+
+        
+
+      
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              Centralized Treasury and Securities Management Division (CTSMD)
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                                                      
+                      
+
+              Investment Division
+            
+
+                          
+
+                
+
+                
+Toggle submenu
+
+              
+
+                      
+                                            
+
+    
+              
+
+          
+
+            
+ MAIN MENU
+          
+
+          
+
+            
+
+          
+
+        
+
+
+        
+
+          
+Investment Division
+
+        
+
+      
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              Local Agency Investment Fund (LAIF)
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              Pooled Money Investment Account (PMIA)
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              Time Deposit Program
+            
+
+                      
+                            
+
+          
+
+  
+                  
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              Public Finance Division (PFD)
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              Administration
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              Information Technology
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              Executive Office
+            
+
+                      
+                            
+
+          
+
+  
+                  
+
+                              
+        
+        
+
+                                                      
+                                                      
+                      
+
+              Boards & Authorities
+            
+
+                          
+
+                
+
+                
+Toggle submenu
+
+              
+
+                      
+                                            
+
+    
+              
+
+          
+
+            
+ MAIN MENU
+          
+
+          
+
+            
+
+          
+
+        
+
+
+        
+
+          
+Boards & Authorities
+
+        
+
+      
+                              
+        
+        
+
+                                                      
+                                                      
+                      
+
+              Financing Authorities
+            
+
+                          
+
+                
+
+                
+Toggle submenu
+
+              
+
+                      
+                                            
+
+    
+              
+
+          
+
+            
+ MAIN MENU
+          
+
+          
+
+            
+
+          
+
+        
+
+
+        
+
+          
+Financing Authorities
+
+        
+
+      
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              California Alternative Energy and Advanced Transportation Financing Authority (CAEATFA)
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              California Educational Facilities Authority (CEFA)
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              California Health Facilities Financing Authority (CHFFA)
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              California School Finance Authority (CSFA)
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              Capital Programs & Climate Financing Authority (CPCFA)
+            
+
+                      
+                            
+
+          
+
+  
+                  
+
+                              
+        
+        
+
+                                                      
+                                                      
+                      
+
+              Allocation and Advisory Committees
+            
+
+                          
+
+                
+
+                
+Toggle submenu
+
+              
+
+                      
+                                            
+
+    
+              
+
+          
+
+            
+ MAIN MENU
+          
+
+          
+
+            
+
+          
+
+        
+
+
+        
+
+          
+Allocation and Advisory Committees
+
+        
+
+      
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              CA Debt & Investment Advisory Commission (CDIAC)
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              California Debt Limit Allocation Committee (CDLAC)
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              California Tax Credit Allocation Committee (CTCAC)
+            
+
+                      
+                            
+
+          
+
+  
+                  
+
+                              
+        
+        
+
+                                                      
+                                                      
+                      
+
+              Financial Security for All (FSFA)
+            
+
+                          
+
+                
+
+                
+Toggle submenu
+
+              
+
+                      
+                                            
+
+    
+              
+
+          
+
+            
+ MAIN MENU
+          
+
+          
+
+            
+
+          
+
+        
+
+
+        
+
+          
+Financial Security for All (FSFA)
+
+        
+
+      
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              CalKIDS
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              CalSavers Retirement Savings Board
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              California Hope, Opportunity, Perseverance, and Empowerment (HOPE) for Children Trust Account Program
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              ScholarShare Investment Board (SIB)
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              California Achieving a Better Life Experience  (CalABLE)
+            
+
+                      
+                            
+
+          
+
+  
+                  
+
+                              
+        
+        
+
+                                                      
+                                                      
+                      
+
+              Other Commissions
+            
+
+                          
+
+                
+
+                
+Toggle submenu
+
+              
+
+                      
+                                            
+
+    
+              
+
+          
+
+            
+ MAIN MENU
+          
+
+          
+
+            
+
+          
+
+        
+
+
+        
+
+          
+Other Commissions
+
+        
+
+      
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              CalAccount Blue Ribbon Commission (CBRC)
+            
+
+                      
+                            
+
+          
+
+  
+                  
+
+          
+
+  
+                  
+
+                              
+        
+        
+
+                                                      
+                                                      
+                      
+
+              Bonds
+            
+
+                          
+
+                
+
+                
+Toggle submenu
+
+              
+
+                      
+                                            
+
+    
+              
+
+          
+
+            
+ MAIN MENU
+          
+
+          
+
+            
+
+          
+
+        
+
+
+        
+
+          
+Bonds
+
+        
+
+      
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              Buy California Bonds
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              Upcoming Bond Sale Calendar
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              Outstanding Debt by Month
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              GO Bond Finance Committee Meeting Agendas
+            
+
+                      
+                            
+
+          
+
+  
+                  
+
+                              
+        
+        
+
+                                                      
+                                                      
+                      
+
+              News
+            
+
+                          
+
+                
+
+                
+Toggle submenu
+
+              
+
+                      
+                                            
+
+    
+              
+
+          
+
+            
+ MAIN MENU
+          
+
+          
+
+            
+
+          
+
+        
+
+
+        
+
+          
+News
+
+        
+
+      
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              News
+            
+
+                      
+                            
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              Events
+            
+
+                      
+                            
+
+          
+
+  
+                  
+
+                              
+        
+        
+
+                                                      
+                    
+                      
+
+              Treasurer's Resources
+            
+
+                      
+                            
+
+          
+
+  
+ 
+      
+
+        
+
+          
+
+            
+
+            
+Search
+
+          
+
+        
+
+        
+
+          
+
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+          
+                    
+Search
+
+
+
+
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+      
+
+        
+Close
+
+      
+
+  
+
+
+
+
+
+
+        
+
+        
+
+          
+
+  
+    
+      
+
+      
+
+window.gtranslateSettings = {"switcher_horizontal_position":"left","switcher_vertical_position":"bottom","horizontal_position":"inline","vertical_position":"inline","float_switcher_open_direction":"top","switcher_open_direction":"bottom","default_language":"en","native_language_names":1,"detect_browser_language":0,"add_new_line":1,"select_language_label":"","flag_size":32,"flag_style":"2d","globe_size":60,"alt_flags":[],"wrapper_selector":".gtranslate_wrapper","url_structure":"none","custom_domains":null,"languages":["en","zh-CN","zh-TW","ko","es","tl","vi","fa","pa"],"custom_css":""};
+(function(){var js = document.createElement('script');js.setAttribute('src', 'https://cdn.gtranslate.net/widgets/latest/dropdown.js');js.setAttribute('data-gt-orig-url', '/caeatfa/gogreen/business/regulations');js.setAttribute('data-gt-orig-domain', 'website-prod.treasurer.ca.gov');document.body.appendChild(js);})();
+
+    
+
+  
+
+
+        
+
+      
+
+    
+
+    
+
+      
+
+        
+
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+          
+                    
+Search
+
+
+
+
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+      
+
+        
+Close
+
+      
+
+  
+
+
+
+
+
+
+      
+
+    
+
+    
+
+  
+
+
+          
+
+        
+
+            
+
+
+
+        
+
+      
+
+            
+
+                             
+        
+
+          
+          
+
+              
+
+                                                      
+
+                                                                    
+
+                    
+
+            
+
+            
+
+                
+
+                
+
+                                        
+
+                                        
+California Alternative Energy and Advanced Transportation Financing Authority 
+
+                
+
+                
+
+            
+
+            
+
+        
+
+                
+
+        
+                                                    
+
+  
+    
+      
+
+      
+
+
+
+  
+
+    
+        
+      
+
+  
+
+    
+
+
+      
+
+              
+
+
+
+
+    
+
+      
+
+        
+
+                      
+GoGreen Business Energy Financing Regulations
+
+          
+          
+          
+        
+
+      
+
+    
+
+
+
+
+
+              
+
+
+
+  
+
+    
+
+      
+
+        
+
+          
+
+                                                
+
+              
+Current Regulations
+GoGreen Business Energy Financing Program Regulations (effective 11/06/2025)
+ 
+Regulatory Actions
+7/24/2026 – Emergency Regulations Second Readoption
+On July 24, 2026, the Office of Administrative Law (OAL) approved the second readoption of emergency regulations for the GoGreen Business Energy Financing Program. These regulations became effective on August 3, 2026, and are effective until November 3, 2026. 
+View the approval notice from the Office of Administrative Law and the emergency regulations text changes and additions
+View the Notice and Finding of Emergency
+The proposed emergency regulations were publicly noticed, considered, and approved by the CAEATFA Board at a public meeting held on September 16, 2025.   These regulations were readopted with no additional amendments.
+ 
+7/17/2026 – Notice of Emergency Regulations Second Readopt  
+On November 6, 2025, the Office of Administrative Law (OAL) approved emergency regulation amendments to the GoGreen Business Energy Efficiency Financing Program. CAEATFA is giving public notice of the proposed emergency action to readopt these regulations for the second time, as linked above, without further modifications. As required by Government Code Section 11346.1(a)(2), this constitutes notice of at least five working days prior to submission to OAL. The first readoption became effective on May 5, 2026. The second readoption will take effect on August 3, 2026.
+View the Notice & Finding of Emergency
+View the proposed regulations
+In the emergency modifications to regulations adopted in November of 2025, CAEATFA made substantial changes to program eligibility for multifamily owners’ access to capital for clean energy upgrades and energy efficient retrofit projects; these amendments are proposed to be readopted for the second time.  
+ 
+6/18/2026 – Notice of Proposed Rulemaking
+The California Alternative Energy and Advanced Transportation Financing Authority (CAEATFA) is issuing a Notice of Proposed Rulemaking with proposed regulation text for the regular rulemaking process for the Commercial Energy Efficiency Financing (“GoGreen Business”) Program. The Notice is planned to be published in the California Regulatory Notice Register on June 26, 2026.
+These regulations will complete the rulemaking process initiated by the emergency regulations adopted on September 29, 2025, and a subsequent emergency rulemaking adopted on November 6, 2025. This regular rulemaking will make permanent the amendments from both emergency rulemaking actions. The public comment period for the Notice of Proposed Rulemaking will end on August 10, 2026.
+The regulations include changes made during the emergency process proposed to be made permanent. Some of the changes include expanding eligibility to reconstruction of properties damaged by natural disasters. Changes also include modifications to better meet the needs of the multifamily market including broadened types of security, accelerated loss reserve contributions, and simplified measure eligibility for multifamily properties. Other clarifications and minor modifications are proposed.
+View the Notice of Proposed Action
+View the Initial Statement of Reasons
+View the Proposed Modified Regulations
+The Authority has not scheduled a public hearing on this proposed rulemaking. However, a public hearing will be held if any interested person, or his or her duly authorized representative, requests a public hearing to be held relevant to the proposed rulemaking by submitting a written request to the Agency Contact Person identified in this notice no later than fifteen (15) days prior to the close of the written comment period.
+Stakeholders and interested parties can submit written comments to 
+ggb@treasurer.ca.gov
+ by January 20, 2025.
+If you prefer to receive a hard copy of the Notice or proposed regulations or if you have any questions regarding this action, please contact Kevin Nakano at (916) 653-0015 with questions.
+6/9/2026 – Emergency Regulations Second Readoption
+On June 9, 2026, the Office of Administrative Law (OAL) approved the second readoption of emergency regulations for the GoGreen Business Energy Financing Program. These regulations will become effective on June 30, 2026, and are effective until September 29, 2026. 
+View the approval notice from the Office of Administrative Law and the emergency regulations text changes and additions
+View the Notice and Finding of Emergency
+The proposed emergency regulations were publicly noticed, considered, and approved by the CAEATFA Board at a public meeting held on September 16, 2025.   These regulations were readopted with no additional amendments.
+5/22/2026 – Notice of Emergency Regulations Second Readopt
+On September 29, 2025, the Office of Administrative Law (OAL) approved emergency regulation amendments to the GoGreen Business Energy Efficiency Financing Program. CAEATFA is giving public notice of the proposed emergency action to readopt these regulations for the second time, as linked above, without further modifications. As required by Government Code Section 11346.1(a)(2), this constitutes notice of at least five working days prior to submission to OAL. The second readoption will be effective as of June 29, 2026.  
+View the Notice & Finding of Emergency
+ 
+View the proposed regulations
+ 
+The modified regulations were publicly noticed, considered, and approved by the CAEATFA Board at a public meeting held on August 19, 2025, at 10:30am.  In the emergency modifications to regulations adopted in September of 2025, CAEATFA made substantial changes to program eligibility for reconstruction of commercial and multifamily buildings following a natural disaster; these amendments are proposed to be readopted for the first time.    
+4/15/2026 – Emergency Regulations Readopted
+On April 15, 2026, the Office of Administrative Law (OAL) approved the readoption of emergency regulations for the GoGreen Business Energy Financing Program. These regulations will come into effect on May 5, 2026, and are effective until August 4, 2026.
+View the approval notice from the Office of Administrative Law and the emergency regulations text changes and additions
+View the Notice and Finding of Emergency
+The proposed emergency regulations were publicly noticed, considered, and approved by the CAEATFA Board at a public meeting held on September 16, 2025. These regulations were readopted with no additional amendments.
+3/30/2026 – Emergency Regulations Readopted
+On March 30, 2026, the Office of Administrative Law (OAL) approved the readoption of emergency regulations for the GoGreen Business Energy Financing Program. These regulations became effective on March 31, 2026, and are effective until June 30, 2026.
+View the approval notice from the Office of Administrative Law and the emergency regulations text changes and additions
+View the Notice and Finding of Emergency
+The proposed emergency regulations were publicly noticed, considered, and approved by the CAEATFA Board at a public meeting held on September 16, 2025. These regulations were readopted with no additional amendments.
+3/20/2026 – Notice of Emergency Regulations First Readopt
+On November 6, 2025, the Office of Administrative Law (OAL) approved emergency regulation amendments to the GoGreen Business Energy Efficiency Financing Program. CAEATFA is giving public notice of the proposed emergency action to readopt these regulations for the first time, as linked above, without further modifications. As required by Government Code Section 11346.1(a)(2), this constitutes notice of at least five working days prior to submission to OAL. The first readoption will be effective as of May 5, 2026.
+View the Notice & Finding of Emergency
+View the proposed regulations
+In the emergency modifications to regulations adopted in November of 2025, CAEATFA made substantial changes to program eligibility for multifamily owners’ access to capital for clean energy upgrades and energy efficient retrofit projects; these amendments are proposed to be readopted for the first time. 
+3/13/2026 – Notice of Emergency Regulations First Readopt
+On September 29, 2025, the Office of Administrative Law (OAL) approved emergency regulation amendments to the GoGreen Business Energy Efficiency Financing Program. CAEATFA is giving public notice of the proposed emergency action to readopt these regulations for the first time, as linked above, without further modifications. As required by Government Code Section 11346.1(a)(2), this constitutes notice of at least five working days prior to submission to OAL. The first readoption will be effective as of March 31, 2026. 
+View the Notice & Finding of Emergency
+View the proposed regulations
+The modified regulations were publicly noticed, considered, and approved by the CAEATFA Board at a public meeting held on September 16th, 2025, at 10:30am.
+11/06/2025 – Notice of Adopted Proposed Emergency Regulations: Amendments to the GoGreen Business Program Regulations
+On November 6, 2025, the Office of Administrative Law approved regulations to modify the Commercial Energy Efficiency Financing (“GoGreen Business”) program. These modifications are intended to better align the GoGreen Business program’s approach with typical affordable multifamily lending practices. These changes will improve multifamily owners’ access to capital for clean energy upgrades and energy efficient retrofit projects with the goal of increasing the program’s affordable multifamily project enrollments.
+CAEATFA has considered all comments, objections, and recommendations regarding the proposed action. You may review the regulatory documents below:
+View the approved and endorsed Form 400 Certificate of Compliance filed with the Secretary of State
+View the approved regulations filed with the Secretary of State
+The modified regulations were publicly noticed, considered, and approved by the CAEATFA Board at a public meeting held on September 16, 2025, at 10:30am.
+10/14/2025 – Notice of Proposed Emergency Regulations: Amendments to the GoGreen Business Program Regulations
+CAEATFA proposes to adopt emergency regulations to modify the Commercial Energy Efficiency Financing (“GoGreen Business” or “Program”) program. The proposed modifications are intended to improve Program rules related to the multifamily program and include extended project enrollment timeframes, expanded types of security interest for multifamily customer projects, project eligibility requirements, and greater loss reserve contributions. CAEATFA has considered all comments, objections, and recommendations regarding the proposed action. You may review the regulatory documents below:
+Notice and Finding of Emergency
+Proposed Regulatory Text
+The proposed regulations were publicly noticed, considered, and approved by the CAEATFA Board at a public meeting held on September 16, 2025, at 10:30am.
+Government Code Section 11346.1(a)(2) requires that, at least five working days prior to submission of the proposed adoption of emergency regulations to the Office of Administrative Law (OAL), the adopting agency provide a notice of the proposed emergency action to every person who has filed a request for notice of regulatory action with the agency. CAEATFA sent notice on 10/14/2025. After submission of the proposed emergency regulations to OAL, OAL shall allow interested parties five (5) calendar days to submit comments on the proposed emergency regulations as set forth in Government Code Section 11349.6. Upon filing, OAL will have ten (10) calendar days within which to review and make a decision on the proposed emergency rulemaking package.
+9/29/2025 – Notice of Adopted Proposed Emergency Regulations: Amendments to the GoGreen Business Program Regulations
+On September 29, 2025 the Office of Administrative Law approved regulations to modify the Commercial Energy Efficiency Financing (“GoGreen Business”) Program. These modifications are intended to clarify program eligibility for reconstruction of commercial and multifamily buildings following a natural disaster.
+CAEATFA has considered all comments, objections, and recommendations regarding the proposed action. You may review the regulatory documents below:
+View the approved and endorsed Form 400 Certificate of Compliance filed with the Secretary of State
+View the approved regulations filed with the Secretary of State
+The modified regulations were publicly noticed, considered, and approved by the CAEATFA Board at a public meeting held on August 19, 2025, at 10:30am.
+9/10/2025 – Notice of Proposed Emergency Regulations: Amendments to the GoGreen Business Program Regulations
+CAEATFA proposes to adopt emergency regulations to modify the Commercial Energy Efficiency Financing (“GoGreen Business”) Program. The proposed modifications are intended to clarify program eligibility for reconstruction of commercial and multifamily buildings following a natural disaster. CAEATFA has considered all comments, objections, and recommendations regarding the proposed action. You may review the regulatory documents below:
+Notice and Finding of Emergency
+Proposed Regulatory Text
+The proposed regulations were publicly noticed, considered, and approved by the CAEATFA Board at a public meeting held on August 19, 2025, at 10:30am.
+Government Code Section 11346.1(a)(2) requires that, at least five working days prior to submission of the proposed adoption of emergency regulations to the Office of Administrative Law (OAL), the adopting agency provide a notice of the proposed emergency action to every person who has filed a request for notice of regulatory action with the agency. CAEATFA sent notice on 9/10/2025. After submission of the proposed emergency regulations to OAL, OAL shall allow interested parties five (5) calendar days to submit comments on the proposed emergency regulations as set forth in Government Code Section 11349.6. Upon filing, OAL will have ten (10) calendar days within which to review and make a decision on the proposed emergency rulemaking package.
+9/3/2025 – Workshop slide deck and revised proposed modifications to program regulations.
+CAEATFA held a public workshop at 10:30 AM PDT on Monday, August 25, 2025, to propose modifications to the existing regulations for the GoGreen Business Energy Financing Program (GoGreen Business).
+CAEATFA invites public comments during the workshop and by email to 
+cheef@treasurer.ca.gov
+ until Monday, September 1, 2025 at 5:00PM PDT.
+The revised proposed modifications to program regulations include, among other things, the simplification of the loss reserve contribution calculation for Affordable Multifamily projects and expanded eligibility for multifamily retrofits. These proposed amendments are planned to be heard at the September 16, 2025 board meeting.  Following receiving board approval, CAEATFA will utilize the emergency rulemaking process and submit the proposed regulations to the Office of Administrative Law, with their expected approval in October 2025.
+Slide Deck for Workshop: Proposed Modifications to the GoGreen Business Program Regulations
+GoGreen Business Energy Financing Program Proposed Changes to Regulations
+8/25/2025 – Workshop: Proposed Modifications to the GoGreen Business Program Regulations
+CAEATFA will hold a public workshop at 10:30 AM PDT on Monday, August 25, 2025, to propose modifications to the existing regulations for the GoGreen Business Energy Financing Program (GoGreen Business).
+CAEATFA invites public comments during the workshop and by email to 
+cheef@treasurer.ca.gov
+ until Monday, September 1, 2025 at 5:00PM PDT. To participate in the workshop remotely, please register here: 
+Remote Workshop Registration
+.
+The proposed modifications to program regulations include, among other things, accelerated funding of the loss reserve to provide greater protection to lenders for financing agreements, and expanded eligibility for multifamily retrofits. CAEATFA will submit the proposed regulations to the CAEATFA Board for approval at the September 16, 2025 Board meeting. Following approval by the board, CAEATFA will utilize the emergency rulemaking process and submit the proposed regulations to the Office of Administrative Law, with their expected approval in October 2025.
+GoGreen Business Energy Financing Program Proposed Changes to Regulations
+
+            
+
+                      
+
+        
+
+      
+
+    
+
+  
+
+
+
+          
+
+  
+  
+
+
+
+
+    
+
+  
+
+
+
+              
+
+                                  
+
+        
+
+    
+
+        
+
+                      
+
+      
+
+      
+
+        
+
+          
+
+          
+
+
+
+              
+
+                
+
+                
+
+                  
+            
+Securing California’s financial future through responsible stewardship, transparent governance, and inclusive economic opportunities for all communities. 
+ 
+Public Records Act request
+
+      
+                
+
+                
+
+                  
+Follow us
+
+                  
+
+                    
+
+                      
+
+                      
+X
+
+                    
+
+                    
+
+                      
+
+                      
+LinkedIn
+
+                    
+
+                    
+
+                      
+
+                      
+Facebook
+
+                    
+
+                    
+
+                      
+
+                      
+YouTube
+
+                    
+
+                    
+
+                      
+
+                      
+Instagram
+
+                    
+
+                  
+
+                
+
+              
+
+            
+
+
+
+          
+
+          
+
+            
+
+              
+
+
+            
+
+                  
+
+          
+Previous Administrations
+
+                  
+
+              
+
+          
+California State Controller’s Office
+
+                  
+
+              
+
+          
+California Department of Finance
+
+                  
+
+              
+
+          
+California Government Homepage
+
+                  
+
+              
+
+          
+Open Government/Public Records
+
+                  
+
+              
+
+          
+Forms
+
+                  
+
+              
+
+          
+Publications
+
+                  
+
+              
+
+          
+Debt Watch
+
+                  
+
+            
+
+  
+ 
+              
+
+
+            
+
+                  
+
+          
+FI$Cal Project
+
+                  
+
+              
+
+          
+National Association of State Treasurers
+
+                  
+
+            
+
+  
+ 
+            
+
+          
+
+
+
+        
+
+      
+
+
+      
+
+      
+
+        
+
+          
+
+            
+
+
+            
+
+                  
+
+          
+Home
+
+                  
+
+              
+
+          
+Careers
+
+                  
+
+              
+
+          
+Contact Us
+
+                  
+
+              
+
+          
+Comments
+
+                  
+
+              
+
+          
+Accessibility
+
+                  
+
+              
+
+          
+Privacy Notice
+
+                  
+
+              
+
+          
+Site Map
+
+                  
+
+            
+
+  
+ 
+          
+
+        
+
+      
+
+
+      
+
+       
+
+        
+
+          
+            
+© 2026 California State Treasurer's Office
+
+      
+        
+
+       
+
+      
+
+    
+
+    
+
+  
+
+
+
+
+  
+
+
+    
+    
+{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/6879","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"data":{"extlink":{"extTarget":true,"extTargetAppendNewWindowDisplay":false,"extTargetAppendNewWindowLabel":"(opens in a new window)","extTargetNoOverride":false,"extNofollow":true,"extTitleNoOverride":false,"extNoreferrer":true,"extFollowNoOverride":false,"extClass":"ext","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"","extInclude":".pdf","extCssExclude":"","extCssInclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","extHideIcons":false,"mailtoClass":"0","telClass":"tel","mailtoLabel":"(link sends email)","telLabel":"(link is a phone number)","extUseFontAwesome":false,"extIconPlacement":"append","extPreventOrphan":true,"extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","extAdditionalLinkClasses":"","extAdditionalMailtoClasses":"","extAdditionalTelClasses":"","extFaTelClasses":"fa fa-phone","allowedDomains":[],"extExcludeNoreferrer":""}},"statistics":{"data":{"nid":"6879"},"url":"\/modules\/contrib\/statistics\/statistics.php"},"ajaxTrustedUrl":{"\/search":true},"user":{"uid":0,"permissionsHash":"3884b4973ba77ba7450ef2a6a280caa892cd82ae6ed4f6bd592980f27ecd088e"}}
+
+
+
+
+
+
+
+
+    
+
+  
+
+
+

@@ -1,0 +1,96 @@
+{
+  "question": "Can the2025HOMEExhibitA be identified as an unchanged existing edition from actual incorporation/administrative records?",
+  "decision": "Not established by the recovered sources. Keep2024guidelines selected as their own source; do not label them2025ExhibitA.",
+  "direct_findings": [
+    {
+      "source": "https://records.huntingtonbeachca.gov/WebLink/DocView.aspx?id=7236879&dbid=0&repo=COHB",
+      "locator": "§7.9 p23; §7.10 p24",
+      "finding": "Amendment requires writing executed by each party. Entire-agreement clause supersedes prior agreements and expressly incorporates attached ExhibitsA–E. ExhibitA is named Scope of Services and Budget and TBRA Program Operating Guidelines, without edition date or reference to2024agreement."
+    },
+    {
+      "source": "https://records.huntingtonbeachca.gov/WebLink/DocView.aspx?id=7236885&dbid=0&repo=COHB",
+      "locator": "§§7.9–7.10 pp23–24",
+      "finding": "Same relevant amendment, supersession and attached-exhibit incorporation structure, independently read."
+    },
+    {
+      "source": "https://records.huntingtonbeachca.gov/WebLink/DocView.aspx?id=6780479&dbid=0&repo=COHB",
+      "locator": "p30 heading; p42 §IX.D",
+      "finding": "Guideline expressly datedJuly2024. City retains ability to make changes and must give provider written notice of substantive changes. This provision neither identifies an actual2025change nor proves2025attachment unchanged."
+    }
+  ],
+  "counterpart_search_results": [
+    {
+      "route": "LegistarOData MatterTitle contains Rental Assistance, Families Forward, HOME",
+      "saved": [
+        "legistar-tbra.json",
+        "legistar-families.json",
+        "legistar-home.json"
+      ],
+      "finding": "Specific regularTBRA agreement/guideline approval items found2018and2020, no separate2025regularTBRA agreement approval.2025HOMEallocation action is generalplan, not substituteforactualcontractexhibits."
+    },
+    {
+      "route": "Laserfiche exactlegalproject25-16978",
+      "saved": "lf-control-project.json",
+      "finding": "Fourmatches: twoHOMEagreements andtwoCDBGagreements. RelatedFF CDBGcarrier7236853 inspected:13pages ends atsignature; separateAttachments1/2 likewise notpresent. It does not identifyHOMEguidelineedition."
+    },
+    {
+      "route": "Laserfiche allnames TBRA AND OperatingGuidelines",
+      "saved": "lf-guidelines-allnames.json",
+      "finding": "All20results returned; no year-in-title restriction. Newpotential combinedcarrier5578774 checked via fullmetadata:2021agreements with amendments through2023, modifiedAugust2024, endJune2024. It cannot establish subsequent2025incorporation. No othercurrentcounterpart identified."
+    },
+    {
+      "route": "2025CityClerkQuarterlyReports LF6896439,14pages",
+      "saved": "lf-6896439-page1.json through page14.json",
+      "finding": "NoFF/MercyHOMEapproval entry or guidelineedition link; only relevantTBRA hit isGRCmobilehomeprogram administration, separateprogram."
+    }
+  ],
+  "scope_consequence": "The missing fact is actual2025attachmentedition, not whether the describedHOMEprogram is relevant. §1.1/§1.2 and §7.10 make the missing operatingguideline/forms a concrete incorporation affecting rent/subsidy,deposits,inspectionsandleaseprotections. No participant evidence is required to resolveit.",
+  "non_conclusions": [
+    "No inference that2024guidelines ceased existing in2025.",
+    "No inference that2025ExhibitA is different solelybecause anewcontractwasexecuted.",
+    "No inference that it is identicalfromsharedtitle,annualfunding,orabsence ofindexed successor.",
+    "No claim allpossiblepublicrepositories exhausted."
+  ],
+  "canonical_edits": false,
+  "external_contact": false,
+  "repository_structure_review": {
+    "method": "Publisher JavaScript exposed the actual GetBasicDocumentInfo, GetAllAnnotations and GetFolderListing2 methods. Read these methods for both identified HOME entries and their actual parent folders.",
+    "endpoints": [
+      "https://records.huntingtonbeachca.gov/WebLink/DocumentService.aspx/GetBasicDocumentInfo",
+      "https://records.huntingtonbeachca.gov/WebLink/DocumentService.aspx/GetAllAnnotations",
+      "https://records.huntingtonbeachca.gov/WebLink/FolderListingService.aspx/GetFolderListing2"
+    ],
+    "entries": [
+      {
+        "id": 7236879,
+        "provider": "Families Forward",
+        "image_pages": 31,
+        "parent_folder": 7237152,
+        "folder_entries": [
+          7236853,
+          7236879
+        ]
+      },
+      {
+        "id": 7236885,
+        "provider": "Mercy House",
+        "image_pages": 44,
+        "parent_folder": 7237160,
+        "folder_entries": [
+          7236863,
+          7236885
+        ]
+      }
+    ],
+    "findings": "Both entries have imaged pages only: edocUrl, extension, mediaMimeType and mediaHandlerUrl are null; linked entries and document relationships are empty; every page has an empty annotations array. Each actual 2025 provider folder has exactly two entries: the HOME contract and its distinct CDBG contract. Neither folder exposes a separate exhibit or child folder.",
+    "saved_evidence": [
+      "lf-7236879-structure.json",
+      "lf-7236885-structure.json",
+      "lf-7236879-annotations.json",
+      "lf-7236885-annotations.json",
+      "lf-7236879-siblings2.json",
+      "lf-7236885-siblings2.json"
+    ],
+    "conclusion": "The reviewed public repository entries themselves omit Exhibit A; no exposed electronic original, attachment annotation, relationship or sibling exhibit is concealed by the PDF export. This does not establish whether an edition-identifying record exists elsewhere online or in unpublished records."
+  }
+}

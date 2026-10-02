@@ -1,0 +1,47 @@
+{
+  "as_of": "2026-10-02",
+  "scope": "Part7 online filing/status recovery and direct operating relevance; no canonical edits",
+  "status_fact": "Still open: completed 2026 readoption/certification or affirmative current continuation/lapse. Approval and publication evidence does not establish that event.",
+  "new_evidence": [
+    {
+      "source": "https://www.iccsafe.org/contentupdates/",
+      "locator": "California Codes > 2025 (9), Part7 entry",
+      "fact": "Emergency supplement entry has published date 11/25/2025, effective 01/01/2026. Sole Part7 entry in expanded list.",
+      "saved": "icc-contentupdates-california2025-snapshot.txt"
+    },
+    {
+      "source": "https://www.dgs.ca.gov/api/sitecore/Search/PageFullAjax",
+      "method": "Actual public search endpoint from DGS searchresults.js; divisionId 5aa60cca938f4888afee19c3f5851749, page1, isGlobalSearchPage=false",
+      "queries": [
+        "readoption",
+        "SFM EF 01/25",
+        "SFM 04/25",
+        "certification",
+        "filed",
+        "CALCode Quarterly 2026"
+      ],
+      "result": "Readoption one result (May6). Certification fifteen results, no Part7 later filing. Filed first25/30 includes original Part7 Nov4 action and historical completed filings, not later Part7 filing. Not a complete document inventory and not proof no filing exists.",
+      "saved_prefix": "dgs-api-"
+    }
+  ],
+  "operating_relevance": [
+    {
+      "source": "https://www.dgs.ca.gov/-/media/Divisions/BSC/03-Rulemaking/3-Emergency-Rulemaking/2025-Emergency-Rulemaking/SFM-EF-01-25-Pt7-Statement-of-Progress-Readoption.pdf",
+      "locator": "p.3, items2 and4",
+      "fact": "Agency expressly explains removal of trigger-date exceptions closes gap on existing buildings/structures and supports home hardening and retrofits. Item4 identifies deletion of503.1 exception2 as part of emergency adoption."
+    },
+    {
+      "source": "https://www.dgs.ca.gov/-/media/Divisions/BSC/03-Rulemaking/2025-Intervening-Cycle/Commission-Meetings/2026-08-25/SFM-04-25-FET-PT7.docx",
+      "locator": "sub-items1-4,4-1,4-16; sections101.5,503.1,507.1",
+      "method": "Inspected original DOCX XML runs and strikeout, avoiding merged deleted/replacement plain text.",
+      "fact": "Approved-future text governs modifications, additions/alterations, roof replacement at50% or more in12months, and roof portions applied during repair requiring ClassA classification. Existing residential roof repair/retrofit work within covered geography gives direct operational relevance. Future amendments remain separate from present emergency terms."
+    }
+  ],
+  "limits": [
+    "No emails or external messages sent.",
+    "No new technical reference chains pursued.",
+    "Do not infer emergency expiry from May6 vote date.",
+    "Do not turn absence in searched repositories into affirmative lapse.",
+    "Original filedIET PDF omits503.1 item while readoption explanation identifies it as prior approved; use actual published supplement and amendment formatting for exact current body, not plain text alone."
+  ]
+}

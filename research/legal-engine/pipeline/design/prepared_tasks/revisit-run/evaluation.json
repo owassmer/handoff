@@ -1,0 +1,694 @@
+{
+  "cases": 35,
+  "answered": 35,
+  "agreements": 27,
+  "unanswered": 0,
+  "disagreements": [
+    "f003",
+    "f006",
+    "f011",
+    "f016",
+    "f017",
+    "f018",
+    "f021",
+    "f022"
+  ],
+  "by_stratum": {
+    "saved_source": {
+      "cases": 15,
+      "answered": 15,
+      "agreements": 11
+    },
+    "MVC": {
+      "cases": 3,
+      "answered": 3,
+      "agreements": 2
+    },
+    "whole_unit_self": {
+      "cases": 2,
+      "answered": 2,
+      "agreements": 1
+    },
+    "enclosing": {
+      "cases": 4,
+      "answered": 4,
+      "agreements": 3
+    },
+    "cross": {
+      "cases": 8,
+      "answered": 8,
+      "agreements": 8
+    },
+    "mixed": {
+      "cases": 2,
+      "answered": 2,
+      "agreements": 2
+    },
+    "excerpt_self": {
+      "cases": 4,
+      "answered": 4,
+      "agreements": 3
+    },
+    "metadata_outside_focus": {
+      "cases": 3,
+      "answered": 3,
+      "agreements": 0
+    },
+    "legal_prose_negative": {
+      "cases": 3,
+      "answered": 3,
+      "agreements": 1
+    },
+    "BPC": {
+      "cases": 7,
+      "answered": 7,
+      "agreements": 5
+    },
+    "private_negative": {
+      "cases": 3,
+      "answered": 3,
+      "agreements": 1
+    },
+    "range": {
+      "cases": 3,
+      "answered": 3,
+      "agreements": 3
+    },
+    "relative": {
+      "cases": 4,
+      "answered": 4,
+      "agreements": 3
+    },
+    "FIN": {
+      "cases": 5,
+      "answered": 5,
+      "agreements": 4
+    },
+    "named_public_authority": {
+      "cases": 10,
+      "answered": 10,
+      "agreements": 10
+    },
+    "authored_contrast": {
+      "cases": 20,
+      "answered": 20,
+      "agreements": 16
+    },
+    "fictional_statute": {
+      "cases": 9,
+      "answered": 9,
+      "agreements": 5
+    },
+    "validity_irrelevant": {
+      "cases": 3,
+      "answered": 3,
+      "agreements": 2
+    },
+    "whole_unit_negative": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "source_heading": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "unresolved": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 0
+    },
+    "substantive_heading": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "statute": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "constitution": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "treaty": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "court_rule": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "judicial_decision": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "judicial_order": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "official_guidance": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "regulation": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "generic_negative": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "adversarial_quote": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "quoted_pointer": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    }
+  },
+  "rows": [
+    {
+      "case_id": "f001",
+      "request_hash": "09de1adb440ecab90a91b3841b6e5f8ed95b48ef98bad649fc90e06073f0aa9a",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "saved_source",
+        "MVC",
+        "whole_unit_self",
+        "enclosing",
+        "cross",
+        "mixed"
+      ],
+      "confidence": 0.94
+    },
+    {
+      "case_id": "f002",
+      "request_hash": "f654440ba5fbde24e03e8976b91286e914e1ea3f8698689650f8c7b1e3d5608c",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "saved_source",
+        "MVC",
+        "excerpt_self"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "case_id": "f003",
+      "request_hash": "73c05a3d91c571c28b1304ee44b882f1bea5c40d0661f06996f39f1b35e1dc67",
+      "expected": "NO",
+      "actual": "YES",
+      "agreement": false,
+      "status": "answered",
+      "strata": [
+        "saved_source",
+        "MVC",
+        "metadata_outside_focus",
+        "legal_prose_negative"
+      ],
+      "confidence": 0.86
+    },
+    {
+      "case_id": "f004",
+      "request_hash": "b311f654563c5a224ec05a412a8726a55cc396d1196aafb1cf11c370e97b6b6c",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "saved_source",
+        "BPC",
+        "enclosing"
+      ],
+      "confidence": 0.93
+    },
+    {
+      "case_id": "f005",
+      "request_hash": "d0311bfb49f9c48d9b6f283198769f5900351007c13593328d8bfeebfe274f7c",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "saved_source",
+        "BPC",
+        "cross"
+      ],
+      "confidence": 1
+    },
+    {
+      "case_id": "f006",
+      "request_hash": "2f72d8d759652083f3ebda40ae2c34de907a85f3def0078ee1f485663dfedfed",
+      "expected": "NO",
+      "actual": "YES",
+      "agreement": false,
+      "status": "answered",
+      "strata": [
+        "saved_source",
+        "BPC",
+        "private_negative"
+      ],
+      "confidence": 0.97
+    },
+    {
+      "case_id": "f007",
+      "request_hash": "54a343b6148e14cb4ffb956bc6033531a6222d8712469fa73cb61a6ef6ae7be4",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "saved_source",
+        "BPC",
+        "range",
+        "relative"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "case_id": "f008",
+      "request_hash": "14bc0e1338e3f0d206ab2232b6b1f23e7cc4cf460a342754f9ef873339154aef",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "saved_source",
+        "BPC",
+        "excerpt_self"
+      ],
+      "confidence": 0.63
+    },
+    {
+      "case_id": "f009",
+      "request_hash": "625d951b2fb1c601fa1eba37ddc0ae09aa49e3adfcb73686a70fd584493125d8",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "saved_source",
+        "FIN",
+        "cross",
+        "range"
+      ],
+      "confidence": 1
+    },
+    {
+      "case_id": "f010",
+      "request_hash": "2aef2d4a09a1d31b4ec5bd5332d96d847fd948cbbedafb3eb9ecca54dcdf6015",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "saved_source",
+        "FIN",
+        "excerpt_self",
+        "relative"
+      ],
+      "confidence": 0.96
+    },
+    {
+      "case_id": "f011",
+      "request_hash": "4d1422571b455230acba9a9cb95f44eb2f7e41f23973faf36dd3627764d1f0dc",
+      "expected": "NO",
+      "actual": "YES",
+      "agreement": false,
+      "status": "answered",
+      "strata": [
+        "saved_source",
+        "FIN",
+        "metadata_outside_focus",
+        "legal_prose_negative"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "case_id": "f012",
+      "request_hash": "016351e28bd4ddaf5c7619a81540c4ed1686e089320ff41d7ef0516b32d0ace8",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "saved_source",
+        "FIN",
+        "cross"
+      ],
+      "confidence": 1
+    },
+    {
+      "case_id": "f013",
+      "request_hash": "30722f4effd948534b99865f5427ed9ff03aa6fae392b52686e1b545ab30379e",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "saved_source",
+        "FIN",
+        "enclosing"
+      ],
+      "confidence": 0.97
+    },
+    {
+      "case_id": "f014",
+      "request_hash": "bd844d57a91e15fd1e4a7992f3cf7990c81f70095c0236c577f6d3b6750d64c1",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "saved_source",
+        "BPC",
+        "named_public_authority",
+        "cross"
+      ],
+      "confidence": 1
+    },
+    {
+      "case_id": "f016",
+      "request_hash": "13ecb517056d3b960a6386a81ee59f7112578627963b0a2a7e17829b470fb899",
+      "expected": "NO",
+      "actual": "YES",
+      "agreement": false,
+      "status": "answered",
+      "strata": [
+        "saved_source",
+        "BPC",
+        "private_negative",
+        "metadata_outside_focus"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "case_id": "f017",
+      "request_hash": "2c3df54679c72ca222e4de2085f98abc4edebe9bdfa62882272c9a2d5e8125dc",
+      "expected": "YES",
+      "actual": "NO",
+      "agreement": false,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "whole_unit_self",
+        "fictional_statute",
+        "validity_irrelevant"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "case_id": "f018",
+      "request_hash": "36e68af1a748fe1817670ccedfd223eb7f9fd6aa305bae611b9ae691d4f70279",
+      "expected": "YES",
+      "actual": "NO",
+      "agreement": false,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "excerpt_self",
+        "fictional_statute"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "case_id": "f019",
+      "request_hash": "1277bf3de0e3ed276d722c3d3ed9b1d3f9e226abb4bcf27659d8a4cc003e61c5",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "whole_unit_negative",
+        "source_heading",
+        "fictional_statute"
+      ],
+      "confidence": 0.46
+    },
+    {
+      "case_id": "f020",
+      "request_hash": "1277bf3de0e3ed276d722c3d3ed9b1d3f9e226abb4bcf27659d8a4cc003e61c5",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "legal_prose_negative",
+        "fictional_statute"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "case_id": "f021",
+      "request_hash": "947586aec6b7ceed7589bfa703c1e2fa122603178164e5ab4c1356794c7afc94",
+      "expected": "YES",
+      "actual": "NO",
+      "agreement": false,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "enclosing",
+        "fictional_statute"
+      ],
+      "confidence": 0.77
+    },
+    {
+      "case_id": "f022",
+      "request_hash": "8d7a235f67549894736d7373f84b0081bbedf4979c73d5796b378a9e4f07d402",
+      "expected": "YES",
+      "actual": "NO",
+      "agreement": false,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "relative",
+        "unresolved",
+        "fictional_statute"
+      ],
+      "confidence": 0.14
+    },
+    {
+      "case_id": "f023",
+      "request_hash": "9a515a2390616593d657485a3ec29999baed350f563c4d1c590d937e5f817d49",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "cross",
+        "validity_irrelevant",
+        "fictional_statute"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "case_id": "f024",
+      "request_hash": "71acdc5380b3e12c947bd1bd2b6d523e81e034c7187cdcec39c70d8464142c2d",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "range",
+        "relative",
+        "fictional_statute"
+      ],
+      "confidence": 0.81
+    },
+    {
+      "case_id": "f033",
+      "request_hash": "37a032000ba7009beaf0d2dbb098702129f0f9755f6705a33b5d74adb3ed0c31",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "substantive_heading",
+        "cross",
+        "fictional_statute"
+      ],
+      "confidence": 0.96
+    },
+    {
+      "case_id": "f034",
+      "request_hash": "70632a85f8b9d41dff27436457dcb7973c03faf2f8766039c4fecfd7c353645a",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "named_public_authority",
+        "statute",
+        "validity_irrelevant"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "case_id": "f035",
+      "request_hash": "b74a6d6ddff454eaec09413ef6550944e84526fe87de667b8b09562ac05df1ee",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "named_public_authority",
+        "constitution"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "case_id": "f036",
+      "request_hash": "f1996c986a0a2f544ebe4badb1623cb6e631d649cebbf4c3465ce296ca771d0f",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "named_public_authority",
+        "treaty"
+      ],
+      "confidence": 0.94
+    },
+    {
+      "case_id": "f037",
+      "request_hash": "0e1c62a76136cd14f150d1bc07d916e45f19773aa182cf3aacdfcacb7e4aa62d",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "named_public_authority",
+        "court_rule"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "case_id": "f038",
+      "request_hash": "d3cff6cecd80687e3f14b41e9da320dfd2240a33e83efe0913f87c1425f03f3f",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "named_public_authority",
+        "judicial_decision"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "case_id": "f039",
+      "request_hash": "918f7726280876557fbc4e6ae730f58e78b916415d4bfad7b2516e5c4cf3b127",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "named_public_authority",
+        "judicial_order"
+      ],
+      "confidence": 1
+    },
+    {
+      "case_id": "f040",
+      "request_hash": "ddcf1109e51be29e41165d0dc127ac9378ae5210b9607a0f81dd93adec9498ae",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "named_public_authority",
+        "official_guidance"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "case_id": "f041",
+      "request_hash": "acd13f35c913fca45d27af8cfee9108321961254eb4eb3c686eaa2e5a04f064d",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "named_public_authority",
+        "regulation"
+      ],
+      "confidence": 0.91
+    },
+    {
+      "case_id": "f042",
+      "request_hash": "52b4ebb2ccc09a3386509b3019f64c7c04ccfc2b9cc8d9108834a96157b8972d",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "generic_negative"
+      ],
+      "confidence": 0.97
+    },
+    {
+      "case_id": "f045",
+      "request_hash": "520d3e9cad28ea42396bd1f1a45ef3a85d91d9aee3375f24f18645f42d4e1e46",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "mixed",
+        "private_negative",
+        "named_public_authority"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "case_id": "f046",
+      "request_hash": "aa97859dc63a9efbad864b677516bf245e68a5ef2880733c716c11fd9fc116aa",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "authored_contrast",
+        "adversarial_quote",
+        "quoted_pointer",
+        "cross"
+      ],
+      "confidence": 0.99
+    }
+  ],
+  "interpretation": "Agreement on a deliberately constructed benchmark; strata overlap. Not probability calibration or complete dependency recall."
+}

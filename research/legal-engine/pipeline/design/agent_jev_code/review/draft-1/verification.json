@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-30",
+  "status": "development input preparation verified; semantic evaluation not run",
+  "contracts": 5,
+  "cases": 18,
+  "source_files": 6,
+  "exact_spans": 19,
+  "tasks": {
+    "definition_present": 3,
+    "reference_present": 4,
+    "term_use": 3,
+    "scope_includes_use": 4,
+    "qualifies_requirement": 4
+  },
+  "request_hashes": {
+    "dev01": "144cf2ed0b294be1065012fc657e84aae0a04b09ea89fc91add96c0e38d6ef66",
+    "dev02": "86a1da7ad2f5167f33734d61b6d5bfc0aec3b759f524de5dc3ddcb6e69bc906a",
+    "dev03": "5e7d7c1f5ffb7d9e0c7eb40191149a63481bdd10a3a53318e1f832a45b121bcc",
+    "dev04": "ed3d7019ed9c05ad6019c8b021d92b48616ee334318f5e2b23c00982601e136e",
+    "dev05": "8523494dadec8d2ba737a3c89ce2a157d6d2e767efc690a107a1739c1209903a",
+    "dev06": "43dc60d3f7bcdc56109b6750f16487b202a623ef7fd550d8039b49d550d12168",
+    "dev07": "3812b6bd5084dc5a5a1969aead60c25b72ade87dbf2ee43b88057f77248dfe3c",
+    "dev08": "4b21dce40c9851197bc99ae345be3786ca78358d8462a17caf67e018dab316f0",
+    "dev09": "59511c5b59b0fc8ec74eb79fd6403486c912890f3b7b158aea78b892b2215576",
+    "dev10": "e04553bda81c43ab00ed702ce40c69bc813dda45babac5147978b084c6c19dad",
+    "dev11": "1f30110509c4320caceee1038813f7226668a1485db8076f09815335db9c9876",
+    "dev12": "f4dfb9ca8a5673520ce647aabe196124e2cb22b908e3b8b2f4d375af9b952a38",
+    "dev13": "dfd7e456b97791c31ff35392c54829c27cdd9b24ad58f342a8a6187a5daa12ea",
+    "dev14": "43220f6c9ad3891e3ef7afb5fd1c3090547fee33881c83d581e37f7fd0fd42c8",
+    "dev15": "edc4a51be3f8b27a4133d514dac19d9ceb526eb35076d9e1a95459ad92e9dcb1",
+    "dev16": "cd8fd3ac6afd7a0543376d039fe899034797f47e1d96b3f0c9f4c35f063aed0b",
+    "dev17": "121c2a7bf9248cc2b7b047e0330d3fc38a3d7e4a8bad449dba01f74002783237",
+    "dev18": "76519dc986848c890a22017dccd95791e258a362bb4464ef0a1aff069c47d6c6"
+  },
+  "validation": {
+    "existing_pipeline_tests": {
+      "passed": 64
+    },
+    "new_input_preparation_tests": {
+      "passed": 8
+    },
+    "source_hashes_and_spans": "all matched",
+    "model_calls": 0,
+    "independent_label_review": "pending",
+    "held_out_accuracy": "not measured"
+  },
+  "input_files": {
+    "questions.json": "6e7eb6a4bf96a251d9fa1bc0ee3d370d403bd83435783c4c2d0b0c636c298876",
+    "examples.json": "1ba778f5f4880e44da50eb6b618c025c33cee1c06ca556b15c9edce77827f66c",
+    "sources.json": "ce4e6563a87c1cf4afc425997a0d2c4961ce7fc2591ef181fcf285fa63dcd346",
+    "prepare.py": "3dd5f07c569c86b26cb8c631309ec219cfbdc748897eb79e69de228ae62f2da7"
+  }
+}

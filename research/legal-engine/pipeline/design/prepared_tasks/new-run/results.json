@@ -1,0 +1,458 @@
+[
+  {
+    "case_id": "n001",
+    "request_hash": "a1ff317e185ce3d0da94811ccc62b8a28a1100f0b56681b0d7edcfcd5584ed98",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "reference_present": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "INSUFFICIENT": 0.01,
+            "NO": 0.13,
+            "YES": 0.86
+          },
+          "confidence": 0.8
+        }
+      },
+      "usage": {
+        "input_tokens": 442,
+        "output_tokens": 42,
+        "cost": 1.8564e-05
+      },
+      "id": "gen-dec-1790821623-ELDQl0AOI1aCLYqSQ92z",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "INSUFFICIENT": 0.01,
+        "NO": 0.13,
+        "YES": 0.86
+      },
+      "confidence": 0.8
+    },
+    "elapsed_seconds": 0.2354
+  },
+  {
+    "case_id": "n002",
+    "request_hash": "1785b8145cac41494c0c15b8c29e6535d1578506406b872007dbcb2619b4b242",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "reference_present": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "YES": 0.95,
+            "INSUFFICIENT": 0,
+            "NO": 0.05
+          },
+          "confidence": 0.92
+        }
+      },
+      "usage": {
+        "input_tokens": 464,
+        "output_tokens": 42,
+        "cost": 1.9488e-05
+      },
+      "id": "gen-dec-1790821623-PF7IxRq8s1WIJWOo96w9",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "YES": 0.95,
+        "INSUFFICIENT": 0,
+        "NO": 0.05
+      },
+      "confidence": 0.92
+    },
+    "elapsed_seconds": 0.2371
+  },
+  {
+    "case_id": "n003",
+    "request_hash": "675b55181a43487173f38e2f6c80e6418d24341cddac95f132eb9a6e37b212f9",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "reference_present": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "YES": 0.84,
+            "NO": 0.14,
+            "INSUFFICIENT": 0.02
+          },
+          "confidence": 0.76
+        }
+      },
+      "usage": {
+        "input_tokens": 372,
+        "output_tokens": 42,
+        "cost": 1.5624e-05
+      },
+      "id": "gen-dec-1790821624-HwVYCkX9FC4Q14pIV7Cd",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "YES": 0.84,
+        "NO": 0.14,
+        "INSUFFICIENT": 0.02
+      },
+      "confidence": 0.76
+    },
+    "elapsed_seconds": 0.3078
+  },
+  {
+    "case_id": "n004",
+    "request_hash": "edcbe39035b85aca3099894c129b3af05ad844e4be64fb671b790699a78dc3f9",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "reference_present": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "YES": 0.97,
+            "INSUFFICIENT": 0,
+            "NO": 0.03
+          },
+          "confidence": 0.95
+        }
+      },
+      "usage": {
+        "input_tokens": 455,
+        "output_tokens": 42,
+        "cost": 1.911e-05
+      },
+      "id": "gen-dec-1790821624-lWT7NTvjxSKWfojHQfPa",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "YES": 0.97,
+        "INSUFFICIENT": 0,
+        "NO": 0.03
+      },
+      "confidence": 0.95
+    },
+    "elapsed_seconds": 0.2367
+  },
+  {
+    "case_id": "n005",
+    "request_hash": "739f02c6ff627eac69b073bb97f02ebc53c3cc29fbf31688c49ea06a817c3294",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "reference_present": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "YES": 0.96,
+            "INSUFFICIENT": 0,
+            "NO": 0.04
+          },
+          "confidence": 0.94
+        }
+      },
+      "usage": {
+        "input_tokens": 482,
+        "output_tokens": 42,
+        "cost": 2.0244e-05
+      },
+      "id": "gen-dec-1790821624-IQwov0DUMnKcRABqfv1V",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "YES": 0.96,
+        "INSUFFICIENT": 0,
+        "NO": 0.04
+      },
+      "confidence": 0.94
+    },
+    "elapsed_seconds": 0.1702
+  },
+  {
+    "case_id": "n006",
+    "request_hash": "f5ec9c857832eb9927abd0ae4620e35485b5e3db5f15e932b73701dfbaa39132",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "reference_present": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "YES": 0.79,
+            "NO": 0.2,
+            "INSUFFICIENT": 0.01
+          },
+          "confidence": 0.68
+        }
+      },
+      "usage": {
+        "input_tokens": 403,
+        "output_tokens": 42,
+        "cost": 1.6926e-05
+      },
+      "id": "gen-dec-1790821624-wCYVexZT1yl0N9x18GeO",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "YES": 0.79,
+        "NO": 0.2,
+        "INSUFFICIENT": 0.01
+      },
+      "confidence": 0.68
+    },
+    "elapsed_seconds": 0.2861
+  },
+  {
+    "case_id": "n007",
+    "request_hash": "6e8a4355a101e687fb6294aa232d65b747f9885f4eec9b39bb4f8ceb3f59944e",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "reference_present": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "NO": 0.15,
+            "YES": 0.84,
+            "INSUFFICIENT": 0.01
+          },
+          "confidence": 0.76
+        }
+      },
+      "usage": {
+        "input_tokens": 384,
+        "output_tokens": 42,
+        "cost": 1.6128e-05
+      },
+      "id": "gen-dec-1790821624-GmFkKtEzgzKSrvRRaPNg",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "NO": 0.15,
+        "YES": 0.84,
+        "INSUFFICIENT": 0.01
+      },
+      "confidence": 0.76
+    },
+    "elapsed_seconds": 0.1802
+  },
+  {
+    "case_id": "n008",
+    "request_hash": "113e5353dca2f2c5478bf3a1ea724e435c1fef5d4ac07565cf1c7297570defd1",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "reference_present": {
+          "type": "choice",
+          "choice": "NO",
+          "probabilities": {
+            "INSUFFICIENT": 0.03,
+            "YES": 0.38,
+            "NO": 0.59
+          },
+          "confidence": 0.38
+        }
+      },
+      "usage": {
+        "input_tokens": 380,
+        "output_tokens": 42,
+        "cost": 1.596e-05
+      },
+      "id": "gen-dec-1790821624-2ZLwuyM1yr50GTjSoIr6",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "NO",
+      "probabilities": {
+        "INSUFFICIENT": 0.03,
+        "YES": 0.38,
+        "NO": 0.59
+      },
+      "confidence": 0.38
+    },
+    "elapsed_seconds": 0.2488
+  },
+  {
+    "case_id": "n009",
+    "request_hash": "24d09836fc1dbacdaa68735db526460d20af022d953eb85fcd14e43cc45fa4e6",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "reference_present": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "NO": 0.1,
+            "INSUFFICIENT": 0.01,
+            "YES": 0.89
+          },
+          "confidence": 0.85
+        }
+      },
+      "usage": {
+        "input_tokens": 391,
+        "output_tokens": 42,
+        "cost": 1.6422e-05
+      },
+      "id": "gen-dec-1790821624-2VXntRpB1b6R8PA0Ulxe",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "NO": 0.1,
+        "INSUFFICIENT": 0.01,
+        "YES": 0.89
+      },
+      "confidence": 0.85
+    },
+    "elapsed_seconds": 0.1711
+  },
+  {
+    "case_id": "n010",
+    "request_hash": "af49e34a207cfff75708344b9119dd82b0f790245af9b79924e4f575c364d9f6",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "reference_present": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "INSUFFICIENT": 0.02,
+            "NO": 0.09,
+            "YES": 0.89
+          },
+          "confidence": 0.84
+        }
+      },
+      "usage": {
+        "input_tokens": 400,
+        "output_tokens": 42,
+        "cost": 1.68e-05
+      },
+      "id": "gen-dec-1790821624-PArRnbe5JAStnCblEFB4",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "INSUFFICIENT": 0.02,
+        "NO": 0.09,
+        "YES": 0.89
+      },
+      "confidence": 0.84
+    },
+    "elapsed_seconds": 0.1795
+  },
+  {
+    "case_id": "n011",
+    "request_hash": "5229fd765b88cd3ac8c0662c9a40a097a9df5f5f7b5cf767c339fd9e663079c9",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "reference_present": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "YES": 1,
+            "NO": 0,
+            "INSUFFICIENT": 0
+          },
+          "confidence": 1
+        }
+      },
+      "usage": {
+        "input_tokens": 422,
+        "output_tokens": 42,
+        "cost": 1.7724e-05
+      },
+      "id": "gen-dec-1790821624-Ep8pqvyPE6YquPyNEsuH",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "YES": 1,
+        "NO": 0,
+        "INSUFFICIENT": 0
+      },
+      "confidence": 1
+    },
+    "elapsed_seconds": 0.1773
+  },
+  {
+    "case_id": "n012",
+    "request_hash": "26f4ade4d312cc9671b95838b16b2a3224462e21fca693bdac9e68e16c37660d",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "reference_present": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "YES": 0.96,
+            "NO": 0.03,
+            "INSUFFICIENT": 0.01
+          },
+          "confidence": 0.95
+        }
+      },
+      "usage": {
+        "input_tokens": 387,
+        "output_tokens": 42,
+        "cost": 1.6254e-05
+      },
+      "id": "gen-dec-1790821624-NpXfZhwjFHhSqeFFCFx5",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "YES": 0.96,
+        "NO": 0.03,
+        "INSUFFICIENT": 0.01
+      },
+      "confidence": 0.95
+    },
+    "elapsed_seconds": 0.2136
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "integration": "Apply after revised fppc-conflicts-delta.json. Eight removed section numbers below were removed in generator too. Add only specified GOV sections; narrow existing Title9 residual exclusion accordingly. No canonical edits.",
+  "regulatory_instrument_id": "CA:CCR2",
+  "removed_from_prior_proposal": {
+    "18728": "Only a comment referring to travel regulation; no separate operative duty.",
+    "18728.5": "Commission and incentive income statement-reporting requirements; actual conflict source definitions retained in18700.1.",
+    "18730.1": "Limits statement reporting for out-of-jurisdiction gifts; does not remove87100 gift-source conflict.",
+    "18733": "Inspector disclosure categories; subsection(d) expressly preserves87100 disqualification independently.",
+    "18734": "Interim statement filing for new positions and consultants; no separate permit/contract participation rule.",
+    "18737": "Suspends disclosure obligations pending code appeal, not disqualification.",
+    "18750": "Agency code drafting/review/adoption procedure; source-version research support rather than residential operating duty.",
+    "18751": "Agency exemption from adopting a separate COI code; general87100 conflict regime retained independently."
+  },
+  "retained_gift_scope_reason": "18940(c) expressly applies valuation to financial interests regardless of reportability.18942(a)(18)(D)(ii) qualifies personal-gift exceptions for pending permit/contract parties.18950.1(c)(1),(2),(7) reaches contracting and inspection travel. Complete mixed sections retained, but their standalone annual filing or personal gift-limit programs are not independent operating functions. Exemption from acceptance limits is not exemption from conflict disqualification.",
+  "statutory_addition": {
+    "instrument_id": "CA:GOV",
+    "unit": {
+      "unit": "Title9 Chapter9.5 selected gift-conflict dependencies",
+      "heading": "GOV89503,89503.5,89506",
+      "adapter": "ca_leginfo",
+      "reason": "Indexed gift-conflict threshold/receipt and travel financial-interest classification underpin selected87103(e),18700/18702.4 and18940\u201318950.3;89506(f)(3) expressly attributes donor interest under87103. No wholesale personal ethics/campaign-spending chapter selection.",
+      "section_list": [
+        {
+          "number": "89503",
+          "heading": "Gift limits and adjustments; conditional AB808 versions",
+          "ref": "GOV 89503",
+          "source_unit_kind": "section",
+          "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=89503"
+        },
+        {
+          "number": "89503.5",
+          "heading": "Receipt and acceptance of gifts",
+          "ref": "GOV 89503.5",
+          "source_unit_kind": "section",
+          "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=89503.5"
+        },
+        {
+          "number": "89506",
+          "heading": "Travel gift classification, exceptions and donor attribution",
+          "ref": "GOV 89506",
+          "source_unit_kind": "section",
+          "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=89506"
+        }
+      ],
+      "version_note": "89503 publisher article shows two conditional versions:2021ch50 and2025ch278AB808\u00a765 operative under\u00a778. Preserve both and reconcile existing AB808/CARS transition; no unconditional2026 substitution.",
+      "alternate_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=GOV&division=&title=9.&part=&chapter=9.5.&article=2."
+    },
+    "residual_exclusion_correction": "Title9 Chapter9.5 remains excluded except89503,89503.5,89506. Do not select specialized fellow exemptions89504/89504.8 that only address acceptance limits or unrelated honoraria/campaign spending merely through citations."
+  },
+  "enforcement_currentness": {
+    "sections": [
+      "18360.1",
+      "18360.2",
+      "18360.3"
+    ],
+    "adoption": "2026-08-20",
+    "filing_date": null,
+    "effective_date": null,
+    "findings": [
+      "Official18360.2 retrieved leaf is current through9/18/26 but history ends5/13/24 filing; snapshot does not prove later nonfiling.",
+      "OAL Register39 September25 PDF recovered via publisherTOC click;18360 absent from this issue only.",
+      "FPPC current adopted-amendment table has blank effective dates. No inferred filing/effective date."
+    ],
+    "remaining_j1": "Final filing/effective status remains unestablished; adopted package and affected units are selected."
+  },
+  "evidence_files": [
+    "sources/fppc-dependency-review.txt",
+    "sources/fppc-filing-aperture-review.txt"
+  ]
+}

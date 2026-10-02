@@ -1,0 +1,368 @@
+{
+  "cases_sha256": "be8979b6bfc6336985055d5090d7ceb1473004a464758abb2ab3f25aa554cb85",
+  "contracts_sha256": "2de55d706a2e91904fa67deaf26ad4889470038119cb67828f38d4ea6de8a208",
+  "reviewer": "ca_hb_review",
+  "author_labels_seen": false,
+  "model_responses_seen": false,
+  "status": "initial independent judgments before preparation corrections; not accepted for freeze",
+  "material_findings": [
+    {
+      "id": "atomic-targets",
+      "cases": [
+        "d017",
+        "d019",
+        "d024",
+        "d025",
+        "d026",
+        "d030",
+        "d031"
+      ],
+      "required_correction": "Select exact atomic duty/condition and preserve full governing text as context."
+    },
+    {
+      "id": "missing-act-context",
+      "cases": [
+        "d033"
+      ],
+      "required_correction": "Add source-bound section1005.2(c) definition as context."
+    }
+  ],
+  "cases": [
+    {
+      "id": "d001",
+      "expected": "YES",
+      "reason": "Express means/includes clauses assign chapter-specific meanings.",
+      "edge_case": "express definition",
+      "downstream_failure": "Misidentify a definition and import or omit a legal meaning."
+    },
+    {
+      "id": "d002",
+      "expected": "YES",
+      "reason": "The clause adopts an external definition by an explicit defined-in reference; extraction of its meaning requires section 1005.3.",
+      "edge_case": "incorporated definition",
+      "downstream_failure": "Misidentify a definition and import or omit a legal meaning."
+    },
+    {
+      "id": "d003",
+      "expected": "YES",
+      "reason": "Means assigns the hearing-officer role and exclusions.",
+      "edge_case": "qualified definition",
+      "downstream_failure": "Misidentify a definition and import or omit a legal meaning."
+    },
+    {
+      "id": "d004",
+      "expected": "YES",
+      "reason": "The for-purposes clause specifies what reasonable removal/storage costs include.",
+      "edge_case": "embedded nonexclusive definition",
+      "downstream_failure": "Misidentify a definition and import or omit a legal meaning."
+    },
+    {
+      "id": "d005",
+      "expected": "NO",
+      "reason": "The passage imposes a conditional surrender duty; it does not assign a term a meaning.",
+      "edge_case": "operative duty versus definition",
+      "downstream_failure": "Misidentify a definition and import or omit a legal meaning."
+    },
+    {
+      "id": "d006",
+      "expected": "NO",
+      "reason": "The clause limits an inference from silence rather than defining a term.",
+      "edge_case": "negative legal consequence",
+      "downstream_failure": "Misidentify a definition and import or omit a legal meaning."
+    },
+    {
+      "id": "d007",
+      "expected": "NO",
+      "reason": "A records-retention duty uses words without defining them.",
+      "edge_case": "ordinary operative use",
+      "downstream_failure": "Misidentify a definition and import or omit a legal meaning."
+    },
+    {
+      "id": "d008",
+      "expected": "NO",
+      "reason": "The court reports petitioners proposed reading without adopting it in the selected passage.",
+      "edge_case": "reported unadopted interpretation",
+      "downstream_failure": "Misidentify a definition and import or omit a legal meaning."
+    },
+    {
+      "id": "d009",
+      "expected": "YES",
+      "reason": "The Act in this Reg E enforcement clause denotes the Electronic Fund Transfer Act supplied in the definition.",
+      "edge_case": "defined title use",
+      "downstream_failure": "Join different meanings or omit a relevant meaning link."
+    },
+    {
+      "id": "d010",
+      "expected": "NO",
+      "reason": "Any act provided by law denotes conduct, not the named federal Act.",
+      "edge_case": "capitalization and homonym",
+      "downstream_failure": "Join different meanings or omit a relevant meaning link."
+    },
+    {
+      "id": "d011",
+      "expected": "NO",
+      "reason": "Provisional credit denotes an account amount, not a right to defer payment.",
+      "edge_case": "financial homonym",
+      "downstream_failure": "Join different meanings or omit a relevant meaning link."
+    },
+    {
+      "id": "d012",
+      "expected": "YES",
+      "reason": "Initiation within a state uses the geographical jurisdiction sense given by the definition.",
+      "edge_case": "lower-case defined sense",
+      "downstream_failure": "Join different meanings or omit a relevant meaning link."
+    },
+    {
+      "id": "d013",
+      "expected": "YES",
+      "reason": "Person is used in the legal person/entity sense of the supplied definition; this does not import federal governing scope into California.",
+      "edge_case": "same sense separate from applicability",
+      "downstream_failure": "Join different meanings or omit a relevant meaning link."
+    },
+    {
+      "id": "d014",
+      "expected": "YES",
+      "reason": "The selected expression is the very term defined in the identical passage.",
+      "edge_case": "identity baseline",
+      "downstream_failure": "Join different meanings or omit a relevant meaning link."
+    },
+    {
+      "id": "d015",
+      "expected": "NO",
+      "reason": "The selected E-Sign Act is a different enactment from the Electronic Fund Transfer Act.",
+      "edge_case": "different named Act",
+      "downstream_failure": "Join different meanings or omit a relevant meaning link."
+    },
+    {
+      "id": "d016",
+      "expected": "NO",
+      "reason": "Present state of a thing means its condition, not a territorial jurisdiction.",
+      "edge_case": "judicial ordinary-language homonym",
+      "downstream_failure": "Join different meanings or omit a relevant meaning link."
+    },
+    {
+      "id": "d017",
+      "expected": null,
+      "reason": "The selected text expresses landlord release plus tenant payment/possession conditions. Candidate narrows payment but expands unconditional release; identify the intended atomic condition before assigning a relation.",
+      "edge_case": "target-duty ambiguity",
+      "downstream_failure": "Excuse an unchanged duty or miss a qualification that prevents improper action."
+    },
+    {
+      "id": "d018",
+      "expected": "YES",
+      "reason": "The pleading exclusion narrows which communications trigger the subsection(a) notice duty.",
+      "edge_case": "trigger exclusion",
+      "downstream_failure": "Excuse an unchanged duty or miss a qualification that prevents improper action."
+    },
+    {
+      "id": "d019",
+      "expected": "YES",
+      "reason": "The candidate expressly says the institution need not provisionally credit in listed circumstances; isolate that duty from the investigation alternative before freeze.",
+      "edge_case": "embedded exemption; broad target",
+      "downstream_failure": "Excuse an unchanged duty or miss a qualification that prevents improper action."
+    },
+    {
+      "id": "d020",
+      "expected": "YES",
+      "reason": "The chapter exclusion removes this chapters surrender duty in the specified routes/occupancies; no actual-case applicability is asserted.",
+      "edge_case": "chapter-level exception",
+      "downstream_failure": "Excuse an unchanged duty or miss a qualification that prevents improper action."
+    },
+    {
+      "id": "d021",
+      "expected": "NO",
+      "reason": "Permitted compliant electronic form is a means of furnishing the required disclosure, not excusing the disclosure duty.",
+      "edge_case": "alternative satisfaction",
+      "downstream_failure": "Excuse an unchanged duty or miss a qualification that prevents improper action."
+    },
+    {
+      "id": "d022",
+      "expected": "NO",
+      "reason": "The no-admission rule does not excuse the collectors written notice obligation.",
+      "edge_case": "independent legal consequence",
+      "downstream_failure": "Excuse an unchanged duty or miss a qualification that prevents improper action."
+    },
+    {
+      "id": "d023",
+      "expected": "NO",
+      "reason": "Civil damages/fees for wrongful retention do not exempt the surrender duty.",
+      "edge_case": "remedy versus exception",
+      "downstream_failure": "Excuse an unchanged duty or miss a qualification that prevents improper action."
+    },
+    {
+      "id": "d024",
+      "expected": "NO",
+      "reason": "Review of records is stated to satisfy investigation requirements under conditions, not excuse investigation; isolate that duty from report/correction duties.",
+      "edge_case": "satisfaction versus exemption",
+      "downstream_failure": "Excuse an unchanged duty or miss a qualification that prevents improper action."
+    },
+    {
+      "id": "d025",
+      "expected": "YES",
+      "reason": "The candidate changes the ten-business-day investigation period to twenty in stated circumstances; isolate investigation from reporting/correction deadlines.",
+      "edge_case": "duration extension",
+      "downstream_failure": "Alter the wrong clock or miss an applicable modifier, causing premature or late action."
+    },
+    {
+      "id": "d026",
+      "expected": "YES",
+      "reason": "The candidate expressly substitutes ninety days for the forty-five-day investigation period; isolate that period from other duties.",
+      "edge_case": "conditional duration replacement",
+      "downstream_failure": "Alter the wrong clock or miss an applicable modifier, causing premature or late action."
+    },
+    {
+      "id": "d027",
+      "expected": "YES",
+      "reason": "The documentation-based notice rule measures sixty days from sending requested information rather than the ordinary statement trigger.",
+      "edge_case": "trigger replacement",
+      "downstream_failure": "Alter the wrong clock or miss an applicable modifier, causing premature or late action."
+    },
+    {
+      "id": "d028",
+      "expected": "YES",
+      "reason": "The cross-code terminal-holiday rule extends a covered last day to the next nonholiday; exact calendar computation remains separate.",
+      "edge_case": "terminal holiday adjustment",
+      "downstream_failure": "Alter the wrong clock or miss an applicable modifier, causing premature or late action."
+    },
+    {
+      "id": "d029",
+      "expected": "NO",
+      "reason": "A twenty-in-place-of-ten extension does not change the separate three-business-day results-reporting interval after investigation completes.",
+      "edge_case": "related but distinct deadline",
+      "downstream_failure": "Alter the wrong clock or miss an applicable modifier, causing premature or late action."
+    },
+    {
+      "id": "d030",
+      "expected": "NO",
+      "reason": "Ceasing collection after a qualifying dispute does not extend the five-day initial-notice duty; isolate that duty from the listed thirty-day notice contents.",
+      "edge_case": "collection hold versus notice clock",
+      "downstream_failure": "Alter the wrong clock or miss an applicable modifier, causing premature or late action."
+    },
+    {
+      "id": "d031",
+      "expected": "NO",
+      "reason": "The seventy-two-hour pickup period after tender does not alter the landlords five-day written-demand deadline; select that sentence explicitly.",
+      "edge_case": "different actor and trigger",
+      "downstream_failure": "Alter the wrong clock or miss an applicable modifier, causing premature or late action."
+    },
+    {
+      "id": "d032",
+      "expected": "NO",
+      "reason": "The remedies and reasonable surrender timing do not extend the tenants eighteen-day request period.",
+      "edge_case": "remedy timing versus prerequisite",
+      "downstream_failure": "Alter the wrong clock or miss an applicable modifier, causing premature or late action."
+    },
+    {
+      "id": "d033",
+      "expected": null,
+      "reason": "The passage identifies a named Act but does not identify which enactment in its sent context; add section1005.2(c) before selecting Electronic Fund Transfer Act over NONE.",
+      "edge_case": "missing adopted definition context",
+      "downstream_failure": "Choose the wrong meaning and route the operating question to an incorrect actor or rule."
+    },
+    {
+      "id": "d034",
+      "expected": "B",
+      "reason": "Act denotes conduct provided by law, not a named enactment.",
+      "edge_case": "ordinary conduct",
+      "downstream_failure": "Choose the wrong meaning and route the operating question to an incorrect actor or rule."
+    },
+    {
+      "id": "d035",
+      "expected": "B",
+      "reason": "Provisional credit is the amount temporarily added to the account and later debited.",
+      "edge_case": "account balance meaning",
+      "downstream_failure": "Choose the wrong meaning and route the operating question to an incorrect actor or rule."
+    },
+    {
+      "id": "d036",
+      "expected": "NONE",
+      "reason": "The source defines deferred-payment credit; neither academic credit nor attribution fits.",
+      "edge_case": "genuine no offered fit",
+      "downstream_failure": "Choose the wrong meaning and route the operating question to an incorrect actor or rule."
+    },
+    {
+      "id": "d037",
+      "expected": "A",
+      "reason": "The explicit definition is the impartial PHA-selected reviewer excluding decisionmaker/subordinate.",
+      "edge_case": "qualified role",
+      "downstream_failure": "Choose the wrong meaning and route the operating question to an incorrect actor or rule."
+    },
+    {
+      "id": "d038",
+      "expected": "B",
+      "reason": "The definition is the adult lessee resident or qualifying remaining household head and expressly excludes aides.",
+      "edge_case": "disjunctive and exclusion conditions",
+      "downstream_failure": "Choose the wrong meaning and route the operating question to an incorrect actor or rule."
+    },
+    {
+      "id": "d039",
+      "expected": "NONE",
+      "reason": "State here is a condition, not geography or enacted statutes.",
+      "edge_case": "none versus missing evidence",
+      "downstream_failure": "Choose the wrong meaning and route the operating question to an incorrect actor or rule."
+    },
+    {
+      "id": "d040",
+      "expected": "A",
+      "reason": "Owner expressly excludes landlord and requires a personal-property interest.",
+      "edge_case": "personal versus real property owner",
+      "downstream_failure": "Choose the wrong meaning and route the operating question to an incorrect actor or rule."
+    },
+    {
+      "id": "d041",
+      "expected": "NO",
+      "reason": "The Court expressly declines to address the principal-purpose definition.",
+      "edge_case": "reserved issue",
+      "downstream_failure": "Treat an unsupported proposition as authority or discard source-supported protection."
+    },
+    {
+      "id": "d042",
+      "expected": "NO",
+      "reason": "The selected passage attributes the proposed position to petitioners; it does not show adoption by the Court.",
+      "edge_case": "argument versus holding",
+      "downstream_failure": "Treat an unsupported proposition as authority or discard source-supported protection."
+    },
+    {
+      "id": "d043",
+      "expected": "YES",
+      "reason": "The passage expressly permits own-account debt collection without triggering the particular definition in dispute.",
+      "edge_case": "holding with bounded statutory scope",
+      "downstream_failure": "Treat an unsupported proposition as authority or discard source-supported protection."
+    },
+    {
+      "id": "d044",
+      "expected": "YES",
+      "reason": "The text expressly excludes formal civil pleadings from initial communication for subsection(a).",
+      "edge_case": "express exclusion",
+      "downstream_failure": "Treat an unsupported proposition as authority or discard source-supported protection."
+    },
+    {
+      "id": "d045",
+      "expected": "NO",
+      "reason": "The claim removes the material requirement that property remained in the dwelling.",
+      "edge_case": "missing fee-waiver condition",
+      "downstream_failure": "Treat an unsupported proposition as authority or discard source-supported protection."
+    },
+    {
+      "id": "d046",
+      "expected": "YES",
+      "reason": "The storage-cost subparagraph expressly caps this component at fair rental value of reasonably required space.",
+      "edge_case": "specific cost component",
+      "downstream_failure": "Treat an unsupported proposition as authority or discard source-supported protection."
+    },
+    {
+      "id": "d047",
+      "expected": "YES",
+      "reason": "The text expressly substitutes twenty for ten business days under(c)(1)/(2) for the specified transfer/account period.",
+      "edge_case": "qualified temporal claim",
+      "downstream_failure": "Treat an unsupported proposition as authority or discard source-supported protection."
+    },
+    {
+      "id": "d048",
+      "expected": "NO",
+      "reason": "The definition expressly excludes transfers initiated with fraudulent intent by the consumer.",
+      "edge_case": "contradictory express exclusion",
+      "downstream_failure": "Treat an unsupported proposition as authority or discard source-supported protection."
+    }
+  ]
+}

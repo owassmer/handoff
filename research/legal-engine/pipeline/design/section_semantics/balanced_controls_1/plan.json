@@ -1,0 +1,513 @@
+{
+  "format": "section-semantics-1",
+  "id": "balanced_development_controls_1",
+  "sources": [
+    {
+      "id": "or_entry_emergency",
+      "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+      "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+      "start": 140545,
+      "end": 141201,
+      "quote": "(b) In case of an\nemergency, a landlord may enter the dwelling unit or any portion of the\npremises under a tenant’s exclusive control without consent of the tenant,\nwithout notice to the tenant and at any time. “Emergency” includes but is not\nlimited to a repair problem that, unless remedied immediately, is likely to\ncause serious damage to the premises. If a landlord makes an emergency entry in\nthe tenant’s absence, the landlord shall give the tenant actual notice within\n24 hours after the entry, and the notice shall include the fact of the entry,\nthe date and time of the entry, the nature of the emergency and the names of\nthe persons who entered."
+    },
+    {
+      "id": "or_entry_yard",
+      "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+      "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+      "start": 142575,
+      "end": 143748,
+      "quote": "(e)(A) If a\nwritten agreement requires the landlord to perform yard maintenance or grounds\nkeeping for the premises:\n(i) A landlord\nand tenant may agree that the landlord or landlord’s agent may enter for that\npurpose upon the premises under the tenant’s exclusive control not including\nthe dwelling unit, without notice to the tenant, at reasonable times and with\nreasonable frequency. The terms of the right of entry must be described in the\nrental agreement or in a separate written agreement.\n(ii) A tenant may\ndeny consent for a landlord or landlord’s agent to enter upon the premises\npursuant to this paragraph if the entry is at an unreasonable time or with\nunreasonable frequency. The tenant must assert the denial by giving actual\nnotice of the denial to the landlord or landlord’s agent prior to, or at the\ntime of, the attempted entry.\n(B) As used in\nthis paragraph:\n(i) “Yard\nmaintenance or grounds keeping” includes, but is not limited to, weeding,\nmowing grass and pruning trees and shrubs.\n(ii) “Unreasonable\ntime” refers to a time of day, day of the week or particular time that\nconflicts with the tenant’s reasonable and specific plans to use the premises."
+    },
+    {
+      "id": "or_entry_def_41",
+      "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+      "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+      "start": 23704,
+      "end": 24077,
+      "quote": "(41)(a) “Rent”\nmeans any payment to be made to the landlord under the rental agreement,\nperiodic or otherwise, in exchange for the right of a tenant and any permitted\npet to occupy a dwelling unit to the exclusion of others and to use the\npremises.\n(b) “Rent” does\nnot include security deposits, fees or utility or service charges as described\nin ORS 90.315 (4) and 90.562."
+    },
+    {
+      "id": "ca_return_def_Landlord",
+      "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1980.txt",
+      "sha256": "4d96366e899b45063c589a04dd795c5cfaa043f64f2e5f7a095857fa52bb98ea",
+      "start": 1196,
+      "end": 1356,
+      "quote": "(a) “Landlord” means any operator, keeper, lessor, or sublessor of any furnished or unfurnished premises for hire, or his or her agent or successor in interest."
+    },
+    {
+      "id": "ca_return_b",
+      "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1987.txt",
+      "sha256": "4dc999fbc774738744c09cf63fdd8dc3a8d88508d615a9344045d60f7d1e8d32",
+      "start": 1547,
+      "end": 1948,
+      "quote": "(b) Where personal\nproperty is not released pursuant to subdivision (a) and the notice stated that the personal property would be sold at a public sale, the landlord shall release the personal property to the former tenant if he or she claims it prior to the time it is sold and pays the reasonable cost of storage, advertising, and sale incurred prior to the time the property is withdrawn from sale."
+    },
+    {
+      "id": "ca_return_c",
+      "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1987.txt",
+      "sha256": "4dc999fbc774738744c09cf63fdd8dc3a8d88508d615a9344045d60f7d1e8d32",
+      "start": 1949,
+      "end": 2341,
+      "quote": "(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling."
+    }
+  ],
+  "jobs": [
+    {
+      "id": "j001",
+      "question": {
+        "primitive": "noul",
+        "instructions": {
+          "question": "Does the passage define the term with this meaning?",
+          "candidate": "Includes, but is not limited to, an immediately necessary repair to prevent likely serious damage to the premises.",
+          "term": "Emergency"
+        }
+      },
+      "evidence": [
+        "or_entry_emergency"
+      ],
+      "after": [],
+      "licenses": [
+        {
+          "answer": true,
+          "target": "judgments.j001",
+          "value": true,
+          "operation": "establish_field_only"
+        },
+        {
+          "answer": false,
+          "target": "judgments.j001",
+          "value": false,
+          "operation": "establish_field_only"
+        }
+      ]
+    },
+    {
+      "id": "j002",
+      "question": {
+        "primitive": "noul",
+        "instructions": {
+          "question": "Does the passage define the term with this meaning?",
+          "candidate": "Means only an immediately necessary repair to prevent likely serious damage to the premises.",
+          "term": "Emergency"
+        }
+      },
+      "evidence": [
+        "or_entry_emergency"
+      ],
+      "after": [],
+      "licenses": [
+        {
+          "answer": true,
+          "target": "judgments.j002",
+          "value": true,
+          "operation": "establish_field_only"
+        },
+        {
+          "answer": false,
+          "target": "judgments.j002",
+          "value": false,
+          "operation": "establish_field_only"
+        }
+      ]
+    },
+    {
+      "id": "j003",
+      "question": {
+        "primitive": "noul",
+        "instructions": {
+          "question": "Does the passage define the term with this meaning?",
+          "candidate": "Includes, but is not limited to, weeding, mowing grass, and pruning trees and shrubs.",
+          "term": "Yard maintenance or grounds keeping"
+        }
+      },
+      "evidence": [
+        "or_entry_yard"
+      ],
+      "after": [],
+      "licenses": [
+        {
+          "answer": true,
+          "target": "judgments.j003",
+          "value": true,
+          "operation": "establish_field_only"
+        },
+        {
+          "answer": false,
+          "target": "judgments.j003",
+          "value": false,
+          "operation": "establish_field_only"
+        }
+      ]
+    },
+    {
+      "id": "j004",
+      "question": {
+        "primitive": "noul",
+        "instructions": {
+          "question": "Does the passage define the term with this meaning?",
+          "candidate": "Requires all of weeding, mowing grass, and pruning trees and shrubs on every visit.",
+          "term": "Yard maintenance or grounds keeping"
+        }
+      },
+      "evidence": [
+        "or_entry_yard"
+      ],
+      "after": [],
+      "licenses": [
+        {
+          "answer": true,
+          "target": "judgments.j004",
+          "value": true,
+          "operation": "establish_field_only"
+        },
+        {
+          "answer": false,
+          "target": "judgments.j004",
+          "value": false,
+          "operation": "establish_field_only"
+        }
+      ]
+    },
+    {
+      "id": "j005",
+      "question": {
+        "primitive": "noul",
+        "instructions": {
+          "question": "Does the definition establish this detail?",
+          "candidate": "Rent excludes security deposits and fees.",
+          "term": "Rent"
+        }
+      },
+      "evidence": [
+        "or_entry_def_41"
+      ],
+      "after": [],
+      "licenses": [
+        {
+          "answer": true,
+          "target": "judgments.j005",
+          "value": true,
+          "operation": "establish_field_only"
+        },
+        {
+          "answer": false,
+          "target": "judgments.j005",
+          "value": false,
+          "operation": "establish_field_only"
+        }
+      ]
+    },
+    {
+      "id": "j006",
+      "question": {
+        "primitive": "noul",
+        "instructions": {
+          "question": "Does the definition establish this detail?",
+          "candidate": "Rent includes security deposits and fees.",
+          "term": "Rent"
+        }
+      },
+      "evidence": [
+        "or_entry_def_41"
+      ],
+      "after": [],
+      "licenses": [
+        {
+          "answer": true,
+          "target": "judgments.j006",
+          "value": true,
+          "operation": "establish_field_only"
+        },
+        {
+          "answer": false,
+          "target": "judgments.j006",
+          "value": false,
+          "operation": "establish_field_only"
+        }
+      ]
+    },
+    {
+      "id": "j007",
+      "question": {
+        "primitive": "noul",
+        "instructions": {
+          "question": "Does the definition establish this detail?",
+          "candidate": "Landlord includes the operator’s agent or successor in interest.",
+          "term": "Landlord"
+        }
+      },
+      "evidence": [
+        "ca_return_def_Landlord"
+      ],
+      "after": [],
+      "licenses": [
+        {
+          "answer": true,
+          "target": "judgments.j007",
+          "value": true,
+          "operation": "establish_field_only"
+        },
+        {
+          "answer": false,
+          "target": "judgments.j007",
+          "value": false,
+          "operation": "establish_field_only"
+        }
+      ]
+    },
+    {
+      "id": "j008",
+      "question": {
+        "primitive": "noul",
+        "instructions": {
+          "question": "Does the definition establish this detail?",
+          "candidate": "Landlord excludes the operator’s agent or successor in interest.",
+          "term": "Landlord"
+        }
+      },
+      "evidence": [
+        "ca_return_def_Landlord"
+      ],
+      "after": [],
+      "licenses": [
+        {
+          "answer": true,
+          "target": "judgments.j008",
+          "value": true,
+          "operation": "establish_field_only"
+        },
+        {
+          "answer": false,
+          "target": "judgments.j008",
+          "value": false,
+          "operation": "establish_field_only"
+        }
+      ]
+    },
+    {
+      "id": "j009",
+      "question": {
+        "primitive": "noul",
+        "instructions": {
+          "question": "Is this candidate condition expressed in the passage?",
+          "candidate": "The notice stated that the property would be sold at public sale."
+        }
+      },
+      "evidence": [
+        "ca_return_b"
+      ],
+      "after": [],
+      "licenses": [
+        {
+          "answer": true,
+          "target": "judgments.j009",
+          "value": true,
+          "operation": "establish_field_only"
+        },
+        {
+          "answer": false,
+          "target": "judgments.j009",
+          "value": false,
+          "operation": "establish_field_only"
+        }
+      ]
+    },
+    {
+      "id": "j010",
+      "question": {
+        "primitive": "noul",
+        "instructions": {
+          "question": "Is this candidate condition expressed in the passage?",
+          "candidate": "The notice stated that the landlord would retain the property for personal use."
+        }
+      },
+      "evidence": [
+        "ca_return_b"
+      ],
+      "after": [],
+      "licenses": [
+        {
+          "answer": true,
+          "target": "judgments.j010",
+          "value": true,
+          "operation": "establish_field_only"
+        },
+        {
+          "answer": false,
+          "target": "judgments.j010",
+          "value": false,
+          "operation": "establish_field_only"
+        }
+      ]
+    },
+    {
+      "id": "j011",
+      "question": {
+        "primitive": "noul",
+        "instructions": {
+          "question": "Is this candidate condition expressed in the passage?",
+          "candidate": "Property was not released pursuant to subdivision(a)."
+        }
+      },
+      "evidence": [
+        "ca_return_b"
+      ],
+      "after": [],
+      "licenses": [
+        {
+          "answer": true,
+          "target": "judgments.j011",
+          "value": true,
+          "operation": "establish_field_only"
+        },
+        {
+          "answer": false,
+          "target": "judgments.j011",
+          "value": false,
+          "operation": "establish_field_only"
+        }
+      ]
+    },
+    {
+      "id": "j012",
+      "question": {
+        "primitive": "noul",
+        "instructions": {
+          "question": "Is this candidate condition expressed in the passage?",
+          "candidate": "Property had already been released pursuant to subdivision(a)."
+        }
+      },
+      "evidence": [
+        "ca_return_b"
+      ],
+      "after": [],
+      "licenses": [
+        {
+          "answer": true,
+          "target": "judgments.j012",
+          "value": true,
+          "operation": "establish_field_only"
+        },
+        {
+          "answer": false,
+          "target": "judgments.j012",
+          "value": false,
+          "operation": "establish_field_only"
+        }
+      ]
+    },
+    {
+      "id": "j013",
+      "question": {
+        "primitive": "noul",
+        "instructions": {
+          "question": "Is this candidate condition expressed in the passage?",
+          "candidate": "The former tenant reclaims the property."
+        }
+      },
+      "evidence": [
+        "ca_return_c"
+      ],
+      "after": [],
+      "licenses": [
+        {
+          "answer": true,
+          "target": "judgments.j013",
+          "value": true,
+          "operation": "establish_field_only"
+        },
+        {
+          "answer": false,
+          "target": "judgments.j013",
+          "value": false,
+          "operation": "establish_field_only"
+        }
+      ]
+    },
+    {
+      "id": "j014",
+      "question": {
+        "primitive": "noul",
+        "instructions": {
+          "question": "Is this candidate condition expressed in the passage?",
+          "candidate": "An unrelated person not reasonably believed to be an owner reclaims the property."
+        }
+      },
+      "evidence": [
+        "ca_return_c"
+      ],
+      "after": [],
+      "licenses": [
+        {
+          "answer": true,
+          "target": "judgments.j014",
+          "value": true,
+          "operation": "establish_field_only"
+        },
+        {
+          "answer": false,
+          "target": "judgments.j014",
+          "value": false,
+          "operation": "establish_field_only"
+        }
+      ]
+    },
+    {
+      "id": "j015",
+      "question": {
+        "primitive": "noul",
+        "instructions": {
+          "question": "Is this claimant requirement necessary in every case under the passage?",
+          "candidate": "The former tenant personally reclaims in every case satisfying the reclaimant condition."
+        }
+      },
+      "evidence": [
+        "ca_return_c"
+      ],
+      "after": [],
+      "licenses": [
+        {
+          "answer": true,
+          "target": "judgments.j015",
+          "value": true,
+          "operation": "establish_field_only"
+        },
+        {
+          "answer": false,
+          "target": "judgments.j015",
+          "value": false,
+          "operation": "establish_field_only"
+        }
+      ]
+    },
+    {
+      "id": "j016",
+      "question": {
+        "primitive": "noul",
+        "instructions": {
+          "question": "Does the passage establish this relationship between the claimant alternatives?",
+          "candidate": "Former-tenant reclaim OR reasonably-believed-other-owner reclaim satisfies the claimant component."
+        }
+      },
+      "evidence": [
+        "ca_return_c"
+      ],
+      "after": [],
+      "licenses": [
+        {
+          "answer": true,
+          "target": "judgments.j016",
+          "value": true,
+          "operation": "establish_field_only"
+        },
+        {
+          "answer": false,
+          "target": "judgments.j016",
+          "value": false,
+          "operation": "establish_field_only"
+        }
+      ]
+    }
+  ],
+  "assertions": []
+}

@@ -1,0 +1,27 @@
+# Goal 3: legal conclusions for outgoing-account collection
+
+October 1, 2026. Complete after independent review and integration; see COMPLETION_REOPENED.md. This is the current interpretation synthesis. Earlier reports described below remain historical research, not alternate selectable legal policies.
+
+## The five reopened questions
+
+| Question | Legal conclusion | Decisive basis and operating consequence |
+|---|---|---|
+| Debt assigned before 90 days overdue, then ages past 90 days | Section 1788.14.5 tests delinquency at the actual assignment. Later aging alone does not activate its additional regime. | The completed assignment of defined delinquent debt, transfer-date clauses, first-contact requirements and deliberate legislative narrowing work together. A genuine later assignment can qualify. Other collection duties remain. [Reasoning and contrary argument](resolution_assigned/FINDINGS.md). |
+| Buyer receives a request after the validation window | Section 1788.52(c) incorporates the 30-day request window, with the state's different production content and 15-day receipt-based response period. A genuinely late request alone does not trigger that mechanism. | Give effect to the express federal-consistency clause. Determine valid notice, receipt, timely dispatch and the particular collector's own window. Missing notice, a new collector or an early request can change the result. Continued evidence requirements do not expire. [Full timing branches](resolution_assigned/FINDINGS.md). |
+| Payment plans, postpaid utilities and mixed charges | Agreed acquisition before payment is credit. Simple installment forbearance on an old noncredit obligation does not create acquisition; new financing or prospective deferred acquisition does. | Hagey directly establishes postpaid electricity; Davidson/Paredes/Gouskos supply the acquisition rule. Contractual rental damage can be federal consumer debt without California credit; independent tort obligations differ. Classify whether mixed obligations are substantively separate transactions or one inseparable acquisition partly on credit; ledger labels do not decide coverage. [Resolved transaction rules](resolution_tenancy/FINDINGS.md). |
+| First communication is a served collection pleading | A qualifying first communication to the consumer triggers California's historical g notice duty, subject to its actual exceptions. The later federal pleading exclusion does not remove the state requirement. | Frozen statutory text, express e(11) exception contrasted with g, Heintz and the pre-2001 FTC Commission opinion support the conclusion. Resolve recipient, representation, service and collection-hold conditions as specified in the report. [Pleading analysis](resolution_federal/PLEADING_INITIAL_COMMUNICATION.md). |
+| Referenced COVID chapter was repealed | Section 1788.66's narrower historical rental-debt transfer prohibition survives. | The same enactment sunsets the broad prohibition and procedural chapter, preserves the narrower prohibition, and expressly describes repealing only the general ban. Historical eligibility and income remain factual conditions; current program closure is immaterial. [Incorporation analysis](resolution_federal/COVID_ASSIGNMENT_SURVIVAL.md). |
+
+These conclusions are statutory interpretations supported by authority, not claims that a court decided every identical factual example. Each report answers its strongest contrary argument. Case facts select the legal branch; absence of a fact-identical decision is no longer used as a reason to withhold the interpretation.
+
+## Dependencies followed
+
+Identity-theft review has independent civil-remedy, records, reporting and transfer consequences. The [resolved supplement](resolution_identity/FINDINGS.md) identifies the separate obligors, triggers, documents, recipients and clocks. A California collection restart does not clear a federal reporting block. Correcting the wrong person's account preserves claims against an actually responsible person.
+
+The [operating dependency audit](resolution_review/DEPENDENCY_AUDIT.md) resolves statutory calendars, separate California notices, lawful electronic delivery, licensing and current federal action rules. The [Penal Code records calendar](resolution_identity/PENAL_RECORDS_CALENDAR.md) separately resolves its ten-business-day period; the Civil Code counter cannot be reused automatically. The [fee analysis](resolution_review/FEE_RESOLUTION.md) distinguishes lawful original-agreement authorization, supported actual expenses, invalid penalties and unearned litigation fees, with express rental-law exclusions. Final integration review passed; all 20 decisions and 35 authored adverse examples were rechecked.
+
+## Why the prior closure was insufficient
+
+The prior work stopped at a directly-on-point-case search boundary and substituted optional precaution for a legal answer. It also omitted consequential notice and identity-theft dependencies and missed published utility authority. The correction is substantive interpretation and fuller dependency analysis, not removal of caveats from the same unfinished work.
+
+The product remains the complete tenancy-ending job. These conclusions improve how Handoff investigates, explains, recovers, settles and corrects the account while physical work progresses independently. They do not prescribe staffing roles or make every legal restriction an operator task.

@@ -1,0 +1,118 @@
+[
+  {
+    "instrument_id": "CA:HSC",
+    "add_units_in_scope": [
+      {
+        "unit": "section 1797.196",
+        "heading": "AED placement, upkeep and building-owner duties",
+        "reason": "Conditional premises duty where an AED is present: maintenance, testing, inspections, records, tenant notices and instructions. Express dependency of selected HSC19300 and CIV1714.21.",
+        "section_list": [
+          {
+            "number": "1797.196",
+            "heading": "AED placement, upkeep and building-owner duties",
+            "ref": "HSC 1797.196"
+          }
+        ],
+        "source_capture": "j1/lanes/codes/sources/current-review-operating-dependencies.txt"
+      },
+      {
+        "unit": "section 1797.200",
+        "heading": "Local EMS agency",
+        "reason": "Identifies the local agency that receives the AED notification required by1797.196(b); no clinical service operation is imported.",
+        "section_list": [
+          {
+            "number": "1797.200",
+            "heading": "Local EMS agency",
+            "ref": "HSC 1797.200"
+          }
+        ],
+        "source_capture": "j1/lanes/codes/sources/current-review-operating-dependencies.txt"
+      }
+    ],
+    "replace_out_unit": {
+      "match_unit": "division 2.5",
+      "replacement_unit": "division 2.5 remainder excluding sections 1797.196 and 1797.200",
+      "heading": "DIVISION 2.5. EMERGENCY MEDICAL SERVICES \u2014 remainder",
+      "reason": "Clinical EMS personnel, service-system administration and emergency-care operations remain outside the residential work/account chain. AED premises duties and their local-agency definition are expressly selected separately."
+    },
+    "functions": [
+      "work_standards",
+      "preconditions"
+    ],
+    "dependencies_already_selected": [
+      "HSC19300",
+      "HSC1250",
+      "CIV1714.21"
+    ]
+  },
+  {
+    "instrument_id": "CA:GOV",
+    "add_units_in_scope": [
+      {
+        "unit": "title 9 / chapter 1",
+        "heading": "CHAPTER 1. General 81000-81015",
+        "toc_url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=GOV&title=9.&chapter=1.",
+        "reason": "Shared construction and application provisions for retained permit/public-contract conflicts.",
+        "source_capture": "j1/lanes/codes/sources/gov-5200.txt",
+        "scope_evidence": "j1/lanes/codes/sources/current-review-operating-dependencies.txt"
+      },
+      {
+        "unit": "title 9 / chapter 2",
+        "heading": "CHAPTER 2. Definitions 82000-82054",
+        "toc_url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=GOV&title=9.&chapter=2.",
+        "reason": "Shared definitions including agency, public official and financial interests for retained permit/public-contract conflicts.",
+        "source_capture": "j1/lanes/codes/sources/gov-5200.txt",
+        "scope_evidence": "j1/lanes/codes/sources/current-review-operating-dependencies.txt"
+      },
+      {
+        "unit": "title 9 / chapter 3",
+        "heading": "CHAPTER 3. Fair Political Practices Commission 83100-83124",
+        "toc_url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=GOV&title=9.&chapter=3.",
+        "reason": "FPPC rulemaking, advice and enforcement authority for the retained conflict/disqualification regime.",
+        "source_capture": "j1/lanes/codes/sources/gov-5200.txt",
+        "scope_evidence": "j1/lanes/codes/sources/current-review-operating-dependencies.txt"
+      },
+      {
+        "unit": "title 9 / chapter 7",
+        "heading": "CHAPTER 7. Conflicts of Interest 87100-87505",
+        "toc_url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=GOV&title=9.&chapter=7.",
+        "reason": "Public-owner and permitting decisions can be disqualified by financial interests; keeps authority, disclosure, conflict codes, former-officer representation and exceptions together.",
+        "source_capture": "j1/lanes/codes/sources/gov-5200.txt",
+        "scope_evidence": "j1/lanes/codes/sources/current-review-operating-dependencies.txt"
+      },
+      {
+        "unit": "title 9 / chapter 11",
+        "heading": "CHAPTER 11. Enforcement 91000-91014",
+        "toc_url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=GOV&title=9.&chapter=11.",
+        "reason": "Remedies for retained conflicts include injunctions and invalidation of permits and contracts under91003; retain enforcement dependencies.",
+        "source_capture": "j1/lanes/codes/sources/gov-5200.txt",
+        "scope_evidence": "j1/lanes/codes/sources/current-review-operating-dependencies.txt"
+      },
+      {
+        "unit": "section 84308",
+        "heading": "Contributions and disqualification in entitlement/contract proceedings",
+        "reason": "Direct party/agent obligations and official disqualification in permits, land-use entitlements and covered contracts; preserve the full section including exemptions and cures.",
+        "section_list": [
+          {
+            "number": "84308",
+            "heading": "Contributions and disqualification in entitlement/contract proceedings",
+            "ref": "GOV 84308"
+          }
+        ],
+        "source_capture": "j1/lanes/codes/sources/current-review-operating-dependencies.txt"
+      }
+    ],
+    "replace_out_unit": {
+      "match_unit": "title 9",
+      "replacement_unit": "title 9 remainder excluding chapters 1, 2, 3, 7, 11 and section 84308",
+      "heading": "TITLE 9. POLITICAL REFORM \u2014 remainder",
+      "reason": "Election/campaign operations and unrelated political administration remain outside the residential chain. Shared definitions/authority, permit and public-contract conflicts, and their enforcement are expressly selected separately."
+    },
+    "functions": [
+      "preconditions",
+      "provider_contracts",
+      "courts_procedure"
+    ],
+    "regulatory_dependency": "FPPC conflict/disqualification regulations implementing87100 and84308 require reconciliation with the regulation lane; statewide public contracting and private permit applications both supply an actual work connection."
+  }
+]

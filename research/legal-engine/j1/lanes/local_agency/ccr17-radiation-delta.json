@@ -1,0 +1,188 @@
+{
+  "instruments": [
+    {
+      "id": "CA:CCR17",
+      "jurisdiction": "CA",
+      "name": "California Code of Regulations, Title 17",
+      "level": "regulation",
+      "functions": [
+        "preconditions",
+        "housing_assistance"
+      ],
+      "toc_source_url": "https://oal.ca.gov/publications/ccr/",
+      "adapter": "cornell_ccr",
+      "units_in_scope": [
+        {
+          "unit": "Division 1 - State Department of Health Services",
+          "heading": "Division 1 - State Department of Health Services (Chapter 1 to 14)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-17/division-1",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-70.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 2 - Health and Welfare Agency-Department of Developmental Services Regulations",
+          "heading": "Division 2 - Health and Welfare Agency-Department of Developmental Services Regulations (Chapter 1 to 4)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-17/division-2",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-70.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 3 - Air Resources",
+          "heading": "Division 3 - Air Resources (Chapter 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-17/division-3",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-70.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 3.5 - Office of Environmental Health Hazard Assessment",
+          "heading": "Division 3.5 - Office of Environmental Health Hazard Assessment (Chapter 2)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-17/division-3.5",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-80.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Amendment package 2026-0316-04EE",
+          "heading": "Emergency Vehicle Emissions Regulations - Readoption",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2026-0316-04EE",
+              "heading": "Emergency Vehicle Emissions Regulations - Readoption",
+              "ref": "https://ww2.arb.ca.gov/sites/default/files/barcu/regact/2025/emergencyvehemissions/approvedreadoptregtext.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "Complete approved amendment package, internally subdivided against retained parent units in J2"
+          ],
+          "version_record_reference": "2026-0316-04EE",
+          "legal_status": "First readoption historical only. Second effective June29 with stated September29 endpoint, but OAL current pending table lists timely September25 certificate2026-0925-04. GOV11346.1(e) and11349.6(d) require certificate/review treatment; do not infer repeal solely from September29. Permanent approval not established; agency-adopted permanent package is under review."
+        },
+        {
+          "unit": "DPH-24-001 final action and official codified anchor",
+          "heading": "NRC compatibility final action2025-1029-01",
+          "version_record_reference": "2025-1029-01",
+          "section_list": [
+            {
+              "number": "2025-1029-01-action",
+              "heading": "OAL final regulatory action; Notice52 pages28\u201329",
+              "ref": "https://oal.ca.gov/wp-content/uploads/sites/166/2025/12/2025-Notice-Register-No.-52-Z-December-26-2025.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "30180.1",
+              "heading": "Exempt Concentrations",
+              "ref": "https://govt.westlaw.com/calregs/Document/IA056F4D0DF2611F08570C54DE4B191DE?viewType=FullText",
+              "source_unit_kind": "section"
+            }
+          ],
+          "internal_units_in_scope": [
+            "30100",
+            "30180.1",
+            "30181",
+            "30195.2",
+            "30196",
+            "30295",
+            "30345.1",
+            "30345.3",
+            "30346.4",
+            "30346.5",
+            "30346.7",
+            "30346.8",
+            "30346.9",
+            "30346.10",
+            "30348.2",
+            "30348.4",
+            "30348.5",
+            "30350.1",
+            "30350.2"
+          ],
+          "acquisition_note": "Existing Division1 route enumerates all19 affected sections; reconcile mirror text to official CCR before J2 completion. Action-summary document is source/version evidence, not substitute regulation text."
+        }
+      ],
+      "units_out": [
+        {
+          "unit": "Division 4 - California Institute for Regenerative Medicine",
+          "heading": "Division 4 - California Institute for Regenerative Medicine (\u00a7 100000 to 100005)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-17",
+          "reason": "Division 4 - California Institute for Regenerative Medicine governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        }
+      ],
+      "acquisition": {
+        "text_adapter": "cornell_ccr",
+        "enumeration": "Traverse the selected mirror division/chapter descendants and retain actual linked leaf references.",
+        "source_authority": "mirror",
+        "official_reconciliation": "Official CCR and issuing-agency enacted/amendment sources determine the authoritative version. Mirror text alone cannot complete J2."
+      },
+      "toc_mirror_url": "https://www.law.cornell.edu/regulations/california/title-17",
+      "source_capture": "j1/sources/ccr-title-17.txt",
+      "currentness_note": "LII supplies the browse tree; official CCR and issuing-agency adoption texts determine legal version. LII quarterly update is not treated as current legal authority.",
+      "version_records": [
+        {
+          "oal_file": "2026-0316-04EE",
+          "name": "Emergency Vehicle Emissions Regulations - Readoption",
+          "effective_from": "2026-04-01",
+          "source_url": "https://ww2.arb.ca.gov/sites/default/files/barcu/regact/2025/emergencyvehemissions/approvedreadoptregtext.pdf",
+          "selected_unit": "Complete approved amendment package, internally subdivided against retained parent units in J2",
+          "reason": "Conditional work vehicles/equipment; emergency history and titles require agency reconciliation before operative version assertion.",
+          "source_scope_excerpt": "2026-0316-04EE  | Emergency Vehicle Emissions Regulations - Readoption  | Title 17\nL33: Adopt:\nL34: 1900.0.1, 1956.8.1, 1961.2.1, 1961.3.1, 1962.2.1, 1962.3.1, 1965.0.1, 1968.2.1, 1968.5.1, 1969.0.1, 1971.1.1, 1971.5.1, 1976.0.1, 1978.0.1, 2035.0.1, 2036.0.1, 2037.0.1, 2038.0.1, 2040.0.1, 2111.0.1, 2112.0.1, 2113.0.1, 2114.0.1, 2115.0.1, 2116.0.1, 2117.0.1, 2118.0.1, 2119.0.1, 2121.0.1, 2123.0.1, 2125.0.1, 2126.0.1, 2127.0.1, 2128.0.1, 2129.0.1, 2130.0.1, 2131.0.1, 2133.0.1, 2137.0.1, 2139.0.1, 2140.0.1, 2141.0.1, 2142.0.1, 2143.0.1, 2144.0.1, 2145.0.1, 2146.0.1, 2147.0.1, 2148.0.1, 2149.0.1, 2317.0.1, 2423.0.1, 2485.0.1, 2903.0.1\nL35: 95300.0.1, 95301.0.1, 95302.0.1, 95303.0.1, 95304.0.1, 95305.0.1, 95306.0.1, 95307.0.1, 95308.0.1, 95309.0.1, 95310.0.1, 95311.0.1, 95312.0.1, 95660.0.1, 95661.0.1, 95662.0.1, 95663.0.1, 95664.0.1\nL36: 95300.0.1, 95301.0.1, 95302.0.1, 95303.0.1, 95304.0.1, 95305.0.1, 95306.0.1, 95307.0.1, 95308.0.1, 95309.0.1, 95310.0.1, 95311.0.1, 95312.0.1, 95660.0.1, 95661.0.1, 95662.0.1, 95663.0.1, 95664.0.1\nL37: Amend:\nL38: 1900, 1956.8, 1961.2, 1961.3, 1962.2, 1962.3, 1965, 1968.2, 1968.5, 1969, 1971.1, 1971.5,1976, 1978, 2035, 2036, 2037, 2038, 2040, 2111, 2112, 2113, 2114, 2115, 2116, 2117, 2118, 2119, 2121, 2123, 2125, 2126, 2127, 2128, 2129, 2130, 2131, 2133, 2137, 2139, 2139.5, 2140, 2141, 2142, 2143, 2144, 2145, 2146, 2147, 2148, 2149, 2166, 2166.1, 2167, 2168, 2169, 2169.1, 2169.2, 2169.3, 2169.4, 2169.5, 2169.6, 2169.7, 2169.8, 2170, 2317, 2423, 2485, 2903\nL39: 95300, 95301, 95302, 95303, 95304, 95305, 95306, 95307, 95308, 95309, 95310, 95311, 9",
+          "acquisition_note": "Exact publisher final target established by official OAL approved-document link. Mechanical retrieval failures do not leave an unknown J1 identity.",
+          "temporal_note": "Historical first readoption effective April1, second readoption effective June29; September25 certificate filing must be considered before any September29 expiry inference. Permanent approval not established.",
+          "currentness": "First readoption historical only. Second effective June29 with stated September29 endpoint, but OAL current pending table lists timely September25 certificate2026-0925-04. GOV11346.1(e) and11349.6(d) require certificate/review treatment; do not infer repeal solely from September29. Permanent approval not established; agency-adopted permanent package is under review.",
+          "certificate_of_compliance": {
+            "oal_file": "2026-0925-04",
+            "submitted_on": "2026-09-25",
+            "status": "Under OAL review as of2026-10-01",
+            "source": "https://oal.ca.gov/proposed-regulations/",
+            "statutes": [
+              "GOV11346.1(e)",
+              "GOV11349.6(d)"
+            ]
+          }
+        },
+        {
+          "oal_file": "2025-1029-01",
+          "name": "DPH-24-001 Compatibility Maintenance with NRC Regulations",
+          "filed_on": "2025-12-15",
+          "effective_from": "2026-04-01",
+          "source_url": "https://oal.ca.gov/wp-content/uploads/sites/166/2025/12/2025-Notice-Register-No.-52-Z-December-26-2025.pdf",
+          "agency_page": "https://www.cdph.ca.gov/Programs/OLS/Pages/DPH-24-001.aspx",
+          "affected_sections": [
+            "30100",
+            "30180.1",
+            "30181",
+            "30195.2",
+            "30196",
+            "30295",
+            "30345.1",
+            "30345.3",
+            "30346.4",
+            "30346.5",
+            "30346.7",
+            "30346.8",
+            "30346.9",
+            "30346.10",
+            "30348.2",
+            "30348.4",
+            "30348.5",
+            "30350.1",
+            "30350.2"
+          ],
+          "legal_status": "Approved; operative April1,2026",
+          "applicability": "Conditional radioactive-material/device work, possession, licensing and disposal; exemptions must be retained. Does not make ordinary housing ownership a radioactive-material license trigger.",
+          "acquisition_note": "OAL final action supplies complete19-section inventory and dates; approved agency package identity confirmed. June11 text is a document lead whose final-href association remains unverified. Existing selected division provides enumeration route; official30180.1 supplies authoritative current-text anchor. J2 must reconcile every selected section against official text; final action identity is settled.",
+          "candidate_package_url": "https://www.cdph.ca.gov/Programs/OLS/CDPH%20Document%20Library/DPH-24-001-Compatibility_Maintenance_NRC_Regulations_Text.pdf",
+          "candidate_package_status": "Final href association not independently verified; not used as authoritative final text."
+        }
+      ]
+    }
+  ]
+}

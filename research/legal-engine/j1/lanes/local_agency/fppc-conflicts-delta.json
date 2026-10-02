@@ -1,0 +1,822 @@
+{
+  "integration": "Additive selection only forCA:CCR2; union functions; append listed units/version records; replace exact blanket Division6 exclusion with residual below. Do not overwrite current canonical instruments or restore CSM/DWC/EDD exclusions.",
+  "instrument_id": "CA:CCR2",
+  "add_functions": [
+    "preconditions",
+    "provider_contracts",
+    "courts_procedure"
+  ],
+  "add_units_in_scope": [
+    {
+      "unit": "FPPC conflict and contribution definitions",
+      "heading": "FPPC conflict and contribution definitions",
+      "adapter": "generic",
+      "toc_url": "https://www.fppc.ca.gov/the-law/fppc-regulations/regulations-index/",
+      "toc_authority": "official",
+      "reason": "Definitions determine whose contribution, income, investment, leasehold, trust or family interest affects a permit or public-work contracting decision; complete mixed definitions retained.",
+      "section_list": [
+        {
+          "number": "18200",
+          "heading": "Terms and References",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_02/18200._Terms_and_References.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18215",
+          "heading": "18215. Contribution.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_02/18215._Contribution.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18216",
+          "heading": "18216. Enforceable Promise to Make a Paymen",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_02/18216._Enforceable_Promise_to_Make_a_Payment.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18219",
+          "heading": "18219. Designated Employees.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_02/18219._Designated_Employees.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18229.1",
+          "heading": "18229.1. Definition of \u201cDependent Children.\u201d",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_02/18229.1._Definition_of_Dependent_Children.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18230",
+          "heading": "18230. Doing Business in the Jurisdiction.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_02/18230._Doing_Business_in_the_Jurisdiction.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18232",
+          "heading": "18232. Salary and Reimbursement for Expenses or Per Diem Received from a State,  Local, or Federal Government Agency.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_02/18232._Salary_and_Reimbursement_for_Expenses_or_Per_Diem_Received_from_a_State_Local_or_Federal_Government_Agency.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18233",
+          "heading": "18233. Leasehold Interest",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_02/18233._Leasehold_Interest.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18234",
+          "heading": "18234. Interests in Trusts.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_02/18234._Interests_in_Trusts.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18235",
+          "heading": "18235. Reporting Interests in a Blind Trust (82030, 82033 and 82034).",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_02/18235._Reporting_Interests_in_a_Blind_Trust_82030_82033_and_82034.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18237",
+          "heading": "18237. Definitions Definition of Investment",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_02/18237._Definitions_Definition_of_Investment.pdf",
+          "source_unit_kind": "section"
+        }
+      ],
+      "version_status": "Publisher current-index targets; later adopted amendments separately selected below. No claim that index alone proves every leaf current."
+    },
+    {
+      "unit": "FPPC permit and covered-contract contribution restrictions",
+      "heading": "FPPC permit and covered-contract contribution restrictions",
+      "adapter": "generic",
+      "toc_url": "https://www.fppc.ca.gov/the-law/fppc-regulations/regulations-index/",
+      "toc_authority": "official",
+      "reason": "GOV84308 implementing regime: covered proceedings and actors, aggregation, solicitation, disqualification, cure and disclosure. Section18438.2 reaches permits and covered contracts and preserves statutory contract exclusions.",
+      "section_list": [
+        {
+          "number": "18438",
+          "heading": "18438. Application of Government Code Section 84308.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_04/18438._Application_of_Government_Code_Section_84308.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18438.1",
+          "heading": "18438.1. Officers and Agencies Under Government Code Section 84308.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_04/18438.1._Officers_and_Agencies_Under_Government_Code_Section_84308.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18438.2",
+          "heading": "18438.2. Proceedings Under Government Code Section 84308.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_04/18438.2._Proceedings_Under_Government_Code_Section_84308.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18438.4",
+          "heading": "18438.4. Participants Under Government Code Section 84308.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_04/18438.4._Participants_Under_Government_Code_Section_84308.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18438.5",
+          "heading": "18438.5. Aggregated Contributions Under Government Code Section 84308.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_04/18438.5._Aggregated_Contributions_Under_Government_Code_Section_84308.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18438.6",
+          "heading": "18438.6. Solicitation, Direction, and Receipt of Contributions Under Government Code Section 84308.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_04/18438.6._Solicitation_Direction_and_Receipt_of_Contributions_Under_Government_Code_Section_84308.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18438.7",
+          "heading": "18438.7. Prohibitions and Disqualification Under Section 84308.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_04/18438.7._Prohibitions_and_Disqualification_Under_Government_Code_Section_84308.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18438.8",
+          "heading": "18438.8. Disclosure Under Government Code Section 84308.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_04/18438.8._Disclosure_Under_Government_Code_Section_84308.pdf",
+          "source_unit_kind": "section"
+        }
+      ],
+      "version_status": "Publisher current-index targets; later adopted amendments separately selected below. No claim that index alone proves every leaf current."
+    },
+    {
+      "unit": "FPPC financial-interest decision and recusal standards",
+      "heading": "FPPC financial-interest decision and recusal standards",
+      "adapter": "generic",
+      "toc_url": "https://www.fppc.ca.gov/the-law/fppc-regulations/regulations-index/",
+      "toc_authority": "official",
+      "reason": "GOV87100 decision chain and GOV84308 participant dependency: foreseeability, materiality for property/business/income/gifts/personal finances, public-generally exception, participation, legally required participation, segmentation and recusal. Property standard expressly reaches permits, leases, services and repair exceptions.",
+      "section_list": [
+        {
+          "number": "18700",
+          "heading": "18700. Basic Rule and Guide to Conflict of Interest Regulations",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18700._Basic_Rule_and_Guide_to_Conflict_of_Interest_Regulations.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18700.1",
+          "heading": "18700.1. Definitions: Source of Income, Commission Income and Incentive Income.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18700.1._Definitions_Source_of_Income_Commission_Income_and_Incentive_Income.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18700.2",
+          "heading": "18700.2. Parent, Subsidiary, Otherwise Related Business Entity: Defined.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18700.2._Parent_Subsidiary_Otherwise_Related_Business_Entity_Defined.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18700.3",
+          "heading": "18700.3. Consultant, Public Official Who Manages Public Investments: Definitions.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18700.3._Consultant_Public_Official_Who_Manages_Public_Investments_Definitions.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18701",
+          "heading": "18701. Determining Whether a Financial Effect Is Reasonably Foreseeable.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18701._Determining_Whether_a_Financial_Effect_Is_Reasonably_Foreseeable.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18701.1",
+          "heading": "18701.1. Real Estate or Professional License.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18701.1._Real_Estate_or_Professional_License.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18702",
+          "heading": "18702. Materiality Standards.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18702._Materiality_Standards.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18702.1",
+          "heading": "18702.1. Materiality Standard: Financial Interest in a Business Entity.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18702.1._Materiality_Standard_Financial_Interest_in_Business_Entities.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18702.2",
+          "heading": "18702.2. Materiality Standard: Financial Interest in Real Property.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18702.2_Materiality_Standard_Financial_Interest_in_Real_Property.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18702.3",
+          "heading": "18702.3. Materiality Standard: Financial Interest in a Source of Income.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18702.3._Materiality_Standard_Financial_Interest_in_a_Source_of_Income.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18702.4",
+          "heading": "18702.4. Materiality Standard: Financial Interest in Source of Gift.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18702.4._Materiality_Standard_Financial_Interest_in_Source_of_Gift.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18702.5",
+          "heading": "18702.5. Materiality Standard: Financial Interest in an Official's Personal Finances.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18702.5._Materiality_Standard_Financial_Interest_in_an_Officials_Personal_Finances.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18703",
+          "heading": "18703. Public Generally",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18703._Public_Generally.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18704",
+          "heading": "18704. Making, Participating in Making, or Using or Attempting to Use Official Position  to Influence a Government Decision, Defined.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18704._Making_Participating_in_Making_or_Using_or_Attempting_to_Use_Official_Position_to_Influence_a_Governmental_Decision_Defined.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18705",
+          "heading": "18705. Legally Required Participation.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18705._Legally_Required_Participation.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18706",
+          "heading": "18706. Governmental Decision: Segmentation.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18706._Governmental_Decision_Segmentation.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18707",
+          "heading": "18707. Disqualification Requirements.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18707._Disqualification_Requirements.pdf",
+          "source_unit_kind": "section"
+        }
+      ],
+      "version_status": "Publisher current-index targets; later adopted amendments separately selected below. No claim that index alone proves every leaf current."
+    },
+    {
+      "unit": "FPPC conflict disclosure and agency-code dependencies",
+      "heading": "FPPC conflict disclosure and agency-code dependencies",
+      "adapter": "generic",
+      "toc_url": "https://www.fppc.ca.gov/the-law/fppc-regulations/regulations-index/",
+      "toc_authority": "official",
+      "reason": "Leasehold valuation, complete mixed model COI code including disqualification, and privileged disclosure expressly referenced by18707 support permit/work decisions. Separate statement reporting, interim filing, disclosure-category appeals and code-adoption administration are excluded.",
+      "section_list": [
+        {
+          "number": "18729",
+          "heading": "18729. Leasehold Interests\u2013Value, Disclosure",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18729._Leasehold_Interests_Value_Disclosure.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18730",
+          "heading": "18730. Provisions of Conflict of Interest Codes.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18730._Provisions_of_Conflict_of_Interest_Codes.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18740",
+          "heading": "18740. Legally Prohibited Disclosure: Statement of Economic Interests.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18740._Legally_Prohibited_Disclosure_Statements_of_Economic_Interests.pdf",
+          "source_unit_kind": "section"
+        }
+      ],
+      "version_status": "Publisher current-index targets; later adopted amendments separately selected below. No claim that index alone proves every leaf current."
+    },
+    {
+      "unit": "FPPC former-official and prospective-employment conflicts",
+      "heading": "FPPC former-official and prospective-employment conflicts",
+      "adapter": "generic",
+      "toc_url": "https://www.fppc.ca.gov/the-law/fppc-regulations/regulations-index/",
+      "toc_authority": "official",
+      "reason": "Representation before permitting/contracting agencies and influence linked to prospective employment affect lawful procurement/provider commitments; conditional former-official regime, not general employment administration.",
+      "section_list": [
+        {
+          "number": "18741.1",
+          "heading": "18741.1. Revolving Door; State Permanent Ban.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18741.1._Revolving_Door_State_Permanent_Ban.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18746.1",
+          "heading": "18746.1. Revolving Door; State One-Year Ban.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18746.1._Revolving_Door_State_One-Year_Ban.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18746.2",
+          "heading": "18746.2. Revolving Door; Appearances and Communications",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18746.2._Revolving_Door_Appearances_and_Communications.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18746.3",
+          "heading": "18746.3. Revolving Door; Local Officials.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18746.3._Revolving_Door_Local_Officials.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18746.4",
+          "heading": "18746.4. Revolving Door; Permanently Left and Leave of Absence.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18746.4._Revolving_Door_Permanently_Left_and_Leave_of_Absence.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18747",
+          "heading": "18747. Influencing Prospective Employment.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_07/18747._Influencing_Prospective_Employment.pdf",
+          "source_unit_kind": "section"
+        }
+      ],
+      "version_status": "Publisher current-index targets; later adopted amendments separately selected below. No claim that index alone proves every leaf current."
+    },
+    {
+      "unit": "FPPC gift-interest definitions, valuation and exceptions",
+      "heading": "FPPC gift-interest definitions, valuation and exceptions",
+      "adapter": "generic",
+      "toc_url": "https://www.fppc.ca.gov/the-law/fppc-regulations/regulations-index/",
+      "toc_authority": "official",
+      "reason": "Gift source, aggregation, receipt, valuation, return and exclusions define disqualifying financial interests under18700/18702.4 and model code18730. Retain the connected mixed gift regime including exceptions; do not infer every gift or travel payment is disqualifying.",
+      "section_list": [
+        {
+          "number": "18940",
+          "heading": "18940. Guide to the Gift Regulations.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18940._Guide_to_the_Gift_Regulations.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18940.1",
+          "heading": "18940.1. General Definitions.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18940.1._General_Definitions.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18940.2",
+          "heading": "18940.2. Gift Limit Amount.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18940.2._Gift_Limit_Amount.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18941",
+          "heading": "18941. Receipt, Promise, Acceptance and Return of Gift.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18941._Receipt_Promise_Acceptance_and_Return_of_Gift.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18942",
+          "heading": "18942. Exceptions to Gift and Exceptions to Gift Limits.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18942._Exceptions_to_Gift_and_Exceptions_to_Gift_Limits.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18942.1",
+          "heading": "18942.1. Definition of \u201cInformational Material.\u201d",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18942.1._Definition_of_Informational_Material.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18942.2",
+          "heading": "18942.2. Definition of Home Hospitality.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18942.2._Definition_of_Home_Hospitality.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18942.3",
+          "heading": "18942.3. Definition of Ceremonial Role.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18942.3._Definition_of_Ceremonial_Role.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18943",
+          "heading": "18943. Gift to Official Through Family Member.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18943._Gift_to_Official_Through_Family_Member.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18944",
+          "heading": "18944. Payments Made to an Agency for Use by Agency Officials.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18944._Payments_Made_to_an_Agency_for_Use_by_Agency_Officials.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18944.1",
+          "heading": "18944.1. Gifts: Agency Provided Tickets or Passes.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18944.1._Gifts_Agency_Provided_Tickets_or_Passes.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18944.2",
+          "heading": "18944.2. Agency Raffles and Exchanges of Presents.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18944.2._Agency_Raffles_and_Exchanges_of_Presents.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18944.3",
+          "heading": "18944.3. Gifts from a Government Agency to Officials in That Agency.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18944.3._Gifts_from_a_Government_Agency_to_Officials_in_That_Agency.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18945",
+          "heading": "18945. Source of Gifts.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18945._Source_of_Gifts.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18945.1",
+          "heading": "18945.1. Aggregation of Gifts; \u201cSingle\u201d Source.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18945.1._Aggregation_of_Gifts_Single_Source.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18945.2",
+          "heading": "18945.2. Group Gifts.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18945.2._Group_Gifts.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18946",
+          "heading": "18946. Valuation of Gifts.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18946._Valuation_of_Gifts.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18946.1",
+          "heading": "18946.1. Exception - Valuation of Gifts: Passes and Tickets.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18946.1._Exception_Valuation_of_Gifts_Passes_and_Tickets.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18946.2",
+          "heading": "18946.2. Exception -- Valuation of Gifts: Attendance at Invitation-Only Events.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18946.2._Exception_Valuation_of_Gifts_Attendance_at_Invitation-Only_Events.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18946.3",
+          "heading": "18946.3. Exception -- Valuation of Gifts: Wedding Gifts.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18946.3._Exception_Valuation_of_Gifts_Wedding_Gifts.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18946.4",
+          "heading": "18946.4. Exception -- Valuation of Gifts: Attendance at Nonprofit or Political  Organization Fundraising Event.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18946.4._Exception_Valuation_of_Gifts_Attendance_at_Nonprofit_or_Political_Organization_Fundraising_Event.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18946.5",
+          "heading": "18946.5. Exception - Valuation of Gifts: Air Transportation.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18946.5._Exception_Valuation_of_Gifts_Air_Transportation.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18950",
+          "heading": "18950. Travel Payments.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18950._Travel_Payments.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18950.1",
+          "heading": "18950.1. Exception: Payments for Travel Made in Conjunction with Official Agency  Business.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18950.1._Exception_Payments_for_Travel_Made_in_Conjunction_with_Official_Agency_Business.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18950.2",
+          "heading": "18950.2. Exception: Payments for Travel in Connection with a Bona Fide Business.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18950.2._Exception_Payments_for_Travel_in_Connection_with_a_Bona_Fide_Business.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18950.3",
+          "heading": "18950.3. Exception: Payments for Travel in Connection with Campaign Activities.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_09.5/18950.3._Exception_Payments_for_Travel_in_Connection_with_Campaign_Activities.pdf",
+          "source_unit_kind": "section"
+        }
+      ],
+      "version_status": "Publisher current-index targets; later adopted amendments separately selected below. No claim that index alone proves every leaf current."
+    },
+    {
+      "unit": "FPPC conflicts advice, complaints and remedies",
+      "heading": "FPPC conflicts advice, complaints and remedies",
+      "adapter": "generic",
+      "toc_url": "https://www.fppc.ca.gov/the-law/fppc-regulations/regulations-index/",
+      "toc_authority": "official",
+      "reason": "Advice, liability, complaint, settlement, hearing and remedy procedure for selected permit/public-contract conflicts. Mixed18360.1 expressly includes84308 at(b)(12)/(e)(12);18360.2 includes ethics/recusal;18360.3 supplies penalties. Retention does not select the unrelated campaign/lobbying substantive corpus.",
+      "section_list": [
+        {
+          "number": "18316.5",
+          "heading": "18316.5. Application of Government Code Section 83116.5.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18316.5._Application_of_Government_Code_Section_83116.5.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18318",
+          "heading": "18318. Collections. Executive Director's Authority for the Settlement of an Order for Monetary Penalties.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18318._Collections_Executive_Directors_Authority_for_the_Settlement_of_an_Order_for_Monetary_Penalties.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18319",
+          "heading": "18319. Delegation of Authority.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18319._Delegation_of_Authority.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18320",
+          "heading": "18320. Requests for Opinions.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18320._Requests_for_Opinions.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18321",
+          "heading": "Review of Requests Denied by the Executive Director",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18321._Review_of_Requests_Denied_by_the_Executive_Director.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18322",
+          "heading": "18322. Procedures for Issuing Opinions.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18322._Procedures_for_Issuing_Opinions.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18324",
+          "heading": "18324. Opinions.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18324._Opinions.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18326",
+          "heading": "18326. Petition for Rehearing.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18326._Petition_for_Rehearing.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18329",
+          "heading": "18329. Formal Written Advice and Informal Assistance.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18329._Formal_Written_Advice_and_Informal_Assistance.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18329.5",
+          "heading": "18329.5. Commission Advice Procedure - Government Code Sections 87300-87306.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18329.5._Commission_Advice_Procedure_Government_Code_Sections_87300_87306.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18360",
+          "heading": "Complaints Filed with the Commission",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18360._Complaints_Filed_with_the_Commission.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18360.1",
+          "heading": "18360.1. Eligibility Requirements and Considerations for Campaign Violations -- Streamline (Tiers One and Two), Warning Letters and the Political Reform Education Program (PREP).",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18360.1._Eligibility_Requirements_and_Considerations_for_Campaign_Violations_Streamline_Tiers_One_and_Two_Warning_Letters_and_the_Political_Reform_Education_Program_PREP.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18360.2",
+          "heading": "18360.2. Eligibility Requirements and Considerations for Ethics and Lobbying Violations -- Streamline (Tiers One and Two), Warning Letters and the Political Reform Education Program (PREP)",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18360.2._Eligibility_Requirements_and_Considerations_for_Ethics_and_Lobbying_Violations_Streamline_Tiers_One_and_Two_Warning_Letters_and_the_Political_Reform_Education_Program_PREP.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18360.3",
+          "heading": "18360.3. Penalties in Streamline Cases",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18360.3._Penalties_in_Streamline_Cases.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18361",
+          "heading": "18361. Delegation by the Executive Director Pertaining to Enforcement Proceedings and  Authority to Hear Probable Cause Proceedings.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18361._Delegation_by_the_Executive_Director_Pertaining_to_Enforcement_Proceedings_and_Authority_to_Hear_Probable_Cause_Proceedings.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18361.1",
+          "heading": "18361.1. Administrative Subpoenas",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18361.1._Administrative_Subpoenas.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18361.2",
+          "heading": "18361.2. Memorandum Respecting Civil Litigation.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18361.2._Memorandum_Respecting_Civil_Litigation.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18361.3",
+          "heading": "18361. 3. Referral of Questions of Law to the Commission.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18361.3._Referral_of_Questions_of_Law_to_the_Commission.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18361.4",
+          "heading": "18361.4. Probable Cause Proceedings.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18361.4._Probable_Cause_Proceedings.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18361.5",
+          "heading": "18361.5. Administrative Hearings.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18361.5._Administrative_Hearings.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18361.6",
+          "heading": "18361.6. Probable Cause Presentation by Civil or Criminal Prosecutor.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18361.6._Probable_Cause_Presentation_by_Civil_or_Criminal_Prosecutor.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18361.7",
+          "heading": "18361.7. Executive Director Subpoena Authority.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18361.7._Executive_Director_Subpoena_Authority.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18361.8",
+          "heading": "18361.8. Inapplicability of Regulations 18361.1 Through 18361.8 to Other Enforcement Procedures.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18361.8._Inapplicability_of_Regulations_18361.1_Through_18361.8_to_Other_Enforcement_Procedures.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18361.9",
+          "heading": "18361.9. Procedure for Commission's Consideration of Proposed Decision by an  Administrative Law Judge; Reconsideration.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18361.9._Procedure_for_Commissions_Consideration_of_Proposed_Decision_by_an_Administrative_Law_Judge_Reconsideration.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18361.10",
+          "heading": "18361.10. Administratively Adjudicated Enforcement Decisions As Precedent.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18361.10._Administratively_Adjudicated_Enforcement_Decisions_As_Precedent.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18361.11",
+          "heading": "18361.11. Default Proceedings.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18361.11._Default_Proceedings.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18362",
+          "heading": "18362. Access to Enforcement Records.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18362._Access_to_Enforcement_Records.pdf",
+          "source_unit_kind": "section"
+        },
+        {
+          "number": "18363",
+          "heading": "18363. Administering Oaths and Affirmations.",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/01_index/chapter_03/18363._Administering_Oaths_and_Affirmations.pdf",
+          "source_unit_kind": "section"
+        }
+      ],
+      "version_status": "Publisher current-index targets; later adopted amendments separately selected below. No claim that index alone proves every leaf current."
+    },
+    {
+      "unit": "Version source FPPC-18360.1-2026-amendment",
+      "heading": "FPPC adopted amendment to2CCR18360.1, publisher text dated August24,2026",
+      "adapter": "generic",
+      "reason": "Retain adopted amendment to selected conflict-enforcement regime without substituting an unestablished effective date for baseline. Markup must be interpreted in J2 extraction.",
+      "section_list": [
+        {
+          "number": "FPPC-18360.1-2026-amendment",
+          "heading": "Adopted amendment2CCR18360.1",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/02_new/august-2026/New_18360.1_082426.pdf",
+          "source_unit_kind": "document"
+        }
+      ],
+      "internal_units_in_scope": [
+        "18360.1"
+      ],
+      "legal_status": "Publisher lists amended; effective-date column blank",
+      "effective_date": null
+    },
+    {
+      "unit": "Version source FPPC-18360.2-2026-amendment",
+      "heading": "FPPC adopted amendment to2CCR18360.2, publisher text dated August24,2026",
+      "adapter": "generic",
+      "reason": "Retain adopted amendment to selected conflict-enforcement regime without substituting an unestablished effective date for baseline. Markup must be interpreted in J2 extraction.",
+      "section_list": [
+        {
+          "number": "FPPC-18360.2-2026-amendment",
+          "heading": "Adopted amendment2CCR18360.2",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/02_new/august-2026/New_18360.2_082426.pdf",
+          "source_unit_kind": "document"
+        }
+      ],
+      "internal_units_in_scope": [
+        "18360.2"
+      ],
+      "legal_status": "Publisher lists amended; effective-date column blank",
+      "effective_date": null
+    },
+    {
+      "unit": "Version source FPPC-18360.3-2026-amendment",
+      "heading": "FPPC adopted amendment to2CCR18360.3, publisher text dated August24,2026",
+      "adapter": "generic",
+      "reason": "Retain adopted amendment to selected conflict-enforcement regime without substituting an unestablished effective date for baseline. Markup must be interpreted in J2 extraction.",
+      "section_list": [
+        {
+          "number": "FPPC-18360.3-2026-amendment",
+          "heading": "Adopted amendment2CCR18360.3",
+          "ref": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/02_new/august-2026/New_18360.3_082426.pdf",
+          "source_unit_kind": "document"
+        }
+      ],
+      "internal_units_in_scope": [
+        "18360.3"
+      ],
+      "legal_status": "Publisher lists amended; effective-date column blank",
+      "effective_date": null
+    }
+  ],
+  "add_version_records": [
+    {
+      "action_id": "FPPC-18360.1-2026-amendment",
+      "affected_sections": [
+        "18360.1"
+      ],
+      "source_url": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/02_new/august-2026/New_18360.1_082426.pdf",
+      "status_source": "https://www.fppc.ca.gov/the-law/fppc-regulations/newly-adopted-amended-or-repealed-regulations/",
+      "legal_status": "adopted amendment; effective date not established",
+      "adoption_date": "2026-08-20",
+      "adoption_source": "https://www.fppc.ca.gov/news-releases/2026/fppc-hearing-summary-august-20-2026/",
+      "document_date": "2026-08-24",
+      "effective_date": null,
+      "remaining_j1": "Establish filing/effective date; publisher states ordinary amendments effective30days after filing but provides no filing date here. Date printed on amendment is not treated as adoption or operative date."
+    },
+    {
+      "action_id": "FPPC-18360.2-2026-amendment",
+      "affected_sections": [
+        "18360.2"
+      ],
+      "source_url": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/02_new/august-2026/New_18360.2_082426.pdf",
+      "status_source": "https://www.fppc.ca.gov/the-law/fppc-regulations/newly-adopted-amended-or-repealed-regulations/",
+      "legal_status": "adopted amendment; effective date not established",
+      "adoption_date": "2026-08-20",
+      "adoption_source": "https://www.fppc.ca.gov/news-releases/2026/fppc-hearing-summary-august-20-2026/",
+      "document_date": "2026-08-24",
+      "effective_date": null,
+      "remaining_j1": "Establish filing/effective date; publisher states ordinary amendments effective30days after filing but provides no filing date here. Date printed on amendment is not treated as adoption or operative date."
+    },
+    {
+      "action_id": "FPPC-18360.3-2026-amendment",
+      "affected_sections": [
+        "18360.3"
+      ],
+      "source_url": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/02_new/august-2026/New_18360.3_082426.pdf",
+      "status_source": "https://www.fppc.ca.gov/the-law/fppc-regulations/newly-adopted-amended-or-repealed-regulations/",
+      "legal_status": "adopted amendment; effective date not established",
+      "adoption_date": "2026-08-20",
+      "adoption_source": "https://www.fppc.ca.gov/news-releases/2026/fppc-hearing-summary-august-20-2026/",
+      "document_date": "2026-08-24",
+      "effective_date": null,
+      "remaining_j1": "Establish filing/effective date; publisher states ordinary amendments effective30days after filing but provides no filing date here. Date printed on amendment is not treated as adoption or operative date."
+    }
+  ],
+  "remove_units_out_of_scope": [
+    "Division 6 - Fair Political Practices Commission"
+  ],
+  "add_units_out_of_scope": [
+    {
+      "unit": "Division 6 - Fair Political Practices Commission (residual outside selected conflicts regime)",
+      "reason": "Exclude ordinary campaign committee formation/reporting/advertising/funding administration, lobbying registration/reporting, unrelated honoraria, agency staff administration and standalone filing-system logistics. Express exceptions are the selected contribution/conflict definitions,18438regime,18700decision/code/recusal dependencies,former-official restrictions,gift-interest rules,and applicable advice/enforcement including mixed18360.1\u2013.3. No blanket campaign-title exclusion applies to84308 enforcement. Repealed18438.3/18753 are not current operative units."
+    }
+  ],
+  "repeal_notes": [
+    {
+      "section": "18438.3",
+      "effective_date": "2025-05-15",
+      "status": "repealed; statutory agent definition governs",
+      "source": "https://training.fppc.ca.gov/the-law/fppc-regulations/newly-adopted-amended-or-repealed-regulations/"
+    },
+    {
+      "section": "18753",
+      "effective_date": "2025-06-07",
+      "status": "repealed;GOV87500 supersedes filing locations; stale index link not treated current",
+      "source": "https://www.fppc.ca.gov/news-releases/2025/2025-second-quarterly-update-conflict-of-interest-revolving-door-and-statement-of-economic-interests/"
+    }
+  ],
+  "source_notes": [
+    "18700printed cross-reference18503.5 is not a verified regulation identity in recovered FPPC index; retain literal citation for reference discovery, do not invent target or silently correct.18940.2 independently supplies current gift-limit identity.",
+    "Primary links establish explicit selected legal sections. Complete verbatim section extraction/history reconciliation is J2; three adopted2026amendment effective dates remain actualJ1 temporal questions.",
+    "No live JeV reference flags obtained; captured sources available for passage-level screening."
+  ],
+  "evidence_files": [
+    "sources/fppc-primary-index-and-core.txt",
+    "sources/fppc-selected-targets.txt",
+    "sources/fppc-core-review.txt",
+    "sources/fppc-new-amendments-review.txt",
+    "sources/fppcEnforceDates.txt",
+    "sources/fppcMixedCampaignRemedy.txt",
+    "sources/fppc-repeal-status.txt",
+    "sources/fppc-final-date-search.txt",
+    "sources/fppc-august-adoption.txt"
+  ]
+}

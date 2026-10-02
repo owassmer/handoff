@@ -1,0 +1,34 @@
+{
+  "methods": [
+    "Public Common Crawl index, domain/prefix and exact URL queries",
+    "Archive domain inventory without MIME filters, to catch misclassified attachments",
+    "PDF embedded-file inspection",
+    "Program partner regulation links",
+    "OEHHA actual browser document-catalog search and chemical pages",
+    "Program contractor resource library and public alternate Treasurer hosts",
+    "CalRecycle public EAR spreadsheet exports and compliance-evaluation publication table",
+    "Newspaper notice recovery outside original adoption-month search"
+  ],
+  "findings": [
+    "Common Crawl catalog is reachable but queried data endpoints returned503/504; no archive-content conclusion.",
+    "SBSD all-MIME archive returned282 URLs. No additional named resolution or differently typed target attachment identified.",
+    "Four SBSD PDFs contain no embedded documents. Five valid saved GoGreen PDFs contain none; saved OEHHA ISOR.pdf is challenge HTML, excluded from PDF conclusions.",
+    "GoGreen partner site routes regulations back to known Treasurer page, not another filed edition.",
+    "OEHHA browser document catalog recovered after initial challenge. Title search diethanolamine returns known June17proposal and older listing notices; chemical pages do not identify target final action. JSON API route is404 after real-browser recovery.",
+    "New dated all-media API requests returned406. Inspected previously recovered full media pages1/2 instead: all attachments in the target2024/2026 date ranges are PDF; no image-only resolution candidate. Non-PDF entries concern2025signage,2023compensation spreadsheet,2022RTF and2021press release.",
+    "Contractor project checklist and regulation links identify known program materials; no August2026 final action. Public Treasurer alternate hosts supplied no newer final package.",
+    "CalRecycle district row has no linked compliance-evaluation documents. Downloaded waiver and ordinance spreadsheets: waiver export has counts, no resolution body; ordinance export has no SBSD entry. These reports do not establish resolution terms.",
+    "Recovered actual2024 district notice at sunnews.org/wp-content/uploads/2024/06/6-13-24-SBS-class.pdf,PDFp5: explicit March14adoption connection, classifications,charges and tax-roll election. Added as companion source without claiming it is Resolution2024-03-01.",
+    "Recovered actual2026 notice at sunnews.org/wp-content/uploads/2026/05/5-28-26-SBS-legals.pdf,PDFp4, replacing indexed-only acquisition description."
+  ],
+  "selection_change": "Added FY2024\u201325 district-issued notice as companion source within existing fee-notice instrument. No unresolved resolution/action/edition question closed.",
+  "still_open": "All source-selection questions in completion.json.",
+  "external_messages": false,
+  "evidence": [
+    "pdf-embedded-files.json",
+    "regulatory-embedded-files.json",
+    "sbsd-all-archived-urls.json",
+    "cc-results.json",
+    "oehha-native-document-search.yml"
+  ]
+}

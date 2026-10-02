@@ -1,0 +1,433 @@
+  
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                       
+  num_totalhits ) {
+	  end = num_totalhits ;
+	}
+	if ( start   num_totalhits ) end = num_totalhits ;
+   document.BrowseForm.StartIndex.value = start ;
+	document.BrowseForm.EndIndex.value = end ;
+	requestBrowse( ) ;
+}
+
+function newSearch(){
+   var sURL = cmd_action.replace("Action?","DoMenuRequest?");
+   location.href = sURL;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Called by getNext and getPrevious to submit form.
+function requestBrowse( ) {
+   start = parseInt(document.BrowseForm.StartIndex.value);
+   end = parseInt(document.BrowseForm.EndIndex.value);
+   threshold = parseInt(document.BrowseForm.Threshold.value);
+   noOfHits = parseInt(document.BrowseForm.NoOfHits.value);
+
+   var sURL = cmd_action;
+   sURL += "&CMD_(BrowseRequest)&NoOfHits="+num_totalhits+"&Threshold="+threshold+"&StartIndex="+start+"&EndIndex="+end+(ftitle!=null?"&fromTitle="+ftitle:"");
+   location.href = sURL;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Display previous and next buttons in lower screen.
+function displayDataControl() {
+   var threshold = getSearchKey('Threshold');
+   document.BrowseForm.Threshold.value = (threshold?threshold:othreshold);
+   threshold = parseInt(document.BrowseForm.Threshold.value);
+
+   var content = '      Back     New Search   ';
+
+   content += '  View Cart ';
+   if(reqtype=="ViewCart") content += ' Clear Cart ';
+   if(reqtype=="ViewCart") content += ' Check out ';
+   content += ' ';
+
+   content += '  #!View List ';
+   content += ' Save All ';
+   content += ' Clear List    ';
+   
+   if ( num_totalhits > threshold ) {
+      content += '  ';
+      content += ' ';
+      content += '     ';
+      content += '';
+
+      var pages = Math.ceil(num_totalhits/threshold);
+      var cpage = (parseInt(document.BrowseForm.StartIndex.value)-1)/threshold;
+      var tpage = cpage+1;
+      content += '  Pages   ';
+      for(i=1; i '+i+' ';
+      }
+      content += '  of '+pages+' ';
+      content += '    ';
+      content += ' ';
+      content += '  Show ';
+      content += ' 50 ';
+      content += ' 100 ';
+      content += ' 200 ';
+      content += ' items per page ';
+
+      content += '  ';
+   }
+
+   document.writeln( content ) ;
+   count_list();
+   count_cart();
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Display language-independent "hits" message
+function displayHitsMessage() {
+	content = '  ';
+   if (num_startindex == '1' && num_endindex == num_totalhits) {
+      content += ' ';
+      content += num_totalhits + ' ' + txt_hits_simple.toLowerCase() + ' ';
+   } else {
+      content += ' ';
+      content += txt_hits_simple + ' ' + num_startindex + ' ' + txt_to + ' ' + num_endindex;
+      content += ' '+txt_of + ' ' + num_totalhits + ' ';
+   }
+   content += '  ';
+   if(ftitle!=null && ftitle!='' && ftitle!='null') content += ' from  '+unescape(ftitle)+' ';
+   content += '  ';
+   return content;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+var browseData = new Array();
+var iBData = 0;
+var browseHeader = new Array();
+var iBHeader = 0;
+//browseHeader[iBHeader++] = "sLabel|bRight|bDescend|nWidth|cJustLCR|bBreak|bTotal";
+//browseData[iBdata+=] = 'bTake|nExplode|sParentID|KEYVALUE|Column1|Column2|...|ColumnN'; // repeat as needed
+// START of Browse Data
+
+
+
+
+    browseOffset=3;
+    browseHeader[iBHeader++] = 'bTake||';
+    browseHeader[iBHeader++] = 'bExplode||';
+    browseHeader[iBHeader++] = 'sParentID||';
+
+    
+        browseHeader[iBHeader++] = 'Tag|||3|||';
+    
+        browseHeader[iBHeader++] = 'Title|0||50|L|0|0';
+    
+        browseData[iBData++] = '1|0|2211|12347'
+        + '|   General Files (The Forest Practices Act), 1945-1958   • Series •  Click on title for more detail   Dept. of Natural Resources -- Division of Forestry Dept. of Conservation -- Division of Forestry  The Forest Practices Act (Statutes 1945, chapter 85) is designed to promote maximum sustained production of California forest lands.  The Act divided the state into four forest districts (see below...          ';
+    
+        browseData[iBData++] = '1|0|2211|12459'
+        + '|   Administrative Files (Watershed Management), 1955-1957   • Series •  Click on title for more detail   Dept. of Natural Resources -- Division of Forestry Dept. of Conservation -- Division of Forestry  The U.S. Congress in 1954 passed the Small Watershed Act (Public Law 566, 83rd Congress [P.L. 566]) which allowed for flood prevention and water management projects to be implemented by federal, st...          ';
+    
+        browseData[iBData++] = '1|14|35624|1842'
+        + '|   Administrative and Subject Files, 1916-1953   • Series •  Click on title for more detail   Dept. of Natural Resources -- Fish and Game -- Marine Fisheries  Administrative and general files of the bureau chief consisting of letters received, copies of letters sent, memoranda, meeting-minutes, programs, and addresses, maps, newspaper clippings, news releas...      Series consists of:    14 record(s) [ Records of the Division of Fish and Game Records of the Bureau of Marine Fisheries - Administrative and Subject Files">browse ]            ';
+    
+        browseData[iBData++] = '1|0|1842|35626'
+        + '|   Administrative and Subject Files: A   • Sub-series •  Click on title for more detail   Dept. of Natural Resources -- Fish and Game -- Marine Fisheries  Abalone, regulation of commercial industry, use of by-products, 1916-1953; Accounting and Fiscal, misc., 1948-1949; Agar, wartime investigations on value as food source and harvesting of, 1942-1944; A...          ';
+    
+        browseData[iBData++] = '1|0|1842|35627'
+        + '|   Administrative and Subject Files: B   • Sub-series •  Click on title for more detail   Dept. of Natural Resources -- Fish and Game -- Marine Fisheries  Boats, licensing, registration, and wartime regulations affecting, 1926-1945.          ';
+    
+        browseData[iBData++] = '1|0|1842|35628'
+        + '|   Administrative and Subject Files: C   • Sub-series •  Click on title for more detail   Dept. of Natural Resources -- Fish and Game -- Marine Fisheries  California Fish and Game Biologists Assoc. meetings, 1944-1953; California Fish and Game Magazine, manuscripts for publication in, 1926-1944; California Fish Canner's Assoc. reports of catches and sar...          ';
+    
+        browseData[iBData++] = '1|0|1842|35630'
+        + '|   Administrative and Subject Files: G, H   • Sub-series •  Click on title for more detail   Dept. of Natural Resources -- Fish and Game -- Marine Fisheries  General Orders and amendments as adopted by the Fish and Game Commission, 1919-1948; Half Moon Bay improvement, 1945-1947; Halibut catch reports, regulations and amendments of the International Fisher...          ';
+    
+        browseData[iBData++] = '1|0|1842|35631'
+        + '|   Administrative and Subject Files: I   • Sub-series •  Click on title for more detail   Dept. of Natural Resources -- Fish and Game -- Marine Fisheries  Misc., 1948, 1949; International Fisheries Problems, various issues involving U.S. high seas fishery policy and including (1) California Fisheries Committee-activities in the introduction, passage, an...          ';
+    
+        browseData[iBData++] = '1|0|1842|35633'
+        + '|   Administrative and Subject Files: K, L   • Sub-series •  Click on title for more detail   Dept. of Natural Resources -- Fish and Game -- Marine Fisheries  Kelp and Seaweed, regulation of harvesting, harvesting reports, pollution of beaches by kelp, 1918, 1926-1953; Legislation, proposals, amendments, analyses, and position statements on measures affecti...          ';
+    
+        browseData[iBData++] = '1|0|1842|35637'
+        + '|   Administrative and Subject Files: S   • Sub-series •  Click on title for more detail   Dept. of Natural Resources -- Fish and Game -- Marine Fisheries  Sacramento River, arguments for and against Propositions 6 and 15 (November, 1948 General Election), initiative measures closing Sacramento River and San Francisco Bay to commercial fishing and to pro...          ';
+    
+        browseData[iBData++] = '1|0|1842|35638'
+        + '|   Administrative and Subject Files: T   • Sub-series •  Click on title for more detail   Dept. of Natural Resources -- Fish and Game -- Marine Fisheries  Tidelands, conflicts of Federal regulation of marine fisheries within 3-mile limits, 1948-1951; Trawl Fishing, general, 1942; Tuna, catch reports, annual Tuna Conference reports, monthly and annual re...          ';
+    
+        browseData[iBData++] = '1|0|3872|3879'
+        + '|   State Agency Files , 1966-1975   • Series •  Click on title for more detail   Dept. of Parks and Recreation -- Administrative Services  Correspondence, memoranda, meeting notices, meeting minutes, notes, newspaper articles, resolutions, and applications concerning interactions between the Department of Parks and Recreation and other s...          ';
+    
+        browseData[iBData++] = '1|0|80232|16135'
+        + '|   Executive Office Subject Files, 1941-1988   • Series •  Click on title for more detail   Dept. of Professional and Vocational Standards -- Contractors' State License Board Dept. of Consumer Affairs -- Contractors' State License Board     Online Resource   The Registrar of the CSLB is also the Executive Secretary to the Board, and as such the Registrar must carry out the administrative duties as delegated to him or her. This series contains materials...          ';
+    
+        browseData[iBData++] = '1|14||80232'
+        + '|   Dept. of Consumer Affairs - Contractors' State License Board Records, 1929-1988   • Record group •  Click on title for more detail   Dept. of Professional and Vocational Standards -- Contractors' State License Board Dept. of Consumer Affairs -- Contractors' State License Board     Online Resource   The records of the Contractors' State License Board (CSLB) contain 29.5 cubic feet of textual records spanning the years from 1929 to 1988. The records document the Board's work to protect consumer...      Record group consists of:    14 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|0|37746|37744'
+        + '|   Supervising Examiner II - Jones, Daine P. Inter-Office Memoranda, 1966   • Series •  Click on title for more detail   Dept. of Savings and Loan -- Los Angeles Office  Comprised of inter-office memoranda. Limited memoranda deals with steps taken prior to field examinations and proposed changes in regulations regarding slow loans and scheduled items. Also contains li...          ';
+    
+        browseData[iBData++] = '1|0|37746|85'
+        + '|   Executive Office Correspondence, 1966   • Series •  Click on title for more detail   Dept. of Savings and Loan -- Los Angeles Office  Contains mainly inter-office memoranda but includes letters received, reports and forms. Comprised of brief administrative reports summarizing activities of Los Angeles office sections Budget, Account...          ';
+    
+        browseData[iBData++] = '1|0|37746|87'
+        + '|   Staff Memoranda, 1966   • Series •  Click on title for more detail   Dept. of Savings and Loan -- Los Angeles Office  Policy-oriented memoranda concerns the Problem Association Program and related investigations and examinations, topics generated in Executive Committee meetings such as donated stock, analyses of laws...          ';
+    
+        browseData[iBData++] = '1|0|17455|17465'
+        + '|   Humboldt County Files, 1917-1971   • Series •  Click on title for more detail   Dept. of Social Welfare -- Administration   See below for a complete description of each topic.    (1) Administration. 1937, 1940-1971. 21 file folders.   Files include or relate to administrative reviews; annual, fiscal audit, fis...          ';
+    
+        browseData[iBData++] = '1|0|17455|17469'
+        + '|   Los Angeles County Files, 1938-1971   • Series •  Click on title for more detail   Dept. of Social Welfare -- Administration   See below for a complete description of each topic.   (1) Administration. 1938-1971. 51 file folders.   Files include or relate to county compliance with and administration of OAS regulat...          ';
+    
+        browseData[iBData++] = '1|0|17188|17196'
+        + '|   A5.3 County Relationships, 1963-1965   • File •  Click on title for more detail   Dept. of Social Welfare -- Administration -- Administration - Director  Files include reports, resolutions, newspaper articles, meeting minutes, correspondence, and memoranda relating to concerns over state and federal policies and regulations, budgeting, welfare administ...          ';
+    
+        browseData[iBData++] = '1|0|17620|17622'
+        + '|   Coded Files, 1957-1974   • Series •  Click on title for more detail   Dept. of Social Welfare -- Adult Services Division Dept. of Social Welfare -- Social Security Coded Files vary widely by topic and detail.  Some files of note include B7 Special Study Committee Program (Life Care Program) which is valuable in understanding the evolution of the Life Care Progra...          ';
+    
+        browseData[iBData++] = '1|0|17128|17132'
+        + '|   Subject Files, 1934-1963   • Series •  Click on title for more detail   Dept. of Social Welfare -- Social Welfare Board   Subject Files may include letters received, copies of letters sent, memoranda, agendas, minutes, petitions, resolutions, departmental bulletins, proposed manual revisions, testimony, reports, agree...          ';
+    
+        browseData[iBData++] = '1|0|17667|17669'
+        + '|   Coded Files, 1956-1968   • Series •  Click on title for more detail   Dept. of Social Welfare -- Community Welfare Services  Coded Files include correspondence, photographs, letters, memoranda, minutes, reports, manuals, studies, and statistical data relating to the Community Welfare Service Branch of the Department of Soci...          ';
+    
+        browseData[iBData++] = '1|0|17554|17556'
+        + '|   Coded Files, 1968-1972   • Series •  Click on title for more detail   Dept. of Social Welfare -- Division of Administrative Services -- Payment Operations  Coded Files include meeting minutes, reports, studies, letters, memoranda, public hearing files, regulations, and schedules. Many of the files cover the various aid disbursement categories (such as Ai...          ';
+    
+        browseData[iBData++] = '1|0|17614|17616'
+        + '|   Coded Files, 1961-1969   • Series •  Click on title for more detail   Dept. of Social Welfare -- Family and Children Division -- Work Experience and Training Bureau Dept. of Social Welfare -- Division of Administrative Services -- Training Bureau Coded Files included memoranda, charts, forms, letters sent and copies of letters received, and reports.  Coded files vary widely on topic and detail.  Coded files under the Work Experience and Traini...          ';
+    
+        browseData[iBData++] = '1|0|18586|18959'
+        + '|   Rulemaking FIles, 1952-1972   • Series •  Click on title for more detail   Dept. of Veterans Affairs -- Administration -- Legal and Legislative Office  The first file documents suggested revisions to the agency's administrative rules and regulations required by the Administrative Procedures Act. This particular regulation defines authority, policy an...          ';
+    
+        browseData[iBData++] = '1|0|6172|6178'
+        + '|   General Correspondence, 1944-1952, 1957-1958   • Series •  Click on title for more detail   Dept. of Youth Authority -- Executive -- Director  Letters received, copies of letters sent, post cards, statements, minutes, summaries, questionnaires, transcripts, theses, reports, bulletins, telegrams, charts, tables, and memoranda relating to topi...          ';
+    
+        browseData[iBData++] = '1|0|6068|6073'
+        + '|   Administrative Manuals, 1945, 1951, 1959, 1969-1970   • Series •  Click on title for more detail   Dept. of Youth Authority -- Institutions and Camps -- Preston Youth Correctional Facility  Manuals include organization charts and covers general administration policy, personnel regulations, inmate classification, group living, operations and security, education, medical services, religion...          ';
+    
+        browseData[iBData++] = '1|0|6160|6162'
+        + '|   Administrative Manuals, 1964   • Series •  Click on title for more detail   Dept. of Youth Authority -- Ventura School for Girls  Manuals include training policies and program procedures and relate to psychiatric treatment, religion, business services, in-service training, Ventura Reception Center-Clinic, administrative procedur...          ';
+    
+        browseData[iBData++] = '1|14||80310'
+        + '|   Environmental Affairs Agency Records, 1972-1992   • Record group •  Click on title for more detail   Environmental Affairs Agency Environmental Quality Agency  The records of the Environmental Affairs Agency contain 22.5 cubic feet of textual and photographic records spanning the time period 1972-1992. The records document the agency's work to maintain an...      Record group consists of:    14 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|0|24315|24361'
+        + '|   Department of Employment Files, 1953-1958   • Series •  Click on title for more detail   Knight, Goodwin J.  Correspondence, rules and regulations, newspaper articles, progress reports, monthly reports of activity, and other records pertaining to the operation of the Department of Employment. Records relate ...          ';
+    
+        browseData[iBData++] = '1|0|24315|24466'
+        + '|   Department of Professional and Vocational Standards Files - Boards and Divisions, 1953-1958   • Series •  Click on title for more detail   Knight, Goodwin J.  Correspondence, applications, memoranda, bulletins, articles, reports, and other documents related to administration of the various boards and divisions. Other issues discussed include administration ...          ';
+    
+        browseData[iBData++] = '1|0|5953|5978'
+        + '|   Registration, 1972-1975   • Series •  Click on title for more detail   Legislature -- Assembly -- Elections and Reapportionment Committee  Background information and newspaper clippings in subject areas of administrative regulations governing, minority and transient registration, national registration survey, and survey of County officia...          ';
+    
+        browseData[iBData++] = '1|9||78340'
+        + '|   Assembly Health Committee Records, 1945-2000   • Record group •  Click on title for more detail   Legislature -- Assembly -- Health Committee Legislature -- Assembly -- Public Health and Quarantine Committee The records of the Assembly Health Committee and its predecessors, the Assembly Public Health Committee and Assembly Health and Welfare Committee, consist of 2,745 file folders of textual materials, 1...      Record group consists of:    9 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|7||37955'
+        + '|   Assembly Labor and Employment Committee Records, 1945-2010   • Record group •  Click on title for more detail   Legislature -- Assembly -- Industrial Relations Committee Legislature -- Assembly -- Labor Relations Committee The Assembly Labor and Employment Committee Records consist of 56 cubic feet of material reflecting the activity of the committee (under various names) in introducing and investigating legislation rel...      Record group consists of:    7 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|5||78407'
+        + '|   Senate Governmental Organization Committee Records, 1970-2010   • Record group •  Click on title for more detail   Legislature -- Senate -- Governmental Organization Committee   The Senate Governmental Committee Records consist of approximately 62 cubic feet of textual records. The records cover the years 1970-2004, and are organized into five series: bill files, hearing f...      Record group consists of:    5 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|5||13362'
+        + '|   Senate Transportation and Housing Committee Records, 2004-2014   • Record group •  Click on title for more detail   Legislature -- Senate -- Transportation and Housing Committee   The Senate Transportation and Housing Committee records consist of 33 cubic feet of textual and audiovisual records organized into the following record series: Bill Files covering legislative sessi...      Record group consists of:    5 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|5||80405'
+        + '|   Commission on California State Government Organization and Economy Records, 1974-1990   • Record group •  Click on title for more detail   Milton Marks Commission on California State Government Organization and Economy  This record group consists of 5.5 cubic feet of records of the Commission on California State Government Organization and Economy. The records span from 1974 to 1990. The record group is organized int...      Record group consists of:    5 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|0|3816|3817'
+        + '|   Administrative Files, 1954-1976   • Series •  Click on title for more detail   Office of Aging -- Office of the Director  Administrative files contain correspondence, reports, reference manuals, and newsletters. The documents contain background and resource materials on the administration and regulation of federal grants...          ';
+    
+        browseData[iBData++] = '1|0|6220|6225'
+        + '|   Manuals, 1914, 1937-1938, 1950, 1955, 1969-1973   • Series •  Click on title for more detail   Preston School of Industry Dept. of Institutions -- Correctional Schools -- Preston School of Industry Administrative, employee, and institutional manuals covering rules and regulations, policies, education, medical services, business and accounting, security, staff training, and other topics.          ';
+    
+        browseData[iBData++] = '1|0|80235|11620'
+        + '|   Administrative Office Files, 1951-1991   • Series •  Click on title for more detail   State Board of Control  This series was created by the Board of Control's Administrative Office and includes reports, correspondence, and background information.  The bulk of the series consists of administrative reports.  A...          ';
+    
+        browseData[iBData++] = '1|2|1314|1315'
+        + '|   Minutes, 1866-2005   • Series •  Click on title for more detail   State Board of Education  The subject content of Board minutes changes in relationship to the Board's functions and responsibilities. Nineteenth century minutes relate primarily to actions on state textbooks and approval of te...      Series consists of:    2 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|0|11775|12872'
+        + '|   Rulemaking Files, 1975-1986   • Series •  Click on title for more detail   State Board of Forestry  This series contains information about various rule changes the Board of Forestry made from 1975 – 1986. Topics included are administrative regulations, fire protection, logging practices, organizat...          ';
+    
+        browseData[iBData++] = '1|0|71401|23810'
+        + '|   Minutes, 1903-1973   • Series •  Click on title for more detail   State Board of Public Health State Board of Health This series contains board minutes of the Board of Health (1903-1927) and its successor, the Board of Public Health (1927-1973). The minutes reflect the policy and administrative work of the board in ...          ';
+    
+        browseData[iBData++] = '1|10|80528|13416'
+        + '|   Executive Office Records, 1941-1989   • Sub-group •  Click on title for more detail   State Lands Commission -- Executive Office   Records from the Executive Office consist of seven cubic feet of material reflecting the administrative activity of the Commission.  The records date from 1941-2002 and include correspondence, reso...      Sub-group consists of:    10 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|0|35570|4193'
+        + '|   Meeting Minutes, 1967-1970   • Series •  Click on title for more detail   State Park and Recreation Commission  California State Park and Recreation Commission meeting minutes reflect the policy and administrative work of the commission in relation to the Department of Parks and Recreation.  The minutes include...          ';
+    
+        browseData[iBData++] = '1|0|4188|4189'
+        + '|   State Park Commission Meeting Minutes, 1962-1967   • Series •  Click on title for more detail   State Park Commission  The California State Park Commission meeting minutes reflect the policy and administrative work of the commission in relation to the Department of Parks and Recreation.  The minutes pertain to such is...          ';
+    
+        browseData[iBData++] = '1|0|24312|6673'
+        + '|   Assembly Interim Committee File, 1945-1947   • Series •  Click on title for more detail   Warren, Earl  Miscellaneous memoranda and newspaper clippings concerning the meetings and activities of the committees on Administrative Regulation; Charitable Institutions; County and City Jails; Crime Prevention ...          ';
+    
+        browseData[iBData++] = '1|0|24312|6681'
+        + '|   Governor's Legislative Program, 1946-1947   • Series •  Click on title for more detail   Warren, Earl  Correspondence, memoranda, summaries of Governor's proposals and actions taken by the legislature, drafts of proposed bills and amendments, digests of opinions on proposed legislation, reports of meet...          ';
+    
+        browseData[iBData++] = '1|0|24312|6683'
+        + '|   Proposed Legislation -- General, 1946-1947   • Series •  Click on title for more detail   Warren, Earl  Correspondence, memoranda, resolutions, reports, telegrams, press releases, statements, and publications received from state and local government agencies, private organizations, and individuals relat...          ';
+    
+
+
+
+// #!BROWSEINFO!#
+// END of Browse Data
+
+function showpage(url,id){
+   var xmlhttp;
+   if (window.XMLHttpRequest) {
+     xmlhttp=new XMLHttpRequest();
+   }
+   else {
+     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+   }
+   xmlhttp.onreadystatechange=function() {
+      if(xmlhttp.readyState==4 && xmlhttp.status == 200) {
+         document.getElementById(id).innerHTML = xmlhttp.responseText;
+         var res = document.getElementById(id);
+         var arr = res.getElementsByTagName("script");
+         for (var n=0; n 0){
+      document.getElementById('GoProcessSelect').getElementsByTagName('option')[0].selected = 'selected';
+      document.getElementById("GoProcess").style.display = "inline";
+   }
+}
+
+function checkStatus(){
+   if(location.href.indexOf('nd=1')!=-1){
+      alert("No record available for public.");
+   }
+}
+
+//--> 
+ Public - Archival descriptions browse 
+ 
+ 
+ 
+ 
+ 
+ 
+  Please wait 
+ 
+ 
+ 
+  
+ 
+	   browse_by_list = getCookie(sysFolder+sTemplateProcessID+"ESIbDispBrowseNav")=="true";
+      var sWebPagePrefix = '../html/';
+      showpage("/webcat/systems/cal/css/"+sWebPagePrefix+"public_search_header.html","page_header");    
+    
+ 
+ 
+      var bPromptUser = new Array( ) ;
+      var sPromptUserText = new Array( ) ;
+      var bPublicOnly = new Array( ) ;
+      var aCtr = 0 ;
+    
+ 
+ 
+      
+ 
+ 
+ Member Go Process  
+ 
+ Options:      
+         bPromptUser[aCtr] = "0" ;
+         sPromptUserText[aCtr] = "" ;
+         bPublicOnly[aCtr] = "0";
+         aCtr++ ;
+           View detail  
+         bPromptUser[aCtr] = "" ;
+         sPromptUserText[aCtr] = "" ;
+         bPublicOnly[aCtr] = "";
+         aCtr++ ;
+           Request materials using default email client       
+	  
+  
+            if(reqtype!="ViewList") document.getElementById('GoProcessSelect').innerHTML = "";
+          
+ 
+ 
+         displayDataControl() ;
+         document.writeln(displayHitsMessage());
+       
+ 
+  
+ 
+         showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_browse_header.html","browse_header");
+       
+ 
+ 
+         
+			   if(browse_by_list) document.write('   ');
+            for(dc=0; dc ");
+               document.write(unescape(tmp4));
+               document.write(" ");
+            }
+            if(getCookie(sysFolder+tableID+"ESIMemberServicesUsername")!=""){
+               showMember_Process();
+               document.getElementById('memberLoggedIn').style.display = 'inline';
+               document.getElementById('memberUserLoggedIn').innerHTML = getCookie(sysFolder+tableID+"ESIMemberServicesUsername");
+            }
+			   if(browse_by_list) document.write(' ');
+         
+          
+ 
+  
+ 
+         if(browse_by_list) $("#myList").listnav({ includeAll: false });
+	      showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_browse_footer.html","browse_footer");
+          
+      if (hasGaWebPropertyId()) {
+        writeGaJsHost();
+      }
+        
+         displayDataControl();
+       
+ 
+ 
+ 
+ Powered by WebGENCAT from  Eloquent Systems Inc  
+ 
+ 
+ 
+  
+ 
+      showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_search_footer.html","page_footer");
+      if(reqtype=="ViewList") document.getElementById("GoProcess").style.display="inline";
+      if(reqtype!="ViewCart") update_button();
+      if(reqtype=="ViewCart") update_cart_button();
+       writeGbooksJsHost();  setTimeout("processGbooks();", 1000); 
+ 
+ 
+ TOP 
+ 
+ 
+ 
+   $(document).ready(function($){
+      $('#backToTop').fadeOut('slow');
+       $(window).scroll(function(){
+           if ($(this).scrollTop() > 50) {
+               $('#backToTop').fadeIn('slow');
+           } else {
+               $('#backToTop').fadeOut('slow');
+           }
+       });
+       $('#backToTop').click(function(){
+           $("html, body").animate({ scrollTop: 0 }, 500);
+           return false;
+       });
+   });
+     
+	if(document.getElementsByClassName("browserecord").length  
+      setTimeout(function(){checkStatus()}, 500);
+    
+   
+ 
+

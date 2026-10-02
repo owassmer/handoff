@@ -1,0 +1,48 @@
+import sys
+sys.path.insert(0, "register/work")
+from q7_lib import *
+
+N = "no_decision"
+rows = [
+    D("NY:CPLR 214-D", N, "Notice-of-claim and limitation rule for injury or property-damage claims against licensed architects and engineers over conduct more than ten years old; no claim between landlord and tenant."),
+    D("NY:CPLR 214-E", N, "Revival of HIV blood-product injury claims; outside the chain."),
+    D("NY:CPLR 214-G", N, "Revival window for child sexual abuse claims; outside the chain."),
+    D("NY:CPLR 214-H", N, "Limitation period for public water suppliers' contamination claims; outside the chain."),
+    D("NY:CPLR 214-I*2", N, "Limitation period for burn-pit exposure injury claims of service members; outside the chain (the 214-i governing consumer credit is stated separately)."),
+    D("NY:CPLR 3003", N, "Suing for past pension installments does not bar later suits for future ones; limited to pension and retirement agreements, so it does not reach installments of rent."),
+    D("NY:CPLR 3012-A", N, "Certificate of merit in medical malpractice actions; outside the chain."),
+    D("NY:CPLR 3043", N, "Bill of particulars in personal-injury actions; no deposit or balance suit is one."),
+    D("NY:CPLR 3045", N, "Arbitration of damages in malpractice actions; outside the chain."),
+    D("NY:CPLR 4516", N, "A child may be exhibited to prove age; a tenant's minority is a fact the stated incapacity rules take as given, and this evidentiary device changes no step."),
+    D("NY:CPLR 4524", N, "Records of out-of-state conveyances are prima facie evidence; not a step in a tenancy settlement."),
+    D("NY:CPLR 4526", N, "Marriage certificate as prima facie evidence of marriage; no settlement step turns on proving a marriage."),
+    D("NY:CPLR 4533", N, "Published stock and commodity market reports are admissible to prove market price; rent, repair costs and deposits are not priced on such markets."),
+    D("NY:CPLR 4546", N, "Tax treatment of lost-earnings awards in malpractice actions; outside the chain."),
+    D("NY:CPLR 515", N, "Venue in matrimonial actions; outside the chain."),
+    D("NY:CPLR 6205", N, "Attachment in aid of a judgment against a foreign state; outside the chain."),
+    D("NY:CPLR 6405", N, "Court's power to remove a receiver it appointed; a receiver's right to rents is stated at NY:CPLR-6401-foreclosure-receiver, and removal adds no landlord step."),
+    D("NY:CPLR 8002", N, "Stenographer's transcript fees by court rule; a litigation expense with no settlement step or recoverable-amount rule of its own."),
+    D("NY:CPLR 8005", N, "Commissions of trustees of express trusts; internal to trusts."),
+    D("NY:CPLR 8109", N, "Costs awarded to a defendant against the State; the State is not a party to the tenancy."),
+    D("NY:EPTL 1-1.1", N, "Short title of the EPTL; changes no rule's reach."),
+    D("NY:EPTL 1-1.2", N, "Internal cross-reference convention of the EPTL; changes no rule's reach."),
+    D("NY:EPTL 1-1.3", N, "Singular, plural, gender and 'writing' conventions within the EPTL; no stated rule in the chain depends on them."),
+    D("NY:EPTL 1-1.4", N, "Severability clause of the EPTL; changes no rule's reach."),
+    D("NY:EPTL 1-2.1", N, "Definition of a codicil; the landlord relies on letters, not on testamentary instruments."),
+    D("NY:EPTL 1-2.10", N, "Definition of issue; internal to estate distribution."),
+    D("NY:EPTL 1-2.11", N, "Definition of per capita distribution; internal to estate distribution."),
+    D("NY:EPTL 1-2.15", N, "Definition of property in the EPTL; no stated rule depends on it (the refund's ownership rests on GOL 7-103 and the tenant-death rule)."),
+    D("NY:EPTL 1-2.17", N, "Definition of a specific disposition by will; internal to the estate."),
+    D("NY:EPTL 1-2.18", N, "Definition of a testamentary beneficiary; internal to the estate."),
+    D("NY:EPTL 1-2.2", N, "Definition of a creator of a disposition; internal to the estate."),
+    D("NY:EPTL 1-2.20", N, "Definition of a lifetime trust, excluding trusts in bank deposits; no stated rule depends on it, and the deposit's trust status comes from GOL 7-103."),
+    D("NY:EPTL 1-2.3", N, "Definition of a demonstrative disposition; internal to the estate."),
+    D("NY:EPTL 1-2.4", N, "Definition of a disposition of property; internal to the estate."),
+    D("NY:EPTL 1-2.5", N, "Definition of a distributee; the refund of a deceased tenant is paid to the personal representative, not to distributees (NY:ADJ-tenant-death-payee), so the definition changes no payee."),
+    D("NY:EPTL 1-2.6", N, "Definition of estate as an interest or aggregate of property; the tenant-death rule does not turn on it."),
+    D("NY:EPTL 1-2.7", N, "Broad definition of fiduciary (personal representative, guardian, conservator, trustee); the tenant-death rule pays only a personal representative on letters, which EPTL 1-2.13 defines and which is stated, so the wider list changes no payee."),
+    D("NY:EPTL 1-2.8", N, "Definition of a general disposition; internal to the estate."),
+    D("NY:EPTL 1-2.9", N, "Definition of incompetent as judicially declared incapable; the stated CPLR incapacity rules use their own identical test."),
+    D("NY:EPTL 11-1.10", N, "A fiduciary may use a broker-dealer as securities custodian; internal to estate administration."),
+]
+save(rows)

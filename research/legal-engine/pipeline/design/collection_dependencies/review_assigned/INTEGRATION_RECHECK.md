@@ -1,0 +1,23 @@
+# Independent integration recheck — October 1, 2026
+
+Reviewed updated assigned/FINDINGS.md, OPERATING_BRANCHES.md (C03–C09/C13/C14 and assigned-debt/COVID examples), federal/INCORPORATION_REPEAL.md, and the newly captured primary sources directly. No parent files edited.
+
+## Source-backed integration
+
+- C03 correctly makes the COVID transfer check independent of ordinary-rent consumer-credit classification and the debt-buyer participant definition. AB832§3/current1788.66 says a person, and requires qualifying historical unpaid tenancy debt, would-have-qualified ERA facts, and the separate2020or2021income predicate. Actual assistance receipt is not required by its wording.
+- AB832§14's1179.02(a),(c),(h) supports the exact debt window, unpaid rent or other financial obligations under the tenancy, and tenant exclusions. Its definition does not itself require that every unpaid line item have been caused byCOVID. The distinct federal eligibility predicates still apply.
+- Retrieved15USC9058a(k)(3) and9058c(f)(2) support rental obligation, unemployment qualification **or** the respective hardship test, housing-instability risk, and applicable income criteria. ERA2's hardship language differs ('during or due'), and its42USC1437a(b)(2)(A)reference includes family-size adjustments and possibleSecretary variations. The memo properly retains the additionalCalifornia<=80%AMI2020or2021condition; it does not substitute current program availability or present income.
+- The post-repeal interpretation is adequately qualified and supported by AB832's same-enactment contrast: §2 sunsets1788.65; §3 lacks that sunset for1788.66; §19 repeals the CCPchapter, not the separateCivilCodesection. Read Palermo andRojas passages directly: intent controls, with specific-reference rule relevant but not mechanical. No direct post-sunset1788.66holding is claimed. C03/A11 may use this supported synthesis without asserting that a court already decided the precise question.
+- C04 retains the pre90dayassignment/later-aging uncertainty instead of fabricating exemption or reset dates; collection placement is not equated exclusively with ownership sale.
+- C05–C08 preserve buyer/assigned differences, possession versus access, correct15/30calendar-day clocks, no copied30dayrequest-window for14.5, and overlapping immediatefederalholds. The late-buyer-response recommendation is distinctly an operational precaution where duty remains uncertain.
+- C06 and memo explicitly restrictNguyen's direct holding to52(b), retaining only analogous reasoning for14.5(b). This fixes the risk of falsely imposing an original-signed-contract-only requirement while not claiming any generic ledger suffices.
+- C09 differentiates initial-language translation clocks and state/federalnotice branches. C13 correctly gives full/finalsettlement the30dayfinalstatement and requiredcontents, and prohibits onward sale of resolved debt/information.
+- CIV7/9/10/11 directly support the stated generalholiday/daycount approach. The memo explicitly defers an actual deadline calculator and does not pretendSaturday automatically equals holiday. GOV6707's agency-filing rule is not generalized to private documentdelivery. This review does not establish every meaning of 'working days' through a generic 'business days' substitution; keep the statute's own unit as the memo does.
+
+## Remaining correction before accepting authored cases
+
+**A11's due-date premise is too broad.** It currently says '$6,000 tenancy obligations due2020–2021' but concludes1788.66applies. January–February2020 andOctober–December2021 are outside the provision's covered window. Revise the hypothetical premise to obligations dueMarch1,2020–September30,2021 (A12inherits the same debt). A useful negative boundary case is an otherwise identical obligation dueOctober1,2021:1788.66does not bar transfer on these facts solely because the year is2021; other law still must be checked. This is an authored-example defect, not a defect in C03 or the legal source conclusion.
+
+Two editorial leftovers in assigned/FINDINGS.md still say the late-request clause 'is being checked' andCOVIDdefinitions 'are being retrieved'; later sections show actual completed research and precisely retained interpretation limits. Reconcile those sentences so status matches evidence.
+
+With the example-date correction, no remaining material source/interpretation defect was identified within this assigned-debt integration scope. The explicit late-request and pre90dayassignment interpretations remain limits to unattended production decisions; source review cannot honestly convert them into decided law. Parent's broader completion audit must retain those limits and distinguish the research finding from a deployed permission.

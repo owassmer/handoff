@@ -1,0 +1,723 @@
+{
+  "scope": "First-hop follow-up for four bounded statutory bodies, not California mapping completion.",
+  "preparation_correction": "fresh-preparation-correction.json",
+  "rows": [
+    {
+      "case_id": "fresh-1942.1-01",
+      "expression": "Section 1941 or 1942",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.1.txt",
+        "sha256": "2f85fd85e76fe3fbacc606b570a1c07e454aef6fab120c52ef4b371c9a475c14",
+        "start": 157,
+        "end": 1065
+      },
+      "expression_span": [
+        78,
+        98
+      ],
+      "jev_noul": 0.97,
+      "diagnostic_majority": "YES",
+      "agent_action": "target_identified_for_agent_followup",
+      "targets": [
+        "CIV:1941",
+        "CIV:1942"
+      ],
+      "followup": "Read together with waiver restriction and tenant-contribution provisions."
+    },
+    {
+      "case_id": "fresh-1942.1-02",
+      "expression": "Any agreement",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.1.txt",
+        "sha256": "2f85fd85e76fe3fbacc606b570a1c07e454aef6fab120c52ef4b371c9a475c14",
+        "start": 157,
+        "end": 1065
+      },
+      "expression_span": [
+        0,
+        13
+      ],
+      "jev_noul": 0.57,
+      "diagnostic_majority": "YES",
+      "agent_action": "not_statutory_reference",
+      "targets": [],
+      "followup": "False-positive lead: private waiver agreement, not a statutory target. Preserve agreement as relevant case evidence."
+    },
+    {
+      "case_id": "fresh-1942.1-03",
+      "expression": "the premises",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.1.txt",
+        "sha256": "2f85fd85e76fe3fbacc606b570a1c07e454aef6fab120c52ef4b371c9a475c14",
+        "start": 157,
+        "end": 1065
+      },
+      "expression_span": [
+        186,
+        198
+      ],
+      "jev_noul": 0.13,
+      "diagnostic_majority": "NO",
+      "agent_action": "not_statutory_reference",
+      "targets": [],
+      "followup": "Physical dwelling."
+    },
+    {
+      "case_id": "fresh-1942.1-04",
+      "expression": "Sections 1941 to 1942.1, inclusive",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.1.txt",
+        "sha256": "2f85fd85e76fe3fbacc606b570a1c07e454aef6fab120c52ef4b371c9a475c14",
+        "start": 157,
+        "end": 1065
+      },
+      "expression_span": [
+        494,
+        528
+      ],
+      "jev_noul": 0.97,
+      "diagnostic_majority": "YES",
+      "agent_action": "target_identified_for_agent_followup",
+      "targets": [
+        "CIV:1941",
+        "CIV:1941.1",
+        "CIV:1941.2",
+        "CIV:1941.3",
+        "CIV:1941.4",
+        "CIV:1941.5",
+        "CIV:1941.6",
+        "CIV:1941.7",
+        "CIV:1941.8",
+        "CIV:1941.9",
+        "CIV:1942",
+        "CIV:1942.1"
+      ],
+      "followup": "Range expanded against saved inventory; current official range enumeration and substantive review remain open."
+    },
+    {
+      "case_id": "fresh-1942.1-05",
+      "expression": "Title 9 (commencing with Section 1280), Part 3 of the Code of Civil Procedure",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.1.txt",
+        "sha256": "2f85fd85e76fe3fbacc606b570a1c07e454aef6fab120c52ef4b371c9a475c14",
+        "start": 157,
+        "end": 1065
+      },
+      "expression_span": [
+        731,
+        808
+      ],
+      "jev_noul": 0.97,
+      "diagnostic_majority": "YES",
+      "agent_action": "target_identified_for_agent_followup",
+      "targets": [
+        "CCP:Title9",
+        "CCP:1280"
+      ],
+      "followup": "Retrieved starting definitions, not the complete arbitration title. Enumerate title and investigate applicable arbitration requirements before use."
+    },
+    {
+      "case_id": "fresh-1942.1-06",
+      "expression": "an agreement",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.1.txt",
+        "sha256": "2f85fd85e76fe3fbacc606b570a1c07e454aef6fab120c52ef4b371c9a475c14",
+        "start": 157,
+        "end": 1065
+      },
+      "expression_span": [
+        438,
+        450
+      ],
+      "jev_noul": 0.15,
+      "diagnostic_majority": "NO",
+      "agent_action": "not_statutory_reference",
+      "targets": [],
+      "followup": "Written private agreement."
+    },
+    {
+      "case_id": "fresh-1942.1-07",
+      "expression": "the arbitrator",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.1.txt",
+        "sha256": "2f85fd85e76fe3fbacc606b570a1c07e454aef6fab120c52ef4b371c9a475c14",
+        "start": 157,
+        "end": 1065
+      },
+      "expression_span": [
+        873,
+        887
+      ],
+      "jev_noul": 0.11,
+      "diagnostic_majority": "NO",
+      "agent_action": "not_statutory_reference",
+      "targets": [],
+      "followup": "Person allocating costs."
+    },
+    {
+      "case_id": "fresh-1942.2-01",
+      "expression": "Section 777, 777.1, 10009, 10009.1, 12822, 12822.1, 16481, or 16481.1 of the Public Utilities Code",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.2.txt",
+        "sha256": "fed4717b80fe9dfc6fe9c469852e3b29c810b2b14d12aac7681ba135cc52540f",
+        "start": 157,
+        "end": 446
+      },
+      "expression_span": [
+        57,
+        155
+      ],
+      "jev_noul": 0.97,
+      "diagnostic_majority": "YES",
+      "agent_action": "target_identified_for_agent_followup",
+      "targets": [
+        "PUC:777",
+        "PUC:777.1",
+        "PUC:10009",
+        "PUC:10009.1",
+        "PUC:12822",
+        "PUC:12822.1",
+        "PUC:16481",
+        "PUC:16481.1"
+      ],
+      "followup": "Retrieved all eight statutory alternatives. Select applicable provider and metering branch from case facts."
+    },
+    {
+      "case_id": "fresh-1942.2-02",
+      "expression": "Section 60371 of the Government Code",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.2.txt",
+        "sha256": "fed4717b80fe9dfc6fe9c469852e3b29c810b2b14d12aac7681ba135cc52540f",
+        "start": 157,
+        "end": 446
+      },
+      "expression_span": [
+        186,
+        222
+      ],
+      "jev_noul": 0.98,
+      "diagnostic_majority": "YES",
+      "agent_action": "target_identified_for_agent_followup",
+      "targets": [
+        "GOV:60371"
+      ],
+      "followup": "Retrieved district utility rule; establish whether this district/provider branch applies."
+    },
+    {
+      "case_id": "fresh-1942.2-03",
+      "expression": "that section",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.2.txt",
+        "sha256": "fed4717b80fe9dfc6fe9c469852e3b29c810b2b14d12aac7681ba135cc52540f",
+        "start": 157,
+        "end": 446
+      },
+      "expression_span": [
+        276,
+        288
+      ],
+      "jev_noul": 0.9,
+      "diagnostic_majority": "YES",
+      "agent_action": "target_identified_for_agent_followup",
+      "targets": [
+        "PUC:777",
+        "PUC:777.1",
+        "PUC:10009",
+        "PUC:10009.1",
+        "PUC:12822",
+        "PUC:12822.1",
+        "PUC:16481",
+        "PUC:16481.1",
+        "GOV:60371"
+      ],
+      "followup": "Anaphoric reference depends on which antecedent payment route applies. Do not arbitrarily choose the nearest named section."
+    },
+    {
+      "case_id": "fresh-1942.2-04",
+      "expression": "the payment",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.2.txt",
+        "sha256": "fed4717b80fe9dfc6fe9c469852e3b29c810b2b14d12aac7681ba135cc52540f",
+        "start": 157,
+        "end": 446
+      },
+      "expression_span": [
+        235,
+        246
+      ],
+      "jev_noul": 0.08,
+      "diagnostic_majority": "NO",
+      "agent_action": "not_statutory_reference",
+      "targets": [],
+      "followup": "Money paid to the utility."
+    },
+    {
+      "case_id": "fresh-1942.2-05",
+      "expression": "the rent",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.2.txt",
+        "sha256": "fed4717b80fe9dfc6fe9c469852e3b29c810b2b14d12aac7681ba135cc52540f",
+        "start": 157,
+        "end": 446
+      },
+      "expression_span": [
+        252,
+        260
+      ],
+      "jev_noul": 0.08,
+      "diagnostic_majority": "NO",
+      "agent_action": "not_statutory_reference",
+      "targets": [],
+      "followup": "Rent amount rather than statutory text."
+    },
+    {
+      "case_id": "fresh-1942.6-01",
+      "expression": "an occupant",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.6.txt",
+        "sha256": "375b1fceab9388a5b475973843ddc6c847f6afbd9fe64b909f2e8d6ef5505287",
+        "start": 157,
+        "end": 755
+      },
+      "expression_span": [
+        75,
+        86
+      ],
+      "jev_noul": 0.32,
+      "diagnostic_majority": "NO",
+      "agent_action": "not_statutory_reference",
+      "targets": [],
+      "followup": "Person inviting entry."
+    },
+    {
+      "case_id": "fresh-1942.6-02",
+      "expression": "tenants’ rights",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.6.txt",
+        "sha256": "375b1fceab9388a5b475973843ddc6c847f6afbd9fe64b909f2e8d6ef5505287",
+        "start": 157,
+        "end": 755
+      },
+      "expression_span": [
+        202,
+        217
+      ],
+      "jev_noul": 0.19,
+      "diagnostic_majority": "NO",
+      "agent_action": "not_statutory_reference",
+      "targets": [],
+      "followup": "Rights as a subject of information, no statutory text identified."
+    },
+    {
+      "case_id": "fresh-1942.6-03",
+      "expression": "this section",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.6.txt",
+        "sha256": "375b1fceab9388a5b475973843ddc6c847f6afbd9fe64b909f2e8d6ef5505287",
+        "start": 157,
+        "end": 755
+      },
+      "expression_span": [
+        443,
+        455
+      ],
+      "jev_noul": 0.97,
+      "diagnostic_majority": "YES",
+      "agent_action": "target_identified_for_agent_followup",
+      "targets": [
+        "CIV:1942.6"
+      ],
+      "followup": "Self-reference; source already present."
+    },
+    {
+      "case_id": "fresh-1942.6-04",
+      "expression": "this section",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.6.txt",
+        "sha256": "375b1fceab9388a5b475973843ddc6c847f6afbd9fe64b909f2e8d6ef5505287",
+        "start": 157,
+        "end": 755
+      },
+      "expression_span": [
+        499,
+        511
+      ],
+      "jev_noul": 0.97,
+      "diagnostic_majority": "YES",
+      "agent_action": "target_identified_for_agent_followup",
+      "targets": [
+        "CIV:1942.6"
+      ],
+      "followup": "Self-reference; source already present."
+    },
+    {
+      "case_id": "fresh-1942-01",
+      "expression": "subdivision (a) of Section 1962",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.txt",
+        "sha256": "24e61d96406a0726f2b0154982b0d1b031549678acf9336542ca8d1dd81b5960",
+        "start": 155,
+        "end": 1644
+      },
+      "expression_span": [
+        105,
+        136
+      ],
+      "jev_noul": 0.98,
+      "diagnostic_majority": "YES",
+      "agent_action": "target_identified_for_agent_followup",
+      "targets": [
+        "CIV:1962(a)"
+      ],
+      "followup": "Existing source defines relevant owner/agent disclosures. Inspect before serving or assessing notice."
+    },
+    {
+      "case_id": "fresh-1942-02",
+      "expression": "one month’s rent",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.txt",
+        "sha256": "24e61d96406a0726f2b0154982b0d1b031549678acf9336542ca8d1dd81b5960",
+        "start": 155,
+        "end": 1644
+      },
+      "expression_span": [
+        371,
+        387
+      ],
+      "jev_noul": 0.26,
+      "diagnostic_majority": "NO",
+      "agent_action": "not_statutory_reference",
+      "targets": [],
+      "followup": "Amount limit computed from rent."
+    },
+    {
+      "case_id": "fresh-1942-03",
+      "expression": "12-month period",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.txt",
+        "sha256": "24e61d96406a0726f2b0154982b0d1b031549678acf9336542ca8d1dd81b5960",
+        "start": 155,
+        "end": 1644
+      },
+      "expression_span": [
+        730,
+        745
+      ],
+      "jev_noul": 0.38,
+      "diagnostic_majority": "NO",
+      "agent_action": "not_statutory_reference",
+      "targets": [],
+      "followup": "Time interval."
+    },
+    {
+      "case_id": "fresh-1942-04",
+      "expression": "this section",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.txt",
+        "sha256": "24e61d96406a0726f2b0154982b0d1b031549678acf9336542ca8d1dd81b5960",
+        "start": 155,
+        "end": 1644
+      },
+      "expression_span": [
+        771,
+        783
+      ],
+      "jev_noul": 0.95,
+      "diagnostic_majority": "YES",
+      "agent_action": "target_identified_for_agent_followup",
+      "targets": [
+        "CIV:1942"
+      ],
+      "followup": "Self-reference; source already present."
+    },
+    {
+      "case_id": "fresh-1942-05",
+      "expression": "this subdivision",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.txt",
+        "sha256": "24e61d96406a0726f2b0154982b0d1b031549678acf9336542ca8d1dd81b5960",
+        "start": 155,
+        "end": 1644
+      },
+      "expression_span": [
+        945,
+        961
+      ],
+      "jev_noul": 0.92,
+      "diagnostic_majority": "YES",
+      "agent_action": "target_identified_for_agent_followup",
+      "targets": [
+        "CIV:1942(b)"
+      ],
+      "followup": "Local timing presumption; source already present."
+    },
+    {
+      "case_id": "fresh-1942-06",
+      "expression": "the 30th day following notice",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.txt",
+        "sha256": "24e61d96406a0726f2b0154982b0d1b031549678acf9336542ca8d1dd81b5960",
+        "start": 155,
+        "end": 1644
+      },
+      "expression_span": [
+        829,
+        858
+      ],
+      "jev_noul": 0.6,
+      "diagnostic_majority": "YES",
+      "agent_action": "not_statutory_reference",
+      "targets": [],
+      "followup": "False-positive lead: timing condition. Agent establishes notice event; code handles date arithmetic."
+    },
+    {
+      "case_id": "fresh-1942-07",
+      "expression": "subdivision (a)",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.txt",
+        "sha256": "24e61d96406a0726f2b0154982b0d1b031549678acf9336542ca8d1dd81b5960",
+        "start": 155,
+        "end": 1644
+      },
+      "expression_span": [
+        1211,
+        1226
+      ],
+      "jev_noul": 0.93,
+      "diagnostic_majority": "YES",
+      "agent_action": "target_identified_for_agent_followup",
+      "targets": [
+        "CIV:1942(a)"
+      ],
+      "followup": "Corrected occurrence in subdivision c points to local repair-and-deduct remedy."
+    },
+    {
+      "case_id": "fresh-1942-08",
+      "expression": "Section 1929 or 1941.2",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.txt",
+        "sha256": "24e61d96406a0726f2b0154982b0d1b031549678acf9336542ca8d1dd81b5960",
+        "start": 155,
+        "end": 1644
+      },
+      "expression_span": [
+        1298,
+        1320
+      ],
+      "jev_noul": 0.97,
+      "diagnostic_majority": "YES",
+      "agent_action": "target_identified_for_agent_followup",
+      "targets": [
+        "CIV:1929",
+        "CIV:1941.2"
+      ],
+      "followup": "Retrieved ordinary-care provision; read tenant contribution restriction in existing source. Establish causation and responsibilities before account treatment."
+    },
+    {
+      "case_id": "fresh-1942-09",
+      "expression": "this section",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.txt",
+        "sha256": "24e61d96406a0726f2b0154982b0d1b031549678acf9336542ca8d1dd81b5960",
+        "start": 155,
+        "end": 1644
+      },
+      "expression_span": [
+        1349,
+        1361
+      ],
+      "jev_noul": 0.96,
+      "diagnostic_majority": "YES",
+      "agent_action": "target_identified_for_agent_followup",
+      "targets": [
+        "CIV:1942"
+      ],
+      "followup": "Self-reference; source already present."
+    },
+    {
+      "case_id": "fresh-1942-10",
+      "expression": "this chapter",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.txt",
+        "sha256": "24e61d96406a0726f2b0154982b0d1b031549678acf9336542ca8d1dd81b5960",
+        "start": 155,
+        "end": 1644
+      },
+      "expression_span": [
+        1409,
+        1421
+      ],
+      "jev_noul": 0.88,
+      "diagnostic_majority": "YES",
+      "agent_action": "target_identified_for_agent_followup",
+      "targets": [
+        "CIV:Division3/Part4/Title5/Chapter2"
+      ],
+      "followup": "Enclosing chapter; enumerate and investigate applicable additional remedies rather than treating the whole chapter as applied."
+    },
+    {
+      "case_id": "fresh-1942-11",
+      "expression": "the rental\nagreement",
+      "source": {
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.txt",
+        "sha256": "24e61d96406a0726f2b0154982b0d1b031549678acf9336542ca8d1dd81b5960",
+        "start": 155,
+        "end": 1644
+      },
+      "expression_span": [
+        1423,
+        1443
+      ],
+      "jev_noul": 0.07,
+      "diagnostic_majority": "NO",
+      "agent_action": "not_statutory_reference",
+      "targets": [],
+      "followup": "Private agreement is a separate source of remedies."
+    }
+  ],
+  "retrieved_sources": [
+    {
+      "code": "PUC",
+      "section": "777",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PUC&sectionNum=777.",
+      "retrieved_at": "2026-10-01T03:33:44.280859+00:00",
+      "status": "retrieved",
+      "html_sha256": "280b09efde11d75573e9fde7b62f56df5988a801157000e73a13bd349e92af8a",
+      "text_sha256": "2d520bf10fcd8258e1442bb575a06247a320343dc7d64b0163e9ee007e6aadf3"
+    },
+    {
+      "code": "PUC",
+      "section": "777.1",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PUC&sectionNum=777.1.",
+      "retrieved_at": "2026-10-01T03:33:44.281171+00:00",
+      "status": "retrieved",
+      "html_sha256": "57e6168c9b6bb657630ca7d0544f13c5af930f10bd3977ea9407cb0f72cd01f2",
+      "text_sha256": "a838ac21f04ccc328d838262bace0eaee498bddad1bf48a596ef3c5ddb90a3fc"
+    },
+    {
+      "code": "PUC",
+      "section": "10009",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PUC&sectionNum=10009.",
+      "retrieved_at": "2026-10-01T03:33:44.282337+00:00",
+      "status": "retrieved",
+      "html_sha256": "25504032e3dd98a782696284f64ce4cefbdf1888ee4166aa85bea0655620715a",
+      "text_sha256": "a99cdbad27d1cca062eaf34dbb89295bb48d7b9b8fc595a39dfc044b4aa62c17"
+    },
+    {
+      "code": "PUC",
+      "section": "10009.1",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PUC&sectionNum=10009.1.",
+      "retrieved_at": "2026-10-01T03:33:44.286631+00:00",
+      "status": "retrieved",
+      "html_sha256": "3e6a5a9b5d5fccd321c39e491c3ba8d1955aba09d4d1087a68d3a67c3cdae53c",
+      "text_sha256": "586afdf245d9229ff694b4f54573f3da7face20aa7081fd089226aa09cb7bd9c"
+    },
+    {
+      "code": "PUC",
+      "section": "12822",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PUC&sectionNum=12822.",
+      "retrieved_at": "2026-10-01T03:33:45.056470+00:00",
+      "status": "retrieved",
+      "html_sha256": "e7fc73932083b2e05c5e05fcaf59f9599fdb13c49797259bda78e3f3be48f54d",
+      "text_sha256": "14306b255c2db0facb5cf623220c7909a5952fc90708e1af7e7207ca998ffd5a"
+    },
+    {
+      "code": "PUC",
+      "section": "12822.1",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PUC&sectionNum=12822.1.",
+      "retrieved_at": "2026-10-01T03:33:45.056591+00:00",
+      "status": "retrieved",
+      "html_sha256": "674e2c99ea5de54e564355913bc0363d7c585cda277e404c31c642b42bd68b2d",
+      "text_sha256": "549e812668959f0eb5fd2b601588ce8cb6d4335475a0a8afdec95c888f004a7c"
+    },
+    {
+      "code": "PUC",
+      "section": "16481",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PUC&sectionNum=16481.",
+      "retrieved_at": "2026-10-01T03:33:45.058920+00:00",
+      "status": "retrieved",
+      "html_sha256": "3dd4973152fa04e3e07207597d2299576f5f96a73a96d5121b1b9af636bc7221",
+      "text_sha256": "00f06eb04898898508e4543ab70e93dd5668caf5c125371221bbe782fdfed280"
+    },
+    {
+      "code": "PUC",
+      "section": "16481.1",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PUC&sectionNum=16481.1.",
+      "retrieved_at": "2026-10-01T03:33:45.681416+00:00",
+      "status": "retrieved",
+      "html_sha256": "edb05d0185a3bf96c07c8cd39682c01771d48028d23d3f170a1d5148b661a6ba",
+      "text_sha256": "d75a5756419b4852fd0bb83a9188deb33c29e789cef7882cf60b2c859b68fc81"
+    },
+    {
+      "code": "GOV",
+      "section": "60371",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=60371.",
+      "retrieved_at": "2026-10-01T03:33:45.689036+00:00",
+      "status": "retrieved",
+      "html_sha256": "8755a626a6e6251430766479db52d2e91f07698d80785604b414e82f74225597",
+      "text_sha256": "f156836b04e887cd5049488623b54fcea4530a8fa9efd9abdea51435cf52106e"
+    },
+    {
+      "code": "CCP",
+      "section": "1280",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CCP&sectionNum=1280.",
+      "retrieved_at": "2026-10-01T03:33:45.692849+00:00",
+      "status": "retrieved",
+      "html_sha256": "e5f6b38406d30af23adae6827f0b0fcfa09e3653fedb43a70116b665db3074bb",
+      "text_sha256": "6053fb563651807268103d9cc0ecad81e4bdc495f68d30739059059f829c2472"
+    },
+    {
+      "code": "CIV",
+      "section": "1929",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1929.",
+      "retrieved_at": "2026-10-01T03:33:46.325194+00:00",
+      "status": "retrieved",
+      "html_sha256": "3535bf3ca1080e873f2a613ebd956f1a3d390a510ae61427122ec9b55ecac415",
+      "text_sha256": "faeecbac36014259fe9f3b43ab2f365d7fce4beb172b04dbbcb6bb56a351c367"
+    }
+  ],
+  "next_dependencies": [
+    {
+      "targets": [
+        "CIV:1632",
+        "HSC:17008",
+        "BPC:6213",
+        "CCP:697.310"
+      ],
+      "cause": "Named in retrieved utility statutes; language, housing type, legal-services and judgment-recording dependencies. Not retrieved in this bounded first-hop run."
+    },
+    {
+      "targets": [
+        "utility rules and tariffs",
+        "implementing rules/orders",
+        "local utility protections"
+      ],
+      "cause": "Retrieved statutes expressly require these or preserve local authority. Need case provider and jurisdiction."
+    },
+    {
+      "targets": [
+        "CCP:Title9",
+        "CIV:1941 through 1942.1",
+        "CIV:Title5/Chapter2"
+      ],
+      "cause": "Unit/range pointers require broader enumeration and interpretation, not just first-section retrieval."
+    },
+    {
+      "targets": [
+        "existing law in CIV1942.6",
+        "other applicable statutory or common law in CIV1942(d)"
+      ],
+      "cause": "Three broad lead occurrences were retained outside the particular-statutory-reference probe; agent research remains open."
+    }
+  ],
+  "findings": [
+    "CIV1942.2 requires following the referenced utility payment route; the short section alone does not establish any claimed rent deduction.",
+    "The retrieved payment routes require case facts about provider type, metering, customer status, bundled rental charges and payments. A rent ledger alone is insufficient.",
+    "CIV1942 and its tenant-contribution dependencies affect repair responsibility and claimed rent credits; detecting references does not decide causation or entitlement."
+  ],
+  "limits": [
+    "No independent recall review in this run.",
+    "Preparation/retrieval wall time and full agent cost were not instrumented; no end-to-end speed claim.",
+    "No runtime legal rule or production routing changed."
+  ]
+}

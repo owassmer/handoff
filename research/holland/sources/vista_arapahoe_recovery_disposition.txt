@@ -1,0 +1,42 @@
+SOURCE: multi-source research disposition; URLs and primary captures listed below
+RETRIEVED: 2026-09-30
+METHOD: source recovery, official code indexes and public read-only APIs; no outreach, login, CAPTCHA bypass or personal-browser session
+STATUS: research disposition, not an accepted legal layer
+
+VISTA
+
+1. Recovery route
+City landing https://www.vista.gov/departments/community-development/municipal-dev-codes and ?navid=1594 returned HTTP403. Guessed CodePublishing, Municode and Qcode routes did not recover Vista text; search results repeatedly confused Chula Vista/Rio Vista/La Vista and those were excluded.
+SANDAG's official 2025 Regional Plan PEIR References, https://www.sandag.org/regional-plan/2025-regional-plan/-/media/23774C361F5A453EBD54EF63BE6AF785.ashx, explicitly cites City of Vista Municipal Code at https://portal.laserfiche.com/Portal/Browse.aspx?id=43616&repo=r-3f0b2553 (accessed by SANDAG August20,2025). This recovered the actual public repository.
+Angular client exposes public read-only FolderListingService.aspx/GetFolderListing2 and DocumentService.aspx/GetTextHtmlForPage. No authentication required. GetFolderListing without window returned an argument error; GetFolderListing2 with start/end succeeded. Each saved source retains endpoint and request parameters.
+Municipal root: vista_code_folder_listing2.txt (16 entries). Development root: vista_folder_43617.txt. City Clerk folder path and ordinance index: vista_folder_4.txt, vista_folder_3471.txt, vista_folder_8.txt, vista_folder_51602.txt. Ordinance title listings 2024/2025/2026: vista_folder_2099254.txt, vista_folder_2199323.txt, vista_folder_2239554.txt. Latest 2026 listed item is ordinance08 dated September22. Title screening is not full-text review of all enactments.
+
+2. Positive conditional findings; a negative local-law conclusion is NOT supported
+- Development Code 18.60.050(H)(1), full four-page chapter in vista_code_11107.txt: condo-conversion conditions require relocation expense for certified lower-income families, including moving expenses, cleaning deposit and two months' rent in a comparable/better relocation rental unit. Need conversion event, household qualification and approved project conditions; not an automatic ordinary move-out benefit. No evidence Preserve at Melrose is converting.
+- Municipal Code9.40, all12 pages in vista_code_1452487.txt: crime-free multifamily program tied to a finding of noncompliance; includes lease-addendum and termination language. Repository metadata modified2020 (vista_info_1452487.txt). State AB1418/Government Code53165.1, effective January1,2024, restricts local crime-free/nuisance programs. AG official February7,2024 guidance is fully captured ca_ag_ab1418_guidance.txt. Do not treat old local text as operative authorization to terminate; resolve state supremacy and current local enforcement scope in compilation. No property-specific noncompliance finding retrieved.
+- Development Code16.44 incorporates San Diego County Code Title6 Division9 Chapter1 condemnation rules into Vista: full source vista_code_10491.txt. This defeats a blanket assumption that county law never reaches incorporated Vista.
+- Development Code16.12 incorporates 1994 Uniform Housing Code with amendments (vista_code_10478.txt);16.16 dangerous-building abatement code (vista_code_10480.txt); municipal8.36 property maintenance/nuisance abatement (vista_code_1044356.txt). These support conditional habitability/government-action intake, not automatic tenant chargeback.
+- Municipal5.48 adopts county hotel/roominghouse regulation (vista_code_1044509.txt); use occupancy classification before inclusion.
+- Master municipal index all30 pages: vista_code_1509327.txt. No general residential security-deposit/rent-control chapter found in index or screened chapter-title folders. This is a bounded negative finding only, with positive conditional provisions above.
+- City search-indexed tenant update PDF https://www.vista.gov/home/showpublisheddocument/32460/638828954261270000 was readable through web extraction but direct HTTP403. Its substance discusses state2023/2024 law despite later hosting date; it is NOT a current local-law inventory or authority for2026 amounts.
+- Official site separately identifies mobilehome Accord program, accessory-dwelling affordability covenants, and short-term-rental regulation. Those do not apply merely because a conventional apartment is located in Vista; actual program/occupancy facts are needed.
+
+3. Coverage limits
+No exhaustive full-text extraction of all municipal/development chapters or all ordinances was claimed. No new general deposit ordinance or express9.40 repeal was found among2024–26 ordinance titles; titles alone cannot establish absence or current enforceability. Conditional local provisions must be compiled with the relevant California superior law and event facts. Source retrieval is now reachable, not blocked by the city website's403.
+
+ARAPAHOE COUNTY / INVERNESS
+
+1. Official index
+https://files.arapahoeco.gov/your_county/codes_criteria_and_ordinances/county_ordinances_and_resolutions.php fully captured arapahoe_ordinance_index_recheck.txt. It lists124 resolution documents,16 ordinance entries and4 repealed ordinances; it directs December2020-present legislation research to https://arapahoe.legistar.com/Legislation.aspx. Reviewed the16 ordinance titles: curfews, parking, gang/graffiti, marijuana, traffic, open fire/fireworks, residential picketing, stormwater and weeds. No title identifies a general landlord/tenant/deposit ordinance. Resolution bundles have not all been read.
+
+2. Bounded search results and limitations
+Queries included site:arapahoeco.gov tenant landlord security deposit ordinance; site:arapahoe.legistar.com security deposit; site:arapahoe.legistar.com tenant; Arapahoe tenant ordinance deposit. Search-indexed results returned rental-assistance program materials, public-health housing-policy plans, short-term-rental proposals and unrelated government tenant improvements. This is search recovery, not an exhaustive native all-years text/attachment search.
+Native Legistar landing loads, but URL parameter ?Search=deposit&Options=ID|Text|Attachments|&SearchType=All returned the unsubmitted search page, not zero results. Guessed public API client names arapahoe/arapahoecounty/arapahoeco returned404. These failed routes must not be recorded as negative search results.
+
+3. Positive program source
+CERA case review/administration application with program guidelines captured in arapahoe_cera_terms.txt, from https://arapahoe.legistar.com/View.ashx?GUID=90F03AB4-4F8A-487B-894B-550DC264DD56&ID=13396322&M=F. It is program-specific funding guidance, not a general county tenancy ordinance. It distinguishes rent/utilities on the lease/ledger, current-landlord payments and duplicate-assistance recoupment. If a tenant has assistance, applicable award dates and terms can change account credits/disposition. No Holland household participation is established.
+Public-health plan https://arapahoe.legistar.com/View.ashx?GUID=A23137F4-A093-4B14-B47F-C32FE7F94E52&ID=13559146&M=F discusses2026 objectives to assess tenant rights/habitability policy; it is a plan, not proof an ordinance was enacted.
+Short-term rental file25-416 https://arapahoe.legistar.com/LegislationDetail.aspx?FullText=1&GUID=27E85CA5-7CE0-4905-84E1-DA3064B7DBE7&ID=7502865&Options=&Search= is a2025 study-session proposal, not ordinary long-term settlement law.
+
+4. Adopted research state
+For Flats at Inverness use unincorporated Arapahoe geography, not Englewood/Centennial. No general county deposit/settlement ordinance recovered from the screened index and targeted search; full resolution/Legistar review remains incomplete. Maintain this as bounded non-recovery with named unexamined source families. Do not convert it into 'no county law'. Relevant current property-maintenance/building enforcement and assistance/covenant facts remain conditional overlays.

@@ -1,0 +1,222 @@
+[
+  {
+    "case_id": "d001",
+    "expected": "YES",
+    "reason": "Explicit self-reference counts in a whole-section focus."
+  },
+  {
+    "case_id": "d002",
+    "expected": "YES",
+    "reason": "Same reference with sentence focus."
+  },
+  {
+    "case_id": "d003",
+    "expected": "YES",
+    "reason": "Explicit enclosing title reference."
+  },
+  {
+    "case_id": "d004",
+    "expected": "YES",
+    "reason": "Enclosing title, federal ranges, subsections and historical qualifier all contain pointers."
+  },
+  {
+    "case_id": "d005",
+    "expected": "YES",
+    "reason": "Other-section and local-scope references."
+  },
+  {
+    "case_id": "d006",
+    "expected": "YES",
+    "reason": "Title-level definition scope."
+  },
+  {
+    "case_id": "d007",
+    "expected": "NO",
+    "reason": "Except as permitted by law is a generic legal qualification, not an identified public legal pointer."
+  },
+  {
+    "case_id": "d008",
+    "expected": "NO",
+    "reason": "Lease is privately made; no public legal reference."
+  },
+  {
+    "case_id": "d009",
+    "expected": "NO",
+    "reason": "Delivery prose contains no public legal pointer."
+  },
+  {
+    "case_id": "d010",
+    "expected": "YES",
+    "reason": "Subsection and other-section references."
+  },
+  {
+    "case_id": "d011",
+    "expected": "YES",
+    "reason": "Coextensive focus is permitted."
+  },
+  {
+    "case_id": "d012",
+    "expected": "YES",
+    "reason": "An unnumbered reference to the provision is explicit."
+  },
+  {
+    "case_id": "d013",
+    "expected": "YES",
+    "reason": "Relative provision pointer; target not supplied."
+  },
+  {
+    "case_id": "d014",
+    "expected": "YES",
+    "reason": "Internal range names provisions."
+  },
+  {
+    "case_id": "d015",
+    "expected": "YES",
+    "reason": "Named legal instrument and section."
+  },
+  {
+    "case_id": "d016",
+    "expected": "YES",
+    "reason": "Named code suffices without a section number."
+  },
+  {
+    "case_id": "d017",
+    "expected": "YES",
+    "reason": "Authored named judicial decision pointer; no claim that citation is real."
+  },
+  {
+    "case_id": "d018",
+    "expected": "YES",
+    "reason": "Named court rule."
+  },
+  {
+    "case_id": "d019",
+    "expected": "YES",
+    "reason": "Named regulatory provision."
+  },
+  {
+    "case_id": "d020",
+    "expected": "YES",
+    "reason": "Quoted notice still contains a legal pointer."
+  },
+  {
+    "case_id": "d021",
+    "expected": "YES",
+    "reason": "Embedded instruction is data; final sentence has self pointer."
+  },
+  {
+    "case_id": "d022",
+    "expected": "NO",
+    "reason": "Ordinary uses of title and section."
+  },
+  {
+    "case_id": "d023",
+    "expected": "NO",
+    "reason": "Ordinary verb and private rules, no identified public authority."
+  },
+  {
+    "case_id": "d024",
+    "expected": "NO",
+    "reason": "Book chapter and ownership meaning of title."
+  },
+  {
+    "case_id": "d025",
+    "expected": "NO",
+    "reason": "Private contract pointer is deliberately a separate investigation task."
+  },
+  {
+    "case_id": "d026",
+    "expected": "NO",
+    "reason": "Nonlegal document reference."
+  },
+  {
+    "case_id": "d027",
+    "expected": "NO",
+    "reason": "Unspecified legal qualification requires agent inquiry but is outside this detector."
+  },
+  {
+    "case_id": "d028",
+    "expected": "NO",
+    "reason": "No identified or locatable legal unit; generic qualification."
+  },
+  {
+    "case_id": "d029",
+    "expected": "NO",
+    "reason": "Identification heading alone is not a reference in the passage."
+  },
+  {
+    "case_id": "d030",
+    "expected": "NO",
+    "reason": "Numbers alone do not identify legal units."
+  },
+  {
+    "case_id": "d031",
+    "expected": "YES",
+    "reason": "Visible legal-unit pointer with missing target number still counts."
+  },
+  {
+    "case_id": "d032",
+    "expected": "INSUFFICIENT",
+    "reason": "Missing object could be legal rule or private instruction."
+  },
+  {
+    "case_id": "d033",
+    "expected": "INSUFFICIENT",
+    "reason": "Cannot determine whether omitted object is legal authority."
+  },
+  {
+    "case_id": "d034",
+    "expected": "INSUFFICIENT",
+    "reason": "No context establishes statutory unit versus ordinary publication."
+  },
+  {
+    "case_id": "d035",
+    "expected": "YES",
+    "reason": "Mixed enclosing, numbered and historically qualified pointer."
+  },
+  {
+    "case_id": "d036",
+    "expected": "YES",
+    "reason": "Public pointer exists despite mixed private reference."
+  },
+  {
+    "case_id": "d037",
+    "expected": "YES",
+    "reason": "Named constitutional provision."
+  },
+  {
+    "case_id": "d038",
+    "expected": "YES",
+    "reason": "Named treaty article; applicability is separate."
+  },
+  {
+    "case_id": "d039",
+    "expected": "YES",
+    "reason": "Specific judicial order identified by proceeding and date."
+  },
+  {
+    "case_id": "d040",
+    "expected": "YES",
+    "reason": "Named official legal guidance; legal force is outside detection."
+  },
+  {
+    "case_id": "d041",
+    "expected": "NO",
+    "reason": "Jurisdiction alone does not identify a source or unit."
+  },
+  {
+    "case_id": "d042",
+    "expected": "YES",
+    "reason": "Explicit number counts, including when equal to source section identity."
+  },
+  {
+    "case_id": "d043",
+    "expected": "NO",
+    "reason": "Local context explicitly makes Act a private document."
+  },
+  {
+    "case_id": "d044",
+    "expected": "YES",
+    "reason": "A definite self pointer remains despite other damaged text."
+  }
+]

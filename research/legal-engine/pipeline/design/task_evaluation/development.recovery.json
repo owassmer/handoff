@@ -1,0 +1,406 @@
+{
+  "status": "development preparation only; no model calls",
+  "recovery_pairs": [
+    {
+      "id": "r01",
+      "task": "definition_present",
+      "kind": "documented_preparation_recovery_from_saved_primary_source",
+      "initial_state": {
+        "passage": "(1) Reasonable costs actually incurred, or the reasonable value of labor actually provided, or both, in removing the personal property from its original location to the place of storage, including disassembly and\ntransportation.\n"
+      },
+      "initial_sources": {
+        "passage": {
+          "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1965.txt",
+          "sha256": "9d6628669c233d60147eab4e163a752ffaed6ad34fb9d7a4b8e8a5c0557f3375",
+          "start": 3181,
+          "end": 3410
+        }
+      },
+      "missing_input": "The list item alone lacks the definitional lead-in and storage-cost qualification.",
+      "retrieval": {
+        "method": "Read CIV_1965.txt subdivision (b), including its lead-in and both items.",
+        "returned_sources": {
+          "passage": {
+            "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1965.txt",
+            "sha256": "9d6628669c233d60147eab4e163a752ffaed6ad34fb9d7a4b8e8a5c0557f3375",
+            "start": 2987,
+            "end": 3577
+          }
+        },
+        "additional_sources": {}
+      },
+      "completed_prepared_case_id": "d004",
+      "completion": "The complete definition is prepared as d004.",
+      "initial_judgment": "NOT_DISPATCHED; missing context is not NO"
+    },
+    {
+      "id": "r02",
+      "task": "candidate_term_use",
+      "kind": "documented_preparation_recovery_from_saved_primary_source",
+      "initial_state": {
+        "term": "Act",
+        "use_expression": "section 918 of the Act",
+        "use_passage": "(a) Enforcement by Federal agencies. Compliance with this part is enforced in accordance with section 918 of the Act."
+      },
+      "initial_sources": {
+        "use_passage": {
+          "path": "register/texts/US_12CFR1005/1005.13.txt",
+          "sha256": "d17b7b12dc61fe9d85221b7bceab9e9f969c0d1c2500aa86b2493d925e64ac94",
+          "start": 340,
+          "end": 457
+        }
+      },
+      "missing_input": "The meaning was an unresolved named-term reference before retrieving the candidate definition.",
+      "retrieval": {
+        "method": "Read saved 12 CFR1005.2(c), preserving the explicit statute assignment.",
+        "returned_sources": {
+          "definition_passage": {
+            "path": "register/texts/US_12CFR1005/1005.2.txt",
+            "sha256": "630951e4dd80c07fae845b9f2fca12eec8788e508a1ad67be3784b0afd8b0a89",
+            "start": 4131,
+            "end": 4253
+          },
+          "use_passage": {
+            "path": "register/texts/US_12CFR1005/1005.13.txt",
+            "sha256": "d17b7b12dc61fe9d85221b7bceab9e9f969c0d1c2500aa86b2493d925e64ac94",
+            "start": 340,
+            "end": 457
+          }
+        },
+        "additional_sources": {}
+      },
+      "completed_prepared_case_id": "d009",
+      "completion": "The recovered definition and exact occurrence are prepared as d009.",
+      "initial_judgment": "NOT_DISPATCHED; missing context is not NO"
+    },
+    {
+      "id": "r03",
+      "task": "exception_to_requirement",
+      "kind": "documented_preparation_recovery_from_saved_primary_source",
+      "initial_state": {
+        "candidate": "(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling."
+      },
+      "initial_sources": {
+        "candidate": {
+          "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1987.txt",
+          "sha256": "4dc999fbc774738744c09cf63fdd8dc3a8d88508d615a9344045d60f7d1e8d32",
+          "start": 1949,
+          "end": 2341
+        }
+      },
+      "missing_input": "Subdivision (a), the express relative referent, was missing from the initial excerpt.",
+      "retrieval": {
+        "method": "Follow subdivision (a) within saved CIV1987 and retrieve its complete release/payment rule.",
+        "returned_sources": {
+          "requirement": {
+            "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1987.txt",
+            "sha256": "4dc999fbc774738744c09cf63fdd8dc3a8d88508d615a9344045d60f7d1e8d32",
+            "start": 1372,
+            "end": 1546
+          },
+          "candidate": {
+            "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1987.txt",
+            "sha256": "4dc999fbc774738744c09cf63fdd8dc3a8d88508d615a9344045d60f7d1e8d32",
+            "start": 1949,
+            "end": 2341
+          },
+          "context": {
+            "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1987.txt",
+            "sha256": "4dc999fbc774738744c09cf63fdd8dc3a8d88508d615a9344045d60f7d1e8d32",
+            "start": 1171,
+            "end": 1546
+          }
+        },
+        "additional_sources": {}
+      },
+      "completed_prepared_case_id": "d017",
+      "completion": "The candidate and requirement are jointly prepared as d017.",
+      "initial_judgment": "NOT_DISPATCHED; missing context is not NO"
+    },
+    {
+      "id": "r04",
+      "task": "changes_deadline",
+      "kind": "documented_preparation_recovery_from_saved_primary_source",
+      "initial_state": {
+        "candidate": "(3) Extension of time periods. The time periods in paragraphs (c)(1) and (c)(2) of this section are extended as follows:\n(i) The applicable time is 20 business days in place of 10 business days under paragraphs (c)(1) and (2) of this section if the notice of error involves an electronic fund transfer to or from the account within 30 days after the first deposit to the account was made."
+      },
+      "initial_sources": {
+        "candidate": {
+          "path": "register/texts/US_12CFR1005/1005.11.txt",
+          "sha256": "c21ffbf299b1873dce67f16c8322babf96d88958c0f5662ba95ed3c859450eb6",
+          "start": 5025,
+          "end": 5413
+        }
+      },
+      "missing_input": "The isolated extension mentions (c)(1) but does not identify that the selected reporting duty uses three rather than ten days.",
+      "retrieval": {
+        "method": "Read full 1005.11(c)(1) and recover the exact reporting sentence as requirement with surrounding context.",
+        "returned_sources": {
+          "requirement": {
+            "path": "register/texts/US_12CFR1005/1005.11.txt",
+            "sha256": "c21ffbf299b1873dce67f16c8322babf96d88958c0f5662ba95ed3c859450eb6",
+            "start": 3177,
+            "end": 3296
+          },
+          "candidate": {
+            "path": "register/texts/US_12CFR1005/1005.11.txt",
+            "sha256": "c21ffbf299b1873dce67f16c8322babf96d88958c0f5662ba95ed3c859450eb6",
+            "start": 5025,
+            "end": 5413
+          },
+          "context": {
+            "path": "register/texts/US_12CFR1005/1005.11.txt",
+            "sha256": "c21ffbf299b1873dce67f16c8322babf96d88958c0f5662ba95ed3c859450eb6",
+            "start": 2907,
+            "end": 3402
+          }
+        },
+        "additional_sources": {}
+      },
+      "completed_prepared_case_id": "d029",
+      "completion": "The recovered relation is prepared as d029; the candidate affects another duration.",
+      "initial_judgment": "NOT_DISPATCHED; missing context is not NO"
+    },
+    {
+      "id": "r05",
+      "task": "candidate_meaning",
+      "kind": "documented_preparation_recovery_from_saved_primary_source",
+      "initial_state": {
+        "term": "Tenant",
+        "use_expression": "Tenant shall mean",
+        "use_passage": "(f) Tenant shall mean the adult person (or persons) (other than a live-in aide):\n"
+      },
+      "initial_sources": {
+        "use_passage": {
+          "path": "sources/US_24CFR_966.53.txt",
+          "sha256": "c6514c54a4aed70ce9d75c5a732a4b7133315b6ce1c4daf1d17cd80274e8fd02",
+          "start": 2089,
+          "end": 2170
+        }
+      },
+      "missing_input": "The truncated lead-in omits the lessee-versus-remaining-head alternatives needed to distinguish offered meanings.",
+      "retrieval": {
+        "method": "Read the complete 24 CFR966.53(f) definition and its two subparagraphs.",
+        "returned_sources": {
+          "use_passage": {
+            "path": "sources/US_24CFR_966.53.txt",
+            "sha256": "c6514c54a4aed70ce9d75c5a732a4b7133315b6ce1c4daf1d17cd80274e8fd02",
+            "start": 2089,
+            "end": 2441
+          }
+        },
+        "additional_sources": {}
+      },
+      "completed_prepared_case_id": "d038",
+      "completion": "The complete occurrence context and distinct candidates are prepared as d038.",
+      "initial_judgment": "NOT_DISPATCHED; missing context is not NO",
+      "criteria": {
+        "A": "Every resident including live-in aides",
+        "B": "The adult lessee resident or qualifying remaining household head, excluding a live-in aide",
+        "NONE": "Neither offered meaning fits"
+      }
+    },
+    {
+      "id": "r06",
+      "task": "supports_claim",
+      "kind": "documented_preparation_recovery_from_saved_primary_source",
+      "initial_state": {
+        "claim": "For the specified transfer within thirty days after the first deposit, the otherwise applicable ten-business-day period under (c)(1) and (c)(2) becomes twenty business days.",
+        "text": "(i) The applicable time is 20 business days in place of 10 business days under paragraphs (c)(1) and (2) of this section"
+      },
+      "initial_sources": {
+        "text": {
+          "path": "register/texts/US_12CFR1005/1005.11.txt",
+          "sha256": "c21ffbf299b1873dce67f16c8322babf96d88958c0f5662ba95ed3c859450eb6",
+          "start": 5146,
+          "end": 5266
+        }
+      },
+      "missing_input": "The truncated temporal statement lacks the condition limiting the twenty-day rule.",
+      "retrieval": {
+        "method": "Read complete 1005.11(c)(3) lead-in and (i), including transfer timing condition.",
+        "returned_sources": {
+          "text": {
+            "path": "register/texts/US_12CFR1005/1005.11.txt",
+            "sha256": "c21ffbf299b1873dce67f16c8322babf96d88958c0f5662ba95ed3c859450eb6",
+            "start": 5025,
+            "end": 5413
+          }
+        },
+        "additional_sources": {}
+      },
+      "completed_prepared_case_id": "d047",
+      "completion": "The qualified proposition and complete evidence are prepared as d047.",
+      "initial_judgment": "NOT_DISPATCHED; missing context is not NO"
+    },
+    {
+      "id": "r07",
+      "task": "definition_present",
+      "kind": "post_recognition_incorporated_definition_recovery",
+      "completed_prepared_case_id": "d002",
+      "missing_input": "1005.2(g) adopts a definition located in 1005.3; it does not itself supply the meaning.",
+      "retrieval": {
+        "method": "Read saved 1005.3(b) and (c), including check-based transfers and all express exclusions.",
+        "returned_sources": {
+          "incorporated_definition": {
+            "path": "register/texts/US_12CFR1005/1005.3.txt",
+            "sha256": "9f31197c6e8084c73c6c130f1db7ff75d197492ff8f5fc2304eee90fd6b8d9d3",
+            "start": 923,
+            "end": 7911
+          }
+        }
+      },
+      "recovered_text": "(b) Electronic fund transfer—(1) Definition. The term “electronic fund transfer” means any transfer of funds that is initiated through an electronic terminal, telephone, computer, or magnetic tape for the purpose of ordering, instructing, or authorizing a financial institution to debit or credit a consumer's account. The term includes, but is not limited to:\n(i) Point-of-sale transfers;\n(ii) Automated teller machine transfers;\n(iii) Direct deposits or withdrawals of funds;\n(iv) Transfers initiated by telephone; and\n(v) Transfers resulting from debit card transactions, whether or not initiated through an electronic terminal.\n(2) Electronic fund transfer using information from a check. (i) This part applies where a check, draft, or similar paper instrument is used as a source of information to initiate a one-time electronic fund transfer from a consumer's account. The consumer must authorize the transfer.\n(ii) The person initiating an electronic fund transfer using the consumer's check as a source of information for the transfer must provide a notice that the transaction will or may be processed as an electronic fund transfer, and obtain a consumer's authorization for each transfer. A consumer authorizes a one-time electronic fund transfer (in providing a check to a merchant or other payee for the MICR encoding, that is, the routing number of the financial institution, the consumer's account number and the serial number) when the consumer receives notice and goes forward with the underlying transaction. For point-of-sale transfers, the notice must be posted in a prominent and conspicuous location, and a copy thereof, or a substantially similar notice, must be provided to the consumer at the time of the transaction.\n(iii) A person may provide notices that are substantially similar to those set forth in appendix A-6 to comply with the requirements of this paragraph (b)(2).\n(3) Collection of returned item fees via electronic fund transfer—(i) General. The person initiating an electronic fund transfer to collect a fee for the return of an electronic fund transfer or a check that is unpaid, including due to insufficient or uncollected funds in the consumer's account, must obtain the consumer's authorization for each transfer. A consumer authorizes a one-time electronic fund transfer from his or her account to pay the fee for the returned item or transfer if the person collecting the fee provides notice to the consumer stating that the person may electronically collect the fee, and the consumer goes forward with the underlying transaction. The notice must state that the fee will be collected by means of an electronic fund transfer from the consumer's account if the payment is returned unpaid and must disclose the dollar amount of the fee. If the fee may vary due to the amount of the transaction or due to other factors, then, except as otherwise provided in paragraph (b)(3)(ii) of this section, the person collecting the fee may disclose, in place of the dollar amount of the fee, an explanation of how the fee will be determined.\n(ii) Point-of-sale transactions. If a fee for an electronic fund transfer or check returned unpaid may be collected electronically in connection with a point-of-sale transaction, the person initiating an electronic fund transfer to collect the fee must post the notice described in paragraph (b)(3)(i) of this section in a prominent and conspicuous location. The person also must either provide the consumer with a copy of the posted notice (or a substantially similar notice) at the time of the transaction, or mail the copy (or a substantially similar notice) to the consumer's address as soon as reasonably practicable after the person initiates the electronic fund transfer to collect the fee. If the amount of the fee may vary due to the amount of the transaction or due to other factors, the posted notice may explain how the fee will be determined, but the notice provided to the consumer must state the dollar amount of the fee if the amount can be calculated at the time the notice is provided or mailed to the consumer.\n(c) Exclusions from coverage. The term “electronic fund transfer” does not include:\n(1) Checks. Any transfer of funds originated by check, draft, or similar paper instrument; or any payment made by check, draft, or similar paper instrument at an electronic terminal.\n(2) Check guarantee or authorization. Any transfer of funds that guarantees payment or authorizes acceptance of a check, draft, or similar paper instrument but that does not directly result in a debit or credit to a consumer's account.\n(3) Wire or other similar transfers. Any transfer of funds through Fedwire or through a similar wire transfer system that is used primarily for transfers between financial institutions or between businesses.\n(4) Securities and commodities transfers. Any transfer of funds the primary purpose of which is the purchase or sale of a security or commodity, if the security or commodity is:\n(i) Regulated by the Securities and Exchange Commission or the Commodity Futures Trading Commission;\n(ii) Purchased or sold through a broker-dealer regulated by the Securities and Exchange Commission or through a futures commission merchant regulated by the Commodity Futures Trading Commission; or\n(iii) Held in book-entry form by a Federal Reserve Bank or Federal agency.\n(5) Automatic transfers by account-holding institution. Any transfer of funds under an agreement between a consumer and a financial institution which provides that the institution will initiate individual transfers without a specific request from the consumer:\n(i) Between a consumer's accounts within the financial institution;\n(ii) From a consumer's account to an account of a member of the consumer's family held in the same financial institution; or\n(iii) Between a consumer's account and an account of the financial institution, except that these transfers remain subject to § 1005.10(e) regarding compulsory use and sections 916 and 917 of the Act regarding civil and criminal liability.\n(6) Telephone-initiated transfers. Any transfer of funds that:\n(i) Is initiated by a telephone communication between a consumer and a financial institution making the transfer; and\n(ii) Does not take place under a telephone bill-payment or other written plan in which periodic or recurring transfers are contemplated.\n(7) Small institutions. Any preauthorized transfer to or from an account if the assets of the account-holding financial institution were $100 million or less on the preceding December 31. If assets of the account-holding institution subsequently exceed $100 million, the institution's exemption for preauthorized transfers terminates one year from the end of the calendar year in which the assets exceed $100 million. Preauthorized transfers exempt under this paragraph (c)(7) remain subject to § 1005.10(e) regarding compulsory use and sections 916 and 917 of the Act regarding civil and criminal liability.",
+      "completion": "Recovered electronic-fund-transfer definition includes electronically initiated directions to debit or credit an account, qualified by the complete (b) provisions and (c) exclusions. Recognition YES is not represented as completed meaning extraction until this recovery."
+    }
+  ],
+  "source_registry": [
+    {
+      "path": "pipeline/design/coverage_tracking/fresh_research/sources/CCP_12a.txt",
+      "sha256": "e9c8fb6e2214579543c8c5e128bf2a22e636ba4d89cf6dc2f6c98eee2184b341",
+      "capture_provenance": "Saved primary source capture reused for development; no new network capture claimed.",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12a.&lawCode=CCP",
+      "capture_manifest": "pipeline/design/coverage_tracking/fresh_research/retrieval_manifest.json"
+    },
+    {
+      "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_10.txt",
+      "sha256": "46cfdd20ea397be0577190233e7f8cb6a9a459f93f5fa9b11694740b5d017e96",
+      "capture_provenance": "Saved primary source capture reused for development; no new network capture claimed.",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=10.&lawCode=CIV",
+      "capture_manifest": "pipeline/design/coverage_tracking/fresh_research/retrieval_manifest.json"
+    },
+    {
+      "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1965.txt",
+      "sha256": "9d6628669c233d60147eab4e163a752ffaed6ad34fb9d7a4b8e8a5c0557f3375",
+      "capture_provenance": "Saved primary source capture reused for development; no new network capture claimed.",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1965.&lawCode=CIV",
+      "capture_manifest": "pipeline/design/coverage_tracking/fresh_research/retrieval_manifest.json"
+    },
+    {
+      "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1980.txt",
+      "sha256": "4d96366e899b45063c589a04dd795c5cfaa043f64f2e5f7a095857fa52bb98ea",
+      "capture_provenance": "Saved primary source capture reused for development; no new network capture claimed.",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1980.&lawCode=CIV",
+      "capture_manifest": "pipeline/design/coverage_tracking/fresh_research/retrieval_manifest.json"
+    },
+    {
+      "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1987.txt",
+      "sha256": "4dc999fbc774738744c09cf63fdd8dc3a8d88508d615a9344045d60f7d1e8d32",
+      "capture_provenance": "Saved primary source capture reused for development; no new network capture claimed.",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1987.&lawCode=CIV",
+      "capture_manifest": "pipeline/design/coverage_tracking/fresh_research/retrieval_manifest.json"
+    },
+    {
+      "path": "register/texts/US_12CFR1005/1005.11.txt",
+      "sha256": "c21ffbf299b1873dce67f16c8322babf96d88958c0f5662ba95ed3c859450eb6",
+      "capture_provenance": "Saved primary source capture reused for development; no new network capture claimed.",
+      "source_url": "https://www.ecfr.gov/current/title-12/part-1005#p-1005.11",
+      "capture_header": "SOURCE: https://www.ecfr.gov/current/title-12/part-1005#p-1005.11\nAPI: https://www.ecfr.gov/api/versioner/v1/full/2026-09-25/title-12.xml?part=1005\nRETRIEVED: 2026-09-30 from the eCFR versioner API (up to date as of 2026-09-25); text extracted mechanically by register/tools/ecfr.py"
+    },
+    {
+      "path": "register/texts/US_12CFR1005/1005.13.txt",
+      "sha256": "d17b7b12dc61fe9d85221b7bceab9e9f969c0d1c2500aa86b2493d925e64ac94",
+      "capture_provenance": "Saved primary source capture reused for development; no new network capture claimed.",
+      "source_url": "https://www.ecfr.gov/current/title-12/part-1005#p-1005.13",
+      "capture_header": "SOURCE: https://www.ecfr.gov/current/title-12/part-1005#p-1005.13\nAPI: https://www.ecfr.gov/api/versioner/v1/full/2026-09-25/title-12.xml?part=1005\nRETRIEVED: 2026-09-30 from the eCFR versioner API (up to date as of 2026-09-25); text extracted mechanically by register/tools/ecfr.py"
+    },
+    {
+      "path": "register/texts/US_12CFR1005/1005.2.txt",
+      "sha256": "630951e4dd80c07fae845b9f2fca12eec8788e508a1ad67be3784b0afd8b0a89",
+      "capture_provenance": "Saved primary source capture reused for development; no new network capture claimed.",
+      "source_url": "https://www.ecfr.gov/current/title-12/part-1005#p-1005.2",
+      "capture_header": "SOURCE: https://www.ecfr.gov/current/title-12/part-1005#p-1005.2\nAPI: https://www.ecfr.gov/api/versioner/v1/full/2026-09-25/title-12.xml?part=1005\nRETRIEVED: 2026-09-30 from the eCFR versioner API (up to date as of 2026-09-25); text extracted mechanically by register/tools/ecfr.py"
+    },
+    {
+      "path": "register/texts/US_12CFR1005/1005.3.txt",
+      "sha256": "9f31197c6e8084c73c6c130f1db7ff75d197492ff8f5fc2304eee90fd6b8d9d3",
+      "capture_provenance": "Saved primary source capture reused for development; no new network capture claimed.",
+      "source_url": "https://www.ecfr.gov/current/title-12/part-1005#p-1005.3",
+      "capture_header": "SOURCE: https://www.ecfr.gov/current/title-12/part-1005#p-1005.3\nAPI: https://www.ecfr.gov/api/versioner/v1/full/2026-09-25/title-12.xml?part=1005\nRETRIEVED: 2026-09-30 from the eCFR versioner API (up to date as of 2026-09-25); text extracted mechanically by register/tools/ecfr.py"
+    },
+    {
+      "path": "register/texts/US_12CFR1005/1005.4.txt",
+      "sha256": "dd2392c038d9f6b43647f5818111460e66efd8231b4f5aeb3f053988aa67b699",
+      "capture_provenance": "Saved primary source capture reused for development; no new network capture claimed.",
+      "source_url": "https://www.ecfr.gov/current/title-12/part-1005#p-1005.4",
+      "capture_header": "SOURCE: https://www.ecfr.gov/current/title-12/part-1005#p-1005.4\nAPI: https://www.ecfr.gov/api/versioner/v1/full/2026-09-25/title-12.xml?part=1005\nRETRIEVED: 2026-09-30 from the eCFR versioner API (up to date as of 2026-09-25); text extracted mechanically by register/tools/ecfr.py"
+    },
+    {
+      "path": "sources/US_15USC_1692g.txt",
+      "sha256": "f51064f6aff7482dce354f327bbd084f0e7c7b3bdb090c204a79c55138c8204e",
+      "capture_provenance": "Saved primary source capture reused for development; no new network capture claimed.",
+      "source_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section1692g&num=0&edition=prelim",
+      "capture_header": "Source: https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section1692g&num=0&edition=prelim\nFetched: 2026-09-28 (curl; HTML stripped mechanically)"
+    },
+    {
+      "path": "sources/US_24CFR_966.53.txt",
+      "sha256": "c6514c54a4aed70ce9d75c5a732a4b7133315b6ce1c4daf1d17cd80274e8fd02",
+      "capture_provenance": "Saved primary source capture reused for development; no new network capture claimed.",
+      "source_url": "https://www.ecfr.gov/current/title-24/section-966.53",
+      "capture_header": "Source: https://www.ecfr.gov/current/title-24/section-966.53\n(via https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-24?part=966&section=966.53)\nFetched: 2026-09-28 (curl; HTML stripped mechanically)"
+    },
+    {
+      "path": "sources/US_CASE_Henson_v_Santander_2017.txt",
+      "sha256": "0b68b4963638cfcd920170d9b7fb56565984b4b921fe4e1beae0d35bd7a34259",
+      "capture_provenance": "Saved primary source capture reused for development; no new network capture claimed.",
+      "source_url": "https://www.supremecourt.gov/opinions/16pdf/16-349_c07d.pdf",
+      "capture_header": "Source: https://www.supremecourt.gov/opinions/16pdf/16-349_c07d.pdf (Henson v. Santander Consumer USA Inc., 582 U.S. 79 (2017))\nFetched: 2026-09-28 (curl; pdftotext)"
+    }
+  ],
+  "coverage": {
+    "task_counts": {
+      "definition_present": 8,
+      "candidate_term_use": 8,
+      "exception_to_requirement": 8,
+      "changes_deadline": 8,
+      "candidate_meaning": 8,
+      "supports_claim": 8
+    },
+    "family_counts": {
+      "statutory": 20,
+      "regulatory": 22,
+      "judicial": 6
+    },
+    "source_clusters": [
+      "CA_CIV_abandoned_property",
+      "CA_CIV_property_surrender",
+      "CA_CIV_time_computation",
+      "US_FDCPA_validation",
+      "US_HUD_public_housing_grievance",
+      "US_Henson_holding",
+      "US_Henson_scope",
+      "US_Henson_tense_argument",
+      "US_RegE_Act",
+      "US_RegE_definitions",
+      "US_RegE_disclosure",
+      "US_RegE_investigation",
+      "US_RegE_investigation_extension",
+      "US_RegE_notice",
+      "US_RegE_provisional_credit",
+      "US_RegE_records"
+    ],
+    "limitations": [
+      "Initial increment only; expansion supplies additional families and branches.",
+      "Shared provisions and instruments are explicitly clustered; these 48 judgments are not 48 independent sources.",
+      "No administrative interpretation is included in this first increment.",
+      "The selected statutory and regulatory passages use captured versions; no claim of automatic current-law validation is made by a judgment."
+    ]
+  },
+  "preparation_corrections": [
+    {
+      "reason": "One selected requirement per relation, with full operative paragraph separately bound as context. Added Act definition for Choice.",
+      "cases": [
+        "d017",
+        "d019",
+        "d024",
+        "d025",
+        "d026",
+        "d030",
+        "d031",
+        "d033"
+      ],
+      "history": "history/initial48_before_independent_preparation_corrections",
+      "labels_changed": false
+    }
+  ]
+}

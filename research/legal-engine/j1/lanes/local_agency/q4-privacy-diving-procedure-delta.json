@@ -1,0 +1,833 @@
+{
+  "integration": "Add only new final-package units and version records; preserve newer canonical fields.",
+  "instruments": [
+    {
+      "id": "CA:CCR1",
+      "jurisdiction": "CA",
+      "name": "California Code of Regulations, Title 1",
+      "level": "regulation",
+      "functions": [
+        "general_construction",
+        "courts_procedure"
+      ],
+      "toc_source_url": "https://oal.ca.gov/publications/ccr/",
+      "adapter": "cornell_ccr",
+      "units_in_scope": [
+        {
+          "unit": "Division 1 - Office of Administrative Law",
+          "heading": "Division 1 - Office of Administrative Law (Chapter 1 to 2)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-1/division-1:",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-0.txt",
+          "toc_retrieval": "failed; publisher-linked URL resolved"
+        },
+        {
+          "unit": "Division 2 - Office of Administrative Hearings",
+          "heading": "Division 2 - Office of Administrative Hearings (Chapter 1 to 5)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-1/division-2",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-0.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Amendment document 2026-0126-02S",
+          "heading": "eSubmissions Portal",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2026-0126-02S",
+              "heading": "eSubmissions Portal",
+              "ref": "https://oal.ca.gov/wp-content/uploads/sites/166/2026/02/Final-Remediated-eSub-Portal-Final-Text.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "Complete approved amendment package, internally subdivided against retained parent units in J2"
+          ],
+          "version_record_index": 0,
+          "document_role": "Final amendment or approval package; preserve currentness evidence separately from operative text when package contains only approval notice",
+          "legal_status": "See linked version record; do not infer operation solely from publication",
+          "reason": "Executable acquisition counterpart to selected version record; whole document is not a single legal section.",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Final package - OAL resubmission and withdrawal procedure",
+          "heading": "OAL resubmission and withdrawal procedure",
+          "adapter": "generic",
+          "source_unit_kind": "document",
+          "internal_units_in_scope": [
+            "84,85,86,88"
+          ],
+          "reason": "General rulemaking provenance and withdrawn-file treatment; final text identified. Filing date from Q4 index; operative date not inferred.",
+          "section_list": [
+            {
+              "number": "CCR1-oal-resubmission-and-withdrawal-procedure",
+              "heading": "OAL resubmission and withdrawal procedure",
+              "ref": "https://oal.ca.gov/wp-content/uploads/sites/166/2026/01/Final-Regulation-Text-OAL-file-no.-2025-1030-03S-1.pdf",
+              "source_unit_kind": "document"
+            }
+          ]
+        }
+      ],
+      "units_out": [
+        {
+          "unit": "Division 3 - Department of Finance",
+          "heading": "Division 3 - Department of Finance (Chapter 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-1",
+          "reason": "Division 3 - Department of Finance governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        }
+      ],
+      "acquisition": {
+        "text_adapter": "cornell_ccr",
+        "enumeration": "Traverse the selected mirror division/chapter descendants and retain actual linked leaf references.",
+        "source_authority": "mirror",
+        "official_reconciliation": "Official CCR and issuing-agency enacted/amendment sources determine the authoritative version. Mirror text alone cannot complete J2."
+      },
+      "toc_mirror_url": "https://www.law.cornell.edu/regulations/california/title-1",
+      "source_capture": "j1/sources/ccr-title-1.txt",
+      "currentness_note": "LII supplies the browse tree; official CCR and issuing-agency adoption texts determine legal version. LII quarterly update is not treated as current legal authority.",
+      "version_records": [
+        {
+          "oal_file": "2026-0126-02S",
+          "name": "eSubmissions Portal",
+          "effective_from": "2026-04-01",
+          "source_url": "https://oal.ca.gov/wp-content/uploads/sites/166/2026/02/Final-Remediated-eSub-Portal-Final-Text.pdf",
+          "selected_unit": "Complete approved amendment package, internally subdivided against retained parent units in J2",
+          "reason": "General rulemaking filing procedure supports authoritative regulatory provenance; OAL title4 label appears erroneous.",
+          "source_scope_excerpt": "2026-0126-02S  | eSubmissions Portal  | Title 4\nL70: Amend:\nL71: 3, 5, 6, 6.5, 20, 50, 100  | February 4, 2026  | \ue200cite\ue20224\u2020",
+          "acquisition_note": "Exact publisher final target established by official OAL approved-document link. Mechanical retrieval failures do not leave an unknown J1 identity.",
+          "source_status_note": "OALtableTitle4 label inconsistent with generalOALTitle1rulemaking; actualpublishedfinaltext governs titleidentity.",
+          "proposal_source": "regulatory/quarterly-final-targets.json"
+        },
+        {
+          "name": "OAL resubmission and withdrawal procedure",
+          "filed_on": "2025-12-16",
+          "selected_unit": "84,85,86,88",
+          "source_url": "https://oal.ca.gov/wp-content/uploads/sites/166/2026/01/Final-Regulation-Text-OAL-file-no.-2025-1030-03S-1.pdf",
+          "legal_status": "Official final text identified",
+          "reason": "General rulemaking provenance and withdrawn-file treatment; final text identified. Filing date from Q4 index; operative date not inferred.",
+          "evidence": "j1/lanes/local_agency/sources/q4-privacy-diving.txt"
+        }
+      ]
+    },
+    {
+      "id": "CA:CCR8",
+      "jurisdiction": "CA",
+      "name": "California Code of Regulations, Title 8",
+      "level": "regulation",
+      "functions": [
+        "preconditions",
+        "payments",
+        "work_standards",
+        "provider_contracts"
+      ],
+      "toc_source_url": "https://oal.ca.gov/publications/ccr/",
+      "adapter": "cornell_ccr",
+      "units_in_scope": [
+        {
+          "unit": "Division 1 - Department of Industrial Relations",
+          "heading": "Division 1 - Department of Industrial Relations (Chapter 1 to 8)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-8/division-1",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-20.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Approved amendment Proper fit PPE",
+          "heading": "Proper fit PPE",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR8-approved-1",
+              "heading": "Proper fit PPE \u2014 OAL approved text",
+              "ref": "https://www.dir.ca.gov/OSHSB/documents/Proper-Fit-PPE-Horcher-txtOALapproved.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "version_record_index": 0,
+          "internal_units_in_scope": [
+            "1514"
+          ],
+          "legal_status": "OAL approved text; effective date retained in version record",
+          "acquisition_note": "Exact approved text linked by agency action page",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Approved amendment Lead",
+          "heading": "Lead",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR8-approved-2",
+              "heading": "Lead \u2014 OAL approved text",
+              "ref": "https://www.dir.ca.gov/oshsb/documents/Lead-apprvdtxt.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "version_record_index": 1,
+          "internal_units_in_scope": [
+            "1532.1 5155 5198"
+          ],
+          "legal_status": "OAL approved text; effective date retained in version record",
+          "acquisition_note": "Exact approved text linked by agency action page",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Approved amendment Cone and bar barricades",
+          "heading": "Cone and bar barricades",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR8-approved-3",
+              "heading": "Cone and bar barricades \u2014 OAL approved text",
+              "ref": "https://www.dir.ca.gov/OSHSB/documents/Cone-and-Bar-Barricades-apprvdtxt.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "version_record_index": 2,
+          "internal_units_in_scope": [
+            "1635"
+          ],
+          "legal_status": "OAL approved text; effective date retained in version record",
+          "acquisition_note": "Exact approved text linked by agency action page",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Approved amendment Residential fall protection",
+          "heading": "Residential fall protection",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR8-approved-4",
+              "heading": "Residential fall protection \u2014 OAL approved text",
+              "ref": "https://www.dir.ca.gov/oshsb/documents/Fall-Protection-in-Residential-Construction-apprvdtxt.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "version_record_index": 3,
+          "internal_units_in_scope": [
+            "1671.1 1716.2 1730 1731"
+          ],
+          "legal_status": "OAL approved text; effective date retained in version record",
+          "acquisition_note": "Exact approved text linked by agency action page",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Approved amendment Confined spaces construction",
+          "heading": "Confined spaces construction",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR8-approved-5",
+              "heading": "Confined spaces construction \u2014 OAL approved text",
+              "ref": "https://www.dir.ca.gov/OSHSB/documents/Confined-Spaces-in-Construction-OAL-Changes-Text.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "version_record_index": 4,
+          "internal_units_in_scope": [
+            "1951 1952 1953 1955 1956 1960 5156"
+          ],
+          "legal_status": "OAL approved text; effective date retained in version record",
+          "acquisition_note": "Exact approved text linked by agency action page",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Approved amendment Indoor heat",
+          "heading": "Indoor heat",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR8-approved-6",
+              "heading": "Indoor heat \u2014 OAL approved text",
+              "ref": "https://www.dir.ca.gov/OSHSB/documents/Indoor-Heat-apprvdtxt.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "version_record_index": 5,
+          "internal_units_in_scope": [
+            "3396"
+          ],
+          "legal_status": "OAL approved text; effective date retained in version record",
+          "acquisition_note": "Exact approved text linked by agency action page",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Approved amendment Respirator fit testing",
+          "heading": "Respirator fit testing",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR8-approved-7",
+              "heading": "Respirator fit testing \u2014 OAL approved text",
+              "ref": "https://www.dir.ca.gov/OSHSB/documents/Fit-Testing-Procedures-Mandatory-Horcher-apprvdtxt.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "version_record_index": 6,
+          "internal_units_in_scope": [
+            "5144 Appendix A"
+          ],
+          "legal_status": "OAL approved text; effective date retained in version record",
+          "acquisition_note": "Exact approved text linked by agency action page",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Approved amendment Respirable crystalline silica nonemergency",
+          "heading": "Respirable crystalline silica nonemergency",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR8-approved-8",
+              "heading": "Respirable crystalline silica nonemergency \u2014 OAL approved text",
+              "ref": "https://www.dir.ca.gov/oshsb/documents/Respirable-Crystalline-Silica-Non-Emergency-apprvdtxt.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "version_record_index": 7,
+          "internal_units_in_scope": [
+            "5204"
+          ],
+          "legal_status": "OAL approved text; effective date retained in version record",
+          "acquisition_note": "Scanned silica approved text requires J2 OCR; official linked identity is established.",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Employer assessment and fraud surcharge",
+          "heading": "Employer assessment and fraud surcharge",
+          "source_unit_kind": "document",
+          "version_record_index": 8,
+          "internal_units_in_scope": [
+            "15600",
+            "15601.5",
+            "15602",
+            "15603",
+            "15604",
+            "15605",
+            "15606",
+            "15606.1",
+            "15607",
+            "15608",
+            "15609",
+            "15611"
+          ],
+          "legal_status": "OAL filed and operative",
+          "section_list": [
+            {
+              "number": "CA-CCR8-Q4-2025-final",
+              "heading": "Employer assessment and fraud surcharge \u2014 final text",
+              "ref": "https://www.dir.ca.gov/ODRegulations/EmployerAssessmentFraudSurcharge/Text-Of-Regulations.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "adapter": "generic"
+        },
+        {
+          "unit": "Version source 2025-1107-02FP",
+          "heading": "MTUS shoulder, elbow, hand/wrist/forearm and traumatic brain injury update",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2025-1107-02FP",
+              "heading": "MTUS shoulder, elbow, hand/wrist/forearm and traumatic brain injury update",
+              "ref": "https://www.dir.ca.gov/dwc/DWCPropRegs/2025/MTUS-Evidence-Based-Update-August/Text-of-Regulations-Clean-Copy.docx",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "9792.23.2;9792.23.3;9792.23.4;9792.24.5"
+          ],
+          "reason": "Conditional directly employed worker injury/claims and employer or claims-administrator duties; clinical guidelines are incorporated dependencies, not general residential maintenance standards.",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Version source 2025-1114-01SR",
+          "heading": "Workers compensation utilization review",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2025-1114-01SR",
+              "heading": "Workers compensation utilization review",
+              "ref": "https://www.dir.ca.gov/dwc/DWCPropRegs/2024/Utilization-Review/Final/Text-of-Regulations-Clean.docx",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "Adopt9792.7.1,9792.9.7,.9.8;amend9767.6,9781,9785,9786,9792.6.1,.7,.8,.9.1-.9.6,.10.1-.10.6,.10.8,.11,.12,.13,.15,.27.1,.27.17"
+          ],
+          "reason": "Conditional directly employed worker injury/claims and employer or claims-administrator duties; clinical guidelines are incorporated dependencies, not general residential maintenance standards.",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Version source 2026-0219-01N",
+          "heading": "Utilization review incorporated forms correction",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2026-0219-01N",
+              "heading": "Utilization review incorporated forms correction",
+              "ref": "https://www.dir.ca.gov/dwc/DWCPropRegs/2024/Utilization-Review/Final/Notice-of-Approval-section100.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "9792.7.1;9792.10.2;FormsIMR andUR-01"
+          ],
+          "reason": "Conditional directly employed worker injury/claims and employer or claims-administrator duties; clinical guidelines are incorporated dependencies, not general residential maintenance standards.",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Version source 2025-1107-02FP-filing",
+          "heading": "MTUS filing notice",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2025-1107-02FP-filing",
+              "heading": "MTUS filing notice",
+              "ref": "https://www.dir.ca.gov/dwc/DWCPropRegs/2025/MTUS-Evidence-Based-Update-August/Secretary-State-File-Print.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "Complete filing notice; separate evidence from operative text"
+          ],
+          "reason": "Conditional directly employed worker injury/claims and employer or claims-administrator duties; clinical guidelines are incorporated dependencies, not general residential maintenance standards.",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Version source 2025-1114-01SR-approval",
+          "heading": "Utilization review approval",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2025-1114-01SR-approval",
+              "heading": "Utilization review approval",
+              "ref": "https://www.dir.ca.gov/dwc/DWCPropRegs/2024/Utilization-Review/Final/Notice-of-Approval.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "Complete approval and exact affected-section inventory"
+          ],
+          "reason": "Conditional directly employed worker injury/claims and employer or claims-administrator duties; clinical guidelines are incorporated dependencies, not general residential maintenance standards.",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Version source DWC-IMR-2026",
+          "heading": "Independent Medical Review form effective4/1/26",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "DWC-IMR-2026",
+              "heading": "Independent Medical Review form effective4/1/26",
+              "ref": "https://www.dir.ca.gov/dwc/DWCPropRegs/IMR/FinalRegulations/IMR_Form_Application.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "Complete form and instructions"
+          ],
+          "reason": "Conditional directly employed worker injury/claims and employer or claims-administrator duties; clinical guidelines are incorporated dependencies, not general residential maintenance standards.",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Version source DWC-UR01-2026",
+          "heading": "Utilization review plan application effective4/1/26",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "DWC-UR01-2026",
+              "heading": "Utilization review plan application effective4/1/26",
+              "ref": "https://www.dir.ca.gov/dwc/FORMS/UtilizationReview-01.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "Complete form and instructions"
+          ],
+          "reason": "Conditional directly employed worker injury/claims and employer or claims-administrator duties; clinical guidelines are incorporated dependencies, not general residential maintenance standards.",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Version source ACOEM-Shoulder-2025-07-14",
+          "heading": "ACOEM Shoulder incorporated guideline 2025-07-14",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "ACOEM-Shoulder-2025-07-14",
+              "heading": "ACOEM Shoulder incorporated guideline 2025-07-14",
+              "ref": "https://www.dir.ca.gov/dwc/DWCPropRegs/2025/MTUS-Evidence-Based-Update-August/Shoulder-Disorders-Guideline.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "Exact dated incorporated guideline; clinical material only under workers-compensation trigger. Full text acquisition/subdivision remainsJ2."
+          ],
+          "reason": "Conditional directly employed worker injury/claims and employer or claims-administrator duties; clinical guidelines are incorporated dependencies, not general residential maintenance standards.",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Version source ACOEM-Elbow-2025-07-14",
+          "heading": "ACOEM Elbow incorporated guideline 2025-07-14",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "ACOEM-Elbow-2025-07-14",
+              "heading": "ACOEM Elbow incorporated guideline 2025-07-14",
+              "ref": "https://www.dir.ca.gov/dwc/DWCPropRegs/2025/MTUS-Evidence-Based-Update-August/Elbow-Disorders-Guideline.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "Exact dated incorporated guideline; clinical material only under workers-compensation trigger. Full text acquisition/subdivision remainsJ2."
+          ],
+          "reason": "Conditional directly employed worker injury/claims and employer or claims-administrator duties; clinical guidelines are incorporated dependencies, not general residential maintenance standards.",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Version source ACOEM-Hand-Wrist-Forearm-2025-07-14",
+          "heading": "ACOEM Hand-Wrist-Forearm incorporated guideline 2025-07-14",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "ACOEM-Hand-Wrist-Forearm-2025-07-14",
+              "heading": "ACOEM Hand-Wrist-Forearm incorporated guideline 2025-07-14",
+              "ref": "https://www.dir.ca.gov/dwc/DWCPropRegs/2025/MTUS-Evidence-Based-Update-August/Hand-Wrist-Forearm-Disorders-Guideline.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "Exact dated incorporated guideline; clinical material only under workers-compensation trigger. Full text acquisition/subdivision remainsJ2."
+          ],
+          "reason": "Conditional directly employed worker injury/claims and employer or claims-administrator duties; clinical guidelines are incorporated dependencies, not general residential maintenance standards.",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Version source ACOEM-TBI-2025-10-07",
+          "heading": "ACOEM TBI incorporated guideline 2025-10-07",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "ACOEM-TBI-2025-10-07",
+              "heading": "ACOEM TBI incorporated guideline 2025-10-07",
+              "ref": "https://www.dir.ca.gov/dwc/DWCPropRegs/2025/MTUS-Evidence-Based-Update-August/1st-15-day-comment-period/Traumatic-Brain-Injury-Guideline.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "Exact dated incorporated guideline; clinical material only under workers-compensation trigger. Full text acquisition/subdivision remainsJ2."
+          ],
+          "reason": "Conditional directly employed worker injury/claims and employer or claims-administrator duties; clinical guidelines are incorporated dependencies, not general residential maintenance standards.",
+          "adapter": "generic"
+        },
+        {
+          "unit": "Final package - Diving operations",
+          "heading": "Diving operations",
+          "adapter": "generic",
+          "source_unit_kind": "document",
+          "internal_units_in_scope": [
+            "6050,6051,6052,6054,6056"
+          ],
+          "reason": "Conditional underwater repair/provider work; applies to covered diving operations, not ordinary pool use.",
+          "section_list": [
+            {
+              "number": "CCR8-diving-operations",
+              "heading": "Diving operations",
+              "ref": "https://www.dir.ca.gov/OSHSB/documents/Diving-Operations-OAL-Changes-Text.pdf",
+              "source_unit_kind": "document"
+            }
+          ]
+        }
+      ],
+      "units_out": [
+        {
+          "unit": "Division 2 - Agricultural Labor Relations Board",
+          "heading": "Division 2 - Agricultural Labor Relations Board (Chapter 1 to 12)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-8",
+          "reason": "Division 2 - Agricultural Labor Relations Board governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 3 - Public Employment Relations Board",
+          "heading": "Division 3 - Public Employment Relations Board (Chapter 1 to 10)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-8",
+          "reason": "Division 3 - Public Employment Relations Board governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        }
+      ],
+      "acquisition": {
+        "text_adapter": "cornell_ccr",
+        "enumeration": "Traverse the selected mirror division/chapter descendants and retain actual linked leaf references.",
+        "source_authority": "mirror",
+        "official_reconciliation": "Official CCR and issuing-agency enacted/amendment sources determine the authoritative version. Mirror text alone cannot complete J2."
+      },
+      "toc_mirror_url": "https://www.law.cornell.edu/regulations/california/title-8",
+      "source_capture": "j1/sources/ccr-title-8.txt",
+      "currentness_note": "LII supplies the browse tree; official CCR and issuing-agency adoption texts determine legal version. LII quarterly update is not treated as current legal authority.",
+      "version_records": [
+        {
+          "sections": "1514",
+          "name": "Proper fit PPE",
+          "effective_from": "2025-08-21",
+          "source_url": "https://www.dir.ca.gov/OSHSB/documents/Proper-Fit-PPE-Horcher-txtOALapproved.pdf",
+          "proposal_source": "regulatory/proposal.json",
+          "limitation": "Approved index dated July 2026 is not independently proof of absence of later actions; J2 should acquire current official sections and histories, not substitute redline proposals.",
+          "action_page_url": "https://www.dir.ca.gov/OSHSB/Proper-Fit-PPE-Horcher.html"
+        },
+        {
+          "sections": "1532.1 5155 5198",
+          "name": "Lead",
+          "effective_from": "2025-01-01",
+          "source_url": "https://www.dir.ca.gov/oshsb/documents/Lead-apprvdtxt.pdf",
+          "proposal_source": "regulatory/proposal.json",
+          "limitation": "Approved index dated July 2026 is not independently proof of absence of later actions; J2 should acquire current official sections and histories, not substitute redline proposals.",
+          "action_page_url": "https://www.dir.ca.gov/OSHSB/Lead.html"
+        },
+        {
+          "sections": "1635",
+          "name": "Cone and bar barricades",
+          "effective_from": "2025-10-01",
+          "source_url": "https://www.dir.ca.gov/OSHSB/documents/Cone-and-Bar-Barricades-apprvdtxt.pdf",
+          "proposal_source": "regulatory/proposal.json",
+          "limitation": "Approved index dated July 2026 is not independently proof of absence of later actions; J2 should acquire current official sections and histories, not substitute redline proposals.",
+          "action_page_url": "https://www.dir.ca.gov/oshsb/apprvd.html"
+        },
+        {
+          "sections": "1671.1 1716.2 1730 1731",
+          "name": "Residential fall protection",
+          "effective_from": "2025-07-01",
+          "source_url": "https://www.dir.ca.gov/oshsb/documents/Fall-Protection-in-Residential-Construction-apprvdtxt.pdf",
+          "proposal_source": "regulatory/proposal.json",
+          "limitation": "Approved index dated July 2026 is not independently proof of absence of later actions; J2 should acquire current official sections and histories, not substitute redline proposals.",
+          "action_page_url": "https://www.dir.ca.gov/OSHSB/Fall-Protection-in-Residential-Construction.html"
+        },
+        {
+          "sections": "1951 1952 1953 1955 1956 1960 5156",
+          "name": "Confined spaces construction",
+          "effective_from": "2026-01-01",
+          "source_url": "https://www.dir.ca.gov/OSHSB/documents/Confined-Spaces-in-Construction-OAL-Changes-Text.pdf",
+          "proposal_source": "regulatory/proposal.json",
+          "limitation": "Approved index dated July 2026 is not independently proof of absence of later actions; J2 should acquire current official sections and histories, not substitute redline proposals.",
+          "action_page_url": "https://www.dir.ca.gov/OSHSB/Confined-Spaces-in-Construction.html"
+        },
+        {
+          "sections": "3396",
+          "name": "Indoor heat",
+          "effective_from": "2024-07-23",
+          "source_url": "https://www.dir.ca.gov/OSHSB/documents/Indoor-Heat-apprvdtxt.pdf",
+          "proposal_source": "regulatory/proposal.json",
+          "limitation": "Approved index dated July 2026 is not independently proof of absence of later actions; J2 should acquire current official sections and histories, not substitute redline proposals.",
+          "action_page_url": "https://www.dir.ca.gov/OSHSB/Indoor-Heat.html"
+        },
+        {
+          "sections": "5144 Appendix A",
+          "name": "Respirator fit testing",
+          "effective_from": "2024-06-24",
+          "source_url": "https://www.dir.ca.gov/OSHSB/documents/Fit-Testing-Procedures-Mandatory-Horcher-apprvdtxt.pdf",
+          "proposal_source": "regulatory/proposal.json",
+          "limitation": "Approved index dated July 2026 is not independently proof of absence of later actions; J2 should acquire current official sections and histories, not substitute redline proposals.",
+          "action_page_url": "https://www.dir.ca.gov/oshsb/apprvd.html"
+        },
+        {
+          "sections": "5204",
+          "name": "Respirable crystalline silica nonemergency",
+          "effective_from": "2025-02-05",
+          "source_url": "https://www.dir.ca.gov/oshsb/documents/Respirable-Crystalline-Silica-Non-Emergency-apprvdtxt.pdf",
+          "proposal_source": "regulatory/proposal.json",
+          "limitation": "Approved index dated July 2026 is not independently proof of absence of later actions; J2 should acquire current official sections and histories, not substitute redline proposals.",
+          "action_page_url": "https://www.dir.ca.gov/OSHSB/Respirable-Crystalline-Silica-Non-Emergency.html"
+        },
+        {
+          "name": "Employer assessment and fraud surcharge",
+          "filed_on": "2025-10-23",
+          "effective_from": "2025-10-23",
+          "legal_status": "OAL filed and operative",
+          "source_url": "https://www.dir.ca.gov/ODRegulations/EmployerAssessmentFraudSurcharge/Index.html",
+          "final_text_url": "https://www.dir.ca.gov/ODRegulations/EmployerAssessmentFraudSurcharge/Text-Of-Regulations.pdf",
+          "sections": "15600 15601.5 15602 15603 15604 15605 15606 15606.1 15607 15608 15609 15611",
+          "scope_boundary": "Conditional employer or self-insurer assessments; not authority to pass a charge to tenants.",
+          "evidence": "j1/lanes/local_agency/sources/q4-selected-final-routes.txt; regulatory/q4-2025-action-census.json"
+        },
+        {
+          "oal_file": "2025-1107-02FP",
+          "name": "MTUS shoulder, elbow, hand/wrist/forearm and traumatic brain injury update",
+          "filed_on": "2025-12-18",
+          "effective_from": "2026-01-02",
+          "selected_unit": "9792.23.2;9792.23.3;9792.23.4;9792.24.5",
+          "source_url": "https://www.dir.ca.gov/dwc/DWCPropRegs/2025/MTUS-Evidence-Based-Update-August/Text-of-Regulations-Clean-Copy.docx",
+          "legal_status": "Filed and printed under Labor Code5307.27(a); not ordinary substantive OAL approval.",
+          "temporal_note": "Agency index incorrectly prints9792.23.5; exact OAL filing notice and all four agency codified histories establish9792.24.5. Incorporated first three ACOEM guidelines datedJuly14,2025; TBI datedOctober7,2025.",
+          "reason": "Conditional directly employed worker injury/claims and employer or claims-administrator duties; clinical guidelines are incorporated dependencies, not general residential maintenance standards."
+        },
+        {
+          "oal_file": "2025-1114-01SR",
+          "name": "Workers compensation utilization review",
+          "filed_on": "2025-12-30",
+          "effective_from": "2026-04-01",
+          "selected_unit": "Adopt9792.7.1,9792.9.7,.9.8;amend9767.6,9781,9785,9786,9792.6.1,.7,.8,.9.1-.9.6,.10.1-.10.6,.10.8,.11,.12,.13,.15,.27.1,.27.17",
+          "source_url": "https://www.dir.ca.gov/dwc/DWCPropRegs/2024/Utilization-Review/Final/Text-of-Regulations-Clean.docx",
+          "legal_status": "Approved December30,2025, effectiveApril1,2026.",
+          "temporal_note": "Final package governs treatment reporting, independent medical review, investigations and penalties. Do not use larger index list as exact changed-section inventory.",
+          "reason": "Conditional directly employed worker injury/claims and employer or claims-administrator duties; clinical guidelines are incorporated dependencies, not general residential maintenance standards."
+        },
+        {
+          "oal_file": "2026-0219-01N",
+          "name": "Utilization review incorporated forms correction",
+          "approved_on": "2026-04-01",
+          "selected_unit": "9792.7.1;9792.10.2;FormsIMR andUR-01",
+          "source_url": "https://www.dir.ca.gov/dwc/DWCPropRegs/2024/Utilization-Review/Final/Notice-of-Approval-section100.pdf",
+          "legal_status": "Section100 correction approvedApril1,2026; current linked forms expressly effective4/1/26.",
+          "temporal_note": "Read with original utilization-review package; use current corrected forms, not earlier proposals.",
+          "reason": "Conditional directly employed worker injury/claims and employer or claims-administrator duties; clinical guidelines are incorporated dependencies, not general residential maintenance standards."
+        },
+        {
+          "name": "Diving operations",
+          "filed_on": "2025-10-22",
+          "selected_unit": "6050,6051,6052,6054,6056",
+          "source_url": "https://www.dir.ca.gov/OSHSB/documents/Diving-Operations-OAL-Changes-Text.pdf",
+          "legal_status": "Official final text identified",
+          "reason": "Conditional underwater repair/provider work; applies to covered diving operations, not ordinary pool use.",
+          "evidence": "j1/lanes/local_agency/sources/q4-privacy-diving.txt",
+          "effective_from": "2026-01-01"
+        }
+      ]
+    },
+    {
+      "id": "CA:CCR11",
+      "jurisdiction": "CA",
+      "name": "California Code of Regulations, Title 11",
+      "level": "regulation",
+      "functions": [
+        "data_security",
+        "communications",
+        "consumer_protection",
+        "preconditions"
+      ],
+      "toc_source_url": "https://oal.ca.gov/publications/ccr/",
+      "adapter": "cornell_ccr",
+      "units_in_scope": [
+        {
+          "unit": "Division 1 - Attorney General",
+          "heading": "Division 1 - Attorney General (Chapter 1 to 23)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-11/division-1",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-40.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 4 - Proposition 65 Private Enforcement",
+          "heading": "Division 4 - Proposition 65 Private Enforcement (Chapter 1 to 3)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-11/division-4",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-40.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 6 - California Privacy Protection Agency",
+          "heading": "Division 6 - California Privacy Protection Agency (Chapter 1 to 3)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-11/division-6",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-40.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Final package - CCPA updates cybersecurity risk ADMT insurance",
+          "heading": "CCPA updates cybersecurity risk ADMT insurance",
+          "adapter": "generic",
+          "source_unit_kind": "document",
+          "internal_units_in_scope": [
+            "Complete approved127-page package; Division6 Chapter1 changed sections and new audit/risk/ADMT articles"
+          ],
+          "reason": "Covered business/provider tenant and applicant information. Compliance phase-ins distinct from effective date: ADMT January1,2027; audit certifications2028\u20132030; risk assessments begin2026 with2028 submissions. Preserve exact thresholds and exceptions in J2.",
+          "section_list": [
+            {
+              "number": "CCR11-ccpa-updates-cybersecurity-risk-admt-insurance",
+              "heading": "CCPA updates cybersecurity risk ADMT insurance",
+              "ref": "https://cppa.ca.gov/regulations/pdf/ccpa_updates_cyber_risk_admt_appr_text.pdf",
+              "source_unit_kind": "document"
+            }
+          ]
+        },
+        {
+          "unit": "Final package - DROP and data broker registration operative compilation",
+          "heading": "DROP and data broker registration operative compilation",
+          "adapter": "generic",
+          "source_unit_kind": "document",
+          "internal_units_in_scope": [
+            "7600\u20137604;7610\u20137616;7620\u20137622"
+          ],
+          "reason": "Data-broker role conditional; ordinary landlord tenant relationship alone does not establish broker status. Current compilation includes December9,2025 fee filing; do not apply registration fees to every data processor.",
+          "section_list": [
+            {
+              "number": "CCR11-drop-and-data-broker-registration-operative-compilation",
+              "heading": "DROP and data broker registration operative compilation",
+              "ref": "https://cppa.ca.gov/regulations/pdf/data_broker_drop_reg.pdf",
+              "source_unit_kind": "document"
+            }
+          ]
+        }
+      ],
+      "units_out": [
+        {
+          "unit": "Division 2 - Commission on Peace Officer Standards and Training",
+          "heading": "Division 2 - Commission on Peace Officer Standards and Training (Article 1 to 5)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-11",
+          "reason": "Division 2 - Commission on Peace Officer Standards and Training governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 3 - Gambling Control",
+          "heading": "Division 3 - Gambling Control (Chapter 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-11",
+          "reason": "Division 3 - Gambling Control governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 5 - Firearms Regulations",
+          "heading": "Division 5 - Firearms Regulations (Chapter 1 to 41)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-11",
+          "reason": "Division 5 - Firearms Regulations governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 9 - Commission on Peace Officer Standards and Training [Repealed]",
+          "heading": "Division 9 - Commission on Peace Officer Standards and Training [Repealed] (Chapter 3 to 7)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-11",
+          "reason": "Division 9 - Commission on Peace Officer Standards and Training [Repealed] governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        }
+      ],
+      "acquisition": {
+        "text_adapter": "cornell_ccr",
+        "enumeration": "Traverse the selected mirror division/chapter descendants and retain actual linked leaf references.",
+        "source_authority": "mirror",
+        "official_reconciliation": "Official CCR and issuing-agency enacted/amendment sources determine the authoritative version. Mirror text alone cannot complete J2."
+      },
+      "toc_mirror_url": "https://www.law.cornell.edu/regulations/california/title-11",
+      "source_capture": "j1/sources/ccr-title-11.txt",
+      "currentness_note": "LII supplies the browse tree; official CCR and issuing-agency adoption texts determine legal version. LII quarterly update is not treated as current legal authority.",
+      "version_records": [
+        {
+          "name": "CCPA updates cybersecurity risk ADMT insurance",
+          "filed_on": "2025-09-22",
+          "selected_unit": "Complete approved127-page package; Division6 Chapter1 changed sections and new audit/risk/ADMT articles",
+          "source_url": "https://cppa.ca.gov/regulations/pdf/ccpa_updates_cyber_risk_admt_appr_text.pdf",
+          "legal_status": "Official final text identified",
+          "reason": "Covered business/provider tenant and applicant information. Compliance phase-ins distinct from effective date: ADMT January1,2027; audit certifications2028\u20132030; risk assessments begin2026 with2028 submissions. Preserve exact thresholds and exceptions in J2.",
+          "evidence": "j1/lanes/local_agency/sources/q4-privacy-diving.txt",
+          "effective_from": "2026-01-01"
+        },
+        {
+          "name": "DROP and data broker registration operative compilation",
+          "filed_on": "2025-11-06",
+          "selected_unit": "7600\u20137604;7610\u20137616;7620\u20137622",
+          "source_url": "https://cppa.ca.gov/regulations/pdf/data_broker_drop_reg.pdf",
+          "legal_status": "Official final text identified",
+          "reason": "Data-broker role conditional; ordinary landlord tenant relationship alone does not establish broker status. Current compilation includes December9,2025 fee filing; do not apply registration fees to every data processor.",
+          "evidence": "j1/lanes/local_agency/sources/q4-privacy-diving.txt",
+          "effective_from": "2026-01-01"
+        }
+      ]
+    }
+  ]
+}

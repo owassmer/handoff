@@ -1,0 +1,482 @@
+             Real Estate Practice
+
+
+
+             How agentic AI can
+             reshape real estate’s
+             operating model
+             To create value from AI agents and humans working together,
+             focus on redesigning entire domains, not just launching a few use
+             cases. Here’s where to start.
+             by Alex Wolkomir, Ankit Kapoor, and Vaibhav Gujral
+             with Andrei Stoica
+
+
+
+
+March 2026
+At 6:12 a.m., water from a leaking pipe begins to drip into the ceiling of a 12th-floor apartment,
+unnoticed. By 9 a.m., when the property manager arrives for work, that small drip has turned into
+a big problem.
+
+Upset residents are calling to complain about water leaking through their ceiling. The property
+manager scrambles for answers: Can our staff access the shutoff valve in the apartment above?
+How quickly can we get a plumber and contractor here to fix the leak and contain the damage?
+
+Now, imagine this scenario unfolding much differently. At 6:12 a.m., a sensor monitored by an AI
+agent flags the leak. The agent identifies the 13th-floor apartment where the leak originated,
+alerts a maintenance staffer, and grants permitted access via a smart lock to shut off the water
+within minutes, even though the residents are not home. The system also identifies and
+connects with vendors who can address the issue, then drafts a notice to the residents with an
+arrival time window. By the time the property manager arrives, the work orders are in motion and
+the damage is limited, thanks to an automated chain of small steps that used to involve a dozen
+phone calls.
+
+This is just one example of what the next wave of AI looks like in real estate. Agentic AI is
+accelerating beyond previous applications of generative AI by automating multistep workflows
+inside core business systems, enabling humans to work in partnership with AI agents. The shift
+is from “help me understand” to “help me get it done.” Although deploying agentic systems
+successfully is challenging, the potential value is enormous. A labor productivity analysis of 48
+countries by the McKinsey Global Institute suggests that automation, including AI applied to
+knowledge work, could unlock roughly $430 billion to $550 billion1 in annual value globally
+across real estate, construction, and development.
+
+To help companies get started, this article explores key elements of an effective agentic AI
+deployment. Notably, we focus on the importance of redesigning entire domains and highlight
+four high-value domains we see repeatedly in our work with organizations: maintenance and
+facilities, leasing and renewals, investing and asset management, and construction and capital
+expenditures. We offer examples of potential applications, many of which are being explored or
+implemented by companies we work with. We then outline three plausible futures for how
+agentic AI could reshape the future operating model of real estate.
+
+
+Moving AI from the margins to real value
+Most real estate leaders have launched sensible AI experiments: summarize a lease, draft a
+memo, answer a question faster, and make reporting cleaner. These efforts can help people be
+more effective, but they rarely transform how work gets done inside core systems—and they
+rarely improve business-wide outcomes.
+
+That is not unique to real estate. AI adoption is widespread across industries, yet scaled bottom-
+line impact is hard to find, often because tools sit adjacent to workflows instead of being
+embedded within them.
+
+
+
+
+1
+    In 2024 US dollars.
+
+
+                                                          How agentic AI can reshape real estate’s operating model   2
+This is where agentic AI can become truly transformative. Agents are not simply chatbots bolted
+onto an existing process. They are a set of systems that can increasingly execute workflow
+steps with approvals and logging. Agents combine autonomy, planning, memory, and integration
+so they can move from reactive assistance to proactive, goal-driven execution. If real estate
+leaders want measurable impact, they should stop asking, “What use cases can we pilot?” and
+start asking, “Which workflows should we redesign so the software is allowed to do the work,
+with appropriate controls?”
+
+Why domains are the unit of change
+AI use cases tend to be small, bounded tasks that are frequently too narrow to change
+outcomes. At the other extreme, “enterprise transformations” can be too broad and too shallow.
+Domains sit in the middle. A domain is a coherent slice of the business with clear owners, a
+measurable outcome, and a set of connected workflows that can be redesigned end to end. It is
+big enough to matter, but small enough to run.
+
+Practically, a domain is the full journey from signal to outcome: from a maintenance request to
+resolution, from a lead to a complete lease file, from a request for information to an approved
+submittal and closeout. Each domain breaks into a small number of workflows. Each workflow
+breaks into steps and decisions that happen every day. Many of these steps are candidates for
+automation and augmentation through people–agent–robot collaboration (Exhibit 1). Outcomes
+can range from closing maintenance tickets faster to converting more leads into leases to
+reducing tenant churn by improving their experience.
+
+
+Exhibit 1
+
+
+
+
+                                                        How agentic AI can reshape real estate’s operating model   3
+                     Focusing on domain-level redesign matters because it forces organizations to develop
+                     permissions, integrations, and governance that enable AI agents to execute key tasks. Teams
+                     can then review trace data generated from agents’ activities and use those insights to
+                     standardize and improve workflows. In this environment, organizations can improve week over
+                     week rather than pilot over pilot (see sidebar, “Automate steps and protect thoughts”).
+
+
+
+
+Automate steps and protect thoughts
+
+Most domains can be decomposed into two ingredients: steps and thoughts (exhibit). Steps are repeatable tasks that
+benefit from speed, consistency, and clean handoffs. They pull context from systems, draft a standardized message,
+route for approval, schedule work, update status, and log the outcome. Thoughts are judgment calls that require
+discretion: exceptions, trade-offs, expressions of taste or creativity, gestures that preserve trust, and decisions that
+carry financial, reputational, or regulatory risk.
+
+The operating model move is straightforward: automate steps aggressively and protect thoughts deliberately. You do
+not need to automate every decision to unlock value. In many workflows, the biggest gains come from eliminating the
+“chasing work” around a judgment moment: assembling context, drafting options inside policy guardrails, routing to the
+right human, and then executing the chosen path quickly and consistently. As organizations think about role definition
+and job descriptions, thoughts become the anchor, with the agentic workforce supporting the best possible outcomes
+for these human moments.
+Over time, as governance matures and data quality improves, some thoughts can become controlled steps (converted
+into rules, thresholds, or supervised patterns), while the highest-stakes judgment remains human. That is how domains
+become learnable systems rather than one-off automations.
+
+
+
+Exhibit
+
+
+
+
+                                                                                  How agentic AI can reshape real estate’s operating model   4
+Taking a domain approach also forces organizations to be explicit about who captures value,
+which matters as much as technical feasibility in real estate. Enhancing domain-level workflows
+with AI can help owner-operators boost income and improve service directly. For third-party
+operators and service providers, AI can open the door to new commercial models with clearer
+alignment on how their work creates value for them and for owners. Investors can benefit
+differently by underwriting operating model changes that translate into more durable
+performance. Across the value chain, leaders should be explicit about who pays for domain
+transformations, who shares the upside, and who owns the trace data that allows systems to
+keep learning.
+
+
+The five technical layers
+Agentic AI succeeds or fails on a company’s technology architecture. Without the right
+architecture, agents can’t work together, or with humans, to meaningfully reshape workflows.
+
+In practice, most agentic AI deployments require five technical layers, each with a clear job.
+When one layer is weak, organizations end up with impressive demos that cannot scale. Here
+are the key functions that each layer can perform:
+
+— Factual layer. This layer makes real estate data and documents usable by collecting clean
+  property, unit, lease, vendor, and project metadata; consistently identifying tenants, units,
+  vendors, and projects across systems; reliably retrieving information from documents; and
+  serving as a clear source of truth when systems disagree.
+
+— Orchestration layer. This layer can plan and route work by identifying event triggers,
+  workflow breakdowns, routing logic, escalation rules, and “stop points” when confidence is
+  low or risk is high (such as approving a big-ticket vendor invoice, getting finance approval
+  for an anchor tenant’s upcoming renewal concession, or increasing a tenant improvement
+  allowance).
+
+— Action layer. This layer can execute work by securely integrating AI tools into property
+  management systems, customer relationship management systems, service platforms,
+  procurement systems, and project controls to create tickets, schedule work, request
+  approvals, update status, and log outcomes.
+
+— Control layer. This layer provides governance by managing permissions, approvals for
+  financial transactions and policy exceptions, audit trails, and monitoring (including testing
+  and evaluation) so leaders can see what happened, why it happened, and whether
+  performance is drifting.
+
+— Building-block layer. This layer delivers a library of small, reusable agent blocks (often called
+  “atomic agents”) and routines (such as “draft a stakeholder update,” “pull a clause or term
+  from a document,” “route for approval,” “write back to a system of record,” and “close the
+  loop”). The same block can be tuned for different parties and contexts (such as residents,
+  vendors, owners, or property managers) without rebuilding the capability.
+
+This last layer is what enables real scaling. The winning operating models will not be built around
+a single heroic agent that tries to do everything. They will be built from atomic agents that do a
+small thing well, with clear boundaries. These atomized pieces can then be built into tools that
+are deployed at the domain level and improved over time.
+
+
+
+
+                                                          How agentic AI can reshape real estate’s operating model   5
+How to protect trust and human judgment
+In real estate, agentic AI can create value by protecting trust within an organization through
+governance, returning time by eliminating handoffs, and giving people room to do what only
+people can do—in turn, improving customer satisfaction and trust.
+
+Residents remember how you handled one bad moment, not nine routine ones. Office tenants
+remember whether you solved the problem fast, not how sophisticated your portal looked.
+Owners and lenders remember whether your reporting holds together under stress. When
+agents handle routine steps consistently, people can focus on the work that requires judgment,
+taste, creativity, and presence: negotiations, escalations, exceptions, and the moments when
+relationships are on the line. Successful agentic deployments in real estate will automate steps
+aggressively to give people the time and space they need to deliver strong, trustworthy service.
+
+Organizations need to develop a thorough understanding of potential risks associated with
+agentic AI, including vulnerabilities that could disrupt operations, compromise data, or erode
+trust. Agentic systems must be designed with controls that match the risk: role-based
+permissions, human approval where required, audit trails, and clear separation between advisory
+outputs and actions taken. McKinsey’s work with pioneering agentic organizations reveals that
+the emerging operating model involves humans and agents working side by side at scale, with
+governance as a core design pillar, not an afterthought.
+
+The biggest challenge to creating value from AI tools will be getting people to adopt and trust
+them. In high-expertise workflows, people do not outsource judgment just because software is
+available. They trust automation when they can understand it, supervise it, and step in without
+breaking the flow. That means building scaffolding into the workflow: clear review points for
+higher-risk actions, simple indicators of uncertainty, and concise summaries of what the system
+did and what it touched. When something goes wrong, teams need a clean way to intervene,
+recover, and learn, not a black box that forces them back to manual work. This also means early
+versions of AI pilots may have manual “approval” steps that teams choose to automate only once
+they gain confidence in what is in production (for example, automating when the approve button
+is clicked the vast majority of the time).
+
+There is another, quieter risk. If every owner and operator deploys the same agent, trained on
+the same patterns and speaking in the same safe, generic tone, brands get diluted. Real estate
+is both a workflow and a feelings business. The goal is to automate the friction around the
+interaction so humans can focus on making sure the brand shows up with more consistency in
+the moments that matter, not to automate the emotion out of the interaction.
+
+
+The four key domains
+As real estate leaders consider how to reimagine workflows with AI, four high-value domains
+stand out—those that combine high volume, messy handoffs, and real performance
+consequences. Organizations that deploy AI in these domains should focus on creating
+measurable business outcomes, not on adoption metrics. It does not matter how many people
+use a tool if the metrics that matter—from more signed leases to faster maintenance responses
+—do not improve.
+
+
+
+
+                                                          How agentic AI can reshape real estate’s operating model   6
+Maintenance and facilities: From dispatch to done automatically
+Maintenance is where trust is won or lost, one tenant at a time. In most organizations,
+maintenance still runs on handoffs among human workers: receiving a report, opening a ticket,
+dispatching staff or vendors, securing approvals, updating residents, and processing invoices.
+
+Rather than building one agent that “does maintenance,” organizations can redesign the
+incident workflow end to end: signal, triage, access, dispatch, updates, approvals, closeout, and
+learning. This is where poor coordination and preventable loss tend to hide. Organizations we
+have worked with to automate maintenance processes have seen time savings of more than 30
+percent on many workflows.
+
+Take the example of the leaking pipe we described at the beginning of this article. From the first
+signal, agentic systems can ensure routine steps are handled quickly and consistently, with
+human managers providing review and approval where required. Maintenance staff and vendors
+can then focus on solving problems rather than chasing information. This is just one area where
+the future workforce becomes a collaboration between people, agents, and, in more physical
+settings, robots: for example, property and community managers partnering with agentic
+systems, and maintenance, repair, and skilled-trades workers supported by smarter dispatch,
+diagnostics, and coordination (Exhibit 2).
+
+Leasing and renewals: Service, speed, and compliance
+Leasing is often described as marketing, but for real estate operators, the process is about two
+things: managing logistics and building trust with tenants.
+
+Those two forces show up in the same places every day: responsiveness, scheduling,
+documentation, and follow-through. When those steps break, trust breaks with them. Agentic AI
+can manage routine coordination work (guided by clear policies and escalation rules) so people
+can spend more time where they matter most: exercising judgment, showing empathy, and
+handling exceptions well.
+
+A digital concierge can respond consistently across channels and languages using approved
+information and clear escalation rules. But in high-trust settings, how the system communicates
+matters as much as what it says: Tone, transparency, and escalation cues should be designed so
+residents understand what will happen next and when a person is involved. Done poorly, these
+systems converge on the same bland voice; done well, they make the brand feel more distinctive
+and present.
+
+From there, the operational wins are straightforward. Tour scheduling can use real-time
+availability, reduce no-shows, and handle rescheduling without losing the thread. Application
+support can help applicants complete documentation, reduce errors, and quickly route
+exceptions to human reviewers. The common theme is removing friction from a high-volume
+workflow while making accountability and handoffs cleaner.
+
+
+
+
+                                                          How agentic AI can reshape real estate’s operating model   7
+Exhibit 2
+
+
+
+
+            How agentic AI can reshape real estate’s operating model   8
+Renewals can benefit from the same approach. Agentic workflows can flag churn risk among
+tenants by noticing signals such as repeated unresolved service issues, repeated complaints
+about the same category, missed appointments, slower response behavior, or negative
+feedback trends. The system can then prompt people on the team to take action before the
+renewal window closes. The key is prevention: noticing a problem early enough to fix it and
+
+audit trails into the redesign from the outset is critical. Incorporating agentic workflows into the
+leasing process can enable timely communication, accurate information, clean documentation,
+and reliable follow-through. By removing friction and allowing staff members to provide more
+personal service, agentic workflows give on-site teams more room to deliver the human
+moments that tenants remember. In our work, we have seen rental organizations improve
+renewal rates by 3 to 7 percent after implementing AI-powered workflows. We also have worked
+with home builders to implement agentic workflows that have helped them improve lead
+response times by more than 90 percent and record incremental home sales captured by after-
+hours agents that engage with buyers around the clock.
+
+Investing and asset management: Faster cycles and clearer judgment
+On the investing and asset management side, most work is performed manually, such as
+reviewing lease clauses, analyzing performance factors, preparing investment committee
+materials, then updating the same story every time the numbers change.
+
+Deploying agentic AI in this domain is not about replacing judgment. It is about removing the
+friction that delays judgment. In many teams, the friction is practical: Facts live in multiple
+systems, lease abstractions and key dates are locked in documents, performance narratives get
+rebuilt in slides and spreadsheets, and updates require time-consuming rework. By the time the
+material is ready, decisions are already late.
+
+Organizations can create a portfolio where agents can search structured lease and operating
+data, draft standardized materials with clear sourcing, and detect early warning signals to
+prompt swifter intervention. They can handle repeatable tasks such as pulling data, drafting
+outreach, scheduling, summarizing information, logging outcomes, and updating systems.
+
+Humans can then focus on issues where judgment calls are critical: exceptions, discretion,
+tenant relationships, brand choices, capital allocation, and investment decisions. The payoff is
+speed, but also consistency, defensibility, and auditability.
+
+Construction and capital expenditures: Controlling complexity
+Before a shovel hits the ground, construction is an incredibly complex endeavor. The domain is
+defined by documentation, sequencing, coordination, and change. An agentic redesign can
+support project teams with project-control capabilities that keep documentation organized and
+workflows moving.
+
+Agentic systems can draft and organize requests for information, meeting minutes, submittals,
+and project documents. They can interpret codes and specifications to support compliance.
+They can automate workflows such as permitting or coordinating bid packages. They can help
+
+
+
+
+                                                          How agentic AI can reshape real estate’s operating model   9
+keep owners informed with timely updates. They can support subcontractor onboarding and
+mobilization by coordinating required documentation and sequencing early steps.
+
+As capabilities mature, construction workflows can also benefit from more technical
+integrations, such as comparing building information modeling with site conditions, monitoring
+for schedule risk signals, and flagging change orders that exceed review thresholds. The goal is
+fewer dropped threads, faster cycle times on routine documentation, clearer visibility into risks
+before they become delays, and more disciplined change-order management because the paper
+trail is complete.
+
+
+Envisioning real estate’s AI future
+For real estate organizations, the choice is not whether to adopt AI. It is whether AI sits on the
+side of core systems as a set of helpful tools, or whether it becomes an operating advantage by
+being integrated into redesigned domains.
+
+For organizations that take a domain-focused approach to AI adoption, three futures can unfold
+at the same time. They are not mutually exclusive. In practice, most organizations will experience
+elements of all three, depending on the asset class, market, and starting point.
+
+New operating systems emerge
+In five years, the most distinctive real estate owners and managers may look less like collections
+of properties and more like operating systems. Not in the branding sense, but in the practical
+sense that their portfolios run on a common layer of workflows, data, and controls.
+
+In that world, a building is not “smart” because it has sensors. It is smart because the
+organization can turn signals into action. Service requests trigger predictable chains of work.
+Exceptions are routed, approved, and documented in the same way every time. Reporting
+becomes a by-product of execution rather than a monthly scramble.
+
+The compounding effect is what separates the leaders from the laggards. Every work order
+leaves behind information that improves routing. Every service resolution teaches the
+organization how to prevent the next issue. Every capital project sharpens sequencing and
+vendor performance. Over time, the portfolio becomes a teacher.
+
+The concept is simple, but it requires discipline. Start with one domain where outcomes matter
+and activity is high. Wire it into systems of record, put approvals and audit pathways in place,
+measure a real outcome—then repeat.
+
+Coordination layers quietly disappear
+A meaningful share of real estate work today exists to manage handoffs: chasing documents,
+confirming status, following up on approvals, reconciling expectations and results. Coordinating
+all that requires countless meetings, full inboxes, and often heroic effort.
+
+
+
+
+                                                          How agentic AI can reshape real estate’s operating model   10
+As workflows become more automated, the middle layer of chasing begins to thin out. The work
+changes, and by extension, the jobs hired for also change. The organization spends less time
+pushing paper and more time managing outcomes. Teams that once coordinated activities by
+memory and relationships will depend on systems to carry the thread.
+
+The winners will be the organizations that reinvest the time freed up into areas of true
+differentiation: resident and tenant experience, negotiation, crisis leadership, and continuous
+improvement. Roles will be redesigned alongside workflows. Managers will learn to supervise
+systems, not just people. Humans will stay in control of the moments that matter.
+
+Value creation gets harder
+In the third future, execution improves across the industry, and quick wins diminish. Reporting
+gets cleaner. Work orders become more predictable. Service becomes more consistent. As a
+result, organizations will need to focus on how they differentiate themselves.
+
+In this future, competitive advantage migrates twice. First, it shifts to firms that can build
+compounding learning loops in core domains to boost efficiency and performance. Then, as
+those capabilities spread, it shifts again to what cannot be commoditized: trust, brand,
+relationships, and investment conviction. AI can sharpen each of those, but it cannot substitute
+for them.
+
+True strategic advantage will come from executing AI tools at scale and learning from this
+process. When workflows run through an agentic layer, every ticket, approval, exception, and
+resolution leaves a trace of what happened, what was decided, and what worked. Over time,
+those traces become proprietary operational know-how that improves the next decision. That
+creates a strategic question leaders should ask early: Who owns the learning loop—the owner,
+the property manager, the software vendor, or the services provider?
+
+This is also why AI vendor partner choices matter. Many platforms converge on a lowest-
+common-denominator experience because that is what scales across clients. The risk is subtle.
+Tenant-facing automation gets smoother while the brand gets flatter, and service becomes
+easier to standardize and compete on price. Differentiation comes from what you control:
+proprietary workflow design; the trace data that make your system learn; and a deliberately
+designed voice, tone, transparency, and escalation behavior that preserve trust and reinforce
+the brand’s distinctiveness rather than muting it.
+
+Over time, some players will try to bundle software and service delivery into a single operating
+system offer. The organizations best positioned for success will be those that own the
+workflows, own the learning loop, and keep the customer experience unmistakably theirs.
+
+What separates leaders is discipline, not ambition. They decide which domains they intend to
+own. They ensure they control the data traces created by executed work so the organization
+keeps learning. They design governance that allows systems to act safely. And they treat
+adoption as a business responsibility, not an IT project.
+
+
+
+
+                                                         How agentic AI can reshape real estate’s operating model   11
+The winners will not be the firms with the flashiest demos. They will be the ones whose systems
+quietly get the work moving before the day begins, so people can focus on judgment,
+relationships, and the moments that matter in the built environment.
+
+
+
+In real estate, as in other industries, measurable benefits from AI adoption have been slow to
+materialize. But the rapid development of agentic technology represents an opportunity for real
+estate leaders to rethink how they generate value from AI.
+
+The next phase is unlikely to be won by a series of disconnected pilots. It will be won by a small
+number of domain transformations designed for execution and trust. Organizations that move
+early can use agents to reduce handoffs, improve service, and accelerate decision cycles while
+building the governance and operating model that makes those gains durable. Done with
+discipline and risk controls, agentic AI can unlock new levels of efficiency, enhance customer
+service and experience, and fuel continuous improvement, delivering a true competitive
+advantage.
+
+
+
+
+Alex Wolkomir and Ankit Kapoor are partners and Vaibhav Gujral is a senior partner in McKinsey’s New York
+office, and Andrei Stoica is a senior asset leader in the London office.
+
+
+The authors wish to thank Abhinav Iyer, Anannya Das, Anna Fu, Dan Eversen, Jose Maria Quiros, Jules Barker,
+Laura Campbell, Max Wiederhorn, Nicolette Tran, Phil Beylison, Rahim Surani, Rahul Sharma, Rithvik Sunku,
+Roman Strelov, Spencer Whitney, Sudeep Doshi, and Swetha Gumpena for their contributions to this article.
+
+
+
+This article was edited by Eric Quiñones, a senior editor in the New Jersey office.
+
+
+Copyright © 2026 McKinsey & Company. All rights reserved.
+
+
+
+
+                                                                    How agentic AI can reshape real estate’s operating model   12
+

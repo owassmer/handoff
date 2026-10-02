@@ -1,0 +1,14 @@
+{
+  "finding": "US:47CFR64L was omitted from federal_programs replacements by the whole-ID numeric-part regular expression.",
+  "cause_file": "j1/lanes/federal_programs/build_proposals.py:217",
+  "cause_regex": "US:(7|12|16|24|28|29|40|47)CFR(\\d+)",
+  "active_legacy_orphans": [
+    "US:47CFR64L"
+  ],
+  "not_orphan": {
+    "US:26USC6050W": "Empty selection and explicit duplicate pointer;26USC-6041-6050 replacement retains reportingSubpartB.",
+    "US court rules/fees": "Separate courts-lane ownership and current source review."
+  },
+  "concrete_fix": "Explicitly replace part64 scoped subparts and route; verify every active legacy CFR instrument is replaced or expressly dispositioned regardless of suffix. Parent performing64P/Z/BB scope correction. Add separately proposed47CFR76 M/X and incorporated dependencies.",
+  "no_shared_edits": true
+}

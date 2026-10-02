@@ -1,0 +1,1136 @@
+{
+  "as_of": "2026-10-01",
+  "add": [
+    {
+      "id": "CA:SOCALGAS-TARIFF",
+      "jurisdiction": "CA",
+      "name": "Southern California Gas Company \u2014 residential property service, work and account tariffs",
+      "level": "agency rule",
+      "instrument_kind": "CPUC-regulated utility tariff",
+      "functions": [
+        "payments",
+        "communications",
+        "preconditions",
+        "work_standards"
+      ],
+      "adapter": "generic",
+      "toc_source_url": "https://tariffsprd.socalgas.com/scg/tariffs/content/?bookId=GAS&sectId=G-RULES&utilId=SCG",
+      "units_in_scope": [],
+      "units_out": [
+        {
+          "scope": "Wholesale storage, gas production/biogas injection, transport system balancing and marketer operation as independent businesses; do not remove conditional procurement customer rules merely because gas is purchased through a marketer.",
+          "reason": "No independent producer, wholesale storage or marketer business is inferred from residential operation. Conditional procurement-customer obligations remain selected."
+        }
+      ],
+      "acquisition": {
+        "text_adapter": "generic",
+        "status": "Source parent selected; current document routes unresolved. No executable leaf ref is asserted.",
+        "enumeration_status": "Existing generic adapter does not enumerate publisher JavaScript viewers or SharePoint collections.",
+        "j1_remaining": "Resolve complete applicable current leaf identities and publication routes.",
+        "j2_boundary": "Fetching complete document bodies and subdividing tariff rules follows J1; full-body prefetch is not required to resolve a leaf route.",
+        "specific_route_requirement": "Obtain actual rendered category anchors or publisher list response for GAS/G-RULES, G-SCHEDS and selected forms; map stable tariff identity to actual published view/download target. Current tool returns loading shell and supplies no response schema. Implement a viewer-specific enumerator only against observed response/DOM, or materialize section_list from resolved actual links. Do not derive tarfKey or PDF filenames from rule numbers."
+      },
+      "applicability_condition": "Actual utility territory, account class and service/event date. Operator may be account customer, property owner/developer, master-meter holder or conditional submeter provider; do not assume tenant account rules always govern owner/common-area service.",
+      "pending_acquisition_units": [
+        {
+          "identity": "Rule 1",
+          "heading": "Definitions",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 2",
+          "heading": "Description of Service",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 3",
+          "heading": "Application for Service",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 4",
+          "heading": "Contracts",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 5",
+          "heading": "Special Information Required on Forms",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 6",
+          "heading": "Establishment and Re-Establishment of Credit",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 7",
+          "heading": "Deposits",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 9",
+          "heading": "Discontinuance of Service",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 10",
+          "heading": "Service Charges",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 11",
+          "heading": "Disputed Bills",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 12",
+          "heading": "Rendering and Payment of Bills",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 13",
+          "heading": "Meters and Equipment",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 14",
+          "heading": "Meter Reading",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 15",
+          "heading": "Meter Tests",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 16",
+          "heading": "Adjustment of Bills",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 18",
+          "heading": "Notices",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 19",
+          "heading": "Rates and Optional Rates",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 20",
+          "heading": "Gas Main Extensions",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 21",
+          "heading": "Gas Service Extensions",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 22",
+          "heading": "Temporary Service",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 23",
+          "heading": "Continuity of Service and Interruption of Delivery",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 24",
+          "heading": "Supply to Individual Premises and Resale of Gas",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 25",
+          "heading": "Company\u2019s Right of Ingress to and Egress from the Consumer\u2019s Premises",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 26",
+          "heading": "Consumer Responsible for Equipment for Receiving and Utilizing Gas",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 27",
+          "heading": "Service Connections Made by Company\u2019s Employees",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 28",
+          "heading": "Compensation to Company\u2019s Employees",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 29",
+          "heading": "Change of Consumer\u2019s Apparatus or Equipment",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 31",
+          "heading": "Automated Meter Reading",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 34",
+          "heading": "Provision of Utility Right-of-Way Information",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 40",
+          "heading": "On-Bill Financing Program",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 42",
+          "heading": "Privacy and Security Protections for Energy Usage Data",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 43",
+          "heading": "On-Bill Repayment (Pilot Programs)",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 44",
+          "heading": "Mobilehome Park Utility Upgrade Program",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 30",
+          "heading": "Transportation of Customer-Owned Gas",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 32",
+          "heading": "Core Aggregation Transportation",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Rule 35",
+          "heading": "Contracted Marketer Transportation",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 sheet edition unresolved"
+        },
+        {
+          "identity": "Schedule GR",
+          "heading": "Residential Service",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 complete schedule unresolved"
+        },
+        {
+          "identity": "Schedule GS",
+          "heading": "Submetered Multi-Family Service",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 complete schedule unresolved"
+        },
+        {
+          "identity": "Schedule GM",
+          "heading": "Multi-Family Service",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 complete schedule unresolved"
+        },
+        {
+          "identity": "Schedule G-CARE",
+          "heading": "California Alternate Rates for Energy Program",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 complete schedule unresolved"
+        },
+        {
+          "identity": "Schedule G-AMOP",
+          "heading": "Residential Advanced Meter Opt-Out Program",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 complete schedule unresolved"
+        },
+        {
+          "identity": "Schedule G-CP",
+          "heading": "Core Procurement Service",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 complete schedule unresolved"
+        },
+        {
+          "identity": "Schedule G-CCC",
+          "heading": "Greenhouse Gas California Climate Credit",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 complete schedule unresolved"
+        },
+        {
+          "identity": "Schedule G-10",
+          "heading": "Core Commercial and Industrial Service",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 complete schedule unresolved"
+        },
+        {
+          "identity": "Schedule GO-AC",
+          "heading": "Optional Rate for Customers Purchasing New Gas Air Conditioning Equipment",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 complete schedule unresolved"
+        },
+        {
+          "identity": "Schedule G-PPPS",
+          "heading": "Public Purpose Programs Surcharge",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 complete schedule unresolved"
+        },
+        {
+          "identity": "Schedule G-SRF",
+          "heading": "Surcharge to Fund Public Utilities Commission Utilities Reimbursement Account",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 complete schedule unresolved"
+        },
+        {
+          "identity": "Schedule G-MHPS",
+          "heading": "Surcharge to Fund Master Metered Mobile Home Park Gas Safety Inspection and Enforcement Program",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Named in filed May 2026 TOC; October 2026 complete schedule unresolved"
+        },
+        {
+          "identity": "Form 4859-E",
+          "heading": "Medical Baseline Allowance Application",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "57169-G"
+        },
+        {
+          "identity": "Form 4860",
+          "heading": "Medical Baseline Allowance Self-Certification",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "57170-G"
+        },
+        {
+          "identity": "Form 6491",
+          "heading": "CARE Self-Certification\u2014Individually Metered Residential",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "62913-G"
+        },
+        {
+          "identity": "Form 6674",
+          "heading": "CARE Self-Recertification\u2014Individually Metered Residential",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "62914-G"
+        },
+        {
+          "identity": "Form 6675",
+          "heading": "CARE Post-Enrollment Verification\u2014Individually Metered Residential",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "51491-G"
+        },
+        {
+          "identity": "Form 6675S",
+          "heading": "CARE Post-Enrollment Verification\u2014Sub-Metered Residential",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "51492-G"
+        },
+        {
+          "identity": "Form 6677",
+          "heading": "CARE Self-Certification\u2014Submetered Residential",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "62916-G"
+        },
+        {
+          "identity": "Form 6678",
+          "heading": "CARE Self-Recertification\u2014Submetered Residential",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "62917-G"
+        },
+        {
+          "identity": "Form 1770H",
+          "heading": "Set and Turn-on Application",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "32482-G"
+        },
+        {
+          "identity": "Form 66602",
+          "heading": "Statement of Applicant\u2019s Contract Anticipated Cost for Applicant Installation Project",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "60883-G"
+        },
+        {
+          "identity": "Form 8208",
+          "heading": "Mobilehome Park Utility Conversion Program Application",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "58891-G"
+        },
+        {
+          "identity": "Form 481-8",
+          "heading": "Receipt for Payment",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "35708-G"
+        },
+        {
+          "identity": "Form 315U",
+          "heading": "Miscellaneous Account Receipt",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "35709-G"
+        },
+        {
+          "identity": "Form 437.1R",
+          "heading": "Deposit Warning Letters A and B",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "36782-G"
+        },
+        {
+          "identity": "Form 81-A",
+          "heading": "California Penal Code Tag",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "36783-G"
+        },
+        {
+          "identity": "Form 6447",
+          "heading": "Continuing Guarantee Letter",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "36785-G"
+        },
+        {
+          "identity": "Form 3607-A",
+          "heading": "Stub Service Installation",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "11583-G"
+        },
+        {
+          "identity": "Form 8204",
+          "heading": "Authorization or Revocation to Receive Customer Interval Usage Information",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "61723-G"
+        },
+        {
+          "identity": "Form 8206",
+          "heading": "Authorization to Receive Customer Information or Act on Customer\u2019s Behalf",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "61724-G"
+        },
+        {
+          "identity": "Form 7300",
+          "heading": "Authorization or Revocation to Release Customer Usage Information",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "52362-G"
+        },
+        {
+          "identity": "Form 3905-D",
+          "heading": "Line Extension Contract",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "60884-G"
+        },
+        {
+          "identity": "Form 6665",
+          "heading": "Applicant Design Terms and Conditions",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "30295-G"
+        },
+        {
+          "identity": "Form 3907-B",
+          "heading": "Assignment of Contract",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "37014-G"
+        },
+        {
+          "identity": "Form 1951-G",
+          "heading": "Transfer of Service Pipe to Yard Piping",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "54382-G"
+        },
+        {
+          "identity": "Form 6403",
+          "heading": "Form of Indemnification",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.socalgas.com/sites/default/files/2026-05/SCG-SDGE-Application-SAP-Migration-Program.pdf",
+          "edition_status": "Filed TOC sheet identity observed; current form edition and direct route unresolved",
+          "sheet_identity": "18570-G"
+        }
+      ],
+      "scope_reason": "Rules cover service applications/contracts, credit/deposits, billing/payment/disputes/refunds, discontinuance/continuity, equipment/meters/access, owner changes and connection/extension work. Master-meter/resale, procurement, upgrade and financing provisions apply only to actual customer/property/program facts. Residential/master-meter schedules and their surcharges define applicable bills; G-10 is retained conditionally for property/common-area accounts classified as commercial.",
+      "census_limit": "Observed selected application/account/connection forms from TOC pages54\u201355. Remaining form TOC pages need scope review; this is not an exhaustive current census. Preliminary statement definitions, territory and billing factors incorporated by selected schedules still require current index review; do not add the utility entire internal balancing-account corpus.",
+      "related_registered_sources": [
+        "CA:SOCALGAS-TARIFF-UPDATE-2026-09"
+      ]
+    },
+    {
+      "id": "CA:SCE-TARIFF",
+      "jurisdiction": "CA",
+      "name": "Southern California Edison \u2014 residential property service, work and account electric tariffs",
+      "level": "agency rule",
+      "instrument_kind": "CPUC-regulated utility tariff",
+      "functions": [
+        "payments",
+        "communications",
+        "preconditions",
+        "work_standards"
+      ],
+      "adapter": "generic",
+      "toc_source_url": "https://edisonintl.sharepoint.com/:f:/t/Public/TM2/EiNTgBFFxTdIiIsEZtplmhQBbhkD28HYDDo6z8EuJ9BeDw?e=nJnLd2",
+      "units_in_scope": [],
+      "units_out": [
+        {
+          "scope": "Independent wholesale/transmission provider and Catalina gas/water operations. Do not exclude residential solar/storage interconnection or property account CCA solely as wholesale matters.",
+          "reason": "Separate utility territory or independent supply/transmission operations are outside current OC/HB residential aperture; retain property-side generation and account procurement choices."
+        }
+      ],
+      "acquisition": {
+        "text_adapter": "generic",
+        "status": "Source parent selected; current document routes unresolved. No executable leaf ref is asserted.",
+        "enumeration_status": "Existing generic adapter does not enumerate publisher JavaScript viewers or SharePoint collections.",
+        "j1_remaining": "Resolve complete applicable current leaf identities and publication routes.",
+        "j2_boundary": "Fetching complete document bodies and subdividing tariff rules follows J1; full-body prefetch is not required to resolve a leaf route.",
+        "specific_route_requirement": "Public SCE index yields exact SharePoint collection links but no file census. Need actual anonymous rendered folder listing or publisher-returned file metadata/download links; identify current filename/edition without fabricated IDs. Then explicit document section_list can use generic PDF fetch. Existing adapters do not enumerate these folders; no observed endpoint schema yet supports a correct new adapter."
+      },
+      "applicability_condition": "Actual utility territory, account class and service/event date. Operator may be account customer, property owner/developer, master-meter holder or conditional submeter provider; do not assume tenant account rules always govern owner/common-area service.",
+      "pending_acquisition_units": [
+        {
+          "identity": "Rule 1",
+          "heading": "Definitions",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 2",
+          "heading": "Description of Service",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 3",
+          "heading": "Application for Service",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 4",
+          "heading": "Contracts",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 5",
+          "heading": "Special Information Required on Forms",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 6",
+          "heading": "Establishment and Re-establishment of Credit",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 7",
+          "heading": "Deposits",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 8",
+          "heading": "Notices",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 9",
+          "heading": "Rendering and Payment of Bills",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 10",
+          "heading": "Disputed Bills",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 11",
+          "heading": "Discontinuance and Restoration of Service",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 12",
+          "heading": "Rates and Optional Rates",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 13",
+          "heading": "Temporary Service",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 14",
+          "heading": "Shortage of Supply and Interruption of Delivery",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 15",
+          "heading": "Distribution Line Extensions",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 16",
+          "heading": "Service Extensions",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 17",
+          "heading": "Adjustment of Bills and Meter Tests",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 18",
+          "heading": "Supply to Separate Premises and Use by Others",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 20",
+          "heading": "Replacement of Overhead With Underground Electric Facilities",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 21",
+          "heading": "Generating Facility Interconnections",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 22",
+          "heading": "Direct Access",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 22.1",
+          "heading": "Switching Exemption Guidelines",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 22.2",
+          "heading": "Direct Access Service for Qualified Nonprofit Charitable Organizations",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 23",
+          "heading": "Community Choice Aggregation",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 24",
+          "heading": "Direct Participation Demand Response",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 25",
+          "heading": "Protecting the Privacy and Security of Customer Usage Information",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 26",
+          "heading": "Release of Customer Data or Energy Usage Related Data to Third Parties",
+          "source_unit_kind": "document",
+          "conditional": false,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Rule 27",
+          "heading": "Mobilehome Park Conversion Program",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://docs.cpuc.ca.gov/PublishedDocs/SupDoc/A1609001/648/192325882.pdf",
+          "edition_status": "Historical January 2016 TOC identity; current status/edition unresolved"
+        },
+        {
+          "identity": "Schedule DMS-1",
+          "heading": "Domestic Service\u2014Multifamily Accommodation, Submetered",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.sce.com/save-money/rates-financing/multifamily-rates-billing",
+          "edition_status": "Current publisher identifies schedule; actual full filed edition unresolved"
+        },
+        {
+          "identity": "Schedule DMS-2",
+          "heading": "Domestic Service\u2014Mobilehome Park Multifamily Accommodation, Submetered",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.sce.com/save-money/rates-financing/multifamily-rates-billing",
+          "edition_status": "Current publisher identifies schedule; actual full filed edition unresolved"
+        },
+        {
+          "identity": "Schedule DMS-3",
+          "heading": "Domestic Service\u2014Submetered Recreational Vehicle Parks",
+          "source_unit_kind": "document",
+          "conditional": true,
+          "ref": null,
+          "identity_source": "https://www.sce.com/save-money/rates-financing/multifamily-rates-billing",
+          "edition_status": "Current publisher identifies schedule; actual full filed edition unresolved"
+        }
+      ],
+      "scope_reason": "Rules cover applications/contracts, credit/deposits, notices/bills/disputes, termination/restoration, metering/adjustments, service/line extensions, temporary service, master-meter/resale and physical interconnection. Direct access/CCA, generation/storage, demand response and mobilehome conversion are conditional customer/property branches, not independent wholesale businesses.",
+      "census_limit": "Current residential folder enumeration, including standard domestic/time-of-use/master-meter non-submetered and medical/CARE/FERA conditions, plus applicable common-area/general-service, service connection, NEM/NBT/virtual allocation and optional financing schedules. These names are scope dependencies, not asserted current finite leaf inventory. Later-added current rules must be checked against current collection, not inferred absent from 2016 TOC.",
+      "named_pending_action": {
+        "number": "31",
+        "heading": "Installation of Customer-Owned Meter Socket Adapter Devices",
+        "status": "AL5711-E/5711-E-A observed in CPUC Feb27,2026 calendar; proposed/anticipated status only, approval not established. D25-06-034 implementation dependency.",
+        "ref": "https://docs.cpuc.ca.gov/PublishedDocs/Published/G000/M601/K292/601292750.PDF"
+      },
+      "filed_form_collections": {
+        "source": "https://www.sce.com/regulatory/regulatory-information/tariff-books/electric-filed-forms",
+        "source_assertion": "Publisher identifies these as categories of forms used by SCE and approved by CPUC. This does not identify the individual current files.",
+        "routes": [
+          {
+            "heading": "Applications and Agreements for Service",
+            "url": "https://edisonintl.sharepoint.com/:f:/t/Public/TM2/EtV2NH4NPrJOi6_X93amgeUBc76BoboEdTsVUj6OCHov6Q?e=gXKhaB",
+            "fetch_result": "Microsoft sign-in redirect; no file list"
+          },
+          {
+            "heading": "Applications & Agreements for Line Extensions",
+            "url": "https://edisonintl.sharepoint.com/:f:/t/Public/TM2/EllUI3mUX7FJoKP_KqZMAmYBklPW-7Zplekoo29XGD8lXA?e=AGxYnq",
+            "fetch_result": "Microsoft sign-in redirect; no file list"
+          },
+          {
+            "heading": "Other Agreements",
+            "url": "https://edisonintl.sharepoint.com/:f:/t/Public/TM2/EhT_c03I-pNMoMq-dzDJ7fMB3_mK8KjYRVr6a6fWXvNIMQ?e=hZEI8Y",
+            "fetch_result": "Microsoft sign-in redirect; no file list"
+          },
+          {
+            "heading": "CARE/FERA",
+            "url": "https://edisonintl.sharepoint.com/:f:/t/Public/TM2/EilQos6hp9hGu-ChDAl8ggoB_erlND9wlthpUbXcUm3aoQ?e=p2nuhJ",
+            "fetch_result": "Web cache miss; no file list"
+          },
+          {
+            "heading": "Collection/Disconnect Notices",
+            "url": "https://edisonintl.sharepoint.com/:f:/t/Public/TM2/EoSiVM0FFr5NnT2ylNtmwBABMDPFlJZiawdW_X6Kq-0-Rw?e=LJ5gkY",
+            "fetch_result": "Web cache miss; no file list"
+          },
+          {
+            "heading": "Medical Baseline",
+            "url": "https://edisonintl.sharepoint.com/:f:/t/Public/TM2/Ejp5XLzl74VEpJ-uILM_pLcB4Z5yqVtvUjE74M4NcuKMlw?e=hot6vE",
+            "fetch_result": "Web cache miss; no file list"
+          },
+          {
+            "heading": "Operating Notices",
+            "url": "https://edisonintl.sharepoint.com/:f:/t/Public/TM2/EodRtmECdD1EqOlib-FKCNgBnKqRlIZYG8r0ZtPcQ-Iocw?e=Li4dL3",
+            "fetch_result": "Web cache miss; no file list"
+          }
+        ],
+        "application": "Service/account applications, connection and line-extension work, agreements, assistance conditions, billing/disconnection and operating notices. Actual tariff class and customer/property facts determine applicability."
+      },
+      "related_registered_sources": [
+        "CA:SCE-MHP-FORMS"
+      ],
+      "currentness_rule": "Publisher states tariffs without lower-right effective dates are considered effective pending CPUC final review; do not automatically classify blank-date posted tariffs as mere proposals. Preserve advice/approval and effective metadata. Historical2026 directory lists only tariffs approved during2026, not the whole book.",
+      "currentness_source": "https://www.sce.com/regulatory/regulatory-information/tariff-books",
+      "additional_observed_routes": [
+        {
+          "kind": "current general service/industrial rates",
+          "url": "https://edisonintl.sharepoint.com/:f:/t/Public/TM2/EszM_J-L6AhFmonA_791cIUBjKqTWzn4Qap-XVMbdqNQ4A?e=fHg0kX",
+          "result": "Microsoft sign-in redirect; no census"
+        },
+        {
+          "kind": "current other rates",
+          "url": "https://edisonintl.sharepoint.com/:f:/t/Public/TM2/ErU25X6z_55MvDT1KBRM9lkBwy3P42MYaH5zRaQ206MYbg?e=USXHun",
+          "result": "Microsoft sign-in redirect; no census"
+        },
+        {
+          "kind": "2026 historical residential changes",
+          "url": "https://edisonintl.sharepoint.com/:f:/t/Public/TM2/IgCIs6ciyCedRYv1aXujfVtlAblhqMuq1_diXib8gZAC4xk?e=vQGXcQ",
+          "result": "Microsoft sign-in redirect; not complete current tariff book"
+        }
+      ]
+    }
+  ],
+  "integration_note": "Selected tariff parents with explicit unresolved acquisition units. Empty executable units are intentional; do not move collection URLs into section_list. These parents do not close J1 discovery/acquisition dependencies. Existing packets/forms remain separate and linked by instrument ID.",
+  "D05-04-031": {
+    "identity": "D.05-04-031",
+    "adopted_date": "2005-04-07",
+    "proceedings": [
+      "R.03-03-017",
+      "I.03-03-018"
+    ],
+    "adoption_source": "https://docs.cpuc.ca.gov/published/Daily_calendar/45566.htm",
+    "adoption_pdf_source": "https://docs.cpuc.ca.gov/word_pdf/DAILY_CALENDAR/45566.pdf",
+    "locator": "Commission meeting April 7, 2005; D05-04-031 row; PDF printed page 18",
+    "evidence": "Official April18,2005 calendar records denial of rehearing of D04-11-033 as modified and closure of the proceeding.",
+    "original_order_ref": null,
+    "remaining": "Original modifying order document target not recovered. Calendar is adoption evidence, not a substitute for the order.",
+    "observed_search_route": "https://docs.cpuc.ca.gov/DecisionsSearchForm.aspx",
+    "search_input": {
+      "Decision Number": "D0504031",
+      "Proceeding Number": "R0303017",
+      "Meeting Date": "04/07/2005"
+    },
+    "search_route_limit": "Actual form observed; available web tool cannot submit form fields. No successful result URL or original decision ID is asserted."
+  },
+  "remaining": [
+    "SoCalGas current leaf mapping for every named rule/schedule/form, remaining form-TOC scope and necessary preliminary statement dependencies.",
+    "SCE current rules edition/later-rule census, full applicable schedule and filed-form leaf census; current SharePoint file routes.",
+    "D05-04-031 original order remains unidentified; adoption record is not operative modifying text. New indexed searches return later citations only."
+  ]
+}

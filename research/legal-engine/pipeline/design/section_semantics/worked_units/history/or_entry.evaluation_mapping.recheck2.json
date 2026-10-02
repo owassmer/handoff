@@ -1,0 +1,2335 @@
+{
+  "format": "section-semantics-evaluation-mapping-1",
+  "status": "draft_not_evaluation_ready",
+  "reviewer": "/root/reference_final_audit",
+  "model_responses_seen": false,
+  "preparation_sha256": "9bccc2b12318d72d888091c2e7e2fd5c8b1d0e9cf650f19baa6f045d3368e2e0",
+  "expectations_hash": "e063dc115e3610ef5942adde6c6bbd6d809b477b59be81d610d8dda5372c07a6",
+  "plan_hash": "dad63de98c8e6a01e77846bd6fe43bbc2d3cd3c38fd7ac6f996d3de25d5e8296",
+  "plan_validation_error": null,
+  "plan_invalid_jobs": [],
+  "requirements": {
+    "component:O01/location": {
+      "missing_reason": "No compiled chapter applicability predicates.",
+      "candidate_target_set": "O01",
+      "independent_meaning": "Oregon dwelling",
+      "evidence": [
+        "section",
+        "90.115",
+        "90.110",
+        "90.113"
+      ]
+    },
+    "component:O01/chapter_coverage/not/any/0": {
+      "missing_reason": "No compiled chapter applicability predicates.",
+      "candidate_target_set": "O01",
+      "independent_meaning": "90.110 excluded arrangement not contrived to evade chapter",
+      "evidence": [
+        "section",
+        "90.115",
+        "90.110",
+        "90.113"
+      ]
+    },
+    "component:O01/chapter_coverage/not/any/1": {
+      "missing_reason": "No compiled chapter applicability predicates.",
+      "candidate_target_set": "O01",
+      "independent_meaning": "90.113 listed licensed program residence",
+      "evidence": [
+        "section",
+        "90.115",
+        "90.110",
+        "90.113"
+      ]
+    },
+    "component:O01/excluded_arrangements/0": {
+      "missing_reason": "No compiled chapter applicability predicates.",
+      "candidate_target_set": "O01",
+      "independent_meaning": "institutional incidental services except off-campus nondormitory housing",
+      "evidence": [
+        "section",
+        "90.115",
+        "90.110",
+        "90.113"
+      ]
+    },
+    "component:O01/excluded_arrangements/1": {
+      "missing_reason": "No compiled chapter applicability predicates.",
+      "candidate_target_set": "O01",
+      "independent_meaning": "qualifying buyer/seller occupancy no more than90days",
+      "evidence": [
+        "section",
+        "90.115",
+        "90.110",
+        "90.113"
+      ]
+    },
+    "component:O01/excluded_arrangements/2": {
+      "missing_reason": "No compiled chapter applicability predicates.",
+      "candidate_target_set": "O01",
+      "independent_meaning": "fraternal/social organization residence",
+      "evidence": [
+        "section",
+        "90.115",
+        "90.110",
+        "90.113"
+      ]
+    },
+    "component:O01/excluded_arrangements/3": {
+      "missing_reason": "No compiled chapter applicability predicates.",
+      "candidate_target_set": "O01",
+      "independent_meaning": "transient hotel/motel occupancy",
+      "evidence": [
+        "section",
+        "90.115",
+        "90.110",
+        "90.113"
+      ]
+    },
+    "component:O01/excluded_arrangements/4": {
+      "missing_reason": "No compiled chapter applicability predicates.",
+      "candidate_target_set": "O01",
+      "independent_meaning": "squatter",
+      "evidence": [
+        "section",
+        "90.115",
+        "90.110",
+        "90.113"
+      ]
+    },
+    "component:O01/excluded_arrangements/5": {
+      "missing_reason": "No compiled chapter applicability predicates.",
+      "candidate_target_set": "O01",
+      "independent_meaning": "vacation occupancy",
+      "evidence": [
+        "section",
+        "90.115",
+        "90.110",
+        "90.113"
+      ]
+    },
+    "component:O01/excluded_arrangements/6": {
+      "missing_reason": "No compiled chapter applicability predicates.",
+      "candidate_target_set": "O01",
+      "independent_meaning": "employment-conditioned premises occupancy",
+      "evidence": [
+        "section",
+        "90.115",
+        "90.110",
+        "90.113"
+      ]
+    },
+    "component:O01/excluded_arrangements/7": {
+      "missing_reason": "No compiled chapter applicability predicates.",
+      "candidate_target_set": "O01",
+      "independent_meaning": "condominium owner/cooperative proprietary lessee",
+      "evidence": [
+        "section",
+        "90.115",
+        "90.110",
+        "90.113"
+      ]
+    },
+    "component:O01/excluded_arrangements/8": {
+      "missing_reason": "No compiled chapter applicability predicates.",
+      "candidate_target_set": "O01",
+      "independent_meaning": "primarily agricultural rental",
+      "evidence": [
+        "section",
+        "90.115",
+        "90.110",
+        "90.113"
+      ]
+    },
+    "component:O02/landlord": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O02",
+      "independent_meaning": "owner/lessor/sublessor or person authorized to manage or enter rental agreement",
+      "evidence": [
+        "90.100"
+      ]
+    },
+    "component:O02/agent": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O02",
+      "independent_meaning": "oral/written express/implied authority to act for landlord",
+      "evidence": [
+        "90.100"
+      ]
+    },
+    "component:O02/tenant": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O02",
+      "independent_meaning": "entitled residential occupant under rental agreement, excluding guest or temporary occupant",
+      "evidence": [
+        "90.100"
+      ]
+    },
+    "component:O02/dwelling": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O02",
+      "independent_meaning": "residential structure/part; separately rented manufactured/RV/floating-home site is site, not home",
+      "evidence": [
+        "90.100"
+      ]
+    },
+    "component:O02/premises": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O02",
+      "independent_meaning": "dwelling/structure/appurtenances, common or promised grounds/facilities, manufactured/floating facility",
+      "evidence": [
+        "90.100"
+      ]
+    },
+    "component:O02/facility": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O02",
+      "independent_meaning": "manufactured dwelling park or marina",
+      "evidence": [
+        "90.100"
+      ]
+    },
+    "component:O02/park": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O02",
+      "independent_meaning": "four or more manufactured dwellings, primary purpose rent/keep space for fee",
+      "evidence": [
+        "90.100"
+      ]
+    },
+    "component:O02/marina": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O02",
+      "independent_meaning": "qualifying contiguous single-transfer moorage, one owner, four or more floating homes, primary purpose rent space",
+      "evidence": [
+        "90.100"
+      ]
+    },
+    "component:O02/rent": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O02",
+      "independent_meaning": "Payment under the rental agreement in exchange for occupancy and use; excludes security deposits, fees, and specified utility or service charges.",
+      "evidence": [
+        "90.100"
+      ]
+    },
+    "component:O02/week_to_week_tenancy/all/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O02",
+      "independent_meaning": "Occupancy charged weekly and payable at least every seven days",
+      "evidence": [
+        "90.100"
+      ]
+    },
+    "component:O02/week_to_week_tenancy/all/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O02",
+      "independent_meaning": "Written rental agreement defines chapter rights and responsibilities",
+      "evidence": [
+        "90.100"
+      ]
+    },
+    "component:O02/week_to_week_tenancy/all/2": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O02",
+      "independent_meaning": "No fees or security deposits, except permitted applicant screening charge",
+      "evidence": [
+        "90.100"
+      ]
+    },
+    "component:O03/actor/0": {
+      "checks": [
+        {
+          "kind": "field",
+          "target": "records.access_purposes.actor",
+          "expected": "landlord_or_authorized_agent"
+        }
+      ],
+      "reason": "The source actor phrase includes both landlord and agent within statutory scope. The combined category must survive; the literal landlord-only option would drop the other actor. Both list leaves intentionally test the combined field."
+    },
+    "component:O03/actor/1": {
+      "checks": [
+        {
+          "kind": "field",
+          "target": "records.access_purposes.actor",
+          "expected": "landlord_or_authorized_agent"
+        }
+      ],
+      "reason": "The source actor phrase includes both landlord and agent within statutory scope. The combined category must survive; the literal landlord-only option would drop the other actor. Both list leaves intentionally test the combined field."
+    },
+    "component:O03/action": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O03",
+      "independent_meaning": "enter",
+      "evidence": [
+        "1"
+      ]
+    },
+    "component:O03/objects/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O03",
+      "independent_meaning": "dwelling unit",
+      "evidence": [
+        "1"
+      ]
+    },
+    "component:O03/objects/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O03",
+      "independent_meaning": "other premises under tenant exclusive control",
+      "evidence": [
+        "1"
+      ]
+    },
+    "component:O03/allowed_purposes/any/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O03",
+      "independent_meaning": "inspect",
+      "evidence": [
+        "1"
+      ]
+    },
+    "component:O03/allowed_purposes/any/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O03",
+      "independent_meaning": "necessary/agreed repairs",
+      "evidence": [
+        "1"
+      ]
+    },
+    "component:O03/allowed_purposes/any/2": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O03",
+      "independent_meaning": "necessary/agreed decorations alterations improvements",
+      "evidence": [
+        "1"
+      ]
+    },
+    "component:O03/allowed_purposes/any/3": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O03",
+      "independent_meaning": "necessary/agreed services",
+      "evidence": [
+        "1"
+      ]
+    },
+    "component:O03/allowed_purposes/any/4": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O03",
+      "independent_meaning": "agreed yard maintenance/grounds keeping",
+      "evidence": [
+        "1"
+      ]
+    },
+    "component:O03/allowed_purposes/any/5": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O03",
+      "independent_meaning": "exhibit to prospective/actual purchasers mortgagees tenants workers contractors",
+      "evidence": [
+        "1"
+      ]
+    },
+    "component:O04/actor/0": {
+      "checks": [
+        {
+          "kind": "field",
+          "target": "records.service_entry.actor",
+          "expected": "landlord_or_authorized_agent"
+        }
+      ],
+      "reason": "The source actor phrase includes both landlord and agent within statutory scope. The combined category must survive; the literal landlord-only option would drop the other actor. Both list leaves intentionally test the combined field."
+    },
+    "component:O04/actor/1": {
+      "checks": [
+        {
+          "kind": "field",
+          "target": "records.service_entry.actor",
+          "expected": "landlord_or_authorized_agent"
+        }
+      ],
+      "reason": "The source actor phrase includes both landlord and agent within statutory scope. The combined category must survive; the literal landlord-only option would drop the other actor. Both list leaves intentionally test the combined field."
+    },
+    "component:O04/action": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O04",
+      "independent_meaning": "enter to serve notices required/permitted by chapter rental agreement or applicable law",
+      "evidence": [
+        "a"
+      ]
+    },
+    "component:O04/objects/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O04",
+      "independent_meaning": "exclusive-control premises excluding dwelling",
+      "evidence": [
+        "a"
+      ]
+    },
+    "component:O04/advance_notice_required": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O04",
+      "independent_meaning": false,
+      "evidence": [
+        "a"
+      ]
+    },
+    "component:O04/tenant_consent_required": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O04",
+      "independent_meaning": false,
+      "evidence": [
+        "a"
+      ]
+    },
+    "component:O05/term": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O05",
+      "independent_meaning": "emergency",
+      "evidence": [
+        "b"
+      ]
+    },
+    "component:O05/includes/all/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O05",
+      "independent_meaning": "repair problem",
+      "evidence": [
+        "b"
+      ]
+    },
+    "component:O05/includes/all/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O05",
+      "independent_meaning": "unless remedied immediately likely serious damage to premises",
+      "evidence": [
+        "b"
+      ]
+    },
+    "component:O05/exhaustive": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O05",
+      "independent_meaning": false,
+      "evidence": [
+        "b"
+      ]
+    },
+    "component:O06/actor": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O06",
+      "independent_meaning": "landlord (including qualifying statutory manager)",
+      "evidence": [
+        "b",
+        "90.100"
+      ]
+    },
+    "component:O06/condition": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O06",
+      "independent_meaning": "emergency",
+      "evidence": [
+        "b",
+        "90.100"
+      ]
+    },
+    "component:O06/action": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O06",
+      "independent_meaning": "enter dwelling or other exclusive-control premises",
+      "evidence": [
+        "b",
+        "90.100"
+      ]
+    },
+    "component:O06/advance_notice_required": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O06",
+      "independent_meaning": false,
+      "evidence": [
+        "b",
+        "90.100"
+      ]
+    },
+    "component:O06/tenant_consent_required": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O06",
+      "independent_meaning": false,
+      "evidence": [
+        "b",
+        "90.100"
+      ]
+    },
+    "component:O06/time_of_entry": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O06",
+      "independent_meaning": "any time",
+      "evidence": [
+        "b",
+        "90.100"
+      ]
+    },
+    "component:O06/agent_caution": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O06",
+      "independent_meaning": "Do not promote every mere agent to landlord; preserve actor definition and actual authorization facts.",
+      "evidence": [
+        "b",
+        "90.100"
+      ]
+    },
+    "component:O07/actor": {
+      "checks": [
+        {
+          "kind": "field",
+          "target": "records.emergency_post_notice.actor",
+          "expected": "landlord"
+        }
+      ],
+      "reason": "Exact normalized value independently identical to source-backed expectation. This checks only this leaf; applicability and relationships have separate denominator entries.",
+      "evidence": [
+        "b"
+      ]
+    },
+    "component:O07/action": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O07",
+      "independent_meaning": "give tenant actual notice",
+      "evidence": [
+        "b"
+      ]
+    },
+    "component:O07/condition/all/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O07",
+      "independent_meaning": "landlord made emergency entry",
+      "evidence": [
+        "b"
+      ]
+    },
+    "component:O07/condition/all/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O07",
+      "independent_meaning": "tenant absent during entry",
+      "evidence": [
+        "b"
+      ]
+    },
+    "component:O07/timing/maximum": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O07",
+      "independent_meaning": 24,
+      "evidence": [
+        "b"
+      ]
+    },
+    "component:O07/timing/unit": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O07",
+      "independent_meaning": "consecutive clock hours",
+      "evidence": [
+        "b"
+      ]
+    },
+    "component:O07/timing/anchor": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O07",
+      "independent_meaning": "entry",
+      "evidence": [
+        "b"
+      ]
+    },
+    "component:O07/contents/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O07",
+      "independent_meaning": "fact of entry",
+      "evidence": [
+        "b"
+      ]
+    },
+    "component:O07/contents/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O07",
+      "independent_meaning": "entry date",
+      "evidence": [
+        "b"
+      ]
+    },
+    "component:O07/contents/2": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O07",
+      "independent_meaning": "entry time",
+      "evidence": [
+        "b"
+      ]
+    },
+    "component:O07/contents/3": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O07",
+      "independent_meaning": "nature of emergency",
+      "evidence": [
+        "b"
+      ]
+    },
+    "component:O07/contents/4": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O07",
+      "independent_meaning": "names of persons who entered",
+      "evidence": [
+        "b"
+      ]
+    },
+    "component:O08/actor/0": {
+      "checks": [
+        {
+          "kind": "field",
+          "target": "records.repair_entry.actor",
+          "expected": "landlord_or_authorized_agent"
+        }
+      ],
+      "reason": "The source actor phrase includes both landlord and agent within statutory scope. The combined category must survive; the literal landlord-only option would drop the other actor. Both list leaves intentionally test the combined field."
+    },
+    "component:O08/actor/1": {
+      "checks": [
+        {
+          "kind": "field",
+          "target": "records.repair_entry.actor",
+          "expected": "landlord_or_authorized_agent"
+        }
+      ],
+      "reason": "The source actor phrase includes both landlord and agent within statutory scope. The combined category must survive; the literal landlord-only option would drop the other actor. Both list leaves intentionally test the combined field."
+    },
+    "component:O08/condition": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O08",
+      "independent_meaning": "tenant written request for repairs/maintenance",
+      "evidence": [
+        "c"
+      ]
+    },
+    "component:O08/action": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O08",
+      "independent_meaning": "enter upon demand for requested repairs until completed",
+      "evidence": [
+        "c"
+      ]
+    },
+    "component:O08/tenant_absence_allowed": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O08",
+      "independent_meaning": true,
+      "evidence": [
+        "c"
+      ]
+    },
+    "component:O08/advance_notice_required": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O08",
+      "independent_meaning": false,
+      "evidence": [
+        "c"
+      ]
+    },
+    "component:O08/tenant_consent_required": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O08",
+      "independent_meaning": false,
+      "evidence": [
+        "c"
+      ]
+    },
+    "component:O09/target": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O09",
+      "independent_meaning": "O08",
+      "evidence": [
+        "c",
+        "90.160"
+      ]
+    },
+    "component:O09/allowable_entry_time/if": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O09",
+      "independent_meaning": "tenant request specifies allowable times",
+      "evidence": [
+        "c",
+        "90.160"
+      ]
+    },
+    "component:O09/allowable_entry_time/then": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O09",
+      "independent_meaning": "specified times",
+      "evidence": [
+        "c",
+        "90.160"
+      ]
+    },
+    "component:O09/allowable_entry_time/else": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O09",
+      "independent_meaning": "reasonable time",
+      "evidence": [
+        "c",
+        "90.160"
+      ]
+    },
+    "component:O09/authorization_ends/any/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O09",
+      "independent_meaning": "repairs completed",
+      "evidence": [
+        "c",
+        "90.160"
+      ]
+    },
+    "component:O09/authorization_ends/any/1/all/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O09",
+      "independent_meaning": "seven-day authorization expired",
+      "evidence": [
+        "c",
+        "90.160"
+      ]
+    },
+    "component:O09/authorization_ends/any/1/all/1/not/all/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O09",
+      "independent_meaning": "repairs in progress",
+      "evidence": [
+        "c",
+        "90.160"
+      ]
+    },
+    "component:O09/authorization_ends/any/1/all/1/not/all/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O09",
+      "independent_meaning": "reasonable effort to complete timely",
+      "evidence": [
+        "c",
+        "90.160"
+      ]
+    },
+    "component:O09/seven_day_anchor": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O09",
+      "independent_meaning": "tenant written request providing authorization",
+      "evidence": [
+        "c",
+        "90.160"
+      ]
+    },
+    "component:O09/day_count": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O09",
+      "independent_meaning": "consecutive calendar days excluding initial day through11:59pm last day",
+      "evidence": [
+        "c",
+        "90.160"
+      ]
+    },
+    "component:O10/actor": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O10",
+      "independent_meaning": "repair entrant other than landlord",
+      "evidence": [
+        "c"
+      ]
+    },
+    "component:O10/condition": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O10",
+      "independent_meaning": "tenant requests evidence",
+      "evidence": [
+        "c"
+      ]
+    },
+    "component:O10/action": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O10",
+      "independent_meaning": "show written landlord authorization for that person to make repairs",
+      "evidence": [
+        "c"
+      ]
+    },
+    "component:O11/actor/0": {
+      "checks": [
+        {
+          "kind": "field",
+          "target": "records.sale_entry.actor",
+          "expected": "landlord_or_authorized_agent"
+        }
+      ],
+      "reason": "The source actor phrase includes both landlord and agent within statutory scope. The combined category must survive; the literal landlord-only option would drop the other actor. Both list leaves intentionally test the combined field."
+    },
+    "component:O11/actor/1": {
+      "checks": [
+        {
+          "kind": "field",
+          "target": "records.sale_entry.actor",
+          "expected": "landlord_or_authorized_agent"
+        }
+      ],
+      "reason": "The source actor phrase includes both landlord and agent within statutory scope. The combined category must survive; the literal landlord-only option would drop the other actor. Both list leaves intentionally test the combined field."
+    },
+    "component:O11/action": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O11",
+      "independent_meaning": "show dwelling/premises to prospective buyer without advance notice",
+      "evidence": [
+        "d"
+      ]
+    },
+    "component:O11/time": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O11",
+      "independent_meaning": "reasonable",
+      "evidence": [
+        "d"
+      ]
+    },
+    "component:O11/conditions/all/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O11",
+      "independent_meaning": "landlord and tenant agree",
+      "evidence": [
+        "d"
+      ]
+    },
+    "component:O11/conditions/all/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O11",
+      "independent_meaning": "agreement executed while actively attempting sale",
+      "evidence": [
+        "d"
+      ]
+    },
+    "component:O11/conditions/all/2": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O11",
+      "independent_meaning": "writing separate from rental agreement",
+      "evidence": [
+        "d"
+      ]
+    },
+    "component:O11/conditions/all/3": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O11",
+      "independent_meaning": "both parties sign",
+      "evidence": [
+        "d"
+      ]
+    },
+    "component:O11/conditions/all/4": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O11",
+      "independent_meaning": "separate consideration recited",
+      "evidence": [
+        "d"
+      ]
+    },
+    "component:O12/actor/0": {
+      "checks": [
+        {
+          "kind": "field",
+          "target": "records.yard_entry.actor",
+          "expected": "landlord_or_authorized_agent"
+        }
+      ],
+      "reason": "The source actor phrase includes both landlord and agent within statutory scope. The combined category must survive; the literal landlord-only option would drop the other actor. Both list leaves intentionally test the combined field."
+    },
+    "component:O12/actor/1": {
+      "checks": [
+        {
+          "kind": "field",
+          "target": "records.yard_entry.actor",
+          "expected": "landlord_or_authorized_agent"
+        }
+      ],
+      "reason": "The source actor phrase includes both landlord and agent within statutory scope. The combined category must survive; the literal landlord-only option would drop the other actor. Both list leaves intentionally test the combined field."
+    },
+    "component:O12/action": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O12",
+      "independent_meaning": "perform yard maintenance/grounds keeping",
+      "evidence": [
+        "e"
+      ]
+    },
+    "component:O12/objects": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O12",
+      "independent_meaning": "exclusive-control premises excluding dwelling",
+      "evidence": [
+        "e"
+      ]
+    },
+    "component:O12/advance_notice_required": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O12",
+      "independent_meaning": false,
+      "evidence": [
+        "e"
+      ]
+    },
+    "component:O12/conditions/all/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O12",
+      "independent_meaning": "written agreement requires landlord maintenance",
+      "evidence": [
+        "e"
+      ]
+    },
+    "component:O12/conditions/all/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O12",
+      "independent_meaning": "parties agree to entry",
+      "evidence": [
+        "e"
+      ]
+    },
+    "component:O12/conditions/all/2": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O12",
+      "independent_meaning": "entry terms in rental agreement or separate written agreement",
+      "evidence": [
+        "e"
+      ]
+    },
+    "component:O12/conditions/all/3": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O12",
+      "independent_meaning": "reasonable time",
+      "evidence": [
+        "e"
+      ]
+    },
+    "component:O12/conditions/all/4": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O12",
+      "independent_meaning": "reasonable frequency",
+      "evidence": [
+        "e"
+      ]
+    },
+    "component:O13/yard_maintenance_includes/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O13",
+      "independent_meaning": "weeding",
+      "evidence": [
+        "e"
+      ]
+    },
+    "component:O13/yard_maintenance_includes/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O13",
+      "independent_meaning": "mowing grass",
+      "evidence": [
+        "e"
+      ]
+    },
+    "component:O13/yard_maintenance_includes/2": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O13",
+      "independent_meaning": "pruning trees/shrubs",
+      "evidence": [
+        "e"
+      ]
+    },
+    "component:O13/unreasonable_time": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O13",
+      "independent_meaning": "time of day, day of week or particular time conflicting with tenant reasonable specific plans to use premises",
+      "evidence": [
+        "e"
+      ]
+    },
+    "component:O14/actor": {
+      "checks": [
+        {
+          "kind": "field",
+          "target": "records.yard_denial.actor",
+          "expected": "tenant"
+        },
+        {
+          "kind": "field",
+          "target": "records.yard_denial_notice.actor",
+          "expected": "tenant"
+        }
+      ],
+      "reason": "Exact normalized value independently identical to source-backed expectation. This checks only this leaf; applicability and relationships have separate denominator entries.",
+      "evidence": [
+        "e",
+        "90.150"
+      ]
+    },
+    "component:O14/action": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O14",
+      "independent_meaning": "deny O12 entry",
+      "evidence": [
+        "e",
+        "90.150"
+      ]
+    },
+    "component:O14/condition/any/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O14",
+      "independent_meaning": "unreasonable time",
+      "evidence": [
+        "e",
+        "90.150"
+      ]
+    },
+    "component:O14/condition/any/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O14",
+      "independent_meaning": "unreasonable frequency",
+      "evidence": [
+        "e",
+        "90.150"
+      ]
+    },
+    "component:O14/method": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O14",
+      "independent_meaning": "actual notice to landlord/agent",
+      "evidence": [
+        "e",
+        "90.150"
+      ]
+    },
+    "component:O14/deadline": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O14",
+      "independent_meaning": "before or at attempted entry",
+      "evidence": [
+        "e",
+        "90.150"
+      ]
+    },
+    "component:O15/condition/all/0/not/any/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O15",
+      "independent_meaning": "O04",
+      "evidence": [
+        "f",
+        "90.160"
+      ]
+    },
+    "component:O15/condition/all/0/not/any/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O15",
+      "independent_meaning": "O06",
+      "evidence": [
+        "f",
+        "90.160"
+      ]
+    },
+    "component:O15/condition/all/0/not/any/2": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O15",
+      "independent_meaning": "O08",
+      "evidence": [
+        "f",
+        "90.160"
+      ]
+    },
+    "component:O15/condition/all/0/not/any/3": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O15",
+      "independent_meaning": "O11",
+      "evidence": [
+        "f",
+        "90.160"
+      ]
+    },
+    "component:O15/condition/all/0/not/any/4": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O15",
+      "independent_meaning": "O12",
+      "evidence": [
+        "f",
+        "90.160"
+      ]
+    },
+    "component:O15/condition/all/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O15",
+      "independent_meaning": "no contrary agreement about a specific entry",
+      "evidence": [
+        "f",
+        "90.160"
+      ]
+    },
+    "component:O15/notice_actor": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O15",
+      "independent_meaning": "landlord",
+      "evidence": [
+        "f",
+        "90.160"
+      ]
+    },
+    "component:O15/notice_action": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O15",
+      "independent_meaning": "give tenant actual notice of intent to enter",
+      "evidence": [
+        "f",
+        "90.160"
+      ]
+    },
+    "component:O15/minimum_advance/value": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O15",
+      "independent_meaning": 24,
+      "evidence": [
+        "f",
+        "90.160"
+      ]
+    },
+    "component:O15/minimum_advance/unit": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O15",
+      "independent_meaning": "consecutive clock hours",
+      "evidence": [
+        "f",
+        "90.160"
+      ]
+    },
+    "component:O15/minimum_advance/anchor": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O15",
+      "independent_meaning": "service of actual notice",
+      "evidence": [
+        "f",
+        "90.160"
+      ]
+    },
+    "component:O15/entry_actor/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O15",
+      "independent_meaning": "landlord",
+      "evidence": [
+        "f",
+        "90.160"
+      ]
+    },
+    "component:O15/entry_actor/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O15",
+      "independent_meaning": "agent",
+      "evidence": [
+        "f",
+        "90.160"
+      ]
+    },
+    "component:O15/entry_time": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O15",
+      "independent_meaning": "reasonable",
+      "evidence": [
+        "f",
+        "90.160"
+      ]
+    },
+    "component:O16/actor/0": {
+      "checks": [
+        {
+          "kind": "field",
+          "target": "records.ordinary_no_entry_after_denial.actor",
+          "expected": "landlord_or_authorized_agent"
+        }
+      ],
+      "reason": "The source actor phrase includes both landlord and agent within statutory scope. The combined category must survive; the literal landlord-only option would drop the other actor. Both list leaves intentionally test the combined field."
+    },
+    "component:O16/actor/1": {
+      "checks": [
+        {
+          "kind": "field",
+          "target": "records.ordinary_no_entry_after_denial.actor",
+          "expected": "landlord_or_authorized_agent"
+        }
+      ],
+      "reason": "The source actor phrase includes both landlord and agent within statutory scope. The combined category must survive; the literal landlord-only option would drop the other actor. Both list leaves intentionally test the combined field."
+    },
+    "component:O16/prohibited_action": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O16",
+      "independent_meaning": "enter under residual branch",
+      "evidence": [
+        "f"
+      ]
+    },
+    "component:O16/condition/all/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O16",
+      "independent_meaning": "tenant received entry notice",
+      "evidence": [
+        "f"
+      ]
+    },
+    "component:O16/condition/all/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O16",
+      "independent_meaning": "tenant denies entry before or at attempt using specified method",
+      "evidence": [
+        "f"
+      ]
+    },
+    "component:O16/denial_methods/any/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O16",
+      "independent_meaning": "actual notice to landlord/agent",
+      "evidence": [
+        "f"
+      ]
+    },
+    "component:O16/denial_methods/any/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O16",
+      "independent_meaning": "written denial securely attached to main entrance of exclusive-control portion or dwelling",
+      "evidence": [
+        "f"
+      ]
+    },
+    "component:O17/landlord_prohibitions/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O17",
+      "independent_meaning": "abuse access right",
+      "evidence": [
+        "2"
+      ]
+    },
+    "component:O17/landlord_prohibitions/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O17",
+      "independent_meaning": "use access to harass",
+      "evidence": [
+        "2"
+      ]
+    },
+    "component:O17/tenant_prohibition": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O17",
+      "independent_meaning": "unreasonably withhold consent",
+      "evidence": [
+        "2"
+      ]
+    },
+    "component:O18/condition": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O18",
+      "independent_meaning": "space rental in facility for manufactured dwelling/floating home under90.505\u2013850",
+      "evidence": [
+        "3",
+        "90.505",
+        "90.100"
+      ]
+    },
+    "component:O18/result": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O18",
+      "independent_meaning": "90.322 does not apply; no entry authorization inferred from this section",
+      "evidence": [
+        "3",
+        "90.505",
+        "90.100"
+      ]
+    },
+    "component:O19/conditions/all/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O19",
+      "independent_meaning": "tenant owns manufactured dwelling/floating home",
+      "evidence": [
+        "4",
+        "90.100"
+      ]
+    },
+    "component:O19/conditions/all/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O19",
+      "independent_meaning": "rents space",
+      "evidence": [
+        "4",
+        "90.100"
+      ]
+    },
+    "component:O19/conditions/all/2": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O19",
+      "independent_meaning": "not subject to90.505\u2013850 because not in facility",
+      "evidence": [
+        "4",
+        "90.100"
+      ]
+    },
+    "component:O19/access_object": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O19",
+      "independent_meaning": "rented space only",
+      "evidence": [
+        "4",
+        "90.100"
+      ]
+    },
+    "component:O19/excluded_object": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O19",
+      "independent_meaning": "tenant-owned dwelling/home",
+      "evidence": [
+        "4",
+        "90.100"
+      ]
+    },
+    "component:O20/no_other_access_except/any/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O20",
+      "independent_meaning": "court order",
+      "evidence": [
+        "5",
+        "90.410"
+      ]
+    },
+    "component:O20/no_other_access_except/any/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O20",
+      "independent_meaning": "90.410(2) tenant absence in excess of seven days: entry at reasonably necessary times",
+      "evidence": [
+        "5",
+        "90.410"
+      ]
+    },
+    "component:O20/no_other_access_except/any/2": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O20",
+      "independent_meaning": "abandoned or relinquished premises",
+      "evidence": [
+        "5",
+        "90.410"
+      ]
+    },
+    "component:O20/negative": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O20",
+      "independent_meaning": "A one-day absence is not abandonment; refusal is not abandonment.",
+      "evidence": [
+        "5",
+        "90.410"
+      ]
+    },
+    "component:O21/conditions/all/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O21",
+      "independent_meaning": "agency requires entry",
+      "evidence": [
+        "6"
+      ]
+    },
+    "component:O21/conditions/all/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O21",
+      "independent_meaning": "good-faith effort complies with section",
+      "evidence": [
+        "6"
+      ]
+    },
+    "component:O21/conditions/all/2": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O21",
+      "independent_meaning": "effort fails to gain entry",
+      "evidence": [
+        "6"
+      ]
+    },
+    "component:O21/consequence": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O21",
+      "independent_meaning": "no violation of state statute/local ordinance due to that failure",
+      "evidence": [
+        "6"
+      ]
+    },
+    "component:O21/not_permission": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O21",
+      "independent_meaning": "not an independent forced-entry permission",
+      "evidence": [
+        "6"
+      ]
+    },
+    "component:O22/condition": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O22",
+      "independent_meaning": "tenant refuses lawful access",
+      "evidence": [
+        "7",
+        "90.392",
+        "90.375"
+      ]
+    },
+    "component:O22/landlord_options/any/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O22",
+      "independent_meaning": "injunction compelling access",
+      "evidence": [
+        "7",
+        "90.392",
+        "90.375"
+      ]
+    },
+    "component:O22/landlord_options/any/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O22",
+      "independent_meaning": "termination under90.392 and possession through105.100\u2013168",
+      "evidence": [
+        "7",
+        "90.392",
+        "90.375"
+      ]
+    },
+    "component:O22/additional": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O22",
+      "independent_meaning": "actual damages",
+      "evidence": [
+        "7",
+        "90.392",
+        "90.375"
+      ]
+    },
+    "component:O22/no_self_help": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O22",
+      "independent_meaning": true,
+      "evidence": [
+        "7",
+        "90.392",
+        "90.375"
+      ]
+    },
+    "component:O23/notice/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O23",
+      "independent_meaning": "written acts/omissions",
+      "evidence": [
+        "90.392",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O23/notice/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O23",
+      "independent_meaning": "designated termination date",
+      "evidence": [
+        "90.392",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O23/notice/2": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O23",
+      "independent_meaning": "if curable: cure right, at least one possible remedy, cure date",
+      "evidence": [
+        "90.392",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O23/ordinary_minimum_termination_days": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O23",
+      "independent_meaning": 30,
+      "evidence": [
+        "90.392",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O23/ordinary_ongoing_cure_days": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O23",
+      "independent_meaning": 14,
+      "evidence": [
+        "90.392",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O23/distinct_nonongoing_act_cure": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O23",
+      "independent_meaning": "may designate delivery date no earlier",
+      "evidence": [
+        "90.392",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O23/effect_of_timely_cure": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O23",
+      "independent_meaning": "no termination",
+      "evidence": [
+        "90.392",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O23/repeat/conditions": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O23",
+      "independent_meaning": "substantially same noticed violation within six months",
+      "evidence": [
+        "90.392",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O23/repeat/minimum_days": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O23",
+      "independent_meaning": 10,
+      "evidence": [
+        "90.392",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O23/repeat/not_before": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O23",
+      "independent_meaning": "prior notice termination date",
+      "evidence": [
+        "90.392",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O23/repeat/cure_right": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O23",
+      "independent_meaning": false,
+      "evidence": [
+        "90.392",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O23/weekly_substitutions/termination": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O23",
+      "independent_meaning": 7,
+      "evidence": [
+        "90.392",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O23/weekly_substitutions/ongoing_cure": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O23",
+      "independent_meaning": 4,
+      "evidence": [
+        "90.392",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O23/weekly_substitutions/repeat": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O23",
+      "independent_meaning": 4,
+      "evidence": [
+        "90.392",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O23/notice_service": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O23",
+      "independent_meaning": "O28",
+      "evidence": [
+        "90.392",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O23/possession": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O23",
+      "independent_meaning": "judicial possession process, not physical eviction by inference",
+      "evidence": [
+        "90.392",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O24/condition/any/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O24",
+      "independent_meaning": "unlawful entry",
+      "evidence": [
+        "8"
+      ]
+    },
+    "component:O24/condition/any/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O24",
+      "independent_meaning": "lawful entry in unreasonable manner",
+      "evidence": [
+        "8"
+      ]
+    },
+    "component:O24/condition/any/2": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O24",
+      "independent_meaning": "repeated otherwise lawful entry demands with unreasonably harassing effect",
+      "evidence": [
+        "8"
+      ]
+    },
+    "component:O24/tenant_options/any/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O24",
+      "independent_meaning": "injunction preventing recurrence",
+      "evidence": [
+        "8"
+      ]
+    },
+    "component:O24/tenant_options/any/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O24",
+      "independent_meaning": "termination under90.360(1)",
+      "evidence": [
+        "8"
+      ]
+    },
+    "component:O24/additional_damage_entitlement/measure": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O24",
+      "independent_meaning": "actual damages with statutory floor",
+      "evidence": [
+        "8"
+      ]
+    },
+    "component:O24/additional_damage_entitlement/weekly_floor": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O24",
+      "independent_meaning": "one week rent",
+      "evidence": [
+        "8"
+      ]
+    },
+    "component:O24/additional_damage_entitlement/other_tenancy_floor": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O24",
+      "independent_meaning": "one month rent",
+      "evidence": [
+        "8"
+      ]
+    },
+    "component:O24/not_cap": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O24",
+      "independent_meaning": true,
+      "evidence": [
+        "8"
+      ]
+    },
+    "component:O25/ordinary": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O25",
+      "independent_meaning": "written breach notice specifying termination at least30days after delivery; essential-service cure7days, other cure30days",
+      "evidence": [
+        "90.360",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O25/weekly": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O25",
+      "independent_meaning": "at least7days notice if unremedied",
+      "evidence": [
+        "90.360",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O25/remediable_and_adequately_remedied": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O25",
+      "independent_meaning": "termination prevented before specified date",
+      "evidence": [
+        "90.360",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O25/repeat": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O25",
+      "independent_meaning": "substantially same noticed noncompliance within6months: at least14days written notice, or7weekly",
+      "evidence": [
+        "90.360",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O25/notice_service": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O25",
+      "independent_meaning": "O28",
+      "evidence": [
+        "90.360",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O25/cross_reference_safeguards": {
+      "missing_reason": "90.360(4) tenant-caused-condition restriction and(5) consequence absent; final accounting can be separately scoped but termination restriction cannot.",
+      "candidate_target_set": "O25",
+      "independent_meaning": "Section 90.360(4) bars termination or damages under that section for tenant/consented-person deliberately or negligently caused conditions; subsection (5) preserves return of recoverable deposits and prepaid rent on termination.",
+      "evidence": [
+        "90.360",
+        "90.155",
+        "90.160"
+      ]
+    },
+    "component:O26/actual_notice_methods/any/0": {
+      "missing_reason": "Written methods remain deictic; recipient/location conditions incomplete.",
+      "candidate_target_set": "O26",
+      "independent_meaning": "verbal personally to landlord/tenant",
+      "evidence": [
+        "90.150"
+      ]
+    },
+    "component:O26/actual_notice_methods/any/1": {
+      "missing_reason": "Written methods remain deictic; recipient/location conditions incomplete.",
+      "candidate_target_set": "O26",
+      "independent_meaning": "message left on telephone answering device",
+      "evidence": [
+        "90.150"
+      ]
+    },
+    "component:O26/actual_notice_methods/any/2": {
+      "missing_reason": "Written methods remain deictic; recipient/location conditions incomplete.",
+      "candidate_target_set": "O26",
+      "independent_meaning": "written personal delivery",
+      "evidence": [
+        "90.150"
+      ]
+    },
+    "component:O26/actual_notice_methods/any/3": {
+      "missing_reason": "Written methods remain deictic; recipient/location conditions incomplete.",
+      "candidate_target_set": "O26",
+      "independent_meaning": "written left at landlord rental office",
+      "evidence": [
+        "90.150"
+      ]
+    },
+    "component:O26/actual_notice_methods/any/4": {
+      "missing_reason": "Written methods remain deictic; recipient/location conditions incomplete.",
+      "candidate_target_set": "O26",
+      "independent_meaning": "fax to specified residence/office/dwelling",
+      "evidence": [
+        "90.150"
+      ]
+    },
+    "component:O26/actual_notice_methods/any/5": {
+      "missing_reason": "Written methods remain deictic; recipient/location conditions incomplete.",
+      "candidate_target_set": "O26",
+      "independent_meaning": "writing securely attached to relevant main entrance",
+      "evidence": [
+        "90.150"
+      ]
+    },
+    "component:O26/actual_notice_methods/any/6": {
+      "missing_reason": "Written methods remain deictic; recipient/location conditions incomplete.",
+      "candidate_target_set": "O26",
+      "independent_meaning": "written notice under90.155",
+      "evidence": [
+        "90.150"
+      ]
+    },
+    "component:O26/actual_notice_methods/any/7": {
+      "missing_reason": "Written methods remain deictic; recipient/location conditions incomplete.",
+      "candidate_target_set": "O26",
+      "independent_meaning": "other method reasonably calculated actual receipt and agreed/described in written rental agreement",
+      "evidence": [
+        "90.150"
+      ]
+    },
+    "component:O26/mail": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O26",
+      "independent_meaning": "deemed served3days after mailing date, not mailing moment",
+      "evidence": [
+        "90.150"
+      ]
+    },
+    "component:O26/unagreed_email": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O26",
+      "independent_meaning": "not automatically sufficient merely because address known",
+      "evidence": [
+        "90.150"
+      ]
+    },
+    "component:O27/days": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O27",
+      "independent_meaning": "consecutive calendar days; exclude service day; include finalday until11:59pm",
+      "evidence": [
+        "90.160"
+      ]
+    },
+    "component:O27/hours": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O27",
+      "independent_meaning": "consecutive clock hours starting immediately on service except stated tenancy-termination mail/attachment or mail/email route",
+      "evidence": [
+        "90.160"
+      ]
+    },
+    "component:O27/twentyfour_hours": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O27",
+      "independent_meaning": "elapsed24hours, not one business day",
+      "evidence": [
+        "90.160"
+      ]
+    },
+    "component:O27/weekend_roll": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O27",
+      "independent_meaning": false,
+      "evidence": [
+        "90.160"
+      ]
+    },
+    "component:O28/methods/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O28",
+      "independent_meaning": "personal",
+      "evidence": [
+        "90.155"
+      ]
+    },
+    "component:O28/methods/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O28",
+      "independent_meaning": "first-class mail",
+      "evidence": [
+        "90.155"
+      ]
+    },
+    "component:O28/methods/2": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O28",
+      "independent_meaning": "reciprocal written-agreement mail+secureattachment",
+      "evidence": [
+        "90.155"
+      ]
+    },
+    "component:O28/methods/3": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O28",
+      "independent_meaning": "email under qualifying post-occupancy signed addendum",
+      "evidence": [
+        "90.155"
+      ]
+    },
+    "component:O28/mail_only": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O28",
+      "independent_meaning": "add3days to minimum compliance/termination period and show extension in notice",
+      "evidence": [
+        "90.155"
+      ]
+    },
+    "component:O28/email_addendum/0": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O28",
+      "independent_meaning": "both sender/recipient addresses",
+      "evidence": [
+        "90.155"
+      ]
+    },
+    "component:O28/email_addendum/1": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O28",
+      "independent_meaning": "both execute after tenancy/occupancy begins",
+      "evidence": [
+        "90.155"
+      ]
+    },
+    "component:O28/email_addendum/2": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O28",
+      "independent_meaning": "either may terminate/change email on at least3days written notice",
+      "evidence": [
+        "90.155"
+      ]
+    },
+    "component:O28/email_addendum/3": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O28",
+      "independent_meaning": "statutory voluntary electronic-service warning",
+      "evidence": [
+        "90.155"
+      ]
+    },
+    "component:O28/termination_by_email": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O28",
+      "independent_meaning": "also first-class mail",
+      "evidence": [
+        "90.155"
+      ]
+    },
+    "component:O28/alternative_method": {
+      "missing_reason": "Exact normalization not yet independently established across the associated fields; do not count target existence as meaning coverage.",
+      "candidate_target_set": "O28",
+      "independent_meaning": "additional only unless statutory method satisfied",
+      "evidence": [
+        "90.155"
+      ]
+    },
+    "component:O29/general_waiver": {
+      "missing_reason": "No antiwaiver target.",
+      "candidate_target_set": "O29",
+      "independent_meaning": "unenforceable",
+      "evidence": [
+        "90.245",
+        "d",
+        "e",
+        "f"
+      ]
+    },
+    "component:O29/specific_entry_agreement": {
+      "missing_reason": "No antiwaiver target.",
+      "candidate_target_set": "O29",
+      "independent_meaning": "may vary residual terms as section expressly allows; cannot authorize abuse/harassment",
+      "evidence": [
+        "90.245",
+        "d",
+        "e",
+        "f"
+      ]
+    },
+    "component:O29/knowledge_enforcement": {
+      "missing_reason": "No antiwaiver target.",
+      "candidate_target_set": "O29",
+      "independent_meaning": "deliberate use of known prohibited lease provision plus attempt to enforce can support actual damages plus up to3months periodicrent",
+      "evidence": [
+        "90.245",
+        "d",
+        "e",
+        "f"
+      ]
+    },
+    "relationship:0": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": {
+        "from": "O06",
+        "type": "waives_advance_notice_but_not",
+        "to": "O07"
+      }
+    },
+    "relationship:1": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": {
+        "from": "O09",
+        "type": "limits_time_and_scope_of",
+        "to": "O08"
+      }
+    },
+    "relationship:2": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": {
+        "from": "O14",
+        "type": "qualifies",
+        "to": "O12"
+      }
+    },
+    "relationship:3": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": {
+        "from": "O16",
+        "type": "blocks_entry_under",
+        "to": "O15"
+      }
+    },
+    "relationship:4": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": {
+        "from": "O17",
+        "type": "qualifies",
+        "to": "O03"
+      }
+    },
+    "relationship:5": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": {
+        "from": "O18",
+        "type": "excludes_section_scope",
+        "to": "O03"
+      }
+    },
+    "relationship:6": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": {
+        "from": "O19",
+        "type": "limits_object",
+        "to": "O03"
+      }
+    },
+    "relationship:7": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": {
+        "from": "O23",
+        "type": "conditions_termination_remedy",
+        "to": "O22"
+      }
+    },
+    "relationship:8": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": {
+        "from": "O25",
+        "type": "conditions_termination_remedy",
+        "to": "O24"
+      }
+    },
+    "relationship:9": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": {
+        "from": "O26",
+        "type": "defines_method_for",
+        "to": "O07"
+      }
+    },
+    "relationship:10": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": {
+        "from": "O26",
+        "type": "defines_method_for",
+        "to": "O15"
+      }
+    },
+    "relationship:11": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": {
+        "from": "O27",
+        "type": "computes",
+        "to": "O07"
+      }
+    },
+    "relationship:12": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": {
+        "from": "O27",
+        "type": "computes",
+        "to": "O15"
+      }
+    },
+    "case:or01/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "ordinary24hourminimum met"
+    },
+    "case:or01/expected_outputs/1": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "entry permitted for purpose"
+    },
+    "case:or01/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "weekend makes notice insufficient"
+    },
+    "case:or01/must_not_output/1": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "postemergencynotice"
+    },
+    "case:or02/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "advance notice insufficient by1minute"
+    },
+    "case:or02/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "authorize ordinaryentry"
+    },
+    "case:or03/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "entry allowed immediately without consent/advance notice"
+    },
+    "case:or03/expected_outputs/1": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "post-entry actual notice due2026-10-03T23:30:00-07:00"
+    },
+    "case:or03/expected_outputs/2": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "all five content fields required"
+    },
+    "case:or03/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "emergency means no notice of any kind"
+    },
+    "case:or03/must_not_output/1": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "Monday extension"
+    },
+    "case:or04/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "emergency entry permission"
+    },
+    "case:or04/expected_outputs/1": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "no absent-tenant postnotice duty under(1)(b)"
+    },
+    "case:or04/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "infer general exemption from all other law"
+    },
+    "case:or05/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "entry permission may be established"
+    },
+    "case:or05/expected_outputs/1": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "postnotice condition remains unknown; obtain absence fact"
+    },
+    "case:or05/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "absence=false"
+    },
+    "case:or05/must_not_output/1": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "complete unit outcome without this fact"
+    },
+    "case:or06/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "do not enter under ordinary branch"
+    },
+    "case:or06/expected_outputs/1": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "unreasonable refusal may support lawful remedies"
+    },
+    "case:or06/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "force entry because denial unreasonable"
+    },
+    "case:or07/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "outside notice-service entry needs no notice/consent"
+    },
+    "case:or07/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "enter dwelling on same rationale"
+    },
+    "case:or08/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "requested repair entry may proceed without further notice/consent"
+    },
+    "case:or08/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "expand to unrelated inspection"
+    },
+    "case:or09/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "written-request authorization expired; obtain other lawful entry basis"
+    },
+    "case:or09/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "perpetual repair consent"
+    },
+    "case:or10/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "authorization continues for requested repairs until completed subject allowable/reasonabletimes"
+    },
+    "case:or10/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "expiration merely becauseday8"
+    },
+    "case:or11/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "show written landlord authorization"
+    },
+    "case:or11/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "oral proof automatically sufficient"
+    },
+    "case:or12/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "buyer-showing no-notice exception not established"
+    },
+    "case:or12/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "all showings noticefree"
+    },
+    "case:or13/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "no advance notice for agreed prospectivebuyer showing"
+    },
+    "case:or13/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "extend permission to all tenant showings"
+    },
+    "case:or14/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "yard entry denied at conflicting unreasonabletime"
+    },
+    "case:or14/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "yardagreement overrides specificreasonableplans"
+    },
+    "case:or15/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "90.322 excluded"
+    },
+    "case:or15/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "ordinary24hourrule from thissection authorizeshomeentry"
+    },
+    "case:or16/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "any90.322access only rentedspace"
+    },
+    "case:or16/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "enter tenantownedhome"
+    },
+    "case:or17/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "90.410(2) additional entry basis recognized"
+    },
+    "case:or17/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "require abandonment finding"
+    },
+    "case:or17/must_not_output/1": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "infer unlimited accesspurpose"
+    },
+    "case:or18/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "failure-based state/local liability protection"
+    },
+    "case:or18/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "government demand authorizesforcedentry"
+    },
+    "case:or19/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "tenant remedy floor1500 under90.322(8)"
+    },
+    "case:or19/expected_outputs/1": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "injunction or properlynoticedtermination options"
+    },
+    "case:or19/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "damages capped1500"
+    },
+    "case:or19/must_not_output/1": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "instant termination"
+    },
+    "case:or20/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "cause notice specifiesacts remedy/cure andtermination"
+    },
+    "case:or20/expected_outputs/1": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "minimum ongoingcureOctober15"
+    },
+    "case:or20/expected_outputs/2": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "minimumterminationOctober31"
+    },
+    "case:or20/expected_outputs/3": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "judicialpossession only"
+    },
+    "case:or20/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "immediate lockout"
+    },
+    "case:or21/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "not served at mailing instant; nextdayentry fails minimum"
+    },
+    "case:or21/expected_outputs/1": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "account for3day deemedservice plus24houradvance"
+    },
+    "case:or21/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "mailing counts as immediate actualnotice"
+    },
+    "case:or22/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "notice content incomplete"
+    },
+    "case:or22/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "completepostentryduty from timelynotice alone"
+    },
+    "case:or23/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "blanket waiver unenforceable"
+    },
+    "case:or23/expected_outputs/1": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "ordinaryspecificentryagreement fact must independentlyexist"
+    },
+    "case:or23/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "standing allpurpose no-notice authorization"
+    },
+    "case:or24/expected_outputs/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "damages650 not floor400 only"
+    },
+    "case:or24/expected_outputs/1": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "injunction or termination options"
+    },
+    "case:or24/must_not_output/0": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "only unlawfulentry supportsremedy"
+    },
+    "case:or24/must_not_output/1": {
+      "missing_reason": "Actual consumer output shape is not yet established; requires a case-output comparison, not substitution of legal fields.",
+      "independent_meaning": "cap400"
+    },
+    "negative:0": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": "Emergency permits entry but does not prove every nonemergencyentry prohibited."
+    },
+    "negative:1": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": "Reasonableentrytime and24hours are separate conditions."
+    },
+    "negative:2": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": "Tenantpresence controls subsequentnoticetrigger, not emergencypermission."
+    },
+    "negative:3": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": "Specific notice-method compliance is not automatically actual reading."
+    },
+    "negative:4": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": "Reasonabletime is a factual/legal judgment, not fixed officehours."
+    },
+    "negative:5": {
+      "missing_reason": "Exact comparison for this independent relationship/negative control requires completed, defined relation semantics or consumer output.",
+      "independent_meaning": "90.322(8) floor not cap and ordinary notice breach alone not automatically damages without statutoryremedyconditions."
+    }
+  },
+  "association_artifact": "or_entry.evaluation_target_associations.json",
+  "note": "Frozen independent expectations remain unchanged. Every independent requirement appears, including all case outputs and negative controls. Unmapped entries explicitly preserve missing work. No model response was used. This draft is not a readiness assertion."
+}

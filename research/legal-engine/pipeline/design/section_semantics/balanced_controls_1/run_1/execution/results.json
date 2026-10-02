@@ -1,0 +1,418 @@
+[
+  {
+    "case_id": "j001+j002",
+    "request_hash": "6c7fe66f1a4716f3b15b30991f3c683099e96fbba046c11e378c8f47c07dd1a2",
+    "started_at": "2026-10-01T18:25:19.943107+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": [
+            "(b) In case of an\nemergency, a landlord may enter the dwelling unit or any portion of the\npremises under a tenant’s exclusive control without consent of the tenant,\nwithout notice to the tenant and at any time. “Emergency” includes but is not\nlimited to a repair problem that, unless remedied immediately, is likely to\ncause serious damage to the premises. If a landlord makes an emergency entry in\nthe tenant’s absence, the landlord shall give the tenant actual notice within\n24 hours after the entry, and the notice shall include the fact of the entry,\nthe date and time of the entry, the nature of the emergency and the names of\nthe persons who entered."
+          ],
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "j001": {
+              "type": "noul",
+              "instructions": {
+                "question": "Does the passage define the term with this meaning?",
+                "candidate": "Includes, but is not limited to, an immediately necessary repair to prevent likely serious damage to the premises.",
+                "term": "Emergency"
+              }
+            },
+            "j002": {
+              "type": "noul",
+              "instructions": {
+                "question": "Does the passage define the term with this meaning?",
+                "candidate": "Means only an immediately necessary repair to prevent likely serious damage to the premises.",
+                "term": "Emergency"
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":[\"(b) In case of an\\nemergency, a landlord may enter the dwelling unit or any portion of the\\npremises under a tenant’s exclusive control without consent of the tenant,\\nwithout notice to the tenant and at any time. “Emergency” includes but is not\\nlimited to a repair problem that, unless remedied immediately, is likely to\\ncause serious damage to the premises. If a landlord makes an emergency entry in\\nthe tenant’s absence, the landlord shall give the tenant actual notice within\\n24 hours after the entry, and the notice shall include the fact of the entry,\\nthe date and time of the entry, the nature of the emergency and the names of\\nthe persons who entered.\"],\"model\":\"typesafe/jev-1.13\",\"questions\":{\"j001\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Does the passage define the term with this meaning?\",\"candidate\":\"Includes, but is not limited to, an immediately necessary repair to prevent likely serious damage to the premises.\",\"term\":\"Emergency\"}},\"j002\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Does the passage define the term with this meaning?\",\"candidate\":\"Means only an immediately necessary repair to prevent likely serious damage to the premises.\",\"term\":\"Emergency\"}}}}",
+        "body_sha256": "eb503cc0c340e1e5e6dea129e9239ddad52ec482c73d359952ba19f8dd38e723"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "j001": {
+          "type": "noul",
+          "noul": 0.97
+        },
+        "j002": {
+          "type": "noul",
+          "noul": 0.24
+        }
+      },
+      "usage": {
+        "input_tokens": 518,
+        "output_tokens": 42,
+        "cost": 2.1756e-05
+      },
+      "id": "gen-dec-1790879120-RB7DfZErRlA9hrLf8lgp",
+      "provider": "TypeSafe"
+    },
+    "diagnostics": {
+      "j001": "YES",
+      "j002": "NO"
+    },
+    "status": "answered",
+    "seconds": 0.4018129159230739
+  },
+  {
+    "case_id": "j003+j004",
+    "request_hash": "bbf9bb8adc89f2e938b2e3b508eb4bbcf784b01e878275f3afb6126be65a11bc",
+    "started_at": "2026-10-01T18:25:20.346127+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": [
+            "(e)(A) If a\nwritten agreement requires the landlord to perform yard maintenance or grounds\nkeeping for the premises:\n(i) A landlord\nand tenant may agree that the landlord or landlord’s agent may enter for that\npurpose upon the premises under the tenant’s exclusive control not including\nthe dwelling unit, without notice to the tenant, at reasonable times and with\nreasonable frequency. The terms of the right of entry must be described in the\nrental agreement or in a separate written agreement.\n(ii) A tenant may\ndeny consent for a landlord or landlord’s agent to enter upon the premises\npursuant to this paragraph if the entry is at an unreasonable time or with\nunreasonable frequency. The tenant must assert the denial by giving actual\nnotice of the denial to the landlord or landlord’s agent prior to, or at the\ntime of, the attempted entry.\n(B) As used in\nthis paragraph:\n(i) “Yard\nmaintenance or grounds keeping” includes, but is not limited to, weeding,\nmowing grass and pruning trees and shrubs.\n(ii) “Unreasonable\ntime” refers to a time of day, day of the week or particular time that\nconflicts with the tenant’s reasonable and specific plans to use the premises."
+          ],
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "j003": {
+              "type": "noul",
+              "instructions": {
+                "question": "Does the passage define the term with this meaning?",
+                "candidate": "Includes, but is not limited to, weeding, mowing grass, and pruning trees and shrubs.",
+                "term": "Yard maintenance or grounds keeping"
+              }
+            },
+            "j004": {
+              "type": "noul",
+              "instructions": {
+                "question": "Does the passage define the term with this meaning?",
+                "candidate": "Requires all of weeding, mowing grass, and pruning trees and shrubs on every visit.",
+                "term": "Yard maintenance or grounds keeping"
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":[\"(e)(A) If a\\nwritten agreement requires the landlord to perform yard maintenance or grounds\\nkeeping for the premises:\\n(i) A landlord\\nand tenant may agree that the landlord or landlord’s agent may enter for that\\npurpose upon the premises under the tenant’s exclusive control not including\\nthe dwelling unit, without notice to the tenant, at reasonable times and with\\nreasonable frequency. The terms of the right of entry must be described in the\\nrental agreement or in a separate written agreement.\\n(ii) A tenant may\\ndeny consent for a landlord or landlord’s agent to enter upon the premises\\npursuant to this paragraph if the entry is at an unreasonable time or with\\nunreasonable frequency. The tenant must assert the denial by giving actual\\nnotice of the denial to the landlord or landlord’s agent prior to, or at the\\ntime of, the attempted entry.\\n(B) As used in\\nthis paragraph:\\n(i) “Yard\\nmaintenance or grounds keeping” includes, but is not limited to, weeding,\\nmowing grass and pruning trees and shrubs.\\n(ii) “Unreasonable\\ntime” refers to a time of day, day of the week or particular time that\\nconflicts with the tenant’s reasonable and specific plans to use the premises.\"],\"model\":\"typesafe/jev-1.13\",\"questions\":{\"j003\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Does the passage define the term with this meaning?\",\"candidate\":\"Includes, but is not limited to, weeding, mowing grass, and pruning trees and shrubs.\",\"term\":\"Yard maintenance or grounds keeping\"}},\"j004\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Does the passage define the term with this meaning?\",\"candidate\":\"Requires all of weeding, mowing grass, and pruning trees and shrubs on every visit.\",\"term\":\"Yard maintenance or grounds keeping\"}}}}",
+        "body_sha256": "10eed0c3d3b9c996540e773ad44782c44b3e60e2bd976accd7a8c504cb154a52"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "j003": {
+          "type": "noul",
+          "noul": 0.98
+        },
+        "j004": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "usage": {
+        "input_tokens": 651,
+        "output_tokens": 42,
+        "cost": 2.7342e-05
+      },
+      "id": "gen-dec-1790879120-aodNt32a8fjGPVRgoupx",
+      "provider": "TypeSafe"
+    },
+    "diagnostics": {
+      "j003": "YES",
+      "j004": "NO"
+    },
+    "status": "answered",
+    "seconds": 0.35313229192979634
+  },
+  {
+    "case_id": "j005+j006",
+    "request_hash": "44c38cd8d4a214bea7e89d1df299fd755dab8e8f2393553f72ab71bb296ac1a1",
+    "started_at": "2026-10-01T18:25:20.700918+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": [
+            "(41)(a) “Rent”\nmeans any payment to be made to the landlord under the rental agreement,\nperiodic or otherwise, in exchange for the right of a tenant and any permitted\npet to occupy a dwelling unit to the exclusion of others and to use the\npremises.\n(b) “Rent” does\nnot include security deposits, fees or utility or service charges as described\nin ORS 90.315 (4) and 90.562."
+          ],
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "j005": {
+              "type": "noul",
+              "instructions": {
+                "question": "Does the definition establish this detail?",
+                "candidate": "Rent excludes security deposits and fees.",
+                "term": "Rent"
+              }
+            },
+            "j006": {
+              "type": "noul",
+              "instructions": {
+                "question": "Does the definition establish this detail?",
+                "candidate": "Rent includes security deposits and fees.",
+                "term": "Rent"
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":[\"(41)(a) “Rent”\\nmeans any payment to be made to the landlord under the rental agreement,\\nperiodic or otherwise, in exchange for the right of a tenant and any permitted\\npet to occupy a dwelling unit to the exclusion of others and to use the\\npremises.\\n(b) “Rent” does\\nnot include security deposits, fees or utility or service charges as described\\nin ORS 90.315 (4) and 90.562.\"],\"model\":\"typesafe/jev-1.13\",\"questions\":{\"j005\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Does the definition establish this detail?\",\"candidate\":\"Rent excludes security deposits and fees.\",\"term\":\"Rent\"}},\"j006\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Does the definition establish this detail?\",\"candidate\":\"Rent includes security deposits and fees.\",\"term\":\"Rent\"}}}}",
+        "body_sha256": "e8f17698d0f77b38b635c15bfcbc40f51dd9f8e6827778dee2ec1dde9e7b0268"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "j005": {
+          "type": "noul",
+          "noul": 0.98
+        },
+        "j006": {
+          "type": "noul",
+          "noul": 0.02
+        }
+      },
+      "usage": {
+        "input_tokens": 449,
+        "output_tokens": 42,
+        "cost": 1.8858e-05
+      },
+      "id": "gen-dec-1790879120-9n6cKLnPQxtqxhK6EM0Z",
+      "provider": "TypeSafe"
+    },
+    "diagnostics": {
+      "j005": "YES",
+      "j006": "NO"
+    },
+    "status": "answered",
+    "seconds": 0.3258234590757638
+  },
+  {
+    "case_id": "j007+j008",
+    "request_hash": "1d370af9e9bbf4b0db53a1ca5c56b0a98b868bdaecc927b4034dc2aa2acadb69",
+    "started_at": "2026-10-01T18:25:21.027986+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": [
+            "(a) “Landlord” means any operator, keeper, lessor, or sublessor of any furnished or unfurnished premises for hire, or his or her agent or successor in interest."
+          ],
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "j007": {
+              "type": "noul",
+              "instructions": {
+                "question": "Does the definition establish this detail?",
+                "candidate": "Landlord includes the operator’s agent or successor in interest.",
+                "term": "Landlord"
+              }
+            },
+            "j008": {
+              "type": "noul",
+              "instructions": {
+                "question": "Does the definition establish this detail?",
+                "candidate": "Landlord excludes the operator’s agent or successor in interest.",
+                "term": "Landlord"
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":[\"(a) “Landlord” means any operator, keeper, lessor, or sublessor of any furnished or unfurnished premises for hire, or his or her agent or successor in interest.\"],\"model\":\"typesafe/jev-1.13\",\"questions\":{\"j007\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Does the definition establish this detail?\",\"candidate\":\"Landlord includes the operator’s agent or successor in interest.\",\"term\":\"Landlord\"}},\"j008\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Does the definition establish this detail?\",\"candidate\":\"Landlord excludes the operator’s agent or successor in interest.\",\"term\":\"Landlord\"}}}}",
+        "body_sha256": "6b9927e765007e58b364c0e36a54df668dc1ff8d48f78b2f5e59c2f8b706846f"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "j007": {
+          "type": "noul",
+          "noul": 0.98
+        },
+        "j008": {
+          "type": "noul",
+          "noul": 0.02
+        }
+      },
+      "usage": {
+        "input_tokens": 404,
+        "output_tokens": 42,
+        "cost": 1.6968e-05
+      },
+      "id": "gen-dec-1790879121-Z0D65OaokEJztCNTBbwm",
+      "provider": "TypeSafe"
+    },
+    "diagnostics": {
+      "j007": "YES",
+      "j008": "NO"
+    },
+    "status": "answered",
+    "seconds": 0.3218740001320839
+  },
+  {
+    "case_id": "j009+j010+j011+j012",
+    "request_hash": "c0323f1e35b66c08dd85bf563f0b6204ccea12af1686c8d81664cfafdfdd95a5",
+    "started_at": "2026-10-01T18:25:21.351524+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": [
+            "(b) Where personal\nproperty is not released pursuant to subdivision (a) and the notice stated that the personal property would be sold at a public sale, the landlord shall release the personal property to the former tenant if he or she claims it prior to the time it is sold and pays the reasonable cost of storage, advertising, and sale incurred prior to the time the property is withdrawn from sale."
+          ],
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "j009": {
+              "type": "noul",
+              "instructions": {
+                "question": "Is this candidate condition expressed in the passage?",
+                "candidate": "The notice stated that the property would be sold at public sale."
+              }
+            },
+            "j010": {
+              "type": "noul",
+              "instructions": {
+                "question": "Is this candidate condition expressed in the passage?",
+                "candidate": "The notice stated that the landlord would retain the property for personal use."
+              }
+            },
+            "j011": {
+              "type": "noul",
+              "instructions": {
+                "question": "Is this candidate condition expressed in the passage?",
+                "candidate": "Property was not released pursuant to subdivision(a)."
+              }
+            },
+            "j012": {
+              "type": "noul",
+              "instructions": {
+                "question": "Is this candidate condition expressed in the passage?",
+                "candidate": "Property had already been released pursuant to subdivision(a)."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":[\"(b) Where personal\\nproperty is not released pursuant to subdivision (a) and the notice stated that the personal property would be sold at a public sale, the landlord shall release the personal property to the former tenant if he or she claims it prior to the time it is sold and pays the reasonable cost of storage, advertising, and sale incurred prior to the time the property is withdrawn from sale.\"],\"model\":\"typesafe/jev-1.13\",\"questions\":{\"j009\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Is this candidate condition expressed in the passage?\",\"candidate\":\"The notice stated that the property would be sold at public sale.\"}},\"j010\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Is this candidate condition expressed in the passage?\",\"candidate\":\"The notice stated that the landlord would retain the property for personal use.\"}},\"j011\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Is this candidate condition expressed in the passage?\",\"candidate\":\"Property was not released pursuant to subdivision(a).\"}},\"j012\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Is this candidate condition expressed in the passage?\",\"candidate\":\"Property had already been released pursuant to subdivision(a).\"}}}}",
+        "body_sha256": "ff21c6ebce0415d326e3b3d03691b69f57829a15a2d21efaa40358249d38a512"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "j009": {
+          "type": "noul",
+          "noul": 0.98
+        },
+        "j010": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "j011": {
+          "type": "noul",
+          "noul": 0.97
+        },
+        "j012": {
+          "type": "noul",
+          "noul": 0.1
+        }
+      },
+      "usage": {
+        "input_tokens": 504,
+        "output_tokens": 80,
+        "cost": 2.1168e-05
+      },
+      "id": "gen-dec-1790879121-PO8E8105e2YTczBI0tVT",
+      "provider": "TypeSafe"
+    },
+    "diagnostics": {
+      "j009": "YES",
+      "j010": "NO",
+      "j011": "YES",
+      "j012": "NO"
+    },
+    "status": "answered",
+    "seconds": 0.3280125418677926
+  },
+  {
+    "case_id": "j013+j014+j015+j016",
+    "request_hash": "45ea00409aa69c906c65419f9d7ee63df53a905ad2304fa20cbef9de3114a325",
+    "started_at": "2026-10-01T18:25:21.681769+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": [
+            "(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling."
+          ],
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "j013": {
+              "type": "noul",
+              "instructions": {
+                "question": "Is this candidate condition expressed in the passage?",
+                "candidate": "The former tenant reclaims the property."
+              }
+            },
+            "j014": {
+              "type": "noul",
+              "instructions": {
+                "question": "Is this candidate condition expressed in the passage?",
+                "candidate": "An unrelated person not reasonably believed to be an owner reclaims the property."
+              }
+            },
+            "j015": {
+              "type": "noul",
+              "instructions": {
+                "question": "Is this claimant requirement necessary in every case under the passage?",
+                "candidate": "The former tenant personally reclaims in every case satisfying the reclaimant condition."
+              }
+            },
+            "j016": {
+              "type": "noul",
+              "instructions": {
+                "question": "Does the passage establish this relationship between the claimant alternatives?",
+                "candidate": "Former-tenant reclaim OR reasonably-believed-other-owner reclaim satisfies the claimant component."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":[\"(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling.\"],\"model\":\"typesafe/jev-1.13\",\"questions\":{\"j013\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Is this candidate condition expressed in the passage?\",\"candidate\":\"The former tenant reclaims the property.\"}},\"j014\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Is this candidate condition expressed in the passage?\",\"candidate\":\"An unrelated person not reasonably believed to be an owner reclaims the property.\"}},\"j015\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Is this claimant requirement necessary in every case under the passage?\",\"candidate\":\"The former tenant personally reclaims in every case satisfying the reclaimant condition.\"}},\"j016\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Does the passage establish this relationship between the claimant alternatives?\",\"candidate\":\"Former-tenant reclaim OR reasonably-believed-other-owner reclaim satisfies the claimant component.\"}}}}",
+        "body_sha256": "aa407cf4a8ea0905eef8691dd1772e2f05330201d67e6da9e2f9493678e12abf"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "j013": {
+          "type": "noul",
+          "noul": 0.95
+        },
+        "j014": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "j015": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "j016": {
+          "type": "noul",
+          "noul": 0.92
+        }
+      },
+      "usage": {
+        "input_tokens": 522,
+        "output_tokens": 80,
+        "cost": 2.1924e-05
+      },
+      "id": "gen-dec-1790879121-YfTUMRvm1shj6S10Ywx7",
+      "provider": "TypeSafe"
+    },
+    "diagnostics": {
+      "j013": "YES",
+      "j014": "NO",
+      "j015": "NO",
+      "j016": "YES"
+    },
+    "status": "answered",
+    "seconds": 0.31373829091899097
+  }
+]

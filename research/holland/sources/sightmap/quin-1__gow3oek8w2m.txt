@@ -1,0 +1,33 @@
+SOURCE: https://sightmap.com/embed/gow3oek8w2m (page) -> https://sightmap.com/app/api/v1/r5v56025pny/sightmaps/118935 (the embed's own JSON feed, fetched with curl)
+RETRIEVED: 2026-09-30
+ASSET: Quin & Nita | units on map: 46
+
+FEES/EXPENSES (label | type | frequency | required | refundable | amounts seen across units | tooltip)
+- Holding Fee Applied | holding | one time | req=True | refundable=True | -$500.00 | Application of holding fee to the total deposit due at move in.
+- Application Screening Fee (Non-refundable) | application | one time | req=True | refundable=False | $26.75 | No screening fee is required with qualified PTSR
+- Natural Gas | gas | month | req=True | refundable=False | Varies (Ratio) | Resident will be billed for gas usage for their apartment using on a ratio utility allocation formula based on the apartment square footage and number of occupants.
+- Trash | trash | month | req=True | refundable=False | Varies (Ratio) | Resident will be billed for trash & recycling using on a ratio utility allocation formula based on the number of occupants in the apartment.
+- Water | water | month | req=True | refundable=False | Varies (Metered) | Resident will be billed for water for their apartment based on the individual apartment sub-metered water usage.
+- Monthly Administrative Billing Fee | utilities_admin | month | req=True | refundable=False | $5.00 | Monthly billing to resident by third party of rent, mandatory and optional charges such as utilities (if applicable), trash, pet rent, parking, etc.
+- Sewer | utilities_other | month | req=True | refundable=False | Varies (Metered) | Resident will be billed for sewer for their apartment based on the individual apartment sub-metered water usage.
+- Holding Fee (may or may not be refundable) | holding | one time | req=True | refundable=True | $500.00 | Applied to total deposit due at move in. Refundable if denied or if you cancel w/in 24 hrs.
+- Deposit (refundable) | deposit | one time | req=True | refundable=True | $500.00 | $500 – 1 Months Rent based on screening results
+- Internet | internet | month | req=False | refundable=False | Varies | Residents pays directly to internet provider
+- Electricity | electricity | month | req=True | refundable=False | Varies (Ratio) | Resident will be billed for electricity for their apartment using on a ratio utility allocation formula based on the apartment square footage and number of occupants.
+- Pet Deposit (refundable) | pet_deposit_other | one time | req=False | refundable=True | $300.00 | Two pets are permitted per apartment. Breed restrictions apply.  Pet deposit is not charged per pet. Only one refundable pet deposit is due for $300/apartment.
+- Package Service | packages | one time | req=True | refundable=False | $20.00 | Package svc registration fee, paid to property
+- Bicycle Storage | bicycle_storage | month | req=False | refundable=False | $0.00 | Bike storage available first-come, first-served
+- Premium Parking | parking_other | month | req=False | refundable=False | $200.00 | Single parking space, B1 or B2 Premium Parking, in secure garage.
+- EV Parking | ev_parking | month | req=False | refundable=False | $225.00 | Open EV charging avail. w/in garage
+- Renter's Liability Insurance | renters_insurance | month | req=True | refundable=False | Varies | Resident must maintain liability renter's insurance
+- Guest Suite Rental (nightly) | guest_suite | occur | req=False | refundable=False | $175.00 - $200.00 | Nightly rental of furnished guest apartment, including on-site parking. $175 per night standard or $190 per night for holidays.
+- Clubhouse Rental (4 hrs) | community_other | occur | req=False | refundable=False | $250.00 | No deposit required
+- Pet Rent | pet_rent_other | month | req=False | refundable=False | $35.00 | Two pets are permitted per apartment. Pet rent is not charged per pet. Only one monthly pet rent is charged for $35/apartment.
+- Reserved EV Parking | ev_parking | month | req=False | refundable=False | $225.00 | Reserved EV charging parking spaces in secured access garage
+- Reserved Parking | parking_other | month | req=False | refundable=False | $200.00 | Single parking space, B1 or B2 Premium Parking, in secure garage
+
+PRICING DISCLAIMER (Holland Total Monthly Leasing Price Disclaimer [STANDARD]): *The Total Monthly Leasing Price includes base rent, all mandatory monthly & one-time fees, and optional user-selected fees, excluding variable or usage-based charges. Additional fees may apply based on the application/lease agreement, such as changes to the Security Deposit based on screening results. Certain fees may not apply to apartments under housing vouchers/affordable programs. All fees are nonrefundable unless stated or required by law. Pricing and fees are subject to application/lease terms. Residents must maintain liability insurance and activate utilities billed directly by the provider. Mandatory or variable fees prohibited by law are not included in the Total Monthly Leasing Price and won’t be charged. Any legally prohibited fees will be removed from Resident billing by the effective date of relevant law changes. In Colorado, this includes common area utilities, porter service & pest control.
+
+CALCULATOR DISCLAIMER: *The Total Monthly Leasing Price includes base rent, all mandatory monthly & one-time fees, and optional user-selected fees, excluding variable or usage-based charges. Additional fees may apply based on the application/lease agreement, such as changes to the Security Deposit based on screening results. Certain fees may not apply to apartments under housing vouchers/affordable programs. All fees are nonrefundable unless stated or required by law. Pricing and fees are subject to application/lease terms. Residents must maintain liability insurance and activate utilities billed directly by the provider. Mandatory or variable fees prohibited by law are not included in the Total Monthly Leasing Price and won’t be charged. Any legally prohibited fees will be removed from Resident billing by the effective date of relevant law changes. In Colorado, this includes common area utilities, porter service & pest control.
+
+GENERAL DISCLAIMER: None

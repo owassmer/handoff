@@ -1,0 +1,41 @@
+{
+  "version": "definition-support-heldout-1",
+  "status": "Frozen task contracts for fresh held-out evaluation; no capability acceptance",
+  "tasks": {
+    "definition_present": {
+      "primitive": "noul",
+      "instructions": "Does this passage define a term?",
+      "fields": [
+        "passage"
+      ],
+      "source_fields": [
+        "passage"
+      ],
+      "preparation": "Select complete defining or operative language, including the lead-in. A heading or source label is not the passage.",
+      "permits": "Identify a passage for definition extraction; a negative concerns only the selected passage, not the source universe.",
+      "truth_boundary": "YES when the selected passage assigns a meaning to at least one term, expressly or by operative incorporation of a definition elsewhere. Mere use, examples without an assigned meaning, and a reported proposal not adopted by the passage are NO. The object is the passage, not an implicit selected term. Incorporation requires retrieval before extracting the actual meaning.",
+      "criteria": {
+        "true": "The passage assigns a meaning to a term, directly or by adopting a definition from elsewhere.",
+        "false": "The passage does not assign or adopt a meaning; it only uses, illustrates or reports a proposed definition."
+      }
+    },
+    "supports_claim": {
+      "primitive": "noul",
+      "instructions": "Does the supplied text support this claim?",
+      "fields": [
+        "claim",
+        "text"
+      ],
+      "source_fields": [
+        "text"
+      ],
+      "preparation": "Supply one claim and complete operative evidence, including qualifications needed to assess it. Keep the agent-authored claim distinct from source text.",
+      "permits": "Assess support for that claim from that evidence. Agent still checks completeness of the resulting legal interpretation.",
+      "truth_boundary": "YES only if the supplied evidence directly states or necessarily implies the complete individual proposition, including its modality and conditions. Mere compatibility, topical overlap or a reported argument not adopted as the source’s conclusion is NO for a claim that the source establishes the rule. A claim explicitly about what someone argued is judged as that different proposition.",
+      "criteria": {
+        "true": "The text states or necessarily implies the claim with its conditions.",
+        "false": "The text does not establish the claim; compatibility or mentioning the subject is insufficient."
+      }
+    }
+  }
+}

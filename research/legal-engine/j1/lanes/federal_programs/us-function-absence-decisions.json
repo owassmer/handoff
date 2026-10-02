@@ -1,0 +1,150 @@
+{
+  "as_of": "2026-10-01",
+  "jurisdiction": "US",
+  "basis": "Current pipeline/chain_map.json function definitions and current US/CA instruments.json selections; bounded mapping review.",
+  "function_decisions": [
+    {
+      "function": "broker_licensing",
+      "disposition": "functions_without_instrument: legitimate state-layer function for this definition",
+      "add_federal_function_tags": [],
+      "reason": "The defined function concerns real-estate broker/property-manager licensing for leasing, rent collection and deposit handling, statutory exemptions, trust duties and recovery of compensation. No distinct general federal licensure source is warranted by these activities. California licensing determines this branch; HUD approval of a management agent is a separate program eligibility/contract condition and does not confer a state broker license.",
+      "crosslayer_instruments": [
+        {
+          "id": "CA:BPC",
+          "selected_unit": "division 4 / part 1 / chapter 3",
+          "references": [
+            "10130",
+            "10131(b)",
+            "10131.01",
+            "10133",
+            "10136",
+            "10145"
+          ],
+          "purpose": "License-trigger acts, specified exemptions, compensation recovery and handling of trust funds."
+        },
+        {
+          "id": "CA:CCR10",
+          "selected_unit": "Chapter 6 - Real Estate Commissioner",
+          "purpose": "Real estate regulatory duties, including trust-account controls."
+        }
+      ],
+      "conditional_federal_dependencies": [
+        {
+          "id": "US:HUD4381.5",
+          "selected_unit": "HUD 4381.5: Approval of Management Agents",
+          "references": [
+            "2.1",
+            "2.2",
+            "2.3",
+            "2.4"
+          ],
+          "existing_functions": [
+            "housing_assistance",
+            "provider_contracts",
+            "payments",
+            "landlord_tenant",
+            "work_standards"
+          ],
+          "reason": "Owner selection and agency approval depend on project and mortgage/program status. Treat this as an additional approval gate for the selected program, independently of California licensure/exemption; do not add broker_licensing merely because the handbook concerns managers."
+        }
+      ],
+      "primary_sources": [
+        {
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=10131.",
+          "evidence": "Official section identifies compensated leasing/renting and rent collection for another as broker acts."
+        },
+        {
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=BPC&division=4.&part=1.&chapter=3.",
+          "evidence": "Existing selected official chapter route contains licensing provisions and exceptions."
+        },
+        {
+          "url": "https://archives.hud.gov/offices/adm/hudclips/handbooks/hsgh/43815c2HSGH.PDF",
+          "evidence": "Opened23-page official Chapter2; paragraphs2.1–2.4 describe program-specific selection/approval and agent relationships, not general occupational licensure."
+        }
+      ]
+    },
+    {
+      "function": "unclaimed_property",
+      "disposition": "functions_without_instrument: legitimate state-layer function as expressly defined",
+      "add_federal_function_tags": [],
+      "reason": "The function explicitly concerns the state unclaimed-property act as applied to an uncashed deposit refund or ordinary credit balance. Keep that state-holder branch separate from money already administered in bankruptcy or deposited with a federal court. Federal distribution/custody rules do not establish a general federal dormancy-and-remittance regime for a landlord's unpaid tenant refund.",
+      "crosslayer_instruments": [
+        {
+          "id": "CA:CCP",
+          "selected_unit": "PART 3. OF SPECIAL PROCEEDINGS OF A CIVIL NATURE [1063 - 1822.60]",
+          "specific_scope": "Title10, Chapter7 Unclaimed Property Law",
+          "references": [
+            "1510",
+            "1518 (where fiduciary classification applies)",
+            "1520",
+            "1530",
+            "1532",
+            "1570"
+          ],
+          "purpose": "Classify holder/property and state custody, then apply reporting, remittance and record duties."
+        },
+        {
+          "id": "CA:SCO-HOLDER",
+          "selected_units": [
+            "NAUPA-II",
+            "DUE-DILIGENCE",
+            "CYCLE-2026",
+            "REMIT",
+            "UFS-1",
+            "HCR-1",
+            "DUE-DILIGENCE-MODEL"
+          ],
+          "purpose": "Selected state reporting instructions/forms implement the statutory holder branch; choose the actual property type rather than treating every credit as a deposit."
+        }
+      ],
+      "conditional_federal_dependencies": [
+        {
+          "id": "US:11USC",
+          "selected_unit": "chapter CHAPTER 3— CASE ADMINISTRATION > subchapter SUBCHAPTER III— ADMINISTRATION",
+          "references": [
+            "347"
+          ],
+          "existing_function": "bankruptcy",
+          "reason": "Special handling of unclaimed distributions in bankruptcy. Already selected; no new unit needed."
+        },
+        {
+          "id": "US:28USC",
+          "selected_unit": "Part V",
+          "specific_scope": "Chapter129, §§2041–2042",
+          "existing_function": "courts_procedure",
+          "reason": "Custody and withdrawal of money deposited with federal courts, including money routed there under bankruptcy law. Already selected; distinguish this court-held res from an ordinary landlord refund."
+        },
+        {
+          "id": "US:FRBP",
+          "selected_unit": "FRBP-2025",
+          "references": [
+            "Rule3011"
+          ],
+          "existing_function": "bankruptcy",
+          "reason": "Bankruptcy unclaimed-funds reporting procedural companion; fullRules1002–9038 already selected."
+        }
+      ],
+      "primary_sources": [
+        {
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CCP&division=&title=10.&part=3.&chapter=7.&article=2.",
+          "evidence": "Opened official Article2 escheat provisions."
+        },
+        {
+          "url": "https://www.sco.ca.gov/Files-UPD/upd_naupa_II_codes_dormancy_periods.pdf",
+          "evidence": "Opened official4-page table; identifies security deposits, customer overpayments, credit balances and refunds as distinct reporting categories."
+        },
+        {
+          "url": "https://uscode.house.gov/view.xhtml?edition=prelim&path=%2Fprelim%40title11%2Fchapter3",
+          "evidence": "Official indexed Chapter3 identifies §347 unclaimed bankruptcy distribution branch; individual section open returned maintenance."
+        },
+        {
+          "url": "https://uscode.house.gov/view.xhtml?req=%28title%3A28+section%3A2042+edition%3Aprelim%29",
+          "evidence": "Official indexed §2042 applies to court-deposited money, with Treasury transfer and claimant withdrawal process."
+        }
+      ]
+    }
+  ],
+  "scope_limit": "This is a layer/function allocation decision, not a claim that federal law can never affect licensing or unclaimed property. A concrete federal program, bankruptcy/court-custody fact, preemption issue or interstate-priority dispute must invoke its own authority. No unrelated industry census or function-definition expansion performed.",
+  "integration": "Retain both US function absences with these reasons and CA links. No instrument function additions or new source units recommended; keep conditional federal dependencies under their existing accurate functions.",
+  "evidence_file": "j1/lanes/federal_programs/us-function-absence-evidence.json"
+}

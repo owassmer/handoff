@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meeting Agendas - OCAgendaExt</title>
+    <script type="importmap">{
+  "imports": {
+    "./js/site.js": "./js/site.fr7q2aak1r.js",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.js": "./lib/bootstrap/dist/js/bootstrap.bundle.6cfz1n2cew.js",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.min.js": "./lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js",
+    "./lib/bootstrap/dist/js/bootstrap.esm.min.js": "./lib/bootstrap/dist/js/bootstrap.esm.min.jj8uyg4cgr.js",
+    "./lib/bootstrap/dist/js/bootstrap.esm.js": "./lib/bootstrap/dist/js/bootstrap.esm.vr1egmr9el.js",
+    "./lib/bootstrap/dist/js/bootstrap.min.js": "./lib/bootstrap/dist/js/bootstrap.min.63fj8s7r0e.js",
+    "./lib/bootstrap/dist/js/bootstrap.js": "./lib/bootstrap/dist/js/bootstrap.notf2xhcfb.js",
+    "./lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js": "./lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.47otxtyo56.js",
+    "./lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js": "./lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.4v8eqarkd7.js",
+    "./lib/jquery-validation/dist/additional-methods.js": "./lib/jquery-validation/dist/additional-methods.ilo7uva0vt.js",
+    "./lib/jquery-validation/dist/additional-methods.min.js": "./lib/jquery-validation/dist/additional-methods.min.qlccset4i1.js",
+    "./lib/jquery-validation/dist/jquery.validate.js": "./lib/jquery-validation/dist/jquery.validate.lzl9nlhx6b.js",
+    "./lib/jquery-validation/dist/jquery.validate.min.js": "./lib/jquery-validation/dist/jquery.validate.min.ag7o75518u.js",
+    "./lib/jquery/dist/jquery.js": "./lib/jquery/dist/jquery.0i3buxo5is.js",
+    "./lib/jquery/dist/jquery.min.js": "./lib/jquery/dist/jquery.min.o1o13a6vjx.js",
+    "./lib/jquery/dist/jquery.slim.js": "./lib/jquery/dist/jquery.slim.2z0ns9nrw6.js",
+    "./lib/jquery/dist/jquery.slim.min.js": "./lib/jquery/dist/jquery.slim.min.muycvpuwrr.js"
+  },
+  "integrity": {
+    "./js/site.fr7q2aak1r.js": "sha256-y/Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM=",
+    "./js/site.js": "sha256-y/Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM=",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.6cfz1n2cew.js": "sha256-mkoRoV24jV+rCPWcHDR5awPx8VuzzJKN0ibhxZ9/WaM=",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.js": "sha256-mkoRoV24jV+rCPWcHDR5awPx8VuzzJKN0ibhxZ9/WaM=",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js": "sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC+mjoJimHGw=",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.min.js": "sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC+mjoJimHGw=",
+    "./lib/bootstrap/dist/js/bootstrap.esm.js": "sha256-exiXZNJDwucXfuje3CbXPbuS6+Ery3z9sP+pgmvh8nA=",
+    "./lib/bootstrap/dist/js/bootstrap.esm.min.jj8uyg4cgr.js": "sha256-QZdFT1ZNdly4rmgUBtXmXFS9BU1FTa+sPe6h794sFRQ=",
+    "./lib/bootstrap/dist/js/bootstrap.esm.min.js": "sha256-QZdFT1ZNdly4rmgUBtXmXFS9BU1FTa+sPe6h794sFRQ=",
+    "./lib/bootstrap/dist/js/bootstrap.esm.vr1egmr9el.js": "sha256-exiXZNJDwucXfuje3CbXPbuS6+Ery3z9sP+pgmvh8nA=",
+    "./lib/bootstrap/dist/js/bootstrap.js": "sha256-+UW802wgVfnjaSbdwyHLlU7AVplb0WToOlvN1CnzIac=",
+    "./lib/bootstrap/dist/js/bootstrap.min.63fj8s7r0e.js": "sha256-3gQJhtmj7YnV1fmtbVcnAV6eI4ws0Tr48bVZCThtCGQ=",
+    "./lib/bootstrap/dist/js/bootstrap.min.js": "sha256-3gQJhtmj7YnV1fmtbVcnAV6eI4ws0Tr48bVZCThtCGQ=",
+    "./lib/bootstrap/dist/js/bootstrap.notf2xhcfb.js": "sha256-+UW802wgVfnjaSbdwyHLlU7AVplb0WToOlvN1CnzIac=",
+    "./lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.47otxtyo56.js": "sha256-wJQaJ0XynBE2fq6CexXXhxKu7fstVmQc7V2MHNTo+WQ=",
+    "./lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js": "sha256-wJQaJ0XynBE2fq6CexXXhxKu7fstVmQc7V2MHNTo+WQ=",
+    "./lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.4v8eqarkd7.js": "sha256-YJa7W8EiQdQpkk93iGEjjnLSUWRpRJbSfzfURh1kxz4=",
+    "./lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js": "sha256-YJa7W8EiQdQpkk93iGEjjnLSUWRpRJbSfzfURh1kxz4=",
+    "./lib/jquery-validation/dist/additional-methods.ilo7uva0vt.js": "sha256-RtK5/xaX3H1GQNw5gX7lTEGtDXcqlD8j/rgs0bEPA6c=",
+    "./lib/jquery-validation/dist/additional-methods.js": "sha256-RtK5/xaX3H1GQNw5gX7lTEGtDXcqlD8j/rgs0bEPA6c=",
+    "./lib/jquery-validation/dist/additional-methods.min.js": "sha256-MtEA819Zls6dtLt5S5BpEMOhifPyz7gfzfgtNtY75lE=",
+    "./lib/jquery-validation/dist/additional-methods.min.qlccset4i1.js": "sha256-MtEA819Zls6dtLt5S5BpEMOhifPyz7gfzfgtNtY75lE=",
+    "./lib/jquery-validation/dist/jquery.validate.js": "sha256-kRL82372ur5YrVTjFWp9muao9yeU8AoLiJxSb5ekmHg=",
+    "./lib/jquery-validation/dist/jquery.validate.lzl9nlhx6b.js": "sha256-kRL82372ur5YrVTjFWp9muao9yeU8AoLiJxSb5ekmHg=",
+    "./lib/jquery-validation/dist/jquery.validate.min.ag7o75518u.js": "sha256-umbTaFxP31Fv6O1itpLS/3+v5fOAWDLOUzlmvOGaKV4=",
+    "./lib/jquery-validation/dist/jquery.validate.min.js": "sha256-umbTaFxP31Fv6O1itpLS/3+v5fOAWDLOUzlmvOGaKV4=",
+    "./lib/jquery/dist/jquery.0i3buxo5is.js": "sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=",
+    "./lib/jquery/dist/jquery.js": "sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=",
+    "./lib/jquery/dist/jquery.min.js": "sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=",
+    "./lib/jquery/dist/jquery.min.o1o13a6vjx.js": "sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=",
+    "./lib/jquery/dist/jquery.slim.2z0ns9nrw6.js": "sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=",
+    "./lib/jquery/dist/jquery.slim.js": "sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=",
+    "./lib/jquery/dist/jquery.slim.min.js": "sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=",
+    "./lib/jquery/dist/jquery.slim.min.muycvpuwrr.js": "sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  }
+}</script>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css" />
+    <link rel="stylesheet" href="/css/site.lugek5hnai.css" />
+    <link rel="stylesheet" href="/OCAgendaExt.3hju6lkrhx.styles.css" />
+    <style>
+            header img.logo
+            {
+                width: 48px;
+                margin-right: 5px;
+            }
+            header
+            {
+                font-weight: bold;
+            }
+            
+    </style>
+</head>
+<body>
+    <header b-rx511wzy04>
+        <nav b-rx511wzy04 class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom mb-3">
+            <div b-rx511wzy04 class="container">                
+                <a class="navbar-brand" href="/">
+                    <img b-rx511wzy04 src="/images/ocseal.png" alt="Organization Logo" class="logo" />                
+                    OC Agenda</a>
+               
+                    <div b-rx511wzy04 id="google_translate_element" class="ms-auto" style="min-height:30px;"></div>
+            </div>
+        </nav>
+    </header>
+    <div b-rx511wzy04 class="container">
+        <main b-rx511wzy04 role="main" class="pb-3">
+            
+
+<h4 style="margin-bottom: 20px;">Meeting Agendas</h4>
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Meeting Date</th>
+            <th>Meeting Time</th>
+            <th width="30%"></th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td>04/28/2026</td>
+                <td>9:30 AM</td>
+                <td>
+                    <a href="/ExtDocViewer/d874e3a5-82e2-4f10-88ae-b0625418cc71" class="me-2">Agenda</a>
+                        
+                        <a href="/MeetingItem/5e5bd8c3-560d-4c86-b202-06fe591a9ad8" class="me-2">Agenda Items</a>
+                        
+
+                        <a href="/ExtDocViewer/D874E3A5-82E2-4F10-88AE-B0625418CC71" class="me-2">Minutes</a>
+
+                </td>
+            </tr>
+            <tr>
+                <td>05/05/2026</td>
+                <td>9:30 AM</td>
+                <td>
+                    <a href="/ExtDocViewer/27EA7CB3-11CD-4E4E-A503-32A2073D1900" class="me-2">Agenda</a>
+                        
+                        <a href="/MeetingItem/9b139d16-cf28-4566-87fe-a6f8d0887add" class="me-2">Agenda Items</a>
+                        
+                            <a href="/ExtDocViewer/9057c358-e7ee-4285-b2ed-d5e0c295f08b" class="me-2">Agenda Modifications</a>
+
+                        <a href="/ExtDocViewer/d3977cbe-ba7e-43be-9eb3-7bb820e4f11a" class="me-2">Minutes</a>
+
+                </td>
+            </tr>
+            <tr>
+                <td>05/19/2026</td>
+                <td>9:30 AM</td>
+                <td>
+                    <a href="/ExtDocViewer/70586bc5-309f-46be-95b5-c00069b1b85a" class="me-2">Agenda</a>
+                        
+                        <a href="/MeetingItem/b74c7cbf-b5e2-4b51-aff4-8d25a8b571ff" class="me-2">Agenda Items</a>
+                        
+                            <a href="/ExtDocViewer/bf52949a-2904-4556-a69e-14b1b76a2ab9" class="me-2">Agenda Modifications</a>
+
+                        <a href="/ExtDocViewer/02b4142c-6dc1-4044-8fc0-bd9bfbb80ca4" class="me-2">Minutes</a>
+
+                </td>
+            </tr>
+            <tr>
+                <td>05/27/2026</td>
+                <td>2:45 PM</td>
+                <td>
+                    <a href="/ExtDocViewer/39b23fee-42e1-45ff-999d-c3190005d6ff" class="me-2">Agenda</a>
+                        
+                        <a href="/MeetingItem/50293521-be5f-4496-98a7-850817b40997" class="me-2">Agenda Items</a>
+                        
+
+                        <a href="/ExtDocViewer/9f5cd73a-94d6-4df0-9d65-d8fa6920f72e" class="me-2">Minutes</a>
+
+                </td>
+            </tr>
+            <tr>
+                <td>06/09/2026</td>
+                <td>9:30 AM</td>
+                <td>
+                    <a href="/ExtDocViewer/b1f230e1-4426-4c20-b8ff-955af6f1c4f7" class="me-2">Agenda</a>
+                        
+                        <a href="/MeetingItem/3d0e9e93-f2ee-4896-a5f2-99764f869489" class="me-2">Agenda Items</a>
+                        
+                            <a href="/ExtDocViewer/409634f9-9c91-4781-8df9-a24585f1f29c" class="me-2">Agenda Modifications</a>
+
+                        <a href="/ExtDocViewer/d778a9c0-cf96-4d2e-b80a-231c9fb558f2" class="me-2">Minutes</a>
+
+                </td>
+            </tr>
+            <tr>
+                <td>06/23/2026</td>
+                <td>9:30 AM</td>
+                <td>
+                    <a href="/ExtDocViewer/955ecaf9-5e0f-492d-9db3-85ead46cae6c" class="me-2">Agenda</a>
+                        
+                        <a href="/MeetingItem/43893d46-b68b-4d5f-bc38-ae9be4cad239" class="me-2">Agenda Items</a>
+                        
+                            <a href="/ExtDocViewer/98143866-61a9-4b0c-8be2-19c1eecc6c84" class="me-2">Agenda Modifications</a>
+
+                        <a href="/ExtDocViewer/afa634c2-827c-44f6-8a3c-7306a2197a07" class="me-2">Minutes</a>
+
+                </td>
+            </tr>
+            <tr>
+                <td>08/11/2026</td>
+                <td>9:30 AM</td>
+                <td>
+                    <a href="/ExtDocViewer/7a0be522-f0ed-425c-ad88-ac0773a95e04" class="me-2">Agenda</a>
+                        
+                        <a href="/MeetingItem/b5e66eec-b9da-4716-8847-1154cdbd9975" class="me-2">Agenda Items</a>
+                        
+                            <a href="/ExtDocViewer/e0570bd6-5e85-458e-9f72-77d70e0af367" class="me-2">Agenda Modifications</a>
+
+                        <a href="/ExtDocViewer/9d0278fc-3d67-4c88-9bd5-226c7fe0f145" class="me-2">Minutes</a>
+
+                </td>
+            </tr>
+            <tr>
+                <td>08/25/2026</td>
+                <td>9:30 AM</td>
+                <td>
+                    <a href="/ExtDocViewer/c26be697-f2a9-455e-8316-c6eb87b23d8a" class="me-2">Agenda</a>
+                        
+                        <a href="/MeetingItem/3220ff31-7908-445f-a3bd-7878fb637512" class="me-2">Agenda Items</a>
+                        
+                            <a href="/ExtDocViewer/d56112ce-cb39-4c84-8b91-e56e5aa7fb17" class="me-2">Agenda Modifications</a>
+
+                        <a href="/ExtDocViewer/aa4f94c5-7ff1-4665-9c6a-7aa8f6c87316" class="me-2">Minutes</a>
+
+                </td>
+            </tr>
+            <tr>
+                <td>09/15/2026</td>
+                <td>9:30 AM</td>
+                <td>
+                    <a href="/ExtDocViewer/cdb34ac7-322e-4b16-a3d7-8ecc5e92129b" class="me-2">Agenda</a>
+                        
+                        <a href="/MeetingItem/63beeddc-f7f0-40d0-a0a4-9d6e5b7800d8" class="me-2">Agenda Items</a>
+                        
+
+                        <a href="/ExtDocViewer/b117ec7e-8da8-4f85-86d6-465fd176ba5a" class="me-2">Minutes</a>
+
+                </td>
+            </tr>
+            <tr>
+                <td>09/24/2026</td>
+                <td>10:00 AM</td>
+                <td>
+                    <a href="/ExtDocViewer/6967b427-5aef-4f06-b2af-4df2b141a638" class="me-2">Agenda</a>
+                        
+                        <a href="/MeetingItem/d1631f12-acf6-42b3-bc5c-12c3cfca511b" class="me-2">Agenda Items</a>
+                        
+
+                        <a href="/ExtDocViewer/c4c226e7-f94c-4965-9111-b05e180fa4e0" class="me-2">Minutes</a>
+
+                </td>
+            </tr>
+            <tr>
+                <td>09/29/2026</td>
+                <td>9:30 AM</td>
+                <td>
+                    <a href="/ExtDocViewer/19a7a368-71ca-4f9c-82f2-baae041c8bdd" class="me-2">Agenda</a>
+                        
+                        <a href="/MeetingItem/52c7e562-2f04-4ec8-8719-56ecad89a0a6" class="me-2">Agenda Items</a>
+                        
+                            <a href="/ExtDocViewer/e6da2a4e-15df-44de-ad58-cafd349e7dce" class="me-2">Agenda Modifications</a>
+
+                        <a href="/ExtDocViewer/e72cfa76-5fed-4cde-b846-a3d6c3b598e5" class="me-2">Minutes</a>
+
+                </td>
+            </tr>
+            <tr>
+                <td>10/13/2026</td>
+                <td>9:30 AM</td>
+                <td>
+                    <a href="/ExtDocViewer/03ef1f78-af8b-4500-8c1c-cbf4ff88ab56" class="me-2">Agenda</a>
+                        
+                        <a href="/MeetingItem/c75f9cf2-1246-4e60-bb51-4cb59255a856" class="me-2">Agenda Items</a>
+                        
+
+
+                </td>
+            </tr>
+    </tbody>
+</table>
+<br/>
+
+<h4 style="margin-bottom: 20px;">Archived Board of Supervisors meeting (01/09/2007 to 04/14/2026)</h4>
+
+<p>To reference archived Board of Supervisors meetings from January 9, 2007 through April 14, 2026, please view the <a href="/ArchivedBosMeeting">archived Board of Supervisors meeting records </a>.</p>
+        </main>
+    </div>
+
+    <footer b-rx511wzy04 class="border-top footer text-muted">
+        <div b-rx511wzy04 class="container">
+        </div>
+    </footer>
+
+    <script src="/lib/jquery/dist/jquery.min.o1o13a6vjx.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js"></script>
+    <script src="/js/site.fr7q2aak1r.js"></script>
+
+    
+
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                    { pageLanguage: 'en' },
+                    'google_translate_element'
+                );
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script async src="https://docaccess.com/docbox.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleReleaseId": "NC_SYNTHETIC_DEMO_V1",
+  "status": "SYNTHETIC_ONLY",
+  "implementationStatus": "NOT_IMPLEMENTED",
+  "legalReviewStatus": "PENDING",
+  "legalReviewedBy": null,
+  "legalEffectiveFrom": null,
+  "legalEffectiveUntil": null,
+  "allowedOrigins": ["CONSTRUCTED"],
+  "jurisdiction": "NC",
+  "tenancyRegime": "CONVENTIONAL_RESIDENTIAL",
+  "currency": "USD",
+  "allowLiveUse": false,
+  "questionIds": [
+    "SCOPE",
+    "TRIGGER",
+    "DAMAGE",
+    "ORDINARY",
+    "INTERIM_QUALIFICATION",
+    "INTERIM_MONEY",
+    "FINAL",
+    "RECIPIENT",
+    "MISSING_ADDRESS",
+    "PERFORMANCE"
+  ],
+  "sourceReferences": [
+    {
+      "evidenceId": "NC_GS_42_52_ACCOUNTING_PENDING_REVIEW",
+      "sourceClass": "LAW",
+      "sourceVersion": "UNVERIFIED_PENDING_REVIEW",
+      "locator": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/ByArticle/Chapter_42/Article_6.html",
+      "page": null,
+      "quote": null
+    },
+    {
+      "evidenceId": "NC_ARTICLE_6_DAMAGE_PENDING_REVIEW",
+      "sourceClass": "LAW",
+      "sourceVersion": "UNVERIFIED_PENDING_REVIEW",
+      "locator": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/ByArticle/Chapter_42/Article_6.html",
+      "page": null,
+      "quote": null
+    }
+  ],
+  "syntheticAssumptions": {
+    "ordinaryPeriodDays": 30,
+    "finalPeriodDays": 60,
+    "periodBasis": "Constructed test assumptions relative only to a separately accepted ACCOUNTING_TRIGGER; not verified legal periods or an implemented deadline calculation.",
+    "triggerAcceptance": "ACCOUNTING_TRIGGER requires separate acceptance with evidence and a reason. Do not automatically take the maximum of dates or infer it from NOTICE, INTENDED_DEPARTURE, AGREEMENT_END, VACANCY, KEY_RETURN, or LEGAL_POSSESSION.",
+    "scopeBasis": "Constructed NC conventional residential cases with a tenancy ending in full and a cash security deposit in USD; legal applicability remains pending review.",
+    "interimQualification": "UNRESOLVED_PENDING_REVIEW",
+    "interimMoneyHandling": "UNRESOLVED_PENDING_REVIEW",
+    "missingAddressHandling": "UNRESOLVED_PENDING_REVIEW",
+    "missingInvoiceTreatment": "A missing invoice alone is not an interim qualification, automatic exception, deadline extension, or basis for full withholding."
+  },
+  "warnings": [
+    "Static Phase A metadata only: no executable rule selectors, review engine, rule activation, or live-use authorization.",
+    "Primary-source verification and legal review are pending. The Article 6 locator was supplied by the user; G.S. 42-52 accounting and Article 6 damage references remain unverified review targets.",
+    "No verified statutory text, legal effective dates, reviewer identity, or approved legal interpretation is asserted.",
+    "The 30-day and 60-day values are synthetic assumptions only, each relative to a separately accepted ACCOUNTING_TRIGGER, not automatically selected case dates.",
+    "Interim money handling and missing-address details are UNRESOLVED_PENDING_REVIEW; neither permits an inference of full withholding, automatic extension, or completed performance.",
+    "Only CONSTRUCTED inputs are allowed by this manifest; public reconstructions and authorized operator records are not enabled."
+  ]
+}

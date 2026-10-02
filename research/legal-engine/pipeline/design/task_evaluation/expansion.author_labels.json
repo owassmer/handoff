@@ -1,0 +1,676 @@
+{
+  "cases": [
+    {
+      "id": "exp001",
+      "expected": "YES",
+      "reason": "Agency expressly assigns significant difficulty or expense meaning.",
+      "edge_case": "assignment_vs_use_or_report",
+      "downstream_failure": "Incorrect extraction or missed assigned meaning."
+    },
+    {
+      "id": "exp002",
+      "expected": "YES",
+      "reason": "Interpretation expressly assigns receipt event.",
+      "edge_case": "assignment_vs_use_or_report",
+      "downstream_failure": "Incorrect extraction or missed assigned meaning."
+    },
+    {
+      "id": "exp003",
+      "expected": "YES",
+      "reason": "Interpretation defines expedited crediting.",
+      "edge_case": "assignment_vs_use_or_report",
+      "downstream_failure": "Incorrect extraction or missed assigned meaning."
+    },
+    {
+      "id": "exp004",
+      "expected": "YES",
+      "reason": "Interpretation assigns scope including live agents and excluding automation.",
+      "edge_case": "assignment_vs_use_or_report",
+      "downstream_failure": "Incorrect extraction or missed assigned meaning."
+    },
+    {
+      "id": "exp005",
+      "expected": "NO",
+      "reason": "Alternative accommodation rule uses the term without assigning a meaning.",
+      "edge_case": "assignment_vs_use_or_report",
+      "downstream_failure": "Incorrect extraction or missed assigned meaning."
+    },
+    {
+      "id": "exp006",
+      "expected": "NO",
+      "reason": "Timing guidance is not a definition.",
+      "edge_case": "assignment_vs_use_or_report",
+      "downstream_failure": "Incorrect extraction or missed assigned meaning."
+    },
+    {
+      "id": "exp007",
+      "expected": "NO",
+      "reason": "Personal-item duty limitations do not assign a term meaning.",
+      "edge_case": "assignment_vs_use_or_report",
+      "downstream_failure": "Incorrect extraction or missed assigned meaning."
+    },
+    {
+      "id": "exp008",
+      "expected": "NO",
+      "reason": "No-extension guidance does not assign meaning.",
+      "edge_case": "assignment_vs_use_or_report",
+      "downstream_failure": "Incorrect extraction or missed assigned meaning."
+    },
+    {
+      "id": "exp009",
+      "expected": "YES",
+      "reason": "Court assigns jurisdictional requirements adjudicatory-boundary meaning.",
+      "edge_case": "assignment_vs_use_or_report",
+      "downstream_failure": "Incorrect extraction or missed assigned meaning."
+    },
+    {
+      "id": "exp010",
+      "expected": "YES",
+      "reason": "Majority expressly assigns stop-clock meaning.",
+      "edge_case": "assignment_vs_use_or_report",
+      "downstream_failure": "Incorrect extraction or missed assigned meaning."
+    },
+    {
+      "id": "exp011",
+      "expected": "NO",
+      "reason": "Question and competing proposed readings do not adopt either definition.",
+      "edge_case": "assignment_vs_use_or_report",
+      "downstream_failure": "Incorrect extraction or missed assigned meaning."
+    },
+    {
+      "id": "exp012",
+      "expected": "NO",
+      "reason": "Holding concerns tollability and entitlement, not assignment of a term meaning.",
+      "edge_case": "assignment_vs_use_or_report",
+      "downstream_failure": "Incorrect extraction or missed assigned meaning."
+    },
+    {
+      "id": "exp013",
+      "expected": "YES",
+      "reason": "Operative incorporation assigns a meaning despite absent incorporated content.",
+      "edge_case": "assignment_vs_use_or_report",
+      "downstream_failure": "Incorrect extraction or missed assigned meaning."
+    },
+    {
+      "id": "exp014",
+      "expected": "YES",
+      "reason": "Statute supplies ordinary and space-only meanings.",
+      "edge_case": "assignment_vs_use_or_report",
+      "downstream_failure": "Incorrect extraction or missed assigned meaning."
+    },
+    {
+      "id": "exp015",
+      "expected": "NO",
+      "reason": "Prohibition uses dwelling terminology without defining it.",
+      "edge_case": "assignment_vs_use_or_report",
+      "downstream_failure": "Incorrect extraction or missed assigned meaning."
+    },
+    {
+      "id": "exp016",
+      "expected": "NO",
+      "reason": "Additional service method rule assigns no term meaning.",
+      "edge_case": "assignment_vs_use_or_report",
+      "downstream_failure": "Incorrect extraction or missed assigned meaning."
+    },
+    {
+      "id": "exp017",
+      "expected": "YES",
+      "reason": "calendar-day definition is the precise rule being explained",
+      "edge_case": "sense_not_legal_applicability",
+      "downstream_failure": "False meaning link or missed same-sense use."
+    },
+    {
+      "id": "exp018",
+      "expected": "NO",
+      "reason": "office-opening rule differs from the precise calendar-day meaning",
+      "edge_case": "sense_not_legal_applicability",
+      "downstream_failure": "False meaning link or missed same-sense use."
+    },
+    {
+      "id": "exp019",
+      "expected": "YES",
+      "reason": "Covered service provider is used in the included-agent sense",
+      "edge_case": "sense_not_legal_applicability",
+      "downstream_failure": "False meaning link or missed same-sense use."
+    },
+    {
+      "id": "exp020",
+      "expected": "YES",
+      "reason": "Denial of category membership still invokes the supplied regulatory sense",
+      "edge_case": "sense_not_legal_applicability",
+      "downstream_failure": "False meaning link or missed same-sense use."
+    },
+    {
+      "id": "exp021",
+      "expected": "YES",
+      "reason": "The exclusion uses the same defined category under negation",
+      "edge_case": "sense_not_legal_applicability",
+      "downstream_failure": "False meaning link or missed same-sense use."
+    },
+    {
+      "id": "exp022",
+      "expected": "YES",
+      "reason": "Negative category statement retains the live-representative sense",
+      "edge_case": "sense_not_legal_applicability",
+      "downstream_failure": "False meaning link or missed same-sense use."
+    },
+    {
+      "id": "exp023",
+      "expected": "YES",
+      "reason": "The same agency hardship meaning includes nonfinancial burdens",
+      "edge_case": "sense_not_legal_applicability",
+      "downstream_failure": "False meaning link or missed same-sense use."
+    },
+    {
+      "id": "exp024",
+      "expected": "YES",
+      "reason": "Choice among accommodations retains effective barrier-removal sense",
+      "edge_case": "sense_not_legal_applicability",
+      "downstream_failure": "False meaning link or missed same-sense use."
+    },
+    {
+      "id": "exp025",
+      "expected": "YES",
+      "reason": "Majority adopts suspension meaning",
+      "edge_case": "sense_not_legal_applicability",
+      "downstream_failure": "False meaning link or missed same-sense use."
+    },
+    {
+      "id": "exp026",
+      "expected": "NO",
+      "reason": "Selected proposed meaning lets clock run and adds grace period",
+      "edge_case": "sense_not_legal_applicability",
+      "downstream_failure": "False meaning link or missed same-sense use."
+    },
+    {
+      "id": "exp027",
+      "expected": "YES",
+      "reason": "Proposed grace meaning matches candidate regardless of ultimate rejection",
+      "edge_case": "sense_not_legal_applicability",
+      "downstream_failure": "False meaning link or missed same-sense use."
+    },
+    {
+      "id": "exp028",
+      "expected": "YES",
+      "reason": "Rejected Commissioner characterization still uses adjudicatory-authority sense",
+      "edge_case": "sense_not_legal_applicability",
+      "downstream_failure": "False meaning link or missed same-sense use."
+    },
+    {
+      "id": "exp029",
+      "expected": "YES",
+      "reason": "Prohibited rental concerns residential structure",
+      "edge_case": "sense_not_legal_applicability",
+      "downstream_failure": "False meaning link or missed same-sense use."
+    },
+    {
+      "id": "exp030",
+      "expected": "YES",
+      "reason": "Notice actor is owner/lessor or authorized manager",
+      "edge_case": "sense_not_legal_applicability",
+      "downstream_failure": "False meaning link or missed same-sense use."
+    },
+    {
+      "id": "exp031",
+      "expected": "YES",
+      "reason": "Crediting-as-of invokes date payment reaches creditor",
+      "edge_case": "sense_not_legal_applicability",
+      "downstream_failure": "False meaning link or missed same-sense use."
+    },
+    {
+      "id": "exp032",
+      "expected": "NO",
+      "reason": "Site-only meaning for separately owned manufactured home differs from residential structure being condemned",
+      "edge_case": "sense_not_legal_applicability",
+      "downstream_failure": "False meaning link or missed same-sense use."
+    },
+    {
+      "id": "exp033",
+      "expected": "A",
+      "reason": "Complete occurrence context selects Calendar days except Sundays and specified federal legal holidays.",
+      "edge_case": "negation_or_contrary_proposal_or_no_fit",
+      "downstream_failure": "Wrong meaning selected for downstream interpretation."
+    },
+    {
+      "id": "exp034",
+      "expected": "B",
+      "reason": "Complete occurrence context selects Calendar days except Sundays and specified federal legal holidays.",
+      "edge_case": "negation_or_contrary_proposal_or_no_fit",
+      "downstream_failure": "Wrong meaning selected for downstream interpretation."
+    },
+    {
+      "id": "exp035",
+      "expected": "A",
+      "reason": "Complete occurrence context selects The creditor category including a third party acting on its behalf in receiving or processing payments.",
+      "edge_case": "negation_or_contrary_proposal_or_no_fit",
+      "downstream_failure": "Wrong meaning selected for downstream interpretation."
+    },
+    {
+      "id": "exp036",
+      "expected": "B",
+      "reason": "Complete occurrence context selects The creditor category including a third party acting on its behalf in receiving or processing payments.",
+      "edge_case": "negation_or_contrary_proposal_or_no_fit",
+      "downstream_failure": "Wrong meaning selected for downstream interpretation."
+    },
+    {
+      "id": "exp037",
+      "expected": "NONE",
+      "reason": "Complete occurrence context selects neither offered meaning.",
+      "edge_case": "negation_or_contrary_proposal_or_no_fit",
+      "downstream_failure": "Wrong meaning selected for downstream interpretation."
+    },
+    {
+      "id": "exp038",
+      "expected": "B",
+      "reason": "Complete occurrence context selects A live representative or agent assisting a payment.",
+      "edge_case": "negation_or_contrary_proposal_or_no_fit",
+      "downstream_failure": "Wrong meaning selected for downstream interpretation."
+    },
+    {
+      "id": "exp039",
+      "expected": "A",
+      "reason": "Complete occurrence context selects Significant difficulty or expense for the particular employer.",
+      "edge_case": "negation_or_contrary_proposal_or_no_fit",
+      "downstream_failure": "Wrong meaning selected for downstream interpretation."
+    },
+    {
+      "id": "exp040",
+      "expected": "B",
+      "reason": "Complete occurrence context selects An effective workplace adjustment removing disability-related barriers.",
+      "edge_case": "negation_or_contrary_proposal_or_no_fit",
+      "downstream_failure": "Wrong meaning selected for downstream interpretation."
+    },
+    {
+      "id": "exp041",
+      "expected": "A",
+      "reason": "Complete occurrence context selects Suspension of a limitations clock.",
+      "edge_case": "negation_or_contrary_proposal_or_no_fit",
+      "downstream_failure": "Wrong meaning selected for downstream interpretation."
+    },
+    {
+      "id": "exp042",
+      "expected": "B",
+      "reason": "Complete occurrence context selects A grace period while the original limitations clock continues to run.",
+      "edge_case": "negation_or_contrary_proposal_or_no_fit",
+      "downstream_failure": "Wrong meaning selected for downstream interpretation."
+    },
+    {
+      "id": "exp043",
+      "expected": "A",
+      "reason": "Complete occurrence context selects A grace period while the original limitations clock continues to run.",
+      "edge_case": "negation_or_contrary_proposal_or_no_fit",
+      "downstream_failure": "Wrong meaning selected for downstream interpretation."
+    },
+    {
+      "id": "exp044",
+      "expected": "B",
+      "reason": "Complete occurrence context selects A limitation on the court’s authority to adjudicate.",
+      "edge_case": "negation_or_contrary_proposal_or_no_fit",
+      "downstream_failure": "Wrong meaning selected for downstream interpretation."
+    },
+    {
+      "id": "exp045",
+      "expected": "NONE",
+      "reason": "Complete occurrence context selects neither offered meaning.",
+      "edge_case": "negation_or_contrary_proposal_or_no_fit",
+      "downstream_failure": "Wrong meaning selected for downstream interpretation."
+    },
+    {
+      "id": "exp046",
+      "expected": "B",
+      "reason": "Complete occurrence context selects An owner, lessor, sublessor or authorized premises manager.",
+      "edge_case": "negation_or_contrary_proposal_or_no_fit",
+      "downstream_failure": "Wrong meaning selected for downstream interpretation."
+    },
+    {
+      "id": "exp047",
+      "expected": "A",
+      "reason": "Complete occurrence context selects The date the payment instrument or means reaches the creditor.",
+      "edge_case": "negation_or_contrary_proposal_or_no_fit",
+      "downstream_failure": "Wrong meaning selected for downstream interpretation."
+    },
+    {
+      "id": "exp048",
+      "expected": "B",
+      "reason": "Complete occurrence context selects A residential structure or part of one used as a home or sleeping place.",
+      "edge_case": "negation_or_contrary_proposal_or_no_fit",
+      "downstream_failure": "Wrong meaning selected for downstream interpretation."
+    },
+    {
+      "id": "exp049",
+      "expected": "YES",
+      "reason": "Hardship expressly excuses providing the accommodation.",
+      "edge_case": "exception_vs_alternative_or_remedy",
+      "downstream_failure": "Unlawfully retain or excuse a duty."
+    },
+    {
+      "id": "exp050",
+      "expected": "YES",
+      "reason": "Personal-use-only items narrow what the accommodation duty requires.",
+      "edge_case": "exception_vs_alternative_or_remedy",
+      "downstream_failure": "Unlawfully retain or excuse a duty."
+    },
+    {
+      "id": "exp051",
+      "expected": "NO",
+      "reason": "Choosing an effective alternative satisfies the unchanged accommodation duty.",
+      "edge_case": "exception_vs_alternative_or_remedy",
+      "downstream_failure": "Unlawfully retain or excuse a duty."
+    },
+    {
+      "id": "exp052",
+      "expected": "NO",
+      "reason": "Prompt response adds timing guidance, not an excuse.",
+      "edge_case": "exception_vs_alternative_or_remedy",
+      "downstream_failure": "Unlawfully retain or excuse a duty."
+    },
+    {
+      "id": "exp053",
+      "expected": "NO",
+      "reason": "Receipt-trigger explanation preserves crediting as of receipt.",
+      "edge_case": "exception_vs_alternative_or_remedy",
+      "downstream_failure": "Unlawfully retain or excuse a duty."
+    },
+    {
+      "id": "exp054",
+      "expected": "NO",
+      "reason": "Longer preservation adds protection rather than narrowing the duty.",
+      "edge_case": "exception_vs_alternative_or_remedy",
+      "downstream_failure": "Unlawfully retain or excuse a duty."
+    },
+    {
+      "id": "exp055",
+      "expected": "NO",
+      "reason": "Different statutory route does not excuse the specified TitleVII charge requirement.",
+      "edge_case": "exception_vs_alternative_or_remedy",
+      "downstream_failure": "Unlawfully retain or excuse a duty."
+    },
+    {
+      "id": "exp056",
+      "expected": "YES",
+      "reason": "Conditional300-day rule excuses compliance with ordinary180-day filing duration.",
+      "edge_case": "exception_vs_alternative_or_remedy",
+      "downstream_failure": "Unlawfully retain or excuse a duty."
+    },
+    {
+      "id": "exp057",
+      "expected": "YES",
+      "reason": "Equitable tolling allows otherwise late petition in appropriate circumstances.",
+      "edge_case": "exception_vs_alternative_or_remedy",
+      "downstream_failure": "Unlawfully retain or excuse a duty."
+    },
+    {
+      "id": "exp058",
+      "expected": "NO",
+      "reason": "Definition alone does not excuse filing compliance.",
+      "edge_case": "exception_vs_alternative_or_remedy",
+      "downstream_failure": "Unlawfully retain or excuse a duty."
+    },
+    {
+      "id": "exp059",
+      "expected": "YES",
+      "reason": "Court rejects lack of power to accept tardy filing through tolling.",
+      "edge_case": "exception_vs_alternative_or_remedy",
+      "downstream_failure": "Unlawfully retain or excuse a duty."
+    },
+    {
+      "id": "exp060",
+      "expected": "NO",
+      "reason": "Reported competing readings create no adopted exception.",
+      "edge_case": "exception_vs_alternative_or_remedy",
+      "downstream_failure": "Unlawfully retain or excuse a duty."
+    },
+    {
+      "id": "exp061",
+      "expected": "YES",
+      "reason": "Natural-disaster condition expressly excuses relocation assistance.",
+      "edge_case": "exception_vs_alternative_or_remedy",
+      "downstream_failure": "Unlawfully retain or excuse a duty."
+    },
+    {
+      "id": "exp062",
+      "expected": "YES",
+      "reason": "Specified illegal-conduct condition excuses relocation assistance.",
+      "edge_case": "exception_vs_alternative_or_remedy",
+      "downstream_failure": "Unlawfully retain or excuse a duty."
+    },
+    {
+      "id": "exp063",
+      "expected": "NO",
+      "reason": "Damages for violation do not excuse the prohibition.",
+      "edge_case": "exception_vs_alternative_or_remedy",
+      "downstream_failure": "Unlawfully retain or excuse a duty."
+    },
+    {
+      "id": "exp064",
+      "expected": "YES",
+      "reason": "Emergency entry dispenses with prior notice and consent under the chapter entry framework.",
+      "edge_case": "exception_vs_alternative_or_remedy",
+      "downstream_failure": "Unlawfully retain or excuse a duty."
+    },
+    {
+      "id": "exp065",
+      "expected": "YES",
+      "reason": "Conditional duration extension changes selected filing period.",
+      "edge_case": "trigger_extension_vs_independent_remedy",
+      "downstream_failure": "Apply the wrong deadline or miss a necessary modifier."
+    },
+    {
+      "id": "exp066",
+      "expected": "YES",
+      "reason": "Terminal weekend/holiday adjustment modifies filing deadline.",
+      "edge_case": "trigger_extension_vs_independent_remedy",
+      "downstream_failure": "Apply the wrong deadline or miss a necessary modifier."
+    },
+    {
+      "id": "exp067",
+      "expected": "NO",
+      "reason": "Guidance expressly denies ordinary grievance tolling.",
+      "edge_case": "trigger_extension_vs_independent_remedy",
+      "downstream_failure": "Apply the wrong deadline or miss a necessary modifier."
+    },
+    {
+      "id": "exp068",
+      "expected": "YES",
+      "reason": "Ongoing harassment uses last incident trigger rather than independent event expiry.",
+      "edge_case": "trigger_extension_vs_independent_remedy",
+      "downstream_failure": "Apply the wrong deadline or miss a necessary modifier."
+    },
+    {
+      "id": "exp069",
+      "expected": "YES",
+      "reason": "Willfulness changes two-year period to three.",
+      "edge_case": "trigger_extension_vs_independent_remedy",
+      "downstream_failure": "Apply the wrong deadline or miss a necessary modifier."
+    },
+    {
+      "id": "exp070",
+      "expected": "NO",
+      "reason": "Separate TitleVII filing expressly does not extend EPA suit deadline.",
+      "edge_case": "trigger_extension_vs_independent_remedy",
+      "downstream_failure": "Apply the wrong deadline or miss a necessary modifier."
+    },
+    {
+      "id": "exp071",
+      "expected": "YES",
+      "reason": "Charge filing extends record preservation through resolution.",
+      "edge_case": "trigger_extension_vs_independent_remedy",
+      "downstream_failure": "Apply the wrong deadline or miss a necessary modifier."
+    },
+    {
+      "id": "exp072",
+      "expected": "YES",
+      "reason": "After-cutoff web authorization changes deemed receipt day used for crediting.",
+      "edge_case": "trigger_extension_vs_independent_remedy",
+      "downstream_failure": "Apply the wrong deadline or miss a necessary modifier."
+    },
+    {
+      "id": "exp073",
+      "expected": "YES",
+      "reason": "Tolling changes strict30-day temporal operation in appropriate cases.",
+      "edge_case": "trigger_extension_vs_independent_remedy",
+      "downstream_failure": "Apply the wrong deadline or miss a necessary modifier."
+    },
+    {
+      "id": "exp074",
+      "expected": "NO",
+      "reason": "Adjudicatory authority definition supplies no temporal modification.",
+      "edge_case": "trigger_extension_vs_independent_remedy",
+      "downstream_failure": "Apply the wrong deadline or miss a necessary modifier."
+    },
+    {
+      "id": "exp075",
+      "expected": "NO",
+      "reason": "Forfeiture of different claim-processing objection does not alter tax petition period.",
+      "edge_case": "trigger_extension_vs_independent_remedy",
+      "downstream_failure": "Apply the wrong deadline or miss a necessary modifier."
+    },
+    {
+      "id": "exp076",
+      "expected": "YES",
+      "reason": "Supplemental-claim tolling suspends the otherwise applicable state limitations period.",
+      "edge_case": "trigger_extension_vs_independent_remedy",
+      "downstream_failure": "Apply the wrong deadline or miss a necessary modifier."
+    },
+    {
+      "id": "exp077",
+      "expected": "YES",
+      "reason": "First-class-mail service adds three days to written compliance period when this service route is used.",
+      "edge_case": "trigger_extension_vs_independent_remedy",
+      "downstream_failure": "Apply the wrong deadline or miss a necessary modifier."
+    },
+    {
+      "id": "exp078",
+      "expected": "YES",
+      "reason": "Emergency entry replaces prior notice with specified post-entry notice when tenant absent.",
+      "edge_case": "trigger_extension_vs_independent_remedy",
+      "downstream_failure": "Apply the wrong deadline or miss a necessary modifier."
+    },
+    {
+      "id": "exp079",
+      "expected": "NO",
+      "reason": "Government may advance unpaid money after default; landlord deadline stays seven days.",
+      "edge_case": "trigger_extension_vs_independent_remedy",
+      "downstream_failure": "Apply the wrong deadline or miss a necessary modifier."
+    },
+    {
+      "id": "exp080",
+      "expected": "NO",
+      "reason": "Separate violation remedy does not modify seven-day payment deadline.",
+      "edge_case": "trigger_extension_vs_independent_remedy",
+      "downstream_failure": "Apply the wrong deadline or miss a necessary modifier."
+    },
+    {
+      "id": "exp081",
+      "expected": "NO",
+      "reason": "Text expressly includes nonfinancial difficulty.",
+      "edge_case": "modality_conditions_or_attribution",
+      "downstream_failure": "Adopt an unwarranted proposition or reject supported evidence."
+    },
+    {
+      "id": "exp082",
+      "expected": "YES",
+      "reason": "Conditional discretion is expressly stated.",
+      "edge_case": "modality_conditions_or_attribution",
+      "downstream_failure": "Adopt an unwarranted proposition or reject supported evidence."
+    },
+    {
+      "id": "exp083",
+      "expected": "NO",
+      "reason": "Job-specific need qualification defeats never.",
+      "edge_case": "modality_conditions_or_attribution",
+      "downstream_failure": "Adopt an unwarranted proposition or reject supported evidence."
+    },
+    {
+      "id": "exp084",
+      "expected": "YES",
+      "reason": "Enumerated condition expressly supports prohibition.",
+      "edge_case": "modality_conditions_or_attribution",
+      "downstream_failure": "Adopt an unwarranted proposition or reject supported evidence."
+    },
+    {
+      "id": "exp085",
+      "expected": "NO",
+      "reason": "Interpretation expressly denies category membership.",
+      "edge_case": "modality_conditions_or_attribution",
+      "downstream_failure": "Adopt an unwarranted proposition or reject supported evidence."
+    },
+    {
+      "id": "exp086",
+      "expected": "YES",
+      "reason": "Example expressly preserves precedingFriday as business day.",
+      "edge_case": "modality_conditions_or_attribution",
+      "downstream_failure": "Adopt an unwarranted proposition or reject supported evidence."
+    },
+    {
+      "id": "exp087",
+      "expected": "NO",
+      "reason": "Age exception expressly requires state law and agency.",
+      "edge_case": "modality_conditions_or_attribution",
+      "downstream_failure": "Adopt an unwarranted proposition or reject supported evidence."
+    },
+    {
+      "id": "exp088",
+      "expected": "YES",
+      "reason": "Expressly stated statutory-route distinction.",
+      "edge_case": "modality_conditions_or_attribution",
+      "downstream_failure": "Adopt an unwarranted proposition or reject supported evidence."
+    },
+    {
+      "id": "exp089",
+      "expected": "NO",
+      "reason": "Actual entitlement reserved for remand.",
+      "edge_case": "modality_conditions_or_attribution",
+      "downstream_failure": "Adopt an unwarranted proposition or reject supported evidence."
+    },
+    {
+      "id": "exp090",
+      "expected": "YES",
+      "reason": "Claim is explicitly about reported argument, not adopted rule.",
+      "edge_case": "modality_conditions_or_attribution",
+      "downstream_failure": "Adopt an unwarranted proposition or reject supported evidence."
+    },
+    {
+      "id": "exp091",
+      "expected": "NO",
+      "reason": "Passage describes question and lowercourt adoption, not SupremeCourt holding.",
+      "edge_case": "modality_conditions_or_attribution",
+      "downstream_failure": "Adopt an unwarranted proposition or reject supported evidence."
+    },
+    {
+      "id": "exp092",
+      "expected": "YES",
+      "reason": "Express majority holding.",
+      "edge_case": "modality_conditions_or_attribution",
+      "downstream_failure": "Adopt an unwarranted proposition or reject supported evidence."
+    },
+    {
+      "id": "exp093",
+      "expected": "NO",
+      "reason": "Knowledge, code-condition and express exceptions qualify duty.",
+      "edge_case": "modality_conditions_or_attribution",
+      "downstream_failure": "Adopt an unwarranted proposition or reject supported evidence."
+    },
+    {
+      "id": "exp094",
+      "expected": "YES",
+      "reason": "Express conditional exception.",
+      "edge_case": "modality_conditions_or_attribution",
+      "downstream_failure": "Adopt an unwarranted proposition or reject supported evidence."
+    },
+    {
+      "id": "exp095",
+      "expected": "NO",
+      "reason": "Text dispenses with advance notice and specifies postentry notice if absent.",
+      "edge_case": "modality_conditions_or_attribution",
+      "downstream_failure": "Adopt an unwarranted proposition or reject supported evidence."
+    },
+    {
+      "id": "exp096",
+      "expected": "YES",
+      "reason": "Extension expressly stated and properly qualified.",
+      "edge_case": "modality_conditions_or_attribution",
+      "downstream_failure": "Adopt an unwarranted proposition or reject supported evidence."
+    }
+  ]
+}

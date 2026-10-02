@@ -1,0 +1,80 @@
+{
+  "reviewed_inputs": {
+    "cases": "e7ea65be479f94b8f153176899e27a928f69ea64a555df479b37b307abfcd3b9",
+    "question": "fb2ba4be1c72adecff89602e5197cc62b80e2d7deb415bfce36a8aab6cd072c4"
+  },
+  "cases": [
+    {
+      "case_id": "n001",
+      "expected": "YES",
+      "reason": "The passage refers by function to a legal provision requiring written delivery; a section number is unnecessary.",
+      "material_ambiguity": "YES follows a functional reading of the referenced legal requirement. A reader using provision to mean an identified unit of legal text could answer NO to this conditional, unnamed law. The plain question leaves that unit-versus-requirement distinction unstated."
+    },
+    {
+      "case_id": "n002",
+      "expected": "YES",
+      "reason": "This title and paragraph (2) of subdivision (d) are express provision references.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "n003",
+      "expected": "NO",
+      "reason": "The passage states a consequence for inhibiting retention without referring to a legal provision.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "n004",
+      "expected": "YES",
+      "reason": "This section, this title, and subdivision (a) are express provision references.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "n005",
+      "expected": "YES",
+      "reason": "This section and this title refer to statutory units.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "n006",
+      "expected": "NO",
+      "reason": "This notice and the same transaction refer to notice and facts, not to provisions.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "n007",
+      "expected": "NO",
+      "reason": "The passage specifies notice delivery and timing without a provision reference.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "n008",
+      "expected": "NO",
+      "reason": "The passage identifies notices and correspondence, with no legal provision reference.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "n009",
+      "expected": "YES",
+      "reason": "As required by law refers to the legal requirement for the quoted notice without giving its locator.",
+      "material_ambiguity": "YES follows a functional reading of the notice requirement. NO is defensible if the generic phrase as required by law does not count as referring to a provision. The question does not explicitly settle generic requirement references."
+    },
+    {
+      "case_id": "n010",
+      "expected": "YES",
+      "reason": "Paragraph (2) is an internal reference to the prescribed form.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "n011",
+      "expected": "YES",
+      "reason": "This subdivision, this section, and the federal Act with its U.S. Code citation are references.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "n012",
+      "expected": "YES",
+      "reason": "Both occurrences of this section refer to the notice provision.",
+      "material_ambiguity": false
+    }
+  ]
+}

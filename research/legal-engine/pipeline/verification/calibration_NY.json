@@ -1,0 +1,274 @@
+{
+ "jurisdiction": "NY",
+ "at": "2026-09-30T22:06:59+00:00",
+ "usage": {
+  "mode": "cached only (no network)"
+ },
+ "answered": 666,
+ "gold_positives": 539,
+ "gold_negatives": 183,
+ "evaluations": [
+  {
+   "version": "v1",
+   "positives": 539,
+   "negatives": 183,
+   "missed": [
+    {
+     "section_id": "NY:GCN 35",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.98, P(DECIDES)=0.01, chain_duty=0.12"
+    },
+    {
+     "section_id": "NY:LLC Law 206",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.97, P(DECIDES)=0.02, chain_duty=0.07"
+    },
+    {
+     "section_id": "NY:RPL 212",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.86, P(DECIDES)=0.09, chain_duty=0.16"
+    },
+    {
+     "section_id": "NY:RPL 441-C",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.81, P(DECIDES)=0.12, chain_duty=0.23"
+    },
+    {
+     "section_id": "NY:RPL 442",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.86, P(DECIDES)=0.09, chain_duty=0.10"
+    },
+    {
+     "section_id": "NY:SCPA 1802",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.79, P(DECIDES)=0.14, chain_duty=0.27"
+    },
+    {
+     "section_id": "NYC:ADC 20-105",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.92, P(DECIDES)=0.05, chain_duty=0.08"
+    },
+    {
+     "section_id": "NYC:ADC 20-489",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.94, P(DECIDES)=0.04, chain_duty=0.20"
+    },
+    {
+     "section_id": "NYC:ADC 20-699.20",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.99, P(DECIDES)=0.00, chain_duty=0.07"
+    },
+    {
+     "section_id": "NYC:ADC 26-520",
+     "route": "triaged_excluded",
+     "reason": "JEV: EXCLUDED_REGIME conf=0.88, P(DECIDES)=0.02, chain_duty=0.25"
+    },
+    {
+     "section_id": "NYC:ADC 26-522",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.95, P(DECIDES)=0.03, chain_duty=0.15"
+    },
+    {
+     "section_id": "NYC:ADC 26-2401",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.80, P(DECIDES)=0.12, chain_duty=0.11"
+    },
+    {
+     "section_id": "NYC:ADC 26-2402",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.98, P(DECIDES)=0.01, chain_duty=0.09"
+    },
+    {
+     "section_id": "NYC:ADC 26-3001",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.98, P(DECIDES)=0.01, chain_duty=0.09"
+    },
+    {
+     "section_id": "NYC:ADC 26-3401",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.97, P(DECIDES)=0.02, chain_duty=0.14"
+    },
+    {
+     "section_id": "NYC:ADC 27-2003",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.81, P(DECIDES)=0.12, chain_duty=0.15"
+    },
+    {
+     "section_id": "NYC:ADC 27-2017",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.96, P(DECIDES)=0.02, chain_duty=0.09"
+    },
+    {
+     "section_id": "NYC:ADC 27-2056.2",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.93, P(DECIDES)=0.05, chain_duty=0.16"
+    },
+    {
+     "section_id": "NYC:ADC 27-2097",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.78, P(DECIDES)=0.14, chain_duty=0.17"
+    },
+    {
+     "section_id": "NYC:RCNY 6 6-11",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.87, P(DECIDES)=0.08, chain_duty=0.10"
+    },
+    {
+     "section_id": "NYC:RCNY 28 1-01",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.98, P(DECIDES)=0.01, chain_duty=0.07"
+    },
+    {
+     "section_id": "NYC:RCNY 68 9-09",
+     "route": "triaged_excluded",
+     "reason": "JEV: EXCLUDED_REGIME conf=0.93, P(DECIDES)=0.02, chain_duty=0.26"
+    },
+    {
+     "section_id": "US:11 USC 1101",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.96, P(DECIDES)=0.03, chain_duty=0.10"
+    },
+    {
+     "section_id": "US:15 USC 1605",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.80, P(DECIDES)=0.13, chain_duty=0.13"
+    },
+    {
+     "section_id": "US:15 USC 1692a",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.94, P(DECIDES)=0.04, chain_duty=0.22"
+    },
+    {
+     "section_id": "US:15 USC 7006",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.99, P(DECIDES)=0.01, chain_duty=0.08"
+    },
+    {
+     "section_id": "US:42 USC 3602",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.98, P(DECIDES)=0.01, chain_duty=0.14"
+    },
+    {
+     "section_id": "US:50 USC 3911",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.99, P(DECIDES)=0.01, chain_duty=0.11"
+    },
+    {
+     "section_id": "US:50 USC 3920",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.80, P(DECIDES)=0.13, chain_duty=0.26"
+    },
+    {
+     "section_id": "US:12 CFR 1006.2",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.91, P(DECIDES)=0.06, chain_duty=0.27"
+    },
+    {
+     "section_id": "US:12 CFR 1005.2",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.95, P(DECIDES)=0.03, chain_duty=0.14"
+    },
+    {
+     "section_id": "US:24 CFR 982.404",
+     "route": "triaged_excluded",
+     "reason": "JEV: EXCLUDED_REGIME conf=0.95, P(DECIDES)=0.01, chain_duty=0.27"
+    },
+    {
+     "section_id": "US:16 CFR 682.1",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.96, P(DECIDES)=0.03, chain_duty=0.14"
+    }
+   ],
+   "negatives_set_aside": 147,
+   "unanswered": 56,
+   "unanswered_long": 56,
+   "negatives_unanswered": 0,
+   "recalled": 450,
+   "recall": 0.9317
+  },
+  {
+   "version": "v2",
+   "positives": 539,
+   "negatives": 183,
+   "missed": [
+    {
+     "section_id": "NYC:ADC 20-105",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.92, P(DECIDES)=0.05, chain_duty=0.08"
+    },
+    {
+     "section_id": "NYC:ADC 20-699.20",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.99, P(DECIDES)=0.00, chain_duty=0.07"
+    },
+    {
+     "section_id": "NYC:ADC 26-2402",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.98, P(DECIDES)=0.01, chain_duty=0.09"
+    },
+    {
+     "section_id": "NYC:ADC 26-3001",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.98, P(DECIDES)=0.01, chain_duty=0.09"
+    },
+    {
+     "section_id": "NYC:ADC 27-2017",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.96, P(DECIDES)=0.02, chain_duty=0.09"
+    },
+    {
+     "section_id": "NYC:RCNY 28 1-01",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.98, P(DECIDES)=0.01, chain_duty=0.07"
+    },
+    {
+     "section_id": "US:15 USC 7006",
+     "route": "triaged_no_decision",
+     "reason": "JEV: NO_DECISION conf=0.99, P(DECIDES)=0.01, chain_duty=0.08"
+    }
+   ],
+   "negatives_set_aside": 128,
+   "unanswered": 56,
+   "unanswered_long": 56,
+   "negatives_unanswered": 0,
+   "recalled": 476,
+   "recall": 0.9855
+  }
+ ],
+ "own_reviewer_labels": {
+  "reviewer_decided": 2232,
+  "deciding": 438,
+  "deciding_queued": 421,
+  "deciding_set_aside": 17,
+  "by_tier": {
+   "strong": {
+    "sections": 47,
+    "deciding": 29
+   },
+   "likely": {
+    "sections": 467,
+    "deciding": 243
+   },
+   "possible": {
+    "sections": 965,
+    "deciding": 131
+   },
+   "low_confidence": {
+    "sections": 17,
+    "deciding": 0
+   },
+   "structural": {
+    "sections": 2,
+    "deciding": 1
+   },
+   "long": {
+    "sections": 55,
+    "deciding": 17
+   },
+   "set_aside": {
+    "sections": 679,
+    "deciding": 17
+   }
+  }
+ }
+}

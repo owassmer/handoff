@@ -1,0 +1,18 @@
+SOURCE: https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/
+RETRIEVED: 2026-09-30
+PURPOSE: test whether CFPB complaint narratives name Holland or its collectors
+
+=== GET https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?search_term=Holland%20Residential&size=1&no_aggs=true
+total: {'value': 0, 'relation': 'eq'}
+=== GET https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?search_term=apartment&size=1&no_aggs=true
+total: {'value': 0, 'relation': 'eq'}
+=== GET https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?search_term=apartment&field=complaint_what_happened&size=1
+{"field":["\"complaint_what_happened\" is not a valid choice."]}
+=== GET https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?search_term=holland&field=company&size=3&no_aggs=true
+total: {'value': 1, 'relation': 'eq'}
+company: Hollander, Goode & Lopez, PLLC | keys: ['company', 'company_public_response', 'company_response', 'complaint_id', 'date_received', 'date_sent_to_company', 'issue', 'product', 'state', 'sub_issue', 'sub_product', 'submitted_via', 'tags', 'timely', 'zip_code']
+=== GET https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?search_term=Preston%20Mitchell&field=company&size=1&no_aggs=true
+total: {'value': 0, 'relation': 'eq'}
+=== GET https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?size=1&no_aggs=true&has_narrative=true
+total: {'value': 18091520, 'relation': 'eq'}
+company: TRANSUNION INTERMEDIATE HOLDINGS, INC. | keys: ['company', 'company_public_response', 'company_response', 'complaint_id', 'date_received', 'date_sent_to_company', 'issue', 'product', 'state', 'sub_issue', 'sub_product', 'submitted_via', 'tags', 'timely', 'zip_code']

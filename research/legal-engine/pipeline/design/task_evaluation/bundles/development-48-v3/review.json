@@ -1,0 +1,412 @@
+{
+  "cases_sha256": "736146bb69d454b0346c90818e5b55c03170e925d25ee4094d4f5f60b2285811",
+  "contracts_sha256": "22bf043cce6ac92f1cbfe72a09cd2e34713c4a1bee9b2c0575a22a0b3a8d2a87",
+  "contracts_path": "configurations/proposed-v3.json",
+  "reviewer": "prepared_input_review: independent source review",
+  "author_labels_seen": false,
+  "model_responses_seen": false,
+  "status": "Independent v3 expectations complete before author-label reconciliation or model dispatch.",
+  "material_findings": [],
+  "resolved_findings": [],
+  "preparation_review": {
+    "accepted": true,
+    "development_only": true,
+    "case_count": 48,
+    "exact_source_spans_validated": 84,
+    "source_hashes_and_unicode_offsets_valid": true,
+    "use_expression_unique_and_term_once": true,
+    "unresolved_material_issues": [],
+    "blindness": "Read only native configuration, cases, primary captures and own prior expansion review. Did not read author labels, response-bearing findings, construction scripts, correction ledger or model responses. Parent identified changed case IDs but supplied no answers.",
+    "limits": [
+      "Conditional textual judgments do not establish applicability, actual dates, or individual entitlement.",
+      "Meaning matching is separate from legal authority of a definition across jurisdictions.",
+      "Choice alternatives are distinct for selected terms; NONE reflects missing offered sense rather than missing evidence."
+    ]
+  },
+  "cases": [
+    {
+      "id": "d001",
+      "expected": "YES",
+      "reason": "Express definitions assign meanings to landlord, owner and other chapter terms.",
+      "edge_case": "CA_CIV_abandoned_property",
+      "downstream_failure": "Incorrect extraction or missed definition.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d002",
+      "expected": "YES",
+      "reason": "Express incorporation adopts the definition in section 1005.3; extracting its contents requires that source.",
+      "edge_case": "US_RegE_definitions",
+      "downstream_failure": "Incorrect extraction or missed definition.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d003",
+      "expected": "YES",
+      "reason": "Assigns hearing officer an impartial PHA-selected reviewer meaning with exclusions.",
+      "edge_case": "US_HUD_public_housing_grievance",
+      "downstream_failure": "Incorrect extraction or missed definition.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d004",
+      "expected": "YES",
+      "reason": "An inclusive definition assigns components and limits to reasonable removal and storage costs.",
+      "edge_case": "CA_CIV_property_surrender",
+      "downstream_failure": "Incorrect extraction or missed definition.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d005",
+      "expected": "NO",
+      "reason": "Sets conditions and duties for surrendering property rather than assigning a term meaning.",
+      "edge_case": "CA_CIV_property_surrender",
+      "downstream_failure": "Incorrect extraction or missed definition.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d006",
+      "expected": "NO",
+      "reason": "Bars an inference of liability; it does not define a term.",
+      "edge_case": "US_FDCPA_validation",
+      "downstream_failure": "Incorrect extraction or missed definition.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d007",
+      "expected": "NO",
+      "reason": "Imposes retention duration rather than defining records or another term.",
+      "edge_case": "US_RegE_records",
+      "downstream_failure": "Incorrect extraction or missed definition.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d008",
+      "expected": "NO",
+      "reason": "Reports petitioners proposed interpretation without adopting it.",
+      "edge_case": "US_Henson_tense_argument",
+      "downstream_failure": "Incorrect extraction or missed definition.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d009",
+      "expected": "YES",
+      "reason": "Act denotes the Electronic Fund Transfer Act in its enforcement provision.",
+      "edge_case": "US_RegE_Act",
+      "downstream_failure": "Incorrect meaning attached to this occurrence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d010",
+      "expected": "NO",
+      "reason": "Act denotes conduct to be performed, not a named statute.",
+      "edge_case": "CA_CIV_time_computation",
+      "downstream_failure": "Incorrect meaning attached to this occurrence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d011",
+      "expected": "NO",
+      "reason": "Credit is an amount provisionally credited to an account, not a right to defer payment.",
+      "edge_case": "US_RegE_provisional_credit",
+      "downstream_failure": "Incorrect meaning attached to this occurrence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d012",
+      "expected": "YES",
+      "reason": "State denotes a territorial jurisdiction in the geographical exclusion; negation does not change that meaning.",
+      "edge_case": "US_RegE_investigation_extension",
+      "downstream_failure": "Incorrect meaning attached to this occurrence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d013",
+      "expected": "YES",
+      "reason": "Person denotes a natural person or legal entity capable of owning property; the same sense fits although this federal definition does not itself govern California law.",
+      "edge_case": "CA_CIV_abandoned_property",
+      "downstream_failure": "Incorrect meaning attached to this occurrence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d014",
+      "expected": "YES",
+      "reason": "The selected term is expressly assigned the supplied hearing-officer definition in the same passage.",
+      "edge_case": "US_HUD_public_housing_grievance",
+      "downstream_failure": "Incorrect meaning attached to this occurrence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d015",
+      "expected": "NO",
+      "reason": "E-Sign Act identifies another enactment, not the Electronic Fund Transfer Act.",
+      "edge_case": "US_RegE_disclosure",
+      "downstream_failure": "Incorrect meaning attached to this occurrence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d016",
+      "expected": "NO",
+      "reason": "State denotes present condition, not a geographical jurisdiction.",
+      "edge_case": "US_Henson_tense_argument",
+      "downstream_failure": "Incorrect meaning attached to this occurrence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d017",
+      "expected": "YES",
+      "reason": "The specified two-day reclamation with property remaining in the dwelling removes storage payment.",
+      "edge_case": "CA_CIV_abandoned_property",
+      "downstream_failure": "Required duty wrongly removed or qualification missed.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d018",
+      "expected": "YES",
+      "reason": "Formal pleadings are excluded from the initial communications triggering the notice duty.",
+      "edge_case": "US_FDCPA_validation",
+      "downstream_failure": "Required duty wrongly removed or qualification missed.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d019",
+      "expected": "YES",
+      "reason": "The candidate expressly removes provisional-credit duty in its specified circumstances.",
+      "edge_case": "US_RegE_provisional_credit",
+      "downstream_failure": "Required duty wrongly removed or qualification missed.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d020",
+      "expected": "YES",
+      "reason": "The chapter exclusion removes its surrender requirements for the specified alternative procedures or occupancy.",
+      "edge_case": "CA_CIV_property_surrender",
+      "downstream_failure": "Required duty wrongly removed or qualification missed.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d021",
+      "expected": "NO",
+      "reason": "Electronic delivery is an authorized method within the quoted requirement; required disclosure scope remains unchanged.",
+      "edge_case": "US_RegE_disclosure",
+      "downstream_failure": "Required duty wrongly removed or qualification missed.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d022",
+      "expected": "NO",
+      "reason": "A rule against treating silence as admission does not remove the collectors notice duty.",
+      "edge_case": "US_FDCPA_validation",
+      "downstream_failure": "Required duty wrongly removed or qualification missed.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d023",
+      "expected": "NO",
+      "reason": "Damages for violation enforce rather than excuse the surrender requirement.",
+      "edge_case": "CA_CIV_property_surrender",
+      "downstream_failure": "Required duty wrongly removed or qualification missed.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d024",
+      "expected": "YES",
+      "reason": "Own-record review suffices in specified circumstances and limits the scope of investigation otherwise required; this is a scope reduction under the contract.",
+      "edge_case": "US_RegE_investigation",
+      "downstream_failure": "Required duty wrongly removed or qualification missed.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d025",
+      "expected": "YES",
+      "reason": "The candidate replaces the relevant ten-business-day period with twenty for the specified early-account transfer.",
+      "edge_case": "US_RegE_investigation_extension",
+      "downstream_failure": "Wrong timing rule used in subsequent date computation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d026",
+      "expected": "YES",
+      "reason": "The candidate replaces the forty-five-day investigation period with ninety for specified transfers.",
+      "edge_case": "US_RegE_investigation_extension",
+      "downstream_failure": "Wrong timing rule used in subsequent date computation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d027",
+      "expected": "YES",
+      "reason": "The candidate substitutes sending requested information for the original statement event as the sixty-day trigger.",
+      "edge_case": "US_RegE_notice",
+      "downstream_failure": "Wrong timing rule used in subsequent date computation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d028",
+      "expected": "YES",
+      "reason": "The general holiday rule can extend the specified eighteen-day period when its last day is a holiday; actual dates are separate.",
+      "edge_case": "CA_CIV_time_computation",
+      "downstream_failure": "Wrong timing rule used in subsequent date computation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d029",
+      "expected": "NO",
+      "reason": "The three-business-day rule after investigation completion remains unchanged even if investigation may end later.",
+      "edge_case": "US_RegE_investigation_extension",
+      "downstream_failure": "Wrong timing rule used in subsequent date computation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d030",
+      "expected": "NO",
+      "reason": "Collection cessation pending verification does not change the five-day initial-notice rule.",
+      "edge_case": "US_FDCPA_validation",
+      "downstream_failure": "Wrong timing rule used in subsequent date computation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d031",
+      "expected": "NO",
+      "reason": "The tenants removal period after tender is distinct from the landlords demand period after request.",
+      "edge_case": "CA_CIV_property_surrender",
+      "downstream_failure": "Wrong timing rule used in subsequent date computation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d032",
+      "expected": "NO",
+      "reason": "The damages provision concerns later surrender by the landlord; it does not change the tenants eighteen-day request period.",
+      "edge_case": "CA_CIV_property_surrender",
+      "downstream_failure": "Wrong timing rule used in subsequent date computation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d033",
+      "expected": "A",
+      "reason": "A identifies the named Electronic Fund Transfer Act in this enforcement provision.",
+      "edge_case": "US_RegE_Act",
+      "downstream_failure": "Wrong sense selected for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d034",
+      "expected": "B",
+      "reason": "B identifies conduct that is to be performed within a period.",
+      "edge_case": "CA_CIV_time_computation",
+      "downstream_failure": "Wrong sense selected for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d035",
+      "expected": "B",
+      "reason": "B identifies the provisional account amount being debited.",
+      "edge_case": "US_RegE_provisional_credit",
+      "downstream_failure": "Wrong sense selected for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d036",
+      "expected": "NONE",
+      "reason": "The defined financial credit sense is neither academic credit nor acknowledgment.",
+      "edge_case": "US_RegE_definitions",
+      "downstream_failure": "Wrong sense selected for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d037",
+      "expected": "A",
+      "reason": "A preserves the impartial reviewer definition and excludes the challenged decisionmakers subordinate.",
+      "edge_case": "US_HUD_public_housing_grievance",
+      "downstream_failure": "Wrong sense selected for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d038",
+      "expected": "B",
+      "reason": "B preserves the qualifying adult resident definition and live-in-aide exclusion.",
+      "edge_case": "US_HUD_public_housing_grievance",
+      "downstream_failure": "Wrong sense selected for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d039",
+      "expected": "NONE",
+      "reason": "The term means condition, which neither offered geographical nor enacted-law meaning captures.",
+      "edge_case": "US_Henson_tense_argument",
+      "downstream_failure": "Wrong sense selected for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d040",
+      "expected": "A",
+      "reason": "A reproduces the personal-property interest and landlord exclusion.",
+      "edge_case": "CA_CIV_abandoned_property",
+      "downstream_failure": "Wrong sense selected for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d041",
+      "expected": "NO",
+      "reason": "The text expressly says the Court did not agree to address the principal-purpose definition.",
+      "edge_case": "US_Henson_scope",
+      "downstream_failure": "Unsupported proposition accepted or supported proposition rejected.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d042",
+      "expected": "NO",
+      "reason": "The text attributes that position to petitioners rather than adopting it as the Courts holding.",
+      "edge_case": "US_Henson_tense_argument",
+      "downstream_failure": "Unsupported proposition accepted or supported proposition rejected.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d043",
+      "expected": "YES",
+      "reason": "The text expressly distinguishes own-account collection under the disputed definition; the claim retains that scope.",
+      "edge_case": "US_Henson_holding",
+      "downstream_failure": "Unsupported proposition accepted or supported proposition rejected.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d044",
+      "expected": "YES",
+      "reason": "The text directly excludes formal civil pleadings for subsection (a).",
+      "edge_case": "US_FDCPA_validation",
+      "downstream_failure": "Unsupported proposition accepted or supported proposition rejected.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d045",
+      "expected": "NO",
+      "reason": "The claim removes the express condition that property remained in the dwelling.",
+      "edge_case": "CA_CIV_abandoned_property",
+      "downstream_failure": "Unsupported proposition accepted or supported proposition rejected.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d046",
+      "expected": "YES",
+      "reason": "The text expressly caps this storage component at fair rental value of necessary space.",
+      "edge_case": "CA_CIV_property_surrender",
+      "downstream_failure": "Unsupported proposition accepted or supported proposition rejected.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d047",
+      "expected": "YES",
+      "reason": "The text expressly substitutes twenty for ten business days for the specified transfer.",
+      "edge_case": "US_RegE_investigation_extension",
+      "downstream_failure": "Unsupported proposition accepted or supported proposition rejected.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "d048",
+      "expected": "NO",
+      "reason": "The definition expressly excludes consumer fraud or concerted consumer fraud.",
+      "edge_case": "US_RegE_definitions",
+      "downstream_failure": "Unsupported proposition accepted or supported proposition rejected.",
+      "material_ambiguity": false
+    }
+  ]
+}

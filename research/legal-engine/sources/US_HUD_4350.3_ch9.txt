@@ -1,0 +1,2244 @@
+Source: https://www.hud.gov/sites/documents/43503c9hsgh.pdf (HUD Handbook 4350.3 REV-1, Chapter 9: Enterprise Income Verification (EIV))
+Fetched: 2026-09-28 (curl; pdftotext -layout)
+
+                                                                                        4350.3 REV-1
+
+
+
+                 CHAPTER 9. ENTERPRISE INCOME VERIFICATION (EIV)
+
+9-1     Introduction
+
+         This chapter describes the requirements for using the information in the Enterprise
+         Income Verification (EIV) system for verifying employment and income of tenants and for
+         reducing administrative and subsidy errors.
+
+                         Section 1: Enterprise Income Verification (EIV) System introduces
+                          the EIV system and the mandatory use of EIV data.
+
+                         Section 2: EIV Source Data describes the sources providing EIV data.
+
+                         Section 3: EIV Reports describes each of the EIV Income and
+                          Verification Reports and how they are to be used.
+
+                         Section 4: Security of EIV Data describes disclosure of EIV data
+                          requirements and the importance of securing EIV data as well as the
+                          requirements for receiving annual security awareness training.
+
+                         Section 5: Penalties for Failure to Have Access to or Failure to Use
+                          EIV describes the penalties an owner and/or management agent may
+                          incur for failure to have access to the EIV system or failure to use the EIV
+                          system.
+
+                         Section 6: EIV Resources provides a listing of resources available to
+                          help owners get access to EIV and to understand and use the EIV system
+                          and EIV data.
+
+9-2     Key Terms
+
+        A.       There are a number of technical terms used in this chapter that have very
+                 specific definitions established by federal statute or regulations, or by HUD.
+                 These terms are listed in Figure 9-1, and their definitions can be found in the
+                 Glossary to this handbook. It is important to be familiar with these definitions
+                 when reading this chapter.
+
+        B.       The terms “disability” and “persons with disabilities” are used in two contexts –
+                 for civil rights protections, and for program eligibility purposes. Each use has
+                 specific definitions.
+
+                 1.       When used in context of protection from discrimination or improving the
+                          accessibility of housing, the civil rights-related definitions apply.
+
+                 2.       When used in the context of eligibility under multifamily subsidized
+                          housing programs, the program eligibility definitions apply.
+
+                 NOTE: See the Glossary for specific definitions and paragraph 2-23 for an
+                 explanation of this difference.
+
+
+HUD Multifamily Occupancy Handbook                 9-1                                              8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 1:                                                                            4350.3 REV-1
+Enterprise Income Verification (EIV) System
+
+
+                                           Figure 9-1: Key Terms
+                                    Enterprise Income Verification (EIV)
+
+                                    Improper Payments
+
+
+                     Section 1: Enterprise Income Verification (EIV) System
+
+9-3     Key Regulations
+
+         This paragraph identifies the key regulatory citation pertaining to this Section. The
+         citation and its title are listed below.
+
+                         24 CFR 5.233 Mandated Use of HUD’s Enterprise Income Verification
+                          (EIV) System
+
+9-4     Introduction to the EIV System
+
+         The EIV system is a web-based application which provides owners with employment,
+         wage, unemployment compensation and Social Security benefit information for tenants
+         participating in HUD’s assisted housing programs. Information in EIV is derived from
+         computer matching programs initiated by HUD with the Social Security Administration
+         (SSA) and the U.S. Department of Health and Human Services (HHS), for all tenants
+         with valid personal identifying information (name, date of birth (DOB), and Social
+         Security number (SSN)) reported on the form HUD-50059. Information in the EIV
+         system is used by owners to verify employment and income at the time of recertification
+         and to reduce errors in subsidy payments.
+
+9-5     Mandatory Use of the EIV System
+
+        A.       Use of EIV applies to all programs covered by this Handbook listed in Chapter 1,
+                 Figure 1-1.
+
+        B.       Owners must use the EIV system in its entirety:
+
+                         As a third party source to verify tenant employment and income
+                          information during mandatory recertifications of family composition and
+                          income, in accordance with 24 CFR 5.236, and administrative guidance
+                          issued by HUD, and
+
+                         To reduce administrative and subsidy payment errors in accordance with
+                          HUD administrative guidance.
+
+        C.       Contract Administrators (HUD staff, PBCAs and TCAs) must use EIV for
+                 monitoring the owner’s compliance with obtaining access to and using the EIV
+                 system.
+
+        D.       Independent Public Auditors (IPAs) and the Office of Inspector General (OIG)
+                 may use EIV for auditing purposes. See the Glossary for the definition for IPA.
+
+
+HUD Multifamily Occupancy Handbook                    9-2                                        8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 2:                                                                                4350.3 REV-1
+EIV Source Data
+
+
+
+                                                  Section 2: EIV Source Data
+
+9-6     EIV Data
+
+        A.        Data in the EIV system comes from several sources including the following:
+
+                  1.      Tenant information in the EIV system is data from current, active forms
+                          HUD-50059 transmitted to the Tenant Rental Assistance Certification
+                          System (TRACS).
+
+                  2.      Employment and income information comes from two sources, 1) the
+                          Department of Health and Human Services (HHS’) National Directory of
+                          New Hires (NDNH) and 2) the Social Security Administration (SSA).
+
+                          a.       NDNH
+
+                                   1.       New Hires (W-4)
+                                   2.       Quarterly wages for federal and non-federal employees
+                                   3.       Quarterly unemployment compensation
+
+                          b.       SSA
+
+                                   1.       Social Security (SS) benefits
+                                   2.       Supplemental Security Income (SSI) benefits
+                                   3.       Dual Entitlement benefits
+                                   4.       Medicare premium information
+                                   5.       Disability status
+
+        B.        Schedule of EIV Updates
+
+                  1.      SSA Updates
+
+                          a.       A quarterly match is conducted against SSA records for tenants
+                                   who pass the SSA identity test (See C.2 below).
+
+                          b.       Each quarter the entire tenant population is matched with SSA.
+                                   Each month during a quarter, a group of tenants are matched on
+                                   their next recertification month. (See Figure 9-2 below.)
+
+                          c.       The SSA match process begins at the beginning of each month
+                                   with all of the data being loaded into EIV by the second week of
+                                   the month.
+
+                          d.       Records that are new or that have been significantly updated are
+                                   matched in the next monthly SSA matching cycle.
+
+                          e.       Benefits that include the cost of living adjustments (COLAs) are
+                                   not available from SSA for uploading into EIV until the end of the
+                                   calendar year.
+
+
+HUD Multifamily Occupancy Handbook                     9-3                                          8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 2:                                                                                    4350.3 REV-1
+EIV Source Data
+
+
+
+                                   When processing recertifications with an effective date of January
+                                   1, February 1, March 1 and April 1, in order to complete the
+                                   Recertification Steps outlined in Chapter 7, Figure 7-3, and
+                                   provide the tenant with the required 30-day notice of any increase
+                                   in rent, the owner must use one of the methods below for
+                                   determining the tenant’s income.
+
+                                   (1)      Use the benefit information reported in EIV that does not
+                                            include the COLA as third party verification as long as the
+                                            tenant confirms that the income data in EIV is what he/she
+                                            is receiving;
+
+                                   (2)      Use the SSA benefit, award letter or Proof of Income Letter
+                                            provided by the tenant that includes the COLA adjustment
+                                            if the date of the letter is within 120 days from the date of
+                                            receipt by the owner;
+
+                                   (3)      Determine the tenant’s income by applying the COLA
+                                            increase percentage to the current verified benefit amount
+                                            and document the tenant file with how the tenant’s income
+                                            was determined; or
+
+                                   (4)      Request third party verification directly from SSA when the
+                                            income in EIV does not agree with the income the tenant
+                                            reports he/she is receiving. (See Paragraph 9-15)
+
+                                   (5)      All recertifications effective after April 1 must reflect the
+                                            SSA benefit that includes the COLA.
+
+                          f.       EIV retains the last eight actions processed by SSA for a tenant.
+
+                                   Figure 9-2 Schedule of SSA Updates
+  Group                  Recertification Month                    Months Data Is Refreshed in EIV
+  I           April, May, June, July                             January, April, July, October
+  II          August, September, October, November               February, May, August, November
+  III         December, January, February, March                 March, June, September, December
+
+
+                                   For example, the SSA data for tenants with a recertification month
+                                   of April, May, June or July is refreshed in EIV in January, April,
+                                   July and October.
+
+                  3.      NDNH Updates
+
+                          a.       Tenants who pass the identity match with SSA are matched with
+                                   the NDNH new hires (W-4), wage and unemployment data.
+
+
+
+
+HUD Multifamily Occupancy Handbook                    9-4                                                   8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 2:                                                                                4350.3 REV-1
+EIV Source Data
+
+
+
+                          b.       There are two matches performed:
+
+                                   (1)      Monthly match:
+
+                                            (a) Entire eligible tenant base is matched with the new
+                                                hires (W-4) data, and
+
+                                            (b) Newly admitted tenants are matched with the wage
+                                                and unemployment benefit data.
+
+                                   (2)      Quarterly match of the entire tenant base with the new
+                                            hires (W-4), wage and unemployment benefit data.
+
+                                   See Figure 9-3 below.
+
+                          c.       The new hires (W-4), wage and unemployment benefit data is
+                                   loaded into EIV by the 20th of each month.
+
+                          d.       EIV retains the last 8 actions processed by HHS of the NDNH
+                                   employment and income data for a tenant.
+
+                                Figure 9-3 Scheduled of NDNH Updates
+
+                                          Month       Type of Match
+                                          January          Monthly
+                                         February          Quarterly
+                                          March            Monthly
+                                           April           Monthly
+                                           May             Quarterly
+                                           June            Monthly
+                                           July            Monthly
+                                          August           Quarterly
+                                         September         Monthly
+                                          October          Monthly
+                                         November          Quarterly
+                                         December          Monthly
+
+
+
+
+HUD Multifamily Occupancy Handbook                   9-5                                              8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                              4350.3 REV-1
+EIV Reports
+
+
+
+        C.       Screening of Personal Identifiers
+
+                 1.       EIV Pre-screening
+
+                          Prior to sending tenant information to SSA for validation of a tenant’s
+                          personal identifiers (last name, DOB and SSN), a pre-screening is
+                          conducted to identify tenants who are missing or have invalid personal
+                          identifiers. These tenants are not sent to SSA for the identity match until
+                          the personal identifier information has been corrected in TRACS.
+
+                 2.       SSA Identity Test
+
+                          a.       Tenants who pass the EIV pre-screening test are sent to SSA for
+                                   verification of their personal identifiers against SSA records.
+                                   Tenants whose personal identifiers do not match SSA’s records
+                                   cannot be matched against HHS’ NDNH or SSA’s records until the
+                                   personal identifier information has been corrected in TRACS.
+
+                          b.       Tenants whose personal identifiers match SSA’s records are
+                                   matched against HHS’ NDNH and SSA’s records to obtain
+                                   employment and income information.
+
+                 See Paragraph 9-12.C for information on using the Failed EIV Pre-Screening and
+                 Failed SSA Identity Test Reports for correcting discrepant data.
+
+                                         Section 3: EIV Reports
+
+9-7     Key Regulations
+
+         This paragraph identifies the key regulatory citations pertaining to this Section. The
+         citation and its title are listed below.
+
+                         24 CFR 5.233 Mandated Use of HUD’s Enterprise Income Verification
+                          (EIV) System
+
+                         24 CFR 5.236 Procedures for termination, denial, suspension, or
+                          reduction of assistance based on information obtained from a SWICA or
+                          Federal agency
+
+                         24 CFR 5.659 Family information and verification.
+
+9-8     Using EIV Reports
+
+        A.       Owners must use the EIV system in its entirety. To do this, the owner must use:
+
+                 1.       EIV Income Report as a third party source to verify a tenant’s
+                          employment and income during mandatory recertifications (annual and
+                          interim) of family composition and income, and
+
+
+
+HUD Multifamily Occupancy Handbook                 9-6                                            8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                              4350.3 REV-1
+EIV Reports
+
+
+
+                 2.       Other EIV Income Reports (Income Discrepancy Report, New Hires
+                          Report, No Income Reported on 50059, and No Income Reported by HHS
+                          or SSA) to identify issues or discrepancies which may impact a family’s
+                          assistance; and
+
+                 3.       EIV Verification Reports (Existing Tenant Search, Multiple Subsidy
+                          Report, Identity Verification Reports, and Deceased Tenants Report) that
+                          further assists in reducing subsidy payment errors.
+
+        B.       Owners must:
+
+                 1.       Use the Existing Tenant Search in EIV as part of their screening criteria
+                          for new tenants and must include written policies for using the search in
+                          their Tenant Selection Plan. (See Chapter 4, Section 1 for a discussion
+                          on requirements of the Tenant Selection Plan.)
+
+                 2.       Develop policies and procedures for staff to follow for using the EIV
+                          Income reports and remaining Verification Reports
+
+                 3.       Have current, signed consent forms HUD-9887 on file before accessing
+                          the employment and income information in EIV for a tenant. (See
+                          Chapter 3, Paragraph 3-11 for a discussion on the requirements on
+                          consent forms.)
+
+        C.       Owners may not suspend, terminate, reduce, make a final denial of rental
+                 assistance, or take any other adverse action against an individual based solely
+                 on the date in EIV. See Chapter 8, Section 4 for information on investigating
+                 discrepancies and errors and determining fraud.
+
+9-9     Documentation to Demonstrate Owners Compliance with Use of the Income
+        Report
+
+        The following documentation is required to be in the tenant file to demonstrate the
+        owner’s compliance with mandated use of EIV as the third party source to verify tenant
+        employment and income information.
+
+        A.       No Dispute of EIV Information: EIV Income Report, current acceptable tenant-
+                 provided documentation and, if necessary (as determined by the owner), third
+                 party verification from the source.
+
+        B.       Disputed EIV Information: EIV Income Report and third party verification from
+                 the source for disputed information.
+
+        C.       Tenant-reported Income Not Verified through the EIV System: EIV Income
+                 Report, current acceptable tenant-provided documents or third party verification
+                 from the source.
+
+        See Paragraph 9-11 and Exhibit 9-5, Use of EIV Reports, for documentation
+        requirements for all EIV reports.
+
+
+HUD Multifamily Occupancy Handbook                 9-7                                            8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                                4350.3 REV-1
+EIV Reports
+
+
+
+9-10 Independent Third Party Verification
+
+        A.       Owners must request and obtain independent third party verification directly from
+                 the source which is used to complement EIV data when the below occurs. In
+                 these situations, the owner must not use tenant-provided documentation even if
+                 generated from a third-party source.
+
+                 1.       The tenant is unable to provide acceptable and current employment
+                          and/or income documentation to support the wage and unemployment
+                          income in EIV;
+
+                 2.       The tenant disputes the EIV income information;
+
+                 3.       There is an EIV income discrepancy reported at the time of recertification
+                          (annual or interim) or at other times as specified in the owner’s policies
+                          and procedures;
+
+                 4.       There is incomplete EIV employment or income data for a tenant and the
+                          owner needs additional information. Examples of additional information
+                          include but are not limited to:
+
+                          (a)      Effective date of income (i.e. employment, unemployment
+                                   compensation or Social Security benefits).
+
+                          (b)      For new employment: pay rate, number of hours worked per
+                                   week, pay frequency, hire date (not required to be reported to
+                                   state so it may not be in EIV), etc. (See Exhibit 9-6 for data
+                                   elements that are optional for employers to report to the state.)
+
+                          (c)      There is no EIV employment or income data for a tenant.
+
+                 See Chapter 5, Paragraph 5-13 for information on acceptable verification
+                 methods.
+
+        B.       When the owner is unable to obtain third party verification, e.g., the third party
+                 does not respond, the tenant file must be documented why third party verification
+                 was not available. (See Chapter 5, Paragraph 5-18 for documentation
+                 requirements.)
+
+        C.       The owner may accept self-declaration from the tenant only if third party
+                 verification cannot be verified by another acceptable verification method. (See
+                 chapter 5, Paragraph 5-13.B for certification requirements.)
+
+        D.       Owners always have the discretion to obtain additional third party verification of
+                 income or verification of other EIV data based on circumstances encountered
+                 during the recertification process.
+
+
+
+
+HUD Multifamily Occupancy Handbook                  9-8                                                8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                                 4350.3 REV-1
+EIV Reports
+
+
+
+9-11 EIV Income Reports
+
+        When selecting the Income Report for an individual tenant, either from the list of tenants
+        for a particular project and/or contract or by querying by the head of household’s SSN,
+        there are three reports that the owner must use at the time of recertification. The reports
+        can be accessed by clicking on the tab for a particular report.
+
+
+        A.       Summary Report
+
+                 This report is a summary of information taken from the current, active
+                 certifications contained in the TRACS file at the time of the income match. It also
+                 provides the Identity Verification Status for each household member.
+
+                 1.       Identity Verification Status
+
+                          There are four verification statuses identified:
+
+                          Verified – personal identifiers (last name, DOB and SSN) match the SSA
+                          database
+
+                          Failed – personal identifiers do not match the SSA database
+
+                          Not Verified – personal identifiers have not yet been sent to SSA for
+                          validation or validation is in process by SSA
+
+                          Deceased – SSA’s records indicate the person is deceased
+
+                 2.       Owners must use this report:
+
+                          a.       At the time of recertification to review and resolve the status of
+                                   any household member(s) with a “failed” or “deceased” status.
+
+                                   NOTE: Owners do not have to do anything at the time of
+                                   recertification when the status is “Not Verified”. However, the
+                                   owner must check the Failed SSA Identity Test report monthly as
+                                   changes in the Identity Verification Status for these tenants may
+                                   occur.
+
+                          b.       As verification that a tenant’s SSN has been “Verified” by SSA as
+                                   being a valid SSN.
+
+                 3.       Owners must retain in the tenant file:
+
+                          a.       The Summary Report(s) as verification of the SSN for all
+                                   household members whose Identity Verification Status is
+                                   “Verified”.
+
+                          b.       If the Summary Report in the tenant file shows an Identity
+                                   Verification Status of “Verified” for all household members
+
+HUD Multifamily Occupancy Handbook                   9-9                                                8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                                 4350.3 REV-1
+EIV Reports
+
+
+
+                                   required to have a SSN, the owner does not have to continue to
+                                   print out the Summary Report at recertification unless there is a
+                                   change in household composition or in a household member’s
+                                   identity verification status.
+
+                                   NOTE: To minimize the risk of exposing a tenant’s SSN, owners
+                                   may remove and destroy, at the time of recertification, copies of
+                                   verification documentation received from the tenant at the time of
+                                   disclosure of their SSN once the Identity Verification Status shows
+                                   “Verified”. Owners are encouraged to minimize the number of
+                                   tenant records that contain documents that display the full nine-
+                                   digit SSN. Owners must not include the full nine-digit SSN for a
+                                   tenant in emails or other electronic communications.
+
+                                   See Chapter 3, Paragraph 3-9 for SSN disclosure and verification
+                                   requirements.
+
+                          c.       Any correspondence or documentation received to resolve the
+                                   “Failed” or “Deceased” status.
+
+                          d.       Documentation for household members not required to disclose
+                                   and provide verification of a SSN:
+
+                                   Exempt from SSN disclosure and verification requirements:
+                                       Tenants who were 62 years of age or older as of January
+                                         31, 2010, and whose initial determination of eligibility was
+                                         begun before January 31, 2010, and
+
+                                           Individuals who do not contend eligible immigration status.
+
+                                   These individuals will continue to have a TRACS generated
+                                   identification number in the SSN field. No employment or income
+                                   information will be provided in EIV for these individuals, therefore,
+                                   third party verification from the income source will have to be
+                                   obtained.
+
+                                   See Paragraph 9-12 for information on resolving data for tenants
+                                   with the “failed” or “deceased” Identity Verification Status.
+
+        B.       Income Report
+
+                 Owners must use the Income Report at the time of recertification (annual and
+                 interim) of family composition and income and at other times as indicated in their
+                 policies and procedures.
+
+                 The Income Report:
+
+                         Provides employment and income information reported in the NDNH and
+                          SSA databases for all household members who passed the SSA identity
+
+
+HUD Multifamily Occupancy Handbook                   9-10                                            8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                              4350.3 REV-1
+EIV Reports
+
+
+
+                          test, and
+
+                         Identifies household members who may be receiving multiple subsidies
+                          by displaying the following message:
+                          “This member may be receiving multiple subsidies. See the Multiple
+                          Subsidy Report for details.”
+
+                 1.       Components of the Income Report
+
+                          The Income Report provides a variety of information about each member
+                          of a household. The components of the report are:
+
+                          a. TRACS certification information and tenant personal identifiers
+
+                          b. Employment information
+
+                          c. Quarterly wages
+
+                          d. Quarterly unemployment benefits
+
+                          e. Social Security benefits (SS)
+
+                          f.   Dual Entitlement benefits
+
+                          g. Medicare data
+
+                          h. Supplemental Security Income (SSI)
+
+                          i.   SSA disability status
+
+                          See Exhibit 9-3, EIV Income Report Information, for the types of
+                          information contained in each of the components of the report.
+
+                 2.       The Income Report does not include other income the household may
+                          receive such as welfare benefits, most pensions, child support, etc. It
+                          should also be noted that a tenant may have wages that the employer did
+                          not report to the State Workforce Agency (SWA), therefore, not contained
+                          in the NDNH database.
+
+                          See Chapter 5, Paragraph 5-6 for the elements of annual income and
+                          Exhibit 5-1 for Income Inclusions and Exclusions.
+
+                 3.       NDNH (New Hires (W-4), Wage and Unemployment Compensation)
+
+                          a.       Owners must use the Income Report identifying the NDNH
+                                   employment, wage and unemployment income information in the
+                                   EIV system as third party verification of the tenant’s employment
+                                   and/or unemployment. The owner must not use the quarterly
+                                   income reported in the EIV system to calculate the tenant’s
+                                   income.
+
+HUD Multifamily Occupancy Handbook                 9-11                                           8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                                4350.3 REV-1
+EIV Reports
+
+
+
+
+                          b.       The owner must confirm with the tenant that the employment
+                                   and/or unemployment information in EIV is correct. If the tenant
+                                   confirms that the employment and/or unemployment information in
+                                   the EIV system is correct, the owner must:
+
+                                   (1)      Print the Income Report and use the report as third party
+                                            verification of the tenant’s employment and/or
+                                            unemployment.
+
+                                   (2)      Request the tenant provide documentation, e.g., four
+                                            current, consecutive check stubs, which will support his/her
+                                            current income being received.
+
+                                   (3)      Use the tenant provided documentation for determining the
+                                            tenant’s income unless additional information is needed or
+                                            the owner has reason to reject the tenant provided
+                                            documentation. In these instances, third party verification
+                                            must be obtained from the income source. (See Chapter
+                                            5, Paragraph 5-13 for guidance on tenant provided
+                                            documents.)
+
+                                   (4)      Annualize the tenant’s income using the current income
+                                            projected forward for the next 12 months. (See Chapter 5,
+                                            Section 1 for instructions on calculating income.)
+
+                                   (5)      Make copies of any tenant provided documents for the
+                                            tenant file and return the originals to the tenant.
+
+                                   (6)      Retain the Income Report and supporting documentation
+                                            in the tenant file along with the applicable form HUD-
+                                            50059.
+
+                          c.       If the tenant disputes the employment, wage or unemployment
+                                   information in the EIV system or when the tenant reports he/she is
+                                   employed or receiving unemployment but there is no information
+                                   in EIV, the owner must obtain third party verification from the
+                                   employer or SWA.
+
+                          NOTE: See Chapter 5, Paragraph 5-5.A for calculating income using the
+                          EIV system.
+
+                 4.       Social Security Benefits
+
+                          a.       Owners must use the Income Report identifying the SSA benefit
+                                   information in the EIV system as third party verification of the
+                                   tenant’s receipt of SS benefits and to calculate the tenant’s
+                                   income. A copy of the SSA award or benefit letter or Proof of
+
+
+HUD Multifamily Occupancy Handbook                   9-12                                           8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                                4350.3 REV-1
+EIV Reports
+
+
+
+                                   Income Letter is not required unless the tenant disputes the SSA
+                                   information in the EIV system.
+
+                          b.       The owner must confirm with the tenant that the SSA benefit
+                                   information in the EIV system is correct. If the tenant confirms
+                                   that the SSA information in the EIV system is correct, the owner
+                                   must:
+
+                                   (1)      Print the Income Report and use the report as third party
+                                            verification of the tenant’s SSA benefits.
+
+                                   (2)      Annualize the tenant’s income using the monthly gross
+                                            benefit amount projected forward for the next 12 months.
+                                            (See Chapter 5 for instructions on calculating income.)
+
+                                            NOTE: See Chapter 5, Paragraph 5-6.O for calculating
+                                            the income for Intermediate Care Facility/Mentally
+                                            Retarded (ICF/MR) or Intermediate Care
+                                            Facility/Developmentally Disabled (ICF/DD) and Assisted
+                                            Living Units in Elderly Projects and Paragraph 5-6.J for
+                                            Adjustments to Prior Overpayments of Benefits
+
+                                   (3)      Include the Medicare premium in the medical expense
+                                            deduction calculation if the premium is being paid by the
+                                            tenant. (See d below if the Medicare premium is not being
+                                            paid by the tenant.)
+
+                                   (4)      Retain the Income Report in the tenant file along with the
+                                            applicable form HUD-50059.
+
+                          c.       If the tenant disputes the SSA information in the EIV system or
+                                   when the tenant reports he/she is receiving SSA benefits but there
+                                   is no SSA information in the EIV system, the owner must obtain
+                                   third party verification by requesting the tenant provide a copy of
+                                   their benefit or award letter or Proof of Income Letter, dated within
+                                   the last 120 days from the date of receipt by the owner. If the
+                                   tenant does not have a current letter from SSA, the owner should
+                                   ask the tenant to request benefit information from SSA using
+                                   SSA’s website or using SSA’s toll-free number.
+
+                          NOTE: See Chapter 5, Paragraph 5-5.A for calculating income using the
+                          EIV system.
+
+                          d.       When the Medicare premium is being paid by the tenant, the
+                                   premium is included as a medical expense. If the Medicare
+                                   Premium is being paid by the tenant, the amount of the premium
+                                   is listed under “Premium” and an “N” is in the “Buy-in” column of
+                                   the Medicare Data section of the Income Report.
+
+
+
+
+HUD Multifamily Occupancy Handbook                   9-13                                           8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                                   4350.3 REV-1
+EIV Reports
+
+
+
+
+                                             Premium               Buy-in   Buy-in Start     Buy-in Stop
+
+                    Hospital Insurance             $0.00             N       Not Available    Not Available
+
+                   Supp. Med. Insurance           $110.50            N       Not Available    Not Available
+
+
+
+                          e.       When the Medicare premium is not being paid by the tenant but is
+                                   being paid by the state or another entity, there should be a “Y” in
+                                   the buy-in column and the date when the third party started paying
+                                   the tenant’s Medicare premium in the “Buy-in Start” column of the
+                                   Medicare Data section of the Income Report.
+
+                                             Premium               Buy-in   Buy-in Start     Buy-in Stop
+
+                    Hospital Insurance             $0.00             N       Not Available    Not Available
+
+                   Supp. Med. Insurance           $110.50            Y         10/10/09       Not Available
+
+
+
+                          f.       When the state or other entity no longer pays the tenant’s
+                                   Medicare premium, there should be a date in the “Buy-in Stop”
+                                   column of the Medicare Data section of the Income Report.
+
+                                             Premium               Buy-in   Buy-in Start     Buy-in Stop
+
+                    Hospital Insurance             $0.00             N       Not Available    Not Available
+
+                   Supp. Med. Insurance           $110.50            Y         10/10/09         03/01/10
+
+
+
+                                   NOTE: The “Y” indicator and dates in the Buy-in column is
+                                   information received from SSA and is not always accurate. If the
+                                   tenant disputes the EIV data and can provide current
+                                   documentation as verification to support they are paying the
+                                   Medicare premium themselves, then the tenant file must be
+                                   documented with this additional information and the owner can
+                                   include the Medicare premium in the tenant’s medical expense
+                                   deduction.
+
+                          g.       While the SSA provides information on Medicare premiums, it
+                                   does not provide as part of the computer matching, information on
+                                   additional deductions such as Medicare Part D (prescription
+                                   drugs) premiums or garnishments. Therefore, the owner will need
+                                   to request that tenants disclose any deductions they may have
+                                   from their SSA benefits. For example, if the tenant is paying
+                                   his/her Medicare premium and the difference between the gross
+                                   and the net SSA benefits exceeds the amount of the Medicare
+                                   premium, the owner must discuss this with the tenant to determine
+                                   any deductions that may impact the tenant’s income or allowable
+
+HUD Multifamily Occupancy Handbook                          9-14                                        8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                                4350.3 REV-1
+EIV Reports
+
+
+
+                                   expenses, e.g., Medicare Part D (prescription drugs) premiums
+                                   are an allowable medical expense.
+
+                          h.       The SSA Disability Status is not always accurate, therefore, the
+                                   owner must not use this status indicator for determining an
+                                   applicant’s or tenant’s eligibility as disabled for a HUD program or
+                                   for receiving the elderly/disabled household allowance.
+
+                 5.       New Admissions
+
+                          For all new admissions, including Initial Certifications (IC), the owner
+                          must:
+
+                          a.       Review the Income Report within 90 days after transmission of the
+                                   move-in certification to TRACS to confirm/validate the income
+                                   reported by the household.
+
+                          b.       Resolve any income discrepancies with the household within 30
+                                   days of the Income Report date.
+
+                          c.       Print and retain the Income Report in the tenant file along with any
+                                   documentation received to resolve income discrepancies, if
+                                   applicable.
+
+                 6.       Applicants
+
+                          The EIV system only contains employment and income information for
+                          tenants. Therefore, owners must request third party verification from the
+                          income source for determining an applicant’s income for eligibility and
+                          rent calculation purposes.
+
+        C.       Income Discrepancy Report
+
+                 1.       The Income Discrepancy Report identifies households where there is a
+                          difference of $2,400 or more annually in the wages, unemployment
+                          compensation and/or Social Security benefit income reported by NDNH
+                          and SSA and the wages, unemployment compensation and/or Social
+                          Security benefit income reported in TRACS for the period of income (POI)
+                          used for the discrepancy analysis.
+
+                          The report identifies tenants whose income may have been under- or
+                          over-reported. Negative numbers on the report represent potential tenant
+                          under reporting of income while a positive number represents a potential
+                          decrease in a tenant’s income. In either case, the owner must investigate
+                          all discrepancies identified to determine whether or not they are valid.
+                          The definition of improper payments includes payments for the incorrect
+                          amount, both overpayments and underpayments. (See the Glossary for
+                          the definition of improper payments. Also, see Exhibit 9-7, Income
+                          Discrepancy Report, for a description of the POI used for discrepancy
+
+
+
+HUD Multifamily Occupancy Handbook                  9-15                                             8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                              4350.3 REV-1
+EIV Reports
+
+
+
+                          analysis.)
+
+                          NOTE: Wage, unemployment and Social Security income in TRACS
+                          includes:
+
+                                             TRACS
+                                          Income Code                Type of Income
+                                               B               Business
+                                                F              Federal Wage
+                                               M               Military Pay
+                                               W               Nonfederal Wage
+                                               U               Unemployment
+                                               SS              Social Security
+                                                               Supplemental Security
+                                                  SSI
+                                                               Income
+
+                          NOTE: Other income the household receives, e.g., welfare benefits,
+                          most pensions, child support, etc., may be reported in annual income in
+                          TRACS but it is not used for the discrepancy analysis in the EIV system.
+
+                 2.       The Income Discrepancy Report is a tool to alert owners that there may
+                          be a discrepancy in the income reported by the tenant during the POI
+                          used for the discrepancy analysis. The owner must investigate all
+                          discrepancies identified on the report to determine whether or not the
+                          discrepancy is valid. The owner is not expected to reconcile dollar
+                          amounts to the penny when resolving discrepancies.
+
+                 3.       Owners must:
+
+                          a.       Print the Income Discrepancy Report at the same time they print
+                                   the Income Report.
+
+                                   NOTE: It is important that the Income Discrepancy Report be
+                                   printed at the same time as the Income Report as each week a
+                                   completely new report is generated based on the current
+                                   information in the system for a tenant. The old report is over-
+                                   written with the current data.
+
+                          b.       Review and resolve any discrepancies in income reported on the
+                                   Income Discrepancy Report with the family at the time of
+                                   recertification or within 30 days of the EIV Income Report date.
+                                   Any unreporting, underreporting or over-reporting of income by the
+                                   tenant and reported on current or historical forms HUD-50059
+                                   must be identified. (See Chapter 8, Paragraphs 8-18 and 8-19 for
+                                   the procedures for addressing discrepancies, errors and fraud.)
+
+
+
+
+HUD Multifamily Occupancy Handbook                      9-16                                         8/13
+Chapter 9: Enterprise Income Verification (EIV)
+ Section 3:                                                                                      4350.3 REV-1
+ EIV Reports
+
+
+
+
+                           c.       Retain the Income Discrepancy Report along with detailed
+                                    information on the resolution of the reported discrepancy in the
+                                    tenant file. This includes information on resolution of the
+                                    discrepancy regardless of whether the discrepancy was found to
+                                    be valid or invalid.
+
+                           d.       Make sure the information in TRACS agrees with the information
+                                    on the form HUD-50059 in the tenant file. If it is determined that
+                                    the information in TRACS differs from the information found on the
+                                    tenant’s current HUD-50059, retransmit the current HUD-50059 to
+                                    correct the TRACS database. This is important since the income
+                                    discrepancies reported in the EIV system are determined by
+                                    comparing the wage, unemployment and Social Security benefits
+                                    income reported by NDNH and/or SSA with the wage,
+                                    unemployment and Social Security benefits income reported by
+                                    the household and transmitted to TRACS.
+
+Example 1: Valid3.discrepancy
+                    Discrepancy Examples.
+
+The EIV Income Discrepancy Report shows the tenant had Reported Annual Wages and Benefits during the
+period of income used for the discrepancy analysis. However, there are no Projected Annual Wages or
+Benefits reported on the form HUD-50059. The owner must investigate this to determine if the tenant did not
+report his/her income at the time of recertification. If the tenant did not report his/her income, this would be a
+valid discrepancy. The owner must obtain third party verification of the tenant’s income, process corrected
+form HUD-50059(s) to include any unreported or underreported income, notify tenant of funds due and their
+obligation to reimburse the owner, collect funds due from tenant and/or enter into a repayment agreement
+and reimburse HUD for funds collected from the tenant less the amount retained for pursuing collection. If
+not a valid discrepancy, the owner will document the file with the results of the investigation supporting this
+determination.
+
+Projected Annual Wages and Benefits from Form HUD-50059:               $0
+Period Of Income for Discrepancy Analysis                              06/01/2008 - 05/31/2009
+Discrepancy Analysis                                                   Actuals        Annualized Last Quarter
+Reported Annual Wages and Benefits from EIV Data:                      $22,018.70     $19,518.57
+Amount of Annual Income Discrepancy:                                   ($22,018.70) ($19,518.57)
+Amount of Monthly Income Discrepancy:                                  ($1,834.89)    ($1,626.55)
+Percentage of Income Discrepancy:                                      (100%)         (100%)
+
+
+
+
+ HUD Multifamily Occupancy Handbook                   9-17                                                  8/13
+ Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                                     4350.3 REV-1
+EIV Reports
+
+
+ Example 2: Valid discrepancy
+
+ The EIV Income Discrepancy Report shows that the tenant had Reported Annual Wages and Benefits during
+ the period of income used for the discrepancy analysis of $15,957.03 actual and $17,210.18 annualized.
+ The Projected Annual Wages reported on the form HUD-50059 are $14,472.00. The annualized last quarter
+ income exceeds the $2,400 discrepancy threshold ($17,210.18-$14,472.00 = $2,738.18). The owner must
+ investigate this to determine if the tenant should have reported a cumulative increase of $200 per month
+ ($2,400 annually) or more in the household’s income. If the tenant should have reported the increase in
+ income as required by his/her lease, this would be a valid discrepancy. If valid, the owner would obtain third
+ party verification, process an interim recertification in accordance with Chapter 7, Paragraph 7-13.D of
+ Handbook 4350.3 REV-1, notify tenant of funds due and their obligation to reimburse the owner, collect
+ funds due from tenant and/or enter into a repayment agreement and reimburse HUD for funds collected from
+ the tenant less amount retained for pursuing collection. If not a valid discrepancy, the owner will document
+ the file with the results of the investigation supporting this determination.
+
+ Projected Annual Wages and Benefits from Form HUD-50059:              $14,472.00
+ Period Of Income for Discrepancy Analysis                             06/01/2008 - 05/31/2009
+
+
+ Discrepancy Analysis                                                  Actuals       Annualized Last Quarter
+ Reported Annual Wages and Benefits from EIV Data:                     $15,957.03    $17,210.18
+ Amount of Annual Income Discrepancy:                                  ($1,485.03)   ($2,738.18)
+ Amount of Monthly Income Discrepancy:                                 ($123.75)     ($228.18)
+ Percentage of Income Discrepancy:                                     9.31%         15.910000%
+ .
+
+ Example 3: Invalid discrepancy
+ The EIV Income Discrepancy Report shows that the tenant had Reported Annual Wages and Benefits during
+ the period of income used for the discrepancy analysis. However, there are no Reported Annual Wages or
+ Benefits on the form HUD-50059 for the same period of time. The form HUD-50059 used in the discrepancy
+ analysis was the tenant’s move-in form HUD-50059. The owner must investigate this discrepancy to
+ determine if the tenant accurately reported his/her income at the time of move-in. If verification is received
+ that the tenant was not working at the time of move-in and the wages reported on the EIV Income Report
+ were earned prior to move-in, this would be an invalid discrepancy. No action is required of the owner
+ except to document the tenant’s file of the findings as a result of the investigation.
+
+ Projected Annual Wages and Benefits from Form HUD-50059:            $0
+ Period Of Income for Discrepancy Analysis                           06/01/2008 - 05/31/2009
+
+ Discrepancy Analysis                                                Actuals         Annualized Last Quarter
+ Reported Annual Wages and Benefits from EIV Data:                   $10,341.38      $7,507.72
+ Amount of Annual Income Discrepancy:                                ($10,341.38)    ($7,507.72)
+ Amount of Monthly Income Discrepancy:                               ($861.78)       ($625.64)
+ Percentage of Income Discrepancy:                                   (100%)          (100%)
+
+
+
+
+HUD Multifamily Occupancy Handbook                 9-18                                                  8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                                 4350.3 REV-1
+EIV Reports
+
+
+        D.       Other EIV Income Reports
+
+                 The EIV system contains the following stand-alone income reports. Owners
+                 must use these reports as discussed below and at times as established in their
+                 policies and procedures. Owners must retain a “Master” file that contains a copy
+                 of the report and documentation and/or notations as indicated in the report
+                 discussions below.
+
+
+                 Caution: Any detail reports retained in a tenant’s file must only contain
+                 information for members of that tenant’s household. Many of the reports do not
+                 have page breaks between households; therefore, owners will need to separate
+                 the reports by household by cutting the reports apart until page breaks are
+                 inserted in the EIV system.
+
+                 1.       Additional Income Reports
+                          There are three additional income reports that owner must use: the No
+                          Income Reported on 50059, the No Income Reported by HHS or SSA,
+                          and the New Hires Report. These reports are accessed from the Monthly
+                          Summary Report when querying by project number and/or contract
+                          number. Additionally, the New Hires Report can be found in the EIV
+                          system as a Verification Report. If the report is underlined, this indicates
+                          that the report is an active link. Just click on the report name to obtain
+                          data about households identified where no income was reported or where
+                          a household member is reported as having new employment.
+
+                          a.       No Income Reported on 50059
+                                   This report is a tool for owners to use to identify tenants who
+                                   passed the identity match against SSA’s records but have zero
+                                   income represented in the TRACS system.
+
+                                   (1)      Owners must use this report only as identified and
+                                            described in their policies and procedures. When running
+                                            the report, the owner must select the recertification month
+                                            “All”.
+
+                                   (2)      Owners are not required to retain copies of this report
+
+                                   NOTE: It is recommended that owners have a policy to re-verify
+                                   the status of tenants reporting zero income at least quarterly. As
+                                   part of the procedures for implementing the policy, the owner must
+                                   use the EIV Income Report to determine if the tenant or any family
+                                   members have income reported by HHS or SSA.
+
+                          b.       No Income Reported by HHS or SSA
+                                   This report is a tool for owners to use to identify tenants who
+                                   passed the SSA identity test but no employment or income
+                                   information was received from the match against either the SSA or
+                                   NDNH records.
+
+
+
+HUD Multifamily Occupancy Handbook                   9-19                                             8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                                 4350.3 REV-1
+EIV Reports
+
+
+
+                                   (1)      Owners must use this report as identified and described in
+                                            their policies and procedures. When running the report,
+                                            the owner must select recertification month “All”.
+
+                                   (2)      Because no income was reported as a result of the match
+                                            against SSA and NDNH records does not mean that the
+                                            tenant(s) does not have income.
+
+                                   (3)      Owners must make sure when they interview the tenants
+                                            at the time of recertification that the right questions are
+                                            asked so that the tenants are given the opportunity to
+                                            disclose any income they receive.
+
+                                   (4)      Owners are not required to retain copies of this report.
+
+                                   NOTE: It is recommended that owners have a policy to re-verify
+                                   the status of tenants reporting zero income at least quarterly. As
+                                   part of the procedures for implementing the policy, the owner must
+                                   use the EIV Income Report to determine if the tenant, or any
+                                   family members, has income reported by HHS or SSA.
+
+                          c.       New Hires Report
+
+                                   This report identifies tenants who have started new jobs within the
+                                   last six months. The information in this report is updated monthly.
+                                   The New Hires Report can also be found in the EIV system as a
+                                   Verification Report.
+
+                                   (1)      Owners must use this report at least quarterly to determine
+                                            if any of their tenants have started new employment
+                                            whereby the tenant has not reported a change in income to
+                                            the owner between recertifications and/or the new
+                                            employment was not reported at the time of recertification.
+                                            When running the report, the owner must select
+                                            recertification month “All”.
+
+                                   (2)      Because tenants participating in one of Multifamily
+                                            Housing’s rental assistance programs are required to
+                                            report changes in income when the household’s income
+                                            cumulatively increases by $200 or more per month, owners
+                                            must reach out to their tenants to report the income
+                                            changes so that rent adjustments can be made in a timely
+                                            manner, thus eliminating/reducing the amount of
+                                            retroactive rent repayments. (See Chapter 7, Paragraph 7-
+                                            12.B.)
+
+                                   (3)      Owners must:
+
+
+
+
+HUD Multifamily Occupancy Handbook                   9-20                                              8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                                4350.3 REV-1
+EIV Reports
+
+
+
+                                            (a)   Contact the tenant regarding his/her new
+                                                  employment.
+
+                                            (b)   Confirm with the tenant that they have a new job
+                                                  and that the employment information in the EIV
+                                                  system is correct. If the tenant agrees that the
+                                                  employment information in the EIV system is
+                                                  correct, request the tenant provide documents, e.g.,
+                                                  four current, consecutive pay stubs, employment
+                                                  confirmation letter specifying rate of pay, number of
+                                                  hours worked each week, pay frequency, etc., for
+                                                  use in determining the tenant’s income or, if
+                                                  necessary, request third party verification from the
+                                                  employer.
+
+                                                  If the tenant disputes the information in the EIV
+                                                  system, the owner must obtain third party
+                                                  verification from the employer.
+
+                                            (c)   Process a recertification in accordance with
+                                                  program requirements that includes the
+                                                  employment income.
+
+                                            (d)   Retain a copy of the report in a master “New Hires
+                                                  Report” file along with notations as to the outcome
+                                                  of the contact with the tenant (e.g., J. Jones –
+                                                  interim recertification processed to include income
+                                                  from new employment). All correspondence with
+                                                  the tenant third party verifications, etc., must be
+                                                  retained in the tenant file.
+
+                                   See Paragraph 7-10.A and the HUD Model Leases in Appendix 4
+                                   for change in income reporting requirements.
+
+9-12 EIV Verification Reports
+
+        The EIV system contains the following stand-alone reports that identify potential issues
+        which may impact the family’s assistance. Owners must use these reports as discussed
+        below and at times as established in their policies and procedures to reduce subsidy
+        payment errors. Owners must retain a “Master” file that contains a copy of the report
+        and documentation and/or notations as indicated in the report discussions below.
+
+        Caution: Any detail reports retained in a tenant’s file must only contain information for
+        members of that tenant’s household. Many of the reports do not have page breaks
+        between households; therefore, owners will need to separate the reports by household
+        by cutting the reports apart until page breaks are inserted in the EIV system.
+        The Verification Reports can be accessed from the EIV Homepage, left sidebar.
+
+
+
+
+HUD Multifamily Occupancy Handbook                 9-21                                               8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                               4350.3 REV-1
+EIV Reports
+
+
+
+
+        A.       Existing Tenant Search
+
+                 This report identifies applicants applying for assisted housing that may be
+                 receiving rental assistance at the time of application at another Multifamily
+                 Housing or Public and Indian Housing (PIH) location.
+                 Owners must:
+
+                 1.       Use this report at the time they are processing an application to
+                          determine if the applicant or any applicant household members are
+                          currently being assisted at another Multifamily Housing or PIH location.
+
+                 2.       Discuss with the applicant if the report identifies that the applicant or a
+                          member of the applicant’s household is residing at another location,
+                          giving the applicant the opportunity to explain any circumstances relative
+                          to his/her being assisted at another location. This may be a case where
+                          the applicant wants to move from his/her present location or where two
+                          assisted families share custody of a minor child.
+
+                 3.       Follow up with the respective Public Housing Agency (PHA) or owner to
+                          confirm the individual’s program participation status before admission, if
+                          necessary, depending on the outcome of the discussion with the
+                          applicant. The report gives the owner the opportunity to coordinate
+                          move-out and move-in dates with the PHA or owner of the property at the
+                          other location.
+
+                 4.       Retain the search results with the application along with any
+                          documentation obtained as a result of contacts with the applicant and the
+                          PHA and/or owner at the other location.
+
+        B.       Multiple Subsidy Report
+
+                 This report identifies individuals who may be receiving multiple HUD rental
+                 subsidies.
+
+                 1.       Owners must:
+
+                          a.       Use the Multiple Subsidy Report at least quarterly to identify any
+                                   tenants who are receiving assistance at another location. Owners
+                                   must follow up with tenants identified on the report where the
+                                   discrepancy was not identified and resolved at the time of
+                                   recertification.
+
+                          b.       Perform a search to determine if possible multiple subsidies exist.
+
+                          c.       Discuss with the tenant if the results of the search shows that a
+                                   tenant is being assisted at another location. The tenant must be
+                                   given the opportunity to explain any circumstances relative to
+                                   his/her being assisted at another location.
+
+
+
+HUD Multifamily Occupancy Handbook                 9-22                                            8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                                 4350.3 REV-1
+EIV Reports
+
+
+
+
+                          d.       Follow up with the respective PHA or owner, if necessary, to
+                                   confirm if the tenant is being assisted at the other location.
+                                   Depending on the results of this investigation, the owner may
+                                   need to take action to terminate the tenant’s assistance or
+                                   tenancy. (See Chapter 8, Sections 1 and 2 for procedures for
+                                   terminating assistance or tenancy.)
+
+                          e.       Print out and retain a copy of the search results along with any
+                                   documentation supporting any contacts made or information
+                                   obtained to determine if a household and/or household member is
+                                   receiving multiple subsidies. Additional documentation to support
+                                   any action taken if a household or a household member is
+                                   receiving multiple subsidies will be retained in the tenant file and
+                                   should be noted on the report.
+
+                                   If a tenant’s multiple subsidy was discussed and resolved at the
+                                   time of recertification, this should be noted on the printed report
+                                   and no further action is required.
+
+                          NOTE: HUD does not prohibit owners of partially subsidized projects
+                          from housing tenants who are receiving assistance through the Housing
+                          Choice Voucher program. While these tenants may appear on the
+                          Multiple Subsidy Report, HUD does not consider them as receiving
+                          double subsidy. (See Paragraph 3-21 for a discussion on Applicants with
+                          Housing Choice Vouchers.) In these instances, owners should print out a
+                          copy of the Multiple Subsidy Report and note that the tenant has a
+                          Housing Choice Voucher and is not receiving double subsidy, e.g., tenant
+                          is residing in a Section 236 unit and receiving rental assistance through
+                          the Housing Choice Voucher program.
+
+        C.       Identity Verification Report
+
+                 There are three reports that are accessed from the Identity Verification Report
+                 link. Owners must use the Failed EIV Pre-Screening and the Failed Verification
+                 Report (Failed the SSA Identity Test) reports monthly to clear up any invalid,
+                 discrepant or missing information in the TRACS database that was not identified
+                 and corrected at the time of recertification. When running the report, the owner
+                 must select recertification month “All”. There will not be any employment or
+                 income information in EIV for tenants who fail either the EIV Pre-Screening or
+                 SSA Identity Test so it is essential that any discrepancies are corrected within 30
+                 days from the date of the reports. Owners must conduct third party verifications
+                 to obtain employment and income data for these tenants. The Number of
+                 households Not-Verified (verification in process) Report is not required to be
+                 used by owners.
+
+                 If the report name is underlined, this indicates it is an active link. Just click on the
+                 report name to obtain data about household members who meet the
+                 characteristics of the reports.
+
+
+HUD Multifamily Occupancy Handbook                  9-23                                             8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                                4350.3 REV-1
+EIV Reports
+
+
+
+
+                 1.       Failed EIV Pre-Screening Report
+
+                          This report identifies tenants who fail the EIV pre-screening test because
+                          of invalid or missing personal identifiers (last name, DOB or SSN). The
+                          tenants identified in this report will not be sent to SSA for the SSA identity
+                          test until the personal identifier information is corrected in TRACS.
+
+                          Owners must:
+
+                          a.       Use this report monthly to identify tenants that did not pass the
+                                   pre-screening test and the reason(s) they did not pass so that the
+                                   errors can be corrected. Owners must follow up with tenants
+                                   identified on the report where discrepant personal identifiers were
+                                   not corrected at the time of recertification.
+
+                          b.       Before contacting the tenant, confirm accuracy of data entry in
+                                   TRACS, e.g., has a number been transposed when entering the
+                                   SSN.
+
+                          c.       Confirm with the affected tenant their SSN, last name, and/or
+                                   DOB.
+
+                          d.       Obtain documentation from the tenant to verify any discrepant
+                                   personal identifiers.
+
+                          e.       Correct any discrepancies in TRACS so that the tenant will be
+                                   included in the TRACS file provided to the EIV system for
+                                   inclusion in the SSA identity test.
+
+                          f.       Print and retain a copy of the report in a master “Failed EIV Pre-
+                                   screening Report” file. The report must be documented with
+                                   action taken to resolve invalid or discrepant personal identifiers.
+
+                          See Exhibit 9-1 for the EIV Failed Pre-screening Report Error Messages
+                          and corrective action.
+
+                          NOTE: This report will include those persons who are exempt from the
+                          SSN disclosure and verification requirements. In these instances, the
+                          owner will note on the copy of the report retained in the “Failed EIV Pre-
+                          Screening Report” master file that the tenant(s) is exempt from SSN
+                          requirements.
+
+                          Exempt from SSN disclosure and verification requirements:
+
+                              Tenants who were 62 years of age or older as of January 31, 2010,
+                               and whose initial determination of eligibility was begun before January
+                               31, 2010; and
+
+
+
+HUD Multifamily Occupancy Handbook                  9-24                                            8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                               4350.3 REV-1
+EIV Reports
+
+
+
+                              Individuals who do not contend eligible immigration status.
+
+                 2.       Failed Verification Report (Failed the SSA Identity Test)
+
+                          This report identifies household members who failed the SSA identity test
+                          because their personal identifiers (last name, DOB or SSN) do not match
+                          SSA’s records, as well as, identifies deceased household members.
+
+                          Owners must:
+
+                          a.       Use this report monthly to identify those tenants that did not pass
+                                   the SSA identity verification test and the reason(s) they did not
+                                   pass so that the errors can be corrected.
+
+                          b.       Follow up with tenants identified on the report where discrepant
+                                   personal identifiers were not corrected at the time of
+                                   recertification.
+
+                          c.       Before contacting the tenant, confirm accuracy of data entry in
+                                   TRACS, e.g., has a number been transposed when entering the
+                                   SSN.
+
+                          d.       Confirm with the affected tenant their last name, SSN and/or DOB.
+
+                          e.       Obtain verification or documentation to support the tenant’s
+                                   personal identifiers and the accuracy of the form HUD-50059 and
+                                   TRACS data.
+
+                          f.       Correct any discrepancies in TRACS so that the tenant will be
+                                   included in the match against SSA and NDNH data.
+
+                          g.       Encourage the tenant to contact SSA to correct any inaccurate
+                                   data in their databases if the personal identifiers on the form HUD-
+                                   50059 and in TRACS are accurate. The tenant can request SSA
+                                   to correct his/her record by completing and submitting form SS-5,
+                                   Application for a Social Security Card, and verifying
+                                   documentation to the local SSA office.
+
+                          h.       Print and retain a copy of the report. The report must be
+                                   documented with action taken to resolve invalid or discrepant
+                                   personal identifiers.
+
+                          NOTE: If a tenant’s information was corrected at the time of
+                          recertification but the EIV data has not yet been updated, this should be
+                          noted on the printed report and no further action is required.
+
+                          See Exhibit 9-2 for the Failed Verification Report (Failed the SSA Identity
+                          Test) Error Messages and corrective action.
+
+
+
+
+HUD Multifamily Occupancy Handbook                  9-25                                           8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                                  4350.3 REV-1
+EIV Reports
+
+
+        D.       Deceased Tenant Report
+
+                 This report identifies tenants who are participating in one of Multifamily Housing’s
+                 rental assistance programs who are reported by SSA as being deceased.
+
+                 1.       Owners must:
+
+                          a.       Use this report at least quarterly to identify those tenants reported
+                                   by SSA as being deceased. When running the report, the owner
+                                   must select recertification month “All”.
+
+                          b.       Confirm, in writing, with the head of household, next of kin or
+                                   contact person/entity provided by the tenant whether or not the
+                                   person is deceased.
+
+                          c.       If the person is deceased:
+
+                                   (1)      Update the household composition and income and
+                                            allowances, if applicable, on the form HUD-50059. The
+                                            effective date of the form HUD-50059 should be in
+                                            accordance with Chapter 7, Paragraph 7-13.D.
+
+                                   (2)      In the case of a deceased single member of a household,
+                                            process a Move-out using form HUD-50059-A. The
+                                            effective date of the form HUD-50059-A will be retroactive
+                                            to the earlier of 14 days after the tenant’s death or the date
+                                            the unit was vacated (see Chapter 9, Paragraph 9-12.E).
+
+                                   NOTE: Single member deceased households are denoted on the
+                                   report with a red asterisk (*) after the member’s deceased date.
+
+                                   (3)      Any overpayment of subsidy that was paid on behalf of the
+                                            deceased tenant must be repaid to HUD.
+
+                          d.       Discrepancies must be corrected in the TRACS system within 30
+                                   days from the date of the report.
+
+                          e.       Encourage the tenant to contact the SSA to correct any inaccurate
+                                   data in their databases if the person identified as being deceased
+                                   in the SSA database is not deceased.
+
+                          f.       Print and retain a copy of the report in a master “Deceased
+                                   Tenant” file. The report must be documented with action taken to
+                                   resolve any discrepancies. All correspondence or action taken for
+                                   a particular tenant must be retained in the tenant file.
+
+                         NOTE: If action was taken to remove the deceased tenant from the
+                         household at the time of recertification but the EIV data has not yet been
+                         updated, note this on the printed report and no further action is required.
+
+
+
+HUD Multifamily Occupancy Handbook                   9-26                                             8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                             4350.3 REV-1
+EIV Reports
+
+
+
+                 2.       The Deceased Tenants Report is updated every weekend. See
+                          examples below addressing when a deceased individual will be removed
+                          from the report.
+
+                          Example 1: Mr. Jones was listed on the Deceased Tenants Report dated
+                          December 14, 2009, with a deceased date of November 20, 2009. On
+                          December 1, 2009, the owner confirmed that Mr. Jones was actually alive
+                          and advised Mr. Jones to visit his local SSA office to have the error
+                          corrected. SSA corrected the error on December 20, 2009. When HUD
+                          conducted computer matching with SSA on January 6, 2010, HUD
+                          obtained new SSA data which indicated that Mr. Jones was not
+                          deceased. The Deceased Tenants Report was updated on the weekend
+                          of January 8, 2010. When the owner accessed the Deceased Tenants
+                          Report on January 11, 2010, Mr. Jones was no longer on the report.
+
+                          Example 2: Mr. Williams was listed on the Deceased Tenants Report
+                          dated December 14, 2009, with a deceased date of June 10, 2009. On
+                          January 6, 2010, the owner confirmed that Mr. Williams was deceased.
+                          The owner then completed and submitted the move-out on form HUD-
+                          50059-A on January 7, 2010. The Deceased Tenants Report was
+                          updated on the weekend of January 8, 2010. When the owner accessed
+                          the Deceased Tenants Report on January 11, 2010, Mr. Williams was no
+                          longer on the report.
+
+        E.       New Hires Report
+
+                 For a description of the New Hires Report, see Paragraph 9-11.D.
+
+9-13 Reimbursement of Over- or Under-payment of Subsidy
+
+        A.       Unreported or Underreported Income
+
+                 If the owner determines the tenant unreported or underreported his/her income,
+                 the owner must go back to the time the unreported or underreporting of income
+                 started, not to exceed the 5-year limitation that the tenant was receiving
+                 assistance described on forms HUD-9887 and HUD-9887-A. The owner must
+                 follow the instructions in Chapter 8 for meeting with the tenant to discuss
+                 reimbursement of funds due the owner and repayment agreement requirements.
+
+        B.       Over-reported income
+
+                 If, at the time of recertification, there is an Income Discrepancy Report in the EIV
+                 system that reflects a decrease of $2,400 or more in wages, unemployment
+                 and/or Social Security income reported in the EIV system and the wage,
+                 unemployment and/or Social Security income in TRACS for the POI used for the
+                 discrepancy analysis, the owner must investigate the discrepancy. If, after
+                 investigating the discrepancy, the owner determines that an error was made in
+                 calculating the tenant’s income, the owner must follow the instructions in Chapter
+                 8, Paragraph 8-24 to reimburse the tenant for any overpayment in rent. It is
+                 important that the owner determine whether the income appearing on the EIV
+
+HUD Multifamily Occupancy Handbook                9-27                                           8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                                4350.3 REV-1
+EIV Reports
+
+
+
+                 Income Discrepancy Report should be included as income and does not meet
+                 one of the income exclusions represented in Exhibit 5-1.
+
+9-14 Retention of EIV Reports
+
+        A.       Owners must retain:
+
+                 1.       The Income Report, the Summary Report(s) showing Identity Verification
+                          Status as “Verified” and the Income Discrepancy Report(s) and
+                          supporting documentation must be retained in the tenant file for the term
+                          of tenancy plus three years.
+
+                 2.       Any tenant provided documentation, or other third party verification of
+                          income, received to supplement the SSA or NDNH data must be retained
+                          in the tenant file for the term of tenancy plus three years.
+
+                 3.       Results of the Existing Tenant Search must be retained with the
+                          application:
+
+                          (a)      If applicant is not admitted, the application and search results
+                                   must be retained for three years.
+
+                          (b)      If applicant is admitted, the application and search results must be
+                                   retained in the tenant file for the term of tenancy plus three years.
+
+                 4.       The master files for the New Hires Report, Identity Verification Reports,
+                          Multiple Subsidy Report and Deceased Tenants Report must be retained
+                          for three years.
+
+                          See Exhibit 9-5, Use of EIV Reports.
+
+        B.       Once the retention period has expired, owners must dispose of the data in a
+                 manner that will prevent any unauthorized access to personal information, e.g.,
+                 burn, pulverize, shred, etc.
+
+9-15 Requesting Verification of Information from SSA
+
+        Owners must not send the tenant to the SSA office if they do not have information
+        needed to verification Social Security benefits. Instead, the owner must ask the tenant
+        to request benefit information from SSA using SSA’s website or toll-free number.
+
+        A.       The owner may assist the tenant in requesting benefit information from SSA, if
+                 the tenant requests their assistance in accessing the SSA website or has
+                 questions on completing the request. To request a Proof of Income Letter from
+                 SSA’s website go to http://www.socialsecurity.gov. From the left side bar:
+
+                               Select “What you can do online”
+                               Select “If you get benefits”
+                               Select “Request a Proof of Income Letter”
+
+
+HUD Multifamily Occupancy Handbook                  9-28                                              8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                                4350.3 REV-1
+EIV Reports
+
+
+
+                 Tenants should check the box “All Benefit Information Available” to make sure all
+                 benefits received are provided.
+
+        B.       To request a Proof of Income Letter from SSA’s toll-free number call 1-800-772-
+                 1213.
+
+        C.       This information is free and the tenant should receive the letter in the mail within
+                 10 days. The tenant will provide the Proof of Income Letter to the owner for use
+                 in calculating their income. A copy of the letter will be retained in the tenant’s file
+                 and the original returned to the tenant for their records.
+
+9-16 EIV Income Incorrect or Does Not Belong to the Tenant
+
+        There may be times when the source or originator of the EIV information makes an error
+        when submitting or reporting information about tenants. HUD cannot correct data in
+        the EIV system, only the originator of the data can correct the information. When
+        data is corrected by the source or originator, HUD will obtain the updated information
+        with its next computer matching process. Below are procedures to follow regarding
+        incorrect EIV information.
+
+        A.       TRACS data reported in the EIV system originates from the owner. Once data is
+                 corrected in the owner’s software, the corrected data must be transmitted to
+                 TRACS.
+
+        B.       Employment and wage information reported in the EIV system originates from
+                 the employer. The employer reports this information to the local State Workforce
+                 Agency (SWA), who in turn, reports the information to HHS’ NDNH database.
+                 If the tenant disputes the accuracy of the information in the EIV system that was
+                 provided by the employer and after additional third party verification is obtained
+                 by the owner it is determined that the information is not accurate, the tenant
+                 should contact the employer directly, in writing, to dispute the employment and/or
+                 wage information and request that the employer correct erroneous information.
+                 The tenant should provide the owner a copy of this written correspondence to
+                 maintain in the tenant file.
+
+        C.       Unemployment benefit information reported in the EIV system originates from
+                 the local SWA. If the tenant disputes the accuracy of the information in the EIV
+                 system that was provided by the SWA and after additional third party verification
+                 is obtained by the owner it is determined that the information is not accurate, the
+                 tenant should contact the SWA directly, in writing, to dispute the unemployment
+                 benefit information, and request that the SWA correct erroneous information.
+                 The tenant should provide the owner a copy of this written correspondence to
+                 maintain in the tenant file.
+
+        D.       SS and SSI benefit information reported in the EIV system originates from the
+                 SSA. If the tenant disputes the accuracy of the information in the EIV system
+                 that was provided by the SSA and after additional third party verification is
+                 obtained by the owner it is determined that the information is not accurate, the
+                 tenant should contact the SSA at (800) 772-1213, or visit the local SSA office
+                 and request that the erroneous information be corrected. SSA office information
+
+HUD Multifamily Occupancy Handbook                9-29                                              8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 3:                                                                              4350.3 REV-1
+EIV Reports
+
+
+
+                 is available in the government pages of the local telephone directory or online at
+                 http://www.socialsecurity.gov.
+
+        E.       Identity Theft. Incorrect information in the EIV system may be a sign of identity
+                 theft. Sometimes someone else may use an individual’s SSN, either on purpose
+                 or by accident. SSA does not require an individual to report a lost or stolen SSN
+                 card, and reporting a lost or stolen SSN card to SSA will not prevent the misuse
+                 of an individual’s SSN. A person using an individual’s SSN can get other
+                 personal information about that individual and apply for credit in that individual’s
+                 name.
+
+                 If the tenant suspects someone is using his/her SSN, he/she should:
+
+                 1. Check their Social Security records to ensure their records are correct (call
+                    SSA at 1-800-772-1213);
+
+                 2. File an identity theft complaint with the Federal Trade Commission (call FTC
+                    at 1-877-438-4338, or visit their website at:
+                    http://www.ftc.gov/bcp/edu/microsites/idtheft/); and
+
+                 3. Monitor his/her credit reports with the three national credit reporting agencies
+                    (Equifax, TransUnion, and Experian).
+
+                      Tenants may request their credit report and place a fraud alert on their credit
+                      report with the three national credit reporting agencies at:
+                      http://www.annualcreditreport.com or by contacting the credit reporting
+                      agency directly. Each agency’s contact information is listed below:
+
+                      National Credit Reporting Agencies Contact Information
+
+                      Equifax Credit Information Services, Inc.
+                      P.O. Box 740241
+                      Atlanta, GA 30374
+                      Website: http://www.equifax.com
+                      Telephone: (800) 685-1111
+
+                      Experian
+                      P.O. Box 2104
+                      Allen, TX 75013
+                      Website: http://www.experian.com
+                      Telephone: (888) 397-3742
+
+                      TransUnion
+                      P.O. Box 6790
+                      Fullerton, CA 92834
+                      Website: http://www.transunion.com
+                      Telephone: (800) 680-7289 or (800) 888-4213
+
+
+
+
+HUD Multifamily Occupancy Handbook                9-30                                            8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 4:                                                                              4350.3 REV-1
+Security of EIV Data
+
+
+
+                                        Section 4: Security of EIV Data
+
+9-17 Disclosure of EIV Data
+
+        A.       Disclosure of an Individual’s EIV Information to Another Person or Entity
+
+                 The Federal Privacy Act (5 USC 552a, as amended) prohibits the disclosure of
+                 an individual’s information to another person without the written consent of such
+                 individual. As such, the EIV data of an adult household member may not be
+                 shared (or a copy provided or displayed) with another adult household member
+                 or to a person assisting the tenant with the recertification process, unless the
+                 individual has provided written consent to disclose such information.
+                 The owner, however, is not prohibited from discussing with the head of
+                 household and showing the head of household how the household’s income and
+                 rent were determined based on the total income reported and verified.
+                 See Exhibit 9-4, for a Sample Tenant Consent to Disclose EIV Income
+                 Information for use by the owner in obtaining the tenant’s consent to disclose
+                 information to another adult household member.
+
+        B.       Disclosure to Persons Assisting Tenants with the Recertification Process
+
+                 With the written consent of the tenant, EIV data may be shared with persons
+                 assisting the tenant with the recertification process. Tenants who require
+                 assistance during the recertification process may have a representative present
+                 to assist them in their ability to participate in the recertification process; this
+                 includes review and explanation of the written third party income verifications.
+                 Disclosure of EIV information to these parties must be employment or income
+                 information pertaining only to the tenant who has provided his/her consent.
+                 These parties must not have access to EIV information for any other household
+                 members.
+
+                 Parties to whom the tenant can provide written consent include:
+
+                      Service coordinators (only if they are present at and assisting the tenant with
+                       the recertification process)
+                      Translators/Interpreters
+                      Individuals assisting an elderly individual or a person with a disability
+                      Guardians
+                      Powers of Attorney
+                      Other Family Members
+
+                 See Exhibit 9-4, for a Sample Tenant Consent to Disclose EIV Income
+                 Information for use by the owner in obtaining the tenant’s consent to disclose
+                 information to persons assisting the tenant with the recertification process.
+
+        C.       Disclosure for Official Purpose
+
+                 The data in the EIV system contains personal information on individual tenants
+                 that is covered by the Privacy Act. The information in the EIV system may only
+
+
+HUD Multifamily Occupancy Handbook                 9-31                                           8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 4:                                                                                4350.3 REV-1
+Security of EIV Data
+
+
+
+                 be used for limited official purposes:
+
+                 1.       Official Purpose Includes:
+
+                          a.       Owners, in connection with the administration of Multifamily
+                                   Housing programs, for verifying the employment and income at
+                                   the time of recertification and for reducing administrative and
+                                   subsidy payment errors.
+
+                          b.       CAs (PBCAs and TCAs) and HUD staff for monitoring and
+                                   oversight of the access and mandatory use of the EIV system.
+
+                          c.       IPAs, when hired by an owner to perform the financial audit of the
+                                   project, for use in determining the owner’s compliance with
+                                   verifying income and determining the accuracy of the rent and
+                                   subsidy calculations.
+
+                                   Restrictions on disclosure requirements for IPAs:
+
+                                   (1)      Can only access EIV income information within hard copy
+                                            files and only within the offices of the owner or
+                                            management agent;
+
+                                   (2)      Cannot transmit or transport EIV income information in any
+                                            form;
+
+                                   (3)      Cannot enter EIV income information on any portable
+                                            media;
+
+                                   (4)      Must sign non-disclosure oaths (Rules of Behavior for Non-
+                                            system Users) that the EIV income information will be used
+                                            only for the purpose of the audit; and
+
+                                   (5)      Cannot duplicate EIV income information or re-disclose
+                                            EIV income information to any user not authorized by
+                                            Section 435(j)(7) of the Social Security Act to have access
+                                            to the EIV income data.
+
+                                   NOTE: See the Glossary for the definition of Independent Public
+                                   Auditor.
+
+                          d.       OIG investigators for auditing purposes.
+
+                          e.       Disclosure of EIV information to individuals who are assisting in
+                                   the recertification process and who are present during the
+                                   recertification interview and process. (See Section B above)
+
+                 2.       Official Purpose Does NOT Include:
+
+
+
+
+HUD Multifamily Occupancy Handbook                   9-32                                            8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 4:                                                                                4350.3 REV-1
+Security of EIV Data
+
+
+
+                          a.       Sharing the information with governmental entities not involved in
+                                   the recertification process used for HUD’s assisted housing
+                                   programs, e.g., the Low Income Housing Tax Credit (LIHTC)
+                                   program and Rural Housing Services (RHS’) Section 515
+                                   program. EIV data must not be shared with state officials
+                                   monitoring the owner for LIHTC compliance or by owners for
+                                   completion of the LIHTC Tenant Income Certification (TIC). EIV
+                                   data also must not be shared with RHS staff for monitoring an
+                                   owner’s compliance for tenants receiving Section 8 assistance or
+                                   by owners for certifying tenants who do not receive Section 8
+                                   assistance.
+
+                                   Disclosing the EIV information to owners for use under the LIHTC
+                                   and RHS Section 515 programs is not allowed since neither the
+                                   Internal Revenue Service (IRS) nor RHS are a party to the
+                                   computer matching agreements with HHS and SSA. The fact that
+                                   there is financing through other federal agencies involved in a
+                                   particular property under one of the authorized HUD programs
+                                   does not then permit that federal agency to use or view
+                                   information in the EIV system that is covered by the computer
+                                   matching agreements. The computer matching agreements are
+                                   governed by the Privacy Act and the Social Security Act. For
+                                   example, Sections 453(j)(7)(E)(ii) and (iv) of the Social Security
+                                   Act limit disclosure of the data matched between HUD and HHS’
+                                   NDNH to public housing agencies, the IG, the Attorney General,
+                                   private owners, management agents and CAs. HHS subsequently
+                                   approved disclosure of NDNH information to IPAs hired by an
+                                   owner to conduct the financial audit of their property.
+
+                          b.       Disclosure of the EIV information to Service Coordinators even
+                                   though the tenant signs a release of information consent form
+                                   authorizing the Service Coordinator to have access to their file is
+                                   not allowed unless the Service Coordinator is present during the
+                                   interview and assisting the tenant with the recertification process.
+                                   The statute authorizing the computer matching identifies those
+                                   parties to whom the information can be disclosed and the statute
+                                   does not include Service Coordinators.
+
+        D.       Penalties for Willful Disclosure or Inspection of EIV Data
+
+                 1. Unauthorized Disclosure – felony conviction and fine up to $5,000 or
+                    imprisonment up to five (5) years, as well as civil damages.
+
+                 2. Unauthorized Inspection – misdemeanor penalty of up to $1,000 and/or one
+                    (1) year imprisonment, as well as civil damages.
+
+9-18 EIV Rules of Behavior (ROB)
+
+        A.       With EIV System Access ROB Requirements
+
+
+HUD Multifamily Occupancy Handbook                  9-33                                            8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 4:                                                                            4350.3 REV-1
+Security of EIV Data
+
+
+
+                 All EIV users who have access to the EIV system must adhere to the EIV ROB
+                 signed at the time of requesting access to the EIV system.
+
+                 1.       Instructions for requesting access to the EIV system for both internal HUD
+                          users and external users are posted on the Multifamily EIV website at:
+                          http://www.hud.gov/offices/hsg/mfh/rhiip/eiv/eivapps.cfm
+
+                 2.       External users. The signed initial and current online (unsigned) access
+                          authorization forms containing the ROB must be kept on file along with
+                          the owner approval letters. Upon request, the forms must be made
+                          available to the entity monitoring EIV system compliance.
+
+                 3.       Internal users. A copy of the signed ROB will be kept on file by the
+                          TRACS/EIV Security Officer and a signed copy should also be retained
+                          by the EIV user.
+
+                 4.       Each HUD Program Center and Contract Administrator must have at least
+                          two staff members with access to the EIV system who can provide other
+                          staff members with EIV reports used for monitoring purposes.
+
+        B.       Without EIV System Access ROB Requirements
+
+                 1.       Owner and management agent staff, service bureau staff, HUD staff and
+                          CA staff who do not have access to the EIV system but who view or use
+                          EIV data/reports provided by authorized EIV Coordinators or EIV Users in
+                          order to perform their job functions, must adhere to the EIV ROB posted
+                          on the Multifamily EIV website at:
+                          http://portal.hud.gov/hudportal/HUD?src=/program_offices/housing/mfh/rh
+                          iip/eiv/eivapps.
+
+                          The ROB must be signed and kept on file. Upon request, the signed
+                          ROB must be made available to the entity monitoring EIV system
+                          compliance.
+
+                          NOTE: HUD staff will check the “CA” box at the bottom of the form.
+
+                 2.       IPAs hired by the owner to perform a financial audit must adhere to the
+                          ROB posted on the Multifamily EIV website at:
+                          http://www.hud.gov/offices/hsg/mfh/rhiip/eiv/rulesofbehavior.pdf.
+
+                          The ROB must be signed by the IPA and kept on file. Upon request, the
+                          signed ROB must be made available to the entity monitoring EIV system
+                          compliance.
+
+             Section 5: Penalties for Failure to Have Access to or Failure to Use EIV
+
+9-19 Penalties for Failure to Have Access To and/or Failure to Use EIV
+
+        A.       Owners who do not have access to or are not using the EIV system in its entirety:
+
+
+HUD Multifamily Occupancy Handbook                9-34                                          8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 5:                                                                               4350.3 REV-1
+Penalties for Failure to Have Access to or Failure to Use EIV
+
+
+
+                  1.       Will receive a finding on the Management and Occupancy Review (MOR)
+                           report, if the violation was identified during the MOR. The violation can
+                           be identified at times other than at the time of the MOR.
+
+                  2.       Will incur a penalty of a five percent decrease in the voucher payment for
+                           the month following the date the violation was found and each
+                           subsequent voucher payment until the violation is cured.
+
+                  3.       Must make an adjustment on the next scheduled voucher to adjust for the
+                           five percent decrease.
+
+                  4.       Will be monitored by the CA to ensure the adjustment is made.
+
+         B.       The owner will have 30 days to cure the violation.
+
+                  1.       The violation will be cured by obtaining access to and/or using the EIV
+                           system and the owner will then make an adjustment to the next
+                           scheduled voucher to collect the funds previously returned to HUD even if
+                           the owner takes longer than 30 days to cure the finding.
+
+                  2.       If the violation is not cured during the 30 day period, both the owner and
+                           the management agent, if applicable, will be flagged in HUD’s Active
+                           Partners Performance System (APPS). Once the violation is cured, the
+                           flag will be removed.
+
+          C.       When there is a change in ownership or management at a property, the new
+                   owner or management agent must obtain access to and begin using the EIV
+                   system within 90 days from the date the owner takes possession of the property
+                   or the effective date of the management agreement with the owner. Owners
+                   and/or management agents who fail to obtain access and begin using the EIV
+                   system within this timeframe may be subject to the penalties described above.
+
+9-20     Security Training
+
+         A.       EIV users are required to complete online security training annually. To meet
+                  this requirement, EIV users must complete the online Cyber-Awareness
+                  Challenge (for DoD and Federal Personnel) training program. At the end of the
+                  training, EIV users must print and maintain the Certificate of Completion
+                  provided. The training can be found at
+                  http://iase.disa.mil/eta/index.html#onlinetraining.
+
+                  EIV users authorized by owners to have access to EIV on their behalf may also
+                  need to complete the applicable online Security Awareness Training
+                  Questionnaire for Multifamily Housing Programs upon initial access to the system
+                  and annually thereafter.
+
+
+
+
+HUD Multifamily Occupancy Handbook                      9-35                                       8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 5:                                                                                  4350.3 REV-1
+Penalties for Failure to Have Access to or Failure to Use EIV
+
+
+         B.       EIV users should:
+
+                  1.       Review Section 4 on Security contained in the Multifamily EIV User
+                           Manual for Multifamily Housing Program Users posted at:
+                           http://www.hud.gov/offices/hsg/mfh/rhiip/eiv/usermanual.pdf,
+
+                  2.       Review the EIV Security Administration Manual posted at:
+                           http://www.hud.gov/offices/hsg/mfh/rhiip/eiv/securityadminmanual.pdf
+
+                  3.       View the Security training provided during the most recent EIV webcast,
+                           posted at:
+                           http://portal.hud.gov/hudportal/HUD?src=/webcasts/archives/multifamily
+
+         C.       Owner and management agent staff who do not have access to EIV but who use
+                  EIV reports to perform their job function must have security training annually.
+
+9-21 Safeguarding EIV Data
+
+         A.       Technical Safeguards
+
+                  1.       All individuals who have access to the EIV system must have a valid
+                           WASS User ID and password and must use this ID and password for
+                           accessing the EIV system. Upon receipt of the assigned WASS User ID,
+                           an individual must then apply to be approved for access to the EIV
+                           system.
+
+                  2.       To assist in ensuring that only those individuals who have a need to use
+                           the EIV system to perform their job function have access to the EIV
+                           system, users must be certified to use the system:
+
+                           a.       EIV Coordinators are certified at initial access and annually
+                                    thereafter.
+
+                           b.       EIV Users are certified at initial access and bi-annually thereafter.
+
+                           If this certification is not made, the user’s EIV access is terminated.
+
+                  3.       A Security Awareness Training Questionnaire, which supplements
+                           required annual security training, may be completed at the time of initial
+                           access to the system and annually thereafter. The EIV system is
+                           designed with the ability to block the entry of those individuals who have
+                           not successfully completed the questionnaire (i.e., answered 90 percent
+                           of the questions correctly).
+
+         B.       Administrative Safeguards
+
+                  1.       Policies and procedures must be established to govern the use of the EIV
+                           system. These procedures should address:
+
+
+
+
+HUD Multifamily Occupancy Handbook                      9-36                                          8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 5:                                                                                4350.3 REV-1
+Penalties for Failure to Have Access to or Failure to Use EIV
+
+
+
+                           a.       Authorized use of the EIV system;
+
+                           b.       How to handle security breaches; and
+
+                           c.       Destruction of EIV data.
+
+                  2.       EIV manuals and the instructions in this handbook should be reviewed
+                           when implementing these administrative safeguards.
+
+                  3.       Posting of bulletins and flyers can assist in communicating how sensitive
+                           EIV data is and how this data should be handled.
+
+         C.       Physical Safeguards
+
+                  Physical safeguarding of EIV data refers to steps that must be taken to help
+                  ensure the data is safe when stored electronically or in hardcopy and when
+                  transmitting data electronically.
+
+                  1.       Storing and Transmitting of Electronic EIV Data
+
+                           a.       EIV data stored electronically must be in a restricted access
+                                    directory or, if placed on portable media, labeled appropriately and
+                                    encrypted using a NIST compliant vendor. Similarly, all emails
+                                    containing EIV data must be encrypted using a NIST compliant
+                                    vendor. A list of compliant vendors can be found at:
+                                    http://csrc.nist.gov/groups/STM/cmvp/documents/140-
+                                    1/1401vend.htm.
+
+                           b.       The full nine-digit SSN for a tenant must not be included in emails
+                                    or other electronic communications.
+
+                           NOTE: The downloading of EIV data to mobile devices is not allowed for
+                           IPAs.
+
+                  2.       Hardcopy EIV Data
+
+                           EIV data that is printed out must not be left unattended. The documents
+                           should be retrieved as soon as they are printed and, if possible, use a
+                           restricted printer, copier, or facsimile machine. When faxing EIV data,
+                           ensure there is someone waiting and ready to retrieve the fax as soon as
+                           it is received (printed). When mailing EIV data, the data must be sent to
+                           an office of the owner/management agent. EIV data must not be mailed to
+                           Independent Public Auditor offices.
+
+                  3.       Computer Security
+
+                           The EIV system is set up to time out after 30 minutes of inactivity. This
+                           automatic safeguard should not be the only security measure taken.
+                           Individuals who use the EIV system should use a password protected
+                           screensaver and lock their computer when leaving their workspace. A
+
+
+HUD Multifamily Occupancy Handbook                      9-37                                        8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 6:                                                                             4350.3 REV-1
+EIV Resources
+
+
+
+                          user should not leave a computer unattended with EIV data displayed on
+                          the screen. It is also recommended that the EIV system be exited using
+                          the “X” at the top right of the screen which will remove the user from the
+                          entire WASS system.
+
+                 4.       Destroying EIV data
+
+                          EIV data must be destroyed as soon as it has served its purpose as
+                          prescribed by HUD’s policies and procedures and in accordance with
+                          HUD’s prescribed retention period. Shredding, burning or pulverizing are
+                          all examples of acceptable ways to destroy EIV data.
+
+                                            Section 6: EIV Resources
+
+9-22 Resource Materials
+
+        This section summarizes some of the resources available to EIV users. Owners should
+        visit the Multifamily EIV website often for updated documents and/or announcements.
+
+                Multifamily EIV website:
+                 http://portal.hud.gov/hudportal/HUD?src=/program_offices/housing/mfh/rhiip/eiv/e
+                 ivhome
+
+                EIV Multifamily Help Desk
+                 Telephone: 1-800-767-7588
+                 Email: Mf_Eiv@hud.gov
+
+                Enterprise Income Verification System User Manual for Multifamily Housing
+                 Program Users http://www.hud.gov/offices/hsg/mfh/rhiip/eiv/usermanual.pdf
+
+                Rental Housing Integrity Improvement Project (RHIIP) website:
+                 http://portal.hud.gov/hudportal/HUD?src=/program_offices/housing/mfh/rhiip/mfhr
+                 hiip
+
+                Resolving Income Discrepancies Between Enterprise Income Verification (EIV)
+                 System Data and Tenant-Provided Income Information”
+                 http://www.hud.gov/offices/hsg/mfh/rhiip/eiv/reqnguide.cfm
+
+                EIV webcasts
+                 http://portal.hud.gov/portal/page/portal/HUD/webcasts/archives/multifamily
+
+                EIV training provided to HUD RHIIP Help Desk Representatives and Contract
+                 Administrators.
+                 http://portal.hud.gov/hudportal/HUD?src=/program_offices/housing/mfh/rhiip/mfhr
+                 hiip
+
+                A Guide to Interviewing for Owners of HUD Subsidized Multifamily Housing
+                 Projects
+
+
+
+HUD Multifamily Occupancy Handbook                 9-38                                          8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Section 6:                                                                         4350.3 REV-1
+EIV Resources
+
+
+
+                 http://www.hud.gov/offices/hsg/mfh/rhiip/interviewguide.pdf
+
+                Rent and Income Determination Quality Control Monitoring Guide for Multifamily
+                 Housing Programs
+                 http://www.hud.gov/offices/hsg/mfh/rhiip/qcguide.pdf
+
+                EIV & You brochure
+                 http://www.hud.gov/offices/hsg/mfh/rhiip/eivbrochure.pdf
+
+                EIV Multifamily Housing Programs Security Administration Manual
+                 http://www.hud.gov/offices/hsg/mfh/rhiip/eiv/eivapps.cfm
+
+                Mf_eiv_comments@hud.gov mailbox to provide suggestions on how to improve
+                 the EIV system
+
+
+
+
+HUD Multifamily Occupancy Handbook                9-39                                       8/13
+Chapter 9: Enterprise Income Verification (EIV)
+Exhibits                                                                          4350.3 REV-1
+
+
+
+                                            Chapter 9 Exhibits
+
+Exhibit 9-1      Failed EIV Pre-screening Report Error Messages
+                 http://portal.hud.gov/hudportal/documents/huddoc?id=43503e9-1HSGH.pdf
+
+Exhibit 9-2      Failed Verification Report (Failed the SSA Identity Test) Error Messages
+                 http://portal.hud.gov/hudportal/documents/huddoc?id=43503e9-2HSGH.pdf
+
+Exhibit 9-3      EIV Income Report Information
+                 http://portal.hud.gov/hudportal/documents/huddoc?id=43503e9-3HSGH.pdf
+
+Exhibit 9-4      Sample Tenant consent to Disclose EIV Income Information
+                 http://portal.hud.gov/hudportal/documents/huddoc?id=43503e9-4HSGH.pdf
+
+Exhibit 9-5      Use of EIV Reports
+                 http://portal.hud.gov/hudportal/documents/huddoc?id=43503e9-5HSGH.pdf
+
+Exhibit 9-6      National Directory of new Hires (NDNH) Data Elements
+                 http://portal.hud.gov/hudportal/documents/huddoc?id=43503e9-6HSGH.pdf
+
+Exhibit 9-7      How EIV Calculates Income Discrepancies
+                 http://portal.hud.gov/hudportal/documents/huddoc?id=43503e9-7HSGH.pdf
+
+
+
+
+HUD Multifamily Occupancy Handbook                 9-40                                     8/13
+Chapter 9: Enterprise Income Verification (EIV)
+

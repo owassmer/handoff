@@ -1,0 +1,63 @@
+{
+  "as_of": "2026-10-01",
+  "water_service": {
+    "instrument": "CA:CIV",
+    "match_unit_heading": "CHAPTER 2.5. Water Service [1954.201 - 1954.219]",
+    "toc_url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CIV&division=3.&title=5.&part=4.&chapter=2.5.&article=&op_statues=2016&op_chapter=623&op_section=2",
+    "adapter": "ca_leginfo",
+    "verified_section_numbers": [
+      "1954.201",
+      "1954.202",
+      "1954.203",
+      "1954.204",
+      "1954.205",
+      "1954.206",
+      "1954.207",
+      "1954.208",
+      "1954.209",
+      "1954.210",
+      "1954.211",
+      "1954.212",
+      "1954.213",
+      "1954.214",
+      "1954.215",
+      "1954.216",
+      "1954.217",
+      "1954.218",
+      "1954.219"
+    ],
+    "finding": "Official displayText returned the complete Water Service chapter with 19 section headings. The op_statues/op_chapter/op_section discriminator selects this enacted chapter instead of the distinct Transitional Housing Participant Misconduct chapter that shares number 2.5. Use this TOC URL; prior provisional enactment-only enumeration concern is resolved for the currently rendered unit.",
+    "retrieval": "Web open 2026-10-01; publisher page returned, tool crawl metadata last month. This is source-unit enumeration, not certification against later enactments."
+  },
+  "constitution_preamble": {
+    "instrument": "CA:CONS",
+    "adapter": "ca_leginfo",
+    "add_unit": {
+      "unit": "PREAMBLE",
+      "heading": "Preamble",
+      "source_unit_kind": "section",
+      "section_list": [
+        {
+          "number": "PREAMBLE",
+          "heading": "Preamble",
+          "ref": "https://leginfo.legislature.ca.gov/faces/codesTOCSelected.xhtml?tocCode=CONS&tocTitle=+California+Constitution+-+CONS#preamble",
+          "source_unit_kind": "section"
+        }
+      ],
+      "reason": "The complete unnumbered preamble is present in the official TOC anchor. The adapter extracts that exact provision, excluding other TOC entries."
+    },
+    "verified_source": "https://leginfo.legislature.ca.gov/faces/codesTOCSelected.xhtml?tocCode=CONS&tocTitle=+California+Constitution+-+CONS",
+    "retrieval": "Web open 2026-10-01; source returned, crawled today."
+  },
+  "constitution_section_labels": {
+    "source": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CONS&article=I",
+    "observed_labels": [
+      "SECTION 1.",
+      "SEC. 1.1.",
+      "SEC. 2.",
+      "Section 25."
+    ],
+    "verified_leaf": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CONS&article=I&sectionNum=SEC.+1.1.",
+    "implementation": "Recognize SECTION/Section/SEC. and retain the actual heading label in sectionNum; article-qualified numeric inventory identity remains stable."
+  }
+}

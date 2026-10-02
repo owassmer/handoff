@@ -1,0 +1,394 @@
+ 
+ 
+  
+         
+          
+                 
+                 
+     
+     
+     
+
+     
+
+     
+
+     
+     
+
+     
+     
+ 
+         California Code,  CIV 1946. 
+         
+
+         
+            /* Hide page by default*/
+            html { display : none; }
+         
+
+         // = 0)) {
+                        window.top.location.replace(window.location);
+                        top.location = self.location;
+                    }
+                }
+            }
+            // ]]>
+         
+         
+            /* Hide page by default*/
+            html { display : inline; }
+             // 
+   
+
+     
+        function changePlaceHolder() {
+
+            var x = document.getElementById("billheaderinit_form:quick_search_select_id");
+            var input = document.getElementById("billheaderinit_form:searchall");
+
+            if (x !== null) {
+                if (x.options[0].selected) {
+
+                    input.placeholder = "AB1 or ab 1 or ABX1-1";
+                } else {
+                    input.placeholder = "Search phrase";
+                }
+            }
+
+        }
+     
+     
+ 
+ 
+
+
+              
+             
+
+                 
+                       
+                          skip to content  
+                            home  
+                          accessibility  
+                          FAQ  
+                              feedback  
+                          sitemap  
+                       
+
+                          login 
+                         
+                          x   
+                         
+
+
+                     
+                   
+
+
+
+                  
+                          
+                  
+                 
+                     
+                      
+                               
+                              
+                         
+                              
+                     
+                     
+                  
+                     
+                         
+                               Quick Search: 
+                         
+                          	 Bill Number 
+	 Bill Keyword 
+ 
+                               
+                         
+                       
+
+                   
+         
+         
+         
+       
+
+
+
+         
+          
+   
+   
+     
+       
+         Home  
+       
+         Bill Information  
+
+
+       
+         California Law  
+       
+         Publications  
+
+
+       
+         Other Resources  
+       
+         My Subscriptions  
+       
+         My Favorites  
+       
+     
+   
+   
+  
+ 
+          
+     
+ 
+        
+        
+
+       
+         
+             
+                button {
+                    background-image: url('/resources/images/print_24.gif');
+                    background-size: cover;
+                    width: 24px;
+                    height: 24px;
+                    font-size: 2rem; background-color: transparent;
+                    border: 0px;
+                }
+             
+             
+                function printPopup() {
+                    var lawCode = 'CIV';
+                    var sectionNum = '1946.';
+                    var op_statues = '2024'
+                    var op_chapter = '287';
+                    var op_section = '1';
+                    var article = '';
+                    var url = "printCodeSectionWindow.xhtml?";
+                    if (lawCode)
+                        url += 'lawCode=' + lawCode;
+                    if (article) {
+                        url += '&article=' + article;
+                        //alert(url);
+                    }
+
+                    if (sectionNum)
+                        url += '§ionNum=' + sectionNum;
+                    if (op_statues)
+                        url += '&op_statues=' + op_statues;
+                    if (op_chapter)
+                        url += '&op_chapter=' + op_chapter;
+                    if (op_section)
+                        url += '&op_section=' + op_section;
+                    printWindow = window.open(url, "wind", "width=680," +
+                            "height=768,		" +
+                            "toolbar=no,		" +
+                            "location=no,		" +
+                            "directories=no,	" +
+                            "status=no,		" +
+                            "menubar=yes,		" +
+                            "scrollbars=yes,	" +
+                            "resizable=yes		"
+                            );
+                    printWindow.focus();
+                }
+             
+ 
+ 
+
+                     
+                         
+                              California Law 
+                                >>
+                             
+                               
+                                >>
+                             
+                             Code Section
+                             
+                         
+                      
+ 
+                  
+                 Code Section 
+                 
+                 
+
+                   
+         
+            function myPopup() {
+
+                window.open("popupMessage.xhtml", "Information", "width=330, height=220, toolbar=no, location=no, directories=no, menubar=no, scrollbars=no, top=270, left=150");
+            }
+
+            function setCode() {
+                //         button = document.getElementById('expertsearchformid:executeID');
+                //              document.getElementById('expertsearchformid:parameterID1').value = document.getElementById('expertsearchformid:toctextcodeid').value;
+                //              document.getElementById('expertsearchformid:parameterID2').value ='2'; //just a value to bypass validation
+                //              button.click();
+                if (document.getElementById('expertsearchformid:toctextcodeid').value == 'CONS') {
+                    document.getElementById('expertsearchformid:articlelblid').style.display = 'inline';
+                    document.getElementById('expertsearchformid:articleid').style.display = 'inline';
+                } else {
+                    document.getElementById('expertsearchformid:articlelblid').style.display = 'none';
+                    document.getElementById('expertsearchformid:articleid').style.display = 'none';
+                    document.getElementById('expertsearchformid:articleid').value = "";
+                }
+            }
+
+          
+     
+
+
+         
+             
+                 
+ 
+ 
+ Code:  	 Select Code 
+	 CONS 
+	 BPC 
+	 CIV 
+	 CCP 
+	 COM 
+	 CORP 
+	 EDC 
+	 ELEC 
+	 EVID 
+	 FAM 
+	 FIN 
+	 FGC 
+	 FAC 
+	 GOV 
+	 HNC 
+	 HSC 
+	 INS 
+	 LAB 
+	 MVC 
+	 PEN 
+	 PROB 
+	 PCC 
+	 PRC 
+	 PUC 
+	 RTC 
+	 SHC 
+	 UIC 
+	 VEH 
+	 WAT 
+	 WIC 
+  Article:   Section:   
+                          
+ 
+                 
+                 
+ 
+ 
+ Code:  	 Select Code 
+	 All 
+	 BPC 
+	 CIV 
+	 CCP 
+	 COM 
+	 CORP 
+	 EDC 
+	 ELEC 
+	 EVID 
+	 FAM 
+	 FIN 
+	 FGC 
+	 FAC 
+	 GOV 
+	 HNC 
+	 HSC 
+	 INS 
+	 LAB 
+	 MVC 
+	 PEN 
+	 PROB 
+	 PCC 
+	 PRC 
+	 PUC 
+	 RTC 
+	 SHC 
+	 UIC 
+	 VEH 
+	 WAT 
+	 WIC 
+  Section:     Keyword(s):   
+                            
+ 
+                 
+             
+             
+             
+         
+
+
+     
+         setCode(); 
+    
+
+      
+
+
+ 
+                 
+                  
+ 
+ 
+
+     
+         Code Search  
+       
+         Text Search  
+       
+      
+ 
+ 
+                 
+                 
+                     
+                         
+ 
+ 
+ Up^  << Previous   Next >>  cross-reference chaptered bills  PDF  |  Add To My Favorites 
+                                  
+
+
+                                   
+ 
+
+                         
+
+                     
+ 
+ 
+
+                          Search Phrase:    
+                          
+ 
+ 
+ 
+
+                          Code Text  
+                                  Civil Code - CIV      DIVISION 3. OBLIGATIONS [1427 - 3273.91]     ( Heading of Division 3 amended by Stats. 1988, Ch. 160, Sec. 14. )        PART 4. OBLIGATIONS ARISING FROM PARTICULAR TRANSACTIONS [1738 - 3273.91]     ( Part 4 enacted 1872. )        TITLE 5. HIRING [1925 - 1997.270]     ( Title 5 enacted 1872. )         CHAPTER 2. Hiring of Real Property [1940 - 1954.071]     ( Chapter 2 enacted 1872. )          1946.     (a) A hiring of real property, for a term not specified by the parties, is deemed to be renewed as stated in Section 1945, at the end of the term implied by law unless one of the parties gives written notice to the other of that party’s intention to terminate the same, at least as long before the expiration thereof as the term of the hiring itself, not exceeding 30 days; provided, however, that as to tenancies from month to month either of the parties may terminate the same by giving at least 30 days’ written notice thereof at any time and the rent shall be due and payable to and including the date of termination. It shall be competent for the parties to provide by an agreement at the time the tenancy is created that a notice of the intention to
+						terminate the same may be given at any time not less than seven days before the expiration of the term thereof. The notice herein required shall be given in the manner prescribed in Section 1162 of the Code of Civil Procedure or by sending a copy by certified or registered mail addressed to the other party. In addition, the lessee may give the notice by sending a copy by certified or registered mail addressed to the agent of the lessor to whom the lessee has paid the rent for the month prior to the date of the notice or by delivering a copy to the agent personally. The notice given by the lessor shall also contain, in substantially the same form, the following:   “State law permits former tenants to reclaim abandoned personal property left at the former address of the tenant, subject to certain conditions. You may or may not
+						be able to reclaim property without incurring additional costs, depending on the cost of storing the property and the length of time before it is reclaimed. In general, these costs will be lower the sooner you contact your former landlord after being notified that property belonging to you was left behind after you moved out.”   (b) A landlord or its agent shall not charge a tenant a fee for serving, posting, or otherwise delivering any notice, as described in this section.  (Amended by Stats. 2024, Ch. 287, Sec. 1.   (SB 611)   Effective January 1, 2025.)      
+                          
+ 
+
+                 
+         
+        
+
+ 

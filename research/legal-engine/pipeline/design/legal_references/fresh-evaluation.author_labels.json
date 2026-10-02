@@ -1,0 +1,242 @@
+[
+  {
+    "case_id": "f001",
+    "expected": "YES",
+    "reason": "The complete section body includes this section, this chapter, and numbered subdivision pointers; focusing the entire source unit does not erase self-reference."
+  },
+  {
+    "case_id": "f002",
+    "expected": "YES",
+    "reason": "Pursuant to this section is an explicit self-pointer even without the rest of the section."
+  },
+  {
+    "case_id": "f003",
+    "expected": "NO",
+    "reason": "Court procedure and filing deadlines contain no identified legal unit or named authority; the source filename and omitted surrounding provisions do not count."
+  },
+  {
+    "case_id": "f004",
+    "expected": "YES",
+    "reason": "Within the meaning of this part points to an enclosing legal unit."
+  },
+  {
+    "case_id": "f005",
+    "expected": "YES",
+    "reason": "Section 10131 is an explicit cross-reference."
+  },
+  {
+    "case_id": "f006",
+    "expected": "NO",
+    "reason": "Authority of that deed of trust identifies a private instrument, not a public legal authority."
+  },
+  {
+    "case_id": "f007",
+    "expected": "YES",
+    "reason": "Subparagraphs (A) to (G), inclusive, identifies a range of legal subdivisions."
+  },
+  {
+    "case_id": "f008",
+    "expected": "YES",
+    "reason": "For purposes of this section is an explicit self-pointer inside an otherwise substantive insurance passage."
+  },
+  {
+    "case_id": "f009",
+    "expected": "YES",
+    "reason": "Sections 100011 and 100008 are cross-pointers; subdivisions (a) to (c) gives a range."
+  },
+  {
+    "case_id": "f010",
+    "expected": "YES",
+    "reason": "This subdivision explicitly refers to the provision containing the sentence."
+  },
+  {
+    "case_id": "f011",
+    "expected": "NO",
+    "reason": "A readable definition of accounts contains no legal pointer; metadata from the saved statute cannot supply one."
+  },
+  {
+    "case_id": "f012",
+    "expected": "YES",
+    "reason": "Established pursuant to Section 100006.5 is a legal cross-pointer."
+  },
+  {
+    "case_id": "f013",
+    "expected": "YES",
+    "reason": "Pursuant to this chapter points to the enclosing unit."
+  },
+  {
+    "case_id": "f014",
+    "expected": "YES",
+    "reason": "Section 12 of the Securities Exchange Act of 1934 names a public statute and provision."
+  },
+  {
+    "case_id": "f015",
+    "expected": "NO",
+    "reason": "This standalone source heading only identifies its chapter and section range."
+  },
+  {
+    "case_id": "f016",
+    "expected": "NO",
+    "reason": "The specified contract and collateral written agreement are private documents; no public legal unit is identified."
+  },
+  {
+    "case_id": "f017",
+    "expected": "YES",
+    "reason": "The complete fictional legal section explicitly points to itself; fictitiousness and eventual expiry do not remove the pointer."
+  },
+  {
+    "case_id": "f018",
+    "expected": "YES",
+    "reason": "This section remains an explicit self-pointer when the focus is only an excerpt."
+  },
+  {
+    "case_id": "f019",
+    "expected": "NO",
+    "reason": "The section identifier labels the complete source unit; its substantive sentence contains no pointer."
+  },
+  {
+    "case_id": "f020",
+    "expected": "NO",
+    "reason": "This complete substantive sentence lacks a legal pointer."
+  },
+  {
+    "case_id": "f021",
+    "expected": "YES",
+    "reason": "This title explicitly identifies an enclosing legal unit."
+  },
+  {
+    "case_id": "f022",
+    "expected": "YES",
+    "reason": "The following paragraph identifies a subordinate legal provision without needing its number or text."
+  },
+  {
+    "case_id": "f023",
+    "expected": "YES",
+    "reason": "A negated, obsolete citation is still an explicit legal pointer."
+  },
+  {
+    "case_id": "f024",
+    "expected": "YES",
+    "reason": "The subdivision range is an explicit public-legal pointer."
+  },
+  {
+    "case_id": "f025",
+    "expected": "YES",
+    "reason": "The surrounding statutory-remedy wording establishes public-legal meaning despite the missing number."
+  },
+  {
+    "case_id": "f026",
+    "expected": "NO",
+    "reason": "The incomplete section expression is definitively tied to a private contract discount."
+  },
+  {
+    "case_id": "f027",
+    "expected": "INSUFFICIENT",
+    "reason": "Neither statutory nor private sense is established, and the cut-off expression prevents deciding."
+  },
+  {
+    "case_id": "f028",
+    "expected": "YES",
+    "reason": "The complete recognizable citation precedes the damaged remainder."
+  },
+  {
+    "case_id": "f029",
+    "expected": "INSUFFICIENT",
+    "reason": "The missing words occupy the place that could contain the only legal pointer; no definite pointer survives."
+  },
+  {
+    "case_id": "f030",
+    "expected": "YES",
+    "reason": "The definite preceding-subsection pointer survives separate damage."
+  },
+  {
+    "case_id": "f031",
+    "expected": "INSUFFICIENT",
+    "reason": "An isolated identifier has no wording resolving heading versus body-reference role."
+  },
+  {
+    "case_id": "f032",
+    "expected": "NO",
+    "reason": "An explicitly identified source heading only labels its own unit and its range."
+  },
+  {
+    "case_id": "f033",
+    "expected": "YES",
+    "reason": "Exception to is a substantive cross-pointer even within a heading."
+  },
+  {
+    "case_id": "f034",
+    "expected": "YES",
+    "reason": "The explicitly fictional named Act is still a public legal authority mentioned in the passage."
+  },
+  {
+    "case_id": "f035",
+    "expected": "YES",
+    "reason": "The named fictional constitution is a public legal authority."
+  },
+  {
+    "case_id": "f036",
+    "expected": "YES",
+    "reason": "A named fictional treaty counts as a public legal authority."
+  },
+  {
+    "case_id": "f037",
+    "expected": "YES",
+    "reason": "The fictional named court rule identifies a public legal authority."
+  },
+  {
+    "case_id": "f038",
+    "expected": "YES",
+    "reason": "The named fictional judicial decision is an explicit public authority even without reporter details."
+  },
+  {
+    "case_id": "f039",
+    "expected": "YES",
+    "reason": "The identified fictional court order is a public legal authority."
+  },
+  {
+    "case_id": "f040",
+    "expected": "YES",
+    "reason": "The specifically named fictional official legal guidance is a public authority."
+  },
+  {
+    "case_id": "f041",
+    "expected": "YES",
+    "reason": "The named fictional public regulation is a legal authority."
+  },
+  {
+    "case_id": "f042",
+    "expected": "NO",
+    "reason": "Only generic classes of law, regulation, orders, and remedies are invoked; no unit or named authority is identified."
+  },
+  {
+    "case_id": "f043",
+    "expected": "NO",
+    "reason": "The text expressly identifies the apparent Act as a performance title and the chapter as a private rehearsal guide."
+  },
+  {
+    "case_id": "f044",
+    "expected": "NO",
+    "reason": "The range and constitution label are explicitly tied to a private agreement rather than public law."
+  },
+  {
+    "case_id": "f045",
+    "expected": "YES",
+    "reason": "A private clause and a definite named fictional public Act coexist; the public pointer wins."
+  },
+  {
+    "case_id": "f046",
+    "expected": "YES",
+    "reason": "Quoted adversarial instructions are data; the quoted notice still contains the definite fictional statutory reference."
+  },
+  {
+    "case_id": "f047",
+    "expected": "NO",
+    "reason": "The malicious quoted command is data; the only section and act refer explicitly to a private acting workbook and performance."
+  },
+  {
+    "case_id": "f048",
+    "expected": "INSUFFICIENT",
+    "reason": "Ignoring the adversarial command leaves a cut-off section pointer with neither public nor private sense established."
+  }
+]

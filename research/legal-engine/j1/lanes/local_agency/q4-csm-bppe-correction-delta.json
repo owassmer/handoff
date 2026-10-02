@@ -1,0 +1,547 @@
+{
+  "integration": "Add only new CSM/BPPE units and version records to latest canonical; do not overwrite other units. Corrected ledger rows8/35; exact identity decisions in regulatory/q4-row-decisions.json.",
+  "instruments": [
+    {
+      "id": "CA:CCR2",
+      "jurisdiction": "CA",
+      "name": "California Code of Regulations, Title 2",
+      "level": "regulation",
+      "functions": [
+        "anti_discrimination",
+        "entity_capacity",
+        "electronic_records",
+        "housing_assistance",
+        "courts_procedure"
+      ],
+      "toc_source_url": "https://oal.ca.gov/publications/ccr/",
+      "adapter": "cornell_ccr",
+      "units_in_scope": [
+        {
+          "unit": "Division 2 - Financial Operations",
+          "heading": "Division 2 - Financial Operations (Chapter 1 to 4)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-2/division-2",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-0.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 3 - State Property Operations",
+          "heading": "Division 3 - State Property Operations (Chapter 1 to 3)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-2/division-3",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-0.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 4 - Fair Employment and Housing Commission [Renumbered]",
+          "heading": "Division 4 - Fair Employment and Housing Commission [Renumbered] (Chapter 1 to 5)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-2/division-4",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-0.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 4.1 - Civil Rights Department",
+          "heading": "Division 4.1 - Civil Rights Department (Chapter 1 to 5)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-2/division-4.1:",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-0.txt",
+          "toc_retrieval": "failed; publisher-linked URL resolved"
+        },
+        {
+          "unit": "Division 4.5 - Local Agency Deposit Security",
+          "heading": "Division 4.5 - Local Agency Deposit Security (Chapter 2)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-2/division-4.5",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-0.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 7 - Secretary of State",
+          "heading": "Division 7 - Secretary of State (Chapter 1 to 16)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-2/division-7",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-0.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Amendment document 2026-0202-01SR",
+          "heading": "Civil Rights Department conciliation procedures",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2026-0202-01SR",
+              "heading": "Civil Rights Department conciliation procedures",
+              "ref": "https://calcivilrights.ca.gov/wp-content/uploads/sites/32/2026/02/2026-0202-01SR-Approval-and-Final-Text.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "Affected sections identified in linked version record; preserve package then enumerate internal legal provisions in J2"
+          ],
+          "version_record_index": 0,
+          "document_role": "Final amendment or approval package; preserve currentness evidence separately from operative text when package contains only approval notice",
+          "legal_status": "See linked version record; do not infer operation solely from publication",
+          "reason": "Executable acquisition counterpart to selected version record; whole document is not a single legal section.",
+          "adapter": "generic"
+        },
+        {
+          "unit": "CalVCB-April2026-official-sources",
+          "heading": "CalVCB final action and recovered official section histories",
+          "adapter": "generic",
+          "section_list": [
+            {
+              "number": "CalVCB-2025-1126-04S-action",
+              "heading": "OAL final action summary",
+              "ref": "https://oal.ca.gov/wp-content/uploads/sites/166/2026/01/2026-Notice-Register-No.-4-Z-January-23-2026.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "official-615.2",
+              "heading": "Definitions.",
+              "ref": "https://govt.westlaw.com/calregs/Document/IF8609940FA8511F0AF0CE7ED660A8359?viewType=FullText",
+              "source_unit_kind": "section",
+              "history": "Filed January13 2026; operative April1 2026; Register2026No3.",
+              "history_verified": true,
+              "legal_section_number": "615.2",
+              "acquisition_note": "Official comparison source for the mirrored legal section; reconcile source captures in J2."
+            },
+            {
+              "number": "official-649.48",
+              "heading": "Human Trafficking.",
+              "ref": "https://govt.westlaw.com/calregs/Document/I17B67A60FA8311F0AF0CE7ED660A8359?viewType=FullText",
+              "source_unit_kind": "section",
+              "history": "Filed January13 2026; operative April1 2026; Register2026No3.",
+              "history_verified": true,
+              "legal_section_number": "649.48",
+              "acquisition_note": "Official comparison source for the mirrored legal section; reconcile source captures in J2."
+            },
+            {
+              "number": "official-617.7",
+              "heading": "Presentation of Oral Evidence.",
+              "ref": "https://govt.westlaw.com/calregs/Document/I20ECB1F0FA8611F0AF0CE7ED660A8359?viewType=FullText",
+              "source_unit_kind": "section",
+              "history": "Filed January13 2026; operative April1 2026; Register2026No3.",
+              "history_verified": true,
+              "legal_section_number": "617.7",
+              "acquisition_note": "Official comparison source for the mirrored legal section; reconcile source captures in J2."
+            },
+            {
+              "number": "official-647.20",
+              "heading": "Right to Appeal.",
+              "ref": "https://govt.westlaw.com/calregs/Document/I2AECBD70FA6E11F086AB82BFA628E714?viewType=FullText",
+              "source_unit_kind": "section",
+              "history": "Filed January13 2026; operative April1 2026; Register2026No3.",
+              "history_verified": true,
+              "legal_section_number": "647.20",
+              "acquisition_note": "Official comparison source for the mirrored legal section; reconcile source captures in J2."
+            },
+            {
+              "number": "official-647.21",
+              "heading": "Request for Hearing; Notice of Hearing on Appeal.",
+              "ref": "https://govt.westlaw.com/calregs/Document/I1C6C46D0FA6E11F086AB82BFA628E714?viewType=FullText",
+              "source_unit_kind": "section",
+              "history": "Filed January13 2026; operative April1 2026; Register2026No3.",
+              "history_verified": true,
+              "legal_section_number": "647.21",
+              "acquisition_note": "Official comparison source for the mirrored legal section; reconcile source captures in J2."
+            },
+            {
+              "number": "official-647.30",
+              "heading": "Conduct of Hearing.",
+              "ref": "https://govt.westlaw.com/calregs/Document/I05D26660FA8311F0AF0CE7ED660A8359?viewType=FullText",
+              "source_unit_kind": "section",
+              "history": "Filed January13 2026; operative April1 2026; Register2026No3.",
+              "history_verified": true,
+              "legal_section_number": "647.30",
+              "acquisition_note": "Official comparison source for the mirrored legal section; reconcile source captures in J2."
+            },
+            {
+              "number": "official-647.26",
+              "heading": "Request for Continuance. [Renumbered]",
+              "ref": "https://govt.westlaw.com/calregs/Document/IE08B4E60FB6511F08B9488423D42EAFD?viewType=FullText",
+              "source_unit_kind": "section",
+              "history": "Filed January13 2026; operative April1 2026; Register2026No3.",
+              "history_verified": true,
+              "legal_section_number": "647.26",
+              "acquisition_note": "Official comparison source for the mirrored legal section; reconcile source captures in J2."
+            },
+            {
+              "number": "official-649.8",
+              "heading": "Emergency Awards.",
+              "ref": "https://govt.westlaw.com/calregs/Document/I0E538620FA8311F0AF0CE7ED660A8359?viewType=FullText",
+              "source_unit_kind": "section",
+              "history": "Filed January13 2026; operative April1 2026; Register2026No3.",
+              "history_verified": true,
+              "legal_section_number": "649.8",
+              "acquisition_note": "Official comparison source for the mirrored legal section; reconcile source captures in J2."
+            },
+            {
+              "number": "official-649.41",
+              "heading": "Acts Constituting One Qualifying Crime.",
+              "ref": "https://govt.westlaw.com/calregs/Document/I14CFAE20FA8311F086AB82BFA628E714?viewType=FullText",
+              "source_unit_kind": "section",
+              "history": "Filed January13 2026; operative April1 2026; Register2026No3.",
+              "history_verified": true,
+              "legal_section_number": "649.41",
+              "acquisition_note": "Official comparison source for the mirrored legal section; reconcile source captures in J2."
+            },
+            {
+              "number": "official-649.32",
+              "heading": "Verification of Income or Support Loss",
+              "ref": "https://govt.westlaw.com/calregs/Document/I065F8B30FA8311F0AF0CE7ED660A8359?viewType=FullText",
+              "source_unit_kind": "section",
+              "history": "Repealer and new section and amendment of Note filed1-13-2026; operative4-1-2026, Register2026No3.",
+              "history_verified": true,
+              "legal_section_number": "649.32",
+              "acquisition_note": "Official comparison source for the mirrored legal section; reconcile source captures in J2."
+            }
+          ],
+          "reason": "Complete affected-unit selection is in version record; official histories establish final edition and renumbering, mirror text requires reconciliation."
+        },
+        {
+          "unit": "Final package - CSM General Cleanup 25-01 final text",
+          "heading": "CSM General Cleanup 25-01 final text",
+          "adapter": "generic",
+          "source_unit_kind": "document",
+          "internal_units_in_scope": [
+            "Complete final amended Chapter 2.5 Articles 1,3,4,5,6,7,8,10; exact affected sections in Q4 ledger row8"
+          ],
+          "reason": "Conditional local-agency/public-owner state-mandate reimbursement procedures affecting recovery of required work/program costs; not an entitlement to reimbursement.",
+          "section_list": [
+            {
+              "number": "csm-general-cleanup-25-01",
+              "heading": "CSM General Cleanup 25-01 final text",
+              "ref": "https://www.csm.ca.gov/documents/regulations.pdf",
+              "source_unit_kind": "document"
+            }
+          ]
+        }
+      ],
+      "units_out": [
+        {
+          "unit": "Division 1 - Administrative Personnel",
+          "heading": "Division 1 - Administrative Personnel (Chapter 1 to 3)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-2",
+          "reason": "Division 1 - Administrative Personnel governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 5 - State and Federal Grant-in-Aid Program Merit Systems",
+          "heading": "Division 5 - State and Federal Grant-in-Aid Program Merit Systems (Chapter 1 to 2)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-2",
+          "reason": "Division 5 - State and Federal Grant-in-Aid Program Merit Systems governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 6 - Fair Political Practices Commission",
+          "heading": "Division 6 - Fair Political Practices Commission (Chapter 1 to 10)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-2",
+          "reason": "Division 6 - Fair Political Practices Commission governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 8 - Miscellaneous Conflict of Interest Codes",
+          "heading": "Division 8 - Miscellaneous Conflict of Interest Codes (Chapter 1 to 146)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-2",
+          "reason": "Division 8 - Miscellaneous Conflict of Interest Codes governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 9 - Joint Regulations for Pupils with Disabilities",
+          "heading": "Division 9 - Joint Regulations for Pupils with Disabilities (Chapter 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-2",
+          "reason": "Division 9 - Joint Regulations for Pupils with Disabilities governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 10 - California State Auditor's Office",
+          "heading": "Division 10 - California State Auditor's Office (Chapter 1 to 5)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-2",
+          "reason": "Division 10 - California State Auditor's Office governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        }
+      ],
+      "acquisition": {
+        "text_adapter": "cornell_ccr",
+        "enumeration": "Traverse the selected mirror division/chapter descendants and retain actual linked leaf references.",
+        "source_authority": "mirror",
+        "official_reconciliation": "Official CCR and issuing-agency enacted/amendment sources determine the authoritative version. Mirror text alone cannot complete J2."
+      },
+      "toc_mirror_url": "https://www.law.cornell.edu/regulations/california/title-2",
+      "source_capture": "j1/sources/ccr-title-2.txt",
+      "currentness_note": "LII supplies the browse tree; official CCR and issuing-agency adoption texts determine legal version. LII quarterly update is not treated as current legal authority.",
+      "version_records": [
+        {
+          "name": "Civil Rights Department conciliation procedures",
+          "oal_file": "2026-0202-01SR",
+          "effective_from": "2026-04-01",
+          "sections_adopted": [
+            "10280",
+            "10281"
+          ],
+          "sections_amended": [
+            "10000",
+            "10001",
+            "10031",
+            "10063"
+          ],
+          "sections_repealed": [
+            "10024",
+            "10025",
+            "10056",
+            "10057"
+          ],
+          "source_url": "https://calcivilrights.ca.gov/wp-content/uploads/sites/32/2026/02/2026-0202-01SR-Approval-and-Final-Text.pdf",
+          "index_url": "https://oal.ca.gov/april_1_effective_date/",
+          "reason": "Housing discrimination disputes and agency resolution are within the outgoing-account/occupancy aperture.",
+          "acquisition_note": "18-page scanned PDF opened but has no extracted text; require rendered/OCR acquisition, not an empty successful fetch.",
+          "proposal_source": "regulatory/proposal.json"
+        },
+        {
+          "filed_on": "2026-01-13",
+          "effective_from": "2026-04-01",
+          "official_chapter_toc": "https://govt.westlaw.com/calregs/Browse/Home/California/CaliforniaCodeofRegulations?guid=I2643C0B05A0A11EC8227000D3A7C4BC3",
+          "j1_status": "Final action, affected-unit inventory, operative date and official chapter acquisition route established. No unresolved substantive edition question; remaining codified leaf enumeration and text reconciliation are J2.",
+          "acquisition_route_limitation": "Cornell hierarchy adapter enumerates selected mirror division. Official Westlaw chapter URL is an identified authoritative reconciliation location, not an implemented TOC reader; generic does not enumerate it. Sixteen official leaf hrefs require J2 manual recovery or a Westlaw reader; do not describe official enumeration as implemented.",
+          "reconciliation_status": "J2: reconcile all26 affected units against official codified chapter;10 histories verified,16 leaves await enumeration/retrieval. Cornell617.1/617.5 demonstrably stale. Prior647.22 repeal must be combined with647.26 renumbering into647.22.",
+          "oal_file": "2025-1126-04S",
+          "name": "CalVCB approved April2026 amendment",
+          "source_url": "https://oal.ca.gov/wp-content/uploads/sites/166/2026/01/2026-Notice-Register-No.-4-Z-January-23-2026.pdf",
+          "affected_sections": [
+            "615.2",
+            "617.1",
+            "617.4",
+            "617.7",
+            "617.8",
+            "617.9",
+            "619.4",
+            "619.5",
+            "647.20",
+            "647.21",
+            "647.26",
+            "647.30",
+            "647.31",
+            "649",
+            "649.8",
+            "649.32",
+            "649.33",
+            "649.41",
+            "649.48",
+            "617.5",
+            "617.6",
+            "647.3",
+            "647.4",
+            "647.20.1",
+            "647.22",
+            "647.25"
+          ],
+          "reconciliation_map": "j1/lanes/local_agency/calvcb-action-map.json"
+        },
+        {
+          "action": "CSM General Cleanup 25-01 final text",
+          "filed_on": "2025-11-06",
+          "effective_on": "2026-01-01",
+          "legal_status": "operative",
+          "source_url": "https://www.csm.ca.gov/documents/regulations.pdf",
+          "status_source": "https://www.csm.ca.gov/regulations.shtml",
+          "scope": [
+            "Complete final amended Chapter 2.5 Articles 1,3,4,5,6,7,8,10; exact affected sections in Q4 ledger row8"
+          ],
+          "currentness_note": "Publisher expressly identifies final text and effective date; full extraction and internal section alignment are J2."
+        }
+      ]
+    },
+    {
+      "id": "CA:CCR5",
+      "jurisdiction": "CA",
+      "name": "California Code of Regulations, Title 5",
+      "level": "regulation",
+      "functions": [
+        "housing_assistance",
+        "landlord_tenant"
+      ],
+      "toc_source_url": "https://oal.ca.gov/publications/ccr/",
+      "adapter": "cornell_ccr",
+      "units_in_scope": [
+        {
+          "unit": "Division 4 - California Student Aid Commission",
+          "heading": "Division 4 - California Student Aid Commission (Chapter 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-5/division-4",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-20.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 5 - Board of Trustees of the California State Universities",
+          "heading": "Division 5 - Board of Trustees of the California State Universities (Chapter 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-5/division-5",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-20.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 6 - California Community Colleges",
+          "heading": "Division 6 - California Community Colleges (Chapter 1 to 10)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-5/division-6",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-20.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 7.5 - Private Postsecondary Education",
+          "heading": "Division 7.5 - Private Postsecondary Education (Chapter 1 to 8)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-5/division-7.5",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-20.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 10 - The Regents of the University of California",
+          "heading": "Division 10 - The Regents of the University of California (Chapter 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-5/division-10",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-20.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Final package - BPPE Minimum Operating Standards Refund Policies Order of Adoption",
+          "heading": "BPPE Minimum Operating Standards Refund Policies Order of Adoption",
+          "adapter": "generic",
+          "source_unit_kind": "document",
+          "internal_units_in_scope": [
+            "Complete adopted 70000,71746,71750,71751 including definitions and cancellation/withdrawal distinctions"
+          ],
+          "reason": "Institution-billed housing can be an institutional charge; retain complete adopted package for conditional housing receipts, overpayments and refunds.",
+          "section_list": [
+            {
+              "number": "bppe-refund-2025",
+              "heading": "BPPE Minimum Operating Standards Refund Policies Order of Adoption",
+              "ref": "https://www.bppe.ca.gov/lawsregs/mos_refund_policies_ooa.pdf",
+              "source_unit_kind": "document"
+            }
+          ]
+        },
+        {
+          "unit": "BPPE housing-charge and refund context current compilation",
+          "heading": "BPPE Division 7.5 regulations effective July 1 2026",
+          "adapter": "generic",
+          "source_unit_kind": "document",
+          "internal_units_in_scope": [
+            "70000",
+            "71746",
+            "71750",
+            "71751",
+            "71800",
+            "71810",
+            "71920",
+            "71930"
+          ],
+          "reason": "Preserve adopted refund package with housing-charge itemization, housing disclosure and payment/refund record context; retrieve PDF once then internally subdivide.",
+          "section_list": [
+            {
+              "number": "bppe-current-housing-refund-context",
+              "heading": "BPPE regulation compilation effective July 1 2026",
+              "ref": "https://www.bppe.ca.gov/lawsregs/regs.pdf",
+              "source_unit_kind": "document"
+            }
+          ]
+        }
+      ],
+      "units_out": [
+        {
+          "unit": "Division 1 - California Department of Education",
+          "heading": "Division 1 - California Department of Education (Chapter 1 to 24)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-5",
+          "reason": "Division 1 - California Department of Education governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 1.5 - Education Audit Appeals Panel",
+          "heading": "Division 1.5 - Education Audit Appeals Panel (Chapter 1 to 3)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-5",
+          "reason": "Division 1.5 - Education Audit Appeals Panel governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 2 - California State Library",
+          "heading": "Division 2 - California State Library (Chapter 1 to 3)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-5",
+          "reason": "Division 2 - California State Library governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 3 - Teachers' Retirement System",
+          "heading": "Division 3 - Teachers' Retirement System (Chapter 1 to 3)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-5",
+          "reason": "Division 3 - Teachers' Retirement System governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 4.5 - Scholarshare Investment Board",
+          "heading": "Division 4.5 - Scholarshare Investment Board (Chapter 1 to 3)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-5",
+          "reason": "Division 4.5 - Scholarshare Investment Board governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 7 - Board of Governors of the California Maritime Academy [Repealed]",
+          "heading": "Division 7 - Board of Governors of the California Maritime Academy [Repealed] (Chapter 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-5",
+          "reason": "Division 7 - Board of Governors of the California Maritime Academy [Repealed] governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 8 - Commission on Teacher Credentialing",
+          "heading": "Division 8 - Commission on Teacher Credentialing (Chapter 1 to 5)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-5",
+          "reason": "Division 8 - Commission on Teacher Credentialing governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 9 - Secretary for Education",
+          "heading": "Division 9 - Secretary for Education (Chapter 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-5",
+          "reason": "Division 9 - Secretary for Education governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 11 - Cradle-to-Career Data System",
+          "heading": "Division 11 - Cradle-to-Career Data System (Chapter 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-5",
+          "reason": "Division 11 - Cradle-to-Career Data System governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        }
+      ],
+      "acquisition": {
+        "text_adapter": "cornell_ccr",
+        "enumeration": "Traverse the selected mirror division/chapter descendants and retain actual linked leaf references.",
+        "source_authority": "mirror",
+        "official_reconciliation": "Official CCR and issuing-agency enacted/amendment sources determine the authoritative version. Mirror text alone cannot complete J2."
+      },
+      "toc_mirror_url": "https://www.law.cornell.edu/regulations/california/title-5",
+      "source_capture": "j1/sources/ccr-title-5.txt",
+      "currentness_note": "LII supplies the browse tree; official CCR and issuing-agency adoption texts determine legal version. LII quarterly update is not treated as current legal authority.",
+      "version_records": [
+        {
+          "action": "BPPE Minimum Operating Standards Refund Policies Order of Adoption",
+          "filed_on": "2025-11-18",
+          "effective_on": "2026-01-01",
+          "legal_status": "operative",
+          "source_url": "https://www.bppe.ca.gov/lawsregs/mos_refund_policies_ooa.pdf",
+          "status_source": "https://www.bppe.ca.gov/lawsregs/index.shtml",
+          "scope": [
+            "Complete adopted 70000,71746,71750,71751 including definitions and cancellation/withdrawal distinctions"
+          ],
+          "currentness_note": "Publisher expressly identifies final text and effective date; full extraction and internal section alignment are J2."
+        }
+      ]
+    }
+  ],
+  "source_reasoning": {
+    "BPPE_charge_definition": {
+      "source": "https://www.bppe.ca.gov/lawsregs/ppe_act.pdf",
+      "scope": "EDC94844;94850;94870",
+      "definition": "EDC94844 defines institutional charges as charges for an educational program paid directly to an institution. EDC94850 distinguishes required program charges paid directly to another entity. CCR71800(e)(7) expressly lists in-resident housing among institutional charges. Thus housing receipts/refunds need conditional selection, not blanket application to independent student tenancies.",
+      "capture": "sources/bppe-charge-definition.txt"
+    },
+    "school_boundary": "Current official CCR1859.2 defines Interim Housing as temporary Classrooms and ancillary school facilities. School Facility Program grant calculations concern educational capacity/site improvements. This is an eligible-use distinction, not missing customer facts or lack of known award."
+  },
+  "root_review": "BPPE additions integrated. CSM standalone package selection superseded by root aperture decision in canonical register and regulatory/q4-row-decisions.json row8; do not re-add CSM unit/version from this historical proposal."
+}

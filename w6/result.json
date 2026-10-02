@@ -1,0 +1,99 @@
+{
+ "steps": [
+  {
+   "at": "19:46:51",
+   "name": "create workspace",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "19:46:54",
+   "name": "receive notice 1",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "19:47:35",
+   "name": "turn 1: Waiting for information | Entrance latch is reported deficient (doesn\u2019t catch reliably). Inspection indicates adjustment is needed and replacement is unnecessary. Hou",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "19:48:46",
+   "name": "turn 2: Ready to continue | A correspondent has replied. Review the new information and continue the work.",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "19:49:55",
+   "name": "turn 3: Ready to continue | A correspondent has replied. Review the new information and continue the work.",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "19:52:02",
+   "name": "turn 4: Waiting for decision | Entrance latch does not catch reliably. House Care has an offered scope to adjust and function-check the latch so the door secures; owner ap",
+   "code": 200,
+   "error": ""
+  }
+ ],
+ "mainBefore": {
+  "HandoffWorkspace": 3,
+  "HandoffCase": 3,
+  "HandoffWorkPlan": 4,
+  "HandoffMessage": 144
+ },
+ "workspaceId": "workspace:9f5819d66f602cc585d4565b7c32373615d2e79d449b33a220a293b6855a316c",
+ "handoffId": "handoff:1967a4b118d7a488d116057cd8dee9fdc9e7028b363b3f3377678ceac165a498",
+ "plan": {
+  "title": "Secure entrance: adjust and function-check latch",
+  "revision": "1",
+  "fixedRequirements": [],
+  "estimatedCostCents": "12500",
+  "budgetCents": "12500"
+ },
+ "messages": [
+  {
+   "createdAt": "2026-09-27T19:46:58.512Z",
+   "direction": "Outgoing",
+   "purpose": "Quote",
+   "title": "Quote for Make the entrance secure"
+  },
+  {
+   "createdAt": "2026-09-27T19:46:58.512Z",
+   "direction": "Outgoing",
+   "purpose": "Information",
+   "title": "Information requested"
+  },
+  {
+   "createdAt": "2026-09-27T19:48:42.028Z",
+   "direction": "Incoming",
+   "purpose": "Quote",
+   "title": "Provider offer received"
+  },
+  {
+   "createdAt": "2026-09-27T19:49:52.906Z",
+   "direction": "Incoming",
+   "purpose": "Information",
+   "title": "Reply received"
+  },
+  {
+   "createdAt": "2026-09-27T19:51:01.292Z",
+   "direction": "Outgoing",
+   "purpose": "Information",
+   "title": "Information requested"
+  },
+  {
+   "createdAt": "2026-09-27T19:51:01.292Z",
+   "direction": "Outgoing",
+   "purpose": "Information",
+   "title": "Information requested"
+  }
+ ],
+ "mainAfter": {
+  "HandoffWorkspace": 3,
+  "HandoffCase": 3,
+  "HandoffWorkPlan": 4,
+  "HandoffMessage": 144
+ }
+}

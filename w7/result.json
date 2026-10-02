@@ -1,0 +1,105 @@
+{
+ "steps": [
+  {
+   "at": "20:26:03",
+   "name": "create workspace",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "20:26:06",
+   "name": "receive notice 1",
+   "code": 400,
+   "error": "{\"errorCode\":\"INVALID_ARGUMENT\",\"errorName\":\"ApplyActionFailed\",\"errorInstanceId\":\"b56b8a89-3c1c-4d68-8a1e-016b82de943b\",\"parameters\":{\"originalErrorName\":\"Actions:ObjectTypeOrLinkTypeNotIndexed\",\"userErrorMessage\":\"Failed to apply changes due to a configuration issue.\",\"builderErrorMessage\":\"The action attempted to modify an object or link which either has not finished initializing or where initialization failed.\"}}"
+  },
+  {
+   "at": "20:27:09",
+   "name": "receive notice 2",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "20:27:33",
+   "name": "turn 1: Waiting for information | Entrance latch is deficient (does not catch reliably). Departure inspection says adjustment needed and replacement unnecessary. We have owne",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "20:28:43",
+   "name": "turn 2: Ready to continue | Morgan replied.",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "20:29:51",
+   "name": "turn 3: Ready to continue | House Care sent a quote.",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "20:31:27",
+   "name": "turn 4: Waiting for decision | Entrance latch does not catch reliably, so the entrance is not yet secure. A House Care repair quote is available to adjust and function-che",
+   "code": 200,
+   "error": ""
+  }
+ ],
+ "mainBefore": {
+  "HandoffWorkspace": 3,
+  "HandoffCase": 3,
+  "HandoffWorkPlan": 4,
+  "HandoffMessage": 158
+ },
+ "workspaceId": "workspace:acfeca624b9ccb3dd299a9d59425383971a20838af57c1670e7cba6b8d28bf2e",
+ "handoffId": "handoff:036d70a2df83934dc4a7ada3cacda984f9839d4192c6cb4674d79b14402cf249",
+ "plan": {
+  "title": "Entrance latch adjustment",
+  "revision": "1",
+  "fixedRequirements": [],
+  "estimatedCostCents": "12500",
+  "budgetCents": "12500"
+ },
+ "messages": [
+  {
+   "createdAt": "2026-09-27T20:27:13.625Z",
+   "direction": "Outgoing",
+   "purpose": "Quote",
+   "title": "Quote for Make the entrance secure",
+   "body": "Please issue a formal quote for service \u201cMake the entrance secure\u201d (serviceId: entrance) for 17 Meadow Street (test): adjust and function-check the entrance latch so it catches reliably. Include total price (confirm tax), earliest schedule, and payment terms (deposit amount and when due)."
+  },
+  {
+   "createdAt": "2026-09-27T20:27:13.625Z",
+   "direction": "Outgoing",
+   "purpose": "Information",
+   "title": "Information requested",
+   "body": "Approve arranging House Care to adjust and function-check the entrance latch to make the entrance secure for the next occupant. Provider terms indicate an advance payment is required (deposit 2,500 cents) and the line price shown is 12,500 cents total. Please confirm approval to proceed within these amounts."
+  },
+  {
+   "createdAt": "2026-09-27T20:28:41.447Z",
+   "direction": "Incoming",
+   "purpose": "Information",
+   "title": "Reply received",
+   "body": "Please see my Owner funding confirmation."
+  },
+  {
+   "createdAt": "2026-09-27T20:29:49.422Z",
+   "direction": "Incoming",
+   "purpose": "Quote",
+   "title": "Provider offer received",
+   "body": "Make the entrance secure. Adjust and function-check entrance latch: $125.00. Advance of 2500; balance after completion"
+  }
+ ],
+ "activity": [
+  "{\"version\":\"1\",\"payloadHash\":\"19411be0ab7646298695dee56e6f02b27df709ff693cfb0e999f6529cf1ee8d0\",\"summary\":\"The workspace is ready to receive a move-out notice.\"}",
+  "{\"version\":\"1\",\"payloadHash\":\"af8f92d48a6d612056def85bd0712d3efdff4721e1ca18dfc580ab319d8233e3\",\"summary\":\"The property, tenancy and supporting documents are ready for a work recommendation.\"}",
+  "{\"version\":\"1\",\"payloadHash\":\"ae4b63a796c57c170738d1968c931a9edcfdafc54370c9bee96c7a17821c89ff\",\"summary\":\"Entrance latch is deficient (does not catch reliably). Departure inspection says adjustment needed and replacement unnecessary. We have owner funding confirmation ($300.00), but the tenancy agreement requires owner approval before arranging work. House Care\u2019s provider info indicates they can adjust and function-check the latch (earliest availability 2026-09-28) with an advance payment requirement, but we need a formal quote object to price a proposal via quote lines.\",\"trace\":{\"model\":\"ri.language-model-service..language-model.gpt-5-2\",\"usedDocumentIds\":[\"document:17e3b9554403ac6897da6790d0b8eddfa455e0e26771559761ab1c5b391d73f8\",\"document:d51f22a3ebe78a5f6dfb631b0d7feb3f3cebec990f785cf3aeb923912071c05b\",\"document:e1bc0139a8cd84008a718982c8d838488d70c10bd7db2bfd25a5a7d4ba051687\",\"document:9f3012b76ed884ffff56a96f76fec673c2ac9bfa5eb7be53dc06712fccc067a0\",\"document:c5618d955c0489c190a4f4d0ea6bb2779248d57d91721eafcfbb54db2af36296\",\"document:dbb8c9f74e38f8cffec7997a3be5cc80aaf715f14a743255f0c7f240197e8c77\"],\"toolCallCount\":1,\"durationMs\":16402}}",
+  "{\"version\":\"1\",\"payloadHash\":\"ae4b63a796c57c170738d1968c931a9edcfdafc54370c9bee96c7a17821c89ff\",\"summary\":\"Morgan replied.\"}",
+  "{\"version\":\"1\",\"payloadHash\":\"ae4b63a796c57c170738d1968c931a9edcfdafc54370c9bee96c7a17821c89ff\",\"summary\":\"House Care sent a quote.\"}",
+  "{\"version\":\"1\",\"payloadHash\":\"ae4b63a796c57c170738d1968c931a9edcfdafc54370c9bee96c7a17821c89ff\",\"summary\":\"Entrance latch does not catch reliably, so the entrance is not yet secure. A House Care repair quote is available to adjust and function-check the existing latch (no replacement), and owner funding is confirmed to cover it.\",\"trace\":{\"model\":\"ri.language-model-service..language-model.gpt-5-2\",\"usedDocumentIds\":[\"document:12a6b4e69a2144faa8f756cd78bc571fea41f0284aca9262de0a8573cf99fa36\",\"document:e1bc0139a8cd84008a718982c8d838488d70c10bd7db2bfd25a5a7d4ba051687\",\"document:dbb8c9f74e38f8cffec7997a3be5cc80aaf715f14a743255f0c7f240197e8c77\",\"document:9f3012b76ed884ffff56a96f76fec673c2ac9bfa5eb7be53dc06712fccc067a0\",\"document:c5618d955c0489c190a4f4d0ea6bb2779248d57d91721eafcfbb54db2af36296\",\"document:17e3b9554403ac6897da6790d0b8eddfa455e0e26771559761ab1c5b391d73f8\",\"document:d51f22a3ebe78a5f6dfb631b0d7feb3f3cebec990f785cf3aeb923912071c05b\"],\"toolCallCount\":2,\"durationMs\":25843}}"
+ ],
+ "mainAfter": {
+  "HandoffWorkspace": 3,
+  "HandoffCase": 3,
+  "HandoffWorkPlan": 4,
+  "HandoffMessage": 159
+ }
+}

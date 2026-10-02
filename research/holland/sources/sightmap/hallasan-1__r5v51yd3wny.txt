@@ -1,0 +1,34 @@
+SOURCE: https://sightmap.com/embed/r5v51yd3wny (page) -> https://sightmap.com/app/api/v1/n9w61eezv71/sightmaps/104530 (the embed's own JSON feed, fetched with curl)
+RETRIEVED: 2026-09-30
+ASSET: Hallasan | units on map: 19
+
+FEES/EXPENSES (label | type | frequency | required | refundable | amounts seen across units | tooltip)
+- Application Screening Fee (Non-refundable) | application | one time | req=True | refundable=False | $64.50 | No fee for applicants with gov’t housing subsidy
+- Deposit (refundable) | deposit | one time | req=True | refundable=True | $500.00 - $1000.00 | May increase up to 1 month's rent based on screening results
+- Holding Deposit (may or may not be refundable) | holding | one time | req=True | refundable=True | $250.00 - $1000.00 | Studio $250, 1 bd $300, 2 bd $400, 3 bd-PH $1000. Applied to total deposit due at move in.
+- Water | water | month | req=True | refundable=False | Usage-based | Apartment is sub-metered for water usage
+- Sewer | utilities_other | month | req=True | refundable=False | Usage-based | Apartment is sub-metered for sewer usage
+- Electricity | electricity | month | req=True | refundable=False | Usage-based | Apartment is sub-metered for electric usage
+- Domestic Hot Water (Gas) | gas | month | req=True | refundable=False | Ratio-based | Based on # of occupants & apt sq. ft.
+- Trash | trash | month | req=True | refundable=False | Ratio-based | Total cost divided between all occupied apts
+- Trash Billing Fee | utilities_admin | month | req=True | refundable=False | $2.60 | Cost for 3rd party trash billing
+- Porter Service | maintenance | month | req=True | refundable=False | $36.81 | For maintenance/cleaning of building common areas
+- Internet | internet | month | req=False | refundable=False | Directly to Provider | Residents pays directly to internet provider
+- Los Angeles Government Fees | government | month | req=True | refundable=False | $5.41 | City of LA: SCEP Fee, $2.83; JCO Fee, $2.58
+- Pet Deposit (refundable) | pet_deposit_other | one time | req=False | refundable=True | $500.00 | Total deposit not to exceed max. of 1 month's rent
+- Pet Rent | pet_rent_other | month | req=False | refundable=False | $50.00 | Breed restrictions apply. Limit 2 pets/apt
+- Single Car Garage | private_garage | month | req=False | refundable=False | $150.00 | Single parking space in secured access garage
+- Tandem (2 space) Tuck Under Garage | parking_other | month | req=False | refundable=False | $250.00 | Two spaces (tandem) in secured access garage
+- Bike Storage | bicycle_storage | month | req=False | refundable=False | No Charge | Not reserved. Resident provides lock.
+- EV Parking Space | ev_parking | month | req=False | refundable=False | $250.00 | Reserved EV charging space in secured garage
+- Package Service Registration (Parcel Pending) | packages | one time | req=False | refundable=False | $20.00 | Registration fee, paid to 3rd party package svc
+- Renter's Liability Insurance | renters_insurance | month | req=True | refundable=False | Varies | Resident must maintain liability renter's insurance
+- Community Lounge Hourly Rental | community_other | occur | req=False | refundable=False | $250.00 | Refundable $1000 deposit required
+- Holding Deposit Applied | holding | one time | req=True | refundable=True | -$1000.00 - -$250.00 | Holding deposit paid with application is applied to the total amount due at move in.
+- NOVA International Credit Screening (Optional) | screening | one time | req=False | refundable=False | $50.00 | Applicants with limited or no credit established in the United States may choose to submit an application via NOVA International Credit for a fee paid directly to the screening agency.
+
+PRICING DISCLAIMER (Holland Base Rent Disclaimer [USE] [AZ:CA:OR:WA]): Prices include base rent. For an estimate of total monthly price, including mandatory monthly fees and any user-selected optional fees, use our Calculate My Cost tool after selecting your desired apartment home. Variable and/or usage-based fees are not included. Monthly price and move in costs are estimates and may vary from actual monthly/move in costs based on factors such as move in date, lease term, user-selected options (e.g. parking, pets, etc.) and deposit requirements after screening.
+
+CALCULATOR DISCLAIMER: Amounts provided are estimates and may vary from actual monthly/move in costs based on factors such as move-in date, lease term, user-selections, deposit requirements, etc. The Estimated Monthly Price and Estimated Move In Cost includes base rent, all mandatory monthly & one-time fees, and optional user-selected fees. Variable and usage-based fees not included. Deposits based on application screening results are not included. Additional fees may apply based on the application/lease agreement. Certain fees may not apply to apartments under housing vouchers/affordable programs. All fees are nonrefundable unless stated or required by law. Pricing and fees are subject to application/lease terms. Residents must maintain liability insurance and activate utilities billed directly by the provider.
+
+GENERAL DISCLAIMER: None

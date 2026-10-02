@@ -1,0 +1,22 @@
+{
+  "observed_at": "2026-10-01",
+  "selected_release": "119-111",
+  "publisher_release_date": "2026-09-18",
+  "evidence_kind": "official publisher search-index snapshots; direct publisher retrieval unavailable",
+  "sources": [
+    {
+      "url": "https://uscode.house.gov/download/download.shtml%3Bjsessionid%3DEB72391A68088E58F918A41C881E705D",
+      "observation": "Search result names Current Release Point Public Law 119-111 (09/18/2026), with individual title files at 119-111. Search tool reported crawled yesterday."
+    },
+    {
+      "url": "https://uscode.house.gov/currency/currency.shtml%3Bjsessionid%3DB2A2A76C6B16F9578CE37D390E72F20A",
+      "observation": "Search result states Code online is current through Public Law 119-111, September 18, 2026. Search tool reported crawled yesterday."
+    }
+  ],
+  "conflict_resolution": "The 119-108 September 11 snapshot is older than these publisher snapshots. Retain the existing 119-111 selection without claiming independent live verification of latest release.",
+  "xml_target_template": "https://uscode.house.gov/download/releasepoints/us/pl/119/111/xml_usc{title}@119-111.zip",
+  "xml_target_status": "Target availability not verified: shell curl failed DNS (exit 6); web binary/index opens inaccessible. These failures do not establish target absence.",
+  "direct_publisher_status": "Unparameterized download and currency pages returned maintenance; session URLs returned inaccessible/403. Maintenance does not establish currency.",
+  "transform_input": "Keep release 119-111. Apply propose_uslm.py after substantive replacements; existing source-grounded heading selectors do not require invented USLM structural IDs.",
+  "pending": "J2 must retrieve selected XML ZIPs, verify actual package identity, and record publisher pending-update status. GovInfo compilation currency is a different corpus and is not substituted."
+}

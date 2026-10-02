@@ -1,0 +1,353 @@
+{
+  "cases_sha256": "8b202c687bb6be8592ddb348ce8da1388eabeb2392c85fef507587d95055b203",
+  "contracts_sha256": "93b2ad6fbb6b4ba2438960c8f15527ad2906374f8bc6eee6f51ba6577d7cd86f",
+  "reviewer": "/root/reference_final_audit; independent source-based v2 development review",
+  "author_labels_seen": false,
+  "model_responses_seen": false,
+  "material_findings": [],
+  "cases": [
+    {
+      "id": "d001",
+      "expected": "YES",
+      "reason": "CIV1980 expressly assigns meanings to several terms; inclusive and qualified clauses remain definitions.",
+      "edge_case": "Multiple defined terms and exclusions.",
+      "downstream_failure": "Miss a definition source or discard its qualification."
+    },
+    {
+      "id": "d002",
+      "expected": "YES",
+      "reason": "RegE1005.2(g) operatively adopts the definition at1005.3; the selected passage itself need not reproduce that meaning.",
+      "edge_case": "External definition by incorporation.",
+      "downstream_failure": "Treat an incorporated definition as absent or extract without retrieving it."
+    },
+    {
+      "id": "d003",
+      "expected": "YES",
+      "reason": "HUD966.53(e) assigns Hearing officer a particular impartial-reviewer meaning and excludes specified decisionmakers.",
+      "edge_case": "Definition mixed with additional duties.",
+      "downstream_failure": "Mistake an embedded definition for ordinary use."
+    },
+    {
+      "id": "d004",
+      "expected": "YES",
+      "reason": "CIV1965(b) assigns an inclusive meaning to reasonable removal/storage costs and limits the storage component.",
+      "edge_case": "Nonexhaustive definition with monetary cap.",
+      "downstream_failure": "Ignore a defined cost category or its limit."
+    },
+    {
+      "id": "d005",
+      "expected": "NO",
+      "reason": "CIV1965(a) prescribes conditions and steps for surrender of property; it does not assign a term a meaning.",
+      "edge_case": "Long operative subsection containing legal nouns.",
+      "downstream_failure": "Extract a duty as if it were a definition."
+    },
+    {
+      "id": "d006",
+      "expected": "NO",
+      "reason": "1692g(c) prohibits a particular inference from silence; it does not define admission or liability.",
+      "edge_case": "Heading and operative prohibition.",
+      "downstream_failure": "Turn a heading or rule into a definition."
+    },
+    {
+      "id": "d007",
+      "expected": "NO",
+      "reason": "1005.13(b)(1) creates a retention duty, not a definition of records or compliance.",
+      "edge_case": "Ordinary terms in a retention requirement.",
+      "downstream_failure": "Misclassify a retention rule as a glossary entry."
+    },
+    {
+      "id": "d008",
+      "expected": "NO",
+      "reason": "The selected Henson passage reports petitioners' proposed construction, attributed repeatedly to them; the Court has not adopted that meaning here.",
+      "edge_case": "Reported proposed definition in judicial prose.",
+      "downstream_failure": "Promote an advocate's rejected construction into operative meaning."
+    },
+    {
+      "id": "d009",
+      "expected": "YES",
+      "reason": "Section918 of the Act in RegE1005.13 refers to the Electronic Fund Transfer Act specified in1005.2(c).",
+      "edge_case": "Defined statute short name.",
+      "downstream_failure": "Fail to resolve a same-part defined reference."
+    },
+    {
+      "id": "d010",
+      "expected": "NO",
+      "reason": "Any act provided by law in CIV10 means conduct to be performed, not the named Electronic Fund Transfer Act.",
+      "edge_case": "Homonym across source families.",
+      "downstream_failure": "Apply an unrelated statute-name definition to an action."
+    },
+    {
+      "id": "d011",
+      "expected": "NO",
+      "reason": "Provisional credit in1005.11(d)(2) is an account-balance addition being reversed, not a right to defer payment.",
+      "edge_case": "Financial word with two meanings.",
+      "downstream_failure": "Treat restoration of account funds as a loan."
+    },
+    {
+      "id": "d012",
+      "expected": "YES",
+      "reason": "The selected geographic state occurrence uses the jurisdictional meaning supplied by1005.2(l), including the named US jurisdictions.",
+      "edge_case": "Lowercase use of capitalized defined term.",
+      "downstream_failure": "Misclassify an overseas-transfer condition."
+    },
+    {
+      "id": "d013",
+      "expected": "YES",
+      "reason": "Person in the owner definition denotes an individual or legal entity, matching the supplied natural-person/organization sense. This does not make RegE legally govern California; CIV14 also permits corporate personhood.",
+      "edge_case": "Same sense across statutes without importing applicability.",
+      "downstream_failure": "Confuse semantic match with applicability or exclude organizational owners."
+    },
+    {
+      "id": "d014",
+      "expected": "YES",
+      "reason": "The selected Hearing officer occurrence is the subject of the same complete definition supplied as the candidate.",
+      "edge_case": "Definition and use are the same passage.",
+      "downstream_failure": "Reject a direct definitional occurrence as not a use."
+    },
+    {
+      "id": "d015",
+      "expected": "NO",
+      "reason": "The selected Act is expressly qualified as E-Sign Act, a different enactment from the Electronic Fund Transfer Act.",
+      "edge_case": "Qualified statutory name amid repeated Act terms.",
+      "downstream_failure": "Attach the wrong statute to electronic disclosures."
+    },
+    {
+      "id": "d016",
+      "expected": "NO",
+      "reason": "Present state of a thing means its condition, not a US governmental jurisdiction.",
+      "edge_case": "Judicial ordinary-language homonym.",
+      "downstream_failure": "Import geographic scope into a grammatical explanation."
+    },
+    {
+      "id": "d017",
+      "expected": "YES",
+      "reason": "CIV1987(c), expressly notwithstanding(a), removes storage-payment as a condition when property remained in the dwelling and is timely reclaimed.",
+      "edge_case": "Conditional waiver of one part of a conjunctive requirement.",
+      "downstream_failure": "Demand prohibited storage costs or erase other conditions wholesale."
+    },
+    {
+      "id": "d018",
+      "expected": "YES",
+      "reason": "1692g(d) removes formal pleadings from the initial-communication trigger for the selected current federal notice duty.",
+      "edge_case": "Trigger exclusion rather than duration change.",
+      "downstream_failure": "Require or omit a notice on the wrong triggering event/version."
+    },
+    {
+      "id": "d019",
+      "expected": "YES",
+      "reason": "1005.11(c)(2)(i)(A)-(B) expressly excuses provisional credit in stated circumstances; the selected duty is provisional credit, not the separate duty to investigate.",
+      "edge_case": "Narrowed duty within a larger procedure.",
+      "downstream_failure": "Mistake credit exemption for permission to stop investigating."
+    },
+    {
+      "id": "d020",
+      "expected": "YES",
+      "reason": "CIV1965(c) makes the chapter, including selected(a), inapplicable in its stated alternative-procedure or occupancy circumstances.",
+      "edge_case": "Whole-chapter exception with relative references.",
+      "downstream_failure": "Apply a surrender procedure to expressly excluded circumstances."
+    },
+    {
+      "id": "d021",
+      "expected": "NO",
+      "reason": "Electronic delivery compliant with E-SIGN is an allowed way to meet the retained writing/disclosure requirement; clear, understandable, retainable disclosure remains required.",
+      "edge_case": "Alternative satisfaction versus reduced duty.",
+      "downstream_failure": "Treat consented electronic form as waiver of disclosure substance."
+    },
+    {
+      "id": "d022",
+      "expected": "NO",
+      "reason": "The no-admission rule in1692g(c) does not remove or reduce the collector's notice obligation in(a).",
+      "edge_case": "Independent evidentiary protection.",
+      "downstream_failure": "Excuse a collector notice because debtor silence is not an admission."
+    },
+    {
+      "id": "d023",
+      "expected": "NO",
+      "reason": "CIV1965(e) supplies remedies and their prerequisites for violation; it does not remove the surrender duty selected from(a).",
+      "edge_case": "Remedy threshold versus exception to duty.",
+      "downstream_failure": "Treat lack of immediate damages as permission to withhold property."
+    },
+    {
+      "id": "d024",
+      "expected": "YES",
+      "reason": "1005.11(c)(4) conditionally limits the required investigation to the institution's own relevant records. Under v2's express scope-reduction boundary that qualifies, although prompt investigation remains mandatory.",
+      "edge_case": "Reduced investigative scope without eliminating the duty.",
+      "downstream_failure": "Require external inquiry the rule excuses, or misread the limitation as no investigation."
+    },
+    {
+      "id": "d025",
+      "expected": "YES",
+      "reason": "1005.11(c)(3)(i) substitutes20 business days for the selected10-day determination limit for the stated new-account transfer.",
+      "edge_case": "Conditional duration substitution.",
+      "downstream_failure": "Compute determination due date from the unmodified duration."
+    },
+    {
+      "id": "d026",
+      "expected": "YES",
+      "reason": "1005.11(c)(3)(ii) expressly substitutes90 days for the selected45-day investigation completion period in specified cases.",
+      "edge_case": "Longer period subject to continuing procedural prerequisites.",
+      "downstream_failure": "Apply90days without its conditions or retain45incorrectly."
+    },
+    {
+      "id": "d027",
+      "expected": "YES",
+      "reason": "1005.11(b)(3) changes the selected60-day trigger from sending the statement to sending the requested information for the specified information-based notice.",
+      "edge_case": "Changed event with unchanged numerical duration.",
+      "downstream_failure": "Reject a timely error notice using the wrong trigger."
+    },
+    {
+      "id": "d028",
+      "expected": "YES",
+      "reason": "CCP12a supplies a holiday adjustment to statutory periods such as the selected18-day written-request period; it changes the computation rule conditionally, without deciding the actual date.",
+      "edge_case": "Cross-code last-day extension.",
+      "downstream_failure": "Expire a statutory right on a holiday."
+    },
+    {
+      "id": "d029",
+      "expected": "NO",
+      "reason": "The candidate replaces10 with20 days for determination/provisional credit, not the selected three-business-day reporting rule measured after completion. A later completion event leaves that rule unchanged under v2.",
+      "edge_case": "Changed upstream event date versus changed timing rule.",
+      "downstream_failure": "Rewrite the reporting interval or label every downstream consequence a rule modification."
+    },
+    {
+      "id": "d030",
+      "expected": "NO",
+      "reason": "1692g(b)'s dispute suspension and30-day rights do not modify(a)'s five-day initial-notice timing rule.",
+      "edge_case": "Different duties and clocks in one section.",
+      "downstream_failure": "Treat validation or collection suspension as extending the initial notice deadline."
+    },
+    {
+      "id": "d031",
+      "expected": "NO",
+      "reason": "CIV1965(a)(4)'s72-hour tenant retrieval condition does not modify(a)(3)'s five-day landlord demand-after-receipt timing.",
+      "edge_case": "Different actor, trigger and obligation.",
+      "downstream_failure": "Replace the landlord demand deadline with a tenant collection deadline."
+    },
+    {
+      "id": "d032",
+      "expected": "NO",
+      "reason": "CIV1965(e) addresses remedial liability after wrongful retention; it does not change the tenant's18-day request-after-vacating rule.",
+      "edge_case": "Post-duty remedy timing.",
+      "downstream_failure": "Extend or replace an initial request window with a damages threshold."
+    },
+    {
+      "id": "d033",
+      "expected": "A",
+      "reason": "The supplied context expressly identifies Act as the Electronic Fund Transfer Act; section918 is that named enactment.",
+      "edge_case": "Recovered statute-name definition.",
+      "downstream_failure": "Select generic conduct despite the operative defined referent."
+    },
+    {
+      "id": "d034",
+      "expected": "B",
+      "reason": "The selected act in CIV10 is conduct to be performed under law, not a statute title.",
+      "edge_case": "Lowercase common noun.",
+      "downstream_failure": "Resolve a computation clause to an unrelated enactment."
+    },
+    {
+      "id": "d035",
+      "expected": "B",
+      "reason": "Debiting provisional credit concerns removal of an amount added to an account balance.",
+      "edge_case": "Balance credit versus deferred-payment credit.",
+      "downstream_failure": "Treat a provisional balance correction as borrowing."
+    },
+    {
+      "id": "d036",
+      "expected": "NONE",
+      "reason": "The passage defines a deferred-payment right; neither academic recognition nor acknowledgment expresses that meaning.",
+      "edge_case": "Complete context but neither offered candidate fits.",
+      "downstream_failure": "Force a wrong choice rather than reject the offered set."
+    },
+    {
+      "id": "d037",
+      "expected": "A",
+      "reason": "HUD966.53(e) expressly specifies the impartial PHA-selected reviewer and excludes the challenged decisionmaker and subordinate.",
+      "edge_case": "Actor exclusion distinguishes alternatives.",
+      "downstream_failure": "Select a disqualified subordinate as hearing officer."
+    },
+    {
+      "id": "d038",
+      "expected": "B",
+      "reason": "HUD966.53(f) covers the adult lessee resident or qualifying remaining household head and excludes a live-in aide.",
+      "edge_case": "Alternative qualifying branches and explicit exclusion.",
+      "downstream_failure": "Assign tenant procedural status to every resident."
+    },
+    {
+      "id": "d039",
+      "expected": "NONE",
+      "reason": "Present state denotes a condition; neither geography nor enacted statutes fits.",
+      "edge_case": "Ordinary meaning absent from alternatives.",
+      "downstream_failure": "Force an offered legal meaning onto ordinary prose."
+    },
+    {
+      "id": "d040",
+      "expected": "A",
+      "reason": "CIV1980(b) expressly excludes the landlord from this personal-property owner definition.",
+      "edge_case": "Specific definition overrides everyday owner shorthand.",
+      "downstream_failure": "Treat landlord ownership of the real property as ownership of tenant belongings."
+    },
+    {
+      "id": "d041",
+      "expected": "NO",
+      "reason": "Henson expressly declines to decide the principal-purpose definition; the claim says the Court decided it.",
+      "edge_case": "Express reservation of an issue.",
+      "downstream_failure": "Overstate a holding to exempt a debt purchaser under every definition."
+    },
+    {
+      "id": "d042",
+      "expected": "NO",
+      "reason": "The evidence attributes that construction to petitioners rather than adopts it as the Court's conclusion.",
+      "edge_case": "Reported argument versus holding.",
+      "downstream_failure": "Promote litigation advocacy into governing interpretation."
+    },
+    {
+      "id": "d043",
+      "expected": "YES",
+      "reason": "The selected Henson reasoning supports the expressly narrowed own-account conclusion under the definition in dispute, without deciding the reserved principal-purpose branch.",
+      "edge_case": "Accurately limited holding.",
+      "downstream_failure": "Either reject supported narrow proposition or generalize it beyond the disputed definition."
+    },
+    {
+      "id": "d044",
+      "expected": "YES",
+      "reason": "Current1692g(d) directly excludes formal pleadings as initial communications for(a), exactly as the claim specifies.",
+      "edge_case": "Express limited statutory exclusion.",
+      "downstream_failure": "Misstate the federal trigger or import the conclusion into a historical version."
+    },
+    {
+      "id": "d045",
+      "expected": "NO",
+      "reason": "CIV1987(c) requires that the property remained in the dwelling; the claim expressly extends the exemption to property moved away.",
+      "edge_case": "Missing material factual condition.",
+      "downstream_failure": "Authorize a storage-cost exemption outside the supplied rule."
+    },
+    {
+      "id": "d046",
+      "expected": "YES",
+      "reason": "CIV1965(b)(2) expressly caps the described storage component at fair rental value of the reasonably required space.",
+      "edge_case": "Component-specific cap within inclusive cost definition.",
+      "downstream_failure": "Apply no cap or mistakenly cap every removal cost by rental value."
+    },
+    {
+      "id": "d047",
+      "expected": "YES",
+      "reason": "1005.11(c)(3)(i) directly makes the conditional10-to20-business-day substitution stated in the claim.",
+      "edge_case": "Complete conditional temporal proposition.",
+      "downstream_failure": "Omit the new-account condition or fail to extend the period."
+    },
+    {
+      "id": "d048",
+      "expected": "NO",
+      "reason": "1005.2(m)(2) expressly excludes transfers initiated with consumer fraudulent intent; the claim asserts inclusion.",
+      "edge_case": "Explicit definitional exclusion.",
+      "downstream_failure": "Apply unauthorized-transfer protections to the excluded consumer-fraud category."
+    }
+  ],
+  "review_notes": [
+    "Provisional expectations saved before reading any recovery record, author labels, earlier independent labels, development findings or model responses.",
+    "All84 source spans and file hashes verified; authoritative surrounding texts inspected.",
+    "This is corrected development material, not a fresh held-out sample or capability acceptance.",
+    "d024 is YES for scope reduction under supplied v2 contract; d029 is NO for unchanged three-day rule despite possible later upstream completion.",
+    "No family/sample-floor completeness claim:48cases do not meet the later protocol floors."
+  ]
+}

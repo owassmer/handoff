@@ -1,0 +1,353 @@
+{
+  "review_type": "blind_payload_only_atomic_task_review",
+  "review_date": "2026-09-30",
+  "independence": {
+    "author_expectations_read": false,
+    "examples_read": false,
+    "readme_read": false,
+    "conversation_history_used": false,
+    "limitations": [
+      "Reviewer uses the same model family as the parent, so this is an independent pass over withheld labels, not independent-model or human adjudication.",
+      "Full frozen source texts were read only to assess omissions and framing. Expected labels use only each request payload.",
+      "Prompt design ambiguity is reported rather than resolved by assuming the author intention.",
+      "No live Jev answers or author expected labels were supplied or evaluated."
+    ]
+  },
+  "files_read": [
+    "/tmp/handoff-dependency-blind-review/requests.jsonl",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1942.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1950.5.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1980.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1981.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1983.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1989.txt"
+  ],
+  "expected_label_counts": {
+    "YES": 10,
+    "NO": 5,
+    "INSUFFICIENT": 3
+  },
+  "cases": [
+    {
+      "case_id": "dev01",
+      "request_hash": "144cf2ed0b294be1065012fc657e84aae0a04b09ea89fc91add96c0e38d6ef66",
+      "task": "definition_present",
+      "expected": "YES",
+      "reason": "Focus explicitly assigns meanings to Landlord, Owner, Premises, Reasonable belief, Records and Tenant; the inclusions and records exclusion qualify under the question.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": [
+        "No correction needed for this presence judgment. Add separate single-definition fixtures for inclusion-only and exclusion-only recognition."
+      ]
+    },
+    {
+      "case_id": "dev02",
+      "request_hash": "86a1da7ad2f5167f33734d61b6d5bfc0aec3b759f524de5dc3ddcb6e69bc906a",
+      "task": "definition_present",
+      "expected": "YES",
+      "reason": "The opening sentence expressly assigns a meaning to security. The subsequent purposes do not undo that assignment.",
+      "ambiguity_or_context_defects": [
+        "Section 1950.6 is referenced but absent; its contents are unnecessary for presence, but this fixture cannot validate the complete definition."
+      ],
+      "actionable_corrections": [
+        "Keep definition presence separate from definition completeness or interpretation."
+      ]
+    },
+    {
+      "case_id": "dev03",
+      "request_hash": "5e7d7c1f5ffb7d9e0c7eb40191149a63481bdd10a3a53318e1f832a45b121bcc",
+      "task": "definition_present",
+      "expected": "NO",
+      "reason": "Focus directs notice delivery and contains no assignment of meaning to a term.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": [
+        "No correction needed. Do not confuse reasonably expected receipt or address descriptions with definitions."
+      ]
+    },
+    {
+      "case_id": "dev04",
+      "request_hash": "ed3d7019ed9c05ad6019c8b021d92b48616ee334318f5e2b23c00982601e136e",
+      "task": "reference_present",
+      "expected": "YES",
+      "reason": "Focus expressly references subdivision (a) of Section 1962.",
+      "ambiguity_or_context_defects": [
+        "The target text is absent, appropriately so for a reference-presence task."
+      ],
+      "actionable_corrections": [
+        "Keep reference detection separate from adoption-of-definition detection and target resolution. This focus could separately test definition by reference."
+      ]
+    },
+    {
+      "case_id": "dev05",
+      "request_hash": "8523494dadec8d2ba737a3c89ce2a157d6d2e767efc690a107a1739c1209903a",
+      "task": "reference_present",
+      "expected": "YES",
+      "reason": "Focus expressly references Section 1989 as the source of a limitation of liability.",
+      "ambiguity_or_context_defects": [
+        "The complete source shows a qualified relationship involving notice content, not just an untyped citation. That effect is outside this question."
+      ],
+      "actionable_corrections": [
+        "Preserve this positive detection but do not turn it directly into an unqualified dependency edge."
+      ]
+    },
+    {
+      "case_id": "dev06",
+      "request_hash": "43dc60d3f7bcdc56109b6750f16487b202a623ef7fd550d8039b49d550d12168",
+      "task": "reference_present",
+      "expected": "YES",
+      "reason": "Focus expressly refers to paragraphs (4), (2), (3) and (1). Their missing text does not prevent detecting the references.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": [
+        "No correction needed. A separate resolution question would require enclosing paragraph hierarchy."
+      ]
+    },
+    {
+      "case_id": "dev07",
+      "request_hash": "3812b6bd5084dc5a5a1969aead60c25b72ade87dbf2ee43b88057f77248dfe3c",
+      "task": "reference_present",
+      "expected": "NO",
+      "reason": "Focus contains no explicit legal-unit reference. The notice and the former tenant are anaphoric phrases, not references to a legal provision under the stated criterion.",
+      "ambiguity_or_context_defects": [
+        "The task title could be mistaken for general discourse-reference detection; its actual instructions exclude that reading."
+      ],
+      "actionable_corrections": [
+        "Maintain the explicit legal-provision boundary; consider naming the task legal_reference_present."
+      ]
+    },
+    {
+      "case_id": "dev08",
+      "request_hash": "4b21dce40c9851197bc99ae345be3786ca78358d8462a17caf67e018dab316f0",
+      "task": "term_use",
+      "expected": "YES",
+      "reason": "The use identifies the owner of personal property left after a tenancy, including the tenant as presumed owner of records. This supplies a matching personal-property referent and a person distinct from the notifying landlord, rather than merely repeating the word owner.",
+      "ambiguity_or_context_defects": [
+        "The use does not independently restate the full breadth of any right, title, or interest. YES is a language-level referent match, not proof of extensional equivalence or legal governance."
+      ],
+      "actionable_corrections": [
+        "Clarify that sense matching concerns the kind of referent and role, while unexpressed technical inclusions cannot be certified by this task. Add a real-property owner contrast and a use with an unresolved property referent."
+      ]
+    },
+    {
+      "case_id": "dev09",
+      "request_hash": "59511c5b59b0fc8ec74eb79fd6403486c912890f3b7b158aea78b892b2215576",
+      "task": "term_use",
+      "expected": "INSUFFICIENT",
+      "reason": "Reasonably believes is a grammatical variant of reasonable belief and concerns ownership of personal property. But the definition adds a particular investigation standard: normally without investigation, with an exception conditioned on specific information, likely relevance, and reasonable cost relative to value. The supplied use does not establish that standard. Because legal governance is expressly excluded, the supplied language cannot establish the complete defined sense. It also does not contradict that sense, so NO is not supported.",
+      "ambiguity_or_context_defects": [
+        "Material ambiguity: sense may mean broad lexical concept or the detailed technical sense assigned by the definition. Under broad candidate matching, YES is defensible; under the stated requirement to establish the described sense, INSUFFICIENT is preferable.",
+        "The instruction to allow grammatical variants risks making grammatical correspondence sufficient evidence for a semantic conclusion.",
+        "The full source supplies chapter scope, but importing its governance into this question would violate the payload-only language-comparison boundary."
+      ],
+      "actionable_corrections": [
+        "Split candidate expression matching from technical semantic correspondence. Ask first whether use contains the term or a grammatical variant, then separately whether supplied context establishes the defined sense.",
+        "If retaining this task, specify that grammatical similarity alone does not establish technical restrictions or extensions, and allow INSUFFICIENT when those cannot be established.",
+        "If the intended output is merely a candidate dependency, explicitly say compatible use of the same lexical concept; do not describe that output as proof that the defined meaning is employed."
+      ]
+    },
+    {
+      "case_id": "dev10",
+      "request_hash": "e04553bda81c43ab00ed702ce40c69bc813dda45babac5147978b084c6c19dad",
+      "task": "term_use",
+      "expected": "NO",
+      "reason": "The use contains neither security nor a grammatical variant, and it discusses property left on premises and notification, not a payment, fee, deposit, or charge within the supplied definition.",
+      "ambiguity_or_context_defects": [
+        "This is an easy absent-expression negative, not a strong semantic disambiguation test."
+      ],
+      "actionable_corrections": [
+        "Add a negative with the same surface term used for a different object or concept, plus an ambiguous-context example."
+      ]
+    },
+    {
+      "case_id": "dev11",
+      "request_hash": "1f30110509c4320caceee1038813f7226668a1485db8076f09815335db9c9876",
+      "task": "scope_includes_use",
+      "expected": "YES",
+      "reason": "As used in this chapter gives chapter-wide textual reach, and both supplied locations identify Division 3 Part 4 Title 5 Chapter 5 of CA:CIV.",
+      "ambiguity_or_context_defects": [
+        "Full CIV 1981 contains chapter application exclusions. They do not change the answer to this deliberately location-only task, but a downstream applicability conclusion would need them.",
+        "The hierarchy is asserted in payload metadata; this judgment checks containment conditional on that assertion."
+      ],
+      "actionable_corrections": [
+        "Retain the textual-scope boundary and separately record provenance for hierarchy metadata. Do not equate this YES with applicability to a tenancy."
+      ]
+    },
+    {
+      "case_id": "dev12",
+      "request_hash": "f4dfb9ca8a5673520ce647aabe196124e2cb22b908e3b8b2f4d375af9b952a38",
+      "task": "scope_includes_use",
+      "expected": "NO",
+      "reason": "The express scope is the chapter containing the definition, supplied as Chapter 5. The use is expressly located in Chapter 2 of the same instrument and parent units.",
+      "ambiguity_or_context_defects": [
+        "A scope NO does not mean the use lacks a similar ordinary meaning; term semantics is a separate question."
+      ],
+      "actionable_corrections": [
+        "No correction needed; keep scope and semantic matching outputs separate."
+      ]
+    },
+    {
+      "case_id": "dev13",
+      "request_hash": "dfd7e456b97791c31ff35392c54829c27cdd9b24ad58f342a8a6187a5daa12ea",
+      "task": "scope_includes_use",
+      "expected": "INSUFFICIENT",
+      "reason": "The definition has express chapter scope, but use_location.unit is null. Section identifiers and this chapter in the use do not establish that both passages occupy the same chapter.",
+      "ambiguity_or_context_defects": [
+        "The full saved source could recover the missing chapter context, but doing so would improperly fill withheld payload information."
+      ],
+      "actionable_corrections": [
+        "Keep as an intentional missing-hierarchy fixture. For production assembly supply a sourced use-location hierarchy or route the result to context recovery."
+      ]
+    },
+    {
+      "case_id": "dev14",
+      "request_hash": "43220f6c9ad3891e3ef7afb5fd1c3090547fee33881c83d581e37f7fd0fd42c8",
+      "task": "scope_includes_use",
+      "expected": "INSUFFICIENT",
+      "reason": "Both passages have matching chapter locations, but the supplied definition_scope is only the owner definition and contains no express reach. The question explicitly says location alone without a scope statement is insufficient.",
+      "ambiguity_or_context_defects": [
+        "The omitted introductory As used in this chapter clause is present in the full source. Its omission is decisive under the request-only rule.",
+        "The field name definition_scope may suggest it contains scope even though its text does not."
+      ],
+      "actionable_corrections": [
+        "Keep as an intentional missing-scope fixture. For production assembly include the governing introductory clause as its own anchored passage. Avoid treating field names as substantive evidence."
+      ]
+    },
+    {
+      "case_id": "dev15",
+      "request_hash": "edc4a51be3f8b27a4133d514dac19d9ceb526eb35076d9e1a95459ad92e9dcb1",
+      "task": "qualifies_requirement",
+      "expected": "YES",
+      "reason": "Candidate expressly says the landlord need not comply with paragraph (2) or (3) under specified alternatives, thereby changing whether the supplied paragraph (2) duty must be fulfilled.",
+      "ambiguity_or_context_defects": [
+        "Context includes the restoration in paragraph (5), so the exception is not presented as unconditional.",
+        "The supplied requirement bundles documents, statement content, photographs and alternative evidence rather than one minimally atomic duty."
+      ],
+      "actionable_corrections": [
+        "No extra context is needed for this binary relationship. If downstream work needs granular duties, give each requirement its own identifier and preserve the paragraph-level qualification relation."
+      ]
+    },
+    {
+      "case_id": "dev16",
+      "request_hash": "cd8fd3ac6afd7a0543376d039fe899034797f47e1d96b3f0c9f4c35f063aed0b",
+      "task": "qualifies_requirement",
+      "expected": "YES",
+      "reason": "Candidate expressly overrides paragraph (4), restores compliance with paragraph (2) upon a timely tenant request, and supplies a 14-day compliance deadline.",
+      "ambiguity_or_context_defects": [
+        "Paragraph (1), which identifies the referenced itemized statement, is absent despite the prompt claiming context supplies referenced paragraphs. The direct paragraph (2) relation remains sufficiently explicit for YES."
+      ],
+      "actionable_corrections": [
+        "Change the context claim to relevant enclosing text and selected referenced paragraphs, or include the paragraph (1) opening sentence. Full statement delivery alternatives are unnecessary for this relation judgment."
+      ]
+    },
+    {
+      "case_id": "dev17",
+      "request_hash": "121c2a7bf9248cc2b7b047e0330d3fc38a3d7e4a8bad449dba01f74002783237",
+      "task": "qualifies_requirement",
+      "expected": "NO",
+      "reason": "Candidate specifies mailing destination. It does not create an exception, restoration, or changed timing for the document duty, and destination-only instructions are expressly excluded by the task.",
+      "ambiguity_or_context_defects": [
+        "This is NO only for whether-or-when qualification. It is still a delivery dependency for execution of the obligation.",
+        "The explicit destination exclusion closely tracks the only negative example in this task family, making this fixture susceptible to prompt-specific cue matching."
+      ],
+      "actionable_corrections": [
+        "Name the task qualifies_requirement_when_or_whether. Add independent negative duty types, and track delivery-method or destination dependencies separately. Do not interpret this NO as no legal relationship."
+      ]
+    },
+    {
+      "case_id": "dev18",
+      "request_hash": "76519dc986848c890a22017dccd95791e258a362bb4464ef0a1aff069c47d6c6",
+      "task": "qualifies_requirement",
+      "expected": "YES",
+      "reason": "Candidate permits a good-faith estimate under the stated uncompleted-repair or missing-document conditions and expressly requires completion of paragraph (2) within 14 calendar days of repair completion or receipt of documentation. This changes timing of the specified duty.",
+      "ambiguity_or_context_defects": [
+        "The original general statement deadline in paragraph (1) is omitted. Candidate and requirement suffice to establish a timing relationship, but do not present a complete timeline.",
+        "The prompt claims referenced paragraphs are supplied although paragraph (1) is absent."
+      ],
+      "actionable_corrections": [
+        "Include paragraph (1) opening sentence when validating timing completeness; otherwise narrow the context description. Keep this judgment as existence of a timing modification, not a complete deadline computation."
+      ]
+    }
+  ],
+  "overall_findings": [
+    {
+      "priority": "high",
+      "topic": "Semantic task underdetermination",
+      "cases": [
+        "dev08",
+        "dev09",
+        "dev10"
+      ],
+      "finding": "The current term_use task mixes lexical candidate recognition with establishing a technical defined meaning. dev09 exposes the distinction; grammar and a shared subject do not establish the special investigation conditions.",
+      "correction": "Choose the intended claim and name it precisely. Keep candidate matching separate from technical meaning and textual governance. Do not silently score INSUFFICIENT on dev09 as a semantic failure."
+    },
+    {
+      "priority": "medium",
+      "topic": "Context description overclaims completeness",
+      "cases": [
+        "dev15",
+        "dev16",
+        "dev17",
+        "dev18"
+      ],
+      "finding": "The context range is (h)(2)-(7), omitting (h)(1) even though it is repeatedly referenced. This does not prevent the four narrow answers but matters for complete timing interpretation.",
+      "correction": "Describe context as selected relevant paragraphs or add the opening of (h)(1); do not require unrelated delivery subclauses for these atomic judgments."
+    },
+    {
+      "priority": "medium",
+      "topic": "Narrow negatives must retain their scope",
+      "cases": [
+        "dev07",
+        "dev12",
+        "dev17"
+      ],
+      "finding": "NO means absence of the specific relation asked about. It does not mean no discourse reference, no semantic connection, or no operational dependency respectively.",
+      "correction": "Use typed output names and prevent downstream consumers from promoting a narrow NO to absence of all dependencies."
+    },
+    {
+      "priority": "medium",
+      "topic": "Definition and reference coverage",
+      "cases": [
+        "dev01",
+        "dev02",
+        "dev03",
+        "dev04",
+        "dev05",
+        "dev06",
+        "dev07"
+      ],
+      "finding": "Obvious means clauses and literal legal references dominate. Supplied sources contain richer untested cases: CIV 1942(a) definition adoption; CIV 1950.5(c)(4) and (c)(5) embedded definitions; CIV 1981(c) adoption by reference; CIV 1989(a) an express override of an exclusion.",
+      "correction": "Add independent fixtures for inclusion-only, exclusion-only, embedded and referenced definitions, and reference effects. Keep real-world applicability out of these tasks."
+    },
+    {
+      "priority": "medium",
+      "topic": "Evaluation coverage",
+      "cases": [
+        "dev08",
+        "dev09",
+        "dev10",
+        "dev15",
+        "dev16",
+        "dev17",
+        "dev18"
+      ],
+      "finding": "The semantic negative lacks the term altogether, and the qualification negative is expressly named by the prompt exclusion. These cases alone provide little evidence of semantic generalization.",
+      "correction": "Add same-spelling different-object negatives, ambiguous uses, independent separate-duty negatives, and held-out source sections. Freeze revised instructions before evaluating held-out cases."
+    },
+    {
+      "priority": "low",
+      "topic": "Textual location versus applicability",
+      "cases": [
+        "dev11",
+        "dev12",
+        "dev13",
+        "dev14"
+      ],
+      "finding": "Scope fixtures correctly distinguish express reach and hierarchy. CIV 1981 exclusions demonstrate why chapter membership alone cannot establish applicability.",
+      "correction": "Preserve the boundary. Record hierarchy provenance and route missing scope/hierarchy to recovery instead of defaulting to NO."
+    }
+  ],
+  "provenance_checks": {
+    "all_source_hashes_match": true,
+    "all_character_spans_match": true,
+    "checked_passage_count": 33,
+    "mismatches": []
+  }
+}

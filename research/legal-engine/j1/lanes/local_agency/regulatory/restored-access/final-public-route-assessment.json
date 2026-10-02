@@ -1,0 +1,66 @@
+{
+  "as_of": "2026-10-01",
+  "status": "unfinished_J1_status_and_final_version_selection",
+  "scope": "Two named OAL actions only. No provision interpretation or new reference queue.",
+  "open_register_decisions": [
+    {
+      "action": "GoGreen 2026-0826-02C",
+      "retain_established_fact": "Agency adoption on August18,2026 is directly established by gg-aug-minutes.pdf pages6-7 and Resolution26-08-4.C staff/adoption package.",
+      "do_not_assert": "OAL approval, withdrawal, disapproval, pending status, or identity of an unmodified approved permanent package.",
+      "open_decision": "Determine OAL's actual outcome and whether all, part or a modified version of the six-section certificate package controls. That determines the status/version recorded for the permanent change and its relationship to the two existing emergency chains.",
+      "authoritative_record_route": "https://oal.ca.gov/rulemaking_process/regular_rulemaking_process/recent-actions/",
+      "agency_route": "https://www.treasurer.ca.gov/caeatfa/gogreen/business/regulations",
+      "positive_record_limit": "OAL's named certificate action is affirmative evidence of the file, but its public row supplies no result."
+    },
+    {
+      "action": "OEHHA 2026-0810-01",
+      "retain_established_fact": "Affirmative OAL regular-action record identifies the 1-bromopropane and dermal diethanolamine NSRL package under27CCR25705(b)(1).",
+      "do_not_assert": "Final approval, final adopted threshold text, withdrawal, disapproval or present pending status. The earlier agency-adoption inference does not resolve these.",
+      "open_decision": "Determine the actual OAL outcome and identify whether the approved/withdrawn/modified scope covers both chemicals. That changes the register's selected final version/status.",
+      "authoritative_record_route": "https://oal.ca.gov/rulemaking_process/regular_rulemaking_process/recent-actions/",
+      "agency_route": "https://oehha.ca.gov/proposition-65/crnr/proposed-rulemaking-title-27-california-code-regulations-section-25705-no-significant-risk-level-1",
+      "latest_official_history_observation": "Indexed official25705 history is current through September4,2026 Register36, with latest amendment June18,2025. This does not decide a subsequent September outcome.",
+      "history_route": "https://govt.westlaw.com/calregs/Document/I59EE58D050C411F0AD1FD09A15344CF4?contextData=%28sc.Default%29&originationContext=documenttoc&transitionType=CategoryPageItem&viewType=FullText"
+    }
+  ],
+  "final_public_route_findings": [
+    {
+      "source": "https://oal.ca.gov/rulemaking_process/regular_rulemaking_process/recent-actions/",
+      "saved": "oal-live-browser.html",
+      "recovery": "Successful live Chrome DOM, after direct HTTP retrieval failed.",
+      "finding": "Both action rows have exactly four cells: action number, agency, subject and type. Neither row provides a disposition, action date or final-document link. The real DOM confirms this is not a text-renderer omission."
+    },
+    {
+      "source": "https://oehha.ca.gov/proposition-65/crnr/proposed-rulemaking-title-27-california-code-regulations-section-25705-no-significant-risk-level-1",
+      "saved": "oehha-proposal-live.html",
+      "recovery": "Successful live Chrome DOM, after direct HTTP returned an Incapsula challenge.",
+      "finding": "Actual attachment links cover the August 2025 proposal/ISOR, September 2025 extension, June 2026 modified text and notices. No final disposition or endorsed text is linked on this inspected page."
+    },
+    {
+      "source": "https://www.treasurer.ca.gov/caeatfa/meeting",
+      "saved": "gogreen-meetings.html; gg-aug-minutes.pdf; gg-aug-summary.pdf; gg-sep-home.pdf; gg-sep-trustee.pdf",
+      "finding": "August 18 minutes establish agency adoption. September 15 documents recovered from the meeting index do not establish the target certificate outcome. Known-pattern September minutes and October agenda URLs returned 404; these were probes, not observed attachment links."
+    },
+    {
+      "source": "https://govt.westlaw.com/calregs/Document/I59EE58D050C411F0AD1FD09A15344CF4?contextData=%28sc.Default%29&originationContext=documenttoc&transitionType=CategoryPageItem&viewType=FullText",
+      "saved": "oehha-live-browser.html",
+      "finding": "Indexed official history was current through September 4, 2026 and did not establish the target outcome. A live browser returned the publisher challenge, not section text."
+    },
+    {
+      "source": "https://oal.ca.gov/",
+      "finding": "Recent-action rows, current submitted-action list, effective-date tables, disapproval index and available notice registers were inspected without an affirmative target outcome. The detailed RAT.pdf found by search is dated May 31, 2019. October 2 Register 40 was still future relative to the October 1 California cutoff."
+    }
+  ],
+  "reasoned_limit": "These observations do not establish that the actions remain pending or that outcome records do not exist. They leave actual disposition and controlling final package identity unresolved. Those facts can change selected versions/status and therefore remain J1 work.",
+  "next_concrete_action": {
+    "draft": "oal-two-action-records-request.txt",
+    "recipient": "staff@oal.ca.gov",
+    "contact_role": "OAL Reference Attorney",
+    "contact_source": "https://oal.ca.gov/rulemaking_process/regular_rulemaking_process/recent-actions/",
+    "saved_contact_source": "oal-live-browser.html",
+    "alternate_contact_source": "https://oal.ca.gov/faq/",
+    "authorization": "Draft only; no external message sent."
+  },
+  "canonical_edits": false,
+  "external_messages": false
+}

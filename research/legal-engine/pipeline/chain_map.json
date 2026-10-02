@@ -1,0 +1,1101 @@
+{
+  "version": "1.1.0",
+  "date": "2026-10-01",
+  "derived_from": "The original DP0-DP9 account map derives from review/NYC_MARKET_RATE.md. PW0-PW3 and the expanded function descriptions express the full residential physical-work and outgoing-account aperture agreed in HANDOFF_CONTEXT.md, the intent notepad and CA/J0_INTAKE.md.",
+  "chain": "From learning that a tenancy is ending through two independently progressing outcomes: the property is ready for its next occupant, and the departing tenancy financial relationship is resolved. Earlier events, governing agreements and legal changes are included where they change either outcome.",
+  "decision_points": [
+    {
+      "id": "DP0",
+      "key": "status",
+      "name": "Unit status and the regimes that apply",
+      "walk_step": "Step 0",
+      "order": 0,
+      "points": [
+        {
+          "id": "DP0.1",
+          "question": "Is the unit under rent regulation or just-cause protection, and does any exclusion take it out?"
+        },
+        {
+          "id": "DP0.2",
+          "question": "Which deposit and landlord-tenant regime applies, by unit type, building size and lease date (including amended and future versions)?"
+        },
+        {
+          "id": "DP0.3",
+          "question": "Can rent be recovered at all: certificate of occupancy, owner or rental registration, rental licence, habitability violations?"
+        },
+        {
+          "id": "DP0.4",
+          "question": "Which status variants must be recorded at the start (assistance program, owner occupancy, building age and unit count, lease type, landlord entity type)?"
+        }
+      ]
+    },
+    {
+      "id": "DP1",
+      "key": "move_in",
+      "name": "Facts fixed at move-in",
+      "walk_step": "Step 1",
+      "order": 1,
+      "points": [
+        {
+          "id": "DP1.1",
+          "question": "What deposit and advance payments were lawful (caps, types of payment)?"
+        },
+        {
+          "id": "DP1.2",
+          "question": "How must the deposit be held (trust, separate or interest-bearing account, notice of the bank, interest)?"
+        },
+        {
+          "id": "DP1.3",
+          "question": "Was a move-in inspection or condition record required, and was it made?"
+        },
+        {
+          "id": "DP1.4",
+          "question": "Which fees had to be disclosed or were barred at signing?"
+        },
+        {
+          "id": "DP1.5",
+          "question": "Which owner records and registrations does the settlement rely on (painting or lead records, registration)?"
+        },
+        {
+          "id": "DP1.6",
+          "question": "Did the tenant consent to electronic contact and delivery, and what does that consent reach?"
+        },
+        {
+          "id": "DP1.7",
+          "question": "Which payment methods may the landlord require, and what receipts are owed?"
+        }
+      ]
+    },
+    {
+      "id": "DP2",
+      "key": "during",
+      "name": "Events during the tenancy that change the settlement",
+      "walk_step": "Step 2",
+      "order": 2,
+      "points": [
+        {
+          "id": "DP2.1",
+          "question": "The building is sold or transferred: who holds the deposit and who settles?"
+        },
+        {
+          "id": "DP2.2",
+          "question": "The tenant assigns or sublets: who is released and who is owed the deposit?"
+        },
+        {
+          "id": "DP2.3",
+          "question": "Who is a tenant, an occupant or a guarantor?"
+        },
+        {
+          "id": "DP2.4",
+          "question": "One co-tenant leaves: when does the settlement start?"
+        },
+        {
+          "id": "DP2.5",
+          "question": "The tenant dies or loses capacity: who may end the tenancy and who is paid?"
+        },
+        {
+          "id": "DP2.6",
+          "question": "The unit is destroyed or made unfit by casualty: does rent stop and the tenancy end?"
+        }
+      ]
+    },
+    {
+      "id": "DP3",
+      "key": "ending",
+      "name": "How the tenancy ends and when rent stops",
+      "walk_step": "Step 3",
+      "order": 3,
+      "points": [
+        {
+          "id": "DP3.1",
+          "question": "End of a fixed term: renewal, non-renewal and rent-increase notices, automatic renewal clauses."
+        },
+        {
+          "id": "DP3.2",
+          "question": "Periodic tenancy: who must give what notice, how long, and when it takes effect."
+        },
+        {
+          "id": "DP3.3",
+          "question": "The tenant leaves early: what rent is owed, and the landlord's duty to re-let."
+        },
+        {
+          "id": "DP3.4",
+          "question": "Statutory rights to end early (domestic violence, age or disability, military, other statuses): end date and barred charges."
+        },
+        {
+          "id": "DP3.5",
+          "question": "The tenant stays past the end: holdover rent and damages."
+        },
+        {
+          "id": "DP3.6",
+          "question": "The building or a government order ends the tenancy (vacate order, condemnation)."
+        },
+        {
+          "id": "DP3.7",
+          "question": "Surrender and retaking possession: when the tenancy is over without an eviction."
+        },
+        {
+          "id": "DP3.8",
+          "question": "After an eviction case: what the judgment covers and what remains claimable."
+        }
+      ]
+    },
+    {
+      "id": "DP4",
+      "key": "pre_vacate",
+      "name": "The pre-vacate inspection",
+      "walk_step": "Step 4",
+      "order": 4,
+      "points": [
+        {
+          "id": "DP4.1",
+          "question": "Must the landlord offer an inspection before the tenant leaves, on what notice and when?"
+        },
+        {
+          "id": "DP4.2",
+          "question": "What follows from skipping it or from the tenant declining it?"
+        }
+      ]
+    },
+    {
+      "id": "DP5",
+      "key": "account",
+      "name": "Building the account: what may be kept and charged",
+      "walk_step": "Step 5",
+      "order": 5,
+      "points": [
+        {
+          "id": "DP5.1",
+          "question": "What may the deposit be kept for?"
+        },
+        {
+          "id": "DP5.2",
+          "question": "Which fees and charges may be kept or billed (late fees, returned-payment fees, junk fees)?"
+        },
+        {
+          "id": "DP5.3",
+          "question": "Wear and tear, painting, cleaning and turnover work: what is the landlord's cost?"
+        },
+        {
+          "id": "DP5.4",
+          "question": "Move-out service fees and charges agreed in the lease."
+        },
+        {
+          "id": "DP5.5",
+          "question": "Unpaid rent, accelerated rent and lease-break sums: what may be kept and when."
+        },
+        {
+          "id": "DP5.6",
+          "question": "Interest owed to the tenant on the deposit and any administrative fee."
+        },
+        {
+          "id": "DP5.7",
+          "question": "Assisted tenants: which share of rent and damage the tenant owes."
+        },
+        {
+          "id": "DP5.8",
+          "question": "Deposits that are not cash held by the landlord (surety, insurance, guarantor, alternative programs)."
+        },
+        {
+          "id": "DP5.9",
+          "question": "Disability: assistance animals and accommodations in the account."
+        },
+        {
+          "id": "DP5.10",
+          "question": "Equal treatment: the settlement applied without discrimination."
+        }
+      ]
+    },
+    {
+      "id": "DP6",
+      "key": "statement",
+      "name": "The statement and the refund",
+      "walk_step": "Step 6",
+      "order": 6,
+      "points": [
+        {
+          "id": "DP6.1",
+          "question": "The deadline for the itemized statement and the refund."
+        },
+        {
+          "id": "DP6.2",
+          "question": "When the tenant vacated (the start of the clock)."
+        },
+        {
+          "id": "DP6.3",
+          "question": "Counting days: excluded days, weekends and public holidays."
+        },
+        {
+          "id": "DP6.4",
+          "question": "What the statement must contain and in what form."
+        },
+        {
+          "id": "DP6.5",
+          "question": "Where and how it is delivered (forwarding address, last address, electronic delivery)."
+        },
+        {
+          "id": "DP6.6",
+          "question": "Co-tenants: to whom the statement goes and how the refund is split."
+        },
+        {
+          "id": "DP6.7",
+          "question": "Tenant in bankruptcy: applying the deposit and paying the refund."
+        },
+        {
+          "id": "DP6.8",
+          "question": "Unclaimed refund: who owns it and when it is reported."
+        },
+        {
+          "id": "DP6.9",
+          "question": "Belongings left behind: storage, notice, disposal and costs."
+        },
+        {
+          "id": "DP6.10",
+          "question": "Tenant data at move-out: access credentials, records and disposal."
+        }
+      ]
+    },
+    {
+      "id": "DP7",
+      "key": "consequences",
+      "name": "Consequences of getting it wrong",
+      "walk_step": "Step 7",
+      "order": 7,
+      "points": [
+        {
+          "id": "DP7.1",
+          "question": "Forfeiture of the right to keep any of the deposit."
+        },
+        {
+          "id": "DP7.2",
+          "question": "Whether the underlying debt survives a forfeiture."
+        },
+        {
+          "id": "DP7.3",
+          "question": "Commingling and holding failures."
+        },
+        {
+          "id": "DP7.4",
+          "question": "Burden of proof in a dispute over the amount kept."
+        },
+        {
+          "id": "DP7.5",
+          "question": "Damages, penalties and fees for a wrongful retention."
+        },
+        {
+          "id": "DP7.6",
+          "question": "The tenant's claims: who may sue, where, and the time limit."
+        }
+      ]
+    },
+    {
+      "id": "DP8",
+      "key": "collection",
+      "name": "Collecting a balance beyond the deposit",
+      "walk_step": "Step 8",
+      "order": 8,
+      "points": [
+        {
+          "id": "DP8.1",
+          "question": "What the balance is: its parts, interest and fees that may be added."
+        },
+        {
+          "id": "DP8.2",
+          "question": "Who is a debt collector under each law that reaches the collection."
+        },
+        {
+          "id": "DP8.3",
+          "question": "What a collector must and must not do (validation, communications, disputes, time and place)."
+        },
+        {
+          "id": "DP8.4",
+          "question": "Local collection rules beyond the state and federal ones, with their effective dates."
+        },
+        {
+          "id": "DP8.5",
+          "question": "Licences needed by the collector, the manager and any agent that demands or takes the money."
+        },
+        {
+          "id": "DP8.6",
+          "question": "Credit reporting of the balance."
+        },
+        {
+          "id": "DP8.7",
+          "question": "The tenant's bankruptcy: the stay, the discharge and proofs of claim."
+        },
+        {
+          "id": "DP8.8",
+          "question": "Servicemember protections and default judgments."
+        },
+        {
+          "id": "DP8.9",
+          "question": "Before suing: registration and capacity of the landlord entity, the court, venue, service, the time limit, pre-judgment interest, payment plans."
+        },
+        {
+          "id": "DP8.10",
+          "question": "Tax treatment of kept deposits and settled balances."
+        },
+        {
+          "id": "DP8.11",
+          "question": "After judgment: interest, enforcement, exemptions and satisfaction."
+        }
+      ]
+    },
+    {
+      "id": "DP9",
+      "key": "close",
+      "name": "Closing the account",
+      "walk_step": "Steps 6.8 and 8.11 (close-out)",
+      "order": 9,
+      "points": [
+        {
+          "id": "DP9.1",
+          "question": "Writing off an uncollectible balance and the information returns it triggers."
+        },
+        {
+          "id": "DP9.2",
+          "question": "Reporting and remitting unclaimed funds."
+        },
+        {
+          "id": "DP9.3",
+          "question": "Keeping, securing and disposing of the tenant's records."
+        }
+      ]
+    },
+    {
+      "id": "PW0",
+      "key": "access_and_occupancy",
+      "name": "Lawful access and control of the premises",
+      "walk_step": "Physical work",
+      "order": 10,
+      "points": [
+        {
+          "id": "PW0.1",
+          "question": "When may the landlord or provider enter, inspect, secure or work on the premises; what notice, consent or emergency condition is required?"
+        },
+        {
+          "id": "PW0.2",
+          "question": "Has the landlord lawfully recovered possession, and what protection remains for occupants, belongings, keys and access credentials?"
+        },
+        {
+          "id": "PW0.3",
+          "question": "What conditions require immediate action, restrict occupancy or trigger relocation, accommodation or interruption of service?"
+        },
+        {
+          "id": "PW0.4",
+          "question": "Who has authority to arrange work and act for the owner or household, including death, incapacity, public ownership and program restrictions?"
+        }
+      ]
+    },
+    {
+      "id": "PW1",
+      "key": "work_scope_and_standards",
+      "name": "Required work, permitted scope and safe performance",
+      "walk_step": "Physical work",
+      "order": 11,
+      "points": [
+        {
+          "id": "PW1.1",
+          "question": "What condition must be restored, what work is required, and which responsibility belongs to the landlord, tenant, association, utility or another party?"
+        },
+        {
+          "id": "PW1.2",
+          "question": "Which permits, approvals, inspections and building, accessibility or fire standards govern the proposed repair or replacement on the relevant dates?"
+        },
+        {
+          "id": "PW1.3",
+          "question": "What hazard assessment, containment, worker protection, environmental handling or waste-disposal requirements govern this work?"
+        },
+        {
+          "id": "PW1.4",
+          "question": "Which location, building, program or emergency conditions change the work requirements, allowable methods or timing?"
+        }
+      ]
+    },
+    {
+      "id": "PW2",
+      "key": "provider_commitments",
+      "name": "Selecting, commissioning and paying providers",
+      "walk_step": "Physical work",
+      "order": 12,
+      "points": [
+        {
+          "id": "PW2.1",
+          "question": "Which licences, certifications, insurance, bonds or other qualifications are required for the work and contracting arrangement?"
+        },
+        {
+          "id": "PW2.2",
+          "question": "What authority, procurement, agreement, disclosure, cancellation, deposit and payment requirements govern the proposed commitment?"
+        },
+        {
+          "id": "PW2.3",
+          "question": "How do changes, delays, incomplete performance, warranties, indemnities and subcontracting affect the existing commitment and available remedies?"
+        },
+        {
+          "id": "PW2.4",
+          "question": "What wage, classification, prompt-payment, withholding, lien, release and reporting obligations attach to performing and paying for this work?"
+        }
+      ]
+    },
+    {
+      "id": "PW3",
+      "key": "work_completion",
+      "name": "Completion, defects and the connection to the account",
+      "walk_step": "Physical work",
+      "order": 13,
+      "points": [
+        {
+          "id": "PW3.1",
+          "question": "What completion evidence, inspection, clearance, certificate or approval establishes compliance and lawful readiness for occupancy?"
+        },
+        {
+          "id": "PW3.2",
+          "question": "What remains owed when work is defective, incomplete, disputed, cancelled or paid in advance, and what remedy or corrective action is available?"
+        },
+        {
+          "id": "PW3.3",
+          "question": "Which photographs, notices, invoices and other records must be created, delivered or retained, by whom and when?"
+        },
+        {
+          "id": "PW3.4",
+          "question": "How do actual work, lawful charges, timing, credits and third-party payments affect the outgoing account without equating provider cost with tenant liability?"
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "id": "deposit",
+      "name": "Deposit and security law",
+      "description": "Statutes and rules that govern money a tenant gives as security or pays in advance: caps, how the landlord must hold it (trust, separate or interest-bearing account, bank notice), interest and administrative fees, move-in and pre-vacate inspections, the itemized statement and refund deadline, permitted deductions, transfer on sale, forfeiture, commingling, burden of proof and statutory damages. Usually a section of the state landlord-tenant or general obligations statute, sometimes a city ordinance that adds interest or deadlines.",
+      "decision_points": [
+        "DP0.2",
+        "DP1.1",
+        "DP1.2",
+        "DP1.3",
+        "DP2.1",
+        "DP4.1",
+        "DP4.2",
+        "DP5.1",
+        "DP5.3",
+        "DP5.5",
+        "DP5.6",
+        "DP5.8",
+        "DP6.1",
+        "DP6.2",
+        "DP6.4",
+        "DP6.5",
+        "DP6.6",
+        "DP7.1",
+        "DP7.2",
+        "DP7.3",
+        "DP7.4",
+        "DP7.5",
+        "PW3.3",
+        "PW3.4"
+      ]
+    },
+    {
+      "id": "landlord_tenant",
+      "name": "Landlord-tenant act",
+      "description": "The general law of residential tenancies: creation and kinds of tenancy, who is a tenant, termination notices for periodic and fixed terms, renewal and automatic-renewal clauses, assignment and sublet, the duty to re-let after abandonment, holdover, surrender, destruction of the premises, summary eviction and what an eviction judgment covers. Includes the state residential landlord-tenant act or real property law articles and any city tenant-protection ordinance of general reach.",
+      "decision_points": [
+        "DP0.2",
+        "DP2.2",
+        "DP2.3",
+        "DP2.4",
+        "DP2.6",
+        "DP3.1",
+        "DP3.2",
+        "DP3.3",
+        "DP3.5",
+        "DP3.7",
+        "DP3.8",
+        "DP6.2",
+        "PW0.1",
+        "PW0.2",
+        "PW0.3",
+        "PW1.1",
+        "PW3.4"
+      ]
+    },
+    {
+      "id": "fees",
+      "name": "Fee and junk-fee law",
+      "description": "Rules that bar, cap or require disclosure of fees charged to tenants: application, broker, late, returned-payment, move-out, cleaning, administrative and convenience fees, and total-price or junk-fee disclosure rules, whether in the landlord-tenant statute, a consumer statute, a city ordinance or an agency rule.",
+      "decision_points": [
+        "DP1.4",
+        "DP1.7",
+        "DP5.2",
+        "DP5.4",
+        "DP8.1"
+      ]
+    },
+    {
+      "id": "rent_regulation",
+      "name": "Just cause and rent regulation",
+      "description": "Rent stabilization and control, rent caps and anti-gouging statutes, just-cause eviction ordinances and their relocation payments, with the coverage and exemption provisions that decide whether a unit is regulated. Operative regime units outside the aperture are still registered so the status question can be decided.",
+      "decision_points": [
+        "DP0.1",
+        "DP0.4",
+        "DP3.1",
+        "DP3.2",
+        "DP3.6",
+        "DP5.5"
+      ]
+    },
+    {
+      "id": "early_termination",
+      "name": "Early-termination statuses",
+      "description": "Statutes that let a tenant end a lease early because of a status or event: domestic violence, sexual assault or stalking; age, disability or entry into care; military orders; death; uninhabitability; each fixing the notice, the end date, the rent owed after it and the charges barred.",
+      "decision_points": [
+        "DP3.4",
+        "DP5.5",
+        "DP2.5",
+        "DP2.6"
+      ]
+    },
+    {
+      "id": "preconditions",
+      "name": "Building and owner preconditions to rent",
+      "description": "Requirements on the building or owner that decide whether rent is recoverable or a claim may be brought: certificates of occupancy, owner and rental registration, rental licensing and inspection programs, rent-impairing or habitability violations, lead-safe and similar certifications, and the housing codes that make turnover work the owner's cost.",
+      "decision_points": [
+        "DP0.3",
+        "DP1.5",
+        "DP5.3",
+        "DP8.9",
+        "PW1.2",
+        "PW3.1"
+      ]
+    },
+    {
+      "id": "abandoned_property",
+      "name": "Abandoned property",
+      "description": "Law on the tenant's personal property left in the unit after the tenancy ends: when it is abandoned, notice to the former tenant, storage, sale or disposal, the landlord's liability and the costs it may charge or keep.",
+      "decision_points": [
+        "DP6.9",
+        "PW0.2"
+      ]
+    },
+    {
+      "id": "unclaimed_property",
+      "name": "Unclaimed property",
+      "description": "The state unclaimed-property (escheat) act as it reaches an uncashed or unclaimed deposit refund or credit balance: dormancy periods, due-diligence notice to the owner, reporting and remittance, and record keeping.",
+      "decision_points": [
+        "DP6.8",
+        "DP9.2"
+      ]
+    },
+    {
+      "id": "debt_collection",
+      "name": "Debt collection conduct and licensing",
+      "description": "Federal, state and city law on collecting consumer debts, including rent and damage balances: who is a debt collector, validation notices, communication limits, disputes, time-barred debt, and the licensing or registration of collection agencies and their employees.",
+      "decision_points": [
+        "DP8.1",
+        "DP8.2",
+        "DP8.3",
+        "DP8.4",
+        "DP8.5"
+      ]
+    },
+    {
+      "id": "broker_licensing",
+      "name": "Broker and property-manager licensing",
+      "description": "Real estate broker, salesperson and property-manager licensing laws and rules: which acts (collecting rent, negotiating leases, holding deposits) require a licence, the exemptions for owners and their employees, trust-account duties and the consequences of acting unlicensed, including the bar on suing for compensation.",
+      "decision_points": [
+        "DP8.5",
+        "DP1.2",
+        "PW0.4",
+        "PW2.2"
+      ]
+    },
+    {
+      "id": "credit_reporting",
+      "name": "Credit reporting",
+      "description": "The federal Fair Credit Reporting Act and Regulation V and state credit-reporting acts as they reach a landlord or collector furnishing a balance: accuracy and dispute duties, notices, reporting of disputed or time-barred debts and medical or rental-debt restrictions.",
+      "decision_points": [
+        "DP8.6"
+      ]
+    },
+    {
+      "id": "consumer_protection",
+      "name": "Consumer protection (unfair, deceptive, abusive practices)",
+      "description": "General consumer-protection statutes and agency rules that bar unfair, deceptive or abusive acts in a tenancy or its collection (state UDAP acts, the CFPA's UDAAP bar, city consumer-protection laws), with their remedies, penalties and private rights of action.",
+      "decision_points": [
+        "DP5.2",
+        "DP7.5",
+        "DP8.3",
+        "DP8.4",
+        "PW2.2",
+        "PW2.3",
+        "PW3.2"
+      ]
+    },
+    {
+      "id": "usury_payment_plans",
+      "name": "Usury and payment plans",
+      "description": "Law on interest and credit terms that reach a settled balance: statutory and judgment interest rates, usury caps, late-charge limits on installment agreements, and rules on payment plans, settlements and the effect of partial payment or acknowledgement.",
+      "decision_points": [
+        "DP8.1",
+        "DP8.9",
+        "DP8.11"
+      ]
+    },
+    {
+      "id": "limitations",
+      "name": "Limitations and tolling",
+      "description": "Statutes of limitations for the landlord's contract and damage claims and the tenant's deposit and statutory claims, their accrual, tolling (absence, bankruptcy, military service, infancy, incapacity), revival by acknowledgement or payment, and borrowing statutes.",
+      "decision_points": [
+        "DP7.6",
+        "DP8.9",
+        "PW3.2"
+      ]
+    },
+    {
+      "id": "courts_procedure",
+      "name": "Courts and civil procedure",
+      "description": "Court acts, civil practice rules and court rules for the claims in the chain: which court and venue, small-claims limits and procedure, commencement and service of process, personal jurisdiction, pleading and default judgment, proof and evidence, preclusion by an earlier eviction judgment, judgment entry, interest, enforcement, exemptions and satisfaction.",
+      "decision_points": [
+        "DP3.8",
+        "DP7.4",
+        "DP7.6",
+        "DP8.8",
+        "DP8.9",
+        "DP8.11",
+        "PW0.2",
+        "PW3.2"
+      ]
+    },
+    {
+      "id": "entity_capacity",
+      "name": "Entity capacity to sue",
+      "description": "Business-entity law governing authority to contract, operate property and assert or respond to claims: representation, foreign qualification, assumed names, suspension, dissolution and cures.",
+      "decision_points": [
+        "DP8.9",
+        "PW0.4",
+        "PW2.2"
+      ]
+    },
+    {
+      "id": "estates_incapacity",
+      "name": "Estates and incapacity",
+      "description": "Probate and guardianship law that decides who acts for and is paid on behalf of a dead or incapacitated tenant: small-estate procedures, personal representatives, claims against an estate, guardians and their authority, and the survival of claims.",
+      "decision_points": [
+        "DP2.5",
+        "DP6.5",
+        "DP8.9",
+        "PW0.4"
+      ]
+    },
+    {
+      "id": "military",
+      "name": "Military service",
+      "description": "The Servicemembers Civil Relief Act and state military law: lease termination on orders, interest caps, stays, protection of dependents and co-obligors, and the affidavit required before a default judgment.",
+      "decision_points": [
+        "DP3.4",
+        "DP8.1",
+        "DP8.8"
+      ]
+    },
+    {
+      "id": "anti_discrimination",
+      "name": "Anti-discrimination",
+      "description": "Fair-housing and applicable accessibility law throughout access, repairs, accommodations, relocation, account treatment and recovery, including protected statuses, equal treatment and retaliation.",
+      "decision_points": [
+        "DP5.9",
+        "DP5.10",
+        "DP0.4",
+        "PW0.1",
+        "PW0.3",
+        "PW1.2"
+      ]
+    },
+    {
+      "id": "electronic_records",
+      "name": "Electronic records and signatures",
+      "description": "E-SIGN, UETA and state electronic-records acts: when an electronic notice, statement or signature satisfies a writing or delivery requirement, the consumer consent that requires, and exceptions for termination and eviction notices.",
+      "decision_points": [
+        "DP1.6",
+        "DP6.4",
+        "DP6.5",
+        "PW2.2",
+        "PW3.3"
+      ]
+    },
+    {
+      "id": "data_security",
+      "name": "Data security, breach and disposal",
+      "description": "Laws on the tenant's personal and financial information held by the landlord, manager or collector: safeguards, breach notification, secure disposal, biometric and smart-access data, and deletion at the end of the tenancy.",
+      "decision_points": [
+        "DP6.10",
+        "DP9.3",
+        "PW0.2",
+        "PW3.3"
+      ]
+    },
+    {
+      "id": "communications",
+      "name": "Communications (calls, texts)",
+      "description": "The Telephone Consumer Protection Act, its rules, and state telemarketing and texting laws that govern calls and texts to a former tenant: consent, autodialers and prerecorded messages, calling hours and revocation of consent.",
+      "decision_points": [
+        "DP1.6",
+        "DP8.3",
+        "PW0.1",
+        "PW2.2"
+      ]
+    },
+    {
+      "id": "tax_reporting",
+      "name": "Tax and information reporting",
+      "description": "Tax and information-reporting consequences directly incident to residential work and account resolution: payments to providers, classification/withholding, deposits, credits, settlements, bad debts and applicable information returns. Standalone tax planning and unrelated business operations are outside the aperture.",
+      "decision_points": [
+        "DP8.10",
+        "DP9.1",
+        "PW2.4"
+      ]
+    },
+    {
+      "id": "general_construction",
+      "name": "General construction (time counting, holidays)",
+      "description": "Statutes that construe every other statute: how periods of days are counted, what happens when a deadline falls on a weekend or public holiday, the list of public holidays, definitions of month and year, and rules on mailing and service by mail.",
+      "decision_points": [
+        "DP6.3",
+        "DP3.2",
+        "DP8.9",
+        "PW1.4",
+        "PW2.4"
+      ]
+    },
+    {
+      "id": "bankruptcy",
+      "name": "Bankruptcy",
+      "description": "The Bankruptcy Code and Rules as they reach a tenant's case: the automatic stay, setoff and recoupment of the deposit, relief from stay, proofs of claim, discharge and its injunction, and property of the estate (a refund owed to the tenant).",
+      "decision_points": [
+        "DP6.7",
+        "DP8.7",
+        "PW2.3",
+        "PW3.2"
+      ]
+    },
+    {
+      "id": "housing_assistance",
+      "name": "Housing assistance programs",
+      "description": "Federal, state and local assisted, public, regulated-affordability and special housing programs: scope, agreements, tenant and agency shares, physical standards, inspection, tenancy protections, termination, transfers, deposits and permitted charges. Program and version conditions are preserved.",
+      "decision_points": [
+        "DP0.4",
+        "DP5.7",
+        "DP3.4",
+        "PW0.3",
+        "PW1.1",
+        "PW1.2",
+        "PW1.4",
+        "PW3.1"
+      ]
+    },
+    {
+      "id": "payments",
+      "name": "Payments and funds transfers",
+      "description": "Electronic fund transfer law (EFTA, Regulation E), negotiable-instrument and check law, and state payment-method rules as they reach rent and refund payments: preauthorized transfers, refunds by electronic payment, dishonored checks and receipts.",
+      "decision_points": [
+        "DP1.7",
+        "DP6.5",
+        "DP5.2",
+        "PW2.2",
+        "PW2.4",
+        "PW3.2",
+        "PW3.4"
+      ]
+    },
+    {
+      "id": "work_standards",
+      "name": "Physical-work requirements and standards",
+      "description": "Housing, building, fire, accessibility, worker-safety and environmental requirements governing residential repair, remediation, service interruption, permits, inspections and lawful completion; retain applicable local, program and emergency variations.",
+      "decision_points": [
+        "PW0.1",
+        "PW0.3",
+        "PW1.1",
+        "PW1.2",
+        "PW1.3",
+        "PW1.4",
+        "PW3.1",
+        "PW3.3"
+      ]
+    },
+    {
+      "id": "provider_contracts",
+      "name": "Provider qualification, commitments and remedies",
+      "description": "Provider licensing and qualification; authority and procurement; work agreements, changes, cancellation, advances, payment, performance, warranties, liens, worker classification and work-related claims. Public-owner or program conditions attach where applicable.",
+      "decision_points": [
+        "PW0.4",
+        "PW2.1",
+        "PW2.2",
+        "PW2.3",
+        "PW2.4",
+        "PW3.2",
+        "PW3.4"
+      ]
+    }
+  ],
+  "test_case_templates": [
+    {
+      "id": "standard_move_out",
+      "name": "Standard move-out",
+      "situation": "A unit with a cash deposit; the tenant leaves on the lease end date with a forwarding address and owes nothing but ordinary wear.",
+      "facts": [
+        "unit type and building unit count",
+        "regulation status",
+        "lease start and end dates",
+        "deposit amount and how it is held (account, bank notice, interest rate)",
+        "move-in and pre-vacate inspection records",
+        "vacate date",
+        "forwarding address and electronic contact consent",
+        "damage beyond wear, with costs",
+        "fees in the lease"
+      ],
+      "decision_points": [
+        "DP0.2",
+        "DP1.2",
+        "DP5.1",
+        "DP5.6",
+        "DP6.1",
+        "DP6.3",
+        "DP6.4",
+        "DP6.5"
+      ]
+    },
+    {
+      "id": "early_departure",
+      "name": "Early departure",
+      "situation": "The tenant leaves months before the lease ends.",
+      "facts": [
+        "lease end date",
+        "date the tenant left and returned keys",
+        "notice given",
+        "re-letting efforts and new lease date and rent",
+        "rent paid through",
+        "lease-break or liquidated-damages clause",
+        "any statutory early-termination status"
+      ],
+      "decision_points": [
+        "DP3.3",
+        "DP3.4",
+        "DP5.5",
+        "DP6.2"
+      ]
+    },
+    {
+      "id": "co_tenants",
+      "name": "Co-tenants",
+      "situation": "Two tenants on the lease; one leaves early, the other later.",
+      "facts": [
+        "parties to the lease",
+        "each tenant's vacate date",
+        "who paid the deposit and in what shares (landlord's records)",
+        "each tenant's address"
+      ],
+      "decision_points": [
+        "DP2.3",
+        "DP2.4",
+        "DP6.6"
+      ]
+    },
+    {
+      "id": "no_forwarding_address",
+      "name": "No forwarding address",
+      "situation": "The tenant leaves no forwarding address, email or phone.",
+      "facts": [
+        "last known address",
+        "any electronic contact on file",
+        "refund amount",
+        "date the refund check is issued and whether it is cashed"
+      ],
+      "decision_points": [
+        "DP6.5",
+        "DP6.8",
+        "DP9.2"
+      ]
+    },
+    {
+      "id": "deadline_holiday",
+      "name": "Deadline on a holiday",
+      "situation": "The statement deadline falls on a weekend or public holiday.",
+      "facts": [
+        "vacate date",
+        "deadline length in days",
+        "public holiday calendar of the jurisdiction for the year"
+      ],
+      "decision_points": [
+        "DP6.1",
+        "DP6.3"
+      ]
+    },
+    {
+      "id": "building_sold",
+      "name": "Building sold",
+      "situation": "The building is sold during the tenancy.",
+      "facts": [
+        "deed date",
+        "deposit transfer and notice to the tenant",
+        "rent due before and after the sale",
+        "buyer's registrations"
+      ],
+      "decision_points": [
+        "DP2.1",
+        "DP0.3",
+        "DP8.9"
+      ]
+    },
+    {
+      "id": "belongings_left",
+      "name": "Belongings left",
+      "situation": "The tenant leaves furniture and personal items.",
+      "facts": [
+        "items and estimated value",
+        "notice sent and date",
+        "storage costs",
+        "the tenant's response"
+      ],
+      "decision_points": [
+        "DP6.9"
+      ]
+    },
+    {
+      "id": "voucher_tenant",
+      "name": "Voucher tenant",
+      "situation": "A Housing Choice Voucher tenant leaves owing part of her share.",
+      "facts": [
+        "tenant's share and the agency's share of rent",
+        "HAP contract and tenancy addendum terms",
+        "move-out month and agency payment",
+        "damage claims"
+      ],
+      "decision_points": [
+        "DP5.7",
+        "DP0.4",
+        "DP5.10"
+      ]
+    },
+    {
+      "id": "balance_to_collector",
+      "name": "Balance handed to a collector",
+      "situation": "A balance remains after the deposit; the owner hands it to a collection agency.",
+      "facts": [
+        "balance and its parts (rent, damage, fees)",
+        "who collects and how engaged (agency, attorney, manager, platform)",
+        "licences held",
+        "tenant's current address",
+        "last payment date",
+        "interest claimed"
+      ],
+      "decision_points": [
+        "DP8.1",
+        "DP8.2",
+        "DP8.3",
+        "DP8.4",
+        "DP8.5",
+        "DP8.6",
+        "DP8.9"
+      ]
+    },
+    {
+      "id": "tenant_bankruptcy",
+      "name": "Tenant bankruptcy",
+      "situation": "The tenant files bankruptcy shortly after vacating.",
+      "facts": [
+        "petition date and chapter",
+        "vacate date",
+        "deposit applied or not before the petition",
+        "charges before and after the petition",
+        "trustee"
+      ],
+      "decision_points": [
+        "DP6.7",
+        "DP8.7"
+      ]
+    },
+    {
+      "id": "tenant_death",
+      "name": "Tenant death",
+      "situation": "The sole tenant dies during the tenancy.",
+      "facts": [
+        "date of death",
+        "personal representative or next of kin",
+        "notice given by the estate",
+        "belongings in the unit",
+        "deposit and rent status"
+      ],
+      "decision_points": [
+        "DP2.5",
+        "DP6.5",
+        "DP6.9",
+        "DP8.9"
+      ]
+    },
+    {
+      "id": "servicemember",
+      "name": "Servicemember",
+      "situation": "The tenant enters military service or receives orders during the lease.",
+      "facts": [
+        "orders and dates",
+        "notice of termination and delivery",
+        "rent due date",
+        "default judgment affidavit facts"
+      ],
+      "decision_points": [
+        "DP3.4",
+        "DP8.8",
+        "DP8.1"
+      ]
+    },
+    {
+      "id": "domestic_violence",
+      "name": "Domestic violence",
+      "situation": "The tenant ends the lease early because of domestic violence.",
+      "facts": [
+        "notice and documentation given",
+        "date of notice",
+        "co-tenants and the perpetrator's status",
+        "rent owed before and after the end date"
+      ],
+      "decision_points": [
+        "DP3.4",
+        "DP5.5",
+        "DP5.10"
+      ]
+    },
+    {
+      "id": "vacate_or_casualty",
+      "name": "Vacate order or casualty",
+      "situation": "A government vacate order or a fire makes the unit unfit.",
+      "facts": [
+        "order or casualty date",
+        "cause and the owner's responsibility",
+        "rent paid for the month",
+        "relocation obligations"
+      ],
+      "decision_points": [
+        "DP2.6",
+        "DP3.6",
+        "DP5.5"
+      ]
+    },
+    {
+      "id": "payment_plan",
+      "name": "Payment plan",
+      "situation": "The former tenant agrees to pay the balance in instalments.",
+      "facts": [
+        "balance",
+        "plan terms (instalments, interest, fees)",
+        "who offers it (landlord, collector, platform)",
+        "written acknowledgement",
+        "missed payments"
+      ],
+      "decision_points": [
+        "DP8.1",
+        "DP8.3",
+        "DP8.9"
+      ]
+    }
+  ],
+  "ordering_note": "Point order supports research presentation, not a compulsory operating sequence. Physical work and account duties can proceed concurrently; dependencies follow the actual decision."
+}

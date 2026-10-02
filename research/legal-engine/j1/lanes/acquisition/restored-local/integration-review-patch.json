@@ -1,0 +1,275 @@
+{
+  "scope": "Existing evidence only; no canonical edits or additional acquisition. Dotted keys denote nested field updates; append_fields are additive and deduplicate by identity/ref.",
+  "updates": [
+    {
+      "id": "CA-HB:MHTBRA-GUIDELINES-2022",
+      "set_fields": {
+        "acquisition_note": "Adopted 24-page attachment acquired and reviewed: main guidelines pages 1\u20136; Exhibit A definitions 7\u201310; B income limits 11; C rent standard 12; D March 2016 HOME Manual TBRA chapter 13\u201324.",
+        "source_dependencies": [
+          {
+            "branch": "Mobilehome TBRA",
+            "named_instrument": "City-participant rent payment reimbursement contract",
+            "source": "https://huntingtonbeach.legistar.com/ViewReport.ashx?GID=716&GUID=LATEST&ID=5958&M=R&N=TextL5&Title=Staff+Report",
+            "locator": "November1,2022 item22-846, page5",
+            "finding": "The adopted guideline directs preparation and execution of individual one-year Rent Payment Contracts and supplies their reimbursement, proof, recertification and renewal requirements. No separate named standard template is incorporated.",
+            "scope": "Individual executed participant contracts are runtime case evidence. Governing guideline terms are selected here; this is not an open J1 source dependency.",
+            "stage_classification": "runtime_case_record"
+          },
+          {
+            "branch": "Ocean View Estates",
+            "named_instrument": "Item22-846 city-owned-park temporary space-rent reduction authorization",
+            "adopted_date": "2022-11-01",
+            "source": "https://huntingtonbeach.legistar.com/LegislationDetail.aspx?GUID=384D022D-0064-4084-9A7A-FC8005582BBB&ID=5898841&Options=&Search=",
+            "supporting_report": "https://huntingtonbeach.legistar.com/ViewReport.ashx?GID=716&GUID=LATEST&ID=5958&M=R&N=TextL5&Title=Staff+Report",
+            "finding": "Adopted package separately authorizes temporary rent reductions for qualifying Ocean View Estates seniors, instead of enrolling them in MHTBRA.",
+            "scope": "Retain this historical/time-limited city-landlord account branch and its actual rent amendment where applicable; do not classify all city-owned-park residents as MHTBRA recipients or presume the authorization continues in2026."
+          }
+        ],
+        "program_currentness_review": {
+          "status": "instrument_selection_resolved",
+          "selected_sources": [
+            "CA-HB:HOME-PLAN-RES2026-10",
+            "CA-HB:TBRA-GUIDELINES-2020",
+            "CA-HB:HOME-TBRA-PROVIDER-AGREEMENTS"
+          ],
+          "finding": "2026 plan adoption and existing operating sources are established. The 2025 agreements continue while providers control HOME funds/assets under their terms. A fiscal-year boundary does not imply a missing replacement instrument. Individual MHTBRA contracts are case evidence.",
+          "historical_review_file": "j1/lanes/acquisition/hb-home-tbra-delta.json",
+          "current_review_file": "j1/lanes/acquisition/restored-local/j1-selection-decisions.json"
+        }
+      }
+    },
+    {
+      "id": "CA-HB:SBSD:ORD22-01",
+      "set_fields": {
+        "acquisition.status": "The 2022 baseline remains selected separately from its adopted January 11, 2024 Article V amendment, effective March 1, 2024. Exact amended unit and status are resolved; amendment body capture belongs to J2."
+      },
+      "append_fields": {
+        "selected_versions": [
+          {
+            "identity": "January 11, 2024 amendment to Article V",
+            "adopted_date": "2024-01-11",
+            "effective_date": "2024-03-01",
+            "unit": "Article V",
+            "adoption_source": "https://www.sunsetbeachsd.org/wp-content/uploads/2024/03/January-11-2024-Minutes.pdf",
+            "locator": "page 2",
+            "scope": "Physical-space waiver authority for residential and commercial property owners; exact amended text is not inferred from the motion."
+          }
+        ]
+      }
+    },
+    {
+      "id": "CA-HB:SBSD:FINAL-ACTION-EVIDENCE",
+      "set_fields": {
+        "acquisition.status": "Official minutes reviewed: January 2024 Article V amendment, February 2024 Resolution 2024-02-01, and June 2026 Resolution 2026-06-01 adoption are established. Full operative attachments are J2 capture, not unresolved instrument identity."
+      },
+      "append_fields": {
+        "selected_instrument_identities": [
+          {
+            "identity": "Resolution 2024-03-01",
+            "adopted_date": "2024-03-14",
+            "scope": "Annual residential trash/sewer charges; conditional service classifications."
+          },
+          {
+            "identity": "Resolution 2024-02-01",
+            "adopted_date": "2024-02-08",
+            "scope": "Local physical-space waivers under Ordinance 22-01."
+          },
+          {
+            "identity": "Resolution 2026-06-01",
+            "adopted_date": "2026-06-11",
+            "scope": "2026\u201327 assessment roll approval with specified adjustments."
+          }
+        ]
+      },
+      "unit_updates_by_unit": [
+        {
+          "unit": "2026-06-11-BOE-MINUTES",
+          "set_fields": {
+            "reason": "Reviewed pages 1\u20132 unanimously adopt Resolution 2026-06-01 approving the assessment roll with two additional residential units and specified minor adjustments."
+          }
+        },
+        {
+          "unit": "2024-01-11-MINUTES",
+          "set_fields": {
+            "reason": "Reviewed page 2 records unanimous adoption of the Article V amendment, effective March 1, 2024."
+          }
+        }
+      ]
+    },
+    {
+      "id": "CA-HB:SBSD:CALRECYCLE-WAIVER2025",
+      "set_fields": {
+        "remaining": "No unresolved J1 inclusion decision. The issued state waiver is selected independently of the adopted local Article V amendment and local physical-space waivers. Full conditions and their interaction are later capture/interpretation work; individual parcel evidence is not required for the register."
+      },
+      "unit_updates_by_unit": [
+        {
+          "unit": "SBSD-SB613-2025-07-10",
+          "set_fields": {
+            "reason": "Official agency register confirms the issued state waiver. Retain separately from the adopted January 2024 local amendment; no local repeal is inferred."
+          }
+        }
+      ]
+    },
+    {
+      "id": "CA-HB:SBSD:COMMERCIAL-RATES2025",
+      "set_fields": {
+        "acquisition.status": "The live district provider page continues to publish the July 1, 2025 commercial/direct-service schedule, including applicable residential extra/bulky pickups. No additional 2026 successor is identified or required merely because the year changed."
+      }
+    },
+    {
+      "id": "CA-HB:ORD4348",
+      "set_fields": {
+        "status": "Selected ordinance and incorporated First Amendment; the 143-page official agenda attachment is acquired. A duplicate signed copy is not required to identify this instrument and its units.",
+        "acquisition.status": "143-page agenda attachment acquired at observed Legistar API attachment URL. The ordinance page has blank adoption fields; no vote inferred. Later capture/version reconciliation can use the exact June 2 minutes record."
+      },
+      "append_fields": {
+        "alternate_source_routes": [
+          {
+            "ref": "https://huntingtonbeach.legistar1.com/huntingtonbeach/attachments/fe9a6c1e-f21f-4eb9-988a-94909157eab9.pdf",
+            "local_file": "j1/lanes/acquisition/restored-local/ord4348.pdf",
+            "role": "Official agenda attachment: ordinance and incorporated amendment"
+          },
+          {
+            "ref": "https://records.huntingtonbeachca.gov/WebLink/DocView.aspx?id=7348631&dbid=0&repo=COHB",
+            "role": "June 2, 2026 minutes; source identity established, image text not yet read"
+          }
+        ]
+      }
+    },
+    {
+      "id": "CA-HB:HOME-TBRA-PROVIDER-AGREEMENTS",
+      "append_fields": {
+        "scope_notes": [
+          "The July 2024 bundle includes Appendix K explicitly marked NOT APPLICABLE for the historical COVID addendum. Appendix L contains the VAWA lease addendum and emergency-transfer plan; preserve the guideline body\u2019s mismatched appendix reference for later interpretation.",
+          "No hypothetical annual successor is required for J1. Select the posted agreements under their actual continuing-assets terms together with the adopted 2026 plan."
+        ]
+      }
+    }
+  ],
+  "add": [
+    {
+      "id": "CA-OC:SHELTER-MODEL2027",
+      "jurisdiction": "CA-OC",
+      "name": "County emergency shelter model contract and incorporated Standards of Care, approved September 29, 2026",
+      "level": "agency rule",
+      "instrument_kind": "approved conditional program model and incorporated operator standards",
+      "adapter": "generic",
+      "toc_source_url": "https://ocagendaext.oc.gov/ExtDocViewer/0a8f430f-b557-4c66-b715-a58e6cc1e0e4",
+      "functions": [
+        "housing_assistance",
+        "preconditions",
+        "work_standards",
+        "early_termination",
+        "abandoned_property",
+        "anti_discrimination",
+        "data_security"
+      ],
+      "adopted_date": "2026-09-29",
+      "status": "Approved model for contracts contemplated January 1, 2027\u2013June 30, 2028; not a claim that every proposed contract is executed.",
+      "applicability_condition": "Actual County-contracted shelter program serving covered individuals, families, survivors or transitional-age youth. County geography alone does not make ordinary apartments subject to the model. Preserve any independent current applicability expressed in the incorporated Standards of Care.",
+      "units_in_scope": [
+        {
+          "unit": "APPLICABILITY",
+          "heading": "Model contract: applicability, incorporated conditions and mixed general provisions",
+          "toc_url": "https://ocagendaext.oc.gov/ExtDocViewer/0a8f430f-b557-4c66-b715-a58e6cc1e0e4",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "APPLICABILITY",
+              "heading": "Model contract: applicability, incorporated conditions and mixed general provisions",
+              "ref": "https://ocagendaext.oc.gov/ExtDocViewer/0a8f430f-b557-4c66-b715-a58e6cc1e0e4"
+            }
+          ],
+          "locator": "PDF pages 1\u201332",
+          "reason": "Mixed parent retained to section review: incorporation and term, work quality/permits (\u00a714), change authorization (\u00a715), service nondiscrimination (\u00a742), and participant confidentiality can affect residential operation. Selection does not import standalone county procurement, employment, funding recovery or clinical-service workflows. Subsections solely about those functions are outside the aperture."
+        },
+        {
+          "unit": "SOW",
+          "heading": "Attachment A: operating scope and conditions",
+          "toc_url": "https://ocagendaext.oc.gov/ExtDocViewer/0a8f430f-b557-4c66-b715-a58e6cc1e0e4",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "SOW",
+              "heading": "Attachment A: operating scope and conditions",
+              "ref": "https://ocagendaext.oc.gov/ExtDocViewer/0a8f430f-b557-4c66-b715-a58e6cc1e0e4"
+            }
+          ],
+          "locator": "PDF pages 33\u201341",
+          "reason": "Select target population, residential operation, low-barrier admission, participant records, housing transition, facility inspection and maintenance conditions. Mixed unit goes to section review; standalone funding, KPI and procurement provisions do not become operator rules."
+        },
+        {
+          "unit": "STANDARDS",
+          "heading": "Attachment B: County Standards of Care",
+          "toc_url": "https://ocagendaext.oc.gov/ExtDocViewer/0a8f430f-b557-4c66-b715-a58e6cc1e0e4",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "STANDARDS",
+              "heading": "Attachment B: County Standards of Care",
+              "ref": "https://ocagendaext.oc.gov/ExtDocViewer/0a8f430f-b557-4c66-b715-a58e6cc1e0e4"
+            }
+          ],
+          "locator": "PDF pages 43\u201373; TOC pages 44\u201345",
+          "reason": "Select operations, participant rights, accommodations, grievance/exit process, personal belongings, facility sanitation/accessibility, applicable safety training, records, waivers and attached incident/grievance forms. Supportive-services text is retained for conditions on shelter access/exit and referral coordination; standalone clinical/employment service delivery remains outside aperture."
+        },
+        {
+          "unit": "INCORPORATED-ATTESTATION",
+          "heading": "Homeless Service System Pillars Attestation and appended material",
+          "toc_url": "https://ocagendaext.oc.gov/ExtDocViewer/0a8f430f-b557-4c66-b715-a58e6cc1e0e4",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "INCORPORATED-ATTESTATION",
+              "heading": "Homeless Service System Pillars Attestation and appended material",
+              "ref": "https://ocagendaext.oc.gov/ExtDocViewer/0a8f430f-b557-4c66-b715-a58e6cc1e0e4"
+            }
+          ],
+          "locator": "PDF pages 74\u201378",
+          "reason": "Incorporated operating commitments: retain actual residential access/exit and service-coordination requirements; do not infer independent clinical-program scope."
+        }
+      ],
+      "units_out": [
+        {
+          "unit": "Standalone government contracting and employment content within the mixed contract",
+          "reason": "County budget ceilings, vendor award administration, employee nondiscrimination/worker status (\u00a7\u00a710,13), vendor tax setup (\u00a745) and government-only fiscal reporting do not independently govern the property transition or outgoing resident relationship. Retain cross-referenced definitions and operational conditions needed by included provisions."
+        },
+        {
+          "unit": "Standalone clinical, employment and transportation service delivery within supportive services",
+          "reason": "Retain housing-access/exit conditions, referrals and resident protections; do not expand into delivery of unrelated treatment, job services or government program administration."
+        }
+      ],
+      "adoption_evidence": {
+        "source_file": "j1/references/oc/2026-09-29.txt",
+        "locator": "item 19",
+        "finding": "Approved unanimously with removal of Illumination Health + Home from Program A solicitation results; no amendment to Standards of Care text stated."
+      },
+      "scope_evidence": [
+        "Facility maintenance/cleanliness: PDF pages 37\u201338.",
+        "Grievances and program exits: pages 52\u201355.",
+        "Personal belongings held for at least 90 days following exit: page 56.",
+        "Facility/accessibility standards: pages 60\u201363."
+      ],
+      "relationship_to_existing": [
+        "CA-OC:CES-POLICY covers coordinated entry, not these shelter operating and exit rules.",
+        "CA-OC:HMIS-POLICIES covers data systems, not belongings/facility/exit duties.",
+        "CA-OC:OCHA-COC is permanent supportive housing guidance, not a substitute for County shelter Standards of Care."
+      ]
+    }
+  ],
+  "already_integrated": [
+    "Four certified HB water/weed resolution instruments and Laserfiche adapters",
+    "Three HOME provider document targets",
+    "SBSD January/February/June minutes targets",
+    "2026 HOME plan adoption"
+  ],
+  "exclude_new_instrument": [
+    {
+      "source_file": "j1/references/oc/housing-res.txt",
+      "identity": "September 29, 2026 THP/HNMP/THPSUP allocation acceptance resolution",
+      "decision": "No new residential operator-law instrument from this resolution.",
+      "reason": "Sections 1\u20136 authorize County award acceptance and additional allocations; section 7 delegates signing; sections 8\u20139 bind County to award conditions and preserve acceptance discretion. It supplies no local unit eligibility, occupancy, repair, payment-to-resident, refund, belongings, or exit standard. State program law/guidelines remain the governing source selection; a citation or funding authorization does not itself import another program regime.",
+      "status": "Adoption may be recorded as contextual program availability evidence, without promoting the resolution into new operator rules."
+    }
+  ]
+}

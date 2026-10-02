@@ -1,0 +1,614 @@
+[
+  {
+    "case_id": "exp033+exp034",
+    "request_hash": "0ee3ee84249355c2189f4cc749840ee51b45321858044638b7ddedda61b89491",
+    "started_at": "2026-10-01T16:51:28.210920+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "business day",
+            "use_passage": "A more precise rule for what is a business day (all calendar days except Sundays and the Federal legal holidays specified in 5 U.S.C. 6103(a)) applies when the right of rescission, the receipt of disclosures for certain dwelling- or real estate-secured mortgage transactions under §§ 1026.19(a)(1)(ii), 1026.19(a)(2), 1026.19(e)(1)(iii)(B), 1026.19(e)(1)(iv), 1026.19(e)(2)(i)(A), 1026.19(e)(4)(ii), 1026.19(f)(1)(ii), 1026.19(f)(1)(iii), 1026.20(e)(5), 1026.31(c), or the receipt of disclosures for private education loans under § 1026.46(d)(4) is involved. Four Federal legal holidays are identified in 5 U.S.C. 6103(a) by a specific date: New Year's Day, January 1; Independence Day, July 4; Veterans Day, November 11; and Christmas Day, December 25. When one of these holidays (July 4, for example) falls on a Saturday, Federal offices and other entities might observe the holiday on the preceding Friday (July 3). In cases where the more precise rule applies, the observed holiday (in the example, July 3) is a business day.",
+            "use_expression": "what is a business day"
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "exp033": {
+              "type": "choice",
+              "instructions": "Which meaning fits the selected use expression?",
+              "criteria": {
+                "A": "Calendar days except Sundays and specified federal legal holidays.",
+                "B": "Days the creditor opens for substantially all business functions.",
+                "NONE": "Neither offered meaning fits."
+              }
+            },
+            "exp034": {
+              "type": "choice",
+              "instructions": "Which meaning fits the selected use expression?",
+              "criteria": {
+                "A": "Days the creditor opens for substantially all business functions.",
+                "B": "Calendar days except Sundays and specified federal legal holidays.",
+                "NONE": "Neither offered meaning fits."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"business day\",\"use_passage\":\"A more precise rule for what is a business day (all calendar days except Sundays and the Federal legal holidays specified in 5 U.S.C. 6103(a)) applies when the right of rescission, the receipt of disclosures for certain dwelling- or real estate-secured mortgage transactions under §§ 1026.19(a)(1)(ii), 1026.19(a)(2), 1026.19(e)(1)(iii)(B), 1026.19(e)(1)(iv), 1026.19(e)(2)(i)(A), 1026.19(e)(4)(ii), 1026.19(f)(1)(ii), 1026.19(f)(1)(iii), 1026.20(e)(5), 1026.31(c), or the receipt of disclosures for private education loans under § 1026.46(d)(4) is involved. Four Federal legal holidays are identified in 5 U.S.C. 6103(a) by a specific date: New Year's Day, January 1; Independence Day, July 4; Veterans Day, November 11; and Christmas Day, December 25. When one of these holidays (July 4, for example) falls on a Saturday, Federal offices and other entities might observe the holiday on the preceding Friday (July 3). In cases where the more precise rule applies, the observed holiday (in the example, July 3) is a business day.\",\"use_expression\":\"what is a business day\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"exp033\":{\"type\":\"choice\",\"instructions\":\"Which meaning fits the selected use expression?\",\"criteria\":{\"A\":\"Calendar days except Sundays and specified federal legal holidays.\",\"B\":\"Days the creditor opens for substantially all business functions.\",\"NONE\":\"Neither offered meaning fits.\"}},\"exp034\":{\"type\":\"choice\",\"instructions\":\"Which meaning fits the selected use expression?\",\"criteria\":{\"A\":\"Days the creditor opens for substantially all business functions.\",\"B\":\"Calendar days except Sundays and specified federal legal holidays.\",\"NONE\":\"Neither offered meaning fits.\"}}}}",
+        "body_sha256": "7cfac720c9abea22cc698dff01242005902b53e1fe380ffc20f736e82fa77d99"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "exp033": {
+          "type": "choice",
+          "choice": "A",
+          "probabilities": {
+            "A": 0.99,
+            "NONE": 0,
+            "B": 0.01
+          },
+          "confidence": 0.99
+        },
+        "exp034": {
+          "type": "choice",
+          "choice": "B",
+          "probabilities": {
+            "A": 0.01,
+            "NONE": 0,
+            "B": 0.99
+          },
+          "confidence": 0.98
+        }
+      },
+      "usage": {
+        "input_tokens": 799,
+        "output_tokens": 79,
+        "cost": 3.3558e-05
+      },
+      "id": "gen-dec-1790873488-iT7Vx5ju2RIeCN7PtPeS",
+      "provider": "TypeSafe"
+    },
+    "diagnostics": {
+      "exp033": "A",
+      "exp034": "B"
+    },
+    "status": "answered",
+    "seconds": 0.3960419590584934
+  },
+  {
+    "case_id": "exp042+exp043",
+    "request_hash": "92d641df6118da9c18005ea89b461c4e98276ffad76fd0c99c4769eaf76ea237",
+    "started_at": "2026-10-01T16:51:28.607575+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "tolling",
+            "use_passage": "Turning from statutory texts to judicial decisions, only\nonce did an opinion of this Court employ tolling language to\ndescribe a grace period: Hardin v. Straub, 490 U. S. 536\n(1989). In Hardin, we held that, in 42 U. S. C. § 1983 suits,\nfederal courts should give effect to state statutes sheltering\nclaims from time bars during periods of a plaintiff's legal\ndisability. We there characterized a state statute providing\na one-year grace period as “tolling” or “suspend[ing]” the\nlimitations period “until one year after the disability has\nbeen removed.” 490 U. S., at 537. This atypical use of\n“tolling” or “suspending” to mean something other than\nstopping the clock on a limitations period is a feather on the\nscale against the weight of decisions in which “tolling” a\nstatute of limitations signals stopping the clock.",
+            "use_expression": "as “tolling”"
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "exp042": {
+              "type": "choice",
+              "instructions": "Which meaning fits the selected use expression?",
+              "criteria": {
+                "A": "Suspension of a limitations clock.",
+                "B": "A grace period while the original limitations clock continues to run.",
+                "NONE": "Neither offered meaning fits."
+              }
+            },
+            "exp043": {
+              "type": "choice",
+              "instructions": "Which meaning fits the selected use expression?",
+              "criteria": {
+                "A": "A grace period while the original limitations clock continues to run.",
+                "B": "Suspension of a limitations clock.",
+                "NONE": "Neither offered meaning fits."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"tolling\",\"use_passage\":\"Turning from statutory texts to judicial decisions, only\\nonce did an opinion of this Court employ tolling language to\\ndescribe a grace period: Hardin v. Straub, 490 U. S. 536\\n(1989). In Hardin, we held that, in 42 U. S. C. § 1983 suits,\\nfederal courts should give effect to state statutes sheltering\\nclaims from time bars during periods of a plaintiff's legal\\ndisability. We there characterized a state statute providing\\na one-year grace period as “tolling” or “suspend[ing]” the\\nlimitations period “until one year after the disability has\\nbeen removed.” 490 U. S., at 537. This atypical use of\\n“tolling” or “suspending” to mean something other than\\nstopping the clock on a limitations period is a feather on the\\nscale against the weight of decisions in which “tolling” a\\nstatute of limitations signals stopping the clock.\",\"use_expression\":\"as “tolling”\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"exp042\":{\"type\":\"choice\",\"instructions\":\"Which meaning fits the selected use expression?\",\"criteria\":{\"A\":\"Suspension of a limitations clock.\",\"B\":\"A grace period while the original limitations clock continues to run.\",\"NONE\":\"Neither offered meaning fits.\"}},\"exp043\":{\"type\":\"choice\",\"instructions\":\"Which meaning fits the selected use expression?\",\"criteria\":{\"A\":\"A grace period while the original limitations clock continues to run.\",\"B\":\"Suspension of a limitations clock.\",\"NONE\":\"Neither offered meaning fits.\"}}}}",
+        "body_sha256": "045b2406533f5013836c99875400f596f5921068cb54a7c479c128a84be427e3"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "exp042": {
+          "type": "choice",
+          "choice": "B",
+          "probabilities": {
+            "B": 0.65,
+            "NONE": 0,
+            "A": 0.35
+          },
+          "confidence": 0.48
+        },
+        "exp043": {
+          "type": "choice",
+          "choice": "A",
+          "probabilities": {
+            "B": 0.41,
+            "NONE": 0.02,
+            "A": 0.57
+          },
+          "confidence": 0.37
+        }
+      },
+      "usage": {
+        "input_tokens": 687,
+        "output_tokens": 79,
+        "cost": 2.8854e-05
+      },
+      "id": "gen-dec-1790873488-pOZOyDjhWsYLEcHhlKiu",
+      "provider": "TypeSafe"
+    },
+    "diagnostics": {
+      "exp042": "B",
+      "exp043": "A"
+    },
+    "status": "answered",
+    "seconds": 0.2673614169470966
+  },
+  {
+    "case_id": "exp045+exp048",
+    "request_hash": "5798cbb628dca4dce2a6e4c9f788a9b33f22ea312bb5d7a2656a1e71a733c13c",
+    "started_at": "2026-10-01T16:51:28.876334+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "dwelling unit",
+            "use_passage": "(1) If a governmental agency responsible for the enforcement of a building, housing, or other appropriate code has notified the landlord that a dwelling is condemned or unlawful to occupy due to the existence of conditions that violate applicable codes, statutes, ordinances, or regulations, a landlord shall not enter into a rental agreement for the dwelling unit until the conditions are corrected.",
+            "use_expression": "for the dwelling unit"
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "exp045": {
+              "type": "choice",
+              "instructions": "Which meaning fits the selected use expression?",
+              "criteria": {
+                "A": "A judicial grant of adjudicatory authority.",
+                "B": "The expiration date of a limitation period.",
+                "NONE": "Neither offered meaning fits."
+              }
+            },
+            "exp048": {
+              "type": "choice",
+              "instructions": "Which meaning fits the selected use expression?",
+              "criteria": {
+                "A": "Only the rented site beneath a separately owned manufactured home.",
+                "B": "A residential structure or part of one used as a home or sleeping place.",
+                "NONE": "Neither offered meaning fits."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"dwelling unit\",\"use_passage\":\"(1) If a governmental agency responsible for the enforcement of a building, housing, or other appropriate code has notified the landlord that a dwelling is condemned or unlawful to occupy due to the existence of conditions that violate applicable codes, statutes, ordinances, or regulations, a landlord shall not enter into a rental agreement for the dwelling unit until the conditions are corrected.\",\"use_expression\":\"for the dwelling unit\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"exp045\":{\"type\":\"choice\",\"instructions\":\"Which meaning fits the selected use expression?\",\"criteria\":{\"A\":\"A judicial grant of adjudicatory authority.\",\"B\":\"The expiration date of a limitation period.\",\"NONE\":\"Neither offered meaning fits.\"}},\"exp048\":{\"type\":\"choice\",\"instructions\":\"Which meaning fits the selected use expression?\",\"criteria\":{\"A\":\"Only the rented site beneath a separately owned manufactured home.\",\"B\":\"A residential structure or part of one used as a home or sleeping place.\",\"NONE\":\"Neither offered meaning fits.\"}}}}",
+        "body_sha256": "df40c7ad988849fd43db00e364ee1cd2b728e8d36ed819265148651d4923fa1c"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "exp045": {
+          "type": "choice",
+          "choice": "NONE",
+          "probabilities": {
+            "B": 0,
+            "A": 0,
+            "NONE": 1
+          },
+          "confidence": 1
+        },
+        "exp048": {
+          "type": "choice",
+          "choice": "B",
+          "probabilities": {
+            "B": 1,
+            "A": 0,
+            "NONE": 0
+          },
+          "confidence": 1
+        }
+      },
+      "usage": {
+        "input_tokens": 533,
+        "output_tokens": 79,
+        "cost": 2.2386e-05
+      },
+      "id": "gen-dec-1790873488-jbG8u9KOLwM3p5Y7MTMA",
+      "provider": "TypeSafe"
+    },
+    "diagnostics": {
+      "exp045": "NONE",
+      "exp048": "B"
+    },
+    "status": "answered",
+    "seconds": 0.2278881249949336
+  },
+  {
+    "case_id": "exp053+exp072",
+    "request_hash": "ca6380924bc03fd5d4c80d2d6e40bfd080416885146c9ca1ee417b488e41db98",
+    "started_at": "2026-10-01T16:51:29.105328+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "Section 1026.10(a) does not require the creditor to post the payment to the consumer's account on a particular date; the creditor is only required to credit the payment\nas of\nthe date of receipt.",
+            "candidate": "iv. Payment made via the creditor's Web site is received on the date on which the consumer authorizes the creditor to effect the payment, even if the consumer gives the instruction authorizing that payment in advance of the date on which the creditor is authorized to effect the payment. If the consumer authorizes the creditor to effect the payment immediately, but the consumer's instruction is received after 5 p.m. or any later cut-off time specified by the creditor, the date on which the consumer authorizes the creditor to effect the payment is deemed to be the next business day."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "exp053": {
+              "type": "noul",
+              "instructions": "Does the candidate create an exception to the requirement?",
+              "criteria": {
+                "true": "The candidate removes or reduces what the requirement demands in stated circumstances.",
+                "false": "The requirement remains unchanged; the candidate merely adds an obligation, remedy or option without reducing what is required."
+              }
+            },
+            "exp072": {
+              "type": "noul",
+              "instructions": "Does the candidate change the timing rule stated in the requirement?",
+              "criteria": {
+                "true": "The candidate changes the stated time limit, triggering event or time-computation rule.",
+                "false": "The stated timing rule remains unchanged."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"Section 1026.10(a) does not require the creditor to post the payment to the consumer's account on a particular date; the creditor is only required to credit the payment\\nas of\\nthe date of receipt.\",\"candidate\":\"iv. Payment made via the creditor's Web site is received on the date on which the consumer authorizes the creditor to effect the payment, even if the consumer gives the instruction authorizing that payment in advance of the date on which the creditor is authorized to effect the payment. If the consumer authorizes the creditor to effect the payment immediately, but the consumer's instruction is received after 5 p.m. or any later cut-off time specified by the creditor, the date on which the consumer authorizes the creditor to effect the payment is deemed to be the next business day.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"exp053\":{\"type\":\"noul\",\"instructions\":\"Does the candidate create an exception to the requirement?\",\"criteria\":{\"true\":\"The candidate removes or reduces what the requirement demands in stated circumstances.\",\"false\":\"The requirement remains unchanged; the candidate merely adds an obligation, remedy or option without reducing what is required.\"}},\"exp072\":{\"type\":\"noul\",\"instructions\":\"Does the candidate change the timing rule stated in the requirement?\",\"criteria\":{\"true\":\"The candidate changes the stated time limit, triggering event or time-computation rule.\",\"false\":\"The stated timing rule remains unchanged.\"}}}}",
+        "body_sha256": "76b76ea2ff74c2f102fb1846b47b76f36dc5c7fa2229a322cd4d62065a6f9ab3"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "exp053": {
+          "type": "noul",
+          "noul": 0.24
+        },
+        "exp072": {
+          "type": "noul",
+          "noul": 0.45
+        }
+      },
+      "usage": {
+        "input_tokens": 567,
+        "output_tokens": 42,
+        "cost": 2.3814e-05
+      },
+      "id": "gen-dec-1790873489-rUNrwp63SI7idPn35Ml9",
+      "provider": "TypeSafe"
+    },
+    "diagnostics": {
+      "exp053": "NO",
+      "exp072": "NO"
+    },
+    "status": "answered",
+    "seconds": 0.5057324999943376
+  },
+  {
+    "case_id": "exp054+exp071",
+    "request_hash": "b08594f65b17129a54fbe649b86551057a890cd90bd370d68a0c4bb09ed94154",
+    "started_at": "2026-10-01T16:51:29.612527+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "Employers, however, must keep all employment records, including records of requests for reasonable accommodation, for one year from the making of the record or the personnel action involved, whichever occurs later.",
+            "candidate": "If a charge is filed, records must be preserved until the charge is resolved."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "exp054": {
+              "type": "noul",
+              "instructions": "Does the candidate create an exception to the requirement?",
+              "criteria": {
+                "true": "The candidate removes or reduces what the requirement demands in stated circumstances.",
+                "false": "The requirement remains unchanged; the candidate merely adds an obligation, remedy or option without reducing what is required."
+              }
+            },
+            "exp071": {
+              "type": "noul",
+              "instructions": "Does the candidate change the timing rule stated in the requirement?",
+              "criteria": {
+                "true": "The candidate changes the stated time limit, triggering event or time-computation rule.",
+                "false": "The stated timing rule remains unchanged."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"Employers, however, must keep all employment records, including records of requests for reasonable accommodation, for one year from the making of the record or the personnel action involved, whichever occurs later.\",\"candidate\":\"If a charge is filed, records must be preserved until the charge is resolved.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"exp054\":{\"type\":\"noul\",\"instructions\":\"Does the candidate create an exception to the requirement?\",\"criteria\":{\"true\":\"The candidate removes or reduces what the requirement demands in stated circumstances.\",\"false\":\"The requirement remains unchanged; the candidate merely adds an obligation, remedy or option without reducing what is required.\"}},\"exp071\":{\"type\":\"noul\",\"instructions\":\"Does the candidate change the timing rule stated in the requirement?\",\"criteria\":{\"true\":\"The candidate changes the stated time limit, triggering event or time-computation rule.\",\"false\":\"The stated timing rule remains unchanged.\"}}}}",
+        "body_sha256": "0c6897d949b5a4255594b647e47b6aa03e24fb03e4495d7855b67a7512407712"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "exp054": {
+          "type": "noul",
+          "noul": 0.12
+        },
+        "exp071": {
+          "type": "noul",
+          "noul": 0.81
+        }
+      },
+      "usage": {
+        "input_tokens": 455,
+        "output_tokens": 42,
+        "cost": 1.911e-05
+      },
+      "id": "gen-dec-1790873489-2iTkihXuZdo1Yh2v4uR6",
+      "provider": "TypeSafe"
+    },
+    "diagnostics": {
+      "exp054": "NO",
+      "exp071": "YES"
+    },
+    "status": "answered",
+    "seconds": 0.2688117912039161
+  },
+  {
+    "case_id": "exp056+exp065",
+    "request_hash": "b9edb0ab7cfd895504a138e000729c7b7622960ac4d673ee91313215ccc991f6",
+    "started_at": "2026-10-01T16:51:29.882498+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "In general, you need to file a charge within 180 calendar days from the day the discrimination took place.",
+            "candidate": "The 180 calendar day filing deadline is extended to 300 calendar days if a state or local agency enforces a law that prohibits employment discrimination on the same basis."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "exp056": {
+              "type": "noul",
+              "instructions": "Does the candidate create an exception to the requirement?",
+              "criteria": {
+                "true": "The candidate removes or reduces what the requirement demands in stated circumstances.",
+                "false": "The requirement remains unchanged; the candidate merely adds an obligation, remedy or option without reducing what is required."
+              }
+            },
+            "exp065": {
+              "type": "noul",
+              "instructions": "Does the candidate change the timing rule stated in the requirement?",
+              "criteria": {
+                "true": "The candidate changes the stated time limit, triggering event or time-computation rule.",
+                "false": "The stated timing rule remains unchanged."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"In general, you need to file a charge within 180 calendar days from the day the discrimination took place.\",\"candidate\":\"The 180 calendar day filing deadline is extended to 300 calendar days if a state or local agency enforces a law that prohibits employment discrimination on the same basis.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"exp056\":{\"type\":\"noul\",\"instructions\":\"Does the candidate create an exception to the requirement?\",\"criteria\":{\"true\":\"The candidate removes or reduces what the requirement demands in stated circumstances.\",\"false\":\"The requirement remains unchanged; the candidate merely adds an obligation, remedy or option without reducing what is required.\"}},\"exp065\":{\"type\":\"noul\",\"instructions\":\"Does the candidate change the timing rule stated in the requirement?\",\"criteria\":{\"true\":\"The candidate changes the stated time limit, triggering event or time-computation rule.\",\"false\":\"The stated timing rule remains unchanged.\"}}}}",
+        "body_sha256": "5edc46eefa173536d8347e70050de2ba71b3a4e0a5aa12f4bebe8a759fca0b64"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "exp056": {
+          "type": "noul",
+          "noul": 0.85
+        },
+        "exp065": {
+          "type": "noul",
+          "noul": 0.7
+        }
+      },
+      "usage": {
+        "input_tokens": 462,
+        "output_tokens": 42,
+        "cost": 1.9404e-05
+      },
+      "id": "gen-dec-1790873489-HfUXUaGiHA6fQBRDf1RH",
+      "provider": "TypeSafe"
+    },
+    "diagnostics": {
+      "exp056": "YES",
+      "exp065": "YES"
+    },
+    "status": "answered",
+    "seconds": 0.35020612506195903
+  },
+  {
+    "case_id": "exp057+exp073",
+    "request_hash": "f2c1cac72fe992b68f8c4a592f639c9fd296aba0e02bee6f0c43c513c78dbe0c",
+    "started_at": "2026-10-01T16:51:30.234292+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "Under §6330(d)(1), Boechler had 30 days to pe-\ntition the Tax Court to review this collection due process\ndetermination.",
+            "candidate": "None of this is to say that Boechler is entitled to equitable\ntolling on the facts of this case. That should be determined\non remand. We simply hold that §6330(d)(1)’s filing dead-\nline, like most others, can be equitably tolled in appropriate\ncases.\n                         *    *    *\n  Section 6330(d)(1)’s 30-day time limit to file a petition for\nreview of a collection due process determination is an ordi-\nnary, nonjurisdictional deadline subject to equitable tolling.\nWe reverse the contrary judgment of the Court of Appeals\nand remand the case for further proceedings consistent\nwith this opinion."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "exp057": {
+              "type": "noul",
+              "instructions": "Does the candidate create an exception to the requirement?",
+              "criteria": {
+                "true": "The candidate removes or reduces what the requirement demands in stated circumstances.",
+                "false": "The requirement remains unchanged; the candidate merely adds an obligation, remedy or option without reducing what is required."
+              }
+            },
+            "exp073": {
+              "type": "noul",
+              "instructions": "Does the candidate change the timing rule stated in the requirement?",
+              "criteria": {
+                "true": "The candidate changes the stated time limit, triggering event or time-computation rule.",
+                "false": "The stated timing rule remains unchanged."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"Under §6330(d)(1), Boechler had 30 days to pe-\\ntition the Tax Court to review this collection due process\\ndetermination.\",\"candidate\":\"None of this is to say that Boechler is entitled to equitable\\ntolling on the facts of this case. That should be determined\\non remand. We simply hold that §6330(d)(1)’s filing dead-\\nline, like most others, can be equitably tolled in appropriate\\ncases.\\n                         *    *    *\\n  Section 6330(d)(1)’s 30-day time limit to file a petition for\\nreview of a collection due process determination is an ordi-\\nnary, nonjurisdictional deadline subject to equitable tolling.\\nWe reverse the contrary judgment of the Court of Appeals\\nand remand the case for further proceedings consistent\\nwith this opinion.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"exp057\":{\"type\":\"noul\",\"instructions\":\"Does the candidate create an exception to the requirement?\",\"criteria\":{\"true\":\"The candidate removes or reduces what the requirement demands in stated circumstances.\",\"false\":\"The requirement remains unchanged; the candidate merely adds an obligation, remedy or option without reducing what is required.\"}},\"exp073\":{\"type\":\"noul\",\"instructions\":\"Does the candidate change the timing rule stated in the requirement?\",\"criteria\":{\"true\":\"The candidate changes the stated time limit, triggering event or time-computation rule.\",\"false\":\"The stated timing rule remains unchanged.\"}}}}",
+        "body_sha256": "f341505f79ab81afdf5f037746a84390460319926ce312951f03e203c4bea15b"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "exp057": {
+          "type": "noul",
+          "noul": 0.54
+        },
+        "exp073": {
+          "type": "noul",
+          "noul": 0.21
+        }
+      },
+      "usage": {
+        "input_tokens": 590,
+        "output_tokens": 42,
+        "cost": 2.478e-05
+      },
+      "id": "gen-dec-1790873490-TsUB6jcfK5G84lq51DgQ",
+      "provider": "TypeSafe"
+    },
+    "diagnostics": {
+      "exp057": "YES",
+      "exp073": "NO"
+    },
+    "status": "answered",
+    "seconds": 0.3703322079963982
+  },
+  {
+    "case_id": "exp058+exp074",
+    "request_hash": "4ebc9bab39b82ca32eaa2ebff2c77fd72bdd1a7593af57093f05629fe5fef15a",
+    "started_at": "2026-10-01T16:51:30.607113+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "Under §6330(d)(1), Boechler had 30 days to pe-\ntition the Tax Court to review this collection due process\ndetermination.",
+            "candidate": "Jurisdictional requirements mark the bounds of a “court’s\nadjudicatory authority.” Kontrick v. Ryan, 540 U. S. 443,\n455 (2004)."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "exp058": {
+              "type": "noul",
+              "instructions": "Does the candidate create an exception to the requirement?",
+              "criteria": {
+                "true": "The candidate removes or reduces what the requirement demands in stated circumstances.",
+                "false": "The requirement remains unchanged; the candidate merely adds an obligation, remedy or option without reducing what is required."
+              }
+            },
+            "exp074": {
+              "type": "noul",
+              "instructions": "Does the candidate change the timing rule stated in the requirement?",
+              "criteria": {
+                "true": "The candidate changes the stated time limit, triggering event or time-computation rule.",
+                "false": "The stated timing rule remains unchanged."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"Under §6330(d)(1), Boechler had 30 days to pe-\\ntition the Tax Court to review this collection due process\\ndetermination.\",\"candidate\":\"Jurisdictional requirements mark the bounds of a “court’s\\nadjudicatory authority.” Kontrick v. Ryan, 540 U. S. 443,\\n455 (2004).\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"exp058\":{\"type\":\"noul\",\"instructions\":\"Does the candidate create an exception to the requirement?\",\"criteria\":{\"true\":\"The candidate removes or reduces what the requirement demands in stated circumstances.\",\"false\":\"The requirement remains unchanged; the candidate merely adds an obligation, remedy or option without reducing what is required.\"}},\"exp074\":{\"type\":\"noul\",\"instructions\":\"Does the candidate change the timing rule stated in the requirement?\",\"criteria\":{\"true\":\"The candidate changes the stated time limit, triggering event or time-computation rule.\",\"false\":\"The stated timing rule remains unchanged.\"}}}}",
+        "body_sha256": "c3f2803cd1d7709c886650834da4e0d299b46cd36f120bf04d778872f6e753cd"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "exp058": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "exp074": {
+          "type": "noul",
+          "noul": 0.05
+        }
+      },
+      "usage": {
+        "input_tokens": 488,
+        "output_tokens": 42,
+        "cost": 2.0496e-05
+      },
+      "id": "gen-dec-1790873490-R7nRR2ceNt5CS3JVG5qo",
+      "provider": "TypeSafe"
+    },
+    "diagnostics": {
+      "exp058": "NO",
+      "exp074": "NO"
+    },
+    "status": "answered",
+    "seconds": 0.5567108751274645
+  },
+  {
+    "case_id": "exp064+exp078",
+    "request_hash": "ea9460942667b7f1dc521ede9a5dc9793b43bc917c52e4322369e9fbce4f1610",
+    "started_at": "2026-10-01T16:51:31.165982+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "(f) In all other\ncases, unless there is an agreement between the landlord and the tenant to the\ncontrary regarding a specific entry, the landlord shall give the tenant at\nleast 24 hours’ actual notice of the intent of the landlord to enter and the\nlandlord or landlord’s agent may enter only at reasonable times. The landlord\nor landlord’s agent may not enter if the tenant, after receiving the landlord’s\nnotice, denies consent to enter. The tenant must assert this denial of consent\nby giving actual notice of the denial to the landlord or the landlord’s agent\nor by attaching a written notice of the denial in a secure manner to the main\nentrance to that portion of the premises or dwelling unit of which the tenant\nhas exclusive control, prior to or at the time of the attempt by the landlord\nor landlord’s agent to enter.",
+            "candidate": "(b) In case of an\nemergency, a landlord may enter the dwelling unit or any portion of the\npremises under a tenant’s exclusive control without consent of the tenant,\nwithout notice to the tenant and at any time. “Emergency” includes but is not\nlimited to a repair problem that, unless remedied immediately, is likely to\ncause serious damage to the premises. If a landlord makes an emergency entry in\nthe tenant’s absence, the landlord shall give the tenant actual notice within\n24 hours after the entry, and the notice shall include the fact of the entry,\nthe date and time of the entry, the nature of the emergency and the names of\nthe persons who entered."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "exp064": {
+              "type": "noul",
+              "instructions": "Does the candidate create an exception to the requirement?",
+              "criteria": {
+                "true": "The candidate removes or reduces what the requirement demands in stated circumstances.",
+                "false": "The requirement remains unchanged; the candidate merely adds an obligation, remedy or option without reducing what is required."
+              }
+            },
+            "exp078": {
+              "type": "noul",
+              "instructions": "Does the candidate change the timing rule stated in the requirement?",
+              "criteria": {
+                "true": "The candidate changes the stated time limit, triggering event or time-computation rule.",
+                "false": "The stated timing rule remains unchanged."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"(f) In all other\\ncases, unless there is an agreement between the landlord and the tenant to the\\ncontrary regarding a specific entry, the landlord shall give the tenant at\\nleast 24 hours’ actual notice of the intent of the landlord to enter and the\\nlandlord or landlord’s agent may enter only at reasonable times. The landlord\\nor landlord’s agent may not enter if the tenant, after receiving the landlord’s\\nnotice, denies consent to enter. The tenant must assert this denial of consent\\nby giving actual notice of the denial to the landlord or the landlord’s agent\\nor by attaching a written notice of the denial in a secure manner to the main\\nentrance to that portion of the premises or dwelling unit of which the tenant\\nhas exclusive control, prior to or at the time of the attempt by the landlord\\nor landlord’s agent to enter.\",\"candidate\":\"(b) In case of an\\nemergency, a landlord may enter the dwelling unit or any portion of the\\npremises under a tenant’s exclusive control without consent of the tenant,\\nwithout notice to the tenant and at any time. “Emergency” includes but is not\\nlimited to a repair problem that, unless remedied immediately, is likely to\\ncause serious damage to the premises. If a landlord makes an emergency entry in\\nthe tenant’s absence, the landlord shall give the tenant actual notice within\\n24 hours after the entry, and the notice shall include the fact of the entry,\\nthe date and time of the entry, the nature of the emergency and the names of\\nthe persons who entered.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"exp064\":{\"type\":\"noul\",\"instructions\":\"Does the candidate create an exception to the requirement?\",\"criteria\":{\"true\":\"The candidate removes or reduces what the requirement demands in stated circumstances.\",\"false\":\"The requirement remains unchanged; the candidate merely adds an obligation, remedy or option without reducing what is required.\"}},\"exp078\":{\"type\":\"noul\",\"instructions\":\"Does the candidate change the timing rule stated in the requirement?\",\"criteria\":{\"true\":\"The candidate changes the stated time limit, triggering event or time-computation rule.\",\"false\":\"The stated timing rule remains unchanged.\"}}}}",
+        "body_sha256": "f87455f6e5183c330e48cee6a842498a8200c0f90551785c592b3b053c5167ba"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "exp064": {
+          "type": "noul",
+          "noul": 0.79
+        },
+        "exp078": {
+          "type": "noul",
+          "noul": 0.51
+        }
+      },
+      "usage": {
+        "input_tokens": 723,
+        "output_tokens": 42,
+        "cost": 3.0366e-05
+      },
+      "id": "gen-dec-1790873491-HsxOAUGJLixnlRakxWla",
+      "provider": "TypeSafe"
+    },
+    "diagnostics": {
+      "exp064": "YES",
+      "exp078": "YES"
+    },
+    "status": "answered",
+    "seconds": 0.2530789589509368
+  }
+]

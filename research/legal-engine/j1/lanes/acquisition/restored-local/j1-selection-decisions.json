@@ -1,0 +1,78 @@
+{
+  "stage": "J1",
+  "further_retrieval": "held per root instruction",
+  "selection_decisions": [
+    {
+      "topic": "HOME TBRA instruments and currentness",
+      "decision": "Select the adopted 2026 plan, the executed 2025 provider agreements with their continuing-assets terms, and the July 2024 incorporated guideline/form bundle. Crossing a fiscal-year boundary does not establish a missing replacement agreement.",
+      "selected_sources": [
+        "CA-HB:HOME-PLAN-RES2026-10",
+        "Laserfiche7236879",
+        "Laserfiche7236885",
+        "Laserfiche6780479"
+      ],
+      "next_stage": "Read selected texts and reconcile their incorporated exhibits in J2. Add an amendment only when an actual source identifies it."
+    },
+    {
+      "topic": "MHTBRA reimbursement contract",
+      "decision": "Select the entire adopted 24-page 2022 guideline, including Exhibits A\u2013D. Sections V and VIII govern the contract term, reimbursement proof, recertification, and renewal. No separate named contract template is incorporated. Individual executed contracts are runtime case evidence.",
+      "selected_source": "https://huntingtonbeach.legistar.com/View.ashx?GUID=3FADEE64-EE55-443B-9E43-C08EF391CD2E&ID=11363129&M=F",
+      "next_stage": "Derive the adopted standard terms in the later semantic stage. Do not require tenant-specific contracts to finish jurisdiction selection."
+    },
+    {
+      "topic": "Ordinance 4348 and refuse amendment",
+      "decision": "Select Ordinance 4348 and its incorporated First Amendment, contained in the acquired 143-page attachment. Instrument identity and included units are established. A duplicate signed original is not a J1 requirement.",
+      "selected_source": "https://huntingtonbeach.legistar1.com/huntingtonbeach/attachments/fe9a6c1e-f21f-4eb9-988a-94909157eab9.pdf",
+      "local": "ord4348.pdf",
+      "status_precision": "The agenda attachment has blank enactment date and signature fields. The exact June 2 minutes record is 7348631, with 17 pages, but its publisher OCR is empty. No final-vote claim is made from unread page images. Existing official current-franchise sources remain relevant to status reconciliation.",
+      "next_stage": "Retrieve image text and reconcile adoption details in J2; do not substitute a viewer shell for document content."
+    },
+    {
+      "topic": "SBSD Article V amendment",
+      "decision": "Select Ordinance 22-01 and the January 11, 2024 Article V amendment as distinct versions. The adopted amendment became effective March 1, 2024. Official minutes establish which unit changed.",
+      "source": "https://www.sunsetbeachsd.org/wp-content/uploads/2024/03/January-11-2024-Minutes.pdf",
+      "next_stage": "Acquire the amendment body in J2. Do not infer its exact wording from the motion. The published 2022 Article V is still commercial-only and is not the amended version."
+    },
+    {
+      "topic": "SBSD local and state waivers",
+      "decision": "Select Resolution 2024-02-01 and the CalRecycle SB 613 waiver issued July 10, 2025. These are distinct local physical-space and state jurisdiction waiver instruments. Both belong in the layer independently of individual parcel evidence.",
+      "sources": [
+        "https://www.sunsetbeachsd.org/wp-content/uploads/2024/03/February-8-2024-Minutes.pdf",
+        "https://calrecycle.ca.gov/organics/slcp/waivers/approved/"
+      ],
+      "next_stage": "Capture full conditions in J2 and interpret them later. Individual property evidence does not determine whether these instruments belong in the jurisdiction register."
+    },
+    {
+      "topic": "SBSD fees and assessment actions",
+      "decision": "Select Resolution 2024-03-01, Resolution 2026-06-01, and the currently published July 2025 commercial schedule. The June 2026 roll was approved with two additional residential units and specified minor adjustments.",
+      "sources": [
+        "https://www.sunsetbeachsd.org/wp-content/uploads/2024/04/March-14-2024-Minutes.pdf",
+        "https://www.sunsetbeachsd.org/wp-content/uploads/2026/07/June-11-2026-BOE-Minutes.pdf",
+        "https://www.sunsetbeachsd.org/?page_id=2150"
+      ],
+      "next_stage": "Do not invent a 2026 commercial successor. Full resolution and parcel-roll capture does not create another instrument-selection decision."
+    },
+    {
+      "topic": "HB water and weed instruments",
+      "decision": "The four certified water and weed resolutions, including their actual exhibits, are selected. No remaining instrument-selection decision was identified.",
+      "records": [
+        6673617,
+        6673645,
+        7299406,
+        7386346
+      ],
+      "next_stage": "Capture and process the selected units in later stages."
+    }
+  ],
+  "adapter": {
+    "name": "laserfiche",
+    "files": [
+      "pipeline/adapters/laserfiche.py",
+      "pipeline/adapters/__init__.py",
+      "pipeline/tests/test_laserfiche.py"
+    ],
+    "validation": "Three focused tests passed. Live retrieval of all three pages of certified Resolution 2026-32 succeeded.",
+    "semantics": "Reads official publisher OCR; validates document identity and page count; supports explicit page selections; rejects empty OCR. Scanned minutes without publisher OCR require image acquisition in J2."
+  },
+  "jev_note": "The reviewed 34-subsection July 2024 run and its source followthrough are usable. The supplemental 57-passage MHTBRA run had fragmented OCR preparation; its REVIEW-NOTE.txt excludes it from coverage claims. No further runs or retrieval followed the hold."
+}

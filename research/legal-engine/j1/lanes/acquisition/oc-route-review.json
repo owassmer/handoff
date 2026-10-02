@@ -1,0 +1,58 @@
+{
+  "as_of": "2026-10-01",
+  "scope": [
+    "OC Title8 Fees",
+    "Supplement/ordinance history"
+  ],
+  "prior_evidence": [
+    "oc-remaining-route-attempts.json",
+    "oc-unit-route-updates.json"
+  ],
+  "new_source_observation": {
+    "official_directory": "https://pwds.oc.gov/service-areas/oc-development-services/building-safety/building-grading-information/codes",
+    "label": "Codified Ordinances County Of Orange, California",
+    "actual_href": "https://www.municode.com/resources/gateway.asp?pid=11378&sid=5",
+    "result": "403",
+    "meaning": "Observed legacy publisher product identifier11378. PDF icon on directory is not evidence of a downloadable code PDF. No Title8/history node revealed."
+  },
+  "new_probe": {
+    "url": "https://api.municode.com/Jobs/latest/11378",
+    "basis": "Existing adapter endpoint pattern plus publisher ID observed from official county link",
+    "result": "Inaccessible via web reader; no job ID, supplement, TOC schema or current edition established."
+  },
+  "mirror_attempt": {
+    "url": "https://orangecounty-ca.elaws.us/",
+    "basis": "Search returned Orange County Municipal Regulations of California",
+    "result": "Direct open failed; targeted Title8/history searches empty. No mirror document or version claim."
+  },
+  "adapter_assessment": [
+    {
+      "file": "pipeline/adapters/municode.py",
+      "line": 75,
+      "finding": "toc requires selected nodeId; code-root URL cannot execute a Title8selection."
+    },
+    {
+      "file": "pipeline/adapters/municode.py",
+      "line": 82,
+      "finding": "Reader recursively enumerates children, not selected node itself. Verified history leaf should use units[].section_list and source_unit_kind=document, not parent TOC enumeration."
+    },
+    {
+      "file": "pipeline/adapters/municode.py",
+      "line": 54,
+      "finding": "product always resolves Jobs/latest; historical/364200 URL does not pin edition. No historical acquisition asserted."
+    },
+    {
+      "file": "pipeline/adapters/municode.py",
+      "line": 62,
+      "finding": "Section fetch reads exact Id from CodesContent with NextNode continuation. This route exists but live OC payload not acquired."
+    }
+  ],
+  "stage_disposition": {
+    "title8": "J1 still needs an observed parent/leaf target or verified official replacement document. Named title alone plus guessedTIT8FE does not meet existing reader contract. This is not merely full-text J2failure.",
+    "history": "J1 still needs the actual history-table target and codification edition/cutoff evidence. Once identified, capture is J2.",
+    "other_OC_units": "Previously observed source-derived selectors remain valid proposals with stated currentness limits; no retraction or broader legal-completeness claim.",
+    "code_change": "None: no new observed schema supports a narrow implementation correction.",
+    "transport": "No evidence of changed transport. Web exposes indexed content/selected officialpages but Municode remains empty or inaccessible. Did not repeat prior shellDNS/state-list probes or bypass sandbox restrictions."
+  },
+  "additive_unit_updates": []
+}

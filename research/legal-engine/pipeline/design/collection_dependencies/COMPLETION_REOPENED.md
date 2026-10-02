@@ -1,0 +1,41 @@
+# Goal 3 completion audit after reopening
+
+Status: complete after final independent dependency, fee, calendar and integration review. This audit replaces the rejected completion standard; it does not count an unresolved interpretation or a precautionary service policy as a finished legal answer.
+
+## Original scope and strengthened requirement
+
+The original objective requires assigned-debt documentation, historical federal incorporation and tenancy-credit/participant applicability, all consequential dependencies, supported operating branches and independent substantive/adversarial review. The user's reopening requires the five previously recorded interpretation questions and necessary dependencies to be resolved before closure. The goal remains inside Handoff's full tenancy-ending aperture: automate useful work, preserve supported recovery and avoid unnecessary expense and litigation.
+
+## Evidence against each requirement
+
+| Requirement | Resolution and authoritative evidence | Completion evidence |
+|---|---|---|
+| Grounding and explicit acceptance boundary | Original attachment, PLAN.md, pilot records, Goals 1–2, HANDOFF_CONTEXT.md and GOAL.md | Original three investigations retained; reopened criteria explicitly require legal conclusions instead of search-limited deferrals. |
+| Assigned-debt documentation and relationships | Original assigned/FINDINGS.md and primary sources establish sections 1788.14.5/.50/.52, dates, records, possession/access, notices, translation and production. resolution_assigned/FINDINGS.md resolves qualifying assignment timing, later charge-off, buyer request expiry, early requests, successive collectors, submission/receipt and deemed compliance. | Independent resolution_assigned/INDEPENDENT_REVIEW.md accepted after challenging the pre-notice reasoning, later-charge-off consequence and source pinpoint. Exact reviewed findings hash is recorded. |
+| Frozen federal law and precise exceptions | federal/FINDINGS.md and full 2000 a–k sources inventory the incorporated b–j/k subdivisions and actual A/B exception. Current federal law remains a separate layer. resolution_federal/PLEADING_INITIAL_COMMUNICATION.md resolves the historical pleading duty, recipients, representation, dispute suspension and strongest contrary cases. | resolution_federal/INDEPENDENT_REVIEW.md accepted after the recipient correction; it independently resolves the litigation-privilege challenge. |
+| Tenancy-credit and collecting participant | Original tenancy/FINDINGS.md supplies actor and transaction authorities/current definitions. resolution_tenancy/FINDINGS.md resolves forbearance, genuine new credit, utilities, contractual versus tort damage, and substantive separation versus an integrated acquisition partly on credit. | Independent review found and corrected the mixed-bargain omission and Hagey version issue, challenged fixed-term rent and release-as-property arguments, and rechecked seven operating examples. |
+| Historical COVID transfer dependency | resolution_federal/COVID_ASSIGNMENT_SURVIVAL.md applies Rojas/Palermo to AB 832's express contrasting sunsets and historical definition. Original assigned sources and the independent review establish historical ERA/income predicates. | Affirmative survival conclusion accepted; no requirement for an unlocated fact-identical holding. Current program availability is not substituted for historical eligibility. |
+| Identity-theft review and concurrent consequences | federal/FINDINGS.md establishes 1788.18(d) and historical f(1). resolution_identity/FINDINGS.md completes the linked California civil remedy, records, federal reporting/transfer and report-acceptance rules. | Independent review passed after correcting exact notice, verification, recipient and clock details. It verifies 14 retained captures, explicitly distinguishing 13 substantive captures from one maintenance response. |
+| Notice, timing, licensing, delivery, fees and applicable current federal action rules | resolution_review/DEPENDENCY_AUDIT.md, FEE_RESOLUTION.md and resolution_identity/PENAL_RECORDS_CALENDAR.md supply concrete action conditions, dates, exceptions and source-based interpretations. | Independent review passed after correcting calendar, delivery and fee interpretations, incorporating the contrary AG opinion, explicit rental fee prohibitions and paired SB 611 versions. |
+| Integrated decisions and adverse examples | OPERATING_BRANCHES.md and RESOLVED_INTERPRETATIONS.md carry the legal conclusions into account investigation, communications, requests, recovery, settlements, holds and corrections. | Independent review passed all 20 decisions and 35 authored adverse cases; these are reasoned examples, not a model benchmark or observed tenant facts. |
+| Mechanism selection, history and plan | Agents investigate and challenge; code captures/checks source and review identities. No new high-volume semantic task required a Jev call. The completed configuration and reuse implementation is not changed. | Verified 7,962 protected historical files and 11 Goal 2 implementation files unchanged; 117 first-pass source hash records and 114 reopening source hash records match. Final fee source hashes and exact reviewed-report bindings are checked in RESOLUTION_VERIFICATION.json. PLAN.md and to-dos reconciled. |
+
+## What resolution means here
+
+Each reopened question now receives a selected legal interpretation, its statutory/authority basis, the strongest competing construction and the reason for rejecting it, followed by factual predicates and an operating consequence. A source's precedential weight remains accurately identified. A reasoned application is not falsely described as an appellate holding.
+
+Remaining actual-account facts are inputs to the resolved rules: agreements and acquisition, balance evidence, actual placement and charge-off, notice/service/receipt, representation, legal actor and license, historical household eligibility, consent and performed actions. The agent investigates those facts and recommends a coherent course. They do not reopen the abstract legal question or become routine operator homework.
+
+No claim is made that these rules establish an unidentified tenant's liability or that software execution has been deployed. Broader California source inventory and workflow implementation are separate goals; they cannot excuse a missing dependency required for the decisions resolved here.
+
+## Corrections retained in the record
+
+The prior closure was premature. The first analysis omitted a directly relevant published electricity decision, treated absence of exact holdings as unresolved law, and used precautions instead of answering some statutory questions. Reopening produced substantive changes, additional primary authority and new dependencies. Later review corrected integrated-bargain classification, attorney-recipient distinctions, state notice address/type rules, holiday computation, electronic-delivery details and identity-theft intake conditions. Prior reports, sources, experiments and the old operating synthesis are retained; current README.md identifies which resolutions supersede them.
+
+## Final closure
+
+All five reopened interpretation questions and the consequential dependencies identified by the substantive and independent reviews have legal conclusions and integrated action conditions. No remaining question is deferred because a search failed or an identical appellate holding was not found. Review changed conclusions where contrary authority warranted it, including the original-agreement fee route; retained source failure records are retrieval history, with necessary primary content recovered and read.
+
+The audit does not count hashing as substantive legal review. The independent reviews supply that review; verification binds their accepted texts and checks preservation. The general dependency report's earlier pending-fee sentence is a preserved checkpoint superseded by its separate final fee report and final review.
+
+Next sequential work is Goal 4: coverage tracking for the reusable research pipeline. The broader California inventory, legal branch implementation and workflow delivery remain in the overall plan. They do not contain a deferred answer to any of the five reopened questions.

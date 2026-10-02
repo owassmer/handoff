@@ -1,0 +1,629 @@
+{
+  "review_type": "independent_blind_saved_source_pilot_input_review",
+  "review_date": "2026-09-30",
+  "pilot": "ca_collection",
+  "independence": {
+    "author_labels_read": false,
+    "case_intent_read": false,
+    "model_results_read": false,
+    "review_completed_before_model_execution": true,
+    "limitations": [
+      "Same model family as parent; not independent-model or human legal adjudication.",
+      "Reviewer previously reviewed the task prompts and the earlier development family. The task wording is familiar; this is not an unexposed-task holdout.",
+      "No author labels or model outputs were available to this review.",
+      "Expected labels use only the corresponding request payload. Complete source texts were used separately for context and dependency assessment.",
+      "Saved-source experiment only; no assertion of complete or current legal coverage and no external authorities retrieved."
+    ]
+  },
+  "files_read": [
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/pipeline/design/agent_jev_code/pilots/ca_collection/requests.jsonl",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1788.1.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1788.10.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1788.11.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1788.12.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1788.13.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1788.14.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1788.15.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1788.16.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1788.17.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1788.18.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1788.2.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1788.20.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1788.21.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1788.22.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1788.3.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1788.30.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1788.32.txt",
+    "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/jurisdictions/CA/texts/CA_CIV/1788.33.txt"
+  ],
+  "input_assessment": {
+    "request_count": 43,
+    "source_file_count": 18,
+    "ready_for_development_run": true,
+    "blocking_defects": [],
+    "notes": [
+      "Full-body request scans intentionally exclude headings and enactment history; definition/reference labels apply only to the supplied body.",
+      "Collection07 is a useful embedded-definition boundary case; retain the rationale rather than requiring a means keyword.",
+      "Repeated complete-body passages test presence detection, not completeness of a dependency graph."
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "collection01",
+      "request_hash": "957d739a08101a0c7d3e54b5d63fd1f7f6c6f173d42d6c13ed4aee6fe98cf300",
+      "task": "definition_present",
+      "expected": "NO",
+      "reason": "Findings, purpose, licensing limitation and temporal application do not assign a meaning to a term.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection02",
+      "request_hash": "04899ac77624c35477391af021e27cf770e2503f9b7904ba9ea9215f99eff666",
+      "task": "reference_present",
+      "expected": "YES",
+      "reason": "This title and Financial Code Division 25 commencing with Section 100000 are explicit legal-unit references.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection03",
+      "request_hash": "5d125ceca9b4270fdd6c9e5730aded2bdc609a2ad8d7b6b6085a073a93d6abdc",
+      "task": "definition_present",
+      "expected": "NO",
+      "reason": "The focus prohibits collection conduct; it does not assign meanings to terms.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection04",
+      "request_hash": "c71048cd4a58265ffac4028d19d501778b9860dfb7412909fec7fbb08d87acf3",
+      "task": "reference_present",
+      "expected": "YES",
+      "reason": "Subdivision (f) explicitly refers to this title.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection05",
+      "request_hash": "1df5b92fe425d5cf4dc90e5b64edfdbabbeb2a795be49ec16ac0cadb7221aed6",
+      "task": "definition_present",
+      "expected": "NO",
+      "reason": "The focus sets communication prohibitions and identification requirements, without an explicit definition.",
+      "ambiguity_or_context_defects": [
+        "The phrase constitute harassment describes the prohibited frequency in context; it does not expressly assign a general meaning to harassment."
+      ],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection06",
+      "request_hash": "827fa24d6ab91f7b428f6cd5b04d94db07be5a3f38d45740da92e50152d45a25",
+      "task": "reference_present",
+      "expected": "NO",
+      "reason": "The focus has no explicit provision reference; a license number is not a legal-unit citation.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection07",
+      "request_hash": "165caee211d401ec72d25741d04f80518c4bb052a7693c09dd082339e42ac464",
+      "task": "definition_present",
+      "expected": "YES",
+      "reason": "Subdivision (a) expressly limits what counts as a communication necessary to collection, an embedded assignment of meaning. Subdivision (c) also associates a described class of lists with deadbeat lists.",
+      "ambiguity_or_context_defects": [
+        "Boundary case for embedded definitions: necessary only if states a necessary condition, not a complete biconditional definition. Under the prompt’s inclusion of embedded meaning assignments this supports YES. The commonly known as alias supplies additional lexical evidence, but need not carry the judgment alone."
+      ],
+      "actionable_corrections": [
+        "Preserve the embedded-definition rationale and explicitly distinguish a necessary-condition meaning constraint from a complete definition when recording extracted content."
+      ]
+    },
+    {
+      "case_id": "collection08",
+      "request_hash": "ab07e3396eacfe43aef059612f995c29b13b32f5478f77b5595a85d1eb327824",
+      "task": "reference_present",
+      "expected": "YES",
+      "reason": "Subdivision (e) expressly refers to the foregoing provisions of this section and this title.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection09",
+      "request_hash": "24f61cab61bbcc5d0194b0fc55510bd7563644f40c5023b8985bd3755f992aaa",
+      "task": "definition_present",
+      "expected": "NO",
+      "reason": "The focus lists false representations and unauthorized communications, without defining a term.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection10",
+      "request_hash": "4ae930ccbd616c065992eb994e773bc3e86bd9f931d4288e902a1a9036db74a7",
+      "task": "reference_present",
+      "expected": "NO",
+      "reason": "The focus has no explicit reference to another provision or enclosing legal unit.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection11",
+      "request_hash": "ae62172f90a4a732d6170bb49bc85373d7cf5d51e34b3e15a61496e5efde6b32",
+      "task": "definition_present",
+      "expected": "YES",
+      "reason": "Subdivision (f) explicitly defines first written communication.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection12",
+      "request_hash": "ea105d30f4ec7ff0d748adcc722bf3ac055ca50c00b73d98b453b33e2c5a40b1",
+      "task": "reference_present",
+      "expected": "YES",
+      "reason": "The focus cites federal Fair Credit Reporting Act Section 605(a), Health and Safety Code Sections 1250 and 127425, and this subdivision/section.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection13",
+      "request_hash": "e645370980d6bb97578501c104e992bf6f1543b4ab8296fdf7bf878409227852",
+      "task": "definition_present",
+      "expected": "NO",
+      "reason": "Judicial collection restrictions, a venue exception and a temporal rule do not explicitly assign a term meaning.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection14",
+      "request_hash": "357a65d7e300a49f3e0f4827a2bd9879b99766a63a715e622770bba2c599754b",
+      "task": "reference_present",
+      "expected": "YES",
+      "reason": "Subdivision (c) expressly references subdivision (b); subdivision (d) references this section.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection15",
+      "request_hash": "28e9fb7ec6128823b4232812dd41dfd77ebcd83e9efe11b0f3973332ecf072e0",
+      "task": "definition_present",
+      "expected": "NO",
+      "reason": "The focus prohibits simulated process and attaches a misdemeanor consequence, without assigning a meaning to a term.",
+      "ambiguity_or_context_defects": [
+        "Calling a violation a misdemeanor is an operative legal classification; counting every legal consequence as a term definition would collapse the task boundary."
+      ],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection16",
+      "request_hash": "b753d6ed445beccc506ca79bcc244e607538dde5af0393a6fb763f33c36a4e54",
+      "task": "reference_present",
+      "expected": "YES",
+      "reason": "The phrase provisions of this section expressly refers to the enclosing legal unit.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection17",
+      "request_hash": "4d647479a1831eef06cd231a3b9bceaceb40fa4de2628df7cc1d9cac284f4784",
+      "task": "definition_present",
+      "expected": "NO",
+      "reason": "The focus incorporates federal duties and remedies, states exceptions and freezes the referenced version; it does not expressly adopt a term definition.",
+      "ambiguity_or_context_defects": [
+        "Incorporation of substantive federal requirements and selection of a dated version should not be conflated with adoption of a term definition. No as-defined or equivalent assignment appears."
+      ],
+      "actionable_corrections": [
+        "When routing dependencies, record federal incorporation and its frozen version separately from definition-adoption edges."
+      ]
+    },
+    {
+      "case_id": "collection18",
+      "request_hash": "843b1543ce45855bb7a68c29c992000e4989d5e71f926a4b46bc0f48559a3e3e",
+      "task": "reference_present",
+      "expected": "YES",
+      "reason": "The focus expressly cites this title and multiple provisions of Title 15 of the United States Code.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection19",
+      "request_hash": "feabae58e9921b9620da9c0d39d973f862e239c876de98aaa1f2f8d07e1d939f",
+      "task": "definition_present",
+      "expected": "YES",
+      "reason": "Subdivision (i) explicitly defines debtor for this section.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection20",
+      "request_hash": "f80a1b208009be17fee49d2d79098a1ed04a5f762dbf9b7f3e779b9d4e65c4d0",
+      "task": "reference_present",
+      "expected": "YES",
+      "reason": "The focus contains explicit subdivision references and citations to CIV 1788.2, 1788.17, 1798.93, Penal Code provisions and federal law.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection21",
+      "request_hash": "b5ebe5ebcff5d75530d50f505bf24f98f6684034aa24f636675e700b11555858",
+      "task": "definition_present",
+      "expected": "YES",
+      "reason": "The focus expressly defines multiple terms, including debt collection, debt collector, consumer debt, debtor and covered commercial credit.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection22",
+      "request_hash": "c2fc05c5a432be659b3668bec5f2af48884fa8ec840e8e65da6103a70a0a4d98",
+      "task": "reference_present",
+      "expected": "YES",
+      "reason": "The focus references this title, CIV 1788.18 and 1788.50, Financial Code 22800 and Vehicle Code 285.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection23",
+      "request_hash": "e3ab9538e1d002d2744e56c840b67bfbee90350998e35a9e0dad853ee5c68ee0",
+      "task": "definition_present",
+      "expected": "NO",
+      "reason": "The focus prohibits improper credit applications, without explicitly defining a term.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection24",
+      "request_hash": "5b8d379a574865af52bdd0de55b91cc910817e3e881dd16cbb8568208fde7dc8",
+      "task": "reference_present",
+      "expected": "NO",
+      "reason": "No explicit provision or enclosing-unit reference appears; terms and conditions of the credit extension refer to the transaction.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection25",
+      "request_hash": "8e4bb619eb1502026ae334d7fc263a35e931890535f8f62ca03399670c574ca7",
+      "task": "definition_present",
+      "expected": "NO",
+      "reason": "The focus creates notification responsibilities and a disclosure condition, without defining a term.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection26",
+      "request_hash": "7e700aba58e4f077faa7caee743df9801fec76aa81f0bbbed41c0f22d41cbf1d",
+      "task": "reference_present",
+      "expected": "YES",
+      "reason": "Subdivision (b) explicitly references subdivision (a).",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection27",
+      "request_hash": "4bdae1341f06c79b4c7720da27d416ea047157263dbf86a31b0da48f0cca4b46",
+      "task": "definition_present",
+      "expected": "NO",
+      "reason": "The focus creates account-use and notification responsibilities and a disclosure condition, without defining a term.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection28",
+      "request_hash": "652b009ee68c50123ca4e7c62bb5fcdfe7e3645a1fc8987a1ce1ef794bc718f4",
+      "task": "reference_present",
+      "expected": "YES",
+      "reason": "Subdivision (b) explicitly references subdivision (a).",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection29",
+      "request_hash": "6a3cded68795e9adac5c198aa41d8387ea33223956b8a89cdf94b6f8f75ba580",
+      "task": "definition_present",
+      "expected": "NO",
+      "reason": "The focus preserves specified credit-union disclosures; charter descriptions do not explicitly assign a meaning to a term.",
+      "ambiguity_or_context_defects": [
+        "Chartered under a cited law describes the institutions covered by the savings rule; it does not explicitly define credit union."
+      ],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection30",
+      "request_hash": "1c1e525f568bc43bec33f1cadfa862324ef0fecd6548edc9878293cfec6e8f33",
+      "task": "reference_present",
+      "expected": "YES",
+      "reason": "The focus references this title, Financial Code Division 5 commencing with Section 14000, and federal Title 12 Chapter 14 commencing with Section 1751.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection31",
+      "request_hash": "0444f5d89f5f7d021f412f13b124e6263c86f5c7566132ffa441a638bbb35452",
+      "task": "definition_present",
+      "expected": "NO",
+      "reason": "Liability, damages, fees, defenses and time limits are operative rules rather than explicit term definitions.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection32",
+      "request_hash": "b4ce4f4043cc7c629c98edef7c8d7dd43ccd74ec6cdb80ec02a5c245c9509633",
+      "task": "reference_present",
+      "expected": "YES",
+      "reason": "Repeated this title and this section phrases explicitly refer to enclosing legal units.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection33",
+      "request_hash": "011835d273f453f43bcfecdb26cb528a19fdc873736d8b65278978769deea1e7",
+      "task": "definition_present",
+      "expected": "NO",
+      "reason": "The focus provides cumulative remedies and a regulatory savings rule, without defining a term.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection34",
+      "request_hash": "5198741679883fa515613af6063767a3afd6172dde273e7c42a6688be7b09fe1",
+      "task": "reference_present",
+      "expected": "YES",
+      "reason": "This title expressly identifies an enclosing legal unit.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection35",
+      "request_hash": "113c82970c6f6c7a2f668ad8d29d9a9fe61f33c74375e30aa5e3b4be2b338049",
+      "task": "definition_present",
+      "expected": "NO",
+      "reason": "Making a waiver void and unenforceable is an operative rule, not a definition of waiver.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection36",
+      "request_hash": "b4b1403e1495edfa12b5e1ef2aba8018c423c4a8ff7edb5b743482055ab4dff8",
+      "task": "reference_present",
+      "expected": "YES",
+      "reason": "The provisions of this title is an explicit enclosing-unit reference.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection37",
+      "request_hash": "ac2583807676cda2c5fe69334c320dcf50b78b21785cf9413f46cab4defbfee6",
+      "task": "candidate_term_use",
+      "expected": "YES",
+      "reason": "Debt collector appears in the use for a person collecting debt, matching the definition’s kind of subject. This is only a candidate connection.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection38",
+      "request_hash": "8c127152527e706adf355fccf400d67c931fa5715eebd6017a5ac581ef7dcd7d",
+      "task": "candidate_term_use",
+      "expected": "YES",
+      "reason": "Debtor appears in the use for the person from whom the collector seeks the disputed debt, the same broad kind of subject. Candidate matching does not decide the definition’s express exception for Section 1788.18.",
+      "ambiguity_or_context_defects": [
+        "The definition itself flags an exception for Section 1788.18. The candidate YES must not bypass that exception. The local definition is omitted from this particular payload, so no conclusion about the operative debtor definition follows."
+      ],
+      "actionable_corrections": [
+        "Follow the express exception to Section 1788.18(i) before selecting an operative definition. Do not change this candidate-only task into a governance decision."
+      ]
+    },
+    {
+      "case_id": "collection39",
+      "request_hash": "52ccad43f7f306b5808f2c041894f3f9bc752ee647753b393259414fe3b55347",
+      "task": "candidate_term_use",
+      "expected": "YES",
+      "reason": "Consumer debt appears in the use as the debt being collected, the same kind of obligation described by the definition; technical coverage is not decided.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection40",
+      "request_hash": "5b2bd93a79780ecd472a47032eddfceefe619104c1d3438a9f95bdc4f6294dfe",
+      "task": "scope_includes_use",
+      "expected": "YES",
+      "reason": "The scope expressly reaches the title, and both supplied locations are in Title 1.6C despite different articles.",
+      "ambiguity_or_context_defects": [
+        "The use starts with a notwithstanding clause. It does not change the location-based scope answer, but downstream legal governance requires separate interpretation."
+      ],
+      "actionable_corrections": [
+        "Retain title-level containment rather than requiring equal article identifiers."
+      ]
+    },
+    {
+      "case_id": "collection41",
+      "request_hash": "0f12195c2b6e3edf6b3a7705dcf92f7cddb21754c8777cd0619b55b578aa434d",
+      "task": "scope_includes_use",
+      "expected": "YES",
+      "reason": "For the purposes of this section reaches the use in the same supplied section, CIV 1788.18.",
+      "ambiguity_or_context_defects": [],
+      "actionable_corrections": []
+    },
+    {
+      "case_id": "collection42",
+      "request_hash": "68b189f291706fa99f179b3b5a9558b9ef703c5b4455860498fefec27f38b5b1",
+      "task": "scope_includes_use",
+      "expected": "NO",
+      "reason": "The local debtor definition expressly reaches Section 1788.18; the use is located in Section 1788.17.",
+      "ambiguity_or_context_defects": [
+        "The final sentence extends title remedies to violations of the section; it does not extend the preceding local debtor definition to other sections."
+      ],
+      "actionable_corrections": [
+        "Anchor the definition scope to its own clause; keep the separate remedy sentence as a separate relationship."
+      ]
+    },
+    {
+      "case_id": "collection43",
+      "request_hash": "17a5aa795e122c19e6b491f10c3e43c7cc026291d688f3108caa7db8b55cf4af",
+      "task": "scope_includes_use",
+      "expected": "INSUFFICIENT",
+      "reason": "The use hierarchy is null. The title-wide scope and section numbers alone do not establish the use’s membership in that title.",
+      "ambiguity_or_context_defects": [
+        "This is the deliberate missing-hierarchy control. Full source headings reveal the hierarchy, but using them to fill the withheld payload would invalidate the control."
+      ],
+      "actionable_corrections": [
+        "Keep the missing hierarchy unfilled for this control; in production route INSUFFICIENT to source-backed hierarchy recovery."
+      ]
+    }
+  ],
+  "expected_label_counts": {
+    "YES": 24,
+    "NO": 18,
+    "INSUFFICIENT": 1
+  },
+  "missing_hierarchy_control": {
+    "case_id": "collection43",
+    "expected": "INSUFFICIENT",
+    "excluded_from_natural_source_context_failures": true,
+    "reason": "Use hierarchy is intentionally null; section proximity and independently inspected headings must not fill that omission."
+  },
+  "important_full_source_dependencies": [
+    {
+      "id": "D1",
+      "source": [
+        "CIV 1788.2(a)-(m)"
+      ],
+      "relationship": "definition chain and title scope",
+      "agent_action": "Trace debt collector through debt collection and covered debt; distinguish consumer debt/credit from covered commercial debt/credit, and follow consumer credit transaction and person. Title scope crosses articles. Candidate term matches are not final definition selection."
+    },
+    {
+      "id": "D2",
+      "source": [
+        "CIV 1788.2(h)",
+        "CIV 1788.18(i)"
+      ],
+      "relationship": "express local override",
+      "agent_action": "Follow the default debtor definition’s explicit exception to the section-local debtor definition. The local definition includes listed entities as well as natural persons. Keep its section-only scope separate from the title-remedy sentence."
+    },
+    {
+      "id": "D3",
+      "source": [
+        "CIV 1788.17",
+        "CIV 1788.18(d)"
+      ],
+      "relationship": "dated federal incorporation and exceptions",
+      "agent_action": "Recover the incorporated 15 USC 1692b-1692j duties and 1692k remedies in the version specified as January 1, 2001. Follow the 1692e(11)/1692g carveout via 1692a(6)(A)-(B), and the 1788.18(d) link to 1692f(1). Do not substitute current federal text or assume federal actor definitions resolve California coverage."
+    },
+    {
+      "id": "D4",
+      "source": [
+        "CIV 1788.2(n)-(p)"
+      ],
+      "relationship": "commercial thresholds, valuation, exclusions and external definitions",
+      "agent_action": "Follow the aggregate-credit limit and transaction valuation rules, trade-credit exclusion, dealer/affiliate financing exclusion, and lease-financing carveout. Recover Financial Code 22800, CIV 1788.50, and Vehicle Code 285 for their referenced definitions before resolving commercial coverage."
+    },
+    {
+      "id": "D5",
+      "source": [
+        "CIV 1788.1(c)-(d)",
+        "CIV 1788.15(c)-(d)"
+      ],
+      "relationship": "licensing savings, temporal application and venue exception",
+      "agent_action": "Track the July 1, 2025 transaction-event gate separately from the sold-or-assigned delinquent-commercial-debt gate in 1788.15(d). Preserve the guaranty venue exception and follow the Financial Code Division 25 licensing context when that issue matters."
+    },
+    {
+      "id": "D6",
+      "source": [
+        "CIV 1788.18(a)-(h)"
+      ],
+      "relationship": "identity-theft collection stop, review, resumption and notifications",
+      "agent_action": "Follow (a) to the alternative statement requirements in (b), incomplete/oral notice handling in (c), review and pre-resumption notice in (d), nonpresumption rule in (e), and termination notifications in (g). Separate each 10-business-day trigger; stopping or resuming does not adjudicate validity. Follow CIV 1798.93(c)(5) and Penal Code 530.5/530.8 where relevant."
+    },
+    {
+      "id": "D7",
+      "source": [
+        "CIV 1788.14(d)-(f)"
+      ],
+      "relationship": "time-barred and hospital-debt notice branches",
+      "agent_action": "Recover 15 USC 1681c/Section 605(a) to select the obsolescence branch; follow Health and Safety Code 1250(a) and 127425(e) for hospital coverage and required notice. Preserve the hospital lawsuit waiting period and the local first-written-communication definition."
+    },
+    {
+      "id": "D8",
+      "source": [
+        "CIV 1788.12(a)-(e)",
+        "CIV 1788.3"
+      ],
+      "relationship": "communication exceptions and savings",
+      "agent_action": "Follow employer-contact necessity, written-consent routes, writing/oral exceptions and timing, then the legitimate-business-need savings clause in 1788.12(e). Consider the separate credit-union disclosure savings rule and its charter references when applicable."
+    },
+    {
+      "id": "D9",
+      "source": [
+        "CIV 1788.14(a)-(c)",
+        "CIV 1788.15(a)-(c)"
+      ],
+      "relationship": "external legal predicates and conditional restrictions",
+      "agent_action": "A reference-presence result does not enumerate every legal dependency. Bankruptcy discharge, fees permitted by law, valid service, judgment status and attorney representation require separate factual/legal resolution; preserve their express exceptions."
+    },
+    {
+      "id": "D10",
+      "source": [
+        "CIV 1788.21(b)",
+        "CIV 1788.22(b)"
+      ],
+      "relationship": "condition on debtor duties",
+      "agent_action": "Do not apply subdivision (a) responsibilities without checking the prior clear and conspicuous written disclosure condition in (b)."
+    },
+    {
+      "id": "D11",
+      "source": [
+        "CIV 1788.30",
+        "CIV 1788.32",
+        "CIV 1788.33",
+        "CIV 1788.17"
+      ],
+      "relationship": "remedies, defenses, cumulative rights and antiwaiver",
+      "agent_action": "Read actual damages, knowing/willful penalty, fee rules, cure, unintentional-error defense, action limit and debtor-violation defense with the cumulative-remedies and antiwaiver provisions. Reconcile rather than silently merge state remedies with federally incorporated remedies; resolve textual tensions with further authority if an actual decision requires it."
+    }
+  ],
+  "overall_findings": [
+    {
+      "priority": "high",
+      "finding": "Candidate debtor matching cannot select the governing definition.",
+      "cases": [
+        "collection38",
+        "collection41",
+        "collection42"
+      ],
+      "correction": "Follow the explicit exception and local definition before legal application; preserve separate candidate and scope outputs."
+    },
+    {
+      "priority": "high",
+      "finding": "Federal incorporation is explicitly frozen to January 1, 2001.",
+      "cases": [
+        "collection17",
+        "collection18",
+        "collection37",
+        "collection39",
+        "collection40"
+      ],
+      "correction": "Retrieve the specified historical federal text for downstream interpretation; presence detection alone cannot resolve duties or carveouts."
+    },
+    {
+      "priority": "medium",
+      "finding": "Presence NO does not mean no semantic or operative dependency.",
+      "correction": "Continue following conditions, exceptions, defined terms and external legal predicates even where no explicit provision citation is present."
+    },
+    {
+      "priority": "medium",
+      "finding": "The frozen prompts retain tenancy-specific boilerplate in a debt-collection pilot. It does not alter these labels, but is narrower than the domain.",
+      "correction": "For a later prompt version, replace applicability to a tenancy with applicability to a real matter. Do not change frozen prompts mid-run."
+    },
+    {
+      "priority": "medium",
+      "finding": "All three candidate-term cases are positive; scope has one negative and one artificial missing-context control. No qualification task appears in this pilot.",
+      "correction": "Report findings per task and avoid claiming broad negative discrimination or qualification performance from this pilot."
+    },
+    {
+      "priority": "low",
+      "finding": "Several section bodies contain internal references, operative classifications and meaning constraints with different roles.",
+      "correction": "Keep definition assignment, citation presence, substantive incorporation and operative effects as distinct relation types."
+    }
+  ],
+  "provenance_checks": {
+    "checked_passage_count": 50,
+    "all_source_hashes_match": true,
+    "all_character_spans_match": true,
+    "mismatches": []
+  }
+}

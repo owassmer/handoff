@@ -1,0 +1,191 @@
+{
+  "format": "section-semantics-balanced-independent-adjudication-1",
+  "reviewer": "/root/reference_final_audit",
+  "model_responses_seen": true,
+  "independent_pre_dispatch_labels_preserved": true,
+  "binding_sha256": {
+    "plan.json": "b5b7291162163e4cbf033949311836b2a8340ee97ba1e1a13a3d815c1ebd7548",
+    "review.json": "31e291d8f4e71a05a9cc47299a80ece9ee5b735bc34090e1a5d8c3e2b95b1ffb",
+    "independent_expectations.json": "0f04fe9042f866ff01858b5d98d73efc5080bdea538408a6e9542f56f5d51798",
+    "policies.json": "5dd25cef95c97d0b9befd4287cf84cda2da4dca4a6964bee12c7e8cd11329283",
+    "run_1/PRE_DISPATCH.json": "3d6557042c2ff650039693b1ea4182628cdfd0a0c783834ca942a279539360f0",
+    "run_1/execution/results.json": "96d9dc61c514704a64cd087f8348b7c5ee679904a6686333c71e86062193112d",
+    "run_1/replayed.json": "646b03582a43903271e4559efab05f2bf0026659413ef12b4a474ab2a331d891",
+    "run_1/comparison.json": "593b0485b47968e5d07db925f16004e0c6992d4453e23e54c8ae54ab611abbe0",
+    "run_1/PREPARATION_FINDING.json": "32700c27c8dea558ded63219e9d26adb4a00e17ad44b9fbe66bc527b7217f45e"
+  },
+  "verification": {
+    "wire_groups_match": 6,
+    "raw_build_matches": 6,
+    "source_spans_verified": 6,
+    "implementation_copies_verified": 17,
+    "implementation_files": [
+      "semantics/__init__.py",
+      "semantics/compose.py",
+      "semantics/consumer.py",
+      "semantics/evaluate.py",
+      "semantics/freeze.py",
+      "semantics/plan.py",
+      "semantics/prepare.py",
+      "semantics/replay.py",
+      "semantics/requirements.py",
+      "semantics/research.py",
+      "semantics/run.py",
+      "semantics/templates.py",
+      "jev.py",
+      "jev_results.py",
+      "design/task_evaluation/run.py",
+      "design/task_evaluation/batching.py",
+      "design/task_evaluation/tasks.py"
+    ],
+    "declared_sdk_version": "0.7.1",
+    "reported_cost": "0.000128016",
+    "thresholds": {
+      "false_at_most": 0.1,
+      "true_at_least": 0.9
+    },
+    "expected_established": 15,
+    "abstentions": 1,
+    "opposite_determinate": 0,
+    "positive_established": 8,
+    "negative_established": 7,
+    "uncertain_target_absent": true
+  },
+  "rows": [
+    {
+      "job": "j001",
+      "expected_upheld": true,
+      "raw_noul": 0.97,
+      "policy_answer": true,
+      "classification": "expected_established"
+    },
+    {
+      "job": "j002",
+      "expected_upheld": false,
+      "raw_noul": 0.24,
+      "policy_answer": null,
+      "classification": "abstention"
+    },
+    {
+      "job": "j003",
+      "expected_upheld": true,
+      "raw_noul": 0.98,
+      "policy_answer": true,
+      "classification": "expected_established"
+    },
+    {
+      "job": "j004",
+      "expected_upheld": false,
+      "raw_noul": 0.03,
+      "policy_answer": false,
+      "classification": "expected_established"
+    },
+    {
+      "job": "j005",
+      "expected_upheld": true,
+      "raw_noul": 0.98,
+      "policy_answer": true,
+      "classification": "expected_established"
+    },
+    {
+      "job": "j006",
+      "expected_upheld": false,
+      "raw_noul": 0.02,
+      "policy_answer": false,
+      "classification": "expected_established"
+    },
+    {
+      "job": "j007",
+      "expected_upheld": true,
+      "raw_noul": 0.98,
+      "policy_answer": true,
+      "classification": "expected_established"
+    },
+    {
+      "job": "j008",
+      "expected_upheld": false,
+      "raw_noul": 0.02,
+      "policy_answer": false,
+      "classification": "expected_established"
+    },
+    {
+      "job": "j009",
+      "expected_upheld": true,
+      "raw_noul": 0.98,
+      "policy_answer": true,
+      "classification": "expected_established"
+    },
+    {
+      "job": "j010",
+      "expected_upheld": false,
+      "raw_noul": 0.02,
+      "policy_answer": false,
+      "classification": "expected_established"
+    },
+    {
+      "job": "j011",
+      "expected_upheld": true,
+      "raw_noul": 0.97,
+      "policy_answer": true,
+      "classification": "expected_established"
+    },
+    {
+      "job": "j012",
+      "expected_upheld": false,
+      "raw_noul": 0.1,
+      "policy_answer": false,
+      "classification": "expected_established"
+    },
+    {
+      "job": "j013",
+      "expected_upheld": true,
+      "raw_noul": 0.95,
+      "policy_answer": true,
+      "classification": "expected_established"
+    },
+    {
+      "job": "j014",
+      "expected_upheld": false,
+      "raw_noul": 0.1,
+      "policy_answer": false,
+      "classification": "expected_established"
+    },
+    {
+      "job": "j015",
+      "expected_upheld": false,
+      "raw_noul": 0.06,
+      "policy_answer": false,
+      "classification": "expected_established"
+    },
+    {
+      "job": "j016",
+      "expected_upheld": true,
+      "raw_noul": 0.92,
+      "policy_answer": true,
+      "classification": "expected_established"
+    }
+  ],
+  "j002_adjudication": {
+    "expected": false,
+    "expectation_status": "upheld",
+    "reason": "90.322(1)(b) says includes but is not limited to. The candidate means only the described repair scenario converts an expressly open definition into a closed one. That is not the source meaning.",
+    "raw_noul": 0.24,
+    "classification": "threshold_abstention_not_a_determinate_wrong_answer",
+    "diagnosis": "No evidence selection defect: the complete defining sentence with nonexhaustive language is present. The question asks fidelity of an entire candidate meaning. Its included repair example is correct, while only is wrong. This is a valid negative whole-meaning test, but it bundles example membership and exhaustiveness.",
+    "hypothesis_status": "PREPARATION_FINDING is plausible but unproved. A score of.24 does not reveal whether scope, lexical similarity, grouping, inference variability or another factor caused the abstention.",
+    "correction": "For the next distinct task ask: Does this definition limit emergencies to the repair situation it describes? Expected false on this source. License only the exhaustiveness finding, not the complete definition or example membership. Do not retroactively replace the original job or label."
+  },
+  "other_expectations": "All other15 labels upheld by direct reading of the six selected defining/condition passages. Inclusion/exclusion pairs, negation and OR-versus-necessity distinctions match the source. j012 andj014 at.10 are correctly admitted false because the declared boundary is inclusive.",
+  "code_assessment": "Copied compose.py outcome uses <=low and >=high, leaves the intervening region uncertain, and compose emits no accepted target for uncertain outcomes. Actual j002 result/absence matches that code. Hash checks cover frozen implementation copies; this is not an audit of every unrelated code path or independent proof of an installed SDK binary.",
+  "limitations": [
+    "Opposite candidates share the same request and source. Mutual cues can assist discrimination; this supports only this grouped configuration.",
+    "Changing wording, candidate granularity and grouping together cannot identify which change caused a score difference.",
+    "Six shared contexts and16 authored development controls are not16 independent population samples.",
+    "Balanced selected labels do not establish calibrated probabilities or justify changing the thresholds.",
+    "No heldout claim; these controls were derived after earlier response exposure.",
+    "No whole-section closure or actual operating-case consumer success;509 independent requirements remain.",
+    "Same-model-family independent review."
+  ],
+  "preserved_originals": true,
+  "live_calls": 0
+}

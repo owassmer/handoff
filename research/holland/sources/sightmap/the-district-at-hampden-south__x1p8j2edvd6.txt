@@ -1,0 +1,34 @@
+SOURCE: https://sightmap.com/embed/x1p8j2edvd6 (page) -> https://sightmap.com/app/api/v1/8ywkl2z9vlx/sightmaps/108083 (the embed's own JSON feed, fetched with curl)
+RETRIEVED: 2026-09-30
+ASSET: The District at Hampden South | units on map: 30
+
+FEES/EXPENSES (label | type | frequency | required | refundable | amounts seen across units | tooltip)
+- Application Screening Fee (Non-refundable) | application | one time | req=True | refundable=False | $26.75 | No screening fee is required with qualified PTSR
+- Deposit (Refundable) | deposit | one time | req=True | refundable=False | $300.00 | May increase to up to one month's rent based on screening.
+- Holding Fee (May or may not be refundable) | holding | one time | req=True | refundable=True | $300.00 | Refundable if not approved of cancel w/in 24 hours. Applied to total deposit due at move in.
+- Monthly Administrative Billing Fee | utilities_admin | month | req=True | refundable=False | $5.00 | Monthly billing to resident by third party of rent, mandatory and optional charges such as utilities (if applicable), trash, pet rent, parking, etc.
+- Water | water | month | req=True | refundable=False | Usage Based | Each apartment is individually metered for water usage
+- Sewer | utilities_other | month | req=True | refundable=False | Usage Based | Each apartment is individually metered for sewer usage
+- Trash | trash | month | req=True | refundable=False | Varies | Based on the # of occupants in the apt.
+- Natural Gas | gas | month | req=True | refundable=False | Varies | Each apartment is individually metered for natural gas usage
+- Electricity | electricity | month | req=True | refundable=False | Varies | Resident must establish an account with the electric company. Electric service will be billed from/paid directly to the electric company.
+- Internet | internet | month | req=False | refundable=False | Varies | Residents pays directly to internet provider
+- Pet Deposit (refundable) | pet_deposit_other | one time | req=False | refundable=True | $300.00 | Breed restrictions apply. Limit 2 pets/apt
+- Pet Rent | pet_rent_other | month | req=False | refundable=False | $35.00 | $35/month per apt and not charged per pet
+- Reserved Garage Parking | private_garage | month | req=False | refundable=False | $100.00 | Individual reserved space in secured access garage
+- Unassigned Garage Parking | private_garage | month | req=False | refundable=False | $50.00 | First-come, first served garage parking
+- Reserved Uncovered/Exterior Parking | parking_other | month | req=False | refundable=False | $25.00 | Outside "open air" reserved parking space
+- Small Storage | storage_unit | month | req=False | refundable=False | $80.00 | Small storage measures approx. 2'x8'
+- Large Storage | storage_unit | month | req=False | refundable=False | $100.00 | Large storage measures approx. 16'x17'
+- Package Service Registration | packages | one time | req=True | refundable=False | $20.00 | One-time fee, paid to 3rd party for package mgmt
+- Renter's Liability Insurance | renters_insurance | month | req=True | refundable=False | Varies | Resident must maintain liability renter's insurance
+- Clubhouse Rental for 4 hours | community_other | month | req=False | refundable=False | $200.00 | Deposit of $200 required
+- Nonrefundable Administration Fee | admin | one time | req=True | refundable=False | $200.00 | Initial administrative move in fee
+- Holding Fee Applied | holding | one time | req=True | refundable=True | -$300.00 | Holding fee paid with application is applied to the total amount due at move in.
+- NOVA International Credit Screening (Optional) | screening | one time | req=False | refundable=False | $50.00 | Applicants with limited or no credit established in the United States may choose to submit an application via NOVA International Credit for a fee paid directly to the screening agency.
+
+PRICING DISCLAIMER (Holland Total Monthly Leasing Price Disclaimer [STANDARD]): *The Total Monthly Leasing Price includes base rent, all mandatory monthly & one-time fees, and optional user-selected fees, excluding variable or usage-based charges. Additional fees may apply based on the application/lease agreement, such as changes to the Security Deposit based on screening results. Certain fees may not apply to apartments under housing vouchers/affordable programs. All fees are nonrefundable unless stated or required by law. Pricing and fees are subject to application/lease terms. Residents must maintain liability insurance and activate utilities billed directly by the provider. Mandatory or variable fees prohibited by law are not included in the Total Monthly Leasing Price and won’t be charged. Any legally prohibited fees will be removed from Resident billing by the effective date of relevant law changes. In Colorado, this includes common area utilities, porter service & pest control.
+
+CALCULATOR DISCLAIMER: *The Total Monthly Leasing Price includes base rent, all mandatory monthly & one-time fees, and optional user-selected fees, excluding variable or usage-based charges. Additional fees may apply based on the application/lease agreement, such as changes to the Security Deposit based on screening results. Certain fees may not apply to apartments under housing vouchers/affordable programs. All fees are nonrefundable unless stated or required by law. Pricing and fees are subject to application/lease terms. Residents must maintain liability insurance and activate utilities billed directly by the provider. Mandatory or variable fees prohibited by law are not included in the Total Monthly Leasing Price and won’t be charged. Any legally prohibited fees will be removed from Resident billing by the effective date of relevant law changes. In Colorado, this includes common area utilities, porter service & pest control.
+
+GENERAL DISCLAIMER: None

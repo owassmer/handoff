@@ -1,0 +1,60 @@
+{
+  "as_of": "2026-10-01",
+  "instrument": "CA:CCR24",
+  "unit_updates": [
+    {
+      "unit": "Part 3 Electrical",
+      "toc_url": "https://link.nfpa.org/free-access/publications/70%20CA/2025",
+      "publisher_viewer_url": "https://link.nfpa.org/free-access/publications/70%20CA/2025",
+      "publication_identity": "2025 California Electrical Code, Title 24 Part 3; incorporated 2023 NEC with California amendments",
+      "source_unit_kind": "document",
+      "acquisition_status": "J1 publication identity and official access route established. NFPA login/JavaScript rendered full-text acquisition and internal enumeration remain J2.",
+      "remove_fields": [
+        "viewer_candidate"
+      ],
+      "evidence": {
+        "authority": "CAL FIRE Office of State Fire Marshal Information Bulletin 26-004, April 14, 2026, page 2",
+        "index": "https://www.fire.ca.gov/osfm/resources/information-bulletins",
+        "document": "https://34c031f8-c9fd-4018-8c5a-4159cdff6b0d-cdn-endpoint.azureedge.net/-/media/osfm-website/resources/information-bulletins/2026/26-004_ib-2025-california-building-standards-code.pdf?hash=AD33BA8119548EC449755A12312D4A9C&rev=21589c4ef07143dfacd7dff0b7b608ba",
+        "finding": "Agency publication explicitly prints this Part3 route and states login required. NFPA endpoint opens to JavaScript shell. Exact route is observed, not inferred from catalog naming.",
+        "date_note": "Index and bulletin title use April14,2026. Repeated page header says April14,2029 (3 years after posting); preserve that document anomaly, do not convert it into code operation date."
+      },
+      "integration_note": "Keep separately selected California amendments and errata. Do not send login shell through static generic text extraction as though it were legal text."
+    }
+  ],
+  "remaining": [
+    {
+      "item": "Part7 May6 readoption and SFM04/25 certification",
+      "stage": "J1 unresolved operative-version decision",
+      "known": "Initial emergency identity/dates and April readoption proposal target are established. May6 minutes are named on May and August official indexes; SFM04/25 is the certifying chain.",
+      "missing": "Actual readoption approval/filing date, certification disposition/filing and resulting current endpoint. Neither calendar addition nor January publication label establishes continued operation.",
+      "next_source": "Observed May6 meeting minutes link or endorsed filing/certification record; no direct PDF target recovered."
+    },
+    {
+      "item": "August25–27 non-HCD selected agency packages",
+      "stage": "J1 unresolved final-version/selected final-source routes",
+      "known": "Named packages, code parts, final express terms and action-matrix labels established on official meeting index. Existing HCD approvals remain separate.",
+      "missing": "Exact final text/matrix URLs and package-specific approved changes and operative dates; DSA Part1 timing cannot be inferred from general July2027 schedule.",
+      "limit": "No automatic hospital/school corpus expansion. Resolve only existing residential physical-work connections; exact identified proposal text retrieval is J2 but proposals are not substitutes for approved text."
+    },
+    {
+      "item": "Part3 full code and selected amendment/errata bodies",
+      "stage": "J2 acquisition/enumeration",
+      "known": "Exact 2025 publication, incorporated2023NEC identity, now agency-published NFPA access URL, and separate exact amendment/errata routes.",
+      "missing": "Rendered authenticated code body and internal legal-section enumeration, including agency matrices and incorporated text.",
+      "decision": "Do not retain exact-viewer-identity as a J1 gap now that agency route is recovered; rendered content availability remains untested."
+    }
+  ],
+  "new_route_results": [
+    {
+      "route": "OSFM2026 information bulletin index and linked IB26-004",
+      "result": "Recovered exact Part3 viewer. Index currently lists26-001 through26-007; no displayed bulletin establishes May readoption or August certification."
+    },
+    {
+      "route": "CBSC newsletter/publication news index",
+      "result": "Latest displayed CALCode edition Spring2026 and latest displayed bulletin26-01 concern publication schedule/errata, not final August actions. Absence from that index is not proof of no later action."
+    }
+  ],
+  "evidence_file": "j1/lanes/federal_programs/title24-official-viewer-evidence.json",
+  "canonical_edits": false
+}

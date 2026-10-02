@@ -1,0 +1,87 @@
+{
+  "as_of": "2026-10-01",
+  "scope": "J1 temporal registration for SFM EF 01/25 emergency continuation; additive to title24-restored-delta.json",
+  "publisher_history": {
+    "url": "https://www.iccsafe.org/wp-content/uploads/errata_central/2025-California-Wildland-Urban-Code-Part-7-Emergency-Supplement-eff.-January-1-2026.pdf",
+    "local_pdf": "icc-part7-emergency-supplement.pdf",
+    "local_text": "icc-part7-emergency-supplement.txt",
+    "location": "History Note Appendix, HIST-1",
+    "events": [
+      {
+        "instrument": "SFM 08/24",
+        "approved": "2025-02-26",
+        "filed": "2025-03-07",
+        "effective": "2026-01-01"
+      },
+      {
+        "instrument": "SFM EF 01/25",
+        "approved": "2025-10-15",
+        "filed": "2025-11-04",
+        "effective": "2026-01-01"
+      }
+    ],
+    "limit": "This published emergency supplement records only the initial emergency action; it does not record the May 2026 readoption or August 2026 certification."
+  },
+  "confirmed_later_actions": [
+    {
+      "event": "Readoption approved",
+      "date": "2026-05-06",
+      "source": "May-6-2026-MM-Final.pdf, pp.3-4",
+      "vote": "6 yes, 4 absent",
+      "filing_date": null
+    },
+    {
+      "event": "SFM 04/25 certifying package approved",
+      "date": "2026-08-25",
+      "source": "6jlX_QrOWJQ-transcript.txt, 4:54:15-4:55:05; certifying relationship 4:40:43",
+      "filing_date": null
+    }
+  ],
+  "governing_rules": [
+    {
+      "source": "https://www.dgs.ca.gov/-/media/Divisions/BSC/07-About/Law/CBSC_LAW_2025-Eff01-01-2026.pdf",
+      "local": "CBSC_LAW_2025-Eff01-01-2026.pdf",
+      "sections": [
+        "HSC 18937(b)",
+        "HSC 18938(a)",
+        "HSC 18938(d)"
+      ],
+      "meaning": "CBSC performs the filing; emergency effect and duration are tied to filing and the statutory emergency process, separately from commission approval."
+    },
+    {
+      "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11346.1.&lawCode=GOV",
+      "local": "GOV-11346-1.html",
+      "sections": [
+        "GOV 11346.1(c)-(h)"
+      ],
+      "meaning": "Building standards use CBSC approval/filing. Initial emergency duration is at most 180 days absent completed regular rulemaking and timely certification transmission. Up to two readoptions of at most 90 days each are permitted."
+    }
+  ],
+  "recovery_observations": [
+    {
+      "route": "Official CBSC emergency page and May/August original meeting documents",
+      "result": "Initial filing, later approval and certifying relationship recovered; actual later filing dates and endorsed STD400 not in posted materials inspected."
+    },
+    {
+      "route": "ICC current P2 History Note page",
+      "result": "CloudFront HTTP403 in direct retrieval and actual browser; web parser also failed. Public emergency supplement PDF succeeds and is saved."
+    },
+    {
+      "route": "SOS official Minerva public catalog",
+      "result": "Catalog searches returned accessioned archival series, including historical CBSC rulemaking records. No live 2026 regulatory filing index identified. This is a retrieval observation, not proof of nonfiling."
+    },
+    {
+      "route": "CBSC Spring 2026 CALCode Quarterly",
+      "result": "Describes the intervening-cycle discussion; no readoption filing date. Later Sept30 publication report already saved in main delta does not establish emergency certificate filing."
+    }
+  ],
+  "remaining_fact": "The actual CBSC/SOS readoption filing and any certifying filing that continues SFM EF 01/25 into the later SFM 04/25 supplement. Need endorsed filing or equivalent current official history; do not infer an expiry from the May vote or carry the January emergency forward solely from August adoption.",
+  "no_external_contact_sent": true,
+  "browser_closed": true,
+  "j1_boundary": {
+    "instrument_selection_complete": true,
+    "reason": "The base code, initial emergency supplement, approved readoption, and approved certifying package are all identified with routes and actual action status. The exact later filing interval does not change which instruments J1 selects.",
+    "downstream_temporal_question": "Determine the precise day-by-day operative text when interpreting these versions. Do not treat the deferred filing interval as a J1 completion condition.",
+    "status_distinction": "Approved action status is established; precise operative continuity is a separate conclusion."
+  }
+}

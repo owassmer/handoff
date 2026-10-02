@@ -1,0 +1,419 @@
+{
+  "format": "section-semantics-bounded-first-wave-expectations-1",
+  "reviewer": "/root/reference_final_audit",
+  "model_responses_seen": false,
+  "preparation_sha256": "0f683a3c37905677a3900a8b1e23ae1303e966563204d4d5c18946b3c921cd97",
+  "full_plan_hash": "7a54f315305d1a22aefb4c5d0f9a17c098ccd342f7abddd368fd9ee7f631200e",
+  "registry_fingerprint": "843ab79113fc3d25df5d64c1a39338be4498ef7818ea9cad695f00b2269fd521",
+  "groups_request_hashes": [
+    "2ba79cb3eb51cac75d92a632ab4cd3b036308027b12ea32efd12d242285c5ac3",
+    "120629aa57d95d98f1cd6898adbd6c8484526bf6f332ba9ea903ec4948e91a0a",
+    "5624716593c13925e1ffdc6c0852a3058c9a6a13762756f8304cd82630ff9ff7",
+    "1f49aef2f9e398213a5c9b510afa6856ac846fbeb7188fbf4185c711ecc687c5"
+  ],
+  "jobs": {
+    "ca_return.j027": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "conditions.pre_sale_return.not_a_release.predicate",
+          "value": "Property was not released under subdivision(a).",
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "e672c5ae9f2231d90d40bc211922a0287d56033c34c1c7b2cba5b1b4a81b8ea4",
+      "native_question_fingerprint": "674e735f37def5c5cf62df683bfb0a3e5cca7da801a093a694a9ddbb3f46ad42",
+      "source_evidence_refs": [
+        "b",
+        "primary"
+      ],
+      "reason": "1987(b) expressly requires nonrelease under(a), public-sale notice, a former-tenant claim before actualsale, and the specified reasonable costs incurred beforewithdrawal. Each predicate is expressed; conjunction and applicable cost overrides are separate jobs.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j028": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "conditions.pre_sale_return.public_sale_notice.predicate",
+          "value": "Notice stated property would be sold at public sale.",
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "6c90ea7c1035eec116f5bfb8f013f11821bca83ee60c5604c84312cdf0146fbb",
+      "native_question_fingerprint": "c62431dcfe708fc030db8f97e3a366dad999cf6903091cee2a55fbff58f817ee",
+      "source_evidence_refs": [
+        "b",
+        "primary"
+      ],
+      "reason": "1987(b) expressly requires nonrelease under(a), public-sale notice, a former-tenant claim before actualsale, and the specified reasonable costs incurred beforewithdrawal. Each predicate is expressed; conjunction and applicable cost overrides are separate jobs.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j029": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "conditions.pre_sale_return.claims_before_sale.predicate",
+          "value": "Former tenant claims before it is sold.",
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "d09e4fc9b29428c3ad2c19844754625cc927e331919a061936d6bb6d39044847",
+      "native_question_fingerprint": "251f824b1bfdb2fc874943205519b3434574e457532f22f877d211d13838f099",
+      "source_evidence_refs": [
+        "b",
+        "primary"
+      ],
+      "reason": "1987(b) expressly requires nonrelease under(a), public-sale notice, a former-tenant claim before actualsale, and the specified reasonable costs incurred beforewithdrawal. Each predicate is expressed; conjunction and applicable cost overrides are separate jobs.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j030": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "conditions.pre_sale_return.costs_paid.predicate",
+          "value": "Former tenant pays required reasonable storage, advertising and sale costs incurred before withdrawal from sale.",
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "6bbfc8999aa8cd4b6bcd86d430be5ad6d2cc33c7b10f15212b4866098395372d",
+      "native_question_fingerprint": "680e7a4dcead9939aadd9cc6f3370152ccae64cea70504c5f6ed79105e1fe108",
+      "source_evidence_refs": [
+        "b",
+        "primary"
+      ],
+      "reason": "1987(b) expressly requires nonrelease under(a), public-sale notice, a former-tenant claim before actualsale, and the specified reasonable costs incurred beforewithdrawal. Each predicate is expressed; conjunction and applicable cost overrides are separate jobs.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j049": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "conditions.two_day_return.remained_dwelling.predicate",
+          "value": "The property remained in the dwelling.",
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "1c4565fcf2b37f8a9610fef01681b728dcbd47652d89d9e0af7631603bc06dd7",
+      "native_question_fingerprint": "f89389f99b52bdf2a42e5a6b94ed2a8ee9eb81696706619e03e5a991dac56e2d",
+      "source_evidence_refs": [
+        "c",
+        "primary"
+      ],
+      "reason": "1987(c) expressly contains dwelling retention, alternative tenant/other-believed-owner reclaimers and two-day reclaim. YES means each is a textual component; it does not mean both claimants must reclaim or every predicate independently triggers release.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j050": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "conditions.two_day_return.former_reclaims.predicate",
+          "value": "Former tenant reclaims the property.",
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "a4c599630a8fa4abc3d25bea0440eb8244a4cd8e52b65c2ae86324e9cac028d8",
+      "native_question_fingerprint": "0aaaad014f7c8414f19deb987a34003dd4286a34ddbc89f2c0e9bc4a71cf9143",
+      "source_evidence_refs": [
+        "c",
+        "primary"
+      ],
+      "reason": "1987(c) expressly contains dwelling retention, alternative tenant/other-believed-owner reclaimers and two-day reclaim. YES means each is a textual component; it does not mean both claimants must reclaim or every predicate independently triggers release.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j051": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "conditions.two_day_return.believed_owner_reclaims.predicate",
+          "value": "Another person reasonably believed by landlord to own the property reclaims it.",
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "918311e450def7dc809890db291fe4d1f414b99300aad1e190408e1e38d404b6",
+      "native_question_fingerprint": "f5bc9cfbcd29969d90202756a5c4870f9a5b7c7427f02b2ca57da03d240696ae",
+      "source_evidence_refs": [
+        "c",
+        "primary"
+      ],
+      "reason": "1987(c) expressly contains dwelling retention, alternative tenant/other-believed-owner reclaimers and two-day reclaim. YES means each is a textual component; it does not mean both claimants must reclaim or every predicate independently triggers release.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j053": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "conditions.two_day_return.within_two_days.predicate",
+          "value": "Reclaim occurs within two days of vacating the dwelling.",
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "d86c6cc23ef93bc6866fb3e4da557628d6c64732d7d99e1677a2150a1307494d",
+      "native_question_fingerprint": "f7881761869a618143b91dad3ead5f0ad2ece37229534646576ce875a7dad3e4",
+      "source_evidence_refs": [
+        "c",
+        "primary"
+      ],
+      "reason": "1987(c) expressly contains dwelling retention, alternative tenant/other-believed-owner reclaimers and two-day reclaim. YES means each is a textual component; it does not mean both claimants must reclaim or every predicate independently triggers release.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j072": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "definitions.Landlord",
+          "value": {
+            "term": "Landlord",
+            "meaning": "(a)\u00a0\u201cLandlord\u201d means any operator, keeper, lessor, or sublessor of any furnished or unfurnished premises for hire, or his or her agent or successor in interest.",
+            "scope": "Chapter5"
+          },
+          "operation": "establish_definition_only"
+        }
+      ],
+      "job_fingerprint": "00e92e6c9423cc54fff05736e61c3b0a54844f4b1c885e7c3f7671fc383a1e93",
+      "native_question_fingerprint": "2cd9adca3a9bed287630a12f511edff8e54ac239937de40f06aa38366350c143",
+      "source_evidence_refs": [
+        "def_Landlord",
+        "definition_scope"
+      ],
+      "reason": "1980(a) defines landlord for this chapter, including agents and successors; provided chapter scope matches.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j121": {
+      "expected_answer": "INTERVAL",
+      "expected_licensed_outputs": [
+        {
+          "target": "records.notice_date_minimum.timing.personal.interval",
+          "value": {
+            "number": 15,
+            "unit": "days"
+          },
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "2ad37898669548de62f478443eba4b9ba78d0134f82e2e69b98b9bcb40ac7b27",
+      "native_question_fingerprint": "fb4c5dc5430844c998004e9b6e866aa6d939fb9bc3b183fb7cc11611f1d07a5d",
+      "source_evidence_refs": [
+        "CIV1983",
+        "primary"
+      ],
+      "reason": "1983 establishes15days afterpersonal delivery and18days aftermaildeposit, joint recipient categories, record-owner presumption, container description exception, omitted-property immunity limit, vacated-premises mailedcopy and supplementary email. This does not establish actual statutory-date computation or completed notice compliance.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j122": {
+      "expected_answer": "MINIMUM_AFTER",
+      "expected_licensed_outputs": [
+        {
+          "target": "records.notice_date_minimum.timing.personal.relation",
+          "value": "minimum_after",
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "146df38d173f60faa095359ca396c021a40c74fd810ab050da81e91fa9c36396",
+      "native_question_fingerprint": "74bbb13d252a96885d3d0296139b67764027aad533dbc6298ee6a7a94c3ab51a",
+      "source_evidence_refs": [
+        "CIV1983",
+        "primary"
+      ],
+      "reason": "1983 establishes15days afterpersonal delivery and18days aftermaildeposit, joint recipient categories, record-owner presumption, container description exception, omitted-property immunity limit, vacated-premises mailedcopy and supplementary email. This does not establish actual statutory-date computation or completed notice compliance.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j123": {
+      "expected_answer": "ANCHOR",
+      "expected_licensed_outputs": [
+        {
+          "target": "records.notice_date_minimum.timing.personal.anchor",
+          "value": "personal delivery of notice",
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "cc7f22f72ccfbeea911426a7783fa2f6a8acb9aa6a7af6ca7c9ed7ffc22b004b",
+      "native_question_fingerprint": "3eb98914dc849a34e8329f342ffed8385233966b391dbef8d65dec12bb120256",
+      "source_evidence_refs": [
+        "CIV1983",
+        "primary"
+      ],
+      "reason": "1983 establishes15days afterpersonal delivery and18days aftermaildeposit, joint recipient categories, record-owner presumption, container description exception, omitted-property immunity limit, vacated-premises mailedcopy and supplementary email. This does not establish actual statutory-date computation or completed notice compliance.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j124": {
+      "expected_answer": "INTERVAL",
+      "expected_licensed_outputs": [
+        {
+          "target": "records.notice_date_minimum.timing.mail.interval",
+          "value": {
+            "number": 18,
+            "unit": "days"
+          },
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "50ec98d2741d1cf7e70fa2381fef1f953e3133c9f224b49e86dc1f93e6d4c0d1",
+      "native_question_fingerprint": "9ffd1c71459e28faff8411e5ccafe3c2ecdf669be768c16247c92ba1e8cbdc91",
+      "source_evidence_refs": [
+        "CIV1983",
+        "primary"
+      ],
+      "reason": "1983 establishes15days afterpersonal delivery and18days aftermaildeposit, joint recipient categories, record-owner presumption, container description exception, omitted-property immunity limit, vacated-premises mailedcopy and supplementary email. This does not establish actual statutory-date computation or completed notice compliance.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j125": {
+      "expected_answer": "MINIMUM_AFTER",
+      "expected_licensed_outputs": [
+        {
+          "target": "records.notice_date_minimum.timing.mail.relation",
+          "value": "minimum_after",
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "2ccf08b55dd9134246c56e7536c9169c3bc8308e70486390990fbad7cdecaf2e",
+      "native_question_fingerprint": "f64f883c9af3c5045e326e1cfbd46fffd60ea05b2844a28cab2e6e2809b7eeb9",
+      "source_evidence_refs": [
+        "CIV1983",
+        "primary"
+      ],
+      "reason": "1983 establishes15days afterpersonal delivery and18days aftermaildeposit, joint recipient categories, record-owner presumption, container description exception, omitted-property immunity limit, vacated-premises mailedcopy and supplementary email. This does not establish actual statutory-date computation or completed notice compliance.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j126": {
+      "expected_answer": "ANCHOR",
+      "expected_licensed_outputs": [
+        {
+          "target": "records.notice_date_minimum.timing.mail.anchor",
+          "value": "depositing notice in mail",
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "0e118ea518d2489c174bd664919ce599b58d4a8889fa96e53c44363063595249",
+      "native_question_fingerprint": "8d19f2667ccce7e7134140a3bb1d8f180559cb1130d593317b167d9cb471a67c",
+      "source_evidence_refs": [
+        "CIV1983",
+        "primary"
+      ],
+      "reason": "1983 establishes15days afterpersonal delivery and18days aftermaildeposit, joint recipient categories, record-owner presumption, container description exception, omitted-property immunity limit, vacated-premises mailedcopy and supplementary email. This does not establish actual statutory-date computation or completed notice compliance.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j219": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "records.property_notice.recipients",
+          "value": {
+            "operator": "all",
+            "children": [
+              "tenant",
+              "each_reasonably_believed_other_owner"
+            ]
+          },
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "e8794458f04a4de4ba5e86f4cae9ef88b7628726bf9ed9581d8b3b15d44c325b",
+      "native_question_fingerprint": "c04ad9bf49ec8b67ec7b52d35c14a3b804e19d7f9d63d6b5619621a42a4b13a8",
+      "source_evidence_refs": [
+        "CIV1983",
+        "primary"
+      ],
+      "reason": "1983 establishes15days afterpersonal delivery and18days aftermaildeposit, joint recipient categories, record-owner presumption, container description exception, omitted-property immunity limit, vacated-premises mailedcopy and supplementary email. This does not establish actual statutory-date computation or completed notice compliance.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j220": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "records.property_notice.records_ownership_rule",
+          "value": {
+            "kind": "presumption",
+            "owner": "tenant",
+            "object": "records"
+          },
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "9e95926c9c8b584756bd084a438816aeb2af8c5bf8f5832a08ca8ffd190cb4a2",
+      "native_question_fingerprint": "f36326987038e0f548b1b2a8d02a9197397125036b016ac5790a77cf950a44a4",
+      "source_evidence_refs": [
+        "CIV1983",
+        "primary"
+      ],
+      "reason": "1983 establishes15days afterpersonal delivery and18days aftermaildeposit, joint recipient categories, record-owner presumption, container description exception, omitted-property immunity limit, vacated-premises mailedcopy and supplementary email. This does not establish actual statutory-date computation or completed notice compliance.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j225": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "records.property_notice.container_description_exception",
+          "value": {
+            "condition": "closed_container_deters_immediate_contents_access",
+            "contents_itemization_required": false
+          },
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "dad4661d788cde033852bec52a397045ade69918704fc3451cf01db6cff264c0",
+      "native_question_fingerprint": "74669f2ec86569b148b1f01659e5b096797efa7af9bba06aaa0bab791620d395",
+      "source_evidence_refs": [
+        "CIV1983",
+        "primary"
+      ],
+      "reason": "1983 establishes15days afterpersonal delivery and18days aftermaildeposit, joint recipient categories, record-owner presumption, container description exception, omitted-property immunity limit, vacated-premises mailedcopy and supplementary email. This does not establish actual statutory-date computation or completed notice compliance.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j226": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "records.property_notice.description_immunity_relation",
+          "value": "undescribed_property_outside_immunity_except_container_rule",
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "e5fd8c783d330bf5a484ef9d8e0deb95c5b49851599397804e6955ec0fd5831b",
+      "native_question_fingerprint": "37b6a4282c612a9bd2a82cd2c5e492edeb79715790534ee7230e6b0c8b8f99fe",
+      "source_evidence_refs": [
+        "CIV1983",
+        "primary"
+      ],
+      "reason": "1983 establishes15days afterpersonal delivery and18days aftermaildeposit, joint recipient categories, record-owner presumption, container description exception, omitted-property immunity limit, vacated-premises mailedcopy and supplementary email. This does not establish actual statutory-date computation or completed notice compliance.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j235": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "records.property_notice_delivery.former_tenant_mail_copy",
+          "value": "vacated_premises_copy_required",
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "81a85727726edbeae81be50889b0afa8aa28cab240384c4513330d8d3a7f6fc4",
+      "native_question_fingerprint": "3f37b3eb9cd6d9eb854dfd1949d1897cff460fe81995273d6dc7a4b370bd42ba",
+      "source_evidence_refs": [
+        "CIV1983",
+        "primary"
+      ],
+      "reason": "1983 establishes15days afterpersonal delivery and18days aftermaildeposit, joint recipient categories, record-owner presumption, container description exception, omitted-property immunity limit, vacated-premises mailedcopy and supplementary email. This does not establish actual statutory-date computation or completed notice compliance.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "ca_return.j236": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "records.property_notice_delivery.email_role",
+          "value": "additional_if_address_supplied_not_substitute",
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "c57c224348d5691156b67a06f9aa343af8432454d6df0c27a8a08bd471a91222",
+      "native_question_fingerprint": "61f15412f25309c19caf1946466a25a21dd79b08241d012ca2c3083de6bef5ad",
+      "source_evidence_refs": [
+        "CIV1983",
+        "primary"
+      ],
+      "reason": "1983 establishes15days afterpersonal delivery and18days aftermaildeposit, joint recipient categories, record-owner presumption, container description exception, omitted-property immunity limit, vacated-premises mailedcopy and supplementary email. This does not establish actual statutory-date computation or completed notice compliance.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    }
+  },
+  "full_denominator_count": 206,
+  "not_full_unit_acceptance": true
+}

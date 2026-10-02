@@ -1,0 +1,102 @@
+{
+  "run": "j1/references/passage-run-2",
+  "answered": 21,
+  "followthrough": [
+    {
+      "source": "47CFR76.802",
+      "passages": [
+        "p005",
+        "p006",
+        "p007",
+        "p008",
+        "p009"
+      ],
+      "targets": [
+        "76.802(b)"
+      ],
+      "register": "US:47CFR76 / Subpart M",
+      "decision": "Internal references covered by whole-section selection."
+    },
+    {
+      "source": "47CFR76.802",
+      "passages": [
+        "p010",
+        "p011",
+        "p012"
+      ],
+      "targets": [
+        "76.605",
+        "76.610",
+        "76.611",
+        "76.612",
+        "76.613",
+        "76.614",
+        "76.616",
+        "76.617"
+      ],
+      "register": "US:47CFR76 explicit technical dependency units",
+      "decision": "Already selected; no duplicate instrument. Range does not authorize inventing a76.615 text."
+    },
+    {
+      "source": "47CFR76.802",
+      "passages": [
+        "p013"
+      ],
+      "targets": [
+        "76.309(c)(4)(ii)"
+      ],
+      "register": "US:47CFR76 / Subpart H /76.309",
+      "decision": "Already selected whole definition-bearing section; retrieved official current source confirms target."
+    },
+    {
+      "source": "47CFR76.802",
+      "passages": [
+        "p014"
+      ],
+      "targets": [
+        "76.802"
+      ],
+      "decision": "Reference occurs in operative text, not a prepended source label. Self-reference adds no new source."
+    },
+    {
+      "source": "CA-CIV1950.5-f",
+      "passages": [
+        "p002",
+        "p004",
+        "p005",
+        "p006"
+      ],
+      "targets": [
+        "1950.5(b)(1)–(4)",
+        "1950.5(f)(2),(5),(6)"
+      ],
+      "register": "CA:CIV / division3 part4 title5 chapter2",
+      "decision": "Whole section selected; internal dependencies retained."
+    },
+    {
+      "source": "CA-CIV1950.5-f",
+      "passages": [
+        "p007"
+      ],
+      "targets": [
+        "CCP1161(2),(3),(4)"
+      ],
+      "register": "CA:CCP / Part3",
+      "decision": "Already selected; official section route confirms chapter4 under title3."
+    },
+    {
+      "source": "CA-CIV1950.5-f",
+      "passages": [
+        "p001",
+        "p003"
+      ],
+      "targets": [
+        "rental agreement",
+        "written notice/waiver",
+        "abandoned-property law referenced by prescribed notice"
+      ],
+      "decision": "Agreement and actual notice are operating documents, not missing jurisdiction instruments. The statutory abandoned-property chapter CIV1980–1991 is already within selected title5 chapter5. Low/intermediate flags do not remove these passages from researcher review."
+    }
+  ],
+  "meaning": "Actual researcher-aid followthrough, not model evaluation or J1 completeness proof."
+}

@@ -1,0 +1,2358 @@
+[
+  {
+    "case_id": "d001",
+    "request_hash": "014b3ede5521ee77fecce74696b1765cfb540ebb7824dbfad22c92f6b87dc1db",
+    "started_at": "2026-10-01T16:37:00.752268+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "passage": "As used in this chapter:\n(a) “Landlord” means any operator, keeper, lessor, or sublessor of any furnished or unfurnished premises for hire, or his or her agent or successor in interest.\n(b) “Owner” means any person other than the landlord who has any right, title, or interest in personal property.\n(c) “Premises” includes any common areas associated therewith.\n(d) “Reasonable belief” means the actual knowledge or belief a prudent person would have without making an investigation (including any investigation of public records) except that, where the landlord has specific information indicating that such an investigation would more probably than not reveal pertinent information and the cost of such an investigation would be reasonable in relation to the probable value of the personal property involved, “reasonable belief” includes the actual knowledge or belief a prudent person would have if such an investigation were made.\n(e) “Records” means any material, regardless of the physical form, on which information is recorded or preserved by any means, including in written or spoken words, graphically depicted, printed, or electromagnetically transmitted. “Records”\ndoes not include publicly available directories containing information an individual has voluntarily consented to have publicly disseminated or listed, such as name, address, or telephone number.\n(f) “Tenant” includes any paying guest, lessee, or sublessee of any premises for hire."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does this passage define a term?",
+              "criteria": {
+                "true": "The passage assigns a meaning to a term, directly or by adopting a definition from elsewhere.",
+                "false": "The passage does not assign or adopt a meaning; it only uses, illustrates or reports a proposed definition."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"passage\":\"As used in this chapter:\\n(a) “Landlord” means any operator, keeper, lessor, or sublessor of any furnished or unfurnished premises for hire, or his or her agent or successor in interest.\\n(b) “Owner” means any person other than the landlord who has any right, title, or interest in personal property.\\n(c) “Premises” includes any common areas associated therewith.\\n(d) “Reasonable belief” means the actual knowledge or belief a prudent person would have without making an investigation (including any investigation of public records) except that, where the landlord has specific information indicating that such an investigation would more probably than not reveal pertinent information and the cost of such an investigation would be reasonable in relation to the probable value of the personal property involved, “reasonable belief” includes the actual knowledge or belief a prudent person would have if such an investigation were made.\\n(e) “Records” means any material, regardless of the physical form, on which information is recorded or preserved by any means, including in written or spoken words, graphically depicted, printed, or electromagnetically transmitted. “Records”\\ndoes not include publicly available directories containing information an individual has voluntarily consented to have publicly disseminated or listed, such as name, address, or telephone number.\\n(f) “Tenant” includes any paying guest, lessee, or sublessee of any premises for hire.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does this passage define a term?\",\"criteria\":{\"true\":\"The passage assigns a meaning to a term, directly or by adopting a definition from elsewhere.\",\"false\":\"The passage does not assign or adopt a meaning; it only uses, illustrates or reports a proposed definition.\"}}}}",
+        "body_sha256": "ad05f142b595459f35d02abe760febcf91a488506cb8c2892688d693757bea8d"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.99
+        }
+      },
+      "usage": {
+        "input_tokens": 637,
+        "output_tokens": 22,
+        "cost": 2.6754e-05
+      },
+      "id": "gen-dec-1790872621-EQK7UKWaICcrqHPjDTNH",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.6692338748835027
+  },
+  {
+    "case_id": "d002",
+    "request_hash": "6978a8113ecb994775f9a535aabb4d23c746e0a33acbfabcac9e0b57261e1b6d",
+    "started_at": "2026-10-01T16:37:01.422993+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "passage": "(g) “Electronic fund transfer” is defined in § 1005.3."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does this passage define a term?",
+              "criteria": {
+                "true": "The passage assigns a meaning to a term, directly or by adopting a definition from elsewhere.",
+                "false": "The passage does not assign or adopt a meaning; it only uses, illustrates or reports a proposed definition."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"passage\":\"(g) “Electronic fund transfer” is defined in § 1005.3.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does this passage define a term?\",\"criteria\":{\"true\":\"The passage assigns a meaning to a term, directly or by adopting a definition from elsewhere.\",\"false\":\"The passage does not assign or adopt a meaning; it only uses, illustrates or reports a proposed definition.\"}}}}",
+        "body_sha256": "733552fbb3cb25affd58d6c04a49e074c4248b231ddc697898338f6a4e15a8fd"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.84
+        }
+      },
+      "usage": {
+        "input_tokens": 354,
+        "output_tokens": 22,
+        "cost": 1.4868e-05
+      },
+      "id": "gen-dec-1790872621-JU1HtSM8er6bINGQOwoA",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.22303833300247788
+  },
+  {
+    "case_id": "d003",
+    "request_hash": "bc99dc48b3faaf55d179bdb9e5ad4611662f9cc21ce60b2eea7a70bef5aa1563",
+    "started_at": "2026-10-01T16:37:01.647992+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "passage": "(e) Hearing officer means an impartial person or persons selected by the PHA, other than the person who made or approved the decision under review, or a subordinate of that person. Such individual or individuals do not need legal training. PHAs must describe their policies for selection of a hearing officer in their lease forms as required by § 966.4, changes to which are subject to a 30-day comment period as described in § 966.3."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does this passage define a term?",
+              "criteria": {
+                "true": "The passage assigns a meaning to a term, directly or by adopting a definition from elsewhere.",
+                "false": "The passage does not assign or adopt a meaning; it only uses, illustrates or reports a proposed definition."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"passage\":\"(e) Hearing officer means an impartial person or persons selected by the PHA, other than the person who made or approved the decision under review, or a subordinate of that person. Such individual or individuals do not need legal training. PHAs must describe their policies for selection of a hearing officer in their lease forms as required by § 966.4, changes to which are subject to a 30-day comment period as described in § 966.3.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does this passage define a term?\",\"criteria\":{\"true\":\"The passage assigns a meaning to a term, directly or by adopting a definition from elsewhere.\",\"false\":\"The passage does not assign or adopt a meaning; it only uses, illustrates or reports a proposed definition.\"}}}}",
+        "body_sha256": "4af7e8af16b45ee0c067aeaebfeebe15718c08bf5417aa709352180e35878f04"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.98
+        }
+      },
+      "usage": {
+        "input_tokens": 432,
+        "output_tokens": 22,
+        "cost": 1.8144e-05
+      },
+      "id": "gen-dec-1790872621-ZFo610376ENNhjRuYMFp",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.2496411248575896
+  },
+  {
+    "case_id": "d004",
+    "request_hash": "419e8d03a625c1e69ec5e0eb76833b927c73cc0e579f342620e57ab946ed00c2",
+    "started_at": "2026-10-01T16:37:01.900330+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "passage": "(b) For the purposes of this chapter, “reasonable costs associated with the landlord’s removal and storage of the personal property” shall include, but not be limited to, each of the following:\n(1) Reasonable costs actually incurred, or the reasonable value of labor actually provided, or both, in removing the personal property from its original location to the place of storage, including disassembly and\ntransportation.\n(2) Reasonable storage costs actually incurred, which shall not exceed the fair rental value of the space reasonably required for the storage of the personal property."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does this passage define a term?",
+              "criteria": {
+                "true": "The passage assigns a meaning to a term, directly or by adopting a definition from elsewhere.",
+                "false": "The passage does not assign or adopt a meaning; it only uses, illustrates or reports a proposed definition."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"passage\":\"(b) For the purposes of this chapter, “reasonable costs associated with the landlord’s removal and storage of the personal property” shall include, but not be limited to, each of the following:\\n(1) Reasonable costs actually incurred, or the reasonable value of labor actually provided, or both, in removing the personal property from its original location to the place of storage, including disassembly and\\ntransportation.\\n(2) Reasonable storage costs actually incurred, which shall not exceed the fair rental value of the space reasonably required for the storage of the personal property.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does this passage define a term?\",\"criteria\":{\"true\":\"The passage assigns a meaning to a term, directly or by adopting a definition from elsewhere.\",\"false\":\"The passage does not assign or adopt a meaning; it only uses, illustrates or reports a proposed definition.\"}}}}",
+        "body_sha256": "c1bd7de5b55777405d6b176d7f447ff41f6c1c6f34dbddd9c0dc44a83146e2ed"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.98
+        }
+      },
+      "usage": {
+        "input_tokens": 457,
+        "output_tokens": 22,
+        "cost": 1.9194e-05
+      },
+      "id": "gen-dec-1790872622-EPCwTXT8qH7lSY0wDCDe",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.28238320793025196
+  },
+  {
+    "case_id": "d005",
+    "request_hash": "6dd8886dab78102b4299261c6f87f7a535c6f80d83dc2a50b1a6c2ff290f9464",
+    "started_at": "2026-10-01T16:37:02.185483+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "passage": "(a) A residential landlord shall not refuse to surrender, to a residential tenant or to a residential tenant’s duly authorized representative, any personal property not owned by the landlord which has been left on the premises after the tenant has vacated the residential premises and the return of which has been requested by the tenant or by the authorized representative of the tenant if all of the following occur:\n(1) The tenant requests, in writing, within 18 days of vacating the premises, the surrender of the personal\nproperty and the request includes a description of the personal property held by the landlord and specifies the mailing address of the tenant.\n(2) The landlord or the landlord’s agent has control or possession of the tenant’s personal property at the time the request is received.\n(3) The tenant, prior to the surrender of the personal property by the landlord and upon written demand by the landlord, tenders payment of all reasonable costs associated with the landlord’s removal and storage of the personal property. The landlord’s demand for payment of reasonable costs associated with the removal and storage of personal property shall be in writing and shall either be mailed to the tenant at the address provided by the tenant pursuant to paragraph (1) or shall be personally presented to the tenant or to the tenant’s authorized representative, within five days after the actual receipt\nof the tenant’s request for surrender of the personal property, unless the property is returned first. The demand shall itemize all charges, specifying the nature and amount of each item of cost.\n(4) The tenant agrees to claim and remove the personal property at a reasonable time mutually agreed upon by the landlord and tenant but not later than 72 hours after the tender provided for under paragraph (3)."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does this passage define a term?",
+              "criteria": {
+                "true": "The passage assigns a meaning to a term, directly or by adopting a definition from elsewhere.",
+                "false": "The passage does not assign or adopt a meaning; it only uses, illustrates or reports a proposed definition."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"passage\":\"(a) A residential landlord shall not refuse to surrender, to a residential tenant or to a residential tenant’s duly authorized representative, any personal property not owned by the landlord which has been left on the premises after the tenant has vacated the residential premises and the return of which has been requested by the tenant or by the authorized representative of the tenant if all of the following occur:\\n(1) The tenant requests, in writing, within 18 days of vacating the premises, the surrender of the personal\\nproperty and the request includes a description of the personal property held by the landlord and specifies the mailing address of the tenant.\\n(2) The landlord or the landlord’s agent has control or possession of the tenant’s personal property at the time the request is received.\\n(3) The tenant, prior to the surrender of the personal property by the landlord and upon written demand by the landlord, tenders payment of all reasonable costs associated with the landlord’s removal and storage of the personal property. The landlord’s demand for payment of reasonable costs associated with the removal and storage of personal property shall be in writing and shall either be mailed to the tenant at the address provided by the tenant pursuant to paragraph (1) or shall be personally presented to the tenant or to the tenant’s authorized representative, within five days after the actual receipt\\nof the tenant’s request for surrender of the personal property, unless the property is returned first. The demand shall itemize all charges, specifying the nature and amount of each item of cost.\\n(4) The tenant agrees to claim and remove the personal property at a reasonable time mutually agreed upon by the landlord and tenant but not later than 72 hours after the tender provided for under paragraph (3).\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does this passage define a term?\",\"criteria\":{\"true\":\"The passage assigns a meaning to a term, directly or by adopting a definition from elsewhere.\",\"false\":\"The passage does not assign or adopt a meaning; it only uses, illustrates or reports a proposed definition.\"}}}}",
+        "body_sha256": "7481cd39beb92efc27c12843d702bea5ee2976b0f3458518f0e7a2fbaa0ffd26"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "usage": {
+        "input_tokens": 688,
+        "output_tokens": 22,
+        "cost": 2.8896e-05
+      },
+      "id": "gen-dec-1790872622-fFAt2wlVmUW9AjSacsw4",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NO",
+    "status": "answered",
+    "seconds": 0.3220994579605758
+  },
+  {
+    "case_id": "d006",
+    "request_hash": "74906aaa3c90af47a5987dd7c3b537130e9357ef17402f26afca4176e977d9fe",
+    "started_at": "2026-10-01T16:37:02.510813+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "passage": "(c) Admission of liability\nThe failure of a consumer to dispute the validity of a debt under this section may not be construed by any court as an admission of liability by the consumer."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does this passage define a term?",
+              "criteria": {
+                "true": "The passage assigns a meaning to a term, directly or by adopting a definition from elsewhere.",
+                "false": "The passage does not assign or adopt a meaning; it only uses, illustrates or reports a proposed definition."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"passage\":\"(c) Admission of liability\\nThe failure of a consumer to dispute the validity of a debt under this section may not be construed by any court as an admission of liability by the consumer.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does this passage define a term?\",\"criteria\":{\"true\":\"The passage assigns a meaning to a term, directly or by adopting a definition from elsewhere.\",\"false\":\"The passage does not assign or adopt a meaning; it only uses, illustrates or reports a proposed definition.\"}}}}",
+        "body_sha256": "7522e6c0cb8234efc77553c14f7e73eae88f36b428de69cc14948bb5257042fc"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.26
+        }
+      },
+      "usage": {
+        "input_tokens": 372,
+        "output_tokens": 22,
+        "cost": 1.5624e-05
+      },
+      "id": "gen-dec-1790872622-Ja7tWeT1X7ZSq3bFobD0",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NO",
+    "status": "answered",
+    "seconds": 0.2583257080987096
+  },
+  {
+    "case_id": "d007",
+    "request_hash": "0ed5270e3b646b9fb4846c018546a4c1e1364f21a0606256ab4d948533b44ac0",
+    "started_at": "2026-10-01T16:37:02.772292+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "passage": "(b) Record retention. (1) Any person subject to the Act and this part shall retain evidence of compliance with the requirements imposed by the Act and this part for a period of not less than two years from the date disclosures are required to be made or action is required to be taken."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does this passage define a term?",
+              "criteria": {
+                "true": "The passage assigns a meaning to a term, directly or by adopting a definition from elsewhere.",
+                "false": "The passage does not assign or adopt a meaning; it only uses, illustrates or reports a proposed definition."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"passage\":\"(b) Record retention. (1) Any person subject to the Act and this part shall retain evidence of compliance with the requirements imposed by the Act and this part for a period of not less than two years from the date disclosures are required to be made or action is required to be taken.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does this passage define a term?\",\"criteria\":{\"true\":\"The passage assigns a meaning to a term, directly or by adopting a definition from elsewhere.\",\"false\":\"The passage does not assign or adopt a meaning; it only uses, illustrates or reports a proposed definition.\"}}}}",
+        "body_sha256": "27b0bc66865123002d8c3de19a0241095ca63c4e777a6c3871f3c0f040d9b5ee"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.11
+        }
+      },
+      "usage": {
+        "input_tokens": 393,
+        "output_tokens": 22,
+        "cost": 1.6506e-05
+      },
+      "id": "gen-dec-1790872622-JYfwpWNcxEAGetgV2IPX",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NO",
+    "status": "answered",
+    "seconds": 0.2905405831988901
+  },
+  {
+    "case_id": "d008",
+    "request_hash": "49323848b5e59b9975dd64463c337b3b70264d308a3f225dfc4658f0b03e12cb",
+    "started_at": "2026-10-01T16:37:03.066162+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "passage": "Petitioners reply that this seemingly straightforward\nreading overlooks an important question of tense. They\nobserve that the word “owed” is the past participle of the\n\n\f4\n\nHENSON v. SANTANDER CONSUMER USA INC.\nOpinion of the Court\n\nverb “to owe.” And this, they suggest, means the statute’s\ndefinition of debt collector captures anyone who regularly\nseeks to collect debts previously “owed . . . another.” So it\nis that, on petitioners’ account, the statute excludes from\nits compass loan originators (for they never seek to collect\ndebts previously owed someone else) but embraces many\ndebt purchasers like Santander (for in collecting purchased debts they necessarily seek to collect debts previously owed another). If Congress wanted to exempt all\npresent debt owners from its debt collector definition,\npetitioners submit, it would have used the present participle “owing.” That would have better sufficed to do the\njob—to make clear that you must collect debts currently\n“owing . . . another” before implicating the Act."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does this passage define a term?",
+              "criteria": {
+                "true": "The passage assigns a meaning to a term, directly or by adopting a definition from elsewhere.",
+                "false": "The passage does not assign or adopt a meaning; it only uses, illustrates or reports a proposed definition."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"passage\":\"Petitioners reply that this seemingly straightforward\\nreading overlooks an important question of tense. They\\nobserve that the word “owed” is the past participle of the\\n\\n\\f4\\n\\nHENSON v. SANTANDER CONSUMER USA INC.\\nOpinion of the Court\\n\\nverb “to owe.” And this, they suggest, means the statute’s\\ndefinition of debt collector captures anyone who regularly\\nseeks to collect debts previously “owed . . . another.” So it\\nis that, on petitioners’ account, the statute excludes from\\nits compass loan originators (for they never seek to collect\\ndebts previously owed someone else) but embraces many\\ndebt purchasers like Santander (for in collecting purchased debts they necessarily seek to collect debts previously owed another). If Congress wanted to exempt all\\npresent debt owners from its debt collector definition,\\npetitioners submit, it would have used the present participle “owing.” That would have better sufficed to do the\\njob—to make clear that you must collect debts currently\\n“owing . . . another” before implicating the Act.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does this passage define a term?\",\"criteria\":{\"true\":\"The passage assigns a meaning to a term, directly or by adopting a definition from elsewhere.\",\"false\":\"The passage does not assign or adopt a meaning; it only uses, illustrates or reports a proposed definition.\"}}}}",
+        "body_sha256": "ea254212e72d9f96c463396710f331cb9e251f9ce6420995e4f3b0539a8bb7b1"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.39
+        }
+      },
+      "usage": {
+        "input_tokens": 570,
+        "output_tokens": 22,
+        "cost": 2.394e-05
+      },
+      "id": "gen-dec-1790872623-4DqUNqVZMTJZtD3DV3VX",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NO",
+    "status": "answered",
+    "seconds": 0.2989569578785449
+  },
+  {
+    "case_id": "d009",
+    "request_hash": "9883842708275428ea9b9ec2cbcb531e4cfe7dd39cc39c359672318397c8f622",
+    "started_at": "2026-10-01T16:37:03.367807+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "Act",
+            "use_expression": "section 918 of the Act",
+            "definition_passage": "(c) “Act” means the Electronic Fund Transfer Act (Title IX of the Consumer Credit Protection Act, 15 U.S.C. 1693 et seq.).",
+            "use_passage": "(a) Enforcement by Federal agencies. Compliance with this part is enforced in accordance with section 918 of the Act."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the selected use expression have the meaning given by the definition?"
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"Act\",\"use_expression\":\"section 918 of the Act\",\"definition_passage\":\"(c) “Act” means the Electronic Fund Transfer Act (Title IX of the Consumer Credit Protection Act, 15 U.S.C. 1693 et seq.).\",\"use_passage\":\"(a) Enforcement by Federal agencies. Compliance with this part is enforced in accordance with section 918 of the Act.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the selected use expression have the meaning given by the definition?\"}}}",
+        "body_sha256": "6fe2be8dd8bb74673bdc0fcd6a16ee925da5fc66eb2e765f93152447ea424668"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.93
+        }
+      },
+      "usage": {
+        "input_tokens": 381,
+        "output_tokens": 22,
+        "cost": 1.6002e-05
+      },
+      "id": "gen-dec-1790872624-ootFajNY3ooIRUsSYgK6",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 1.7910422501154244
+  },
+  {
+    "case_id": "d010",
+    "request_hash": "01f4fbfa75fd18314e338a64df4db9e0afe27baa2bf79020462276089c8e0bfb",
+    "started_at": "2026-10-01T16:37:05.162357+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "act",
+            "use_expression": "any act provided by law",
+            "definition_passage": "(c) “Act” means the Electronic Fund Transfer Act (Title IX of the Consumer Credit Protection Act, 15 U.S.C. 1693 et seq.).",
+            "use_passage": "The time in which any act provided by law is to be done is computed by excluding the first day and including the last, unless the last day is a holiday, and then it is also excluded."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the selected use expression have the meaning given by the definition?"
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"act\",\"use_expression\":\"any act provided by law\",\"definition_passage\":\"(c) “Act” means the Electronic Fund Transfer Act (Title IX of the Consumer Credit Protection Act, 15 U.S.C. 1693 et seq.).\",\"use_passage\":\"The time in which any act provided by law is to be done is computed by excluding the first day and including the last, unless the last day is a holiday, and then it is also excluded.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the selected use expression have the meaning given by the definition?\"}}}",
+        "body_sha256": "e33cbc6ba35000364251a94f6cee99d43fb2ec2380489f3d3e26e01ce6525b12"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.14
+        }
+      },
+      "usage": {
+        "input_tokens": 393,
+        "output_tokens": 22,
+        "cost": 1.6506e-05
+      },
+      "id": "gen-dec-1790872625-7Thr5zP7CiW22jRCjlPa",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NO",
+    "status": "answered",
+    "seconds": 0.27543466608040035
+  },
+  {
+    "case_id": "d011",
+    "request_hash": "3eaac1901b248cb90c5dbb5ffc6d11d8e0430fa872da06ee9186b7e5e70d1724",
+    "started_at": "2026-10-01T16:37:05.441417+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "credit",
+            "use_expression": "Debiting provisional credit",
+            "definition_passage": "(f) “Credit” means the right granted by a financial institution to a consumer to defer payment of debt, incur debt and defer its payment, or purchase property or services and defer payment therefor.",
+            "use_passage": "(2) Debiting provisional credit. Upon debiting a provisionally credited amount, the financial institution shall:\n(i) Notify the consumer of the date and amount of the debiting;\n(ii) Notify the consumer that the institution will honor checks, drafts, or similar instruments payable to third parties and preauthorized transfers from the consumer's account (without charge to the consumer as a result of an overdraft) for five business days after the notification. The institution shall honor items as specified in the notice, but need honor only items that it would have paid if the provisionally credited funds had not been debited."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the selected use expression have the meaning given by the definition?"
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"credit\",\"use_expression\":\"Debiting provisional credit\",\"definition_passage\":\"(f) “Credit” means the right granted by a financial institution to a consumer to defer payment of debt, incur debt and defer its payment, or purchase property or services and defer payment therefor.\",\"use_passage\":\"(2) Debiting provisional credit. Upon debiting a provisionally credited amount, the financial institution shall:\\n(i) Notify the consumer of the date and amount of the debiting;\\n(ii) Notify the consumer that the institution will honor checks, drafts, or similar instruments payable to third parties and preauthorized transfers from the consumer's account (without charge to the consumer as a result of an overdraft) for five business days after the notification. The institution shall honor items as specified in the notice, but need honor only items that it would have paid if the provisionally credited funds had not been debited.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the selected use expression have the meaning given by the definition?\"}}}",
+        "body_sha256": "b3dc6dae65dacac2405406cbdd80be7f1e73ce805b80a896d0fd0e78c42227dc"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.16
+        }
+      },
+      "usage": {
+        "input_tokens": 484,
+        "output_tokens": 22,
+        "cost": 2.0328e-05
+      },
+      "id": "gen-dec-1790872625-JV5YQYnYlzgTzDRq5Fx0",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NO",
+    "status": "answered",
+    "seconds": 0.33167683403007686
+  },
+  {
+    "case_id": "d012",
+    "request_hash": "73f6bf5a8f830dce923b3e1ba4b59beff6dd69805abd852bdedb03637036f662",
+    "started_at": "2026-10-01T16:37:05.777185+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "state",
+            "use_expression": "Was not initiated within a state",
+            "definition_passage": "(l) “State” means any state, territory, or possession of the United States; the District of Columbia; the Commonwealth of Puerto Rico; or any political subdivision of the thereof in this paragraph (l).",
+            "use_passage": "(ii) The applicable time is 90 days in place of 45 days under paragraph (c)(2) of this section, for completing an investigation, if a notice of error involves an electronic fund transfer that:\n(A) Was not initiated within a state;\n(B) Resulted from a point-of-sale debit card transaction; or\n(C) Occurred within 30 days after the first deposit to the account was made."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the selected use expression have the meaning given by the definition?"
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"state\",\"use_expression\":\"Was not initiated within a state\",\"definition_passage\":\"(l) “State” means any state, territory, or possession of the United States; the District of Columbia; the Commonwealth of Puerto Rico; or any political subdivision of the thereof in this paragraph (l).\",\"use_passage\":\"(ii) The applicable time is 90 days in place of 45 days under paragraph (c)(2) of this section, for completing an investigation, if a notice of error involves an electronic fund transfer that:\\n(A) Was not initiated within a state;\\n(B) Resulted from a point-of-sale debit card transaction; or\\n(C) Occurred within 30 days after the first deposit to the account was made.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the selected use expression have the meaning given by the definition?\"}}}",
+        "body_sha256": "60cc6b1093911f4d403e92f8abaeb582569c656f223a71c332c90b188a8e551e"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.81
+        }
+      },
+      "usage": {
+        "input_tokens": 450,
+        "output_tokens": 22,
+        "cost": 1.89e-05
+      },
+      "id": "gen-dec-1790872625-xoHiL8B4DS6IaDyMlHTx",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.31373220891691744
+  },
+  {
+    "case_id": "d013",
+    "request_hash": "c96828f4c445e1c9459ac5de17b2efb1fa8111fca0cc93d3eefd3cf433b51466",
+    "started_at": "2026-10-01T16:37:06.095155+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "person",
+            "use_expression": "any person other than the landlord",
+            "definition_passage": "(j) “Person” means a natural person or an organization, including a corporation, government agency, estate, trust, partnership, proprietorship, cooperative, or association.",
+            "use_passage": "As used in this chapter:\n(a) “Landlord” means any operator, keeper, lessor, or sublessor of any furnished or unfurnished premises for hire, or his or her agent or successor in interest.\n(b) “Owner” means any person other than the landlord who has any right, title, or interest in personal property.\n(c) “Premises” includes any common areas associated therewith.\n(d) “Reasonable belief” means the actual knowledge or belief a prudent person would have without making an investigation (including any investigation of public records) except that, where the landlord has specific information indicating that such an investigation would more probably than not reveal pertinent information and the cost of such an investigation would be reasonable in relation to the probable value of the personal property involved, “reasonable belief” includes the actual knowledge or belief a prudent person would have if such an investigation were made.\n(e) “Records” means any material, regardless of the physical form, on which information is recorded or preserved by any means, including in written or spoken words, graphically depicted, printed, or electromagnetically transmitted. “Records”\ndoes not include publicly available directories containing information an individual has voluntarily consented to have publicly disseminated or listed, such as name, address, or telephone number.\n(f) “Tenant” includes any paying guest, lessee, or sublessee of any premises for hire."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the selected use expression have the meaning given by the definition?"
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"person\",\"use_expression\":\"any person other than the landlord\",\"definition_passage\":\"(j) “Person” means a natural person or an organization, including a corporation, government agency, estate, trust, partnership, proprietorship, cooperative, or association.\",\"use_passage\":\"As used in this chapter:\\n(a) “Landlord” means any operator, keeper, lessor, or sublessor of any furnished or unfurnished premises for hire, or his or her agent or successor in interest.\\n(b) “Owner” means any person other than the landlord who has any right, title, or interest in personal property.\\n(c) “Premises” includes any common areas associated therewith.\\n(d) “Reasonable belief” means the actual knowledge or belief a prudent person would have without making an investigation (including any investigation of public records) except that, where the landlord has specific information indicating that such an investigation would more probably than not reveal pertinent information and the cost of such an investigation would be reasonable in relation to the probable value of the personal property involved, “reasonable belief” includes the actual knowledge or belief a prudent person would have if such an investigation were made.\\n(e) “Records” means any material, regardless of the physical form, on which information is recorded or preserved by any means, including in written or spoken words, graphically depicted, printed, or electromagnetically transmitted. “Records”\\ndoes not include publicly available directories containing information an individual has voluntarily consented to have publicly disseminated or listed, such as name, address, or telephone number.\\n(f) “Tenant” includes any paying guest, lessee, or sublessee of any premises for hire.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the selected use expression have the meaning given by the definition?\"}}}",
+        "body_sha256": "c880965c664d5008acd471ff33f4fe4ca3beb7b4e30e6dd302d44344b5bcde6c"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.82
+        }
+      },
+      "usage": {
+        "input_tokens": 656,
+        "output_tokens": 22,
+        "cost": 2.7552e-05
+      },
+      "id": "gen-dec-1790872626-V0Bakx9Stb4NrvwrLxhR",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.2538515410851687
+  },
+  {
+    "case_id": "d014",
+    "request_hash": "843babdc72e85c536c8b226d1bb14b04e2ae8754d1aa548edd2e3b3e6eb8250c",
+    "started_at": "2026-10-01T16:37:06.353170+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "Hearing officer",
+            "use_expression": "Hearing officer means an impartial person",
+            "definition_passage": "(e) Hearing officer means an impartial person or persons selected by the PHA, other than the person who made or approved the decision under review, or a subordinate of that person. Such individual or individuals do not need legal training. PHAs must describe their policies for selection of a hearing officer in their lease forms as required by § 966.4, changes to which are subject to a 30-day comment period as described in § 966.3.",
+            "use_passage": "(e) Hearing officer means an impartial person or persons selected by the PHA, other than the person who made or approved the decision under review, or a subordinate of that person. Such individual or individuals do not need legal training. PHAs must describe their policies for selection of a hearing officer in their lease forms as required by § 966.4, changes to which are subject to a 30-day comment period as described in § 966.3."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the selected use expression have the meaning given by the definition?"
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"Hearing officer\",\"use_expression\":\"Hearing officer means an impartial person\",\"definition_passage\":\"(e) Hearing officer means an impartial person or persons selected by the PHA, other than the person who made or approved the decision under review, or a subordinate of that person. Such individual or individuals do not need legal training. PHAs must describe their policies for selection of a hearing officer in their lease forms as required by § 966.4, changes to which are subject to a 30-day comment period as described in § 966.3.\",\"use_passage\":\"(e) Hearing officer means an impartial person or persons selected by the PHA, other than the person who made or approved the decision under review, or a subordinate of that person. Such individual or individuals do not need legal training. PHAs must describe their policies for selection of a hearing officer in their lease forms as required by § 966.4, changes to which are subject to a 30-day comment period as described in § 966.3.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the selected use expression have the meaning given by the definition?\"}}}",
+        "body_sha256": "f140f6be65a96440b997139bde6db9def384736cc7d5dbc99c7c55c3ddc60318"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.7
+        }
+      },
+      "usage": {
+        "input_tokens": 517,
+        "output_tokens": 22,
+        "cost": 2.1714e-05
+      },
+      "id": "gen-dec-1790872626-Zcm9f3xhqXCXjH3XesnP",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.2605575420893729
+  },
+  {
+    "case_id": "d015",
+    "request_hash": "9cb42c89efdc22b12e2a23b6220f3e7bb51ac6b26ac50c3f9a0832ef40ad746f",
+    "started_at": "2026-10-01T16:37:06.618306+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "Act",
+            "use_expression": "(E-Sign Act)",
+            "definition_passage": "(c) “Act” means the Electronic Fund Transfer Act (Title IX of the Consumer Credit Protection Act, 15 U.S.C. 1693 et seq.).",
+            "use_passage": "The disclosures required by this part may be provided to the consumer in electronic form, subject to compliance with the consumer-consent and other applicable provisions of the Electronic Signatures in Global and National Commerce Act (E-Sign Act) (15 U.S.C. 7001 et seq.)."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the selected use expression have the meaning given by the definition?"
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"Act\",\"use_expression\":\"(E-Sign Act)\",\"definition_passage\":\"(c) “Act” means the Electronic Fund Transfer Act (Title IX of the Consumer Credit Protection Act, 15 U.S.C. 1693 et seq.).\",\"use_passage\":\"The disclosures required by this part may be provided to the consumer in electronic form, subject to compliance with the consumer-consent and other applicable provisions of the Electronic Signatures in Global and National Commerce Act (E-Sign Act) (15 U.S.C. 7001 et seq.).\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the selected use expression have the meaning given by the definition?\"}}}",
+        "body_sha256": "4079ce4e10e4db6a65102b2bd84eea9ed0f8db5e6bab05f248f8a594cd293e7a"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.07
+        }
+      },
+      "usage": {
+        "input_tokens": 413,
+        "output_tokens": 22,
+        "cost": 1.7346e-05
+      },
+      "id": "gen-dec-1790872626-1jNNan60RjLzAO0PHYzi",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NO",
+    "status": "answered",
+    "seconds": 0.24006270803511143
+  },
+  {
+    "case_id": "d016",
+    "request_hash": "a5b99334ae93c6c3313efd4edd1eac60ccfc24e702fecf5ca5c6f54bb5f849e6",
+    "started_at": "2026-10-01T16:37:06.861924+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "state",
+            "use_expression": "present state of a thing",
+            "definition_passage": "(l) “State” means any state, territory, or possession of the United States; the District of Columbia; the Commonwealth of Puerto Rico; or any political subdivision of the thereof in this paragraph (l).",
+            "use_passage": "But this much doesn’t follow even as a matter of good\ngrammar, let alone ordinary meaning. Past participles\nlike “owed” are routinely used as adjectives to describe the\npresent state of a thing—so, for example, burnt toast is\ninedible, a fallen branch blocks the path, and (equally) a\ndebt owed to a current owner may be collected by him or\nher. See P. Peters, The Cambridge Guide to English\nUsage 409 (2004) (explaining that the term “past participle” is a “misnomer[ ], since” it “can occur in what is technically a present . . . tense”). Just imagine if you told a\nfriend that you were seeking to “collect a debt owed to\nSteve.” Doesn’t it seem likely your friend would understand you as speaking about a debt currently owed to\nSteve, not a debt Steve used to own and that’s now actually\nyours? In the end, even petitioners find themselves forced\nto admit that past participles can and regularly do work\njust this way, as adjectives to describe the present state of\nthe nouns they modify. See Brief for Petitioners 28; see\nalso B. Garner, Modern English Usage 666 (4th ed. 2016)\n(while “owing . . . is an old and established usage . . . the\nmore logical course is simply to write owed”)."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the selected use expression have the meaning given by the definition?"
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"state\",\"use_expression\":\"present state of a thing\",\"definition_passage\":\"(l) “State” means any state, territory, or possession of the United States; the District of Columbia; the Commonwealth of Puerto Rico; or any political subdivision of the thereof in this paragraph (l).\",\"use_passage\":\"But this much doesn’t follow even as a matter of good\\ngrammar, let alone ordinary meaning. Past participles\\nlike “owed” are routinely used as adjectives to describe the\\npresent state of a thing—so, for example, burnt toast is\\ninedible, a fallen branch blocks the path, and (equally) a\\ndebt owed to a current owner may be collected by him or\\nher. See P. Peters, The Cambridge Guide to English\\nUsage 409 (2004) (explaining that the term “past participle” is a “misnomer[ ], since” it “can occur in what is technically a present . . . tense”). Just imagine if you told a\\nfriend that you were seeking to “collect a debt owed to\\nSteve.” Doesn’t it seem likely your friend would understand you as speaking about a debt currently owed to\\nSteve, not a debt Steve used to own and that’s now actually\\nyours? In the end, even petitioners find themselves forced\\nto admit that past participles can and regularly do work\\njust this way, as adjectives to describe the present state of\\nthe nouns they modify. See Brief for Petitioners 28; see\\nalso B. Garner, Modern English Usage 666 (4th ed. 2016)\\n(while “owing . . . is an old and established usage . . . the\\nmore logical course is simply to write owed”).\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the selected use expression have the meaning given by the definition?\"}}}",
+        "body_sha256": "e92cadfc37f70bfd5ad9ab59e83e04468c1a24f245c7b146060ed69b46597669"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.08
+        }
+      },
+      "usage": {
+        "input_tokens": 676,
+        "output_tokens": 22,
+        "cost": 2.8392e-05
+      },
+      "id": "gen-dec-1790872626-9OcRGc3Sr48HfOljoep6",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NO",
+    "status": "answered",
+    "seconds": 0.2779376660473645
+  },
+  {
+    "case_id": "d017",
+    "request_hash": "4c12e04a90e4b6f0372171a919ea4b84d56cd3f2abfb99db55c206e49cdabf31",
+    "started_at": "2026-10-01T16:37:07.144058+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "if that tenant or other person pays the reasonable cost of storage and takes possession of the property not later than the date specified in the notice for taking possession.",
+            "candidate": "(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling.",
+            "context": "(a) The personal property described in the notice shall be released by the landlord to the former tenant or, at the landlord’s option, to any person reasonably believed by the landlord to be its owner if that tenant or other person pays the reasonable cost of storage and takes possession of the property not later than the date specified in the notice for taking possession."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the candidate create an exception to the requirement?",
+              "criteria": {
+                "true": "The candidate excuses or narrows the requirement in stated circumstances.",
+                "false": "The candidate leaves the requirement unchanged, including merely adding a duty, remedy or way to satisfy it."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"if that tenant or other person pays the reasonable cost of storage and takes possession of the property not later than the date specified in the notice for taking possession.\",\"candidate\":\"(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling.\",\"context\":\"(a) The personal property described in the notice shall be released by the landlord to the former tenant or, at the landlord’s option, to any person reasonably believed by the landlord to be its owner if that tenant or other person pays the reasonable cost of storage and takes possession of the property not later than the date specified in the notice for taking possession.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the candidate create an exception to the requirement?\",\"criteria\":{\"true\":\"The candidate excuses or narrows the requirement in stated circumstances.\",\"false\":\"The candidate leaves the requirement unchanged, including merely adding a duty, remedy or way to satisfy it.\"}}}}",
+        "body_sha256": "1e06d66e332d269d15731e495c404367232b8839000d7182c507909a01f3c624"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.97
+        }
+      },
+      "usage": {
+        "input_tokens": 524,
+        "output_tokens": 22,
+        "cost": 2.2008e-05
+      },
+      "id": "gen-dec-1790872627-PnznN6A5fuZ0YJR5cucJ",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.24783954094164073
+  },
+  {
+    "case_id": "d018",
+    "request_hash": "2e8a6d7088c774ef3014ac3a09489d6dc6bf3e9ed0db1fb770a17ff4371bcfdc",
+    "started_at": "2026-10-01T16:37:07.395133+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "(a) Notice of debt; contents\nWithin five days after the initial communication with a consumer in connection with the collection of any debt, a debt collector shall, unless the following information is contained in the initial communication or the consumer has paid the debt, send the consumer a written notice containing-\n(1) the amount of the debt;\n(2) the name of the creditor to whom the debt is owed;\n(3) a statement that unless the consumer, within thirty days after receipt of the notice, disputes the validity of the debt, or any portion thereof, the debt will be assumed to be valid by the debt collector;\n(4) a statement that if the consumer notifies the debt collector in writing within the thirty-day period that the debt, or any portion thereof, is disputed, the debt collector will obtain verification of the debt or a copy of a judgment against the consumer and a copy of such verification or judgment will be mailed to the consumer by the debt collector; and\n(5) a statement that, upon the consumer's written request within the thirty-day period, the debt collector will provide the consumer with the name and address of the original creditor, if different from the current creditor.",
+            "candidate": "(d) Legal pleadings\nA communication in the form of a formal pleading in a civil action shall not be treated as an initial communication for purposes of subsection (a)."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the candidate create an exception to the requirement?",
+              "criteria": {
+                "true": "The candidate excuses or narrows the requirement in stated circumstances.",
+                "false": "The candidate leaves the requirement unchanged, including merely adding a duty, remedy or way to satisfy it."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"(a) Notice of debt; contents\\nWithin five days after the initial communication with a consumer in connection with the collection of any debt, a debt collector shall, unless the following information is contained in the initial communication or the consumer has paid the debt, send the consumer a written notice containing-\\n(1) the amount of the debt;\\n(2) the name of the creditor to whom the debt is owed;\\n(3) a statement that unless the consumer, within thirty days after receipt of the notice, disputes the validity of the debt, or any portion thereof, the debt will be assumed to be valid by the debt collector;\\n(4) a statement that if the consumer notifies the debt collector in writing within the thirty-day period that the debt, or any portion thereof, is disputed, the debt collector will obtain verification of the debt or a copy of a judgment against the consumer and a copy of such verification or judgment will be mailed to the consumer by the debt collector; and\\n(5) a statement that, upon the consumer's written request within the thirty-day period, the debt collector will provide the consumer with the name and address of the original creditor, if different from the current creditor.\",\"candidate\":\"(d) Legal pleadings\\nA communication in the form of a formal pleading in a civil action shall not be treated as an initial communication for purposes of subsection (a).\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the candidate create an exception to the requirement?\",\"criteria\":{\"true\":\"The candidate excuses or narrows the requirement in stated circumstances.\",\"false\":\"The candidate leaves the requirement unchanged, including merely adding a duty, remedy or way to satisfy it.\"}}}}",
+        "body_sha256": "d52f15d461545bf3c65a58606e476eb2e368924882c63f827804168f7a1850bb"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.92
+        }
+      },
+      "usage": {
+        "input_tokens": 615,
+        "output_tokens": 22,
+        "cost": 2.583e-05
+      },
+      "id": "gen-dec-1790872627-6N5bhBxmHAVaCgIDu4ng",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.26790058286860585
+  },
+  {
+    "case_id": "d019",
+    "request_hash": "e829c93f96389ffbca5098a290d7271cb1b719d8ffb1bcab705459227ce010b3",
+    "started_at": "2026-10-01T16:37:07.666349+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "(i) Provisionally credits the consumer's account in the amount of the alleged error (including interest where applicable) within 10 business days of receiving the error notice.",
+            "candidate": "An institution need not provisionally credit the consumer's account if:\n(A) The institution requires but does not receive written confirmation within 10 business days of an oral notice of error; or\n(B) The alleged error involves an account that is subject to Regulation T of the Board of Governors of the Federal Reserve System (Securities Credit by Brokers and Dealers, 12 CFR part 220).",
+            "context": "(2) Forty-five day period. If the financial institution is unable to complete its investigation within 10 business days, the institution may take up to 45 days from receipt of a notice of error to investigate and determine whether an error occurred, provided the institution does the following:\n(i) Provisionally credits the consumer's account in the amount of the alleged error (including interest where applicable) within 10 business days of receiving the error notice. If the financial institution has a reasonable basis for believing that an unauthorized electronic fund transfer has occurred and the institution has satisfied the requirements of § 1005.6(a), the institution may withhold a maximum of $50 from the amount credited. An institution need not provisionally credit the consumer's account if:\n(A) The institution requires but does not receive written confirmation within 10 business days of an oral notice of error; or\n(B) The alleged error involves an account that is subject to Regulation T of the Board of Governors of the Federal Reserve System (Securities Credit by Brokers and Dealers, 12 CFR part 220)."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the candidate create an exception to the requirement?",
+              "criteria": {
+                "true": "The candidate excuses or narrows the requirement in stated circumstances.",
+                "false": "The candidate leaves the requirement unchanged, including merely adding a duty, remedy or way to satisfy it."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"(i) Provisionally credits the consumer's account in the amount of the alleged error (including interest where applicable) within 10 business days of receiving the error notice.\",\"candidate\":\"An institution need not provisionally credit the consumer's account if:\\n(A) The institution requires but does not receive written confirmation within 10 business days of an oral notice of error; or\\n(B) The alleged error involves an account that is subject to Regulation T of the Board of Governors of the Federal Reserve System (Securities Credit by Brokers and Dealers, 12 CFR part 220).\",\"context\":\"(2) Forty-five day period. If the financial institution is unable to complete its investigation within 10 business days, the institution may take up to 45 days from receipt of a notice of error to investigate and determine whether an error occurred, provided the institution does the following:\\n(i) Provisionally credits the consumer's account in the amount of the alleged error (including interest where applicable) within 10 business days of receiving the error notice. If the financial institution has a reasonable basis for believing that an unauthorized electronic fund transfer has occurred and the institution has satisfied the requirements of § 1005.6(a), the institution may withhold a maximum of $50 from the amount credited. An institution need not provisionally credit the consumer's account if:\\n(A) The institution requires but does not receive written confirmation within 10 business days of an oral notice of error; or\\n(B) The alleged error involves an account that is subject to Regulation T of the Board of Governors of the Federal Reserve System (Securities Credit by Brokers and Dealers, 12 CFR part 220).\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the candidate create an exception to the requirement?\",\"criteria\":{\"true\":\"The candidate excuses or narrows the requirement in stated circumstances.\",\"false\":\"The candidate leaves the requirement unchanged, including merely adding a duty, remedy or way to satisfy it.\"}}}}",
+        "body_sha256": "6ef953beab94a13a48792523c2cc5dad11732b9e9d71425df19040f9f19078ac"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.98
+        }
+      },
+      "usage": {
+        "input_tokens": 700,
+        "output_tokens": 22,
+        "cost": 2.94e-05
+      },
+      "id": "gen-dec-1790872627-RAAZg8aCDRU5f6RcMGZU",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.2674913329537958
+  },
+  {
+    "case_id": "d020",
+    "request_hash": "1b9a81dbd3ae6e7b94e7ec9615ef6e99de595caea564bf629fa774435596d42e",
+    "started_at": "2026-10-01T16:37:07.937653+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "(a) A residential landlord shall not refuse to surrender, to a residential tenant or to a residential tenant’s duly authorized representative, any personal property not owned by the landlord which has been left on the premises after the tenant has vacated the residential premises and the return of which has been requested by the tenant or by the authorized representative of the tenant if all of the following occur:\n(1) The tenant requests, in writing, within 18 days of vacating the premises, the surrender of the personal\nproperty and the request includes a description of the personal property held by the landlord and specifies the mailing address of the tenant.\n(2) The landlord or the landlord’s agent has control or possession of the tenant’s personal property at the time the request is received.\n(3) The tenant, prior to the surrender of the personal property by the landlord and upon written demand by the landlord, tenders payment of all reasonable costs associated with the landlord’s removal and storage of the personal property. The landlord’s demand for payment of reasonable costs associated with the removal and storage of personal property shall be in writing and shall either be mailed to the tenant at the address provided by the tenant pursuant to paragraph (1) or shall be personally presented to the tenant or to the tenant’s authorized representative, within five days after the actual receipt\nof the tenant’s request for surrender of the personal property, unless the property is returned first. The demand shall itemize all charges, specifying the nature and amount of each item of cost.\n(4) The tenant agrees to claim and remove the personal property at a reasonable time mutually agreed upon by the landlord and tenant but not later than 72 hours after the tender provided for under paragraph (3).",
+            "candidate": "(c) This chapter shall not apply when disposition of the personal property has been initiated or completed pursuant to the procedure set forth in Chapter 5 (commencing with Section 1980) or the occupancy is one defined by subdivision (b) of Section 1940."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the candidate create an exception to the requirement?",
+              "criteria": {
+                "true": "The candidate excuses or narrows the requirement in stated circumstances.",
+                "false": "The candidate leaves the requirement unchanged, including merely adding a duty, remedy or way to satisfy it."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"(a) A residential landlord shall not refuse to surrender, to a residential tenant or to a residential tenant’s duly authorized representative, any personal property not owned by the landlord which has been left on the premises after the tenant has vacated the residential premises and the return of which has been requested by the tenant or by the authorized representative of the tenant if all of the following occur:\\n(1) The tenant requests, in writing, within 18 days of vacating the premises, the surrender of the personal\\nproperty and the request includes a description of the personal property held by the landlord and specifies the mailing address of the tenant.\\n(2) The landlord or the landlord’s agent has control or possession of the tenant’s personal property at the time the request is received.\\n(3) The tenant, prior to the surrender of the personal property by the landlord and upon written demand by the landlord, tenders payment of all reasonable costs associated with the landlord’s removal and storage of the personal property. The landlord’s demand for payment of reasonable costs associated with the removal and storage of personal property shall be in writing and shall either be mailed to the tenant at the address provided by the tenant pursuant to paragraph (1) or shall be personally presented to the tenant or to the tenant’s authorized representative, within five days after the actual receipt\\nof the tenant’s request for surrender of the personal property, unless the property is returned first. The demand shall itemize all charges, specifying the nature and amount of each item of cost.\\n(4) The tenant agrees to claim and remove the personal property at a reasonable time mutually agreed upon by the landlord and tenant but not later than 72 hours after the tender provided for under paragraph (3).\",\"candidate\":\"(c) This chapter shall not apply when disposition of the personal property has been initiated or completed pursuant to the procedure set forth in Chapter 5 (commencing with Section 1980) or the occupancy is one defined by subdivision (b) of Section 1940.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the candidate create an exception to the requirement?\",\"criteria\":{\"true\":\"The candidate excuses or narrows the requirement in stated circumstances.\",\"false\":\"The candidate leaves the requirement unchanged, including merely adding a duty, remedy or way to satisfy it.\"}}}}",
+        "body_sha256": "f9b9b29f7e46ece50e221067800f6a77813679aa5cf65dfbab3672a156791013"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.96
+        }
+      },
+      "usage": {
+        "input_tokens": 753,
+        "output_tokens": 22,
+        "cost": 3.1626e-05
+      },
+      "id": "gen-dec-1790872628-eMCGiCa0gLLnbowHByOG",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.25023141596466303
+  },
+  {
+    "case_id": "d021",
+    "request_hash": "399fab83ba5316773168abada90ca89d8525645e42caddcbd091ee561e09efd9",
+    "started_at": "2026-10-01T16:37:08.192342+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "(a)(1) Form of disclosures. Disclosures required under this part shall be clear and readily understandable, in writing, and in a form the consumer may keep, except as otherwise provided in this part. The disclosures required by this part may be provided to the consumer in electronic form, subject to compliance with the consumer-consent and other applicable provisions of the Electronic Signatures in Global and National Commerce Act (E-Sign Act) (15 U.S.C. 7001 et seq.). A financial institution may use commonly accepted or readily understandable abbreviations in complying with the disclosure requirements of this part.",
+            "candidate": "The disclosures required by this part may be provided to the consumer in electronic form, subject to compliance with the consumer-consent and other applicable provisions of the Electronic Signatures in Global and National Commerce Act (E-Sign Act) (15 U.S.C. 7001 et seq.)."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the candidate create an exception to the requirement?",
+              "criteria": {
+                "true": "The candidate excuses or narrows the requirement in stated circumstances.",
+                "false": "The candidate leaves the requirement unchanged, including merely adding a duty, remedy or way to satisfy it."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"(a)(1) Form of disclosures. Disclosures required under this part shall be clear and readily understandable, in writing, and in a form the consumer may keep, except as otherwise provided in this part. The disclosures required by this part may be provided to the consumer in electronic form, subject to compliance with the consumer-consent and other applicable provisions of the Electronic Signatures in Global and National Commerce Act (E-Sign Act) (15 U.S.C. 7001 et seq.). A financial institution may use commonly accepted or readily understandable abbreviations in complying with the disclosure requirements of this part.\",\"candidate\":\"The disclosures required by this part may be provided to the consumer in electronic form, subject to compliance with the consumer-consent and other applicable provisions of the Electronic Signatures in Global and National Commerce Act (E-Sign Act) (15 U.S.C. 7001 et seq.).\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the candidate create an exception to the requirement?\",\"criteria\":{\"true\":\"The candidate excuses or narrows the requirement in stated circumstances.\",\"false\":\"The candidate leaves the requirement unchanged, including merely adding a duty, remedy or way to satisfy it.\"}}}}",
+        "body_sha256": "3e6d647c034edbe2457d17534d6ccef045e1d23867ea679a6e89e7f87225fc6e"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.46
+        }
+      },
+      "usage": {
+        "input_tokens": 525,
+        "output_tokens": 22,
+        "cost": 2.205e-05
+      },
+      "id": "gen-dec-1790872628-VeSZktz5ODoMBEZ8CiF4",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NO",
+    "status": "answered",
+    "seconds": 0.3044271660037339
+  },
+  {
+    "case_id": "d022",
+    "request_hash": "96e3324b2120033d3f10b54ec01dceb19eab2820be008f6f2f09c65d250b0892",
+    "started_at": "2026-10-01T16:37:08.501282+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "(a) Notice of debt; contents\nWithin five days after the initial communication with a consumer in connection with the collection of any debt, a debt collector shall, unless the following information is contained in the initial communication or the consumer has paid the debt, send the consumer a written notice containing-\n(1) the amount of the debt;\n(2) the name of the creditor to whom the debt is owed;\n(3) a statement that unless the consumer, within thirty days after receipt of the notice, disputes the validity of the debt, or any portion thereof, the debt will be assumed to be valid by the debt collector;\n(4) a statement that if the consumer notifies the debt collector in writing within the thirty-day period that the debt, or any portion thereof, is disputed, the debt collector will obtain verification of the debt or a copy of a judgment against the consumer and a copy of such verification or judgment will be mailed to the consumer by the debt collector; and\n(5) a statement that, upon the consumer's written request within the thirty-day period, the debt collector will provide the consumer with the name and address of the original creditor, if different from the current creditor.",
+            "candidate": "(c) Admission of liability\nThe failure of a consumer to dispute the validity of a debt under this section may not be construed by any court as an admission of liability by the consumer."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the candidate create an exception to the requirement?",
+              "criteria": {
+                "true": "The candidate excuses or narrows the requirement in stated circumstances.",
+                "false": "The candidate leaves the requirement unchanged, including merely adding a duty, remedy or way to satisfy it."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"(a) Notice of debt; contents\\nWithin five days after the initial communication with a consumer in connection with the collection of any debt, a debt collector shall, unless the following information is contained in the initial communication or the consumer has paid the debt, send the consumer a written notice containing-\\n(1) the amount of the debt;\\n(2) the name of the creditor to whom the debt is owed;\\n(3) a statement that unless the consumer, within thirty days after receipt of the notice, disputes the validity of the debt, or any portion thereof, the debt will be assumed to be valid by the debt collector;\\n(4) a statement that if the consumer notifies the debt collector in writing within the thirty-day period that the debt, or any portion thereof, is disputed, the debt collector will obtain verification of the debt or a copy of a judgment against the consumer and a copy of such verification or judgment will be mailed to the consumer by the debt collector; and\\n(5) a statement that, upon the consumer's written request within the thirty-day period, the debt collector will provide the consumer with the name and address of the original creditor, if different from the current creditor.\",\"candidate\":\"(c) Admission of liability\\nThe failure of a consumer to dispute the validity of a debt under this section may not be construed by any court as an admission of liability by the consumer.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the candidate create an exception to the requirement?\",\"criteria\":{\"true\":\"The candidate excuses or narrows the requirement in stated circumstances.\",\"false\":\"The candidate leaves the requirement unchanged, including merely adding a duty, remedy or way to satisfy it.\"}}}}",
+        "body_sha256": "ce7c2060d574726fcb6fa2c6d392cf6c8ecf6cec3d867fe28cd82df33d5f4226"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.07
+        }
+      },
+      "usage": {
+        "input_tokens": 617,
+        "output_tokens": 22,
+        "cost": 2.5914e-05
+      },
+      "id": "gen-dec-1790872628-3TSozNCXHArXJhWo1Kqy",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NO",
+    "status": "answered",
+    "seconds": 0.22532529197633266
+  },
+  {
+    "case_id": "d023",
+    "request_hash": "4b33d259a6bcf80e19e76fec31396c6ea1b5eda9d80049527a5c279d40f2f2f3",
+    "started_at": "2026-10-01T16:37:08.731503+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "(a) A residential landlord shall not refuse to surrender, to a residential tenant or to a residential tenant’s duly authorized representative, any personal property not owned by the landlord which has been left on the premises after the tenant has vacated the residential premises and the return of which has been requested by the tenant or by the authorized representative of the tenant if all of the following occur:\n(1) The tenant requests, in writing, within 18 days of vacating the premises, the surrender of the personal\nproperty and the request includes a description of the personal property held by the landlord and specifies the mailing address of the tenant.\n(2) The landlord or the landlord’s agent has control or possession of the tenant’s personal property at the time the request is received.\n(3) The tenant, prior to the surrender of the personal property by the landlord and upon written demand by the landlord, tenders payment of all reasonable costs associated with the landlord’s removal and storage of the personal property. The landlord’s demand for payment of reasonable costs associated with the removal and storage of personal property shall be in writing and shall either be mailed to the tenant at the address provided by the tenant pursuant to paragraph (1) or shall be personally presented to the tenant or to the tenant’s authorized representative, within five days after the actual receipt\nof the tenant’s request for surrender of the personal property, unless the property is returned first. The demand shall itemize all charges, specifying the nature and amount of each item of cost.\n(4) The tenant agrees to claim and remove the personal property at a reasonable time mutually agreed upon by the landlord and tenant but not later than 72 hours after the tender provided for under paragraph (3).",
+            "candidate": "(e) Any landlord who\nretains personal property in violation of this chapter shall be liable to the tenant in a civil action for all the following:\n(1) Actual damages not to exceed the value of the personal property, if the personal property is not surrendered by the later of either of the following: (A) within a reasonable time after the tenant’s request for surrender of the personal property, or (B) if the landlord has demanded payment of reasonable costs associated with removal and storage and the tenant has complied with the requirements set forth in paragraphs (3) and (4) of subdivision (a), whichever is later. Three days is presumed to be a reasonable time in the absence of evidence to the contrary.\n(2) An amount not to exceed two hundred fifty dollars ($250) for each bad faith violation of this section. In determining the amount of the award, the court shall consider proof of matters as justice\nmay require.\n(3) The court may award reasonable attorney’s fees and cost to the prevailing party."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the candidate create an exception to the requirement?",
+              "criteria": {
+                "true": "The candidate excuses or narrows the requirement in stated circumstances.",
+                "false": "The candidate leaves the requirement unchanged, including merely adding a duty, remedy or way to satisfy it."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"(a) A residential landlord shall not refuse to surrender, to a residential tenant or to a residential tenant’s duly authorized representative, any personal property not owned by the landlord which has been left on the premises after the tenant has vacated the residential premises and the return of which has been requested by the tenant or by the authorized representative of the tenant if all of the following occur:\\n(1) The tenant requests, in writing, within 18 days of vacating the premises, the surrender of the personal\\nproperty and the request includes a description of the personal property held by the landlord and specifies the mailing address of the tenant.\\n(2) The landlord or the landlord’s agent has control or possession of the tenant’s personal property at the time the request is received.\\n(3) The tenant, prior to the surrender of the personal property by the landlord and upon written demand by the landlord, tenders payment of all reasonable costs associated with the landlord’s removal and storage of the personal property. The landlord’s demand for payment of reasonable costs associated with the removal and storage of personal property shall be in writing and shall either be mailed to the tenant at the address provided by the tenant pursuant to paragraph (1) or shall be personally presented to the tenant or to the tenant’s authorized representative, within five days after the actual receipt\\nof the tenant’s request for surrender of the personal property, unless the property is returned first. The demand shall itemize all charges, specifying the nature and amount of each item of cost.\\n(4) The tenant agrees to claim and remove the personal property at a reasonable time mutually agreed upon by the landlord and tenant but not later than 72 hours after the tender provided for under paragraph (3).\",\"candidate\":\"(e) Any landlord who\\nretains personal property in violation of this chapter shall be liable to the tenant in a civil action for all the following:\\n(1) Actual damages not to exceed the value of the personal property, if the personal property is not surrendered by the later of either of the following: (A) within a reasonable time after the tenant’s request for surrender of the personal property, or (B) if the landlord has demanded payment of reasonable costs associated with removal and storage and the tenant has complied with the requirements set forth in paragraphs (3) and (4) of subdivision (a), whichever is later. Three days is presumed to be a reasonable time in the absence of evidence to the contrary.\\n(2) An amount not to exceed two hundred fifty dollars ($250) for each bad faith violation of this section. In determining the amount of the award, the court shall consider proof of matters as justice\\nmay require.\\n(3) The court may award reasonable attorney’s fees and cost to the prevailing party.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the candidate create an exception to the requirement?\",\"criteria\":{\"true\":\"The candidate excuses or narrows the requirement in stated circumstances.\",\"false\":\"The candidate leaves the requirement unchanged, including merely adding a duty, remedy or way to satisfy it.\"}}}}",
+        "body_sha256": "28615f10966d72939fb1aaaed890faaecf4be20eb84b646339ee039b8155aec5"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.08
+        }
+      },
+      "usage": {
+        "input_tokens": 906,
+        "output_tokens": 22,
+        "cost": 3.8052e-05
+      },
+      "id": "gen-dec-1790872628-8BPrdUsBvqS3cskz3OfA",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NO",
+    "status": "answered",
+    "seconds": 0.22798149986192584
+  },
+  {
+    "case_id": "d024",
+    "request_hash": "8e6e0997027b205f1ee22ce0361fdcf277245e7c6588fbf2496e1855d16658f3",
+    "started_at": "2026-10-01T16:37:08.964111+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "A financial institution shall investigate promptly and, except as otherwise provided in this paragraph (c), shall determine whether an error occurred within 10 business days of receiving a notice of error.",
+            "candidate": "(4) Investigation. With the exception of transfers covered by § 1005.14 of this part, a financial institution's review of its own records regarding an alleged error satisfies the requirements of this section if:\n(i) The alleged error concerns a transfer to or from a third party; and\n(ii) There is no agreement between the institution and the third party for the type of electronic fund transfer involved.",
+            "context": "(c) Time limits and extent of investigation—(1) Ten-day period. A financial institution shall investigate promptly and, except as otherwise provided in this paragraph (c), shall determine whether an error occurred within 10 business days of receiving a notice of error. The institution shall report the results to the consumer within three business days after completing its investigation. The institution shall correct the error within one business day after determining that an error occurred."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the candidate create an exception to the requirement?",
+              "criteria": {
+                "true": "The candidate excuses or narrows the requirement in stated circumstances.",
+                "false": "The candidate leaves the requirement unchanged, including merely adding a duty, remedy or way to satisfy it."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"A financial institution shall investigate promptly and, except as otherwise provided in this paragraph (c), shall determine whether an error occurred within 10 business days of receiving a notice of error.\",\"candidate\":\"(4) Investigation. With the exception of transfers covered by § 1005.14 of this part, a financial institution's review of its own records regarding an alleged error satisfies the requirements of this section if:\\n(i) The alleged error concerns a transfer to or from a third party; and\\n(ii) There is no agreement between the institution and the third party for the type of electronic fund transfer involved.\",\"context\":\"(c) Time limits and extent of investigation—(1) Ten-day period. A financial institution shall investigate promptly and, except as otherwise provided in this paragraph (c), shall determine whether an error occurred within 10 business days of receiving a notice of error. The institution shall report the results to the consumer within three business days after completing its investigation. The institution shall correct the error within one business day after determining that an error occurred.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the candidate create an exception to the requirement?\",\"criteria\":{\"true\":\"The candidate excuses or narrows the requirement in stated circumstances.\",\"false\":\"The candidate leaves the requirement unchanged, including merely adding a duty, remedy or way to satisfy it.\"}}}}",
+        "body_sha256": "f226b0117ea1e415a93d30ad2c57e0e5a989579151b09e016c69b8dd538aeee9"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.71
+        }
+      },
+      "usage": {
+        "input_tokens": 556,
+        "output_tokens": 22,
+        "cost": 2.3352e-05
+      },
+      "id": "gen-dec-1790872629-d586pVxrS5rY54fYnn1h",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.2719283748883754
+  },
+  {
+    "case_id": "d025",
+    "request_hash": "07ec918fdc2d7f327b4d4ed25b4d78c4c59c08de00d1485af3c71c19d40bb93b",
+    "started_at": "2026-10-01T16:37:09.239726+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "A financial institution shall investigate promptly and, except as otherwise provided in this paragraph (c), shall determine whether an error occurred within 10 business days of receiving a notice of error.",
+            "candidate": "(3) Extension of time periods. The time periods in paragraphs (c)(1) and (c)(2) of this section are extended as follows:\n(i) The applicable time is 20 business days in place of 10 business days under paragraphs (c)(1) and (2) of this section if the notice of error involves an electronic fund transfer to or from the account within 30 days after the first deposit to the account was made.",
+            "context": "(c) Time limits and extent of investigation—(1) Ten-day period. A financial institution shall investigate promptly and, except as otherwise provided in this paragraph (c), shall determine whether an error occurred within 10 business days of receiving a notice of error. The institution shall report the results to the consumer within three business days after completing its investigation. The institution shall correct the error within one business day after determining that an error occurred."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the candidate change the deadline for this requirement?",
+              "criteria": {
+                "true": "The candidate modifies when this requirement is due, including an extension, tolling, adjustment or changed trigger.",
+                "false": "The candidate does not modify when this requirement is due."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"A financial institution shall investigate promptly and, except as otherwise provided in this paragraph (c), shall determine whether an error occurred within 10 business days of receiving a notice of error.\",\"candidate\":\"(3) Extension of time periods. The time periods in paragraphs (c)(1) and (c)(2) of this section are extended as follows:\\n(i) The applicable time is 20 business days in place of 10 business days under paragraphs (c)(1) and (2) of this section if the notice of error involves an electronic fund transfer to or from the account within 30 days after the first deposit to the account was made.\",\"context\":\"(c) Time limits and extent of investigation—(1) Ten-day period. A financial institution shall investigate promptly and, except as otherwise provided in this paragraph (c), shall determine whether an error occurred within 10 business days of receiving a notice of error. The institution shall report the results to the consumer within three business days after completing its investigation. The institution shall correct the error within one business day after determining that an error occurred.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the candidate change the deadline for this requirement?\",\"criteria\":{\"true\":\"The candidate modifies when this requirement is due, including an extension, tolling, adjustment or changed trigger.\",\"false\":\"The candidate does not modify when this requirement is due.\"}}}}",
+        "body_sha256": "081f9de09fb050be79adfd1a327ac37f0a66836bf94ed09e344e8c4b369eef5c"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.96
+        }
+      },
+      "usage": {
+        "input_tokens": 566,
+        "output_tokens": 22,
+        "cost": 2.3772e-05
+      },
+      "id": "gen-dec-1790872629-jIN3o97Ug5JQ1sugLJUX",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.2847006251104176
+  },
+  {
+    "case_id": "d026",
+    "request_hash": "14c1d3cc81a8494222c427ccd8835ebddd545421bf11ac25c281341dde4f6488",
+    "started_at": "2026-10-01T16:37:09.529391+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "If the financial institution is unable to complete its investigation within 10 business days, the institution may take up to 45 days from receipt of a notice of error to investigate and determine whether an error occurred, provided the institution does the following:",
+            "candidate": "(ii) The applicable time is 90 days in place of 45 days under paragraph (c)(2) of this section, for completing an investigation, if a notice of error involves an electronic fund transfer that:\n(A) Was not initiated within a state;\n(B) Resulted from a point-of-sale debit card transaction; or\n(C) Occurred within 30 days after the first deposit to the account was made.",
+            "context": "(2) Forty-five day period. If the financial institution is unable to complete its investigation within 10 business days, the institution may take up to 45 days from receipt of a notice of error to investigate and determine whether an error occurred, provided the institution does the following:\n(i) Provisionally credits the consumer's account in the amount of the alleged error (including interest where applicable) within 10 business days of receiving the error notice. If the financial institution has a reasonable basis for believing that an unauthorized electronic fund transfer has occurred and the institution has satisfied the requirements of § 1005.6(a), the institution may withhold a maximum of $50 from the amount credited. An institution need not provisionally credit the consumer's account if:\n(A) The institution requires but does not receive written confirmation within 10 business days of an oral notice of error; or\n(B) The alleged error involves an account that is subject to Regulation T of the Board of Governors of the Federal Reserve System (Securities Credit by Brokers and Dealers, 12 CFR part 220).\n(ii) Informs the consumer, within two business days after the provisional crediting, of the amount and date of the provisional crediting and gives the consumer full use of the funds during the investigation;\n(iii) Corrects the error, if any, within one business day after determining that an error occurred; and\n(iv) Reports the results to the consumer within three business days after completing its investigation (including, if applicable, notice that a provisional credit has been made final)."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the candidate change the deadline for this requirement?",
+              "criteria": {
+                "true": "The candidate modifies when this requirement is due, including an extension, tolling, adjustment or changed trigger.",
+                "false": "The candidate does not modify when this requirement is due."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"If the financial institution is unable to complete its investigation within 10 business days, the institution may take up to 45 days from receipt of a notice of error to investigate and determine whether an error occurred, provided the institution does the following:\",\"candidate\":\"(ii) The applicable time is 90 days in place of 45 days under paragraph (c)(2) of this section, for completing an investigation, if a notice of error involves an electronic fund transfer that:\\n(A) Was not initiated within a state;\\n(B) Resulted from a point-of-sale debit card transaction; or\\n(C) Occurred within 30 days after the first deposit to the account was made.\",\"context\":\"(2) Forty-five day period. If the financial institution is unable to complete its investigation within 10 business days, the institution may take up to 45 days from receipt of a notice of error to investigate and determine whether an error occurred, provided the institution does the following:\\n(i) Provisionally credits the consumer's account in the amount of the alleged error (including interest where applicable) within 10 business days of receiving the error notice. If the financial institution has a reasonable basis for believing that an unauthorized electronic fund transfer has occurred and the institution has satisfied the requirements of § 1005.6(a), the institution may withhold a maximum of $50 from the amount credited. An institution need not provisionally credit the consumer's account if:\\n(A) The institution requires but does not receive written confirmation within 10 business days of an oral notice of error; or\\n(B) The alleged error involves an account that is subject to Regulation T of the Board of Governors of the Federal Reserve System (Securities Credit by Brokers and Dealers, 12 CFR part 220).\\n(ii) Informs the consumer, within two business days after the provisional crediting, of the amount and date of the provisional crediting and gives the consumer full use of the funds during the investigation;\\n(iii) Corrects the error, if any, within one business day after determining that an error occurred; and\\n(iv) Reports the results to the consumer within three business days after completing its investigation (including, if applicable, notice that a provisional credit has been made final).\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the candidate change the deadline for this requirement?\",\"criteria\":{\"true\":\"The candidate modifies when this requirement is due, including an extension, tolling, adjustment or changed trigger.\",\"false\":\"The candidate does not modify when this requirement is due.\"}}}}",
+        "body_sha256": "2952ca2b004d71cc9be35e8a91ae36d43a352d5ad7ee3c37f906c4d9b34667d5"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.86
+        }
+      },
+      "usage": {
+        "input_tokens": 815,
+        "output_tokens": 22,
+        "cost": 3.423e-05
+      },
+      "id": "gen-dec-1790872629-0c4SnLG2R7MJE1b5MqGt",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.4179765828885138
+  },
+  {
+    "case_id": "d027",
+    "request_hash": "d2c5c4d0bd874829456694ff016f3b7cbfafcc998afb3c42ae4e8c0c1119f6fc",
+    "started_at": "2026-10-01T16:37:09.949603+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "(b) Notice of error from consumer—(1) Timing; contents. A financial institution shall comply with the requirements of this section with respect to any oral or written notice of error from the consumer that:\n(i) Is received by the institution no later than 60 days after the institution sends the periodic statement or provides the passbook documentation, required by § 1005.9, on which the alleged error is first reflected;\n(ii) Enables the institution to identify the consumer's name and account number; and\n(iii) Indicates why the consumer believes an error exists and includes to the extent possible the type, date, and amount of the error, except for requests described in paragraph (a)(1)(vii) of this section.",
+            "candidate": "(3) Request for documentation or clarifications. When a notice of error is based on documentation or clarification that the consumer requested under paragraph (a)(1)(vii) of this section, the consumer's notice of error is timely if received by the financial institution no later than 60 days after the institution sends the information requested.",
+            "context": "(a) Definition of error—(1) Types of transfers or inquiries covered. The term “error” means:\n(i) An unauthorized electronic fund transfer;\n(ii) An incorrect electronic fund transfer to or from the consumer's account;\n(iii) The omission of an electronic fund transfer from a periodic statement;\n(iv) A computational or bookkeeping error made by the financial institution relating to an electronic fund transfer;\n(v) The consumer's receipt of an incorrect amount of money from an electronic terminal;\n(vi) An electronic fund transfer not identified in accordance with § 1005.9 or § 1005.10(a); or\n(vii) The consumer's request for documentation required by § 1005.9 or § 1005.10(a) or for additional information or clarification concerning an electronic fund transfer, including a request the consumer makes to determine whether an error exists under paragraphs (a)(1)(i) through (vi) of this section.\n(2) Types of inquiries not covered. The term “error” does not include:\n(i) A routine inquiry about the consumer's account balance;\n(ii) A request for information for tax or other recordkeeping purposes; or\n(iii) A request for duplicate copies of documentation."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the candidate change the deadline for this requirement?",
+              "criteria": {
+                "true": "The candidate modifies when this requirement is due, including an extension, tolling, adjustment or changed trigger.",
+                "false": "The candidate does not modify when this requirement is due."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"(b) Notice of error from consumer—(1) Timing; contents. A financial institution shall comply with the requirements of this section with respect to any oral or written notice of error from the consumer that:\\n(i) Is received by the institution no later than 60 days after the institution sends the periodic statement or provides the passbook documentation, required by § 1005.9, on which the alleged error is first reflected;\\n(ii) Enables the institution to identify the consumer's name and account number; and\\n(iii) Indicates why the consumer believes an error exists and includes to the extent possible the type, date, and amount of the error, except for requests described in paragraph (a)(1)(vii) of this section.\",\"candidate\":\"(3) Request for documentation or clarifications. When a notice of error is based on documentation or clarification that the consumer requested under paragraph (a)(1)(vii) of this section, the consumer's notice of error is timely if received by the financial institution no later than 60 days after the institution sends the information requested.\",\"context\":\"(a) Definition of error—(1) Types of transfers or inquiries covered. The term “error” means:\\n(i) An unauthorized electronic fund transfer;\\n(ii) An incorrect electronic fund transfer to or from the consumer's account;\\n(iii) The omission of an electronic fund transfer from a periodic statement;\\n(iv) A computational or bookkeeping error made by the financial institution relating to an electronic fund transfer;\\n(v) The consumer's receipt of an incorrect amount of money from an electronic terminal;\\n(vi) An electronic fund transfer not identified in accordance with § 1005.9 or § 1005.10(a); or\\n(vii) The consumer's request for documentation required by § 1005.9 or § 1005.10(a) or for additional information or clarification concerning an electronic fund transfer, including a request the consumer makes to determine whether an error exists under paragraphs (a)(1)(i) through (vi) of this section.\\n(2) Types of inquiries not covered. The term “error” does not include:\\n(i) A routine inquiry about the consumer's account balance;\\n(ii) A request for information for tax or other recordkeeping purposes; or\\n(iii) A request for duplicate copies of documentation.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the candidate change the deadline for this requirement?\",\"criteria\":{\"true\":\"The candidate modifies when this requirement is due, including an extension, tolling, adjustment or changed trigger.\",\"false\":\"The candidate does not modify when this requirement is due.\"}}}}",
+        "body_sha256": "0ff3263c444848161f394431f2faa50c75bf5b4cc14c967972e43476edd004d4"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.81
+        }
+      },
+      "usage": {
+        "input_tokens": 831,
+        "output_tokens": 22,
+        "cost": 3.4902e-05
+      },
+      "id": "gen-dec-1790872630-eGYi3f7LslXZYh7z6rqk",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.9917774999048561
+  },
+  {
+    "case_id": "d028",
+    "request_hash": "0259aa21f37c4b569b9ca2a10feacaf963f6367f9c86a4994fd59b93891e079d",
+    "started_at": "2026-10-01T16:37:10.946637+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "(1) The tenant requests, in writing, within 18 days of vacating the premises, the surrender of the personal\nproperty and the request includes a description of the personal property held by the landlord and specifies the mailing address of the tenant.",
+            "candidate": "(a) If the last day for the performance of any act provided or required by law to be performed within a specified period of time is a holiday, then that period is hereby extended to and including the next day that is not a holiday. For purposes of this section, “holiday” means all day on Saturdays, all holidays specified in Section 135 and, to the extent provided in Section 12b, all days that by terms of Section 12b are required to be considered as holidays.\n(b) This section\napplies to Sections 659, 659a, and 921, and to all other provisions of law providing or requiring an act to be performed on a particular day or within a specified period of time, whether expressed in this or any other code or statute, ordinance, rule, or regulation.",
+            "context": "(a) A residential landlord shall not refuse to surrender, to a residential tenant or to a residential tenant’s duly authorized representative, any personal property not owned by the landlord which has been left on the premises after the tenant has vacated the residential premises and the return of which has been requested by the tenant or by the authorized representative of the tenant if all of the following occur:\n(1) The tenant requests, in writing, within 18 days of vacating the premises, the surrender of the personal\nproperty and the request includes a description of the personal property held by the landlord and specifies the mailing address of the tenant.\n(2) The landlord or the landlord’s agent has control or possession of the tenant’s personal property at the time the request is received.\n(3) The tenant, prior to the surrender of the personal property by the landlord and upon written demand by the landlord, tenders payment of all reasonable costs associated with the landlord’s removal and storage of the personal property. The landlord’s demand for payment of reasonable costs associated with the removal and storage of personal property shall be in writing and shall either be mailed to the tenant at the address provided by the tenant pursuant to paragraph (1) or shall be personally presented to the tenant or to the tenant’s authorized representative, within five days after the actual receipt\nof the tenant’s request for surrender of the personal property, unless the property is returned first. The demand shall itemize all charges, specifying the nature and amount of each item of cost.\n(4) The tenant agrees to claim and remove the personal property at a reasonable time mutually agreed upon by the landlord and tenant but not later than 72 hours after the tender provided for under paragraph (3)."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the candidate change the deadline for this requirement?",
+              "criteria": {
+                "true": "The candidate modifies when this requirement is due, including an extension, tolling, adjustment or changed trigger.",
+                "false": "The candidate does not modify when this requirement is due."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"(1) The tenant requests, in writing, within 18 days of vacating the premises, the surrender of the personal\\nproperty and the request includes a description of the personal property held by the landlord and specifies the mailing address of the tenant.\",\"candidate\":\"(a) If the last day for the performance of any act provided or required by law to be performed within a specified period of time is a holiday, then that period is hereby extended to and including the next day that is not a holiday. For purposes of this section, “holiday” means all day on Saturdays, all holidays specified in Section 135 and, to the extent provided in Section 12b, all days that by terms of Section 12b are required to be considered as holidays.\\n(b) This section\\napplies to Sections 659, 659a, and 921, and to all other provisions of law providing or requiring an act to be performed on a particular day or within a specified period of time, whether expressed in this or any other code or statute, ordinance, rule, or regulation.\",\"context\":\"(a) A residential landlord shall not refuse to surrender, to a residential tenant or to a residential tenant’s duly authorized representative, any personal property not owned by the landlord which has been left on the premises after the tenant has vacated the residential premises and the return of which has been requested by the tenant or by the authorized representative of the tenant if all of the following occur:\\n(1) The tenant requests, in writing, within 18 days of vacating the premises, the surrender of the personal\\nproperty and the request includes a description of the personal property held by the landlord and specifies the mailing address of the tenant.\\n(2) The landlord or the landlord’s agent has control or possession of the tenant’s personal property at the time the request is received.\\n(3) The tenant, prior to the surrender of the personal property by the landlord and upon written demand by the landlord, tenders payment of all reasonable costs associated with the landlord’s removal and storage of the personal property. The landlord’s demand for payment of reasonable costs associated with the removal and storage of personal property shall be in writing and shall either be mailed to the tenant at the address provided by the tenant pursuant to paragraph (1) or shall be personally presented to the tenant or to the tenant’s authorized representative, within five days after the actual receipt\\nof the tenant’s request for surrender of the personal property, unless the property is returned first. The demand shall itemize all charges, specifying the nature and amount of each item of cost.\\n(4) The tenant agrees to claim and remove the personal property at a reasonable time mutually agreed upon by the landlord and tenant but not later than 72 hours after the tender provided for under paragraph (3).\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the candidate change the deadline for this requirement?\",\"criteria\":{\"true\":\"The candidate modifies when this requirement is due, including an extension, tolling, adjustment or changed trigger.\",\"false\":\"The candidate does not modify when this requirement is due.\"}}}}",
+        "body_sha256": "6477a6013516e6618597509ed6fd7a73df1fee31e0c253e4f58eb9dad9c3bd34"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.67
+        }
+      },
+      "usage": {
+        "input_tokens": 930,
+        "output_tokens": 22,
+        "cost": 3.906e-05
+      },
+      "id": "gen-dec-1790872631-UldA3eTQ6Pp7YkL9qAGC",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.24268337502144277
+  },
+  {
+    "case_id": "d029",
+    "request_hash": "43b42c417a8387ad47c407115a67d84dfbf53cd04c3d5ce7f1464d08cef870c1",
+    "started_at": "2026-10-01T16:37:11.195516+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "The institution shall report the results to the consumer within three business days after completing its investigation.",
+            "candidate": "(3) Extension of time periods. The time periods in paragraphs (c)(1) and (c)(2) of this section are extended as follows:\n(i) The applicable time is 20 business days in place of 10 business days under paragraphs (c)(1) and (2) of this section if the notice of error involves an electronic fund transfer to or from the account within 30 days after the first deposit to the account was made.",
+            "context": "(c) Time limits and extent of investigation—(1) Ten-day period. A financial institution shall investigate promptly and, except as otherwise provided in this paragraph (c), shall determine whether an error occurred within 10 business days of receiving a notice of error. The institution shall report the results to the consumer within three business days after completing its investigation. The institution shall correct the error within one business day after determining that an error occurred."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the candidate change the deadline for this requirement?",
+              "criteria": {
+                "true": "The candidate modifies when this requirement is due, including an extension, tolling, adjustment or changed trigger.",
+                "false": "The candidate does not modify when this requirement is due."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"The institution shall report the results to the consumer within three business days after completing its investigation.\",\"candidate\":\"(3) Extension of time periods. The time periods in paragraphs (c)(1) and (c)(2) of this section are extended as follows:\\n(i) The applicable time is 20 business days in place of 10 business days under paragraphs (c)(1) and (2) of this section if the notice of error involves an electronic fund transfer to or from the account within 30 days after the first deposit to the account was made.\",\"context\":\"(c) Time limits and extent of investigation—(1) Ten-day period. A financial institution shall investigate promptly and, except as otherwise provided in this paragraph (c), shall determine whether an error occurred within 10 business days of receiving a notice of error. The institution shall report the results to the consumer within three business days after completing its investigation. The institution shall correct the error within one business day after determining that an error occurred.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the candidate change the deadline for this requirement?\",\"criteria\":{\"true\":\"The candidate modifies when this requirement is due, including an extension, tolling, adjustment or changed trigger.\",\"false\":\"The candidate does not modify when this requirement is due.\"}}}}",
+        "body_sha256": "04c6aa99e9bd2b95af1b7ac978287f2602bc6f435152f230f2d6ec4da17347e7"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.51
+        }
+      },
+      "usage": {
+        "input_tokens": 547,
+        "output_tokens": 22,
+        "cost": 2.2974e-05
+      },
+      "id": "gen-dec-1790872631-nx94CtBH292P7cxdfhDC",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.43967437488026917
+  },
+  {
+    "case_id": "d030",
+    "request_hash": "76f1487fc84905bc0ad19115cd08228a10149ccf38aed3c9a9d3261a449643de",
+    "started_at": "2026-10-01T16:37:11.641724+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "Within five days after the initial communication with a consumer in connection with the collection of any debt, a debt collector shall, unless the following information is contained in the initial communication or the consumer has paid the debt, send the consumer a written notice",
+            "candidate": "(b) Disputed debts\nIf the consumer notifies the debt collector in writing within the thirty-day period described in subsection (a) that the debt, or any portion thereof, is disputed, or that the consumer requests the name and address of the original creditor, the debt collector shall cease collection of the debt, or any disputed portion thereof, until the debt collector obtains verification of the debt or a copy of a judgment, or the name and address of the original creditor, and a copy of such verification or judgment, or name and address of the original creditor, is mailed to the consumer by the debt collector. Collection activities and communications that do not otherwise violate this subchapter may continue during the 30-day period referred to in subsection (a) unless the consumer has notified the debt collector in writing that the debt, or any portion of the debt, is disputed or that the consumer requests the name and address of the original creditor. Any collection activities and communication during the 30-day period may not overshadow or be inconsistent with the disclosure of the consumer's right to dispute the debt or request the name and address of the original creditor.",
+            "context": "(a) Notice of debt; contents\nWithin five days after the initial communication with a consumer in connection with the collection of any debt, a debt collector shall, unless the following information is contained in the initial communication or the consumer has paid the debt, send the consumer a written notice containing-\n(1) the amount of the debt;\n(2) the name of the creditor to whom the debt is owed;\n(3) a statement that unless the consumer, within thirty days after receipt of the notice, disputes the validity of the debt, or any portion thereof, the debt will be assumed to be valid by the debt collector;\n(4) a statement that if the consumer notifies the debt collector in writing within the thirty-day period that the debt, or any portion thereof, is disputed, the debt collector will obtain verification of the debt or a copy of a judgment against the consumer and a copy of such verification or judgment will be mailed to the consumer by the debt collector; and\n(5) a statement that, upon the consumer's written request within the thirty-day period, the debt collector will provide the consumer with the name and address of the original creditor, if different from the current creditor."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the candidate change the deadline for this requirement?",
+              "criteria": {
+                "true": "The candidate modifies when this requirement is due, including an extension, tolling, adjustment or changed trigger.",
+                "false": "The candidate does not modify when this requirement is due."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"Within five days after the initial communication with a consumer in connection with the collection of any debt, a debt collector shall, unless the following information is contained in the initial communication or the consumer has paid the debt, send the consumer a written notice\",\"candidate\":\"(b) Disputed debts\\nIf the consumer notifies the debt collector in writing within the thirty-day period described in subsection (a) that the debt, or any portion thereof, is disputed, or that the consumer requests the name and address of the original creditor, the debt collector shall cease collection of the debt, or any disputed portion thereof, until the debt collector obtains verification of the debt or a copy of a judgment, or the name and address of the original creditor, and a copy of such verification or judgment, or name and address of the original creditor, is mailed to the consumer by the debt collector. Collection activities and communications that do not otherwise violate this subchapter may continue during the 30-day period referred to in subsection (a) unless the consumer has notified the debt collector in writing that the debt, or any portion of the debt, is disputed or that the consumer requests the name and address of the original creditor. Any collection activities and communication during the 30-day period may not overshadow or be inconsistent with the disclosure of the consumer's right to dispute the debt or request the name and address of the original creditor.\",\"context\":\"(a) Notice of debt; contents\\nWithin five days after the initial communication with a consumer in connection with the collection of any debt, a debt collector shall, unless the following information is contained in the initial communication or the consumer has paid the debt, send the consumer a written notice containing-\\n(1) the amount of the debt;\\n(2) the name of the creditor to whom the debt is owed;\\n(3) a statement that unless the consumer, within thirty days after receipt of the notice, disputes the validity of the debt, or any portion thereof, the debt will be assumed to be valid by the debt collector;\\n(4) a statement that if the consumer notifies the debt collector in writing within the thirty-day period that the debt, or any portion thereof, is disputed, the debt collector will obtain verification of the debt or a copy of a judgment against the consumer and a copy of such verification or judgment will be mailed to the consumer by the debt collector; and\\n(5) a statement that, upon the consumer's written request within the thirty-day period, the debt collector will provide the consumer with the name and address of the original creditor, if different from the current creditor.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the candidate change the deadline for this requirement?\",\"criteria\":{\"true\":\"The candidate modifies when this requirement is due, including an extension, tolling, adjustment or changed trigger.\",\"false\":\"The candidate does not modify when this requirement is due.\"}}}}",
+        "body_sha256": "4a2ab51b5f15673569cf42234a1481de0510a68488a6c9742a840f9830cf63d0"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.09
+        }
+      },
+      "usage": {
+        "input_tokens": 865,
+        "output_tokens": 22,
+        "cost": 3.633e-05
+      },
+      "id": "gen-dec-1790872631-IbnnIJeneb5sIAhRU8IA",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NO",
+    "status": "answered",
+    "seconds": 0.2649217080324888
+  },
+  {
+    "case_id": "d031",
+    "request_hash": "60d3b28556ec3a1053f1eb813516626e2085f30ebfb0e0ab7fc23f7ed6d3cf70",
+    "started_at": "2026-10-01T16:37:11.912952+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "The landlord’s demand for payment of reasonable costs associated with the removal and storage of personal property shall be in writing and shall either be mailed to the tenant at the address provided by the tenant pursuant to paragraph (1) or shall be personally presented to the tenant or to the tenant’s authorized representative, within five days after the actual receipt\nof the tenant’s request for surrender of the personal property, unless the property is returned first.",
+            "candidate": "(4) The tenant agrees to claim and remove the personal property at a reasonable time mutually agreed upon by the landlord and tenant but not later than 72 hours after the tender provided for under paragraph (3).",
+            "context": "(a) A residential landlord shall not refuse to surrender, to a residential tenant or to a residential tenant’s duly authorized representative, any personal property not owned by the landlord which has been left on the premises after the tenant has vacated the residential premises and the return of which has been requested by the tenant or by the authorized representative of the tenant if all of the following occur:\n(1) The tenant requests, in writing, within 18 days of vacating the premises, the surrender of the personal\nproperty and the request includes a description of the personal property held by the landlord and specifies the mailing address of the tenant.\n(2) The landlord or the landlord’s agent has control or possession of the tenant’s personal property at the time the request is received.\n(3) The tenant, prior to the surrender of the personal property by the landlord and upon written demand by the landlord, tenders payment of all reasonable costs associated with the landlord’s removal and storage of the personal property. The landlord’s demand for payment of reasonable costs associated with the removal and storage of personal property shall be in writing and shall either be mailed to the tenant at the address provided by the tenant pursuant to paragraph (1) or shall be personally presented to the tenant or to the tenant’s authorized representative, within five days after the actual receipt\nof the tenant’s request for surrender of the personal property, unless the property is returned first. The demand shall itemize all charges, specifying the nature and amount of each item of cost.\n(4) The tenant agrees to claim and remove the personal property at a reasonable time mutually agreed upon by the landlord and tenant but not later than 72 hours after the tender provided for under paragraph (3)."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the candidate change the deadline for this requirement?",
+              "criteria": {
+                "true": "The candidate modifies when this requirement is due, including an extension, tolling, adjustment or changed trigger.",
+                "false": "The candidate does not modify when this requirement is due."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"The landlord’s demand for payment of reasonable costs associated with the removal and storage of personal property shall be in writing and shall either be mailed to the tenant at the address provided by the tenant pursuant to paragraph (1) or shall be personally presented to the tenant or to the tenant’s authorized representative, within five days after the actual receipt\\nof the tenant’s request for surrender of the personal property, unless the property is returned first.\",\"candidate\":\"(4) The tenant agrees to claim and remove the personal property at a reasonable time mutually agreed upon by the landlord and tenant but not later than 72 hours after the tender provided for under paragraph (3).\",\"context\":\"(a) A residential landlord shall not refuse to surrender, to a residential tenant or to a residential tenant’s duly authorized representative, any personal property not owned by the landlord which has been left on the premises after the tenant has vacated the residential premises and the return of which has been requested by the tenant or by the authorized representative of the tenant if all of the following occur:\\n(1) The tenant requests, in writing, within 18 days of vacating the premises, the surrender of the personal\\nproperty and the request includes a description of the personal property held by the landlord and specifies the mailing address of the tenant.\\n(2) The landlord or the landlord’s agent has control or possession of the tenant’s personal property at the time the request is received.\\n(3) The tenant, prior to the surrender of the personal property by the landlord and upon written demand by the landlord, tenders payment of all reasonable costs associated with the landlord’s removal and storage of the personal property. The landlord’s demand for payment of reasonable costs associated with the removal and storage of personal property shall be in writing and shall either be mailed to the tenant at the address provided by the tenant pursuant to paragraph (1) or shall be personally presented to the tenant or to the tenant’s authorized representative, within five days after the actual receipt\\nof the tenant’s request for surrender of the personal property, unless the property is returned first. The demand shall itemize all charges, specifying the nature and amount of each item of cost.\\n(4) The tenant agrees to claim and remove the personal property at a reasonable time mutually agreed upon by the landlord and tenant but not later than 72 hours after the tender provided for under paragraph (3).\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the candidate change the deadline for this requirement?\",\"criteria\":{\"true\":\"The candidate modifies when this requirement is due, including an extension, tolling, adjustment or changed trigger.\",\"false\":\"The candidate does not modify when this requirement is due.\"}}}}",
+        "body_sha256": "cf0a7834d6ba67c541a884389f1e7c23b9320f1681f1a9617dd30fcba169c9f8"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.13
+        }
+      },
+      "usage": {
+        "input_tokens": 829,
+        "output_tokens": 22,
+        "cost": 3.4818e-05
+      },
+      "id": "gen-dec-1790872632-kmCT6nMNYqQx1cAlxQ3n",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NO",
+    "status": "answered",
+    "seconds": 0.2405798330437392
+  },
+  {
+    "case_id": "d032",
+    "request_hash": "4c985f3ed85b794b70fb6fae6a49ee9e015836adb21ef79047683b38d8cbeed5",
+    "started_at": "2026-10-01T16:37:12.159440+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "requirement": "(1) The tenant requests, in writing, within 18 days of vacating the premises, the surrender of the personal\nproperty and the request includes a description of the personal property held by the landlord and specifies the mailing address of the tenant.",
+            "candidate": "(e) Any landlord who\nretains personal property in violation of this chapter shall be liable to the tenant in a civil action for all the following:\n(1) Actual damages not to exceed the value of the personal property, if the personal property is not surrendered by the later of either of the following: (A) within a reasonable time after the tenant’s request for surrender of the personal property, or (B) if the landlord has demanded payment of reasonable costs associated with removal and storage and the tenant has complied with the requirements set forth in paragraphs (3) and (4) of subdivision (a), whichever is later. Three days is presumed to be a reasonable time in the absence of evidence to the contrary.\n(2) An amount not to exceed two hundred fifty dollars ($250) for each bad faith violation of this section. In determining the amount of the award, the court shall consider proof of matters as justice\nmay require.\n(3) The court may award reasonable attorney’s fees and cost to the prevailing party.",
+            "context": "(a) A residential landlord shall not refuse to surrender, to a residential tenant or to a residential tenant’s duly authorized representative, any personal property not owned by the landlord which has been left on the premises after the tenant has vacated the residential premises and the return of which has been requested by the tenant or by the authorized representative of the tenant if all of the following occur:\n(1) The tenant requests, in writing, within 18 days of vacating the premises, the surrender of the personal\nproperty and the request includes a description of the personal property held by the landlord and specifies the mailing address of the tenant.\n(2) The landlord or the landlord’s agent has control or possession of the tenant’s personal property at the time the request is received.\n(3) The tenant, prior to the surrender of the personal property by the landlord and upon written demand by the landlord, tenders payment of all reasonable costs associated with the landlord’s removal and storage of the personal property. The landlord’s demand for payment of reasonable costs associated with the removal and storage of personal property shall be in writing and shall either be mailed to the tenant at the address provided by the tenant pursuant to paragraph (1) or shall be personally presented to the tenant or to the tenant’s authorized representative, within five days after the actual receipt\nof the tenant’s request for surrender of the personal property, unless the property is returned first. The demand shall itemize all charges, specifying the nature and amount of each item of cost.\n(4) The tenant agrees to claim and remove the personal property at a reasonable time mutually agreed upon by the landlord and tenant but not later than 72 hours after the tender provided for under paragraph (3)."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the candidate change the deadline for this requirement?",
+              "criteria": {
+                "true": "The candidate modifies when this requirement is due, including an extension, tolling, adjustment or changed trigger.",
+                "false": "The candidate does not modify when this requirement is due."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"requirement\":\"(1) The tenant requests, in writing, within 18 days of vacating the premises, the surrender of the personal\\nproperty and the request includes a description of the personal property held by the landlord and specifies the mailing address of the tenant.\",\"candidate\":\"(e) Any landlord who\\nretains personal property in violation of this chapter shall be liable to the tenant in a civil action for all the following:\\n(1) Actual damages not to exceed the value of the personal property, if the personal property is not surrendered by the later of either of the following: (A) within a reasonable time after the tenant’s request for surrender of the personal property, or (B) if the landlord has demanded payment of reasonable costs associated with removal and storage and the tenant has complied with the requirements set forth in paragraphs (3) and (4) of subdivision (a), whichever is later. Three days is presumed to be a reasonable time in the absence of evidence to the contrary.\\n(2) An amount not to exceed two hundred fifty dollars ($250) for each bad faith violation of this section. In determining the amount of the award, the court shall consider proof of matters as justice\\nmay require.\\n(3) The court may award reasonable attorney’s fees and cost to the prevailing party.\",\"context\":\"(a) A residential landlord shall not refuse to surrender, to a residential tenant or to a residential tenant’s duly authorized representative, any personal property not owned by the landlord which has been left on the premises after the tenant has vacated the residential premises and the return of which has been requested by the tenant or by the authorized representative of the tenant if all of the following occur:\\n(1) The tenant requests, in writing, within 18 days of vacating the premises, the surrender of the personal\\nproperty and the request includes a description of the personal property held by the landlord and specifies the mailing address of the tenant.\\n(2) The landlord or the landlord’s agent has control or possession of the tenant’s personal property at the time the request is received.\\n(3) The tenant, prior to the surrender of the personal property by the landlord and upon written demand by the landlord, tenders payment of all reasonable costs associated with the landlord’s removal and storage of the personal property. The landlord’s demand for payment of reasonable costs associated with the removal and storage of personal property shall be in writing and shall either be mailed to the tenant at the address provided by the tenant pursuant to paragraph (1) or shall be personally presented to the tenant or to the tenant’s authorized representative, within five days after the actual receipt\\nof the tenant’s request for surrender of the personal property, unless the property is returned first. The demand shall itemize all charges, specifying the nature and amount of each item of cost.\\n(4) The tenant agrees to claim and remove the personal property at a reasonable time mutually agreed upon by the landlord and tenant but not later than 72 hours after the tender provided for under paragraph (3).\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the candidate change the deadline for this requirement?\",\"criteria\":{\"true\":\"The candidate modifies when this requirement is due, including an extension, tolling, adjustment or changed trigger.\",\"false\":\"The candidate does not modify when this requirement is due.\"}}}}",
+        "body_sha256": "42b9d595c066009ba0afe7548b0bcebf3f8018c68f3b0de1360d20a1fd7ebaa3"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.3
+        }
+      },
+      "usage": {
+        "input_tokens": 965,
+        "output_tokens": 22,
+        "cost": 4.053e-05
+      },
+      "id": "gen-dec-1790872632-sGpGKXMwReXNQugKwVf1",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NO",
+    "status": "answered",
+    "seconds": 0.25555545813404024
+  },
+  {
+    "case_id": "d033",
+    "request_hash": "f096fe2f1e80569788959ea48f53a70f228bc15595a9807dfe40430c3a2da05e",
+    "started_at": "2026-10-01T16:37:12.419927+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "Act",
+            "use_expression": "section 918 of the Act",
+            "use_passage": "(a) Enforcement by Federal agencies. Compliance with this part is enforced in accordance with section 918 of the Act.",
+            "context": "(c) “Act” means the Electronic Fund Transfer Act (Title IX of the Consumer Credit Protection Act, 15 U.S.C. 1693 et seq.)."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "choice",
+              "instructions": "Which meaning fits the selected use expression?",
+              "criteria": {
+                "A": "The Electronic Fund Transfer Act",
+                "B": "An act or event performed by a person",
+                "NONE": "Neither offered meaning fits"
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"Act\",\"use_expression\":\"section 918 of the Act\",\"use_passage\":\"(a) Enforcement by Federal agencies. Compliance with this part is enforced in accordance with section 918 of the Act.\",\"context\":\"(c) “Act” means the Electronic Fund Transfer Act (Title IX of the Consumer Credit Protection Act, 15 U.S.C. 1693 et seq.).\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"choice\",\"instructions\":\"Which meaning fits the selected use expression?\",\"criteria\":{\"A\":\"The Electronic Fund Transfer Act\",\"B\":\"An act or event performed by a person\",\"NONE\":\"Neither offered meaning fits\"}}}}",
+        "body_sha256": "df707c38818cb5ccbff773826d86f9061012418084e7786337b4a5ff6a7af84b"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "choice",
+          "choice": "A",
+          "probabilities": {
+            "A": 1,
+            "B": 0,
+            "NONE": 0
+          },
+          "confidence": 1
+        }
+      },
+      "usage": {
+        "input_tokens": 434,
+        "output_tokens": 40,
+        "cost": 1.8228e-05
+      },
+      "id": "gen-dec-1790872632-NXVx5CJH1AGYnlJqyXGv",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "A",
+    "status": "answered",
+    "seconds": 0.29245500010438263
+  },
+  {
+    "case_id": "d034",
+    "request_hash": "bca7a0801fc395822dd8fc15f7587d63dc8a345efd1a766248d667f71d7e0571",
+    "started_at": "2026-10-01T16:37:12.718082+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "act",
+            "use_expression": "any act provided by law",
+            "use_passage": "The time in which any act provided by law is to be done is computed by excluding the first day and including the last, unless the last day is a holiday, and then it is also excluded."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "choice",
+              "instructions": "Which meaning fits the selected use expression?",
+              "criteria": {
+                "A": "The Electronic Fund Transfer Act",
+                "B": "Conduct required or permitted to be performed",
+                "NONE": "Neither offered meaning fits"
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"act\",\"use_expression\":\"any act provided by law\",\"use_passage\":\"The time in which any act provided by law is to be done is computed by excluding the first day and including the last, unless the last day is a holiday, and then it is also excluded.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"choice\",\"instructions\":\"Which meaning fits the selected use expression?\",\"criteria\":{\"A\":\"The Electronic Fund Transfer Act\",\"B\":\"Conduct required or permitted to be performed\",\"NONE\":\"Neither offered meaning fits\"}}}}",
+        "body_sha256": "8ec504359abf6108ad42ddd1f29f559774bd2558c94eb43b15e7f9f79e9f9d35"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "choice",
+          "choice": "B",
+          "probabilities": {
+            "NONE": 0,
+            "A": 0,
+            "B": 1
+          },
+          "confidence": 0.99
+        }
+      },
+      "usage": {
+        "input_tokens": 403,
+        "output_tokens": 40,
+        "cost": 1.6926e-05
+      },
+      "id": "gen-dec-1790872632-0Wqq7CpzCACCKTugjCEg",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "B",
+    "status": "answered",
+    "seconds": 0.24429120891727507
+  },
+  {
+    "case_id": "d035",
+    "request_hash": "cc70fecaf136cec8547f1522c996c1a62966a9c5c9b2ec70f706a7f81c2460ce",
+    "started_at": "2026-10-01T16:37:12.970121+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "credit",
+            "use_expression": "Debiting provisional credit",
+            "use_passage": "(2) Debiting provisional credit. Upon debiting a provisionally credited amount, the financial institution shall:\n(i) Notify the consumer of the date and amount of the debiting;\n(ii) Notify the consumer that the institution will honor checks, drafts, or similar instruments payable to third parties and preauthorized transfers from the consumer's account (without charge to the consumer as a result of an overdraft) for five business days after the notification. The institution shall honor items as specified in the notice, but need honor only items that it would have paid if the provisionally credited funds had not been debited."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "choice",
+              "instructions": "Which meaning fits the selected use expression?",
+              "criteria": {
+                "A": "A right to defer paying for property or services",
+                "B": "An amount provisionally added to an account balance",
+                "NONE": "Neither offered meaning fits"
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"credit\",\"use_expression\":\"Debiting provisional credit\",\"use_passage\":\"(2) Debiting provisional credit. Upon debiting a provisionally credited amount, the financial institution shall:\\n(i) Notify the consumer of the date and amount of the debiting;\\n(ii) Notify the consumer that the institution will honor checks, drafts, or similar instruments payable to third parties and preauthorized transfers from the consumer's account (without charge to the consumer as a result of an overdraft) for five business days after the notification. The institution shall honor items as specified in the notice, but need honor only items that it would have paid if the provisionally credited funds had not been debited.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"choice\",\"instructions\":\"Which meaning fits the selected use expression?\",\"criteria\":{\"A\":\"A right to defer paying for property or services\",\"B\":\"An amount provisionally added to an account balance\",\"NONE\":\"Neither offered meaning fits\"}}}}",
+        "body_sha256": "76a7c2f868c3eeb43d62b57c1ecfb2b1c44fda288d11852eaa41413792c2cc25"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "choice",
+          "choice": "B",
+          "probabilities": {
+            "A": 0,
+            "NONE": 0.01,
+            "B": 0.99
+          },
+          "confidence": 0.99
+        }
+      },
+      "usage": {
+        "input_tokens": 497,
+        "output_tokens": 40,
+        "cost": 2.0874e-05
+      },
+      "id": "gen-dec-1790872633-IlNx5GvoepLAQU3uYi38",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "B",
+    "status": "answered",
+    "seconds": 0.270118375075981
+  },
+  {
+    "case_id": "d036",
+    "request_hash": "78b5a479dd6b5f59a3d2aaaa299a0c85e7a718ffbae41d1d909b1be1934b8120",
+    "started_at": "2026-10-01T16:37:13.247169+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "Credit",
+            "use_expression": "“Credit” means",
+            "use_passage": "(f) “Credit” means the right granted by a financial institution to a consumer to defer payment of debt, incur debt and defer its payment, or purchase property or services and defer payment therefor."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "choice",
+              "instructions": "Which meaning fits the selected use expression?",
+              "criteria": {
+                "A": "Academic recognition for completing a course",
+                "B": "Public acknowledgment of another person’s contribution",
+                "NONE": "Neither offered meaning fits"
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"Credit\",\"use_expression\":\"“Credit” means\",\"use_passage\":\"(f) “Credit” means the right granted by a financial institution to a consumer to defer payment of debt, incur debt and defer its payment, or purchase property or services and defer payment therefor.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"choice\",\"instructions\":\"Which meaning fits the selected use expression?\",\"criteria\":{\"A\":\"Academic recognition for completing a course\",\"B\":\"Public acknowledgment of another person’s contribution\",\"NONE\":\"Neither offered meaning fits\"}}}}",
+        "body_sha256": "c238b085b325dba4195a0bb169f264b139241508b183d6a044eb7221ef1dd88d"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "choice",
+          "choice": "NONE",
+          "probabilities": {
+            "NONE": 1,
+            "B": 0,
+            "A": 0
+          },
+          "confidence": 1
+        }
+      },
+      "usage": {
+        "input_tokens": 405,
+        "output_tokens": 40,
+        "cost": 1.701e-05
+      },
+      "id": "gen-dec-1790872633-o11Czawor7kLspLiLSF6",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NONE",
+    "status": "answered",
+    "seconds": 0.3468282918911427
+  },
+  {
+    "case_id": "d037",
+    "request_hash": "01a817c296773eeddec44f3adf2d020bfdcd7e680cc14e6d9225f8616c668ae4",
+    "started_at": "2026-10-01T16:37:13.599969+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "Hearing officer",
+            "use_expression": "Hearing officer means",
+            "use_passage": "(e) Hearing officer means an impartial person or persons selected by the PHA, other than the person who made or approved the decision under review, or a subordinate of that person. Such individual or individuals do not need legal training. PHAs must describe their policies for selection of a hearing officer in their lease forms as required by § 966.4, changes to which are subject to a 30-day comment period as described in § 966.3."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "choice",
+              "instructions": "Which meaning fits the selected use expression?",
+              "criteria": {
+                "A": "An impartial PHA-selected reviewer excluding the challenged decisionmaker and their subordinate",
+                "B": "The subordinate of the person whose challenged decision is under review",
+                "NONE": "Neither offered meaning fits"
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"Hearing officer\",\"use_expression\":\"Hearing officer means\",\"use_passage\":\"(e) Hearing officer means an impartial person or persons selected by the PHA, other than the person who made or approved the decision under review, or a subordinate of that person. Such individual or individuals do not need legal training. PHAs must describe their policies for selection of a hearing officer in their lease forms as required by § 966.4, changes to which are subject to a 30-day comment period as described in § 966.3.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"choice\",\"instructions\":\"Which meaning fits the selected use expression?\",\"criteria\":{\"A\":\"An impartial PHA-selected reviewer excluding the challenged decisionmaker and their subordinate\",\"B\":\"The subordinate of the person whose challenged decision is under review\",\"NONE\":\"Neither offered meaning fits\"}}}}",
+        "body_sha256": "21ae5ca09fbf166fa8e2f9f49803b5f6c6afc7a90d11937c51e60d8a5665a006"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "choice",
+          "choice": "A",
+          "probabilities": {
+            "A": 1,
+            "NONE": 0,
+            "B": 0
+          },
+          "confidence": 1
+        }
+      },
+      "usage": {
+        "input_tokens": 477,
+        "output_tokens": 40,
+        "cost": 2.0034e-05
+      },
+      "id": "gen-dec-1790872633-ZjOaodRqE3wiw1pkLO7Y",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "A",
+    "status": "answered",
+    "seconds": 0.36234308406710625
+  },
+  {
+    "case_id": "d038",
+    "request_hash": "1b23c2de6a21501f529bc460c65963255dec3983e0531ed6b2fbae3ec0209997",
+    "started_at": "2026-10-01T16:37:13.969567+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "Tenant",
+            "use_expression": "Tenant shall mean",
+            "use_passage": "(f) Tenant shall mean the adult person (or persons) (other than a live-in aide):\n(1) Who resides in the unit, and who executed the lease with the PHA as lessee of the dwelling unit, or, if no such person now resides in the unit,\n(2) Who resides in the unit, and who is the remaining head of household of the tenant family residing in the dwelling unit."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "choice",
+              "instructions": "Which meaning fits the selected use expression?",
+              "criteria": {
+                "A": "Every resident including live-in aides",
+                "B": "The adult lessee resident or qualifying remaining household head, excluding a live-in aide",
+                "NONE": "Neither offered meaning fits"
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"Tenant\",\"use_expression\":\"Tenant shall mean\",\"use_passage\":\"(f) Tenant shall mean the adult person (or persons) (other than a live-in aide):\\n(1) Who resides in the unit, and who executed the lease with the PHA as lessee of the dwelling unit, or, if no such person now resides in the unit,\\n(2) Who resides in the unit, and who is the remaining head of household of the tenant family residing in the dwelling unit.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"choice\",\"instructions\":\"Which meaning fits the selected use expression?\",\"criteria\":{\"A\":\"Every resident including live-in aides\",\"B\":\"The adult lessee resident or qualifying remaining household head, excluding a live-in aide\",\"NONE\":\"Neither offered meaning fits\"}}}}",
+        "body_sha256": "984377fa1562b23c0340806b4c39ea93cffd8154f7957827c832e469525ec099"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "choice",
+          "choice": "B",
+          "probabilities": {
+            "B": 1,
+            "A": 0,
+            "NONE": 0
+          },
+          "confidence": 1
+        }
+      },
+      "usage": {
+        "input_tokens": 455,
+        "output_tokens": 40,
+        "cost": 1.911e-05
+      },
+      "id": "gen-dec-1790872634-S0inmYC4O5QmX2MffZLB",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "B",
+    "status": "answered",
+    "seconds": 0.23705354193225503
+  },
+  {
+    "case_id": "d039",
+    "request_hash": "2972d6be92479145377fb35d102ddb2bcc42836045610aec50138d888abebb00",
+    "started_at": "2026-10-01T16:37:14.214141+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "state",
+            "use_expression": "present state of a thing",
+            "use_passage": "But this much doesn’t follow even as a matter of good\ngrammar, let alone ordinary meaning. Past participles\nlike “owed” are routinely used as adjectives to describe the\npresent state of a thing—so, for example, burnt toast is\ninedible, a fallen branch blocks the path, and (equally) a\ndebt owed to a current owner may be collected by him or\nher. See P. Peters, The Cambridge Guide to English\nUsage 409 (2004) (explaining that the term “past participle” is a “misnomer[ ], since” it “can occur in what is technically a present . . . tense”). Just imagine if you told a\nfriend that you were seeking to “collect a debt owed to\nSteve.” Doesn’t it seem likely your friend would understand you as speaking about a debt currently owed to\nSteve, not a debt Steve used to own and that’s now actually\nyours? In the end, even petitioners find themselves forced\nto admit that past participles can and regularly do work\njust this way, as adjectives to describe the present state of\nthe nouns they modify. See Brief for Petitioners 28; see\nalso B. Garner, Modern English Usage 666 (4th ed. 2016)\n(while “owing . . . is an old and established usage . . . the\nmore logical course is simply to write owed”)."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "choice",
+              "instructions": "Which meaning fits the selected use expression?",
+              "criteria": {
+                "A": "A geographic governmental jurisdiction",
+                "B": "A legal system’s enacted statutes",
+                "NONE": "Neither offered meaning fits"
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"state\",\"use_expression\":\"present state of a thing\",\"use_passage\":\"But this much doesn’t follow even as a matter of good\\ngrammar, let alone ordinary meaning. Past participles\\nlike “owed” are routinely used as adjectives to describe the\\npresent state of a thing—so, for example, burnt toast is\\ninedible, a fallen branch blocks the path, and (equally) a\\ndebt owed to a current owner may be collected by him or\\nher. See P. Peters, The Cambridge Guide to English\\nUsage 409 (2004) (explaining that the term “past participle” is a “misnomer[ ], since” it “can occur in what is technically a present . . . tense”). Just imagine if you told a\\nfriend that you were seeking to “collect a debt owed to\\nSteve.” Doesn’t it seem likely your friend would understand you as speaking about a debt currently owed to\\nSteve, not a debt Steve used to own and that’s now actually\\nyours? In the end, even petitioners find themselves forced\\nto admit that past participles can and regularly do work\\njust this way, as adjectives to describe the present state of\\nthe nouns they modify. See Brief for Petitioners 28; see\\nalso B. Garner, Modern English Usage 666 (4th ed. 2016)\\n(while “owing . . . is an old and established usage . . . the\\nmore logical course is simply to write owed”).\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"choice\",\"instructions\":\"Which meaning fits the selected use expression?\",\"criteria\":{\"A\":\"A geographic governmental jurisdiction\",\"B\":\"A legal system’s enacted statutes\",\"NONE\":\"Neither offered meaning fits\"}}}}",
+        "body_sha256": "53452ab6d2cfb05b9d6247816e0952f03ecc66953b8bd4571666b3475a23c534"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "choice",
+          "choice": "NONE",
+          "probabilities": {
+            "B": 0,
+            "NONE": 0.99,
+            "A": 0.01
+          },
+          "confidence": 0.99
+        }
+      },
+      "usage": {
+        "input_tokens": 677,
+        "output_tokens": 40,
+        "cost": 2.8434e-05
+      },
+      "id": "gen-dec-1790872634-BHGssBPfdJ0jFyscHNvq",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NONE",
+    "status": "answered",
+    "seconds": 0.31176391593180597
+  },
+  {
+    "case_id": "d040",
+    "request_hash": "97fee0518f7b353456c782e510ca81f1f4a91223a5c9c889e9caade3410a62e9",
+    "started_at": "2026-10-01T16:37:14.532578+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "term": "Owner",
+            "use_expression": "“Owner” means",
+            "use_passage": "As used in this chapter:\n(a) “Landlord” means any operator, keeper, lessor, or sublessor of any furnished or unfurnished premises for hire, or his or her agent or successor in interest.\n(b) “Owner” means any person other than the landlord who has any right, title, or interest in personal property.\n(c) “Premises” includes any common areas associated therewith.\n(d) “Reasonable belief” means the actual knowledge or belief a prudent person would have without making an investigation (including any investigation of public records) except that, where the landlord has specific information indicating that such an investigation would more probably than not reveal pertinent information and the cost of such an investigation would be reasonable in relation to the probable value of the personal property involved, “reasonable belief” includes the actual knowledge or belief a prudent person would have if such an investigation were made.\n(e) “Records” means any material, regardless of the physical form, on which information is recorded or preserved by any means, including in written or spoken words, graphically depicted, printed, or electromagnetically transmitted. “Records”\ndoes not include publicly available directories containing information an individual has voluntarily consented to have publicly disseminated or listed, such as name, address, or telephone number.\n(f) “Tenant” includes any paying guest, lessee, or sublessee of any premises for hire."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "choice",
+              "instructions": "Which meaning fits the selected use expression?",
+              "criteria": {
+                "A": "A person other than the landlord with a right, title, or interest in the personal property",
+                "B": "The landlord solely in their capacity as owner of the rented real property",
+                "NONE": "Neither offered meaning fits"
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"term\":\"Owner\",\"use_expression\":\"“Owner” means\",\"use_passage\":\"As used in this chapter:\\n(a) “Landlord” means any operator, keeper, lessor, or sublessor of any furnished or unfurnished premises for hire, or his or her agent or successor in interest.\\n(b) “Owner” means any person other than the landlord who has any right, title, or interest in personal property.\\n(c) “Premises” includes any common areas associated therewith.\\n(d) “Reasonable belief” means the actual knowledge or belief a prudent person would have without making an investigation (including any investigation of public records) except that, where the landlord has specific information indicating that such an investigation would more probably than not reveal pertinent information and the cost of such an investigation would be reasonable in relation to the probable value of the personal property involved, “reasonable belief” includes the actual knowledge or belief a prudent person would have if such an investigation were made.\\n(e) “Records” means any material, regardless of the physical form, on which information is recorded or preserved by any means, including in written or spoken words, graphically depicted, printed, or electromagnetically transmitted. “Records”\\ndoes not include publicly available directories containing information an individual has voluntarily consented to have publicly disseminated or listed, such as name, address, or telephone number.\\n(f) “Tenant” includes any paying guest, lessee, or sublessee of any premises for hire.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"choice\",\"instructions\":\"Which meaning fits the selected use expression?\",\"criteria\":{\"A\":\"A person other than the landlord with a right, title, or interest in the personal property\",\"B\":\"The landlord solely in their capacity as owner of the rented real property\",\"NONE\":\"Neither offered meaning fits\"}}}}",
+        "body_sha256": "9312667e96181cd09d8ce5af8c519f4e2438ced2526f0cbfa89da12c518555a2"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "choice",
+          "choice": "A",
+          "probabilities": {
+            "A": 1,
+            "NONE": 0,
+            "B": 0
+          },
+          "confidence": 1
+        }
+      },
+      "usage": {
+        "input_tokens": 683,
+        "output_tokens": 40,
+        "cost": 2.8686e-05
+      },
+      "id": "gen-dec-1790872634-aJ9DbGntsOReqpHp4aNs",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "A",
+    "status": "answered",
+    "seconds": 0.2785776669625193
+  },
+  {
+    "case_id": "d041",
+    "request_hash": "d2af0a4b3080731cf1bf8e835fe21837496c573bb2800798b310059e19241a27",
+    "started_at": "2026-10-01T16:37:14.817002+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "claim": "The Court decided whether the principal-purpose definition of debt collector applies to Santander.",
+            "text": "First, petitioners suggest that Santander can qualify as a\ndebt collector not only because it regularly seeks to collect\nfor its own account debts that it has purchased, but also\nbecause it regularly acts as a third party collection agent\nfor debts owed to others. Petitioners did not, however,\nraise the latter theory in their petition for certiorari and\nneither did we agree to review it. Second, the parties\nbriefly allude to another statutory definition of the term\n“debt collector”—one that encompasses those engaged “in\nany business the principal purpose of which is the collection of any debts.” §1692a(6). But the parties haven’t\nmuch litigated that alternative definition and in granting\ncertiorari we didn’t agree to address it either."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the supplied text support this claim?",
+              "criteria": {
+                "true": "The text states or necessarily implies the claim with its conditions.",
+                "false": "The text does not establish the claim; compatibility or mentioning the subject is insufficient."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"claim\":\"The Court decided whether the principal-purpose definition of debt collector applies to Santander.\",\"text\":\"First, petitioners suggest that Santander can qualify as a\\ndebt collector not only because it regularly seeks to collect\\nfor its own account debts that it has purchased, but also\\nbecause it regularly acts as a third party collection agent\\nfor debts owed to others. Petitioners did not, however,\\nraise the latter theory in their petition for certiorari and\\nneither did we agree to review it. Second, the parties\\nbriefly allude to another statutory definition of the term\\n“debt collector”—one that encompasses those engaged “in\\nany business the principal purpose of which is the collection of any debts.” §1692a(6). But the parties haven’t\\nmuch litigated that alternative definition and in granting\\ncertiorari we didn’t agree to address it either.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the supplied text support this claim?\",\"criteria\":{\"true\":\"The text states or necessarily implies the claim with its conditions.\",\"false\":\"The text does not establish the claim; compatibility or mentioning the subject is insufficient.\"}}}}",
+        "body_sha256": "a3584438e65b8031c0c5556ef09d9fb1ff2b46d8cd2d20820e41f3022c261dfb"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "usage": {
+        "input_tokens": 516,
+        "output_tokens": 22,
+        "cost": 2.1672e-05
+      },
+      "id": "gen-dec-1790872634-gT5ilUuPLWG2BJnv77aw",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NO",
+    "status": "answered",
+    "seconds": 0.23227445897646248
+  },
+  {
+    "case_id": "d042",
+    "request_hash": "e2e01fba08e5a155f52f1cf99aeea683f0e425f6353ae96b824f3b6c918da255",
+    "started_at": "2026-10-01T16:37:15.055799+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "claim": "The Court adopts the position that debts previously owed to another necessarily bring a purchaser within the disputed debt-collector definition.",
+            "text": "Petitioners reply that this seemingly straightforward\nreading overlooks an important question of tense. They\nobserve that the word “owed” is the past participle of the\n\n\f4\n\nHENSON v. SANTANDER CONSUMER USA INC.\nOpinion of the Court\n\nverb “to owe.” And this, they suggest, means the statute’s\ndefinition of debt collector captures anyone who regularly\nseeks to collect debts previously “owed . . . another.” So it\nis that, on petitioners’ account, the statute excludes from\nits compass loan originators (for they never seek to collect\ndebts previously owed someone else) but embraces many\ndebt purchasers like Santander (for in collecting purchased debts they necessarily seek to collect debts previously owed another). If Congress wanted to exempt all\npresent debt owners from its debt collector definition,\npetitioners submit, it would have used the present participle “owing.” That would have better sufficed to do the\njob—to make clear that you must collect debts currently\n“owing . . . another” before implicating the Act."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the supplied text support this claim?",
+              "criteria": {
+                "true": "The text states or necessarily implies the claim with its conditions.",
+                "false": "The text does not establish the claim; compatibility or mentioning the subject is insufficient."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"claim\":\"The Court adopts the position that debts previously owed to another necessarily bring a purchaser within the disputed debt-collector definition.\",\"text\":\"Petitioners reply that this seemingly straightforward\\nreading overlooks an important question of tense. They\\nobserve that the word “owed” is the past participle of the\\n\\n\\f4\\n\\nHENSON v. SANTANDER CONSUMER USA INC.\\nOpinion of the Court\\n\\nverb “to owe.” And this, they suggest, means the statute’s\\ndefinition of debt collector captures anyone who regularly\\nseeks to collect debts previously “owed . . . another.” So it\\nis that, on petitioners’ account, the statute excludes from\\nits compass loan originators (for they never seek to collect\\ndebts previously owed someone else) but embraces many\\ndebt purchasers like Santander (for in collecting purchased debts they necessarily seek to collect debts previously owed another). If Congress wanted to exempt all\\npresent debt owners from its debt collector definition,\\npetitioners submit, it would have used the present participle “owing.” That would have better sufficed to do the\\njob—to make clear that you must collect debts currently\\n“owing . . . another” before implicating the Act.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the supplied text support this claim?\",\"criteria\":{\"true\":\"The text states or necessarily implies the claim with its conditions.\",\"false\":\"The text does not establish the claim; compatibility or mentioning the subject is insufficient.\"}}}}",
+        "body_sha256": "2880b4535618c26bb8b11844bc57c49b9b8d9369aeadafdb8477ecf0d90660f2"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.16
+        }
+      },
+      "usage": {
+        "input_tokens": 590,
+        "output_tokens": 22,
+        "cost": 2.478e-05
+      },
+      "id": "gen-dec-1790872635-PGv9ipIjxRfGgymMNe4S",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NO",
+    "status": "answered",
+    "seconds": 0.29297829209826887
+  },
+  {
+    "case_id": "d043",
+    "request_hash": "5fd03645595110f2ab5b94f3e9ec94d91c0e8553f311be7c691996027cc958b3",
+    "started_at": "2026-10-01T16:37:15.355364+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "claim": "Under the statutory definition at issue, collecting purchased debts for one’s own account does not by itself trigger debt-collector status.",
+            "text": "With these preliminaries by the board, we can turn to\nthe much narrowed question properly before us. In doing\nso, we begin, as we must, with a careful examination of\nthe statutory text. And there we find it hard to disagree\nwith the Fourth Circuit’s interpretive handiwork. After\nall, the Act defines debt collectors to include those who\nregularly seek to collect debts “owed . . . another.” And by\nits plain terms this language seems to focus our attention\non third party collection agents working for a debt owner—\nnot on a debt owner seeking to collect debts for itself.\nNeither does this language appear to suggest that we\nshould care how a debt owner came to be a debt owner—\nwhether the owner originated the debt or came by it only\nthrough a later purchase. All that matters is whether the\ntarget of the lawsuit regularly seeks to collect debts for its\nown account or does so for “another.” And given that, it\nwould seem a debt purchaser like Santander may indeed\ncollect debts for its own account without triggering the\nstatutory definition in dispute, just as the Fourth Circuit\nexplained."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the supplied text support this claim?",
+              "criteria": {
+                "true": "The text states or necessarily implies the claim with its conditions.",
+                "false": "The text does not establish the claim; compatibility or mentioning the subject is insufficient."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"claim\":\"Under the statutory definition at issue, collecting purchased debts for one’s own account does not by itself trigger debt-collector status.\",\"text\":\"With these preliminaries by the board, we can turn to\\nthe much narrowed question properly before us. In doing\\nso, we begin, as we must, with a careful examination of\\nthe statutory text. And there we find it hard to disagree\\nwith the Fourth Circuit’s interpretive handiwork. After\\nall, the Act defines debt collectors to include those who\\nregularly seek to collect debts “owed . . . another.” And by\\nits plain terms this language seems to focus our attention\\non third party collection agents working for a debt owner—\\nnot on a debt owner seeking to collect debts for itself.\\nNeither does this language appear to suggest that we\\nshould care how a debt owner came to be a debt owner—\\nwhether the owner originated the debt or came by it only\\nthrough a later purchase. All that matters is whether the\\ntarget of the lawsuit regularly seeks to collect debts for its\\nown account or does so for “another.” And given that, it\\nwould seem a debt purchaser like Santander may indeed\\ncollect debts for its own account without triggering the\\nstatutory definition in dispute, just as the Fourth Circuit\\nexplained.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the supplied text support this claim?\",\"criteria\":{\"true\":\"The text states or necessarily implies the claim with its conditions.\",\"false\":\"The text does not establish the claim; compatibility or mentioning the subject is insufficient.\"}}}}",
+        "body_sha256": "6ad4680d3fa1f086518714dfeb609be58f66a9efdbabd14da912417684ddd01d"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.95
+        }
+      },
+      "usage": {
+        "input_tokens": 599,
+        "output_tokens": 22,
+        "cost": 2.5158e-05
+      },
+      "id": "gen-dec-1790872635-e8lbR50QTU46ewpGFApZ",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.2401360000949353
+  },
+  {
+    "case_id": "d044",
+    "request_hash": "4fad2c5b1b8c88205e384ef265396f710978a3fadc692c61ad07b24fe1edefca",
+    "started_at": "2026-10-01T16:37:15.602277+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "claim": "A formal pleading in a civil action is not an initial communication for the subsection (a) notice requirement.",
+            "text": "(d) Legal pleadings\nA communication in the form of a formal pleading in a civil action shall not be treated as an initial communication for purposes of subsection (a)."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the supplied text support this claim?",
+              "criteria": {
+                "true": "The text states or necessarily implies the claim with its conditions.",
+                "false": "The text does not establish the claim; compatibility or mentioning the subject is insufficient."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"claim\":\"A formal pleading in a civil action is not an initial communication for the subsection (a) notice requirement.\",\"text\":\"(d) Legal pleadings\\nA communication in the form of a formal pleading in a civil action shall not be treated as an initial communication for purposes of subsection (a).\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the supplied text support this claim?\",\"criteria\":{\"true\":\"The text states or necessarily implies the claim with its conditions.\",\"false\":\"The text does not establish the claim; compatibility or mentioning the subject is insufficient.\"}}}}",
+        "body_sha256": "ae568586e07cc3e17edba487480d1d684888456d14ad186e90efa4e64ed1564c"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.98
+        }
+      },
+      "usage": {
+        "input_tokens": 387,
+        "output_tokens": 22,
+        "cost": 1.6254e-05
+      },
+      "id": "gen-dec-1790872635-7N4YnUSFHHqjpGhx5mlO",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.2855595408473164
+  },
+  {
+    "case_id": "d045",
+    "request_hash": "91de8c7139bf5bcd7695019dff1cee541f449350b101bb95da7eba34cc8468b3",
+    "started_at": "2026-10-01T16:37:15.895746+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "claim": "A former tenant reclaiming any left-behind property within two days is exempt from storage costs even when it was moved away from the dwelling.",
+            "text": "(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the supplied text support this claim?",
+              "criteria": {
+                "true": "The text states or necessarily implies the claim with its conditions.",
+                "false": "The text does not establish the claim; compatibility or mentioning the subject is insufficient."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"claim\":\"A former tenant reclaiming any left-behind property within two days is exempt from storage costs even when it was moved away from the dwelling.\",\"text\":\"(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the supplied text support this claim?\",\"criteria\":{\"true\":\"The text states or necessarily implies the claim with its conditions.\",\"false\":\"The text does not establish the claim; compatibility or mentioning the subject is insufficient.\"}}}}",
+        "body_sha256": "7c3e2e59a790d58f2fa3eb8d5f65325459e93aed7cf69219e930c42372312d04"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "usage": {
+        "input_tokens": 436,
+        "output_tokens": 22,
+        "cost": 1.8312e-05
+      },
+      "id": "gen-dec-1790872636-xHNpXZu3328IaFy2tAOU",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NO",
+    "status": "answered",
+    "seconds": 0.31197854201309383
+  },
+  {
+    "case_id": "d046",
+    "request_hash": "53811b02c5850f41405777742fb0026047a946338c74d913eba0173acf897908",
+    "started_at": "2026-10-01T16:37:16.215610+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "claim": "The storage-cost component described here cannot exceed the fair rental value of the space reasonably required for storage.",
+            "text": "(b) For the purposes of this chapter, “reasonable costs associated with the landlord’s removal and storage of the personal property” shall include, but not be limited to, each of the following:\n(1) Reasonable costs actually incurred, or the reasonable value of labor actually provided, or both, in removing the personal property from its original location to the place of storage, including disassembly and\ntransportation.\n(2) Reasonable storage costs actually incurred, which shall not exceed the fair rental value of the space reasonably required for the storage of the personal property."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the supplied text support this claim?",
+              "criteria": {
+                "true": "The text states or necessarily implies the claim with its conditions.",
+                "false": "The text does not establish the claim; compatibility or mentioning the subject is insufficient."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"claim\":\"The storage-cost component described here cannot exceed the fair rental value of the space reasonably required for storage.\",\"text\":\"(b) For the purposes of this chapter, “reasonable costs associated with the landlord’s removal and storage of the personal property” shall include, but not be limited to, each of the following:\\n(1) Reasonable costs actually incurred, or the reasonable value of labor actually provided, or both, in removing the personal property from its original location to the place of storage, including disassembly and\\ntransportation.\\n(2) Reasonable storage costs actually incurred, which shall not exceed the fair rental value of the space reasonably required for the storage of the personal property.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the supplied text support this claim?\",\"criteria\":{\"true\":\"The text states or necessarily implies the claim with its conditions.\",\"false\":\"The text does not establish the claim; compatibility or mentioning the subject is insufficient.\"}}}}",
+        "body_sha256": "2a1152efeabaab935d2fd5b3d12305575360424790fffe4ab1a6dec9b60e3fcf"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.95
+        }
+      },
+      "usage": {
+        "input_tokens": 473,
+        "output_tokens": 22,
+        "cost": 1.9866e-05
+      },
+      "id": "gen-dec-1790872636-6EaEmmT9kR6ocU0NbC4L",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.35891441721469164
+  },
+  {
+    "case_id": "d047",
+    "request_hash": "7b1ee03d2c0cf7b9476fb15b2fe9eb654c80eff0af54b87849e0634bc8610c6c",
+    "started_at": "2026-10-01T16:37:16.581367+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "claim": "For the specified transfer within thirty days after the first deposit, the otherwise applicable ten-business-day period under (c)(1) and (c)(2) becomes twenty business days.",
+            "text": "(3) Extension of time periods. The time periods in paragraphs (c)(1) and (c)(2) of this section are extended as follows:\n(i) The applicable time is 20 business days in place of 10 business days under paragraphs (c)(1) and (2) of this section if the notice of error involves an electronic fund transfer to or from the account within 30 days after the first deposit to the account was made."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the supplied text support this claim?",
+              "criteria": {
+                "true": "The text states or necessarily implies the claim with its conditions.",
+                "false": "The text does not establish the claim; compatibility or mentioning the subject is insufficient."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"claim\":\"For the specified transfer within thirty days after the first deposit, the otherwise applicable ten-business-day period under (c)(1) and (c)(2) becomes twenty business days.\",\"text\":\"(3) Extension of time periods. The time periods in paragraphs (c)(1) and (c)(2) of this section are extended as follows:\\n(i) The applicable time is 20 business days in place of 10 business days under paragraphs (c)(1) and (2) of this section if the notice of error involves an electronic fund transfer to or from the account within 30 days after the first deposit to the account was made.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the supplied text support this claim?\",\"criteria\":{\"true\":\"The text states or necessarily implies the claim with its conditions.\",\"false\":\"The text does not establish the claim; compatibility or mentioning the subject is insufficient.\"}}}}",
+        "body_sha256": "9cf7483db30a4fbdd8bf4a874774289266f306489e405f1599df5b79acea7210"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.96
+        }
+      },
+      "usage": {
+        "input_tokens": 462,
+        "output_tokens": 22,
+        "cost": 1.9404e-05
+      },
+      "id": "gen-dec-1790872636-o0OODLUlvaVdkIpXRUSV",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "YES",
+    "status": "answered",
+    "seconds": 0.23105241707526147
+  },
+  {
+    "case_id": "d048",
+    "request_hash": "d4c7dc89c6b87872dc41ac424ec7da2536c05552e772648dac56e39cbb2d3702",
+    "started_at": "2026-10-01T16:37:16.819098+00:00",
+    "transport": [
+      {
+        "url": "https://openrouter.ai/api/v1/systemone",
+        "body": {
+          "state": {
+            "claim": "A transfer initiated with fraudulent intent by the consumer is an unauthorized electronic fund transfer under this definition.",
+            "text": "(m) “Unauthorized electronic fund transfer” means an electronic fund transfer from a consumer's account initiated by a person other than the consumer without actual authority to initiate the transfer and from which the consumer receives no benefit. The term does not include an electronic fund transfer initiated:\n(1) By a person who was furnished the access device to the consumer's account by the consumer, unless the consumer has notified the financial institution that transfers by that person are no longer authorized;\n(2) With fraudulent intent by the consumer or any person acting in concert with the consumer; or\n(3) By the financial institution or its employee."
+          },
+          "model": "typesafe/jev-1.13",
+          "questions": {
+            "judgment": {
+              "type": "noul",
+              "instructions": "Does the supplied text support this claim?",
+              "criteria": {
+                "true": "The text states or necessarily implies the claim with its conditions.",
+                "false": "The text does not establish the claim; compatibility or mentioning the subject is insufficient."
+              }
+            }
+          }
+        },
+        "body_text": "{\"state\":{\"claim\":\"A transfer initiated with fraudulent intent by the consumer is an unauthorized electronic fund transfer under this definition.\",\"text\":\"(m) “Unauthorized electronic fund transfer” means an electronic fund transfer from a consumer's account initiated by a person other than the consumer without actual authority to initiate the transfer and from which the consumer receives no benefit. The term does not include an electronic fund transfer initiated:\\n(1) By a person who was furnished the access device to the consumer's account by the consumer, unless the consumer has notified the financial institution that transfers by that person are no longer authorized;\\n(2) With fraudulent intent by the consumer or any person acting in concert with the consumer; or\\n(3) By the financial institution or its employee.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the supplied text support this claim?\",\"criteria\":{\"true\":\"The text states or necessarily implies the claim with its conditions.\",\"false\":\"The text does not establish the claim; compatibility or mentioning the subject is insufficient.\"}}}}",
+        "body_sha256": "8e02ca42820d6b14cecd123841d8ec7609193cd2f0edd07ffe980dac83b3fdb4"
+      }
+    ],
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "judgment": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "usage": {
+        "input_tokens": 474,
+        "output_tokens": 22,
+        "cost": 1.9908e-05
+      },
+      "id": "gen-dec-1790872636-xm3tOZgu8J9n0ECxneIT",
+      "provider": "TypeSafe"
+    },
+    "diagnostic": "NO",
+    "status": "answered",
+    "seconds": 0.28231712500564754
+  }
+]

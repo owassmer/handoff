@@ -1,0 +1,145 @@
+{
+  "as_of": "2026-10-01",
+  "oc": {
+    "publisher_job": {
+      "Id": 488007,
+      "Name": "Supplement 157",
+      "ProductId": 11378,
+      "Product": null,
+      "PublishDate": "2026-02-24T05:00:00",
+      "MaxTrackingDate": "2026-06-09T17:18:31",
+      "OnlinePostDate": "2026-09-15T14:04:51.400324",
+      "IsPublished": false,
+      "IsLatest": true,
+      "BannerText": "CODIFIED ORDINANCES\r\nCounty of\r\nORANGE, CALIFORNIA\r\n\r\nCodified through\r\nOrdinance No. 26-003, enacted February 24, 2026.\r\n(Supp. No. 157)",
+      "PublicationContentOrigin": "FullService_G2H",
+      "OnlineDate": "2026-06-09T17:18:31"
+    },
+    "publication_meaning": "Publisher current job advertises codification through Ordinance26-003 enacted2026-02-24. OnlinePostDate is not an enactment cutoff; raw IsPublished=false retained. Postcutoff signed enactments require independent register coverage.",
+    "unit_updates": [
+      {
+        "unit": "Title8",
+        "heading": "FEES",
+        "adapter": "municode",
+        "toc_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=TIT8FE"
+      },
+      {
+        "unit": "Supplement history",
+        "heading": "SUPPLEMENT HISTORY TABLE",
+        "adapter": "municode",
+        "source_unit_kind": "document",
+        "toc_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=SUHITA",
+        "section_list": [
+          {
+            "number": "SUHITA",
+            "heading": "SUPPLEMENT HISTORY TABLE",
+            "ref": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=SUHITA"
+          }
+        ]
+      },
+      {
+        "unit": "Ordinance comparative table",
+        "heading": "CODE COMPARATIVE TABLE ORDINANCES",
+        "adapter": "municode",
+        "source_unit_kind": "document",
+        "toc_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=CD_COMPARATIVE_TABLE_ORD",
+        "section_list": [
+          {
+            "number": "CD_COMPARATIVE_TABLE_ORD",
+            "heading": "CODE COMPARATIVE TABLE ORDINANCES",
+            "ref": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=CD_COMPARATIVE_TABLE_ORD"
+          }
+        ]
+      }
+    ],
+    "evidence": [
+      "restored/oc-job.json",
+      "restored/oc-toc.json",
+      "restored/oc-title8.json",
+      "restored/oc-history.json"
+    ]
+  },
+  "socalgas": {
+    "publisher_api": "https://scg-uofa-api-prd-hzczb4hja0g6dcfv.a03.azurefd.net/scg-uofa-wpubtm-prd/",
+    "public_header": {
+      "X-Azure-FDID": "bd4def74-b0e9-45ec-aa3e-5dac6c8aa90e"
+    },
+    "census_file": "restored/scg-scope-census.json",
+    "counts": {
+      "G-RULES": 42,
+      "G-SCHEDS": 41,
+      "G-SAMPLES": 133,
+      "G-PRELIM": 121,
+      "G-CONTRACTS": 1,
+      "G-TOC": 6,
+      "G-TITLE": 1,
+      "G-MAPS": 18,
+      "G-CITIES": 1
+    },
+    "route_proof": "Site content JS calls /tariffs with category query; site view JS calls /tariff with utilId/bookId/tarfKey as blob. Rule1 response475107bytes beginsPDF1.7, savedscg-rule1.pdf. Exact source JS and payloads retained.",
+    "edition_semantics": "API active records carry CURRENT_SHET_COUNT and EFFECT_SHET_COUNT. Site explicitly says starred records include sheets effective pending final CPUC approval. Preserve these as distinct source statuses; read actual sheets for effective dates inJ2.",
+    "adapter": "generic explicit PDF URL; no special header needed: default curl fetched Rule1 PDF successfully",
+    "census_reasoning": "Complete observed live category census replaces incomplete historical filed excerpts. Customer operations include conditional common-area commercial-classified accounts/equipment; standalone gas supply/injection/trading and internal revenue accounting excluded by explicit individual rows.",
+    "actual_text_scope_followthrough": {
+      "sources": [
+        "restored/scg-67.txt",
+        "restored/scg-168.txt",
+        "restored/scg-44.txt",
+        "restored/scg-505.txt",
+        "restored/scg-506.txt",
+        "restored/scg-133.txt"
+      ],
+      "decision": "G-IMB/Form6544 and G-NGV retained on actual customer applicability.8212/8214 remain outside as energy-data research/aggregated public-government requests, notRule34ROWNDA. EORterritorymap excluded."
+    }
+  },
+  "sce": {
+    "status": "Live public publisher metadata census acquired for all18 schedule/forms/rules/preliminary/contract folders linked by SCE pages. Three separate title/community/baseline sharePDFtargets observed; no historical census substitution.",
+    "census_file": "restored/sce-scope-census.json",
+    "folder_counts": {
+      "Residential Rates": 14,
+      "General Service & Industrial Rates": 21,
+      "Agricultural and Pumping Rates": 7,
+      "Street and Area Lighting and Traffic Control Rates": 7,
+      "Other Rates": 72,
+      "List of Contracts & Deviations": 1,
+      "Application and Agreement for Service": 48,
+      "Application & Agreements for Line Extensions": 8,
+      "Other Agreements": 48,
+      "Care and Fera": 16,
+      "Collection and Disconnect Notices": 22,
+      "Demand Response": 11,
+      "Direct Access & Community Choice Aggregation": 14,
+      "Interconnection Agreements": 37,
+      "Medical Baseline": 2,
+      "Operating Notices": 39,
+      "Rules": 30,
+      "Preliminary Statements": 95
+    },
+    "total_file_rows": 492,
+    "selected_file_rows": 371,
+    "edition_semantics": "TimeLastModified is publisher file timestamp, not operative tariff date. Actual sheet effective dates remain attached to individual sheets acquiredJ2. Currentfolder snapshotOct1\u201926 includes modifiedOct1\u201926files.",
+    "acquisition_proof": {
+      "status": 200,
+      "type": "application/pdf",
+      "length": 579316,
+      "pdfOffset": 185,
+      "url": "https://edisonintl.sharepoint.com/teams/Public/TM2/Shared%20Documents/Public/Regulatory/Tariff-SCE%20Tariff%20Books/Electric/Preliminary%20Statements/ELECTRIC_PRELIM_A_thru_F.pdf",
+      "payload": "Multipart form-data envelope despiteapplication/pdf header; pdfpart beginsbyte185 declares579084bytes. Extractedpdfsuccessfullyparsedwithpdftotext."
+    },
+    "reader_requirement": "Implemented pipeline/adapters/sharepoint.py and sharepoint_fetch.py: observed sharelink +encoded documentfragment; ephemeralpublicbrowsercontext; exactresponseURL,status,PDFsignature,multipartfilename/lengthvalidation; pdftotext. Liveacquisition returned22164characters fromactualPreliminaryA-F. Twofocusedtests passed.",
+    "supporting_share_pdf_targets": [
+      "https://edisonintl.sharepoint.com/:b:/t/Public/TM2/EQmBQ22B3qpKkXh_yLQkcAUB1fv-LJhndFK8_mx80tS3lw?e=3xYqeW",
+      "https://edisonintl.sharepoint.com/:b:/t/Public/TM2/EUABe44qA6NEmgkQRJueCIUBM98nSCUJNcZ5aKwWsB-SJw?e=XKrW9Q",
+      "https://edisonintl.sharepoint.com/:b:/t/Public/TM2/ET1V7VWwkqJJmOAP8tYWK78BDSTw3WOEoi-E3y-dLV0J8w?e=BAVCtT"
+    ],
+    "scope_notes": [
+      "All30rulesselected including customer privacy,data sharing,EVinfrastructure,meteradapter,CCA/directaccess mixed customerbranches.",
+      "All14residentialratesselected. Common-area generalservice,property pumping/lighting,andconditionalgeneration/financingselectedgenerously.",
+      "Economicdevelopmentrate mixed applicability retainedpendingactualtext; standalone industry not presumed from label alone.",
+      "CHP/CREST and energystorage stationpower mixedpropertygenerationbranches retainedpendingactualtext; do not infer independentproducer eligibility.",
+      "Duplicate formnumbers in distinct publisherfolders retained as sourcealiases until actualversions compared."
+    ],
+    "acquisition_units_delta": "sce-acquisition-units-delta.json",
+    "scope_actual_text_followthrough": "restored/sce-targeted-scope-reasons.json"
+  }
+}

@@ -1,0 +1,198 @@
+California Code,  CIV 1788.66.
+/* Hide page by default*/
+html { display : none; }
+//
+= 0)) {
+window.top.location.replace(window.location);
+top.location = self.location;
+}
+}
+}
+// ]]>
+/* Hide page by default*/
+html { display : inline; }
+//
+function changePlaceHolder() {
+var x = document.getElementById("billheaderinit_form:quick_search_select_id");
+var input = document.getElementById("billheaderinit_form:searchall");
+if (x !== null) {
+if (x.options[0].selected) {
+input.placeholder = "AB1 or ab 1 or ABX1-1";
+} else {
+input.placeholder = "Search phrase";
+}
+}
+}
+skip to content
+home
+accessibility
+FAQ
+feedback
+sitemap
+login
+x
+Quick Search:
+Bill Number
+Bill Keyword
+Home
+Bill Information
+California Law
+Publications
+Other Resources
+My Subscriptions
+My Favorites
+button {
+background-image: url('/resources/images/print_24.gif');
+background-size: cover;
+width: 24px;
+height: 24px;
+font-size: 2rem; background-color: transparent;
+border: 0px;
+}
+function printPopup() {
+var lawCode = 'CIV';
+var sectionNum = '1788.66.';
+var op_statues = '2021'
+var op_chapter = '27';
+var op_section = '3';
+var article = '';
+var url = "printCodeSectionWindow.xhtml?";
+if (lawCode)
+url += 'lawCode=' + lawCode;
+if (article) {
+url += '&article=' + article;
+//alert(url);
+}
+if (sectionNum)
+url += '§ionNum=' + sectionNum;
+if (op_statues)
+url += '&op_statues=' + op_statues;
+if (op_chapter)
+url += '&op_chapter=' + op_chapter;
+if (op_section)
+url += '&op_section=' + op_section;
+printWindow = window.open(url, "wind", "width=680," +
+"height=768,		" +
+"toolbar=no,		" +
+"location=no,		" +
+"directories=no,	" +
+"status=no,		" +
+"menubar=yes,		" +
+"scrollbars=yes,	" +
+"resizable=yes		"
+);
+printWindow.focus();
+}
+California Law
+>>
+>>
+Code Section
+Code Section
+function myPopup() {
+window.open("popupMessage.xhtml", "Information", "width=330, height=220, toolbar=no, location=no, directories=no, menubar=no, scrollbars=no, top=270, left=150");
+}
+function setCode() {
+//         button = document.getElementById('expertsearchformid:executeID');
+//              document.getElementById('expertsearchformid:parameterID1').value = document.getElementById('expertsearchformid:toctextcodeid').value;
+//              document.getElementById('expertsearchformid:parameterID2').value ='2'; //just a value to bypass validation
+//              button.click();
+if (document.getElementById('expertsearchformid:toctextcodeid').value == 'CONS') {
+document.getElementById('expertsearchformid:articlelblid').style.display = 'inline';
+document.getElementById('expertsearchformid:articleid').style.display = 'inline';
+} else {
+document.getElementById('expertsearchformid:articlelblid').style.display = 'none';
+document.getElementById('expertsearchformid:articleid').style.display = 'none';
+document.getElementById('expertsearchformid:articleid').value = "";
+}
+}
+Code:
+Select Code
+CONS
+BPC
+CIV
+CCP
+COM
+CORP
+EDC
+ELEC
+EVID
+FAM
+FIN
+FGC
+FAC
+GOV
+HNC
+HSC
+INS
+LAB
+MVC
+PEN
+PROB
+PCC
+PRC
+PUC
+RTC
+SHC
+UIC
+VEH
+WAT
+WIC
+Article:
+Section:
+Code:
+Select Code
+All
+BPC
+CIV
+CCP
+COM
+CORP
+EDC
+ELEC
+EVID
+FAM
+FIN
+FGC
+FAC
+GOV
+HNC
+HSC
+INS
+LAB
+MVC
+PEN
+PROB
+PCC
+PRC
+PUC
+RTC
+SHC
+UIC
+VEH
+WAT
+WIC
+Section:
+Keyword(s):
+setCode();
+Code Search
+Text Search
+Up^
+<< Previous
+Next >>
+cross-reference chaptered bills
+PDF
+|
+Add To My Favorites
+Search Phrase:
+Code Text
+Civil Code - CIV
+DIVISION 3. OBLIGATIONS [1427 - 3273.91]
+( Heading of Division 3 amended by Stats. 1988, Ch. 160, Sec. 14. )
+PART 4. OBLIGATIONS ARISING FROM PARTICULAR TRANSACTIONS [1738 - 3273.91]
+( Part 4 enacted 1872. )
+TITLE 1.6C.5. Fair Debt Buying Practices [1788.50 - 1788.66]
+( Title 1.6C.5 added by Stats. 2013, Ch. 64, Sec. 2. )
+1788.66.
+Notwithstanding any other law, a person shall not sell or assign any unpaid COVID-19 rental debt, as defined in Section 1179.02 of the Code of Civil Procedure, for the time period between March 1, 2020, and September 30, 2021, of any person who would have qualified for rental assistance funding provided by the Secretary of the Treasury pursuant to Section 501 of Subtitle A of Title V of Division N of the federal Consolidated Appropriations Act, 2021 (Public Law
+116-260) or Section 3201 of Subtitle B of Title III of the federal American Rescue Plan Act of 2021 (Public Law 117-2), if the person’s household income is at or below 80 percent of the area median income for the 2020 or 2021 calendar year.
+(Amended by Stats. 2021, Ch. 27, Sec. 3.   (AB 832)   Effective June 28, 2021.)

@@ -1,0 +1,67 @@
+{
+ "current": "v2",
+ "note": "Triage routing thresholds, owned by code (pipeline/route.py). Versions are never edited once used; tightening adds a version. v1 and v2 are the NY register's versions (register/routing.json), with two keys renamed for use in any jurisdiction: cited_by_review_universe_4a_or_5a is cited_by_prior_review, and regime_units moved to each profile's aperture.regime_units.",
+ "tiers": {
+  "strong": {
+   "p_decides_gte": 0.9,
+   "chain_duty_gte": 0.8,
+   "why": "Jev is near certain on both questions"
+  },
+  "likely": {
+   "either_gte": 0.5,
+   "why": "P(DECIDES) or chain_duty at least 0.5"
+  },
+  "possible": {
+   "why": "above a queue threshold of the routing version"
+  },
+  "low_confidence": {
+   "why": "queued only because Jev's role confidence is below the threshold"
+  },
+  "structural": {
+   "why": "queued by a definition, applicability, prior-review or excluded-regime route, with scores below every threshold"
+  },
+  "long": {
+   "why": "longer than the Jev limit; not sent"
+  },
+  "unscored": {
+   "why": "no Jev record (not yet triaged or no text)"
+  },
+  "set_aside": {
+   "why": "Jev scored it below every queue threshold; still goes to a reviewer"
+  },
+  "stated": {
+   "why": "matched to a rule in this or a parent layer (J3)"
+  }
+ },
+ "versions": {
+  "v1": {
+   "date": "2026-09-30",
+   "review_queue_if_any": {
+    "q1_p_decides_gte": 0.15,
+    "q2_chain_duty_gte": 0.3,
+    "q1_confidence_lt": 0.7,
+    "long_chars_gt": 12000,
+    "unfetched": true,
+    "definition_section_in_unit_with_stated_rule": true
+   },
+   "triaged_only_if": "Jev is confident on both questions: role NO_DECISION (set aside) or EXCLUDED_REGIME (set aside as excluded), confidence >= 0.7, P(DECIDES) < 0.15 and chain_duty < 0.3.",
+   "why": "Missing law is the costly error, so routing is deliberately asymmetric."
+  },
+  "v2": {
+   "date": "2026-09-30",
+   "review_queue_if_any": {
+    "q1_p_decides_gte": 0.15,
+    "q2_chain_duty_gte": 0.1,
+    "q1_confidence_lt": 0.7,
+    "long_chars_gt": 12000,
+    "unfetched": true,
+    "definition_section_in_unit_with_stated_rule": true,
+    "applicability_section_in_unit_with_stated_rule": true,
+    "cited_by_prior_review": true,
+    "excluded_regime_outside_regime_units": true
+   },
+   "triaged_only_if": "As v1, plus: the section is not cited by a prior review; it is not a definition or applicability section in a unit with a stated rule; and excluded set-aside is allowed only inside a regime unit (profile aperture.regime_units). chain_duty threshold lowered from 0.3 to 0.10.",
+   "why": "v1 missed 14 of 315 NY gold positives (register/calibration.json); v2 recalls all 315. Every later jurisdiction calibrates against v2 first."
+  }
+ }
+}

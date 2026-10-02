@@ -1,0 +1,991 @@
+{
+  "status": "OPEN; no inference or evaluation readiness",
+  "purpose": "Enumerates source-bound proposed relationships requiring exact executable contracts. Descriptive operations must not be interpreted by consumer code. Supported candidates still require semantic judgment and independent review.",
+  "units": [
+    {
+      "unit": "or_entry",
+      "preparation_sha256": "9351d09d3a197cc0a7ce6d3d2b1a01c484b629e38ac964d93754244b7c46a00c",
+      "condition_transform_candidates": [],
+      "unsupported_execution_candidates": [
+        {
+          "job": "or_entry.j025",
+          "relationship_target": "relations.service_no_consent_qualifies",
+          "proposed_execution": {
+            "operation": "attach_conditional_waiver_to_target_route",
+            "from_record": "service_no_consent",
+            "to_record": "service_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j030",
+          "relationship_target": "relations.service_no_notice_qualifies",
+          "proposed_execution": {
+            "operation": "attach_conditional_waiver_to_target_route",
+            "from_record": "service_no_notice",
+            "to_record": "service_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j041",
+          "relationship_target": "relations.emergency_no_consent_scope",
+          "proposed_execution": {
+            "operation": "attach_only_the_qualification_expressly_tested_in_this_question",
+            "from_record": "emergency_no_consent",
+            "to_record": "emergency_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j046",
+          "relationship_target": "relations.emergency_no_notice_scope",
+          "proposed_execution": {
+            "operation": "attach_only_the_qualification_expressly_tested_in_this_question",
+            "from_record": "emergency_no_notice",
+            "to_record": "emergency_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j051",
+          "relationship_target": "relations.emergency_any_time_scope",
+          "proposed_execution": {
+            "operation": "attach_only_the_qualification_expressly_tested_in_this_question",
+            "from_record": "emergency_any_time",
+            "to_record": "emergency_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j069",
+          "relationship_target": "relations.emergency_simultaneous",
+          "proposed_execution": {
+            "operation": "retain_both_independently_applicable_records",
+            "from_record": "emergency_entry",
+            "to_record": "emergency_post_notice",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j084",
+          "relationship_target": "relations.repair_notice_waiver",
+          "proposed_execution": {
+            "operation": "attach_conditional_waiver_to_target_route",
+            "from_record": "repair_without_further_notice",
+            "to_record": "repair_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j095",
+          "relationship_target": "relations.specified_vs_reasonable",
+          "proposed_execution": {
+            "operation": "use_established_specific_time_rule_or_default_according_to_its_condition",
+            "from_record": "repair_allowable_times",
+            "to_record": "repair_default_time",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j107",
+          "relationship_target": "relations.repair_expiry_exception",
+          "proposed_execution": {
+            "operation": "constrain_authorization_with_its_expiration_and_established_exception",
+            "from_record": "repair_expiration",
+            "to_record": "repair_entry",
+            "no_unmentioned_fields_changed": true,
+            "source_exception_group": "conditions.repair_expiration.root"
+          }
+        },
+        {
+          "job": "or_entry.j165",
+          "relationship_target": "relations.yard_notice_to_denial",
+          "proposed_execution": {
+            "operation": "require_established_assertion_method_and_timing",
+            "from_record": "yard_denial_notice",
+            "to_record": "yard_denial",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j184",
+          "relationship_target": "relations.ordinary_time_with_notice",
+          "proposed_execution": {
+            "operation": "require_both_independently_established_components",
+            "from_record": "ordinary_notice",
+            "to_record": "ordinary_reasonable_time",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j205",
+          "relationship_target": "relations.ordinary_denial_method_link",
+          "proposed_execution": {
+            "operation": "attach_only_the_qualification_expressly_tested_in_this_question",
+            "from_record": "ordinary_denial_method",
+            "to_record": "ordinary_no_entry_after_denial",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j218",
+          "relationship_target": "relations.denial_no_automatic_override",
+          "proposed_execution": {
+            "operation": "preserve_distinct_rules_do_not_infer_override",
+            "from_record": "no_unreasonable_refusal",
+            "to_record": "ordinary_no_entry_after_denial",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j275",
+          "relationship_target": "relations.landlord_alternative_remedies",
+          "proposed_execution": {
+            "operation": "offer_distinct_options_without_inventing_exclusive_xor_or_mandatory_election",
+            "from_record": "landlord_injunction",
+            "to_record": "landlord_termination",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j276",
+          "relationship_target": "relations.landlord_cumulative_damages",
+          "proposed_execution": {
+            "operation": "retain_both_independently_applicable_records",
+            "from_record": "landlord_actual_damages",
+            "to_record": "landlord_injunction",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j304",
+          "relationship_target": "relations.tenant_alternative_remedies",
+          "proposed_execution": {
+            "operation": "offer_distinct_options_without_inventing_exclusive_xor_or_mandatory_election",
+            "from_record": "tenant_injunction",
+            "to_record": "tenant_termination",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j305",
+          "relationship_target": "relations.tenant_cumulative_damages",
+          "proposed_execution": {
+            "operation": "retain_both_independently_applicable_records",
+            "from_record": "tenant_damages",
+            "to_record": "tenant_injunction",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j335",
+          "relationship_target": "relations.actual_notice_applies",
+          "proposed_execution": {
+            "operation": "attach_established_notice_service_methods",
+            "from_record": "actual_notice_methods",
+            "to_record": "ordinary_notice",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j344",
+          "relationship_target": "relations.absence_incorporation",
+          "proposed_execution": {
+            "operation": "retain_separate_incorporated_permission_with_its_conditions",
+            "from_record": "extended_absence_entry",
+            "to_record": "other_rights_limit",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j348",
+          "relationship_target": "relations.facility_global_access_purposes",
+          "proposed_execution": {
+            "operation": "exclude_identified_section_records_in_established_scope",
+            "from_record": "facility_exclusion",
+            "to_record": "access_purposes",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j349",
+          "relationship_target": "relations.facility_global_service_entry",
+          "proposed_execution": {
+            "operation": "exclude_identified_section_records_in_established_scope",
+            "from_record": "facility_exclusion",
+            "to_record": "service_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j350",
+          "relationship_target": "relations.facility_global_emergency_entry",
+          "proposed_execution": {
+            "operation": "exclude_identified_section_records_in_established_scope",
+            "from_record": "facility_exclusion",
+            "to_record": "emergency_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j351",
+          "relationship_target": "relations.facility_global_repair_entry",
+          "proposed_execution": {
+            "operation": "exclude_identified_section_records_in_established_scope",
+            "from_record": "facility_exclusion",
+            "to_record": "repair_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j352",
+          "relationship_target": "relations.facility_global_sale_entry",
+          "proposed_execution": {
+            "operation": "exclude_identified_section_records_in_established_scope",
+            "from_record": "facility_exclusion",
+            "to_record": "sale_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j353",
+          "relationship_target": "relations.facility_global_yard_entry",
+          "proposed_execution": {
+            "operation": "exclude_identified_section_records_in_established_scope",
+            "from_record": "facility_exclusion",
+            "to_record": "yard_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j354",
+          "relationship_target": "relations.facility_global_ordinary_notice",
+          "proposed_execution": {
+            "operation": "exclude_identified_section_records_in_established_scope",
+            "from_record": "facility_exclusion",
+            "to_record": "ordinary_notice",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j355",
+          "relationship_target": "relations.facility_global_ordinary_reasonable_time",
+          "proposed_execution": {
+            "operation": "exclude_identified_section_records_in_established_scope",
+            "from_record": "facility_exclusion",
+            "to_record": "ordinary_reasonable_time",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j356",
+          "relationship_target": "relations.space_global_access_purposes",
+          "proposed_execution": {
+            "operation": "intersect_target_access_locations_with_established_source_limit",
+            "from_record": "space_only",
+            "to_record": "access_purposes",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j357",
+          "relationship_target": "relations.space_global_service_entry",
+          "proposed_execution": {
+            "operation": "intersect_target_access_locations_with_established_source_limit",
+            "from_record": "space_only",
+            "to_record": "service_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j358",
+          "relationship_target": "relations.space_global_emergency_entry",
+          "proposed_execution": {
+            "operation": "intersect_target_access_locations_with_established_source_limit",
+            "from_record": "space_only",
+            "to_record": "emergency_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j359",
+          "relationship_target": "relations.space_global_repair_entry",
+          "proposed_execution": {
+            "operation": "intersect_target_access_locations_with_established_source_limit",
+            "from_record": "space_only",
+            "to_record": "repair_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j360",
+          "relationship_target": "relations.space_global_sale_entry",
+          "proposed_execution": {
+            "operation": "intersect_target_access_locations_with_established_source_limit",
+            "from_record": "space_only",
+            "to_record": "sale_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j361",
+          "relationship_target": "relations.space_global_yard_entry",
+          "proposed_execution": {
+            "operation": "intersect_target_access_locations_with_established_source_limit",
+            "from_record": "space_only",
+            "to_record": "yard_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j362",
+          "relationship_target": "relations.space_global_ordinary_reasonable_time",
+          "proposed_execution": {
+            "operation": "intersect_target_access_locations_with_established_source_limit",
+            "from_record": "space_only",
+            "to_record": "ordinary_reasonable_time",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j363",
+          "relationship_target": "relations.abuse_global_service_entry",
+          "proposed_execution": {
+            "operation": "retain_source_prohibition_alongside_target_permission",
+            "from_record": "no_abuse",
+            "to_record": "service_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j364",
+          "relationship_target": "relations.abuse_global_emergency_entry",
+          "proposed_execution": {
+            "operation": "retain_source_prohibition_alongside_target_permission",
+            "from_record": "no_abuse",
+            "to_record": "emergency_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j365",
+          "relationship_target": "relations.abuse_global_repair_entry",
+          "proposed_execution": {
+            "operation": "retain_source_prohibition_alongside_target_permission",
+            "from_record": "no_abuse",
+            "to_record": "repair_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j366",
+          "relationship_target": "relations.abuse_global_sale_entry",
+          "proposed_execution": {
+            "operation": "retain_source_prohibition_alongside_target_permission",
+            "from_record": "no_abuse",
+            "to_record": "sale_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j367",
+          "relationship_target": "relations.abuse_global_yard_entry",
+          "proposed_execution": {
+            "operation": "retain_source_prohibition_alongside_target_permission",
+            "from_record": "no_abuse",
+            "to_record": "yard_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j368",
+          "relationship_target": "relations.abuse_global_ordinary_reasonable_time",
+          "proposed_execution": {
+            "operation": "retain_source_prohibition_alongside_target_permission",
+            "from_record": "no_abuse",
+            "to_record": "ordinary_reasonable_time",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j369",
+          "relationship_target": "relations.harass_global_service_entry",
+          "proposed_execution": {
+            "operation": "retain_source_prohibition_alongside_target_permission",
+            "from_record": "no_harassment",
+            "to_record": "service_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j370",
+          "relationship_target": "relations.harass_global_emergency_entry",
+          "proposed_execution": {
+            "operation": "retain_source_prohibition_alongside_target_permission",
+            "from_record": "no_harassment",
+            "to_record": "emergency_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j371",
+          "relationship_target": "relations.harass_global_repair_entry",
+          "proposed_execution": {
+            "operation": "retain_source_prohibition_alongside_target_permission",
+            "from_record": "no_harassment",
+            "to_record": "repair_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j372",
+          "relationship_target": "relations.harass_global_sale_entry",
+          "proposed_execution": {
+            "operation": "retain_source_prohibition_alongside_target_permission",
+            "from_record": "no_harassment",
+            "to_record": "sale_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j373",
+          "relationship_target": "relations.harass_global_yard_entry",
+          "proposed_execution": {
+            "operation": "retain_source_prohibition_alongside_target_permission",
+            "from_record": "no_harassment",
+            "to_record": "yard_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j374",
+          "relationship_target": "relations.harass_global_ordinary_reasonable_time",
+          "proposed_execution": {
+            "operation": "retain_source_prohibition_alongside_target_permission",
+            "from_record": "no_harassment",
+            "to_record": "ordinary_reasonable_time",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j375",
+          "relationship_target": "relations.yard_terms_required_yard_entry",
+          "proposed_execution": {
+            "operation": "require_source_component_for_target_route",
+            "from_record": "yard_terms",
+            "to_record": "yard_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j376",
+          "relationship_target": "relations.repair_times_required_repair_entry",
+          "proposed_execution": {
+            "operation": "constrain_target_time_by_established_source_times",
+            "from_record": "repair_allowable_times",
+            "to_record": "repair_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j377",
+          "relationship_target": "relations.repair_reasonable_required_repair_entry",
+          "proposed_execution": {
+            "operation": "attach_source_time_constraint_in_its_established_default_branch",
+            "from_record": "repair_default_time",
+            "to_record": "repair_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j378",
+          "relationship_target": "relations.notice_method_post_emergency_post_notice",
+          "proposed_execution": {
+            "operation": "attach_established_notice_service_methods_preserving_express_alternatives",
+            "from_record": "actual_notice_methods",
+            "to_record": "emergency_post_notice",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j379",
+          "relationship_target": "relations.notice_method_post_yard_denial_notice",
+          "proposed_execution": {
+            "operation": "attach_established_notice_service_methods_preserving_express_alternatives",
+            "from_record": "actual_notice_methods",
+            "to_record": "yard_denial_notice",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j380",
+          "relationship_target": "relations.notice_method_post_ordinary_denial_method",
+          "proposed_execution": {
+            "operation": "attach_established_notice_service_methods_preserving_express_alternatives",
+            "from_record": "actual_notice_methods",
+            "to_record": "ordinary_denial_method",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j381",
+          "relationship_target": "relations.emergency_no_consent_conditions",
+          "proposed_execution": {
+            "operation": "share_established_branch_conditions",
+            "from_record": "emergency_no_consent",
+            "to_record": "emergency_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j382",
+          "relationship_target": "relations.emergency_no_notice_conditions",
+          "proposed_execution": {
+            "operation": "share_established_branch_conditions",
+            "from_record": "emergency_no_notice",
+            "to_record": "emergency_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j383",
+          "relationship_target": "relations.emergency_any_time_conditions",
+          "proposed_execution": {
+            "operation": "share_established_branch_conditions",
+            "from_record": "emergency_any_time",
+            "to_record": "emergency_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j384",
+          "relationship_target": "relations.service_no_consent_conditions",
+          "proposed_execution": {
+            "operation": "share_established_branch_conditions",
+            "from_record": "service_no_consent",
+            "to_record": "service_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j385",
+          "relationship_target": "relations.service_no_notice_conditions",
+          "proposed_execution": {
+            "operation": "share_established_branch_conditions",
+            "from_record": "service_no_notice",
+            "to_record": "service_entry",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j386",
+          "relationship_target": "relations.ordinary_time_conditions",
+          "proposed_execution": {
+            "operation": "share_residual_entry_category",
+            "from_record": "ordinary_notice",
+            "to_record": "ordinary_reasonable_time",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j395",
+          "relationship_target": "relations.calendar_entry_hours",
+          "proposed_execution": {
+            "operation": "use_established_counting_rule_with_target_interval_and_anchor",
+            "from_record": "calendar.hours",
+            "to_record": "ordinary_notice",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j396",
+          "relationship_target": "relations.calendar_post_hours",
+          "proposed_execution": {
+            "operation": "use_established_counting_rule_with_target_interval_and_anchor",
+            "from_record": "calendar.hours",
+            "to_record": "emergency_post_notice",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j421",
+          "relationship_target": "relations.written_actual_link",
+          "proposed_execution": {
+            "operation": "include_established_method_in_authorized_method_set",
+            "from_record": "written_notice_methods",
+            "to_record": "actual_notice_methods",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j451",
+          "relationship_target": "relations.procedure_landlord_cause_notice",
+          "proposed_execution": {
+            "operation": "require_established_procedural_conditions_before_termination_effect",
+            "from_record": "landlord_cause_notice",
+            "to_record": "landlord_termination",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j452",
+          "relationship_target": "relations.procedure_landlord_cure_prevents",
+          "proposed_execution": {
+            "operation": "suppress_target_effect",
+            "target_record": "landlord_termination",
+            "effect": "termination",
+            "when_source_condition_holds": "landlord_cure_prevents",
+            "preserve_source_cure_deadline_and_scope": true
+          }
+        },
+        {
+          "job": "or_entry.j453",
+          "relationship_target": "relations.procedure_landlord_repeat_notice",
+          "proposed_execution": {
+            "operation": "require_established_procedural_conditions_before_termination_effect",
+            "from_record": "landlord_repeat_notice",
+            "to_record": "landlord_termination",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j470",
+          "relationship_target": "relations.procedure_tenant_termination_notice",
+          "proposed_execution": {
+            "operation": "require_established_procedural_conditions_before_termination_effect",
+            "from_record": "tenant_termination_notice",
+            "to_record": "tenant_termination",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "or_entry.j471",
+          "relationship_target": "relations.procedure_tenant_termination_cure",
+          "proposed_execution": {
+            "operation": "suppress_target_effect",
+            "target_record": "tenant_termination",
+            "effect": "termination",
+            "when_source_condition_holds": "tenant_termination_cure",
+            "preserve_source_cure_deadline_and_scope": true
+          }
+        }
+      ]
+    },
+    {
+      "unit": "ca_return",
+      "preparation_sha256": "0f683a3c37905677a3900a8b1e23ae1303e966563204d4d5c18946b3c921cd97",
+      "condition_transform_candidates": [
+        {
+          "job": "ca_return.j069",
+          "relationship_target": "relations.c_overrides_a_cost",
+          "proposed_execution": {
+            "operation": "set_predicate",
+            "when": "conditions.two_day_no_storage.root",
+            "target": "conditions.notice_period_return.storage_paid",
+            "value": true
+          }
+        },
+        {
+          "job": "ca_return.j207",
+          "relationship_target": "relations.premises_two_day_no_cost_to_notice_period_return",
+          "proposed_execution": {
+            "operation": "set_predicate",
+            "when": "conditions.premises_two_day_no_cost.root",
+            "target": "conditions.notice_period_return.storage_paid",
+            "value": true
+          }
+        }
+      ],
+      "unsupported_execution_candidates": [
+        {
+          "job": "ca_return.j022",
+          "relationship_target": "relations.owner_option_not_mandate",
+          "proposed_execution": {
+            "operation": "offer_only_established_optional_recipient_alternative",
+            "from_record": "owner_option_return",
+            "to_record": "notice_period_return",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j040",
+          "relationship_target": "relations.late_release_path",
+          "proposed_execution": {
+            "operation": "retain_distinct_recovery_route_and_its_own_cutoff",
+            "from_record": "pre_sale_return",
+            "to_record": "notice_period_return",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j070",
+          "relationship_target": "relations.release_and_no_charge",
+          "proposed_execution": {
+            "operation": "retain_both_independently_applicable_records",
+            "from_record": "two_day_return",
+            "to_record": "two_day_no_storage",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j071",
+          "relationship_target": "relations.not_automatic_other_owner_duty",
+          "proposed_execution": {
+            "operation": "establish_only_the_selected_recipient_relation_no_unjudged_converse",
+            "from_record": "two_day_return",
+            "to_record": "owner_option_return",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j116",
+          "relationship_target": "relations.premises_not_dwelling",
+          "proposed_execution": {
+            "operation": "preserve_both_distinct_no_cost_rules_without_collapsing_scope",
+            "from_record": "premises_two_day_no_cost",
+            "to_record": "two_day_no_storage",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j132",
+          "relationship_target": "relations.notice_date_reference",
+          "proposed_execution": {
+            "operation": "apply_established_notice_date_constraints_to_target_notice",
+            "from_record": "notice_date_minimum",
+            "to_record": "notice_period_return",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j149",
+          "relationship_target": "relations.special_custodians_scope",
+          "proposed_execution": {
+            "operation": "exclude_named_route_in_source_condition_domain",
+            "from_record": "scope_special_custodians",
+            "to_record": "chapter_optional_scope",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j156",
+          "relationship_target": "relations.utility_owned_scope",
+          "proposed_execution": {
+            "operation": "exclude_named_route_in_source_condition_domain",
+            "from_record": "scope_utility_owned",
+            "to_record": "chapter_optional_scope",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j163",
+          "relationship_target": "relations.mobile_objects_scope",
+          "proposed_execution": {
+            "operation": "exclude_named_route_in_source_condition_domain",
+            "from_record": "scope_mobile_objects",
+            "to_record": "chapter_optional_scope",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j170",
+          "relationship_target": "relations.animals_scope",
+          "proposed_execution": {
+            "operation": "exclude_named_route_in_source_condition_domain",
+            "from_record": "scope_animals",
+            "to_record": "chapter_optional_scope",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j181",
+          "relationship_target": "relations.immunity_override_scope",
+          "proposed_execution": {
+            "operation": "preserve_source_effect_notwithstanding_the_named_scope_exclusion",
+            "from_record": "tenant_release_immunity",
+            "to_record": "scope_mobile_objects",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j186",
+          "relationship_target": "relations.alternate_route_not_concurrent",
+          "proposed_execution": {
+            "operation": "suppress_route",
+            "excluded_route": "alternate_surrender_route",
+            "trigger": {
+              "operator": "any",
+              "predicates": [
+                "Chapter5 disposition initiated",
+                "Chapter5 disposition completed"
+              ]
+            },
+            "scope": "CIV1965(c)"
+          }
+        },
+        {
+          "job": "ca_return.j198",
+          "relationship_target": "relations.tenant_all_costs_to_notice_period_return",
+          "proposed_execution": {
+            "operation": "select_cost_base_by_established_claimant_branch",
+            "from_record": "tenant_all_costs",
+            "to_record": "notice_period_return",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j199",
+          "relationship_target": "relations.tenant_all_costs_to_pre_sale_return",
+          "proposed_execution": {
+            "operation": "select_cost_base_by_established_claimant_branch",
+            "from_record": "tenant_all_costs",
+            "to_record": "pre_sale_return",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j200",
+          "relationship_target": "relations.owner_own_costs_to_owner_option_return",
+          "proposed_execution": {
+            "operation": "select_cost_base_by_established_claimant_branch",
+            "from_record": "owner_own_costs",
+            "to_record": "owner_option_return",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j201",
+          "relationship_target": "relations.no_duplicate_costs_to_notice_period_return",
+          "proposed_execution": {
+            "operation": "exclude_already_charged_identical_costs",
+            "from_record": "no_duplicate_costs",
+            "to_record": "notice_period_return",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j202",
+          "relationship_target": "relations.no_duplicate_costs_to_owner_option_return",
+          "proposed_execution": {
+            "operation": "exclude_already_charged_identical_costs",
+            "from_record": "no_duplicate_costs",
+            "to_record": "owner_option_return",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j203",
+          "relationship_target": "relations.no_duplicate_costs_to_pre_sale_return",
+          "proposed_execution": {
+            "operation": "exclude_already_charged_identical_costs",
+            "from_record": "no_duplicate_costs",
+            "to_record": "pre_sale_return",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j204",
+          "relationship_target": "relations.onsite_rate_to_notice_period_return",
+          "proposed_execution": {
+            "operation": "apply_established_onsite_space_and_term_rate",
+            "from_record": "onsite_rate",
+            "to_record": "notice_period_return",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j205",
+          "relationship_target": "relations.onsite_rate_to_owner_option_return",
+          "proposed_execution": {
+            "operation": "apply_established_onsite_space_and_term_rate",
+            "from_record": "onsite_rate",
+            "to_record": "owner_option_return",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j206",
+          "relationship_target": "relations.onsite_rate_to_pre_sale_return",
+          "proposed_execution": {
+            "operation": "apply_established_onsite_space_and_term_rate",
+            "from_record": "onsite_rate",
+            "to_record": "pre_sale_return",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j208",
+          "relationship_target": "relations.premises_two_day_no_cost_to_pre_sale_return",
+          "proposed_execution": {
+            "operation": "suspend_storage_component_only_preserve_other_costs",
+            "from_record": "premises_two_day_no_cost",
+            "to_record": "pre_sale_return",
+            "no_unmentioned_fields_changed": true,
+            "target_component": "storage_cost_only"
+          }
+        },
+        {
+          "job": "ca_return.j237",
+          "relationship_target": "relations.property_notice_notice_to_return",
+          "proposed_execution": {
+            "operation": "require_independently_established_notice_component",
+            "from_record": "property_notice",
+            "to_record": "notice_period_return",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j238",
+          "relationship_target": "relations.property_notice_delivery_notice_to_return",
+          "proposed_execution": {
+            "operation": "require_independently_established_notice_component",
+            "from_record": "property_notice_delivery",
+            "to_record": "notice_period_return",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j239",
+          "relationship_target": "relations.notice_date_minimum_notice_to_return",
+          "proposed_execution": {
+            "operation": "require_independently_established_notice_component",
+            "from_record": "notice_date_minimum",
+            "to_record": "notice_period_return",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j253",
+          "relationship_target": "relations.care_coexists",
+          "proposed_execution": {
+            "operation": "retain_both_duties_when_each_condition_holds",
+            "from_record": "reasonable_care",
+            "to_record": "pre_sale_return",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j267",
+          "relationship_target": "relations.small_sale_exception",
+          "proposed_execution": {
+            "operation": "suspend_public_sale_requirement_only_when_established_low_value_condition_holds",
+            "from_record": "low_value_disposition",
+            "to_record": "public_sale",
+            "no_unmentioned_fields_changed": true
+          }
+        },
+        {
+          "job": "ca_return.j343",
+          "relationship_target": "relations.lost_route_return",
+          "proposed_execution": {
+            "operation": "select_alternative_only_when_its_established_trigger_holds",
+            "from_record": "lost_police_refusal",
+            "to_record": "lost_property_route",
+            "no_unmentioned_fields_changed": true
+          }
+        }
+      ]
+    }
+  ]
+}

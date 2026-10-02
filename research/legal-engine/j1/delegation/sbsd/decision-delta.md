@@ -1,0 +1,41 @@
+# SBSD Resolution 2024-03-01 — October 2, 2026 decision delta
+
+**Result: retained; identity and fee-setting status are established, but the public operative-body acquisition route is still unresolved. Do not mark this J1 question closed.** No canonical files were changed and no external messages were sent.
+
+## Instrument, scope and dates
+
+The March 14, 2024 minutes identify Resolution No. 2024-03-01, “to Adopt 2024-25 Trash, Sewer, and Restaurant Sewage Cleaning Fees.” Page 1 lists annual trash $300/unit, sewer $300/unit and sewage cleaning $625/unit; page 2 records unanimous adoption of the resolution “as attached.” The actual PDF contains three pages of minutes and ends in signatures. Its first-page footer says “Page 1 of 2,” but the subsequent pages are 2 of 3 and 3 of 3. This footer discrepancy does not supply a missing attachment or imply only two pages were inspected.
+
+Retain the general fee instrument for residential trash and sewer service, its applicable classifications and owner/collection provisions. Restaurant-specific cleaning is outside the ordinary residential fee selection; an entire uninspected resolution cannot be declared to contain no other relevant general provisions. Section numbering and any ancillary terms remain unestablished. Do not import the separate hauler-to-District residential contract rates into the property assessment charge.
+
+The proposed fee notice gave July 1, 2024 as commencement following adoption. March adoption and the June 11, 2024 District-issued notice establish the increased charges for FY2024–25. The May 18, 2026 District-issued notice republishes annual $300 residential trash (where the unit does not provide its own pickup) and $300 sewer, payable by the owner whether services are used, with no increase from the prior year and tax-roll collection. These are strong adoption/current-charge evidence, but none identifies itself as a complete reproduction of Resolution 2024-03-01. They do not establish that every original ancillary clause continued unchanged.
+
+The operating connection remains direct: covered district service charges and collection affect the property account and potentially the cost of restoring/maintaining necessary service. District boundary/service facts govern application; no citywide assumption or duplicate City/OC San charge. A particular waiver or annual parcel assessment remains case evidence, not a new jurisdiction-wide corpus prerequisite.
+
+## Newly tested routes and what they establish
+
+1. **Actual March agenda variants, not merely an index.** Downloaded both `March-14-2024-Agenda.pdf` (3,100,395 bytes) and `March-14-2024-Agenda-1.pdf` (3,128,257 bytes) from the public upload URLs. Each is a two-page scanned agenda, not a packet. The revised version, visually reviewed and OCR saved, identifies the fee resolution at item 5 and says all written agenda materials are available by contacting the District Clerk. Its remaining page ends at adjournment. Thus the unusually large PDFs are not an overlooked operative attachment. Bare www HTTPS initially returned 406; the non-www HTTPS and http public variants and `?download=1` returned the same revised PDF. This was an access-method recovery, not proof of publication completeness.
+
+2. **County direct-charge custody route.** The Orange County Auditor's April 22, 2025 direct-charge letter expressly requires the signed board resolution PDF to be uploaded at `https://epts.ocgov.com/direct` using individual city/district/consultant accounts. The actual endpoint redirects to `/direct/login`, with Login ID and password. It is a submission portal, not an established public resolution repository. The captured county instructions support a *possible alternate custodian*, but do not prove SBSD filed this particular 2024 fee-setting resolution rather than its annual roll resolution. The portal first failed certificate validation; a read-only retry with certificate checking disabled recovered the login page. No login, registration or request was attempted. This route therefore cannot be registered as a proven public body adapter.
+
+3. **State financing record as potential attachment carrier.** Downloaded the IBank January 24, 2024 SBSD staff report. Its rate/customer discussion describes a proposed increase approved November 8, 2023, and planned July 1, 2024 rates. It predates the March 14 fee resolution. It is underwriting/forecast evidence, not the adopted general instrument; using it would also introduce earlier approval language without the later Prop. 218/adoption record. Public Water Board project listings identify project 8674-110, Broadway Pump Station Sewer Bypass, and a later executed financing agreement, but do not supply the fee-resolution body. No financing program is added to Handoff scope; it was tested only as a potential public record carrier.
+
+4. Focused public searches by exact resolution number, fee-adoption title, county custody and Willdan assessor connection returned the known minutes/publications and the above financing records, without a verified operative copy. This is a bounded retrieval outcome, not a claim that the document is absent everywhere online. The prior full district upload/media and all-MIME archive inventories were inspected rather than repeated.
+
+## Exact remaining fact
+
+The missing fact is a demonstrated online source for the adopted Resolution 2024-03-01 body (or an authoritative publication explicitly establishing a complete reproduction), sufficient to identify all selected units and any operative ancillary terms. Adoption and basic fee amounts are not the unresolved facts. Keeping the whole resolution selected and calling the newspaper its adapter would conceal the unresolved fact.
+
+The next useful public route is an actual public counterpart of the Clerk's March 14 agenda materials, or a public copy of the county's filed signed-resolution submission or State Water Board project 8674-110 financial application. A repository merely naming the project, a public records request form, or a sign-in screen does not establish such a route. The county instructions narrow the custodian question but do not authorize or require contacting anyone. Under the current online-only instruction, this remains a source-recovery research limit; it is not missing property/operator evidence.
+
+## Evidence locators
+
+- Adoption: https://www.sunsetbeachsd.org/wp-content/uploads/2024/04/March-14-2024-Minutes.pdf pp1–3. Existing PDF: `j1/lanes/acquisition/restored-local/sbsd-march2024.pdf`; new pp1–2 renders/OCR in this folder.
+- Actual revised agenda: https://sunsetbeachsd.org/wp-content/uploads/2024/03/March-14-2024-Agenda-1.pdf pp1–2, item5 and first-page introductory paragraph. Captured PDF and `agenda-1.png`, `agenda-2.png`, associated OCR here.
+- Original agenda: https://sunsetbeachsd.org/wp-content/uploads/2024/03/March-14-2024-Agenda.pdf; `agenda-original.pdf` here (two-page structure checked).
+- FY2024–25 notice: https://www.sunnews.org/wp-content/uploads/2024/06/6-13-24-SBS-class.pdf p5, publication143444, June11,2024, §§1–6. Existing capture: `j1/reassessment/scrape-resume/sbsd/2024-06-13-public-notice.pdf`.
+- FY2026–27 notice: https://www.sunnews.org/wp-content/uploads/2026/05/5-28-26-SBS-legals.pdf p4, publication163652, May18,2026, §§1–6. Existing capture and rendered page: `j1/reassessment/scrape-resume/sbsd/2026-05-28-public-notice.pdf` and `2026.png`; visually reviewed. Its publication footer uses 2025 while the notice/hearing/fiscal year are 2026; preserve the typo.
+- County submission instruction: https://ocauditor.gov/wp-content/uploads/2025/04/Direct_Charge_Letter_2025_2026.pdf p1; `county-direct-charge-2025.pdf` and extracted text here.
+- Actual county portal: https://epts.ocgov.com/direct/login; `county-direct-portal.html` here, title/form “Member Login.”
+- IBank report: https://ibank.ca.gov/wp-content/uploads/2024/01/6a-Sunset-Beach-Sanitary-District-Staff-Report.pdf, “Rate and customer information” and executive assessment; `ibank-staff.pdf` and extracted text here.
+- Public Water Board project/financing indexes inspected: https://www.waterboards.ca.gov/board_decisions/adopted_orders/resolutions/2024/rs2024-0026_iup.pdf and https://www.waterboards.ca.gov/board_info/exec_dir_rpts/2025/010725_6_edrpt.pdf p16. These are leads only, not body evidence.

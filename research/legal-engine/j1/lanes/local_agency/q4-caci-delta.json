@@ -1,0 +1,195 @@
+{
+  "integration": "Add only CACI version and one executable document unit with5sources; do not overwrite canonical CPPA additions.",
+  "instruments": [
+    {
+      "id": "CA:CCR11",
+      "jurisdiction": "CA",
+      "name": "California Code of Regulations, Title 11",
+      "level": "regulation",
+      "functions": [
+        "data_security",
+        "communications",
+        "consumer_protection",
+        "preconditions"
+      ],
+      "toc_source_url": "https://oal.ca.gov/publications/ccr/",
+      "adapter": "cornell_ccr",
+      "units_in_scope": [
+        {
+          "unit": "Division 1 - Attorney General",
+          "heading": "Division 1 - Attorney General (Chapter 1 to 23)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-11/division-1",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-40.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 4 - Proposition 65 Private Enforcement",
+          "heading": "Division 4 - Proposition 65 Private Enforcement (Chapter 1 to 3)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-11/division-4",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-40.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 6 - California Privacy Protection Agency",
+          "heading": "Division 6 - California Privacy Protection Agency (Chapter 1 to 3)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-11/division-6",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-40.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Final package - CCPA updates cybersecurity risk ADMT insurance",
+          "heading": "CCPA updates cybersecurity risk ADMT insurance",
+          "adapter": "generic",
+          "source_unit_kind": "document",
+          "internal_units_in_scope": [
+            "Complete approved127-page package; Division6 Chapter1 changed sections and new audit/risk/ADMT articles"
+          ],
+          "reason": "Covered business/provider tenant and applicant information. Compliance phase-ins distinct from effective date: ADMT January1,2027; audit certifications2028\u20132030; risk assessments begin2026 with2028 submissions. Preserve exact thresholds and exceptions in J2.",
+          "section_list": [
+            {
+              "number": "CCR11-ccpa-updates-cybersecurity-risk-admt-insurance",
+              "heading": "CCPA updates cybersecurity risk ADMT insurance",
+              "ref": "https://cppa.ca.gov/regulations/pdf/ccpa_updates_cyber_risk_admt_appr_text.pdf",
+              "source_unit_kind": "document"
+            }
+          ]
+        },
+        {
+          "unit": "Final package - DROP and data broker registration operative compilation",
+          "heading": "DROP and data broker registration operative compilation",
+          "adapter": "generic",
+          "source_unit_kind": "document",
+          "internal_units_in_scope": [
+            "7600\u20137604;7610\u20137616;7620\u20137622"
+          ],
+          "reason": "Data-broker role conditional; ordinary landlord tenant relationship alone does not establish broker status. Current compilation includes December9,2025 fee filing; do not apply registration fees to every data processor.",
+          "section_list": [
+            {
+              "number": "CCR11-drop-and-data-broker-registration-operative-compilation",
+              "heading": "DROP and data broker registration operative compilation",
+              "ref": "https://cppa.ca.gov/regulations/pdf/data_broker_drop_reg.pdf",
+              "source_unit_kind": "document"
+            }
+          ]
+        },
+        {
+          "unit": "Final package - CACI2026",
+          "heading": "CACI regulation and incorporated forms effectiveApril1,2026",
+          "adapter": "generic",
+          "source_unit_kind": "document",
+          "internal_units_in_scope": [
+            "901\u2013906;repealed900;four incorporated forms"
+          ],
+          "reason": "Conditional licensed child/youth-care background-check and record-correction dependency; statutory authorized-requester limits remain. No ordinary landlord CACI access or right to demand self-inquiry records; BCIA4056 expressly quotes PenalCode11170(f)(2) prohibition.",
+          "section_list": [
+            {
+              "number": "CACI-final-2026",
+              "heading": "CACI final adopted regulations",
+              "ref": "https://www.oag.ca.gov/system/files/media/caci-bcia-final-text-12102025.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "BCIA4056-November2024",
+              "heading": "BCIA4056 Self Inquiry Request (November2024)",
+              "ref": "https://www.oag.ca.gov/system/files/media/caci-bcia-4056-12102025.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "BCIA4057-June2024",
+              "heading": "BCIA4057 Out-of-State Foster Care and Adoption Agency Inquiry (June2024)",
+              "ref": "https://www.oag.ca.gov/system/files/media/caci-bcia-4057-12102025.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "BCIA4084-June2024",
+              "heading": "BCIA4084 Request for CACI Search (June2024)",
+              "ref": "https://www.oag.ca.gov/system/files/media/caci-bcia-4084-12102025.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "BCIA8583-June2024",
+              "heading": "BCIA8583 Child Abuse or Severe Neglect Indexing Form (June2024)",
+              "ref": "https://www.oag.ca.gov/system/files/media/caci-bcia-8583-12102025.pdf",
+              "source_unit_kind": "document"
+            }
+          ]
+        }
+      ],
+      "units_out": [
+        {
+          "unit": "Division 2 - Commission on Peace Officer Standards and Training",
+          "heading": "Division 2 - Commission on Peace Officer Standards and Training (Article 1 to 5)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-11",
+          "reason": "Division 2 - Commission on Peace Officer Standards and Training governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 3 - Gambling Control",
+          "heading": "Division 3 - Gambling Control (Chapter 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-11",
+          "reason": "Division 3 - Gambling Control governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 5 - Firearms Regulations",
+          "heading": "Division 5 - Firearms Regulations (Chapter 1 to 41)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-11",
+          "reason": "Division 5 - Firearms Regulations governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 9 - Commission on Peace Officer Standards and Training [Repealed]",
+          "heading": "Division 9 - Commission on Peace Officer Standards and Training [Repealed] (Chapter 3 to 7)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-11",
+          "reason": "Division 9 - Commission on Peace Officer Standards and Training [Repealed] governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        }
+      ],
+      "acquisition": {
+        "text_adapter": "cornell_ccr",
+        "enumeration": "Traverse the selected mirror division/chapter descendants and retain actual linked leaf references.",
+        "source_authority": "mirror",
+        "official_reconciliation": "Official CCR and issuing-agency enacted/amendment sources determine the authoritative version. Mirror text alone cannot complete J2."
+      },
+      "toc_mirror_url": "https://www.law.cornell.edu/regulations/california/title-11",
+      "source_capture": "j1/sources/ccr-title-11.txt",
+      "currentness_note": "LII supplies the browse tree; official CCR and issuing-agency adoption texts determine legal version. LII quarterly update is not treated as current legal authority.",
+      "version_records": [
+        {
+          "name": "CCPA updates cybersecurity risk ADMT insurance",
+          "filed_on": "2025-09-22",
+          "selected_unit": "Complete approved127-page package; Division6 Chapter1 changed sections and new audit/risk/ADMT articles",
+          "source_url": "https://cppa.ca.gov/regulations/pdf/ccpa_updates_cyber_risk_admt_appr_text.pdf",
+          "legal_status": "Official final text identified",
+          "reason": "Covered business/provider tenant and applicant information. Compliance phase-ins distinct from effective date: ADMT January1,2027; audit certifications2028\u20132030; risk assessments begin2026 with2028 submissions. Preserve exact thresholds and exceptions in J2.",
+          "evidence": "j1/lanes/local_agency/sources/q4-privacy-diving.txt",
+          "effective_from": "2026-01-01"
+        },
+        {
+          "name": "DROP and data broker registration operative compilation",
+          "filed_on": "2025-11-06",
+          "selected_unit": "7600\u20137604;7610\u20137616;7620\u20137622",
+          "source_url": "https://cppa.ca.gov/regulations/pdf/data_broker_drop_reg.pdf",
+          "legal_status": "Official final text identified",
+          "reason": "Data-broker role conditional; ordinary landlord tenant relationship alone does not establish broker status. Current compilation includes December9,2025 fee filing; do not apply registration fees to every data processor.",
+          "evidence": "j1/lanes/local_agency/sources/q4-privacy-diving.txt",
+          "effective_from": "2026-01-01"
+        },
+        {
+          "name": "Child Abuse Central Index regulation revision",
+          "oal_file": "2025-1024-04S",
+          "filed_on": "2025-12-10",
+          "effective_from": "2026-04-01",
+          "legal_status": "Approved and operative; DOJ final-action page",
+          "selected_unit": "Amend901\u2013906;repeal900; incorporatedBCIA4056Nov2024,4057/4084/8583June2024",
+          "source_url": "https://www.oag.ca.gov/system/files/media/caci-bcia-final-text-12102025.pdf",
+          "action_page_url": "https://www.oag.ca.gov/regulations/bcia/rca",
+          "reason": "Conditional licensed child/youth-care background-check and record-correction dependency; statutory authorized-requester limits remain. No ordinary landlord CACI access or right to demand self-inquiry records; BCIA4056 expressly quotes PenalCode11170(f)(2) prohibition.",
+          "transcription_correction": "Q4 parsed December4row accidentally absorbs December10CACI action and loses POST1005/1007/1008/1059 row; Notice51Dec19 supplies both actual inventories/dates."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "registry_version": "1.0.0",
+  "purpose": "Triage only. Jev reads one section of law and says whether it can change a decision in the settlement chain of a market-rate NYC residential tenancy. Jev never states what the law requires; routing thresholds are owned by code (routing.json).",
+  "global_rules": [
+    "Answer from the supplied state alone: state.section_text is the complete text of one section (or rule) of one legal instrument, state.instrument names the instrument and state.heading its heading.",
+    "Judge the section as written for the chain in state.chain_description, for a market-rate residential unit in New York City under New York State, New York City and federal law.",
+    "state.aperture_exclusions lists regimes that are outside the chain; a section that decides matters only for one of them is not a decision in the chain.",
+    "Do not decide what the section requires, how it applies to a case, or whether it is valid; classify only its role.",
+    "When a section mixes provisions, classify it by its strongest provision: one provision that can change the chain's decisions is enough.",
+    "The question identifier is a label; the question is in the instructions."
+  ],
+  "questions": [
+    {
+      "id": "role",
+      "version": "1.0.0",
+      "primitive": "choice",
+      "question": "What role does this section play in the settlement chain of a market-rate NYC residential tenancy?",
+      "prompt": {
+        "instructions": "What role does state.section_text play in the chain in state.chain_description? Choose DECIDES if the section imposes a duty, bar, deadline, amount, condition, defense, liability or consequence that can change what a landlord, managing agent, collector or tenant does or owes in that chain, for a market-rate NYC unit. Choose EXCLUDED_REGIME if it decides such matters only for a regime listed in state.aperture_exclusions. Choose NO_DECISION if it contains definitions only, is administrative, concerns other subject matter, or governs conduct outside the chain.",
+        "criteria": {
+          "DECIDES": "The section imposes a duty, bar, deadline, amount, condition, defense, liability or consequence that can change what a landlord, managing agent, collector or tenant does or owes in the chain, for a market-rate NYC unit.",
+          "EXCLUDED_REGIME": "The section decides such matters only for an out-of-aperture regime (rent-stabilized or rent-controlled units, public, project-based or subsidized housing, Virginia, places outside NYC, commercial tenancies).",
+          "NO_DECISION": "The section contains definitions only, is administrative (agency or court organization, reporting, funding), concerns other subject matter, or governs conduct outside the chain."
+        }
+      }
+    },
+    {
+      "id": "chain_duty",
+      "version": "1.0.0",
+      "primitive": "noul",
+      "question": "Does the text impose or alter any obligation, right, deadline, amount or consequence for a party to a residential tenancy, or a person collecting from one, at or after the tenancy's end?",
+      "prompt": {
+        "instructions": "Does state.section_text impose or alter any obligation, right, deadline, amount or consequence for a party to a residential tenancy (landlord, managing agent, tenant, co-tenant, guarantor, successor, estate), or for a person collecting money from one, at or after the tenancy's end? Judge the text only; include general rules (time computation, delivery of notices, capacity to sue, judgment interest, enforcement, exemptions, limitations, discharge, reporting) that reach such a party.",
+        "criteria": {
+          "true": "The text imposes or alters an obligation, right, deadline, amount or consequence that reaches a party to a residential tenancy, or a person collecting from one, at or after the tenancy's end.",
+          "false": "The text imposes nothing that reaches such a party at or after the tenancy's end (it governs other persons, other subject matter, agency or court administration, or only definitions)."
+        }
+      }
+    }
+  ],
+  "state_fields": {
+    "instrument": "instrument name and section citation",
+    "heading": "section heading",
+    "section_text": "full section text as saved (up to 12,000 characters; longer sections are not sent: they go to the review queue as LONG)",
+    "chain_description": "the chain paragraph from the register brief, verbatim",
+    "aperture_exclusions": "the out-of-aperture list from the register brief, verbatim"
+  },
+  "chain_description": "The chain: from facts fixed at move-in and the notice that the tenancy is ending, to the account closed (including collection, suit, judgment, enforcement and write-off, unclaimed funds, bankruptcy, death, military, disability, domestic violence, coerced debt, tax and information reporting, data and privacy, credit reporting, anti-discrimination). Scope: NY State + NYC + federal law, a MARKET-RATE unit in NYC.",
+  "aperture_exclusions": "Out of aperture: rent-stabilized and rent-controlled units, public and project-based or subsidized housing, Virginia, places outside NYC, commercial tenancies."
+}

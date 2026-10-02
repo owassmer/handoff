@@ -1,0 +1,118 @@
+{
+  "add": [
+    {
+      "id": "CA:SOCALGAS-TARIFF-UPDATE-2026-09",
+      "jurisdiction": "CA",
+      "name": "SoCalGas effective tariff replacement sheets \u2014 September10,2026 packet",
+      "level": "agency rule",
+      "instrument_kind": "utility tariff replacement packet",
+      "functions": [
+        "payments",
+        "communications",
+        "preconditions"
+      ],
+      "adapter": "generic",
+      "toc_source_url": "https://tariffsprd.socalgas.com/scg/tariffs",
+      "source_unit_kind": "document",
+      "units_in_scope": [
+        {
+          "unit": "2026-09-10 packet",
+          "heading": "Tariff sheets made effective August11 through September10,2026",
+          "source_unit_kind": "document",
+          "toc_url": "https://www.socalgas.com/regulatory/documents/TariffBookUpdate.pdf",
+          "reason": "Actual publisher effective-sheet distribution packet; includes residential and master-meter/submeter rates and conditions. Preserve whole packet then subdivide only applicable sheets at J2. It is not the complete tariff book.",
+          "section_list": [
+            {
+              "number": "2026-09-10-effective-sheets",
+              "heading": "SoCalGas tariff replacement packet dated September10,2026",
+              "ref": "https://www.socalgas.com/regulatory/documents/TariffBookUpdate.pdf"
+            }
+          ]
+        }
+      ],
+      "units_out": [],
+      "source_status_note": "Publisher landing page links this monthly rolling URL. Capture/hash edition at J2 and reject a changed edition being silently treated as Sept10. Cover expressly identifies effective changes, unlike advice proposals. Later September and October changes not yet reconciled.",
+      "selected_internal_targets": [
+        {
+          "locator_pdf_page": 15,
+          "identity": "GR sheet1; revised64452-G",
+          "effective_date": "2026-09-10",
+          "advice": "6691-G"
+        },
+        {
+          "locator_pdf_page": 16,
+          "identity": "GS sheet2; revised64453-G",
+          "effective_date": "2026-09-10",
+          "advice": "6691-G"
+        },
+        {
+          "locator_pdf_page": 17,
+          "identity": "GM sheet2; revised64454-G",
+          "effective_date": "2026-09-10",
+          "advice": "6691-G"
+        },
+        {
+          "locator_pdf_page": 18,
+          "identity": "GM sheet3; revised64455-G",
+          "effective_date": "2026-09-10",
+          "advice": "6691-G"
+        },
+        {
+          "locator_pdf_page": 19,
+          "identity": "GO-AC sheet1; revised64429-G",
+          "effective_date": "2026-09-01",
+          "advice": "6689-G"
+        }
+      ]
+    },
+    {
+      "id": "CA:SCE-MHP-FORMS",
+      "jurisdiction": "CA",
+      "name": "SCE mobilehome park utility upgrade application and agreement",
+      "level": "agency rule",
+      "instrument_kind": "utility filed forms",
+      "functions": [
+        "payments",
+        "communications",
+        "preconditions"
+      ],
+      "adapter": "generic",
+      "toc_source_url": "https://www.sce.com/business/tools/for-landlords",
+      "source_unit_kind": "document",
+      "units_in_scope": [
+        {
+          "unit": "14-953",
+          "heading": "Mobilehome Park Utility Upgrade Program Application",
+          "source_unit_kind": "document",
+          "toc_url": "https://www.sce.com/sites/default/files/inline-files/MHP%2BApplication%2BFinal_SCE_AA.pdf",
+          "reason": "Conditionally applicable when property participates in master-meter conversion; includes owner, customer, provider and beyond-meter construction responsibilities.",
+          "section_list": [
+            {
+              "number": "14-953",
+              "heading": "Mobilehome Park Utility Upgrade Program Application",
+              "ref": "https://www.sce.com/sites/default/files/inline-files/MHP%2BApplication%2BFinal_SCE_AA.pdf"
+            }
+          ]
+        },
+        {
+          "unit": "14-952",
+          "heading": "Mobilehome Park Utility Upgrade Program Agreement",
+          "source_unit_kind": "document",
+          "toc_url": "https://www.sce.com/sites/default/files/inline-files/MHP%2BAgreement%2BFinal_SCE_AA.pdf",
+          "reason": "Conditionally applicable when property participates in master-meter conversion; includes owner, customer, provider and beyond-meter construction responsibilities.",
+          "section_list": [
+            {
+              "number": "14-952",
+              "heading": "Mobilehome Park Utility Upgrade Program Agreement",
+              "ref": "https://www.sce.com/sites/default/files/inline-files/MHP%2BAgreement%2BFinal_SCE_AA.pdf"
+            }
+          ]
+        }
+      ],
+      "units_out": [],
+      "source_status_note": "Current publisher program page directly links these two December2014 forms, effectiveAug29,2014. Exact published documents selected; do not infer that current Rule27 or later program decisions remain unchanged. Compare filed-form SharePoint collection for superseding editions before use."
+    }
+  ],
+  "inventory_file": "inventory.json",
+  "remaining": "Current individual rule targets remain unresolved; this proposal does not close full utility tariff J1 inventory."
+}

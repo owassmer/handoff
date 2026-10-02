@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:handoff:deposit-closeout:ReviewRuleRelease:1.0.0",
+  "$ref": "#/$defs/ReviewRuleRelease",
+  "$defs": {
+    "ReviewRuleRelease": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "string",
+          "minLength": 1,
+          "const": "1.0.0"
+        },
+        "ruleReleaseId": {
+          "type": "string",
+          "minLength": 1,
+          "const": "NC_SYNTHETIC_REVIEW_V1"
+        },
+        "sourceRuleReleaseId": {
+          "type": "string",
+          "minLength": 1,
+          "const": "NC_SYNTHETIC_DEMO_V1"
+        },
+        "codeVersion": {
+          "type": "string",
+          "minLength": 1,
+          "const": "phase-b.1"
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1,
+          "const": "SYNTHETIC_ONLY"
+        },
+        "implementationStatus": {
+          "type": "string",
+          "minLength": 1,
+          "const": "IMPLEMENTED_SYNTHETIC"
+        },
+        "legalReviewStatus": {
+          "type": "string",
+          "minLength": 1,
+          "const": "PENDING"
+        },
+        "allowLiveUse": {
+          "type": "boolean",
+          "const": false
+        },
+        "allowedOrigins": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "const": [
+            "CONSTRUCTED"
+          ]
+        },
+        "ordinaryPeriodDays": {
+          "type": "integer",
+          "minimum": -2147483648,
+          "maximum": 2147483647,
+          "const": 30
+        },
+        "finalPeriodDays": {
+          "type": "integer",
+          "minimum": -2147483648,
+          "maximum": 2147483647,
+          "const": 60
+        },
+        "timeZone": {
+          "type": "string",
+          "minLength": 1,
+          "const": "America/New_York"
+        },
+        "interimMoneyPolicy": {
+          "type": "string",
+          "minLength": 1,
+          "const": "UNRESOLVED_PENDING_REVIEW"
+        },
+        "missingAddressPolicy": {
+          "type": "string",
+          "minLength": 1,
+          "const": "UNRESOLVED_PENDING_REVIEW"
+        },
+        "legalCompletionPolicy": {
+          "type": "string",
+          "minLength": 1,
+          "const": "UNRESOLVED_PENDING_REVIEW"
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "ruleReleaseId",
+        "sourceRuleReleaseId",
+        "codeVersion",
+        "status",
+        "implementationStatus",
+        "legalReviewStatus",
+        "allowLiveUse",
+        "allowedOrigins",
+        "ordinaryPeriodDays",
+        "finalPeriodDays",
+        "timeZone",
+        "interimMoneyPolicy",
+        "missingAddressPolicy",
+        "legalCompletionPolicy"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

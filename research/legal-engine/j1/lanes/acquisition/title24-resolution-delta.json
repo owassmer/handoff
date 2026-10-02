@@ -1,0 +1,61 @@
+{
+  "as_of": "2026-10-01",
+  "instrument": "CA:CCR24",
+  "scope": "Bounded supplement to local_agency/title24-delta.json; no canonical replacement",
+  "version_record_additions": [
+    {
+      "package": "HCD 1-AC 01/25",
+      "parts": [2, 3, 4, 5],
+      "status": "approved; future operation",
+      "approved": "2026-08-26",
+      "effective_from": "2027-07-01",
+      "source_url": "https://www.hcd.ca.gov/building-standards/shl/approved-building-standards/2025",
+      "evidence": "Live HCD approved-standards page explicitly reports Commission approval on August 26, 2026 and July 1, 2027 supplement operation.",
+      "package_name_mapping_source": "https://www.dgs.ca.gov/BSC/Rulemaking/2025-Intervening-Cycle/Commission-Mtgs/2026-08-25",
+      "mapping_note": "Package ID mapped from matching agency and Parts 2/3/4/5 in the Commission's indexed inventory; HCD approval page itself lists parts, not package ID.",
+      "final_text_status": "HCD page labels final documents Coming Soon; exact Commission final express-terms and matrix hrefs not recovered. Do not use the directory page as operative text."
+    },
+    {
+      "package": "HCD 01/25",
+      "parts": [11],
+      "status": "approved; future operation",
+      "approved": "2026-08-26",
+      "effective_from": "2027-07-01",
+      "source_url": "https://www.hcd.ca.gov/building-standards/shl/approved-building-standards/2025",
+      "evidence": "Live HCD approved-standards page explicitly reports Commission approval on August 26, 2026 and July 1, 2027 supplement operation.",
+      "package_name_mapping_source": "https://www.dgs.ca.gov/BSC/Rulemaking/2025-Intervening-Cycle/Commission-Mtgs/2026-08-25",
+      "mapping_note": "Package ID mapped from matching agency and Part 11 in the Commission's indexed inventory.",
+      "final_text_status": "HCD page labels final documents Coming Soon; exact final text and matrix targets still unresolved."
+    }
+  ],
+  "part7_disposition": {
+    "preserve_existing_initial_dates": true,
+    "readoption_approval": null,
+    "readoption_filing": null,
+    "certification": null,
+    "current_endpoint": null,
+    "source_urls": [
+      "https://www.dgs.ca.gov/BSC/Rulemaking/Emergency-Rulemaking-NEW",
+      "https://www.dgs.ca.gov/BSC/Rulemaking/2025-Intervening-Cycle/Commission-Mtgs/2026-05-06",
+      "https://www.dgs.ca.gov/BSC/News/Page-Content/CALCode-Quarterly-Newsletters-Archive/CALCode-Quarterly-Spring-2026"
+    ],
+    "finding": "Indexed emergency page still describes a request for a 90-day readoption at May 6. Indexed meeting page names minutes but this tool could not retrieve their href or contents. No primary readoption filing/certification or endpoint recovered.",
+    "scope_caution": "Spring newsletter says no motions/votes occurred on intervening-cycle proposals during the May 6 preview discussion. That passage does not specifically identify the separate emergency-readoption item; it cannot establish rejection or absence of readoption.",
+    "next_exact_evidence": "May 6 Commission minutes plus Secretary of State filing/certification record for SFM EF 01/25, reconciled with SFM 04/25 final action."
+  },
+  "electrical_viewer_disposition": {
+    "publication": "NFPA 70-CA, National Electrical Code with California Amendments, 2025; publisher edition selector 2023",
+    "publisher_identity_source": "https://link.nfpa.org/all-publications/33/2007",
+    "identity_evidence_kind": "Publisher available-publications search-index snapshot names NFPA 70-CA and its 2023 selector with California Amendments, 2025 title.",
+    "candidate_url": "https://link.nfpa.org/all-publications/70-CA/2023",
+    "candidate_status": "Direct open returned one-line NFPA LiNK application shell. No selected-publication identity, publisher href mapping, TOC or legal text rendered. Candidate remains unverified and is not a section_list text ref.",
+    "required_next_step": "Render the publisher's available-publications selection and follow its 70-CA/2023 link in an authorized browser session, retaining the actual destination and displayed publication identity."
+  },
+  "august_remaining": {
+    "commission_inventory_source": "https://www.dgs.ca.gov/BSC/Rulemaking/2025-Intervening-Cycle/Commission-Mtgs/2026-08-25",
+    "packages": ["BSC 01/25", "BSC 02/25", "BSC 03/25", "DSA-SS 01/25", "DSA-SS 02/25", "DSA-SS 03/25", "DSA-SS 04/25", "DSA-AC 01/25", "OSHPD 01/25", "OSHPD 02/25", "OSHPD 03/25", "OSHPD 04/25", "OSHPD 05/25", "OSHPD 06/25", "OSHPD 07/25", "SFM 01/25", "SFM 02/25", "SFM 03/25", "SFM 04/25"],
+    "finding": "Indexed Commission page names final express terms and colored action matrices but does not expose their exact hrefs in search output; direct retrieval failed. No package-specific final adoption/filing/date changes made for these packages.",
+    "part1_caution": "DSA structural-safety page describes anticipated August/September 2026 Part 1 operation. This prospective statement is not an exact adopted filing/effective date and does not justify a blanket July 1, 2027 date for Part 1."
+  },
+  "access_limits": "Direct DGS opens returned 403 or tool-inaccessible responses, including no-www/query variants. Targeted publisher/agency searches yielded indexed inventories and proposal documents but no final matrix/filing targets. Failed recovery is not evidence of no adoption."
+}

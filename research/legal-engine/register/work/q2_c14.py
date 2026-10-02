@@ -1,0 +1,38 @@
+from q2_lib import *
+
+APP = "NY:CPLR-321-JUD-495-appearance"
+rows = [
+    D("NY:Judiciary Law 475", "new_rule",
+      "An attorney who appears for the former tenant (or the landlord) has a lien on the claim and on any settlement or judgment proceeds in whatever hands they come, unaffected by a settlement between the parties; decides to whom a deposit settlement is paid when the tenant has counsel.",
+      proposed=[R("NY:JUD-475-attorney-lien", "NY:Judiciary Law 475", "Judiciary Law 475", "landlord; former tenant; their attorneys", "rule",
+                  "Branch (a): a former tenant is represented by an attorney who has commenced an action or proceeding, served a counterclaim, begun ADR, or provided services in settlement negotiations over the deposit or other claim against the landlord. Branch (b): the landlord's attorney has done the same on the balance claim.",
+                  "The attorney has a lien on its client's claim that attaches to any verdict, decision, award, settlement or judgment in the client's favor and to the proceeds in whatever hands they come, and no settlement between the parties before or after judgment defeats it; the court determines and enforces it on the client's or attorney's petition. Branch (a): a landlord that settles directly with a represented tenant and pays the tenant alone, knowing of the attorney's involvement, remains liable to the attorney for the lien; the settlement payment is made to the tenant and its attorney jointly or as the attorney directs, and within the time of NY:CPLR-5003-a-settlement-payment. Branch (b): the landlord's recovery carries its own attorney's lien, which does not increase what the tenant owes (legal fees on the tenant: NY:RPL-234-a).",
+                  "From the commencement of an action, special or other proceeding in any court", "The court upon the petition of the client or attorney may determine and enforce the lien.",
+                  severity="major", walk_step="7.6", dependencies=["NY:CPLR-5003-a-settlement-payment", "NY:RPL-234-a"])]),
+    D("NY:Judiciary Law 484", "partial",
+      "The appearance rule bars Handoff and managers from appearing or signing pleadings as attorney; 484 adds that no natural person who is not an attorney may take compensation for preparing pleadings in a court of record (including the NYC Civil Court) or instruments affecting real estate for another, which limits what Handoff's or a manager's staff may draft for a fee.",
+      atoms=[APP],
+      proposed=[R("NY:JUD-484-nonlawyer-preparation", "NY:Judiciary Law 484", "Judiciary Law 484, 485", "Handoff and managing-agent staff", "prohibition",
+                  "A person who is not admitted to practice (Handoff staff, a managing agent's staff) prepares papers for the owner's suit against a former tenant, or for a tenant, in exchange for compensation paid directly or indirectly (including as part of a service fee). Branch (a): pleadings of any kind (summons, complaint, answer, counterclaim) in an action in a court of record (the Supreme Court or NYC Civil Court, including its small claims and commercial claims parts). Branch (b): the evidence file (itemized statement, ledger, invoices, photographs, move-in record) and factual affidavits for a party to sign, given to the owner or its attorney. Branch (c): a lease or other instrument affecting real estate.",
+                  "Branch (a): prohibited; the pleading is prepared by the owner itself (an individual owner for itself), by its salaried officer in the commercial claims part (NY:CPLR-321-JUD-495-appearance), or by an attorney. Branch (b): permitted; preparing factual records is not preparing a pleading or appearing, and the owner or its attorney signs any pleading. Branch (c): prohibited for compensation. A violation is a misdemeanor (Judiciary Law 485).",
+                  "No natural person shall ask or receive, directly or indirectly, compensation for appearing for a person other than himself", "in the courts of record in the state;",
+                  severity="major", walk_step="8.10", amends=APP, dependencies=[APP])]),
+    D("NY:Judiciary Law 485", "stated",
+      "Makes violations of Judiciary Law 478-484 misdemeanors; the misdemeanor consequence is stated in the appearance rule, and for 484 in its proposed rule (NY:JUD-484-nonlawyer-preparation).",
+      atoms=[APP]),
+    D("NY:Judiciary Law 488", "new_rule",
+      "A collection attorney may not buy or take assignment of a former tenant's balance to sue on it, nor give value for having claims placed with it; limits how a balance can be handed to a law firm.",
+      proposed=[R("NY:JUD-488-attorney-buying-claims", "NY:Judiciary Law 488", "Judiciary Law 488(1)-(2), (4)", "collection attorney; landlord; Handoff", "prohibition",
+                  "The landlord, its manager or Handoff hands a former tenant's balance to an attorney for collection or suit.",
+                  "The attorney may not buy, take an assignment of, or be interested in buying a claim (book debt or other thing in action) with the intent and purpose of suing on it, and may not give or promise any valuable consideration to anyone (the owner, the manager or Handoff) to induce or reward placing a claim with it for suit or collection, other than fee-division between attorneys and litigation-cost advances by the lawyer. So the balance is placed with the attorney as the owner's claim, suit brought in the owner's name, with no referral payment. A violating attorney commits a misdemeanor; the recipient side is NY:JUD-491-no-fee-sharing; non-attorney assignees: NY:JUD-489-champerty.",
+                  "An attorney or counselor shall not:", "An attorney or counselor who violates the provisions of this section is guilty of a misdemeanor.",
+                  severity="major", walk_step="8.1b", dependencies=["NY:JUD-489-champerty", "NY:JUD-491-no-fee-sharing"])]),
+    D("NY:Judiciary Law 491", "new_rule",
+      "No person or company may receive any part of an attorney's fee or any reward for placing a claim with an attorney for collection or suit; bars Handoff or a manager from taking referral fees or fee splits from the law firm that collects former tenants' balances.",
+      proposed=[R("NY:JUD-491-no-fee-sharing", "NY:Judiciary Law 491", "Judiciary Law 491", "Handoff; managing agent; owner", "prohibition",
+                  "Handoff, a managing agent or the owner places former tenants' balances (or tenants' deposit claims) with an attorney or law firm for collection or suit. Branch (a): the arrangement gives Handoff or the manager a share of the attorney's fee, a commission, or any other valuable consideration for placing the claims. Branch (b): Handoff or the manager is paid only by the owner for its own services, and the attorney is paid only by the client.",
+                  "Branch (a): unlawful; dividing or agreeing to divide any portion of the attorney's fee or receiving any reward for placing a claim is a misdemeanor for the person or corporation receiving it. Branch (b): lawful. Fee-division between attorneys is outside the ban.",
+                  "1. It shall be unlawful for any person, partnership, corporation, or association", "2. Any person violating any of the provisions of this section is guilty of a misdemeanor.",
+                  severity="major", walk_step="8.6a", dependencies=["NY:JUD-488-attorney-buying-claims"])]),
+]
+write(rows)

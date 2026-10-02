@@ -1,0 +1,456 @@
+{
+  "version": "draft-2",
+  "purpose": "Development specification, not a holdout or accuracy measurement",
+  "cases": [
+    {
+      "id": "dev01",
+      "task": "definition_present",
+      "state": {
+        "focus": {
+          "passage": "definitions"
+        }
+      },
+      "review": {
+        "expected": "YES",
+        "reason": "The chapter opens with an express scope statement and multiple meanings despite having no saved section heading.",
+        "agent_next_action": "Agent identifies candidate terms and their complete defining clauses; code anchors them to source spans.",
+        "stratum": "headingless definition",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev02",
+      "task": "definition_present",
+      "state": {
+        "focus": {
+          "passage": "security_definition"
+        }
+      },
+      "review": {
+        "expected": "YES",
+        "reason": "The operative deposit section embeds its security definition and purposes.",
+        "agent_next_action": "Keep the definition and its exception reference while inspecting the rest of the section.",
+        "stratum": "embedded definition in long section",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev03",
+      "task": "definition_present",
+      "state": {
+        "focus": {
+          "passage": "notice_c"
+        }
+      },
+      "review": {
+        "expected": "NO",
+        "reason": "Delivery instructions use ordinary words without assigning them meanings.",
+        "agent_next_action": "Record this narrow negative; continue examining delivery duties and other dependencies.",
+        "stratum": "operative text negative",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev04",
+      "task": "reference_present",
+      "state": {
+        "focus": {
+          "passage": "repair_reference"
+        }
+      },
+      "review": {
+        "expected": "YES",
+        "reason": "The text expressly names subdivision (a) of Section 1962.",
+        "agent_next_action": "Resolve the exact subsection and retrieve it; independently inspect additional repair and remedy dependencies.",
+        "stratum": "subsection cross-reference",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev05",
+      "task": "reference_present",
+      "state": {
+        "focus": {
+          "passage": "notice_b"
+        }
+      },
+      "review": {
+        "expected": "YES",
+        "reason": "Section 1989 is expressly referenced in the liability language.",
+        "agent_next_action": "Retrieve 1989, preserve the reference location, and investigate the limits on protection.",
+        "stratum": "explicit cross-section reference",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev06",
+      "task": "reference_present",
+      "state": {
+        "focus": {
+          "passage": "request"
+        }
+      },
+      "review": {
+        "expected": "YES",
+        "reason": "Paragraphs (4), (2), (3), and (1) are explicitly referenced.",
+        "agent_next_action": "Resolve each within 1950.5(h), retaining the containing subdivision.",
+        "stratum": "relative internal references",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev07",
+      "task": "reference_present",
+      "state": {
+        "focus": {
+          "passage": "notice_c"
+        }
+      },
+      "review": {
+        "expected": "NO",
+        "reason": "There is no explicit reference to another legal provision in this selected subdivision.",
+        "agent_next_action": "Keep implicit definition and meaning investigation open; a negative reference scan does not close the section.",
+        "stratum": "no explicit reference",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev08",
+      "task": "candidate_term_use",
+      "state": {
+        "definition": {
+          "passage": "owner_definition"
+        },
+        "use": {
+          "passage": "notice_a"
+        },
+        "term": "owner"
+      },
+      "review": {
+        "expected": "YES",
+        "reason": "Both passages concern ownership of the remaining personal property.",
+        "agent_next_action": "Check the chapter scope and investigate how the definition affects notice recipients.",
+        "stratum": "same word same sense",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev09",
+      "task": "candidate_term_use",
+      "state": {
+        "definition": {
+          "passage": "belief_definition"
+        },
+        "use": {
+          "passage": "notice_a"
+        },
+        "term": "reasonable belief"
+      },
+      "review": {
+        "expected": "YES",
+        "reason": "The grammatical variant concerns the same kind of belief about property ownership. This is a candidate connection only; it does not establish incorporation of the definition’s investigation standard.",
+        "agent_next_action": "Read the complete investigation exception in the definition; confirm scope separately.",
+        "stratum": "grammatical variant",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev10",
+      "task": "candidate_term_use",
+      "state": {
+        "definition": {
+          "passage": "security_definition"
+        },
+        "use": {
+          "passage": "notice_a"
+        },
+        "term": "security"
+      },
+      "review": {
+        "expected": "NO",
+        "reason": "The notice provision concerns remaining property and its owners, not the described security payment.",
+        "agent_next_action": "Do not create this candidate link; retain other dependencies of the notice provision.",
+        "stratum": "different concept",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev11",
+      "task": "scope_includes_use",
+      "state": {
+        "definition_scope": {
+          "passage": "definition_scope"
+        },
+        "use": {
+          "passage": "notice_a"
+        },
+        "definition_location": {
+          "instrument": "CA:CIV",
+          "unit": "Division 3 Part 4 Title 5 Chapter 5",
+          "section_id": "CA:CIV 1980"
+        },
+        "use_location": {
+          "instrument": "CA:CIV",
+          "unit": "Division 3 Part 4 Title 5 Chapter 5",
+          "section_id": "CA:CIV 1983"
+        }
+      },
+      "review": {
+        "expected": "YES",
+        "reason": "As used in this chapter reaches the supplied use in the same chapter.",
+        "agent_next_action": "Combine with term comparison as evidence for the agent to confirm the dependency, not as an automatic legal rule.",
+        "stratum": "same chapter",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev12",
+      "task": "scope_includes_use",
+      "state": {
+        "definition_scope": {
+          "passage": "definition_scope"
+        },
+        "use": {
+          "passage": "held_security"
+        },
+        "definition_location": {
+          "instrument": "CA:CIV",
+          "unit": "Division 3 Part 4 Title 5 Chapter 5",
+          "section_id": "CA:CIV 1980"
+        },
+        "use_location": {
+          "instrument": "CA:CIV",
+          "unit": "Division 3 Part 4 Title 5 Chapter 2",
+          "section_id": "CA:CIV 1950.5"
+        }
+      },
+      "review": {
+        "expected": "NO",
+        "reason": "The two locations lie in different chapters and the supplied definition is chapter-limited.",
+        "agent_next_action": "Do not export this chapter-specific definition to the deposit section.",
+        "stratum": "wrong chapter",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev13",
+      "task": "scope_includes_use",
+      "state": {
+        "definition_scope": {
+          "passage": "definition_scope"
+        },
+        "use": {
+          "passage": "notice_a"
+        },
+        "definition_location": {
+          "instrument": "CA:CIV",
+          "unit": "Division 3 Part 4 Title 5 Chapter 5",
+          "section_id": "CA:CIV 1980"
+        },
+        "use_location": {
+          "instrument": "CA:CIV",
+          "section_id": "CA:CIV 1983",
+          "unit": null
+        }
+      },
+      "review": {
+        "expected": "INSUFFICIENT",
+        "reason": "The supplied use location lacks the enclosing chapter; section-number proximity cannot establish it.",
+        "agent_next_action": "Agent obtains the official hierarchy; code prepares a new version of the request with it.",
+        "stratum": "missing hierarchy",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev14",
+      "task": "scope_includes_use",
+      "state": {
+        "definition_scope": {
+          "passage": "owner_definition"
+        },
+        "use": {
+          "passage": "notice_a"
+        },
+        "definition_location": {
+          "instrument": "CA:CIV",
+          "unit": "Division 3 Part 4 Title 5 Chapter 5",
+          "section_id": "CA:CIV 1980"
+        },
+        "use_location": {
+          "instrument": "CA:CIV",
+          "unit": "Division 3 Part 4 Title 5 Chapter 5",
+          "section_id": "CA:CIV 1983"
+        }
+      },
+      "review": {
+        "expected": "INSUFFICIENT",
+        "reason": "The introductory scope sentence was withheld; shared location alone does not establish the express reach.",
+        "agent_next_action": "Agent restores the omitted scope sentence before asking again.",
+        "stratum": "missing scope control",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev15",
+      "task": "qualifies_requirement",
+      "state": {
+        "requirement": {
+          "passage": "documentation"
+        },
+        "candidate": {
+          "passage": "waiver"
+        },
+        "context": {
+          "passage": "documentation_context"
+        }
+      },
+      "review": {
+        "expected": "YES",
+        "reason": "Paragraph (4) supplies conditions under which paragraphs (2) or (3) need not be followed.",
+        "agent_next_action": "Keep paragraph (5) as a separate restoration branch; do not infer whether any case meets paragraph (4).",
+        "stratum": "exception",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev16",
+      "task": "qualifies_requirement",
+      "state": {
+        "requirement": {
+          "passage": "documentation"
+        },
+        "candidate": {
+          "passage": "request"
+        },
+        "context": {
+          "passage": "documentation_context"
+        }
+      },
+      "review": {
+        "expected": "YES",
+        "reason": "Paragraph (5) restores compliance with paragraphs (2) and (3) notwithstanding paragraph (4).",
+        "agent_next_action": "Agent joins the request and exception branches and establishes the case dates before code computes a deadline.",
+        "stratum": "exception to exception",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev17",
+      "task": "qualifies_requirement",
+      "state": {
+        "requirement": {
+          "passage": "documentation"
+        },
+        "candidate": {
+          "passage": "mailing"
+        },
+        "context": {
+          "passage": "documentation_context"
+        }
+      },
+      "review": {
+        "expected": "NO",
+        "reason": "Paragraph (6) specifies a mailing destination; it does not qualify the duty to provide the documents specified in paragraph (2).",
+        "agent_next_action": "Retain the separate mailing obligation; this negative does not make it irrelevant.",
+        "stratum": "separate adjacent duty",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev18",
+      "task": "qualifies_requirement",
+      "state": {
+        "requirement": {
+          "passage": "documentation"
+        },
+        "candidate": {
+          "passage": "estimate"
+        },
+        "context": {
+          "passage": "documentation_context"
+        }
+      },
+      "review": {
+        "expected": "YES",
+        "reason": "Paragraph (3) expressly permits an estimate in stated circumstances and specifies later completion of paragraph (2).",
+        "agent_next_action": "Agent establishes whether documents or work are outstanding and checks every condition before computing dates.",
+        "stratum": "conditional timing",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev19",
+      "task": "candidate_term_use",
+      "state": {
+        "definition": {
+          "passage": "owner_definition"
+        },
+        "use": {
+          "passage": "rental_property_ownership"
+        },
+        "term": "owner"
+      },
+      "review": {
+        "expected": "NO",
+        "reason": "The use concerns ownership of residential rental properties, not ownership of personal property left behind.",
+        "agent_next_action": "Reject this candidate connection while retaining property-ownership conditions for their own investigation.",
+        "stratum": "related expression different referent",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev20",
+      "task": "definition_present",
+      "state": {
+        "focus": {
+          "passage": "repair_reference"
+        }
+      },
+      "review": {
+        "expected": "YES",
+        "reason": "The text adopts an agent definition by express reference.",
+        "agent_next_action": "Retrieve the named subsection before interpreting the adopted meaning.",
+        "stratum": "definition by reference",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev21",
+      "task": "reference_present",
+      "state": {
+        "focus": {
+          "passage": "held_security"
+        }
+      },
+      "review": {
+        "expected": "NO",
+        "reason": "The selected paragraph contains no explicit reference to a legal provision.",
+        "agent_next_action": "Retain its substantive holding and priority provisions for agent review.",
+        "stratum": "second no-reference negative",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    },
+    {
+      "id": "dev22",
+      "task": "qualifies_requirement",
+      "state": {
+        "requirement": {
+          "passage": "documentation"
+        },
+        "candidate": {
+          "passage": "damages"
+        },
+        "context": {
+          "passage": "documentation_context"
+        }
+      },
+      "review": {
+        "expected": "NO",
+        "reason": "The damages provision does not expressly change whether or when the specified document requirement must be fulfilled.",
+        "agent_next_action": "Investigate damages and burden of proof as separate legal consequences.",
+        "stratum": "separate consequence negative",
+        "status": "draft-2 blind reviewer agreement; development only"
+      }
+    }
+  ]
+}

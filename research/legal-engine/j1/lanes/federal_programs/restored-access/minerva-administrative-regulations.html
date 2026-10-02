@@ -1,0 +1,628 @@
+<!DOCTYPE html><html lang="en">
+<head><script src="/oats-inst-thought-I-fight-Hauen-top-pretures-Wif" async></script>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<link href="/webcat/default/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+<link href="/webcat/default/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+<link href="/webcat/default/css/listnav.css?v=20728" type="text/css" rel="stylesheet">
+<link media="screen" href="/webcat/default/lightbox/lightbox.css?v=20728" type="text/css" rel="stylesheet">
+<link href="/webcat/systems/cal/css/public.css?v=20728" type="text/css" rel="stylesheet">
+<script src="/webcat/script/jquery-3.2.1.min.js" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/bootstrap.min.js" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/jquery-listnav.min.js?v=20728" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/browseTree.js?v=20728" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/list.js?v=20728" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/windowProperties.js?v=20728" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/filter.js?v=20728" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/publicDisplay.js?v=20728" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/sorttable.js?v=20728" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/header.js?v=20728" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/gbooks.js?v=20728" language="JavaScript" type="text/javascript"></script><script language="JavaScript" type="text/javascript">
+<!--
+
+// BrowseSearchSimple JavaScript functions (WEBCAT)
+// Copyright (c) 2000-2016 by Eloquent Systems Research Inc.
+
+// Replacement variables
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+var typeID = "BrowseSearchSimple";
+var cmd_action = "/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=";
+var num_startindex = "1";
+var num_endindex = "50";
+var num_totalhits = "104";
+var txt_displaying = "Displaying";
+var txt_hits = "Hits";
+var txt_to = "to";
+var txt_of = "of";
+var txt_searchincomplete = "";
+var txt_tselect = "Tag";
+var txt_dischild = "Display children" ;
+var txt_ancestor = "Display ancestor" ;
+var txt_hits_simple = "Result(s)" ;
+var image_path = "/webcat/default/images/";
+var button_path = "/webcat/systems/cal/buttons/";
+var threshold = 50 ;
+var ctr_num = 0 ;
+var ftitle = getSearchKey('fromTitle');
+var reqtype = getSearchKey('RequesterType');
+var sTemplateProcessID = getSearchKey("TemplateProcessID");
+var path_resource = "/webcat/systems/cal/resource/";
+var tableID = getTableId();
+var sysFolder = getSysFolder();
+var othreshold = 50 ;
+var browse_by_list = false;
+var sSystemName = "California State Archives";
+var sClientSession = getSearchKey("ClientSession");
+var sUserId = "csa public";
+var txt_browse_viewlist = "View List";
+var txt_browse_savetolist = "Save to List";
+var txt_browse_removefromlist = "Remove from List";
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Handler (Start Button): Submits request for next n records (n=threshold).
+function getStart( ) {
+   if(!isMobile()) document.getElementById("loading").style.display = "inline";
+	var threshold = parseInt(document.BrowseForm.Threshold.value);
+	var end = parseInt(document.BrowseForm.EndIndex.value);
+	if ( num_totalhits < threshold ) {
+		end = num_totalhits ;
+	} else {
+		end = threshold ;
+	}
+	document.BrowseForm.StartIndex.value = 1 ;
+	document.BrowseForm.EndIndex.value = end ;
+	requestBrowse( ) ;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Handler (End Button): Submits request for next n records (n=threshold).
+function getEnd( ) {
+	var threshold = parseInt(document.BrowseForm.Threshold.value);
+	var start = parseInt(document.BrowseForm.StartIndex.value) ;
+	end = num_totalhits ;
+	start = num_totalhits - (num_totalhits - 1) % threshold ;
+	document.BrowseForm.StartIndex.value = start ;
+	document.BrowseForm.EndIndex.value = end ;
+	requestBrowse( ) ;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Handler (Next Button): Submits request for next n records (n=threshold).
+function getNext( ) {
+   if(!isMobile()) document.getElementById("loading").style.display = "inline";
+	var threshold = parseInt(document.BrowseForm.Threshold.value);
+	var start = parseInt(document.BrowseForm.StartIndex.value) + threshold ;
+	var end = parseInt(document.BrowseForm.StartIndex.value) + (threshold*2) - 1 ;
+	if ( end > num_totalhits ) {
+	  end = num_totalhits ;
+	}
+	if ( start <= num_totalhits ) {
+		document.BrowseForm.StartIndex.value = start ;
+	}
+	document.BrowseForm.EndIndex.value = end ;
+	requestBrowse( ) ;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Handler (Previous Button): Submits request for previous n records (n=threshold).
+function getPrevious( ) {
+   if(!isMobile()) document.getElementById("loading").style.display = "inline";
+	var threshold = parseInt(document.BrowseForm.Threshold.value);
+	var start = parseInt(document.BrowseForm.StartIndex.value) - threshold ;
+	var end = parseInt(document.BrowseForm.EndIndex.value) -
+	          parseInt(document.BrowseForm.EndIndex.value) +
+	          parseInt(document.BrowseForm.StartIndex.value) - 1 ;
+	
+	if ( end < 0 ) {
+	  end = threshold ;
+	}
+	if ( start < 0 ) {
+	  start = 1 ;
+	}
+	if ( end < threshold ) {
+	  end = threshold ;
+	}
+	document.BrowseForm.StartIndex.value = start ;
+	document.BrowseForm.EndIndex.value = end ;
+	requestBrowse( ) ;
+}
+
+function selectpage(pg){
+   if(!isMobile()) document.getElementById("loading").style.display = "inline";
+	var threshold = parseInt(document.BrowseForm.Threshold.value);
+	var start = (pg-1) * threshold + 1;
+	var end = pg * threshold ;
+	if ( end > num_totalhits ) end = num_totalhits ;
+   document.BrowseForm.StartIndex.value = start ;
+	document.BrowseForm.EndIndex.value = end ;
+	requestBrowse( ) ;
+}
+
+function newSearch(){
+   var sURL = cmd_action.replace("Action?","DoMenuRequest?");
+   location.href = sURL;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Called by getNext and getPrevious to submit form.
+function requestBrowse( ) {
+   start = parseInt(document.BrowseForm.StartIndex.value);
+   end = parseInt(document.BrowseForm.EndIndex.value);
+   threshold = parseInt(document.BrowseForm.Threshold.value);
+   noOfHits = parseInt(document.BrowseForm.NoOfHits.value);
+
+   var sURL = cmd_action;
+   sURL += "&CMD_(BrowseRequest)&NoOfHits="+num_totalhits+"&Threshold="+threshold+"&StartIndex="+start+"&EndIndex="+end+(ftitle!=null?"&fromTitle="+ftitle:"");
+   location.href = sURL;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Display previous and next buttons in lower screen.
+function displayDataControl() {
+   var threshold = getSearchKey('Threshold');
+   document.BrowseForm.Threshold.value = (threshold?threshold:othreshold);
+   threshold = parseInt(document.BrowseForm.Threshold.value);
+
+   var content = '<div class="browseControlPanel clearfix"><div class="col-sm-4"><button tabindex="1" type="button" id="btnReturn" class="btn btn-default" onclick="window.history.back();" alt="Back" title="Back"><span class="glyphicon glyphicon-chevron-left"></span> Back</button><button tabindex="1" type="button" id="btnReturn" class="btn btn-default" onclick="newSearch( );" alt="New Search" title="New Search"><span class="glyphicon glyphicon-search"></span> New Search</button></div><div class="col-sm-8 text-right btnList" data-before="My List:">';
+
+   content += '<div class="btn-group"><button tabindex="1" type="button" id="btnViewCart" class="btn btn-default btn-viewcart" style="display:none;" onclick="view_cart();" alt="View Cart" title="View Cart">View Cart</button>';
+   if(reqtype=="ViewCart") content += '<button tabindex="1" type="button" id="btnClearCart" class="btn btn-default" onclick="clear_cart();" alt="Clear Cart" title="Clear Cart">Clear Cart</button>';
+   if(reqtype=="ViewCart") content += '<button tabindex="1" type="button" id="btnCheckout" class="btn btn-default" onclick="checkout_cart();" alt="Check out" title="Check out">Check out</button>';
+   content += '</div>';
+
+   content += '<div class="btn-group"><button tabindex="1" type="button" id="btnViewList" class="btn btn-default btn-viewlist" onclick="view_list();" alt="View List" title="View List">#!View List</button>';
+   content += '<button tabindex="1" type="button" id="btnSaveAll" class="btn btn-default" onclick="save_all();" alt="Save All" title="Save All">Save All</button>';
+   content += '<button tabindex="1" type="button" id="btnClearList" class="btn btn-default" onclick="clear_list();" alt="Clear List" title="Clear List">Clear List</button></div></div></div>';
+   
+   if ( num_totalhits > threshold ) {
+      content += '<div class="row browsePager"><div class="col-sm-12">';
+      content += '<div class="btn-group">';
+      content += '<button tabindex="1" type="button" id="btnPrevious" class="btn btn-default" onclick="getPrevious( );" alt="Previous" title="Previous"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button></span>';
+      content += '';
+
+      var pages = Math.ceil(num_totalhits/threshold);
+      var cpage = (parseInt(document.BrowseForm.StartIndex.value)-1)/threshold;
+      var tpage = cpage+1;
+      content += '<span class="page-selector btn" style="cursor:default;"><label for="selectpages" alt="Pages" title="Pages">Pages</label>&nbsp;<select tabindex="1" id="selectpages" onchange="selectpage(this.value);" style="border:0px;" autocomplete="off" alt="Pages '+tpage+' of '+pages+'" title="Pages '+tpage+' of '+pages+'" aria-label="Pages '+tpage+' of '+pages+'">';
+      for(i=1; i<=pages; i++) {
+         content += '<option value="'+i+'" '+(cpage+1==i?'selected':'')+' alt="Pages'+i+' of '+pages+'" title="Pages'+i+' of '+pages+'" aria-label="Pages'+i+' of '+pages+'">'+i+'</option>';
+      }
+      content += '</select> of '+pages+'</span>';
+      content += '<button tabindex="1" type="button" id="btnNext" class="btn btn-default" onclick="getNext( );" alt="Next" title="Next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>';
+      content += '</div>';
+      content += '&nbsp;<span id="perPage" class="page-selector btn" style="cursor:default;">Show ';
+      content += '<button tabindex="1" class="btn-link perPageLink" onclick="document.BrowseForm.Threshold.value=50; getStart();" alt="Show 50 items per page" title="Show 50 items per page" aria-label="Show 50 items per page">50</button>';
+      content += '<button tabindex="1" class="btn-link perPageLink" onclick="document.BrowseForm.Threshold.value=100; getStart();" alt="Show 100 items per page" title="Show 100 items per page" aria-label="Show 100 items per page">100</button>';
+      content += '<button tabindex="1" class="btn-link perPageLink" onclick="document.BrowseForm.Threshold.value=200; getStart();" alt="Show 200 items per page" title="Show 200 items per page" aria-label="Show 200 items per page">200</button>';
+      content += ' items per page</span>';
+
+      content += '</div></div>';
+   }
+
+   document.writeln( content ) ;
+   count_list();
+   count_cart();
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Display language-independent "hits" message
+function displayHitsMessage() {
+	content = '<DIV CLASS="displayhits-panel"><SPAN CLASS="displayhits">';
+   if (num_startindex == '1' && num_endindex == num_totalhits) {
+      content += '<NOBR>';
+      content += num_totalhits + ' ' + txt_hits_simple.toLowerCase() + '<\/NOBR>';
+   } else {
+      content += '<NOBR>';
+      content += txt_hits_simple + ' ' + num_startindex + ' ' + txt_to + ' ' + num_endindex;
+      content += ' '+txt_of + ' ' + num_totalhits + '<\/NOBR>';
+   }
+   content += '</SPAN><SPAN CLASS="browsefrom">';
+   if(ftitle!=null && ftitle!='' && ftitle!='null') content += ' from <b>'+unescape(ftitle)+'</b>';
+   content += '</SPAN></DIV>';
+   return content;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+var browseData = new Array();
+var iBData = 0;
+var browseHeader = new Array();
+var iBHeader = 0;
+//browseHeader[iBHeader++] = "sLabel|bRight|bDescend|nWidth|cJustLCR|bBreak|bTotal";
+//browseData[iBdata+=] = 'bTake|nExplode|sParentID|KEYVALUE|Column1|Column2|...|ColumnN'; // repeat as needed
+// START of Browse Data
+
+
+
+
+    browseOffset=3;
+    browseHeader[iBHeader++] = 'bTake||';
+    browseHeader[iBHeader++] = 'bExplode||';
+    browseHeader[iBHeader++] = 'sParentID||';
+
+    
+        browseHeader[iBHeader++] = 'Tag|||3|||';
+    
+        browseHeader[iBHeader++] = 'Title|0||50|L|0|0';
+    
+        browseData[iBData++] = '1|||1257'
+        + '|%3Cdiv%3EFish%20and%20Game%20Commission%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1257%22%3ERulemaking%20Files%2C%20California%20Condor%20Recovery%20Program%20Files%2C%20%26nbsp%3B1982%2D2007%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2012%2D098%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1257%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271257%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1265'
+        + '|%3Cdiv%3EDept%2E%20of%20Aging%20%2D%2D%20Long%20Term%20Care%20and%20Aging%20Services%20%2D%2D%20Medi%2DCal%20Services%20%2D%2D%20Adult%20Day%20Health%20Care%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1265%22%3EAdministrative%20Files%2C%20Regulation%2FRulemaking%20Files%2C%20%26nbsp%3B1973%2D2006%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2012%2D117%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1265%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271265%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1288'
+        + '|%3Cdiv%3EBuilding%20Standards%20Commission%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1288%22%3ERulemaking%20Files%2C%20%26nbsp%3B2006%2D2010%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2015%2D126%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1288%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271288%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1295'
+        + '|%3Cdiv%3EBuilding%20Standards%20Commission%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1295%22%3ERulemaking%20Files%2C%20%26nbsp%3B2006%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2012%2D131%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1295%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271295%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1438'
+        + '|%3Cdiv%3EPublic%20Utilities%20Commission%20%2D%2D%20Administrative%20Law%20Judge%20%2D%2D%20Central%20Files%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1438%22%3EFormal%20Case%20and%20Application%20Files%2C%26nbsp%3BCommissioner%20Files%2C%20%26nbsp%3B1982%2D2010%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2013%2D160%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1438%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271438%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1486'
+        + '|%3Cdiv%3EAgricultural%20Labor%20Relations%20Board%20%2D%2D%20Executive%20Secretary%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1486%22%3EAdministrative%20Files%2C%20Rulemaking%20Files%2C%20%26nbsp%3B1978%2D2003%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2013%2D085%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1486%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271486%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1510'
+        + '|%3Cdiv%3EFish%20and%20Game%20Commission%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1510%22%3ERulemaking%20Files%2C%26nbsp%3BOfficial%20Minute%20Books%2C%20%26nbsp%3B2008%2C%202002%2D2005%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2013%2D098%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1510%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271510%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1906'
+        + '|%3Cdiv%3EDept%2E%20of%20Food%20and%20Agriculture%20%2D%2D%20Executive%20%2D%2D%20Legal%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1906%22%3EAttorney%20General%20Legal%20Opinions%2C%20Administrative%20Hearings%2C%20Rulemaking%20Files%2C%20and%20Office%20Files%2C%20%26nbsp%3B1901%2D2003%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2017%2D145%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1906%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271906%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||2005'
+        + '|%3Cdiv%3EDept%2E%20of%20Consumer%20Affairs%20%2D%2D%20Veterinary%20Medical%20Board%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F2005%22%3EAdministrative%20Files%2C%20%26nbsp%3B1980s%2D2013%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2016%2D137%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D2005%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%272005%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||2112'
+        + '|%3Cdiv%3EBuilding%20Standards%20Commission%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F2112%22%3ERulemaking%20Files%2C%20%26nbsp%3B2006%2D2010%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2016%2D129%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D2112%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%272112%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||21838'
+        + '|%3Cdiv%3EDept%2E%20of%20Food%20and%20Agriculture%20%2D%2D%20Administrative%20Services%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F21838%22%3EAdministrative%20Hearing%20Files%2C%201962%2D1971%2C%26nbsp%3BRulemaking%20Files%2C%201964%2D1975%2C%20%26nbsp%3B1962%2D1975%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2001%2D03%2D41%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D21838%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2721838%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||3007'
+        + '|%3Cdiv%3EBuilding%20Standards%20Commission%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F3007%22%3ERulemaking%20Files%20%282011%2D2013%29%2C%26nbsp%3BLocal%20Ordinances%20%281999%2D2010%29%2C%20%26nbsp%3B1999%2D2013%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2019%2D107%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D3007%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%273007%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||3141'
+        + '|%3Cdiv%3ECommission%20on%20Peace%20Officer%20Standards%20and%20Training%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F3141%22%3EMeeting%20files%20%281959%2D2015%29%2C%20Advisory%20commission%20meetings%2C%20POST%20Administrative%20Manual%20and%20updates%2C%20%26nbsp%3B1959%2D2016%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2020%2D084%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D3141%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%273141%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||3184'
+        + '|%3Cdiv%3EDept%2E%20of%20Aging%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F3184%22%3EIssue%20Memoranda%2C%20Informational%20Memoranda%2C%20Policy%20Memoranda%2C%20and%20Similar%20Records%2C%20%26nbsp%3B1974%2D1989%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2020%2D057%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D3184%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%273184%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||3408'
+        + '|%3Cdiv%3ECommission%20on%20Peace%20Officer%20Standards%20and%20Training%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F3408%22%3EPOST%20Background%20Administrative%20Files%2C%20%26nbsp%3B1960%2D2013%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2020%2D094%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D3408%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%273408%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||4577'
+        + '|%3Cdiv%3EPublic%20Utilities%20Commission%20%2D%2D%20Administrative%20Law%20Judge%20%2D%2D%20Central%20Files%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F4577%22%3ECase%20Files%20and%20Applications%2C%20%26nbsp%3B1983%2D1994%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2021%2D042%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D4577%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%274577%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||4578'
+        + '|%3Cdiv%3EDept%2E%20of%20Water%20Resources%20%2D%2D%20Executive%20%2D%2D%20California%20Water%20Commission%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F4578%22%3ERulemaking%20Files%3A%20California%20Water%20Storage%20Investment%20Program%2C%20%26nbsp%3B2016%2D2017%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2021%2D033%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D4578%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%274578%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||5549'
+        + '|%3Cdiv%3EDept%2E%20of%20General%20Services%20%2D%2D%20Building%20Standards%20Commission%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F5549%22%3ERulemaking%20Files%2C%20%26nbsp%3B2015%2D2016%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2022%2D032%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D5549%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%275549%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||5793'
+        + '|%3Cdiv%3EDept%2E%20of%20Consumer%20Affairs%20%2D%2D%20Dental%20Board%20of%20California%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F5793%22%3ERulemaking%20Files%2C%20%26nbsp%3B2011%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2024%2D016%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D5793%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%275793%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||5816'
+        + '|%3Cdiv%3EPublic%20Utilities%20Commission%20%2D%2D%20Administrative%20Law%20Judge%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F5816%22%3EFormal%20Application%20Files%20and%20Formal%20Case%20Files%2C%20%26nbsp%3B1992%2D1995%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2024%2D079%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D5816%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%275816%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||5977'
+        + '|%3Cdiv%3ESan%20Francisco%20Bay%20Conservation%20and%20Development%20Commission%20%2D%2D%20Planning%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F5977%22%3EBay%20Plan%20Amendment%20Files%20and%20Prior%20Use%20Access%20Files%2C%20%26nbsp%3B1970%2D2011%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2025%2D050%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D5977%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%275977%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||919'
+        + '|%3Cdiv%3EBusiness%2C%20Transportation%20and%20Housing%20Agency%3Cbr%2F%3ETechnology%2C%20Trade%20and%20Commerce%20Agency%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F919%22%3ERulemaking%20Files%2C%20%26nbsp%3B1989%20%2D%202003%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2011%2D009%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D919%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%27919%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||964'
+        + '|%3Cdiv%3EAir%20Resources%20Board%20%2D%2D%20Executive%20%2D%2D%20Legal%20Affairs%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F964%22%3EStaff%20Files%2C%20%26nbsp%3B1986%2D2000%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2011%2D159%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D964%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%27964%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|0|5941|5950'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F5950%22%3ELand%20Use%20Files%2C%201970%2D1976%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EAir%20Resources%20Board%20%2D%2D%20Evaluation%20and%20Planning%3Cbr%2F%3EAir%20Resources%20Board%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3EThe%20files%20have%20to%20do%20with%20the%20land%20use%20planning%20issues%20of%20the%20Evaluation%20and%20Planning%20Division%2E%20Types%20of%20materials%20include%20city%20land%20use%20and%20transportation%20plans%2C%20reports%2C%20correspondence%2C%20and%20administ%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D5950%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%275950%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat5950%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20F3935%5D%20Air%20Resources%20Board%20Records%20%28Key%3A%205941%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl5950%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20F3935%3A385%2D445%5D%20Land%20Use%20Files%20%28Key%3A%205950%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct5950%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl5950%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|1||12696'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F12696%22%3EWilliam%20%28Bill%29%20Bradley%20Papers%2C%201983%2D1989%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Collection%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EBradley%2C%20Bill%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3E%3Cp%3EThe%20Bill%20Bradley%20Papers%20consist%20of%209%2E25%20cubic%20feet%20of%20textual%20records%20and%201%20audiocassette%2E%20%20These%20materials%20document%20Bradley%27s%20activities%20in%20the%20California%20State%20Assembly%20from%201983%2D1989%2E%20%20The%20colle%2E%2E%2E%3C%2Fp%3E%3Ctable%3E%3Ctr%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3ECollection%20consists%20of%3A%20%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E1%20record%28s%29%20%5B%3Ca%20href%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa%26TemplateProcessID%3D6000%5F3355%26CMD%5F%28SearchRequest%29%5B12%5D%3D%26PromptID%3D%26ParamID%3D%26RequesterType%3DSearchTemplate%26browseData%3D1%26bCachable%3D1%26Keyword%3D0%26POI31%5F1878%3D%2DKEY%5F12696%26fromTitle%3DArchival%20Record%20%2D%20William%20%28Bill%29%20Bradley%20Papers%22%3Ebrowse%3C%2Fa%3E%5D%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D12696%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2712696%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat12696%22%20type%3D%22hidden%22%20value%3D%22%5B%5BCollection%5D%20LP418%5D%20William%20%28Bill%29%20Bradley%20Papers%20%28Key%3A%2012696%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl12696%22%20type%3D%22hidden%22%20value%3D%22%5B%5BCollection%5D%20LP418%5D%20William%20%28Bill%29%20Bradley%20Papers%20%28Key%3A%2012696%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct12696%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl12696%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|12||1444'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F1444%22%3EBuilding%20Standards%20Commission%20Records%2C%201955%2D1995%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Record%20group%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EBuilding%20Standards%20Commission%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3E%3Cp%3EThe%20records%20of%20the%20Building%20Standards%20Commission%20%28BSC%29%20consist%20of%2014%2E5%20cubic%20feet%20of%20textual%20records%20that%20were%20processed%20at%20two%20separate%20times%2E%20%20The%20first%20group%20was%20processed%20in%20the%20early%201990s%20and%2E%2E%2E%3C%2Fp%3E%3Ctable%3E%3Ctr%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3ERecord%20group%20consists%20of%3A%20%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E12%20record%28s%29%20%5B%3Ca%20href%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa%26TemplateProcessID%3D6000%5F3355%26CMD%5F%28SearchRequest%29%5B12%5D%3D%26PromptID%3D%26ParamID%3D%26RequesterType%3DSearchTemplate%26browseData%3D1%26bCachable%3D1%26Keyword%3D0%26POI31%5F1878%3D%2DKEY%5F1444%26fromTitle%3DArchival%20Record%20%2D%20Building%20Standards%20Commission%20Records%22%3Ebrowse%3C%2Fa%3E%5D%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1444%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271444%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat1444%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R109%2C%20F3874%5D%20Building%20Standards%20Commission%20Records%20%28Key%3A%201444%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl1444%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R109%2C%20F3874%5D%20Building%20Standards%20Commission%20Records%20%28Key%3A%201444%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct1444%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl1444%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|62646|62647'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F62647%22%3EGeneral%20Correspondence%2C%201967%2D1969%2C%201972%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Sub%2Dseries%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EBusiness%20and%20Transportation%20Agency%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3ECorrespondence%20concerning%20DMV%20duties%20and%20activities%2E%20Subjects%20include%3A%20citizen%20complaints%2C%20inquiries%20about%20accident%20reports%2C%20suspension%20of%20licenses%2C%20cancellation%20of%20auto%20insurance%2C%20DMV%20public%20relation%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D62647%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2762647%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat62647%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R248%5D%20Business%20and%20Transportation%20Agency%20Records%20%28Key%3A%201114%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl62647%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSub%2Dseries%5D%20F3842%3A173%2D176%5D%20General%20Correspondence%20%28Key%3A%2062647%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct62647%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl62647%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|62741|62742'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F62742%22%3EGeneral%20Correspondence%2C%201967%2D1969%2C%201972%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Sub%2Dseries%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EBusiness%20and%20Transportation%20Agency%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3EConcerning%20Department%27s%20regulatory%20duties%20as%20overseer%20of%20real%20estate%20brokers%20and%20salesmen%2C%20including%20investigation%20of%20complaints%2C%20licensing%20actions%2C%20issuance%20of%20regulations%2C%20department%20administrative%20%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D62742%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2762742%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat62742%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R248%5D%20Business%20and%20Transportation%20Agency%20Records%20%28Key%3A%201114%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl62742%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSub%2Dseries%5D%20F3842%3A237%2D240%5D%20General%20Correspondence%20%28Key%3A%2062742%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct62742%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl62742%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|3836|3838'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F3838%22%3EAdministrative%20Files%2C%201980%2D1991%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Aging%20%2D%2D%20Program%20Development%20and%20Administration%20%2D%2D%20Planning%20and%20Program%20Development%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3EAdministrative%20files%20contain%20reports%2C%20program%20memoranda%2C%20news%20clippings%2C%20summaries%2C%20background%20information%2C%20public%20hearing%20announcements%2C%20meeting%20agendas%2C%20and%20correspondence%20regarding%20the%20establishmen%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D3838%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%273838%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat3838%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R101%5D%20Dept%2E%20of%20Aging%20Records%20%28Key%3A%2079359%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl3838%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20R101%2E018%5D%20Administrative%20Files%20%28Key%3A%203838%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct3838%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl3838%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|62645|1104'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F1104%22%3EGeneral%20Correspondence%20of%20Directors%20Richard%20Lyng%20%281968%2D1969%29%2C%20Jerry%20Fielder%20%281969%2D1972%29%2C%20and%20C%2EB%2E%20Christensen%20%281972%2D75%29%2C%201969%2D1973%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Agriculture%20%2D%2D%20Administration%20%2D%2D%20Director%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3EThe%20following%20code%20numbers%20are%20included%3A%20%281%29%20Division%20of%20Administrative%20Services%20%28%201969%20%2D%20F3741%3A1002%2D1035%2C%201970%20%2D%20F3741%3A1186%2D1211%2C%201972%20%2D%20F3741%3A1556%2D1587%2C%201973%20%2D%20F3741%3A1735%2D1773%29%3A%20Memoranda%2C%20correspon%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1104%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271104%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat1104%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R236%2C%20F3741%2C%20F3742%2C%20F3744%5D%20Dept%2E%20of%20Agriculture%20Records%20%28Key%3A%201001%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl1104%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20F3741%3A1001%2D1908%5D%20General%20Correspondence%20of%20Directors%20Richard%20Lyng%20%281968%2D1969%29%2C%20Jerry%20Fielder%20%281969%2D1972%29%2C%20and%20C%2EB%2E%20Christensen%20%281972%2D75%29%20%28Key%3A%201104%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct1104%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl1104%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|62665|1370'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F1370%22%3EGeneral%20Correspondence%20of%20Administrative%20Assistant%20Charles%20V%2E%20Dick%2C%201947%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Agriculture%20%2D%2D%20Administration%20%2D%2D%20General%20Office%20and%20Administrative%20Services%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3EIncoming%20and%20outgoing%20correspondence%20with%20agricultural%20commissioners%20dealing%20with%20local%20problems%20facing%20the%20commissioners%3B%20memoranda%20with%20Department%20staff%20members%20relating%20to%20Civil%20Service%20testing%20for%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1370%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271370%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat1370%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R236%2C%20F3741%2C%20F3742%2C%20F3744%5D%20Dept%2E%20of%20Agriculture%20Records%20%28Key%3A%201001%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl1370%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20F3741%3A2244%2D2245%5D%20General%20Correspondence%20of%20Administrative%20Assistant%20Charles%20V%2E%20Dick%20%28Key%3A%201370%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct1370%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl1370%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|63192|1530'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F1530%22%3ERecords%20of%20the%20Commodity%20Advisory%20Boards%2C%201939%2D1969%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Agriculture%20%2D%2D%20Marketing%20%2D%2D%20Bureau%20of%20Markets%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3EThe%20Marketing%20Act%20of%201937%20%28Stats%2E%201937%2C%20ch%2E%20404%29%2C%20established%20grower%20and%20handler%20advisory%20boards%20to%20formulate%20marketing%20orders%20and%20programs%20designed%20to%20control%20surpluses%2C%20establish%20acceptable%20standard%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1530%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271530%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat1530%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R236%2C%20F3741%2C%20F3742%2C%20F3744%5D%20Dept%2E%20of%20Agriculture%20Records%20%28Key%3A%201001%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl1530%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20F3742%3A911%2D1593%5D%20Records%20of%20the%20Commodity%20Advisory%20Boards%20%28Key%3A%201530%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct1530%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl1530%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|63190|1349'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F1349%22%3ERecords%20of%20the%20Bureau%20of%20Shipping%20Point%20Inspection%2C%201960%2D1966%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Agriculture%20%2D%2D%20Marketing%20%2D%2D%20Bureau%20of%20Shipping%20Point%20Inspection%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3EReports%2C%20Minutes%2C%20Memoranda%3A%20Annual%20and%20weekly%20activity%20reports%20by%20Bureau%20to%20Division%3B%20district%20activity%20reports%20providing%20statistical%20data%20on%20the%20amounts%20of%20various%20commodities%20inspected%3B%20minutes%20of%20%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1349%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271349%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat1349%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R236%2C%20F3741%2C%20F3742%2C%20F3744%5D%20Dept%2E%20of%20Agriculture%20Records%20%28Key%3A%201001%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl1349%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20F3742%3A647%2D672%5D%20Records%20of%20the%20Bureau%20of%20Shipping%20Point%20Inspection%20%28Key%3A%201349%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct1349%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl1349%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|24602|24649'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F24649%22%3EAdministrative%20Files%2C%201975%2D1984%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Conservation%20%2D%2D%20Executive%20%2D%2D%20Director%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3ECorrespondence%2C%20memoranda%2C%20regulations%2C%20Governor%27s%20press%20releases%2C%20policy%20letters%2C%20budget%20position%20papers%2C%20reports%2C%20budget%20change%20proposals%2C%20management%20memoranda%2C%20lists%20of%20environmental%20accomplishment%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D24649%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2724649%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat24649%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R118%5D%20Dept%2E%20of%20Conservation%20Records%20%28Key%3A%205928%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl24649%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20R118%2E052%5D%20Administrative%20Files%20%28Key%3A%2024649%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct24649%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl24649%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|24602|24650'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F24650%22%3EAdministrative%20Files%20%2D%2D%20Resources%20Agency%2C%201976%2D1983%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Conservation%20%2D%2D%20Executive%20%2D%2D%20Director%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3EReports%2C%20memoranda%2C%20agendas%2C%20meeting%20minutes%20and%20notes%2C%20regulations%2C%20letters%20and%20correspondence%2C%20Attorney%20General%20Opinions%2C%20statements%20and%20testimony%2C%20newspaper%20articles%20and%20clippings%2C%20maps%2C%20legislativ%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D24650%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2724650%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat24650%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R118%5D%20Dept%2E%20of%20Conservation%20Records%20%28Key%3A%205928%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl24650%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20R118%2E053%5D%20Administrative%20Files%20%2D%2D%20Resources%20Agency%20%28Key%3A%2024650%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct24650%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl24650%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|24602|24654'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F24654%22%3EDivision%20of%20Oil%20and%20Gas%20Files%20%2D%20Geothermal%20Resources%2C%201977%2D1981%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Conservation%20%2D%2D%20Executive%20%2D%2D%20Director%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3EMemoranda%2C%20correspondence%2C%20Attorney%20General%20Opinions%2C%20administrative%20regulations%2C%20hearing%20information%2C%20reports%2C%20applications%2C%20and%20notes%20concerning%20geothermal%20resources%20which%20included%20development%2C%20stat%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D24654%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2724654%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat24654%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R118%5D%20Dept%2E%20of%20Conservation%20Records%20%28Key%3A%205928%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl24654%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20R118%2E055%5D%20Division%20of%20Oil%20and%20Gas%20Files%20%2D%20Geothermal%20Resources%20%28Key%3A%2024654%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct24654%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl24654%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|24602|24656'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F24656%22%3EState%20Mining%20and%20Geology%20Board%20Files%2C%201977%2D1983%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Conservation%20%2D%2D%20Executive%20%2D%2D%20Director%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3EMemoranda%2C%20correspondence%2C%20publications%2C%20administrative%20laws%20and%20regulations%2C%20pre%2Dpublication%20copies%20of%20the%20annual%20reports%20for%201977%20%2D%201982%2C%20reports%2C%20agendas%20and%20minutes%2C%20Mining%20and%20Geology%20Board%20prese%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D24656%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2724656%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat24656%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R118%5D%20Dept%2E%20of%20Conservation%20Records%20%28Key%3A%205928%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl24656%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20R118%2E058%5D%20State%20Mining%20and%20Geology%20Board%20Files%20%28Key%3A%2024656%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct24656%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl24656%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|24602|24673'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F24673%22%3ELand%20Resource%20Protection%20Unit%20Files%2C%201976%2D1983%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Conservation%20%2D%2D%20Executive%20%2D%2D%20Director%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3EMemoranda%2C%20correspondence%2C%20reports%2C%20statements%20and%20presentations%2C%20Attorney%20General%20Opinions%2C%20charts%2C%20bill%20analyses%2C%20administrative%20regulations%2C%20newspaper%20articles%2C%20press%20releases%2C%20Environmental%20Impact%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D24673%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2724673%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat24673%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R118%5D%20Dept%2E%20of%20Conservation%20Records%20%28Key%3A%205928%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl24673%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20R118%2E071%5D%20Land%20Resource%20Protection%20Unit%20Files%20%28Key%3A%2024673%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct24673%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl24673%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|1780|12155'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F12155%22%3EBill%20Files%2C%201975%2D1976%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Consumer%20Affairs%20%2D%2D%20Pharmacy%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3E%3Cp%3EBill%20files%20contain%20analyses%2C%20correspondence%2C%20notes%2C%20reports%20and%20background%20material%20regarding%20state%20legislation%20that%20would%20affect%20issues%20under%20the%20jurisdiction%20of%20the%20Board%20of%20Pharmacy%20as%20well%20as%20t%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D12155%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2712155%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat12155%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R126%5D%20Board%20of%20Pharmacy%20Records%20%28Key%3A%201780%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl12155%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20R126%2E05%5D%20Bill%20Files%20%28Key%3A%2012155%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct12155%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl12155%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|1780|12157'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F12157%22%3ESubject%20Files%2C%201962%2D2000%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Consumer%20Affairs%20%2D%2D%20Pharmacy%3Cbr%2F%3EDept%2E%20of%20Professional%20and%20Vocational%20Standards%20%2D%2D%20Board%20of%20Pharmacy%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3E%3Cp%3ESubject%20files%20may%20include%20administrative%20papers%2C%20correspondence%2C%20background%20material%2C%20notes%2C%20reports%2C%20and%20newspaper%20clippings%2E%20The%20subject%20files%20include%20files%20related%20to%20the%20administration%20of%20the%20B%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D12157%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2712157%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat12157%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R126%5D%20Board%20of%20Pharmacy%20Records%20%28Key%3A%201780%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl12157%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20R126%2E07%5D%20Subject%20Files%20%28Key%3A%2012157%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct12157%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl12157%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|70516|70531'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F70531%22%3ETeacher%20Education%20and%20Credentials%2C%201950%2D1960%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Education%20%2D%2D%20State%20Colleges%20and%20Teacher%20Education%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3ECorrespondence%2C%20memoranda%2C%20minutes%2C%20and%20reports%20include%20information%20on%20the%20regulations%20for%20various%20types%20of%20credentials%20%28Administrative%2C%20Physical%20Education%2C%20Provisional%2C%20Supervision%20and%20Vocational%29%3B%20r%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D70531%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2770531%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat70531%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R146%2C%20F3752%5D%20Dept%2E%20of%20Education%20Records%20%28Key%3A%201351%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl70531%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20F3752%3A2800%2D2813%5D%20Teacher%20Education%20and%20Credentials%20%28Key%3A%2070531%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct70531%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl70531%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|81527|81540'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F81540%22%3EOpinions%2C%20Codified%20Interpretive%2C%201937%2D1941%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Employment%20%2D%2D%20Administrative%20Services%20%2D%2D%20Central%20Files%20Section%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3EOpinions%20issued%20by%20the%20Department%27s%20Rules%20and%20Regulations%20Office%20to%20codify%20interpretation%20for%20determining%20benefit%20distribution%2E%20Opinions%20are%20on%20subjects%20such%20as%20availability%20of%20applicant%20for%20work%2C%20bas%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D81540%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2781540%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat81540%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R263%2C%20F3606%2C%20F3806%5D%20Employment%20Dept%2E%20and%20Human%20Resources%20Development%20Dept%2E%20Records%20%28Key%3A%2078308%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl81540%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20R263%2E053%5D%20Opinions%2C%20Codified%20Interpretive%20%28Key%3A%2081540%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct81540%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl81540%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|24980|1387'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F1387%22%3EAdministrative%20Files%2C%20Part%20I%2C%201956%2D1959%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Fish%20and%20Game%20%2D%2D%20Executive%20%2D%2D%20Director%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3EDirector%27s%20correspondence%2C%20memoranda%2C%20and%20related%20records%20concerning%20departmental%20policies%2C%20procedures%2C%20operations%20and%20management%2E%20%20Includes%20the%20following%3A%3Cbr%3E%3CBr%3E%20%28a%29%20Inter%2Dagency%20%2D%2D%20California%20Depar%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1387%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271387%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat1387%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R159%5D%20Dept%2E%20of%20Fish%20and%20Game%20Records%20%28Key%3A%201364%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl1387%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20F3498%3A24%2D83%5D%20Administrative%20Files%2C%20Part%20I%20%28Key%3A%201387%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct1387%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl1387%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|24990|1389'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F1389%22%3EInter%2DAgency%20Files%2C%201960%2D1972%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Fish%20and%20Game%20%2D%2D%20Executive%20%2D%2D%20Director%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3EDirector%27s%20administrative%20correspondence%2C%20memoranda%2C%20reports%20and%20related%20records%20in%20exchange%20with%20other%20California%20agencies%20and%20departments%20concerning%20joint%20operations%20and%2For%20programs%2C%20overlapping%20pro%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1389%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271389%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat1389%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R159%5D%20Dept%2E%20of%20Fish%20and%20Game%20Records%20%28Key%3A%201364%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl1389%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20F3498%3A90%2D201%5D%20Inter%2DAgency%20Files%20%28Key%3A%201389%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct1389%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl1389%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|2211|12355'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F12355%22%3ECommittees%20%2D%20Coast%20Forest%20District%20%2D%20Administrative%20Files%2C%201974%2D1975%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Forestry%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3E%3Cp%3EData%20on%20the%20organization%20and%20administration%20of%20the%20Coast%20Forest%20District%20including%20suggested%20Forest%20Practice%20Rules%20for%20the%20district%20from%20public%20and%20private%20organizations%2C%20controversy%20of%20proposal%20to%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D12355%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2712355%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat12355%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R288%2C%20F3849%5D%20Dept%2E%20of%20Forestry%20Records%20%28Key%3A%202211%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl12355%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20F3849%3A3149%2D3155%5D%20Committees%20%2D%20Coast%20Forest%20District%20%2D%20Administrative%20Files%20%28Key%3A%2012355%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct12355%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl12355%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|2211|12361'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F12361%22%3ECommittees%20%2D%20Southern%20Forest%20District%20%2D%20Administrative%20Files%2C%201974%2D1977%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Forestry%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3EThe%20Southern%20Forest%20District%20is%20comprised%20of%20the%20south%20Sierra%20and%20Southern%20California%2E%20%20Information%20in%20these%20files%20is%20similar%20to%20that%20for%20the%20Northern%20Forest%20District%20and%20includes%20administration%20under%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D12361%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2712361%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat12361%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R288%2C%20F3849%5D%20Dept%2E%20of%20Forestry%20Records%20%28Key%3A%202211%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl12361%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20F3849%3A3164%2D3165%5D%20Committees%20%2D%20Southern%20Forest%20District%20%2D%20Administrative%20Files%20%28Key%3A%2012361%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct12361%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl12361%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|2||13360'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F13360%22%3EDept%2E%20of%20Health%20Care%20Services%20Records%2C%201960%2D1974%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Record%20group%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Health%20Care%20Services%3Cbr%2F%3EOffice%20of%20Health%20Care%20Services%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3E%3Cp%3EThe%20records%20of%20the%20Department%20of%20Health%20Care%20Services%20%28DHCS%29%20document%20the%20earliest%20years%20of%20the%20California%20Medical%20Assistance%20Program%20%28Medi%2DCal%29%2E%20%20This%20record%20group%20contains%2020%2E5%20cubic%20feet%20of%20text%2E%2E%2E%3C%2Fp%3E%3Ctable%3E%3Ctr%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3ERecord%20group%20consists%20of%3A%20%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2%20record%28s%29%20%5B%3Ca%20href%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa%26TemplateProcessID%3D6000%5F3355%26CMD%5F%28SearchRequest%29%5B12%5D%3D%26PromptID%3D%26ParamID%3D%26RequesterType%3DSearchTemplate%26browseData%3D1%26bCachable%3D1%26Keyword%3D0%26POI31%5F1878%3D%2DKEY%5F13360%26fromTitle%3DArchival%20Record%20%2D%20Dept%2E%20of%20Health%20Care%20Services%20Records%22%3Ebrowse%3C%2Fa%3E%5D%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D13360%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2713360%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat13360%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R395%2C%20F3577%2C%20F3877%2C%20F3894%5D%20Dept%2E%20of%20Health%20Care%20Services%20Records%20%28Key%3A%2013360%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl13360%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R395%2C%20F3577%2C%20F3877%2C%20F3894%5D%20Dept%2E%20of%20Health%20Care%20Services%20Records%20%28Key%3A%2013360%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct13360%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl13360%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|38075|1555'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F1555%22%3ECorrespondence%2C%201958%2D1964%2E%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Industrial%20Relations%20%2D%2D%20Housing%20Division%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3ELetters%20received%2C%20copies%20of%20letters%20sent%2C%20intradepartmental%20communications%2C%20divisional%20summaries%20of%20operations%2C%20proposals%2C%20meeting%20agendas%2C%20bulletins%2C%20ordinances%2C%20blueprints%20and%20promotional%20literature%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1555%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271555%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat1555%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R174%5D%20Dept%2E%20of%20Industrial%20Relations%20Records%20%28Key%3A%201531%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl1555%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20F3743%3A36%2D42%5D%20Correspondence%20%28Key%3A%201555%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct1555%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl1555%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|5||1789'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F1789%22%3EDept%2E%20of%20Investment%20Records%2C%201907%2D1971%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Record%20group%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Investment%3Cbr%2F%3E%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3EThe%20records%20of%20the%20Department%20of%20Investment%2C%20and%20its%20divisions%2C%20document%20many%20different%20facets%20of%20California%27s%20financial%20past%2E%20The%20records%20described%20in%20this%20inventory%20concern%20only%20the%20Division%20of%20Bank%2E%2E%2E%3C%2Fp%3E%3Ctable%3E%3Ctr%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3ERecord%20group%20consists%20of%3A%20%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E5%20record%28s%29%20%5B%3Ca%20href%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa%26TemplateProcessID%3D6000%5F3355%26CMD%5F%28SearchRequest%29%5B12%5D%3D%26PromptID%3D%26ParamID%3D%26RequesterType%3DSearchTemplate%26browseData%3D1%26bCachable%3D1%26Keyword%3D0%26POI31%5F1878%3D%2DKEY%5F1789%26fromTitle%3DArchival%20Record%20%2D%20Dept%2E%20of%20Investment%20Records%22%3Ebrowse%3C%2Fa%3E%5D%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1789%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271789%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat1789%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R305%2C%20F3736%5D%20Dept%2E%20of%20Investment%20Records%20%28Key%3A%201789%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl1789%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R305%2C%20F3736%5D%20Dept%2E%20of%20Investment%20Records%20%28Key%3A%201789%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct1789%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl1789%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|0|2211|11857'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F11857%22%3ELegislative%20Interim%20Committees%2C%20General%2C%201944%2D1948%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EDept%2E%20of%20Natural%20Resources%20%2D%2D%20Division%20of%20Forestry%3Cbr%2F%3EDept%2E%20of%20Conservation%20%2D%2D%20Division%20of%20Forestry%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3E%3Cp%3EMiscellaneous%20correspondence%20and%20memoranda%20with%20various%20committees%20concerning%20meetings%20and%20hearing%20schedules%20and%20reports%2C%20statements%20and%20testimony%20and%20other%20information%20submitted%20to%20committees%20upon%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D11857%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2711857%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat11857%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R288%2C%20F3849%5D%20Dept%2E%20of%20Forestry%20Records%20%28Key%3A%202211%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl11857%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20F3849%3A456%2D465%5D%20Legislative%20Interim%20Committees%2C%20General%20%28Key%3A%2011857%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct11857%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl11857%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+
+
+
+// #!BROWSEINFO!#
+// END of Browse Data
+
+function showpage(url,id){
+   var xmlhttp;
+   if (window.XMLHttpRequest) {
+     xmlhttp=new XMLHttpRequest();
+   }
+   else {
+     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+   }
+   xmlhttp.onreadystatechange=function() {
+      if(xmlhttp.readyState==4 && xmlhttp.status == 200) {
+         document.getElementById(id).innerHTML = xmlhttp.responseText;
+         var res = document.getElementById(id);
+         var arr = res.getElementsByTagName("script");
+         for (var n=0; n<arr.length; n++) {
+            eval(arr[n].innerHTML);
+         }
+      }
+   }
+   xmlhttp.open("GET",url,true);
+   xmlhttp.send(null);
+}
+
+function getSearchKey(key) {
+  var re = new RegExp( "[?&]" + key + "=([^&$]*)", "i" );
+  var offset = location.search.search( re );
+  if ( offset == -1 ) return null;
+  return decodeURIComponent(RegExp.$1);
+}
+
+function getBrowseTableId(sData) {
+   sData = unescape(sData);
+   var arr_cmd_action = sData.split("&");
+   for(i=0;i<arr_cmd_action.length;i++) {
+      if(arr_cmd_action[i].substring(0,9) == "ProcessID") {
+         retval = arr_cmd_action[i].substring(10,20).split("_");
+         return (retval[0] == getTableId()) ? "" : retval[0]+"_";
+      }
+   }
+   return "";
+}
+
+function goProcess(button) {
+   var keys = "";
+   var rc = document.getElementsByClassName("browserecord");
+   for(i=0; i<rc.length;i++) {
+      keys += rc[i].id+" ";
+   }
+   if(document.getElementById("GoProcessSelect").value.indexOf("Member_Go_Process")!=-1) keys = getCookie(sysFolder+tableID+"ESIMemberServicesKey");
+
+   var sURL = cmd_action;
+   sURL += "&CMD_(DetailRequest)[0]=&PromptID=&ParamID=&ProcessID="+document.getElementById("GoProcessSelect").value.split("|")[0]+"&Keyword=0&KeyValues=KEY_" + keys; 
+   popupWindow(sURL,"2");
+}
+
+function showMember_Process() {
+   var sCmdAction = cmd_action.replace('TemplateProcessID','TP');
+   sCmdAction += "&TemplateProcessID="+getCookie(sysFolder+tableID+"ESIMemberTableId")+"_"+getCookie(sysFolder+tableID+"ESIMemberKeyEntryPromptId")+"&CMD_(ViewMemberProcess)=&KeyValues=KEY_";
+
+   xmlhttp=null;
+   if (window.XMLHttpRequest){
+     xmlhttp=new XMLHttpRequest();
+   }
+   else if (window.ActiveXObject){
+     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+   }
+   if (xmlhttp!=null) {
+	   sCmdAction +=  sCmdAction + "&" + new Date().getTime();
+      xmlhttp.onreadystatechange = function () {
+	      if (xmlhttp.readyState==4) if (xmlhttp.status==200){ 
+            document.getElementById('memberGoProcess').innerHTML=xmlhttp.responseText;
+            setTimeout(function(){ postMember_Process(window.frames[0].document.body.innerHTML); }, 1000);
+         }
+	   }
+      xmlhttp.open("GET",sCmdAction,true);
+      xmlhttp.send(null);
+   }
+}
+
+function postMember_Process(doc){
+   var el = document.createElement('html');
+   el.innerHTML = doc;
+   var op = el.getElementsByTagName("option");
+   for (i = 0; i < op.length; i++) {
+      var sel = document.getElementById("GoProcessSelect");
+      var opt = document.createElement("option");
+      opt.text = op[i].innerHTML;
+      opt.value = op[i].value+"Member_Go_Process";
+      sel.add(opt,i); 
+   }
+   if(op.length>0){
+      document.getElementById('GoProcessSelect').getElementsByTagName('option')[0].selected = 'selected';
+      document.getElementById("GoProcess").style.display = "inline";
+   }
+}
+
+function checkStatus(){
+   if(location.href.indexOf('nd=1')!=-1){
+      alert("No record available for public.");
+   }
+}
+
+//--></script>
+<title>Public - Archival descriptions browse</title>
+</head>
+<body ONFOCUS="document.getElementById('loading').style.display='none';" class="body-browse" id="body-browse">
+<div style="background-color:rgba(0, 0, 0, 0.0); left: 0; top: 0; width:100%; height:100%; position: fixed; z-index:9999; display:none;" id="loading">
+<div style="display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;">
+<div style="  display: table-cell; vertical-align: middle;">
+<div style="  margin-left: auto; margin-right: auto; width: 200px; text-align: center; padding:20px; background:#F7F7F7; border:1px solid #E8E8E8;">
+<img border="0" alt="Please wait" title="Please wait" src="/webcat/systems/cal/buttons/public_loading.gif"><br>Please wait</div>
+</div>
+</div>
+</div>
+<header ID="page_header"></header>
+<script>
+	   browse_by_list = getCookie(sysFolder+sTemplateProcessID+"ESIbDispBrowseNav")=="true";
+      var sWebPagePrefix = '../html/';
+      showpage("/webcat/systems/cal/css/"+sWebPagePrefix+"public_search_header.html","page_header");    
+   </script>
+<div class="main main-browse">
+<script>
+      var bPromptUser = new Array( ) ;
+      var sPromptUserText = new Array( ) ;
+      var bPublicOnly = new Array( ) ;
+      var aCtr = 0 ;
+   </script>
+<div class="container container-browse">
+<form style="margin:0px; padding:0px;" method="GET" action="/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_1&TemplateProcessID=6000_3355&PromptID=&ParamID=" name="BrowseForm">
+<input value="" namE="CMD_(BrowseRequest)" type="hidden"><Input value="" Name="PromptID" type="hidden"><Input value="104" Name="NoOfHits" type="hidden"><Input value="50" Name="Threshold" type="hidden"><Input value="1" Name="StartIndex" type="hidden"><Input value="50" Name="EndIndex" type="hidden">
+</form>
+<div class="listControlPanel">
+<SPAN STYLE="display:none;" id="memberGoProcess">Member Go Process</SPAN><SPAN STYLE="display:none;" ID="GoProcess">
+<div class="list-inline saved-list-options">
+<label style="margin-right:5px;" for="GoProcessSelect">Options: </label><SELECT style="width:auto; display:inline;" class="form-control" title="Saved list options" onchange1="setHelpAnchorSelect(this);" NAME="ProcessID" ID="GoProcessSelect"><span id="GoProcessChoose"></span><SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+         bPromptUser[aCtr] = "0" ;
+         sPromptUserText[aCtr] = "" ;
+         bPublicOnly[aCtr] = "0";
+         aCtr++ ;
+         </SCRIPT><OPTION VALUE="6000_3363(0)|                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 ">View detail</OPTION><SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+         bPromptUser[aCtr] = "" ;
+         sPromptUserText[aCtr] = "" ;
+         bPublicOnly[aCtr] = "";
+         aCtr++ ;
+         </SCRIPT><OPTION VALUE="6000_3479(0)|                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 ">Request materials using default email client</OPTION></SELECT><button style="margin-top:-4px; margin-left:4px;" ONCLICK="goProcess(this);" class="btn btn-default btnGo" aria-label="Execute selected saved list option" type="button"><span aria-hidden="true" class="glyphicon glyphicon-play"></span></button>&nbsp;
+	 </div>
+</SPAN><script>
+            if(reqtype!="ViewList") document.getElementById('GoProcessSelect').innerHTML = "";
+         </script>
+</div>
+<script language="JavaScript" type="text/javascript">
+         displayDataControl() ;
+         document.writeln(displayHitsMessage());
+      </script>
+<HR>
+<DIV ID="browse_header"></DIV>
+<script>
+         showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_browse_header.html","browse_header");
+      </script>
+<div id="divBrowse">
+<script language="JavaScript" type="text/javascript">
+         
+			   if(browse_by_list) document.write('<div class="myList-nav" id="{myList}-nav"></div><div id="myList">');
+            for(dc=0; dc<browseData.length; dc++) { 
+               var tmp = browseData[dc].split("|");
+               var tid = getBrowseTableId(tmp[4]);
+               var tmp4 = tmp[4].replace("onclick%3D%22save%5Flist%28%27","onclick%3D%22save%5Flist%28%27"+escape(tid)).replace("id%3D%22btn%2Dsavelist%2D","id%3D%22btn%2Dsavelist%2D"+escape(tid));
+               tmp4 = tmp4.split("%0A").join("%250A");
+               document.write("<div class='browserecord' id='"+tid+tmp[3]+"'>");
+               document.write(unescape(tmp4));
+               document.write("</div>");
+            }
+            if(getCookie(sysFolder+tableID+"ESIMemberServicesUsername")!=""){
+               showMember_Process();
+               document.getElementById('memberLoggedIn').style.display = 'inline';
+               document.getElementById('memberUserLoggedIn').innerHTML = getCookie(sysFolder+tableID+"ESIMemberServicesUsername");
+            }
+			   if(browse_by_list) document.write('</div>');
+         
+         </script>
+</div>
+<DIV ID="browse_footer"></DIV>
+<script>
+         if(browse_by_list) $("#myList").listnav({ includeAll: false });
+	      showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_browse_footer.html","browse_footer");
+      </script><script src="/webcat/script/ga.js?v=20728" type="text/javascript"></script><script type="text/javascript">
+      if (hasGaWebPropertyId()) {
+        writeGaJsHost();
+      }
+      </script><script type="text/javascript">
+         displayDataControl();
+      </script>
+<br>
+<br>
+<div class="powered-by">
+<small>Powered by WebGENCAT from <a title="Eloquent Systems Inc" alt="Eloquent Systems Inc" href="http://eloquent-systems.com">Eloquent Systems Inc</a></small>
+</div>
+</div>
+</div>
+<footer ID="page_footer"></footer>
+<script>
+      showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_search_footer.html","page_footer");
+      if(reqtype=="ViewList") document.getElementById("GoProcess").style.display="inline";
+      if(reqtype!="ViewCart") update_button();
+      if(reqtype=="ViewCart") update_cart_button();
+   </script><script src="/webcat/default/lightbox/lightbox.js?v=20728" language="JavaScript" type="text/javascript"></script><script type="text/javascript">writeGbooksJsHost();</script><script type="text/javascript">setTimeout("processGbooks();", 1000);</script>
+<div alt="Top" title="Top" id="backToTop">
+<div>
+<b>TOP</b>
+</div>
+</div>
+<script>
+   $(document).ready(function($){
+      $('#backToTop').fadeOut('slow');
+       $(window).scroll(function(){
+           if ($(this).scrollTop() > 50) {
+               $('#backToTop').fadeIn('slow');
+           } else {
+               $('#backToTop').fadeOut('slow');
+           }
+       });
+       $('#backToTop').click(function(){
+           $("html, body").animate({ scrollTop: 0 }, 500);
+           return false;
+       });
+   });
+   </script><script>
+	if(document.getElementsByClassName("browserecord").length<10) document.getElementsByClassName("browseControlPanel")[1].style.display="none";
+	
+	</script><script>
+      setTimeout(function(){checkStatus()}, 500);
+   </script>
+<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1417817958" async></script></body>
+</html>
+

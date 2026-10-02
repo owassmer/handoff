@@ -1,0 +1,485 @@
+{
+  "code": "CA-OC",
+  "name": "Orange County",
+  "layer": "county",
+  "parents": [
+    "CA"
+  ],
+  "status": "research_in_progress",
+  "owner_confirmed": {
+    "by": "Owen",
+    "date": "2026-10-01",
+    "note": "Under the instruction to complete California/Huntington Beach J0, record the necessary county layer. This records authorization to research applicable county law, not separate acceptance of county rules."
+  },
+  "courts": [
+    {
+      "id": "CA-SUPERIOR",
+      "name": "California superior courts (statewide trial-court class)",
+      "binds": []
+    },
+    {
+      "id": "CA-OC-SUPERIOR",
+      "name": "Superior Court of California, County of Orange",
+      "binds": []
+    },
+    {
+      "id": "CA-OC-APPDIV",
+      "name": "Orange County Superior Court, Appellate Division",
+      "binds": [],
+      "role": "Limited-civil appellate forum; consult its opinions and local rules. Do not infer statewide precedent from an appellate route."
+    },
+    {
+      "id": "CA-SUPREME",
+      "name": "Supreme Court of California",
+      "binds": [
+        "CA-SUPERIOR",
+        "CA-OC-SUPERIOR",
+        "CA-OC-APPDIV",
+        "CA-DCA-1",
+        "CA-DCA-2",
+        "CA-DCA-3",
+        "CA-DCA-4",
+        "CA-DCA-5",
+        "CA-DCA-6"
+      ],
+      "issue_scope": "California law; federal holdings subject to US Supreme Court authority."
+    },
+    {
+      "id": "CA-DCA-1",
+      "name": "California Court of Appeal, District 1 (all divisions)",
+      "binds": [
+        "CA-SUPERIOR",
+        "CA-OC-SUPERIOR",
+        "CA-OC-APPDIV"
+      ],
+      "issue_scope": "Published precedential holdings, subject to Supreme Court authority, conflicts, publication/review status and subsequent history."
+    },
+    {
+      "id": "CA-DCA-2",
+      "name": "California Court of Appeal, District 2 (all divisions)",
+      "binds": [
+        "CA-SUPERIOR",
+        "CA-OC-SUPERIOR",
+        "CA-OC-APPDIV"
+      ],
+      "issue_scope": "Published precedential holdings, subject to Supreme Court authority, conflicts, publication/review status and subsequent history."
+    },
+    {
+      "id": "CA-DCA-3",
+      "name": "California Court of Appeal, District 3 (all divisions)",
+      "binds": [
+        "CA-SUPERIOR",
+        "CA-OC-SUPERIOR",
+        "CA-OC-APPDIV"
+      ],
+      "issue_scope": "Published precedential holdings, subject to Supreme Court authority, conflicts, publication/review status and subsequent history."
+    },
+    {
+      "id": "CA-DCA-4",
+      "name": "California Court of Appeal, District 4 (all divisions)",
+      "binds": [
+        "CA-SUPERIOR",
+        "CA-OC-SUPERIOR",
+        "CA-OC-APPDIV"
+      ],
+      "issue_scope": "Published precedential holdings, subject to Supreme Court authority, conflicts, publication/review status and subsequent history."
+    },
+    {
+      "id": "CA-DCA-5",
+      "name": "California Court of Appeal, District 5 (all divisions)",
+      "binds": [
+        "CA-SUPERIOR",
+        "CA-OC-SUPERIOR",
+        "CA-OC-APPDIV"
+      ],
+      "issue_scope": "Published precedential holdings, subject to Supreme Court authority, conflicts, publication/review status and subsequent history."
+    },
+    {
+      "id": "CA-DCA-6",
+      "name": "California Court of Appeal, District 6 (all divisions)",
+      "binds": [
+        "CA-SUPERIOR",
+        "CA-OC-SUPERIOR",
+        "CA-OC-APPDIV"
+      ],
+      "issue_scope": "Published precedential holdings, subject to Supreme Court authority, conflicts, publication/review status and subsequent history."
+    },
+    {
+      "id": "US-CAN-DISTRICT",
+      "name": "US District Court, Northern District of California",
+      "binds": []
+    },
+    {
+      "id": "US-CAN-BANKRUPTCY",
+      "name": "US Bankruptcy Court, Northern District of California",
+      "binds": []
+    },
+    {
+      "id": "US-CAE-DISTRICT",
+      "name": "US District Court, Eastern District of California",
+      "binds": []
+    },
+    {
+      "id": "US-CAE-BANKRUPTCY",
+      "name": "US Bankruptcy Court, Eastern District of California",
+      "binds": []
+    },
+    {
+      "id": "US-CAC-DISTRICT",
+      "name": "US District Court, Central District of California",
+      "binds": []
+    },
+    {
+      "id": "US-CAC-BANKRUPTCY",
+      "name": "US Bankruptcy Court, Central District of California",
+      "binds": []
+    },
+    {
+      "id": "US-CAS-DISTRICT",
+      "name": "US District Court, Southern District of California",
+      "binds": []
+    },
+    {
+      "id": "US-CAS-BANKRUPTCY",
+      "name": "US Bankruptcy Court, Southern District of California",
+      "binds": []
+    },
+    {
+      "id": "US-9-BAP",
+      "name": "Ninth Circuit Bankruptcy Appellate Panel",
+      "binds": [],
+      "role": "Bankruptcy appellate forum; no universal binding edge inferred from appeal routing."
+    },
+    {
+      "id": "US-9",
+      "name": "US Court of Appeals for the Ninth Circuit",
+      "binds": [
+        "US-CAN-DISTRICT",
+        "US-CAE-DISTRICT",
+        "US-CAC-DISTRICT",
+        "US-CAS-DISTRICT",
+        "US-CAN-BANKRUPTCY",
+        "US-CAE-BANKRUPTCY",
+        "US-CAC-BANKRUPTCY",
+        "US-CAS-BANKRUPTCY",
+        "US-9-BAP"
+      ],
+      "issue_scope": "Controlling federal appellate precedent; California state-law questions also require the state authorities and federal state-law methodology."
+    },
+    {
+      "id": "US-SUPREME",
+      "name": "Supreme Court of the United States",
+      "binds": [
+        "CA-SUPERIOR",
+        "CA-OC-SUPERIOR",
+        "CA-OC-APPDIV",
+        "CA-DCA-1",
+        "CA-DCA-2",
+        "CA-DCA-3",
+        "CA-DCA-4",
+        "CA-DCA-5",
+        "CA-DCA-6",
+        "US-CAN-DISTRICT",
+        "US-CAE-DISTRICT",
+        "US-CAC-DISTRICT",
+        "US-CAS-DISTRICT",
+        "US-CAN-BANKRUPTCY",
+        "US-CAE-BANKRUPTCY",
+        "US-CAC-BANKRUPTCY",
+        "US-CAS-BANKRUPTCY",
+        "US-9",
+        "US-9-BAP",
+        "CA-SUPREME"
+      ],
+      "issue_scope": "Federal law. This does not make a federal interpretation of California law superior to the California Supreme Court."
+    }
+  ],
+  "customer_courts": [
+    "CA-OC-SUPERIOR",
+    "US-CAC-DISTRICT",
+    "US-CAC-BANKRUPTCY"
+  ],
+  "gates": [
+    {
+      "id": "geography",
+      "fact": "Street address, parcel, incorporated city or unincorporated area, county; location on each relevant event date.",
+      "triggers": "Select state/county/city layers; distinguish countywide, unincorporated-only and city-adopted provisions. Select local court rules and the applicable regional rent index. County membership alone does not apply every county ordinance.",
+      "evidence": "Parcel and municipal boundary records; the territorial/application clauses and adoption ordinances of each source.",
+      "sources": [
+        "https://pwds.oc.gov/service-areas/oc-development-services/neighborhood-preservation/community-resources",
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12."
+      ]
+    },
+    {
+      "id": "tenancy_type",
+      "fact": "Actual residential use, dwelling or space rented, shared facilities, transient occupancy, institutional housing, employee tenancy, mobilehome or recreational vehicle; tenant versus owner of the dwelling.",
+      "triggers": "Identify the applicable residential regime and section-specific exclusions. CIV 1940 defines the ordinary hiring chapter reach; other residential regimes remain in discovery. A special tenancy is not excluded from the research merely because the ordinary rule excludes it.",
+      "evidence": "Lease and actual occupancy/use evidence, facility licence and ownership records.",
+      "sources": [
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1940.",
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1946.2."
+      ]
+    },
+    {
+      "id": "building_age",
+      "fact": "Certificate-of-occupancy issuance date for the relevant housing; construction/conversion dates and mobilehome status separately.",
+      "triggers": "The rolling 15-year certificate-of-occupancy exceptions in CIV 1946.2(e)(7) and 1947.12(d)(4) are assessed on the relevant date and exclude mobilehomes from those exceptions. Do not propagate these exceptions to deposits, habitability or fair housing. Physical-work research also needs construction dates for building/hazard requirements.",
+      "evidence": "Certificate and permit records; do not substitute a marketing opening year.",
+      "sources": [
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1946.2.",
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12."
+      ]
+    },
+    {
+      "id": "unit_count",
+      "fact": "Units in the structure and on the property, ADU/JADU status, and the landlord portfolio totals of residential rental properties and offered dwelling units.",
+      "triggers": "Different denominators answer different questions: two-unit owner-occupied exceptions versus the deposit exception requiring at most two rental properties and four offered units, together with owner-type and service-member conditions. Community total is not building count or portfolio total.",
+      "evidence": "Approved plans, unit schedule, titles and owner portfolio records.",
+      "sources": [
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1946.2.",
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12.",
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.5."
+      ]
+    },
+    {
+      "id": "owner_occupancy",
+      "fact": "Whether and when the owner used the property as principal residence, continuous occupancy, shared kitchen/bathroom, and number/type of separately rented units or rooms.",
+      "triggers": "Evaluate CIV 1946.2(e)(4)-(6) and the distinct rent-cap exception in 1947.12(d)(6). Owner occupancy is not a universal landlord-tenant exemption.",
+      "evidence": "Dated occupancy evidence and layout; owner declaration must identify the period and premises.",
+      "sources": [
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1946.2.",
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12."
+      ]
+    },
+    {
+      "id": "ownership_and_title",
+      "fact": "Landlord identity and entity members, public ownership, trust interests, separate alienability, ownership changes, exemption notice wording and delivery dates.",
+      "triggers": "Separate-title rent/just-cause exceptions require both qualifying ownership and statutory notice; small-landlord deposit treatment has different ownership criteria. Transfers can change who holds and must return security. Public ownership also requires examination of the applicable public-entity rules.",
+      "evidence": "Deed, entity/member and trust records, signed lease/addenda, notices and deposit-transfer accounting.",
+      "sources": [
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1946.2.",
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12.",
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.5."
+      ]
+    },
+    {
+      "id": "affordability",
+      "fact": "Exact recorded restriction/regulatory agreement, income/rent category, covered units, term, amendments and public owner, all dated to the tenancy.",
+      "triggers": "Test the restricted-housing exceptions in CIV 1946.2(e)(9) and 1947.12(d)(1), then retain the actual program obligations. A financing label, public ownership, or professional manager does not by itself decide the unit-specific branch.",
+      "evidence": "Recorded agreement and amendments, agency project documents and unit designation/certification.",
+      "sources": [
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1946.2.",
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12."
+      ]
+    },
+    {
+      "id": "assistance",
+      "fact": "Named tenant-based or project-based program, administering agency, assistance contract/addendum, covered household/unit and assistance dates; federally backed financing separately.",
+      "triggers": "Identify program-specific deposit, rent, termination, notice, grievance and survivor protections and federal coverage. Do not collapse vouchers, project assistance, affordability restrictions and mortgage coverage into one subsidized boolean.",
+      "evidence": "HAP/assistance contract, tenancy addendum, agency records and financing documents. Follow each program authority in US/CA discovery.",
+      "sources": [
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1946.2.",
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12.",
+        "https://www.ecfr.gov/current/title-24"
+      ]
+    },
+    {
+      "id": "lease_date",
+      "fact": "Execution/renewal and actual occupancy dates, fixed term, adult occupants and their entry dates, exemption notices, amendments and retained occupants.",
+      "triggers": "Select lease/notice transition rules and continuous-occupancy thresholds for just cause; distinguish a new tenancy from continuing occupancy. Lease signature alone cannot select the governing version of every duty.",
+      "evidence": "Executed agreement history, occupant records and possession evidence.",
+      "sources": [
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1946.2.",
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12."
+      ]
+    },
+    {
+      "id": "event_dates",
+      "fact": "Dates of deposit demand/receipt, rent changes, notice/service, surrender, inspection, work, documents, refund, transfer, demand, filing and judgment.",
+      "triggers": "Apply the law effective for each event and its transition clause. For example, deposit-cap, photography and refund-method amendments do not share one trigger date. Preserve historical Breakwater events separately from authored contemporary events.",
+      "evidence": "Dated ledger, bank/payment records, notices, photographs, work orders and court docket; retain effective dates of source versions.",
+      "sources": [
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.5."
+      ]
+    },
+    {
+      "id": "household_protections",
+      "fact": "Service-member status and orders, disability/accommodation, qualifying violence or abuse and protected termination, death/succession, bankruptcy filing/orders and protected characteristics when legally relevant.",
+      "triggers": "Open the corresponding protection/termination/stay/succession branches throughout work and account handling. Each protection has its own facts and evidence requirements; absent evidence is not a negative finding.",
+      "evidence": "Permitted notices, orders, requests, certifications, death/estate documents and bankruptcy docket; gather only facts relevant to the legal branch.",
+      "sources": [
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.5.",
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1946.7.",
+        "https://uscode.house.gov/",
+        "https://www.ecfr.gov/current/title-24"
+      ]
+    },
+    {
+      "id": "physical_work",
+      "fact": "Condition and cause, baseline condition, defect notices, orders to repair/vacate, permitted use, materials/hazards, work scope, access, contractor role/licence and insurance.",
+      "triggers": "Research habitability, lawful access, safety/permit/abatement and contractor requirements alongside necessary work and tenant responsibility. Owner expense does not establish tenant liability. Property orders can affect occupancy, relocation and recoverability.",
+      "evidence": "Inspection and maintenance history, photographs, permits/orders, scope and vendor records.",
+      "sources": [
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1946.2.",
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.5.",
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1941.",
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1954.",
+        "https://ecode360.com/HU4937"
+      ]
+    },
+    {
+      "id": "account_and_operator_configuration",
+      "fact": "Landlord/agent/collector roles, creditor/debt ownership, resident and guarantor obligations, payment channels, all adult tenants, delivery/refund agreements, reporting and data practices.",
+      "triggers": "Select deposit/refund recipient and method requirements, collection/licensing, communications, credit/privacy and reporting branches. A collector restriction cannot be applied solely because an unpaid balance exists.",
+      "evidence": "Contracts, account/receipt records, written tenant elections, assignments and operating procedures; use legal definitions from the relevant source family.",
+      "sources": [
+        "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.5.",
+        "pipeline/chain_map.json"
+      ]
+    }
+  ],
+  "customer_units": [],
+  "aperture": {
+    "exclusions": "Exclude unrelated commercial tenancy, business acquisition/finance and standalone criminal, employment or tax matters. Retain their provisions whenever they affect residential work, lawful occupancy, liability, recovery, payments or close-out. No blanket exclusion of regulated, assisted, publicly owned, owner-occupied or other special residential housing; classify section by section. Other cities require their own local intake before a city-complete answer.",
+    "regime_units": [],
+    "included": "California residential physical work and outgoing-account resolution, including facts established before move-out, access, habitability, repairs, permits/safety, vendor commitments, tenant liability, deposit/refund, collection, litigation, enforcement, settlement and final records. The statewide source universe is derived from these legal functions, not from Breakwater facts.",
+    "regime_units_note": "No supplied customer-unit roster; this empty list is not a finding that no special regime exists.",
+    "time": "Intake researched October 1, 2026. Select each law by event and transition provision; inspect enacted/future changes at J1. Historical Breakwater and any contemporary demonstration keep separate timelines."
+  },
+  "jev": {
+    "scope": "a residential unit in Orange County",
+    "chain_description": "California residential physical work and outgoing-account resolution, including facts established before move-out, access, habitability, repairs, permits/safety, vendor commitments, tenant liability, deposit/refund, collection, litigation, enforcement, settlement and final records. The statewide source universe is derived from these legal functions, not from Breakwater facts."
+  },
+  "walk": {
+    "scope_exclude": "Exclude unrelated commercial tenancy, business acquisition/finance and standalone criminal, employment or tax matters. Retain their provisions whenever they affect residential work, lawful occupancy, liability, recovery, payments or close-out. No blanket exclusion of regulated, assisted, publicly owned, owner-occupied or other special residential housing; classify section by section. Other cities require their own local intake before a city-complete answer."
+  },
+  "decision_points_not_applicable": [],
+  "citations": {
+    "order": 10,
+    "patterns": [],
+    "instrument_map": [],
+    "label_aliases": {},
+    "file_patterns": [],
+    "example": {
+      "patterns": [
+        {
+          "prefix": "(?:Cal\\.?\\s*)?Civ(?:il)?\\.?\\s*Code",
+          "key": "CIV",
+          "number": "\\d+(?:\\.\\d+)*",
+          "plain_range": false,
+          "titled": false
+        }
+      ],
+      "instrument_map": [
+        {
+          "key": "CIV",
+          "instrument": "CA-OC:CIV"
+        }
+      ]
+    }
+  },
+  "acceptance": {
+    "date": "",
+    "by": "",
+    "hashes": {}
+  },
+  "customer_courts_basis": "Current Huntington Beach application forums, conditional on claim/jurisdiction/venue; no customer litigation is asserted. Statewide court classes are retained for reuse; add the proper local forum when another locality is taken up.",
+  "court_authority_policy": {
+    "meaning_of_binds": "A court-level search map, with issue_scope and the rules below mandatory when deciding a particular holding. The existing J5 graph walker ignores those qualifications; its output cannot establish authority or substantive completeness.",
+    "state": "California Supreme Court authority governs state law. Published Court of Appeal holdings from all six districts bind superior courts, subject to superior authority and conflicting appellate decisions; do not restrict research to the district hearing an appeal. A Court of Appeal is not bound by another Court of Appeal. Resolve actual conflicts by reading the holdings and subsequent history, not by preferring the local district automatically.",
+    "publication": "Apply Rule 8.1115 and orders in the particular case. Unpublished opinions are generally uncitable subject to the stated exceptions. Review-granted opinions are generally persuasive pending review, with the conflict exception in the Supreme Court standing order; dismissal/decision, depublication and transfer can change status.",
+    "federal": "US Supreme Court holdings control federal questions. Ninth Circuit precedent governs the federal courts in this circuit, not California state courts. Federal courts applying California law follow the California Supreme Court; absent its ruling, apply the intermediate decisions unless convincing evidence shows the Supreme Court would decide differently. District-court opinions are not circuit or statewide precedent.",
+    "case_specific_orders": "An order or judgment can bind parties in its own proceeding without creating binding precedent for other cases. BAP/district bankruptcy appeals, law of the case and preclusion require the actual procedural posture; no blanket BAP precedential edge is asserted.",
+    "search_plan": "For each legal issue, search California Supreme Court and every Court of Appeal district; for federal issues add US Supreme Court and Ninth Circuit. Consult pertinent appellate-division, district, bankruptcy and BAP decisions, local rules and orders in their proper role. Record holding, issue, publication/review status, subsequent history and governing forum. A property address supplies a starting forum, not an exclusive venue determination.",
+    "sources": [
+      "https://law.justia.com/cases/california/supreme-court/2d/57/450.html",
+      "https://courts.ca.gov/cms/rules/index/eight/rule8_1115",
+      "https://law.justia.com/cases/california/court-of-appeal/4th/50/1202.html",
+      "https://openjurist.org/505/f3d/993/ryman-v-sears-roebuck-co",
+      "https://openjurist.org/266/f3d/1155/patricia-hart-v-larry-g-massanari-acting-commissioner-of-social-security-administration-"
+    ]
+  },
+  "appeal_routes": [
+    {
+      "matter": "Orange County unlimited civil",
+      "trial": "CA-OC-SUPERIOR",
+      "appeal": "CA-DCA-4",
+      "division": "Three",
+      "source": "https://appellate.courts.ca.gov/district-courts/4dca/publication/self-help-manual-orange-county-civil-appeals"
+    },
+    {
+      "matter": "Orange County limited civil",
+      "trial": "CA-OC-SUPERIOR",
+      "appeal": "CA-OC-APPDIV",
+      "source": "https://selfhelp.courts.ca.gov/appeals/which-court"
+    },
+    {
+      "matter": "Eligible small-claims appeal",
+      "trial": "CA-OC-SUPERIOR",
+      "appeal": "CA-OC-SUPERIOR",
+      "note": "New trial before a different judge, subject to statutory appeal eligibility; not an ordinary limited-civil appeal.",
+      "source": "https://selfhelp.courts.ca.gov/small-claims/after-trial/small-claims-appeals"
+    },
+    {
+      "matter": "Federal litigation with jurisdiction and venue in Orange County",
+      "trial": "US-CAC-DISTRICT",
+      "division": "Southern (Santa Ana)",
+      "appeal": "US-9",
+      "source": "https://usc-cdn.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title28-section84"
+    },
+    {
+      "matter": "Bankruptcy properly venued in Orange County",
+      "trial": "US-CAC-BANKRUPTCY",
+      "division": "Santa Ana",
+      "appeal": "US-9-BAP or US-CAC-DISTRICT under the election/jurisdiction rules; onward/direct review as authorized",
+      "source": "https://www.cacb.uscourts.gov/faqs?page=1"
+    }
+  ],
+  "customer_units_basis": "No actual customer unit roster has been supplied. Holland is the commercial audience, not an invented customer portfolio. The known demonstration property is recorded separately.",
+  "demonstration_properties": [
+    {
+      "id": "breakwater-historical",
+      "role": "Demonstration research; not a customer unit or corpus-selection filter",
+      "name": "Breakwater",
+      "address": "16761 Viewpoint Lane, Huntington Beach, Orange County, California",
+      "known": {
+        "community_units": 400,
+        "agency_financing": "CMFA Special Finance Agency VII, 2021 bonds; 2024 audited financial statements, Note 1"
+      },
+      "source": "https://www.cmfa-ca.com/wp-content/uploads/2025/02/CMFA-Special-Finance-Agency-VII-6.30.24-Issued-FS.pdf",
+      "unknown": [
+        "Exact unit and structure unit count",
+        "Certificate-of-occupancy date",
+        "Recorded regulatory agreement and amendments governing the unit at the relevant dates",
+        "Unit/household assistance and income designation",
+        "Executed lease, adult occupancy history and exemption/program notices",
+        "Complete event and payment records"
+      ],
+      "handling": "Obtain records before selecting these factual branches. No invented market-rate, assistance or owner-occupancy conclusion. No such unknown removes the corresponding legal research branch."
+    }
+  ],
+  "layer_application": {
+    "chain": [
+      "US",
+      "CA",
+      "CA-OC",
+      "CA-HB"
+    ],
+    "county": "County provisions require their own territorial, subject-matter and city-adoption analysis. Huntington Beach is incorporated; unincorporated-only county provisions are not automatically applied.",
+    "programs": "Attach legally applicable program instruments to their issuing authority and covered units; program coverage is not a replacement for geographic layers.",
+    "parents_status": "The US parent remains a legacy reference pending reuse/currentness review. No parent rules are presumed accepted by completing this intake."
+  },
+  "research_pending": [
+    "J1: complete instrument enumeration and enacted/future/version reconciliation",
+    "J2-J6: complete source/authority research, legal branches and adjudication",
+    "Application: obtain missing unit facts before selecting factual branches"
+  ],
+  "intake": {
+    "status": "complete",
+    "date": "2026-10-01",
+    "assessed_by": "Codex",
+    "basis": "Courts and issue-specific hierarchy, layers, operative applicability fact families, scope and explicit customer/demo factual status are recorded. No legal branch is removed because a demonstration fact is missing. Completion is a reasoned J0 assessment, not a script result or acceptance of legal rules.",
+    "owner_authorization": "Owen confirmed California/Huntington Beach work and directed completion of J0; no new owner approval or rule acceptance is invented.",
+    "review": "../CA/J0_INTAKE.md"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "code": "US",
+  "name": "United States",
+  "layer": "federal",
+  "parents": [],
+  "status": "legacy_reference_pending",
+  "owner_confirmed": {
+    "by": "Owen",
+    "date": "2026-09-30",
+    "note": "User authorized advancing California through the general pipeline with Breakwater as a test case. No legal rule set or property classification has been accepted."
+  },
+  "courts": [],
+  "customer_courts": [],
+  "gates": [
+    {
+      "id": "building_age",
+      "fact": "Certificate-of-occupancy date, supported by property records; opening year is only a discovery clue.",
+      "triggers": ""
+    },
+    {
+      "id": "unit_count",
+      "fact": "number of units in the building",
+      "triggers": ""
+    },
+    {
+      "id": "owner_occupancy",
+      "fact": "the owner lives in the building",
+      "triggers": ""
+    },
+    {
+      "id": "affordability",
+      "fact": "Recorded regulatory agreement, rent restrictions, public ownership and applicable program terms, dated to the tenancy.",
+      "triggers": ""
+    },
+    {
+      "id": "assistance",
+      "fact": "tenant-based or project-based assistance",
+      "triggers": ""
+    },
+    {
+      "id": "lease_date",
+      "fact": "date the lease was signed or renewed",
+      "triggers": ""
+    }
+  ],
+  "customer_units": [],
+  "aperture": {
+    "exclusions": "Separate educational, clinical-care or shelter operations; originating optional financing; independent government/program administration; unrelated businesses. Preserve any provisions in those source families that actually constrain apartment work, payments, resident rights or the operator’s legal authority. Rarity, tenant identity and absence from the demo do not justify exclusion. Mixed units remain selected when needed to preserve such dependencies.",
+    "regime_units": [],
+    "included": "Institutional rental multifamily unit readiness and departing-tenancy account resolution: investigation, access, physical work and provider commitments, lawful charges, rent/utilities/deposits/credits, payments, disputes, recovery, settlement and completion. Include restricted apartments, resident assistance and actual rental-project operating obligations. Derive US/state/local sources from these functions, not Breakwater facts or an exact Holland property roster.",
+    "scope_review": "j1/reassessment/operator-scope.json",
+    "regime_units_note": "Unit-specific applicability is applied later; a customer roster is not a prerequisite for jurisdiction-first research.",
+    "time": "Current law as of October2,2026 and identified adopted future changes. Retain older instruments only for a live transition, incorporation or continuing obligation; no historical-corpus reconstruction."
+  },
+  "jev": {
+    "scope": "institutional rental multifamily physical work and tenancy-account resolution",
+    "chain_description": "Institutional rental multifamily unit readiness and departing-tenancy account resolution: investigation, access, physical work and provider commitments, lawful charges, rent/utilities/deposits/credits, payments, disputes, recovery, settlement and completion. Include restricted apartments, resident assistance and actual rental-project operating obligations. Derive US/state/local sources from these functions, not Breakwater facts or an exact Holland property roster."
+  },
+  "walk": {
+    "scope_exclude": "Separate educational, clinical-care or shelter operations; originating optional financing; independent government/program administration; unrelated businesses. Preserve any provisions in those source families that actually constrain apartment work, payments, resident rights or the operator’s legal authority. Rarity, tenant identity and absence from the demo do not justify exclusion. Mixed units remain selected when needed to preserve such dependencies."
+  },
+  "decision_points_not_applicable": [],
+  "citations": {
+    "order": 10,
+    "patterns": [],
+    "instrument_map": [],
+    "label_aliases": {},
+    "file_patterns": [],
+    "example": {
+      "patterns": [
+        {
+          "prefix": "(?:Cal\\.?\\s*)?Civ(?:il)?\\.?\\s*Code",
+          "key": "CIV",
+          "number": "\\d+(?:\\.\\d+)*",
+          "plain_range": false,
+          "titled": false
+        }
+      ],
+      "instrument_map": [
+        {
+          "key": "CIV",
+          "instrument": "US:CIV"
+        }
+      ]
+    }
+  },
+  "acceptance": {
+    "date": "",
+    "by": "",
+    "hashes": {}
+  },
+  "research_pending": [
+    "Court hierarchy and authority-search plan",
+    "Complete source-family enumeration",
+    "Unit-specific applicability facts"
+  ],
+  "legacy_reference": {
+    "rules": "stage-a/US.json",
+    "register": "register/instruments.json",
+    "note": "Reuse existing federal work after California scope/currentness review. Empty active rules do not mean federal law is absent. Legacy files are unchanged."
+  }
+}

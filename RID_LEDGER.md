@@ -1,0 +1,483 @@
+Handoff RID ledger (Ferro). Full identifiers as returned. Newest last.
+
+2026-09-26
+- ri.compass.main.folder.07a4282e-0ade-4a72-b9cf-e017adef7d6d   Handoff project
+- ri.ontology.main.ontology.cfb1478a-5b0e-466a-aaff-b212870e8861 ontology (owenwassmer)
+- ri.notepad.main.notepad.94df9b11-132f-412b-a917-8980d6d99e06   intent notepad
+- ri.notepad.main.notepad.abdb3f8c-6d30-43bc-aeec-01eeb3215220   blueprint notepad
+- ri.stemma.main.repository.40ca55f8-0251-478b-95fc-0b2e5126641e Core repo (TypeScript v2)
+- ri.stemma.main.repository.83345d45-7af3-4fd4-9175-613c5971696a React repo
+- ri.foundry.main.dataset.d2e5e807-c61b-4072-84e3-be53d54349c3   Extracted source pages
+- ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427     NYC001 source media set
+- ri.mio.main.media-item.01a0c73d-60ae-756b-89d1-ef772ca9de81    PDF 04 condition report email
+- ri.mio.main.media-item.01a0c73d-60ae-756b-89d1-ef772ca9de82    PDF 05 condition and maintenance history
+- ri.branch..proposal.c3b7bde5-65b6-4dc4-bae9-d54321e3862f       source-access proposal (merged, Core 1.6.0)
+- ri.pull-request.main.pull-request.5bc23865-29a3-4674-8062-82caa65624d8 Core template upgrade PR (open)
+- ri.pull-request.main.pull-request.46b83e74-7f45-4c16-9f55-ab9fe98cb3d2 React template upgrade PR (open)
+- ri.pull-request.main.pull-request.11009685-23f7-499c-84dd-56ac26d8aa10 React feature PR (open)
+- ri.jemma.main.build.00000003-1e3d-d6b7-9aef-f5658d1f4c32        React exact-commit CI 31c693f (SUCCEEDED)
+- ri.jemma.main.build.00000003-1e3e-86c5-9874-b361db741759        React tag CI 0.1.0-handoff.7 (SUCCEEDED)
+- ri.branch..branch.df9ea893-e8f8-4906-9ccb-8c8bc7474406       W2 global branch ferro/handoff-information-replies (created)
+- ri.pull-request.main.pull-request.07774dc4-e962-4b5c-a5af-5fdc937b9bcb W2 Core PR ferro/handoff-information-replies -> master (open)
+- ri.function-registry.main.function.7b2cb50c-2df4-4947-9867-095585c768a6 continueHandoff function
+- ri.actions.main.action-type.45f9506f-6efe-47ae-aa69-08426e25e29d  Action Continue handoff (binds continueHandoff)
+- ri.actions.main.action-type.86518209-7406-48e8-aa64-6d46e9b084f0  Action Resume handoff (binds continueHandoff)
+- ri.branch..branch.6711cfbd-ea82-431c-a4c1-bbc924f3c51a           prior source-access global branch (DEPLOYED)
+- ri.jemma.main.build.00000003-1f08-80a5-af70-047425f88088        W2 PR CI on 561996c (FAILED: earlier-open-reply test)
+- (tag) Core 1.6.1-branch-20260926-170725 -> cfb9d240a00af4b23a29042b864e89527df013fc (W2 branch release; publish CI not yet read)
+- (commit) W2 branch rewritten to Foundry user id author: cfbb3f3, cfb9d24 (replaces 561996c, 76bac74); PR CI PASSED on cfb9d24
+- ri.actions.main.action.0cef358c-3d5a-4d32-ae14-405b4024c3e2      W2 branch test: create-handoff-workspace on global branch (workspace:2b877f71c1dce7e8b2ef0a98e5fc02fecf1145bf4edbc2a8895b278172985c2f)
+- ri.actions.main.action.8755e90a-2287-498a-9a00-03d31bcc4e06      W2 branch test: receive-move-out-notice (handoff:f0161ef82130151cef93041478cbbcb0758711444e4f85016c0b36849debe666)
+- ri.actions.main.action.99dfcc56-a226-4baa-87fb-962e0056cf68      W2 branch test: send-handoff-message (operator request)
+- ri.actions.main.action.817b303c-1731-434a-8241-ea5b822b5f86      W2 branch test: resume-handoff turn 1 (two Information requests queued)
+- ri.actions.main.action.c706b773-0921-4bde-bb44-9cde2d6c4a00      W2 branch test: resume turn 2
+- ri.actions.main.action.28010c2b-9d7b-4aea-ad4d-a4586b8edefe      W2 branch test: resume turn 3
+- ri.actions.main.action.1842ca96-3eb0-4452-bf39-4e3eb3ff666f      W2 branch test: resume turn 4
+- ri.actions.main.action.cf733bd7-6c9d-4615-9c7e-5d575789139b      W2 branch test: resume turn 5
+- ri.actions.main.action.7eb30daf-ebf7-4141-a702-622473fb5e73      W2 branch test: resume turn 6
+- ri.branch..proposal.dfefd000-279a-4a28-8062-5779b45991dc         W2 global proposal (OPEN)
+- ri.branch..proposal.dfefd000-279a-4a28-8062-5779b45991dc         W2 global proposal DEPLOYED (Owen merged 2026-09-26)
+- ri.actions.main.action-type.541f1808-8b0a-4bf1-b60b-590b73d4e5f0  create-handoff-workspace (branch functions switch on)
+- ri.actions.main.action-type.ce53004c-9940-4271-bd4b-9c0765df8e87  receive-move-out-notice (branch functions switch on)
+- ri.actions.main.action-type.283df639-a291-414a-917e-b139928ace8e  send-handoff-message (branch functions switch on)
+- (commit) Core master b0014d6 merges PR 07774dc4; tree identical to cfb9d24 (tag 1.6.1-branch-20260926-170725)
+- ri.actions.main.action.4c56b884-922a-4d63-b5b0-33e54c5d82ac      W3 create-handoff-workspace "Whitcomb Holdings" (workspace:48d6ea1a383b85931e37e869b34563b2d2fb3faf8a2e40227a78d8b2557bf0c8)
+- ri.actions.main.action.c147cd2c-a113-4059-82b4-0e7e4acb7cab      W3 receive-move-out-notice (handoff:48dd0a35cdba6550ba1f314845832c9941e5d33b7e6620a2566121982165ae4e)
+- ri.mio.main.media-item.01a0dfa1-b8fe-7145-847c-4d4000ba28e7      W3 PDF "Lease and modification, 142 West 88th Street.pdf"
+- ri.mio.main.media-item.01a0dfa1-bf24-72a1-bb29-c20bb27dfcc8      W3 PDF "Email from Laura Brenner, June 11, 2016.pdf"
+- ri.actions.main.action.1f4322ca-1b63-436e-a7c7-a4cf644897c2      W3 associate-handoff-original (lease)
+- ri.actions.main.action.9e947017-3044-4621-a44f-61f560bdae15      W3 associate-handoff-original (June 2016 email)
+- ri.pull-request.main.pull-request.cbcd989f-9442-4e80-b346-e28fd61b6744 W3 React PR ferro/whitcomb-workspace -> master (57ba4cb)
+- (tag) React 0.1.0-handoff.8 -> bc3742a0a5c57b7f1f4c5706406d08414e70f3e3 (master merge of PR cbcd989f)
+- ri.pull-request.main.pull-request.87fdb668-a577-4cda-9ff8-1cb33c57f6cf W4a Core PR ferro/handoff-amount-wording -> master (7d89b08)
+- ri.branch..branch.196cab0f-e078-4d16-9de1-bdc5da7bdd91       W4a global branch ferro/handoff-amount-wording (created)
+- (tag) Core 1.6.2-branch-20260926-215854 -> 7d89b08aba193448c84e966c3c1024c3887fb0bd (PR CI PASSED)
+- ri.actions.main.action.a1523abb-51e7-4afc-94e0-471ceecc44dd      W4a branch test: create workspace "Amount wording test"
+- ri.actions.main.action.df7b5b4c-fb73-4109-9f6e-24d136c2a3e1      W4a branch test: receive-move-out-notice
+- ri.actions.main.action.b030e9b4-34c2-4202-b107-bb54443c0bea      W4a branch test: send-handoff-message
+- ri.actions.main.action.025ff6c5-28a7-4532-91db-f3852d77a405      W4a branch test: resume turn 1 (quote requested)
+- ri.actions.main.action.99d99bd5-ff7e-4911-8d19-6d9e86f8e758      W4a branch test: resume turn 2 (quote reply "$125.00")
+- ri.branch..proposal.db191682-bfae-44e4-a530-44cc327961bc         W4a global proposal (OPEN)
+- ri.actions.main.action.e2ed2a6e-3faa-4163-ad9b-0e0ea1546818      W4a branch replica: create workspace "Whitcomb replica" (workspace:3771a921140e6b64054ae27fd4d02f76175a724b2ad3c0a58b5b521ac8b98cd0)
+- ri.actions.main.action.da47afa8-a712-47cd-b7fc-7662bc092b97      W4a branch replica: receive-move-out-notice
+- (errors) resume-handoff on replica x3: FunctionExecutionTimedOut, continueHandoff 1.6.2-branch-20260926-215854 (6b443501..., 33d038f5..., 10bdd58e...)
+- (commit) W4a budgets f8de140 + test counts ef4a92c; PR CI PASSED on ef4a92c (f8de140 CI FAILED: ri.jemma.main.build.00000003-1f6e-35e7-92e5-6e20545adbfc)
+- (tag) Core 1.6.3-branch-20260926-231338 -> ef4a92c0df7076310446467a495b45f230ff4fc7
+- (error) resume-handoff on replica with 1.6.3-branch-20260926-231338: FunctionExecutionTimedOut at 61s (1cda74d6-7c1a-4661-bef7-09410413deed); REST sync limit 60s, Automate async up to 4h
+- (commit) W8 Core fd3e1ba8580cc689ed3de772d43b813194697358 on ferro/handoff-plain-reasons
+- ri.pull-request.main.pull-request.02a408c3-e38e-4673-a5af-d458f526e0ed W8 Core PR ferro/handoff-plain-reasons -> master
+- ri.branch..branch.4564f515-0657-44f6-bc8d-f64107044b01       W8 global branch ferro/handoff-plain-reasons (created)
+- ri.mio.main.media-set.eed7a713-547b-45d4-8207-17b1b2f907f8     frontend reference media set (Owen)
+- ri.stemma.main.repository.aee1ffe4-bad9-41b1-a1fc-ed76b91ebf2d docs repo (Owen)
+- (commit) W8 test fix 5ade4d0ec63e892f056ca85d6b3036161be914e8; PR CI PASSED (fd3e1ba CI FAILED: ri.jemma.main.build.00000003-1f93-38c4-a6b6-61ef517b3f8e)
+- (tag) Core 1.6.4-branch-20260927-012644 -> 5ade4d0ec63e892f056ca85d6b3036161be914e8
+- ri.branch..proposal.1dbab551-42fc-401a-ba15-065253ea9e09         W8 global proposal (OPEN); Main was rebound directly first (Owen, 2026-09-27)
+- ri.actions.main.action.0cb76135-931c-4c62-a2db-8c58f4c04295      W3b create-handoff-workspace "Whitcomb Holdings" re-dated (workspace:1adcfc427401c3ba3de3994693fa38bfc8cf296c192bf23655536b4bb12f2c0d)
+- ri.actions.main.action.f3a373cd-abd5-42e9-9188-94f87cbfbf9e      W3b receive-move-out-notice, business date 2026-09-26
+- ri.mio.main.media-item.01a0e0a0-cb39-7263-b035-4d07fe9c3ac5      W3b PDF "Lease, 142 West 88th Street.pdf"
+- ri.mio.main.media-item.01a0e0a0-d0a1-73e2-b892-fa06d06b39be      W3b PDF "Laura Brenner email, June 11, 2024.pdf"
+- ri.actions.main.action.f76b6e75-edeb-4e8a-8ea2-9747c7039fb6      W3b associate-handoff-original (lease)
+- ri.actions.main.action.437607d2-0cdf-4da8-820e-7e8a1e409b4c      W3b associate-handoff-original (June 2024 email)
+- ri.branch..proposal.1dbab551-42fc-401a-ba15-065253ea9e09         W8 global proposal DEPLOYED (Owen merged)
+- (commit) Core master b919a03 merges PR 02a408c3 (#8a); tree identical to 5ade4d0
+- (commit) React ferro/frontend-overhaul 7e82ec1 (retire Deposit Closeout), 128bf64 (new frontend)
+- ri.pull-request.main.pull-request.18cbff08-36c3-4e95-b090-c9ff1113997d Frontend overhaul PR ferro/frontend-overhaul -> master
+- (commit) React master 9a9ff5e merges PR 18cbff08; tree identical to 128bf64
+- (tag) React 0.1.0-handoff.9 -> 9a9ff5e (lightweight; .8 was annotated)
+- ri.pull-request.main.pull-request.361adb2e-01c8-462a-b397-698185465c2f Core PR ferro/handoff-vendor-requirements (commit 4af86e06d8b3aee0117ceb457a1efa79bbf21fcf)
+- (diag) live case blocked: decision decision:dcd1743f9a448a8358140ac4cf6ad6896b17d22d8c62f61c8977caf78b14ba8a rev1 carries 2 model-written requirements unconfirmed by either quote; coordinator cannot commission
+- ri.branch..branch.dc8da35a-b273-4a16-9867-5df0a514608c global branch ferro/handoff-vendor-requirements
+- (tag) Core 1.6.5-branch-20260927-045842 -> 98cf032a620ea1b14b0a0ed10e4023872fd58715 (PR 361adb2e CI passed)
+- ri.actions.main.action.44b06512-d8f6-43c8-9337-6802857dea6e W5 branch test create-handoff-workspace 'Requirement test' (workspace:a9578a5862eee0ba9020f3001e2e8d3ed8a19b6c7bf0ba1517c3dc4fc4d08cc0) on ri.branch..branch.dc8da35a-b273-4a16-9867-5df0a514608c
+- (error) W5 receive-move-out-notice "errorInstanceId":"56167704-8d5d-4641-8535-236ddd6a9eee","parameters":{"originalErrorName":"Actions:ObjectTypeOrLinkTypeNotIndexed"
+- ri.actions.main.action.5b7126c6-1bda-4954-bfe1-f51e389b7ee7 W5 branch test receive-move-out-notice (branch dc8da35a)
+- ri.actions.main.action.d19ec5b0-3cfd-498b-9dd8-281cf96af4df W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.b6385c5a-5793-498c-b83f-40d08e546bb0 W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.14aaa9b5-a08c-4f37-8ddd-79ac9fb86d83 W5 branch test resume-handoff (branch dc8da35a)
+- (error) W5 resume-handoff "errorName":"FunctionExecutionTimedOut","errorInstanceId":"a388d050-e268-47c4-a020-7d92f89044ce"
+- (error) W5 resume-handoff "errorName":"FunctionExecutionTimedOut","errorInstanceId":"d5ee32cc-9a90-427e-b690-6a3bbae6236e"
+- ri.actions.main.action.bb7bc8e0-9ddb-462e-a808-e6f4c9eb5835 W5 branch test resume-handoff (branch dc8da35a)
+- (error) W5 accept-handoff-work-plan "errorInstanceId":"8da22075-ca38-4bd9-a3d0-760f2a408571","parameters":{"originalErrorName":"Actions:WritebackWebhookOrFunctionWithExternalCallsNotAllowedOnBranc
+- ri.actions.main.action.aad76fdd-4492-4c67-a3e7-cfd6705fb073 W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.604588b6-0d68-4b24-a478-52377e925b7b W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.8321fcad-039e-4b0d-9ecb-22c1ac46001d W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.199dfefd-10a2-4094-855a-8c4cb155098b W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.39ad31d4-ddbe-416a-8304-0e76be28f850 W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.6e19652e-e49d-48d5-927f-d2b3b96d2abd W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.9c5ed819-fca8-4268-acef-b17fcfe2b16e W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.d3bc7ed6-7724-4525-933f-d865a908081e W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.6ae733b3-c6b4-4890-b089-7498a10d6dbc W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.d1d698a3-0bad-43e8-ab30-5c3e05ec913a W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.273e3e7f-20ba-4ba9-b38c-615aad68b381 W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.9dd20772-776b-492e-8a5c-7d01fcc5a419 W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.aed164f6-ba35-4f13-9821-07188b1e44e3 W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.335c1e4b-b538-4070-84b4-632a14209c0f W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.79d5707e-d019-4f3b-a72b-8895ab92f41d W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.90b7c5ed-8e31-458e-a800-2feed0af0f76 W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action-type.90f96d3e-a3c5-4052-b18c-4a3373a6f9ec accept-handoff-work-plan: branch-execution setting enabled on ri.branch..branch.dc8da35a-b273-4a16-9867-5df0a514608c (Owen)
+- ri.actions.main.action.519a27c0-505d-4bab-9524-21668672c01a W5 branch test accept-handoff-work-plan (branch dc8da35a)
+- ri.actions.main.action.70c9bdeb-7609-4631-937e-6a63c12daac3 W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.de74b302-181b-4ec8-a36f-4fb83a799c01 W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.74c0b67c-a1b9-4e31-9707-232ef88f92fa W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.b8e14727-7360-44fa-87d5-ae0f23ff9e8f W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.b88e3a20-8c05-48b1-b612-b2bbacca6f99 W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.248b33cb-f819-47de-9033-eff3b28bf773 W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.c46aba19-e947-428e-984a-4b7e64e22e41 W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.7a4b3037-ea4e-40a6-918c-31a7cc9de7a3 W5 branch test resume-handoff (branch dc8da35a)
+- ri.actions.main.action.442e73e2-3497-4ef3-be69-2cecf81a2dcd W5 branch test resume-handoff (branch dc8da35a)
+- ri.branch..proposal.893c30db-9a01-47d3-b1d8-c451daac8c8c global proposal ferro/handoff-vendor-requirements (OPEN)
+- (evidence) W5 branch test: requirement ordered, confirmed once, job Scheduled 2026-09-28T09:00Z; main counts unchanged. w5/result2.json
+- (commit) Core master 43b170e merges PR 361adb2e; tree identical to 98cf032
+- ri.branch..proposal.893c30db-9a01-47d3-b1d8-c451daac8c8c DEPLOYED (Owen merged); 3 action types, 19 object types
+- (error) live case continueHandoff 1.6.5-branch-20260927-045842 via Automate: Actions:FunctionExecutionTimedOut 60000ms (error 11188627-b75d-489a-a835-1eadf83760c0, trace 1f1baa86-3c65-6481-84c4-8dffa2c4e325, monitor ri.object-sentinel.main.monitor.66e519c6-7a56-4528-8ffc-2f8b4fde6830 Prepare property work)
+- (error) live case continueHandoff via Automate: UserFacingError "Read this provider's service information before asking for an offer." (trace 1f1baa8b-5425-60c6-84c4-8dffa2c4e325, monitor ri.object-sentinel.main.monitor.435f0578-7d13-4f55-b839-fc17cd980ef5 Arrange agreed work)
+- ri.function-registry.main.function.7b2cb50c-2df4-4947-9867-095585c768a6 continueHandoff function
+- ri.pull-request.main.pull-request.fa0e5f17-d80d-42cd-8041-f93cc6a4bd28 Core PR ferro/handoff-correctable-requests (commit 1d4ae7f100b12dc2dfe3c0b239fe9e7c832ef896)
+- ri.branch..branch.0e1ca62b-0361-4582-94e8-13e2af9596b4 global branch ferro/handoff-correctable-requests
+- (config) Owen set continueHandoff 1.6.5-branch-20260927-045842 timeout to 280 s on main; first saved turn after: 2026-09-27T19:28:23Z
+- (tag) Core 1.6.6-branch-20260927-194110 -> 19df3627f31324b9559b4f281e5202ba2783a1a0 (PR fa0e5f17 CI passed)
+- ri.actions.main.action.11315399-16d0-4514-b84a-9a99e9b630b4 W6 smoke test create-handoff-workspace (branch 0e1ca62b)
+- ri.actions.main.action.2107f717-62a2-4f2e-95bf-df1779a17153 W6 smoke test receive-move-out-notice (branch 0e1ca62b)
+- ri.actions.main.action.d19a3239-d032-4b22-be4b-bb3e4eecaae5 W6 smoke test resume-handoff (branch 0e1ca62b)
+- ri.actions.main.action.f50e9b14-27c7-4b2d-83bc-fbd88be19cae W6 smoke test resume-handoff (branch 0e1ca62b)
+- ri.actions.main.action.d38404d1-145d-4b4c-8772-b95b51132757 W6 smoke test resume-handoff (branch 0e1ca62b)
+- ri.actions.main.action.f21fb3d3-d859-428e-b57d-73466aa2a6d5 W6 smoke test resume-handoff (branch 0e1ca62b)
+- ri.branch..proposal.94149976-3fea-4f04-98c9-81bfa8c9ceed global proposal ferro/handoff-correctable-requests (OPEN)
+- (commit) Core master 4e05086 merges PR fa0e5f17; tree identical to 19df362
+- ri.branch..proposal.94149976-3fea-4f04-98c9-81bfa8c9ceed DEPLOYED (Owen merged); 2 action types, 19 object types
+- (decision) live case repair plan rev 2 accepted by Owen 2026-09-27T19:59:40Z, budget $65,000.00
+- ri.pull-request.main.pull-request.f706b394-7638-43ce-ad0e-7d52bde6b0e0 Core PR ferro/handoff-plain-wording (commit 79148d510937ac775cd7eee1a6a7466fbec86ea6)
+- (tag) Core 1.6.7-branch-20260927-202053 -> 79148d510937ac775cd7eee1a6a7466fbec86ea6 (PR f706b394 CI passed)
+- ri.branch..branch.97cfcfb8-f88b-41af-b2f4-7a82fba97f95 global branch ferro/handoff-plain-wording
+- (commit) React ferro/frontend-fixes 2c846133898dc0a1ad272a539fbf2e4507fcd71a
+- ri.pull-request.main.pull-request.ad30720d-3246-4244-85aa-3419493f230d React PR ferro/frontend-fixes -> master
+- ri.actions.main.action.7c37a74f-4cf7-4765-8bf4-93c68a571d01 W7 smoke test create-handoff-workspace (branch 97cfcfb8)
+- ri.actions.main.action.e9701877-3529-4f97-b1c4-e1d50bcf8fb4 W7 smoke test receive-move-out-notice (branch 97cfcfb8)
+- ri.actions.main.action.315fb82c-43ab-4218-9fd0-6d28e1d35690 W7 smoke test resume-handoff (branch 97cfcfb8)
+- ri.actions.main.action.89ea0cbd-425b-40fc-8a4f-d56dddf94c8d W7 smoke test resume-handoff (branch 97cfcfb8)
+- ri.actions.main.action.5275a146-abb3-496e-8074-514505d01898 W7 smoke test resume-handoff (branch 97cfcfb8)
+- ri.actions.main.action.217433e4-01d6-40a6-a2ad-9ce6180fc595 W7 smoke test resume-handoff (branch 97cfcfb8)
+- ri.branch..proposal.d2902fdb-b397-43e2-831e-ef463db87f0a global proposal ferro/handoff-plain-wording (OPEN)
+- (commit) Core master d4363e8 merges PR f706b394; tree identical to 79148d5
+- ri.branch..proposal.d2902fdb-b397-43e2-831e-ef463db87f0a DEPLOYED (Owen merged)
+- (commit) React master ae87cce merges PR ad30720d; tree identical to 2c84613
+- (tag) React 0.1.0-handoff.10 -> ae87cce2b2779a9eb6845f17d9e2e6e9b3887edb
+- ri.pull-request.main.pull-request.542e7745-1ee6-4b69-8b4b-067a9be620ba Core PR ferro/handoff-case-clock (commit bfe82e647b07769cf830c11ea395e5190e2b41d7)
+- ri.actions.main.action.9c5eaef1-66b3-4fdb-bab9-b1ca50e23d83 W8 rebuild create workspace (main)
+- ri.actions.main.action.836c6bfb-0482-4a29-a9fc-482fb6debdf2 W8 rebuild receive notice (main)
+- ri.actions.main.action.1fb81ad9-5c4d-44d7-b567-5a378911c5ba W8 rebuild associate Lease, 142 West 88th Street.pdf (main)
+- ri.actions.main.action.02044f29-b017-4914-a5f8-c51897179208 W8 rebuild associate Laura Brenner email, June 11, 2024.pdf (main)
+- ri.mio.main.media-item.01a0e4bc-fdeb-75e2-a6bd-187c0d9576cc W8 media item 'Lease, 142 West 88th Street.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e4bd-06d1-7275-9ab0-dd711ae3c602 W8 media item 'Laura Brenner email, June 11, 2024.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- (ids) W8 rebuilt workspace workspace:6ca159d61ebd95bc56c5483a0a85f68cd666a63eaee173b50439de20688dc8f3 case handoff:994de82d1808b0564204f42adc7e53b90f1ca1d05bad627c3f77b395d73cedd7
+- (commit) React ferro/rebuilt-case 228e4b8d3773dae27e71de558be8d7185264e254
+- ri.pull-request.main.pull-request.8b72c281-b5be-4a60-bef0-4f3cdb0330fd React PR ferro/rebuilt-case -> master
+- ri.branch..branch.51cf5a01-c8a4-479e-869b-3811a1272017 global branch ferro/handoff-case-clock
+- (commit) Core ferro/handoff-case-clock eb66ea125d1cb774a2c1dab17c1ad898d4f0d01b (test fixes)
+- (tag) Core 1.6.8-branch-20260927-212258 -> eb66ea125d1cb774a2c1dab17c1ad898d4f0d01b
+- ri.branch..proposal.0cb26ccf-7d1c-4e68-b3a5-08db7dd65e7d global proposal ferro/handoff-case-clock (OPEN)
+- (tag) React 0.1.0-handoff.11 -> dd233b7032c0e1e46b1c5715e3a0d7b82f706dc7
+- (error) live case continueHandoff 1.6.8: UserFacingError 'Only the available handoff documents can be read.' (trace 1f1bac18-b096-68eb-84c4-8dffa2c4e325, error 334ae9fe-322e-4399-a957-207121db7363)
+- (commit) Core ferro/handoff-readable-documents c1d4142c443439d83d09755cbd4cf07728f6c146
+- (tag) Core 1.6.9-branch-20260927-222214 -> c1d4142c443439d83d09755cbd4cf07728f6c146
+- ri.pull-request.main.pull-request.b517a845-1d3f-4fd2-a02a-1e912cb3536d Core PR ferro/handoff-readable-documents
+- ri.branch..branch.9e5720f5-6401-4c47-8f89-213d60e0392f global branch ferro/handoff-readable-documents
+- ri.branch..proposal.637d5353-df95-4060-b1f9-f5ea5fdcaa5e global proposal ferro/handoff-readable-documents (OPEN)
+- (commit) Core ferro/handoff-teammates 45affdf9d6d06f45e3d27200232690541ef81a45
+- ri.pull-request.main.pull-request.05a18206-1fff-45a1-bf97-b878bb372217 Core PR ferro/handoff-teammates
+- (commit) Core ferro/handoff-teammates 1a0c703575afb7ae258d1a4d51fb0b34b6b22616 (grant action only)
+- (user) Connor McPhail 90e5e685-6daf-487c-a5e3-e4f2b4f499f6
+- (tag) Core 1.7.0-branch-20260928-004721 -> 1a0c703575afb7ae258d1a4d51fb0b34b6b22616 (PR 05a18206 CI passed)
+- ri.branch..branch.82a5cf53-5fcc-451d-bdb4-ddeb77288c0b global branch ferro/handoff-set-access
+- ri.function-registry.main.function.9a92f929-fcdb-4395-9828-910ccd483bf7 setHandoffAccess function
+- ri.actions.main.action-type.b114bb4e-a75d-42e0-b1b1-7eaa9e02bc74 set-handoff-access action (branch 82a5cf53)
+- ri.branch..proposal.d7a810d2-5856-4d6c-8c0e-d1d445288579 global proposal ferro/handoff-set-access (OPEN)
+- ri.actions.main.action.cdc7b618-c143-4c4d-bc07-2953d8a40e1b set-handoff-access: Connor McPhail Decide on workspace:6ca159d61ebd95bc56c5483a0a85f68cd666a63eaee173b50439de20688dc8f3 (main)
+- (commit) Core ferro/handoff-correspondence a94bd0473bbb8e240aa3c17d2a77664eac11f03e
+- ri.pull-request.main.pull-request.a95d0c34-67e1-492d-9f7c-c8c7043284ca Core PR ferro/handoff-correspondence
+- (commit) Core ferro/handoff-correspondence 8c227a5ae76b9870bba66186a623aca58bf11595 (test fix)
+- 2026-09-28 Core PR ri.pull-request.main.pull-request.a95d0c34-67e1-492d-9f7c-c8c7043284ca (ferro/handoff-correspondence) CI PASSED on 8c227a5ae76b9870bba66186a623aca58bf11595; tag 1.7.1-branch-20260928-014137 on that commit.
+- 2026-09-28 Global branch ri.branch..branch.46d283d3-5e34-49c0-ae1f-e8f47c98adb1 (ferro/handoff-correspondence): rebind Continue handoff + Resume handoff to continueHandoff 1.7.1-branch-20260928-014137.
+- 2026-09-28 ri.branch..proposal.0cb26ccf-7d1c-4e68-b3a5-08db7dd65e7d (ferro/handoff-case-clock) DEPLOYED; 5 action types rebound incl. ri.actions.main.action-type.158e17c5-e67c-409d-b7e0-0e9c34b557b5
+- 2026-09-28 ri.branch..proposal.637d5353-df95-4060-b1f9-f5ea5fdcaa5e (ferro/handoff-readable-documents) DEPLOYED
+- (commit) React ferro/frontend-pass-2 b917ec9dd0816ff1557695dc1e89fc5965742c95 (unit page tabs; pushed, no PR yet)
+- (commit) React ferro/frontend-pass-2 028aff8822947d42678b3db382b3d2de8d39186a (tab review fixes)
+- ri.pull-request.main.pull-request.b927abe6-521d-4946-90f4-d4f5a508c5db React PR ferro/frontend-pass-2 -> master (unit tabs, calendar, inbox, timeline, rendered documents)
+- ri.branch..proposal.c6b856a9-30e9-40d7-aca2-47b80b672263 global proposal ferro/handoff-correspondence (OPEN); branch 46d283d3 rebinds ri.actions.main.action-type.45f9506f-6efe-47ae-aa69-08426e25e29d + ri.actions.main.action-type.86518209-7406-48e8-aa64-6d46e9b084f0 to 1.7.1-branch-20260928-014137
+- ri.branch..proposal.c6b856a9-30e9-40d7-aca2-47b80b672263 DEPLOYED (Owen merged); continueHandoff 1.7.1-branch-20260928-014137 live on main
+- (commit) Core master 24d11ed merges PR a95d0c34; tree identical to 8c227a5
+- (commit) React master 91a866c merges PR b927abe6; tree identical to 028aff8
+- (tag) React 0.1.0-handoff.12 -> 91a866ca82240ad24c3f093dc38def51589b0a10
+- (ids) W9 rebuilt workspace workspace:5614d7483eef9b6c74c5c18cff0145cf581e8674caa64aa55a2d09ce966f8b5b case handoff:c02c354aacd30a72a73bf2630d1b3ff2a5b7c11fe9783f143f90aea5e33b919a (main)
+- ri.actions.main.action.eeec7ed7-ebd9-457b-b65a-c05467b66730 W9 create workspace (main)
+- ri.actions.main.action.cc030962-e172-41e1-88a9-3e8a0eb5443e W9 receive notice (main)
+- ri.actions.main.action.d6ba6b4e-0fe0-47b0-b67a-dbc8f382bb00 W9 associate Lease, 142 West 88th Street.pdf (main)
+- ri.actions.main.action.de18c544-5ba3-48f3-b699-8e8dc75a737f W9 associate Laura Brenner email, June 11, 2024.pdf (main)
+- ri.actions.main.action.32666566-5bc1-4b26-8037-3d09d190234e W9 associate Move-out walk-through, September 24, 2026.pdf (main)
+- ri.actions.main.action.cf26cb78-851d-404f-8b4f-981e8e05d318 W9 associate Condition and maintenance history.pdf (main)
+- ri.actions.main.action.c0f0b8a7-6ce5-4887-add9-8a01fec1c299 W9 associate Eleanor Whitcomb email, September 25, 2026.pdf (main)
+- ri.actions.main.action.0b54f742-1a7e-4607-a69d-815a5cca29a9 W9 associate Feld Architecture, kitchen repair sign-off.pdf (main)
+- ri.actions.main.action.b7902361-b910-4e65-ae24-0818236994db W9 associate Access arrangements letter.pdf (main)
+- ri.actions.main.action.93f2b30c-5388-4ed9-985f-c29912e54b66 W9 associate Restoration funds letter.pdf (main)
+- ri.actions.main.action.43c274c1-edb1-41a2-b87f-bd34c2c9f1cf W9 associate Feld Architecture PLLC proposal.pdf (main)
+- ri.actions.main.action.459defd8-7180-4633-9dde-02f5a79a01e1 W9 associate Hudson Floor Restoration proposal.pdf (main)
+- ri.actions.main.action.2f603078-d9e5-42c6-935b-4ac08dbbf6bc W9 associate Westside Plaster & Paint proposal.pdf (main)
+- ri.actions.main.action.c89b1d19-c4fd-4ddc-b1df-17495fbed503 W9 associate Carroll Stair & Millwork proposal.pdf (main)
+- ri.actions.main.action.e07b9e3e-3181-4a58-8f5a-833eef2ead95 W9 associate Broadway Carpet & Runner proposal.pdf (main)
+- ri.mio.main.media-item.01a0e5d1-5c4d-70b7-9310-ca9b478b8b94 W9 media item 'Lease, 142 West 88th Street.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e5d1-6636-77cd-a346-308693b0e13c W9 media item 'Laura Brenner email, June 11, 2024.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e5d1-700f-7767-afb9-3ec500c48008 W9 media item 'Move-out walk-through, September 24, 2026.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e5d1-7792-72b1-9081-daa749bc1ade W9 media item 'Condition and maintenance history.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e5d1-7f0e-7544-82b0-c7cfc3892d0d W9 media item 'Eleanor Whitcomb email, September 25, 2026.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e5d1-8683-71dc-badc-d9e781a6c201 W9 media item 'Feld Architecture, kitchen repair sign-off.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e5d1-8f5d-7674-a105-b673117f477a W9 media item 'Access arrangements letter.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e5d1-98b0-7651-95b9-02b7eed2d4c4 W9 media item 'Restoration funds letter.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e5d1-a1f2-72e8-9a77-dd10656b8ef4 W9 media item 'Feld Architecture PLLC proposal.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e5d1-a98c-75a0-8077-b5fb8d5090b7 W9 media item 'Hudson Floor Restoration proposal.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e5d1-b1bf-7129-8f27-f1b925cf20af W9 media item 'Westside Plaster & Paint proposal.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e5d1-b93d-7432-aabc-59ee58ead443 W9 media item 'Carroll Stair & Millwork proposal.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e5d1-c295-76a0-a13f-f11ba0712108 W9 media item 'Broadway Carpet & Runner proposal.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.actions.main.action.61c73a79-0bf4-44cc-a4f4-0c0183285cc1 set-handoff-access: Connor McPhail Decide on workspace:5614d7483eef9b6c74c5c18cff0145cf581e8674caa64aa55a2d09ce966f8b5b (main)
+- (commit) React ferro/rebuilt-case-w9 20e1e8acc431a1edb9311471def9ae6873fbb1c5
+- ri.pull-request.main.pull-request.d6c393a7-dffd-4d58-9c19-62adcdb9ff65 React PR ferro/rebuilt-case-w9 -> master (point at W9 workspace; open single file directly)
+- (commit) React master a7f741320567f119bd502d81dc3d0591d5e7544a merges PR d6c393a7; tree identical to 20e1e8a
+- (tag) React 0.1.0-handoff.13 -> a7f741320567f119bd502d81dc3d0591d5e7544a
+- (commit) Core ferro/handoff-validation-detail 02a82162572393f2b00e42af4e0d02876fcc4145
+- (tag) Core 1.7.2-branch-20260928-034714 -> 02a82162572393f2b00e42af4e0d02876fcc4145
+- ri.pull-request.main.pull-request.e15186f3-093b-44cd-9aea-69d0e4d54a2b Core PR ferro/handoff-validation-detail
+- ri.branch..branch.4a11107d-24c4-4144-af2c-a1f7bb584ebb global branch ferro/handoff-validation-detail (rebind Continue + Resume handoff to 1.7.2-branch-20260928-034714)
+- (error) W9 case handoff:c02c354aacd30a72a73bf2630d1b3ff2a5b7c11fe9783f143f90aea5e33b919a first turn: Recommendation unavailable 2026-09-28T02:54:24Z; log code not visible in Automate viewer
+- 2026-09-28 Core PR e15186f3 CI PASSED on 02a82162572393f2b00e42af4e0d02876fcc4145
+- ri.branch..proposal.4f30e3f1-eb06-4c57-bb1d-4fb3bbe826ef global proposal ferro/handoff-validation-detail (OPEN); branch 4a11107d rebinds ri.actions.main.action-type.45f9506f-6efe-47ae-aa69-08426e25e29d + ri.actions.main.action-type.86518209-7406-48e8-aa64-6d46e9b084f0 to 1.7.2-branch-20260928-034714
+- ri.branch..proposal.4f30e3f1-eb06-4c57-bb1d-4fb3bbe826ef DEPLOYED (Owen merged); continueHandoff 1.7.2-branch-20260928-034714 live on main (280 s set by Owen)
+- (commit) Core master 35fc621 merges PR e15186f3; tree identical to 02a8216
+- (observed) W9 case after Owen's message 03:58Z: 4 quote requests sent (Hudson, Feld, Carroll railing, Westside); Hudson and Feld quotes received; no plan yet
+- (error) W9 case plan turn 2026-09-28T04:03Z on 1.7.2: Recommendation unavailable; run log code "pricing" on every correction
+- (commit) Core ferro/handoff-pricing-detail 6b390d61fefc3a669c7c5614b1272d88894ac66b
+- (tag) Core 1.7.3-branch-20260928-041040 -> 6b390d61fefc3a669c7c5614b1272d88894ac66b
+- ri.pull-request.main.pull-request.fb2f9b36-161f-4339-9dd6-4bce224ebcb5 Core PR ferro/handoff-pricing-detail
+- ri.branch..branch.1fa38cb9-5827-4f8c-a97f-f5607eaba410 global branch ferro/handoff-pricing-detail (rebind Continue + Resume handoff to 1.7.3-branch-20260928-041040)
+- 2026-09-28 Core PR fb2f9b36 CI PASSED on 6b390d61fefc3a669c7c5614b1272d88894ac66b
+- ri.branch..proposal.dac40368-c4c5-481b-bdf0-c758ae981791 global proposal ferro/handoff-pricing-detail (OPEN); branch 1fa38cb9 rebinds ri.actions.main.action-type.45f9506f-6efe-47ae-aa69-08426e25e29d + ri.actions.main.action-type.86518209-7406-48e8-aa64-6d46e9b084f0 to 1.7.3-branch-20260928-041040
+- ri.branch..proposal.dac40368-c4c5-481b-bdf0-c758ae981791 DEPLOYED (Owen merged); continueHandoff 1.7.3-branch-20260928-041040 live on main
+- (commit) Core master 3865c1c merges PR fb2f9b36; tree identical to 6b390d6
+- (observed) W9 case on 1.7.3: plan 'Safety railing and restoration assessment' Ready rev 1, est = budget = $2,700.00 (Feld 3 lines $1,200 + Carroll railing $1,500), no requirements; checklist passed
+- (finding) App reads pinned to getHandoffWorkspace 1.6.0 returned no senderPartyId/attachmentDocumentIds; 1.7.3-branch-20260928-041040 returns both (REST read of W9 case)
+- (commit) React ferro/read-pin-threads 08c893d3630155d3f20151e79e0d2ef4fc414966
+- ri.pull-request.main.pull-request.c318b036-f444-4f4f-bbcd-87bd9b02755b React PR ferro/read-pin-threads -> master
+- 2026-09-28 React PR c318b036 CI PASSED on 08c893d3630155d3f20151e79e0d2ef4fc414966
+- (observed) W9 repair plan rev 1 (case 2026-09-30T20:02): Westside 4 lines + Hudson 3 lines = $45,931.49 = budget; omits Carroll stair $9,000.00 and Broadway $4,757.84, whose quotes Handoff requested in the same turn and received at 2026-10-01T00:02-03; agent Ready to continue, no revision yet
+- (commit) React master 397b3038b68aff0d915d944cfb7401179b75ab17 merges PR c318b036; tree identical to 08c893d
+- (tag) React 0.1.0-handoff.14 -> 397b3038b68aff0d915d944cfb7401179b75ab17
+- (commit) React ferro/case-controls fe38b431ee7c33ef30cbd1433b4aa74acf13f125
+- ri.pull-request.main.pull-request.5385b04d-58d5-4fdc-88b4-4df9a4aaea02 React PR ferro/case-controls -> master (admin Case controls page)
+- 2026-09-28 React PR 5385b04d CI PASSED on fe38b431ee7c33ef30cbd1433b4aa74acf13f125
+- (commit) React master 9ccf41306db790a175eeb4df603263e86b64509b merges PR 5385b04d; tree identical to fe38b43
+- (tag) React 0.1.0-handoff.15 -> 9ccf41306db790a175eeb4df603263e86b64509b
+- (observed) W9 case physically complete: Ready at 2026-09-28T06:01Z (case date 2026-10-20); 6 jobs complete and paid, $62,389.33 spent, $2,610.67 left
+- (commit) Core ferro/handoff-wording-2 211777e2a642d8237972b6a67c8cc2b9df36c9b3
+- (tag) Core 1.7.4-branch-20260928-064243 -> 211777e2a642d8237972b6a67c8cc2b9df36c9b3
+- ri.pull-request.main.pull-request.b7d31903-e42b-4dc9-80ec-17f720fcec49 Core PR ferro/handoff-wording-2
+- ri.branch..branch.97aedb03-b42f-42fb-bef5-4c3fdd1866c0 global branch ferro/handoff-wording-2 (rebind Continue + Resume handoff to 1.7.4-branch-20260928-064243)
+- 2026-09-28 Core PR b7d31903 CI PASSED on 211777e2a642d8237972b6a67c8cc2b9df36c9b3
+- ri.branch..proposal.97a5fc95-c171-45e4-a203-f54930834f03 global proposal ferro/handoff-wording-2 (OPEN); branch 97aedb03 rebinds ri.actions.main.action-type.45f9506f-6efe-47ae-aa69-08426e25e29d + ri.actions.main.action-type.86518209-7406-48e8-aa64-6d46e9b084f0 to 1.7.4-branch-20260928-064243
+- (commit) React ferro/motion 457ad5c8494f1fe0806eff317224133e8f82d24e
+- ri.pull-request.main.pull-request.edcfdb6c-a446-4aca-ae92-791026b4fe7a React PR ferro/motion -> master (motion layer, Question 20 a)
+- (commit) React ferro/motion ec64bc5f2b1f0bd81782b93f117b6ba24c21a5d7 (lint fix; PR edcfdb6c CI failed on 457ad5c: 2 lint warnings, max 0)
+- 2026-09-28 React PR edcfdb6c CI PASSED on ec64bc5f2b1f0bd81782b93f117b6ba24c21a5d7
+- ri.branch..proposal.97a5fc95-c171-45e4-a203-f54930834f03 DEPLOYED (Owen merged); continueHandoff 1.7.4-branch-20260928-064243 live on main (280 s set by Owen)
+- (commit) Core master 05384bc merges PR b7d31903; tree identical to 211777e
+- (commit) React master 61279d1c3514dfda3149ddbc3302a450a7396367 merges PR edcfdb6c; tree identical to ec64bc5
+- (tag) React 0.1.0-handoff.16 -> 61279d1c3514dfda3149ddbc3302a450a7396367
+- (ids) W10 test workspace workspace:4f3a68b3f6d07509b8e4f6004689330096a39cfd50431492768ecdac5e4300eb case handoff:45100124a9f27910532d6b1714cf24df7c72a05998dedabe998d752aaef816c0 (main)
+- ri.actions.main.action.eb553c19-201a-4310-bcaf-5bc40c87acb3 W10 create workspace (main)
+- ri.actions.main.action.370cc10e-3e6a-428c-9406-f37bd4180c5c W10 receive notice (main)
+- ri.actions.main.action.6ac3a8db-4751-4251-866f-f415d837df59 W10 associate Lease, 142 West 88th Street.pdf (main)
+- ri.actions.main.action.cbef2adb-d393-4bfe-bfc9-d9a624469f9e W10 associate Laura Brenner email, June 11, 2024.pdf (main)
+- ri.actions.main.action.fd130fec-375b-4617-b1b1-50ce98f5c53c W10 associate Move-out walk-through, September 24, 2026.pdf (main)
+- ri.actions.main.action.12fd99e3-1d3f-4787-b7c1-8a3459a32a8a W10 associate Condition and maintenance history.pdf (main)
+- ri.actions.main.action.d119d7b9-b296-4207-89d3-8764cb16db63 W10 associate Eleanor Whitcomb email, September 25, 2026.pdf (main)
+- ri.actions.main.action.ba7339a2-60fb-45d0-9f17-b4de85d1da6d W10 associate Feld Architecture, kitchen repair sign-off.pdf (main)
+- ri.actions.main.action.1f48d821-f9af-44a3-b996-58d7d007c19f W10 associate Access arrangements letter.pdf (main)
+- ri.actions.main.action.94828ec3-2aff-4aae-b3c6-0e7c90ed1f3b W10 associate Restoration funds letter.pdf (main)
+- ri.actions.main.action.2dd622f9-51da-4ed7-9cbc-16375e361999 W10 associate Feld Architecture PLLC proposal.pdf (main)
+- ri.actions.main.action.4428ff4e-5dd5-40c9-9385-72e3ace3d408 W10 associate Hudson Floor Restoration proposal.pdf (main)
+- ri.actions.main.action.7a57b214-b1cd-4a83-a4e8-ea5ffa2085f6 W10 associate Westside Plaster & Paint proposal.pdf (main)
+- ri.actions.main.action.1ec5535a-e49f-4498-8aa8-69b2d9e34730 W10 associate Carroll Stair & Millwork proposal.pdf (main)
+- ri.actions.main.action.64dc508d-aced-4969-92da-9a91d7472b1a W10 associate Broadway Carpet & Runner proposal.pdf (main)
+- ri.mio.main.media-item.01a0e8ce-3c1c-74d3-aa2e-f0bbda3b2674 W10 media item 'Lease, 142 West 88th Street.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e8ce-4686-72cc-bc21-7e7fd4151ff6 W10 media item 'Laura Brenner email, June 11, 2024.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e8ce-4fb5-754e-88ef-5d3954929088 W10 media item 'Move-out walk-through, September 24, 2026.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e8ce-5959-72eb-8b3b-d9433fea02b4 W10 media item 'Condition and maintenance history.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e8ce-6162-758b-94ea-6d6fac81b529 W10 media item 'Eleanor Whitcomb email, September 25, 2026.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e8ce-6a8f-701e-81a4-a8a276b2750c W10 media item 'Feld Architecture, kitchen repair sign-off.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e8ce-7271-74b2-b7c0-45dcad7b65df W10 media item 'Access arrangements letter.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e8ce-795b-7751-a5eb-821f41aceae5 W10 media item 'Restoration funds letter.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e8ce-80a3-755f-8c95-eea65a87059d W10 media item 'Feld Architecture PLLC proposal.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e8ce-8819-7368-88e8-7d694942d15a W10 media item 'Hudson Floor Restoration proposal.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e8ce-8fc1-7369-9e31-f10c30f42e67 W10 media item 'Westside Plaster & Paint proposal.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e8ce-9820-7382-8e1c-163b890ac133 W10 media item 'Carroll Stair & Millwork proposal.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.mio.main.media-item.01a0e8ce-a061-70e5-a7ba-eac43ede7629 W10 media item 'Broadway Carpet & Runner proposal.pdf' in ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427
+- ri.actions.main.action.800f7d9e-bc97-43f2-988f-f5468db87ac9 set-handoff-access: Connor McPhail Decide on workspace:4f3a68b3f6d07509b8e4f6004689330096a39cfd50431492768ecdac5e4300eb (main)
+- (commit) React ferro/test-case-w10 548f521d2d512f7b4469c808212ea5c7077e3c33
+- ri.pull-request.main.pull-request.276e3371-0ae0-4bdd-8dfa-8a613e739813 React PR ferro/test-case-w10 -> master (point at W10 workspace)
+- 2026-09-28 React PR 276e3371 CI PASSED on 548f521d2d512f7b4469c808212ea5c7077e3c33
+- (commit) React master d54c2543834715d580313ef97fefa39f48d9e437 merges PR 276e3371; tree identical to 548f521
+- (tag) React 0.1.0-handoff.17 -> d54c2543834715d580313ef97fefa39f48d9e437
+- (config) Owen pointed both automations at workspace:4f3a68b3f6d07509b8e4f6004689330096a39cfd50431492768ecdac5e4300eb
+- (observed) W10 case on 1.7.4: first plan 'Restoration assessment and loft railing repair' Ready rev 1 at case 2026-09-28T20:27Z, est = budget = $2,700.00 (Feld 3 lines + Carroll railing), no requirements, no failed turns; checklist passed
+- (error) W10 repair-plan turn started 2026-09-28T16:40:40Z on 1.7.4: corrections incl. code "requests", ended Recommendation unavailable (case date 2026-09-30)
+- (error) W10 overlapping turn started 16:41:27Z, 152 s: UserFacingError "The work recommendation service is unavailable" (reasoner.ts provider failure; 45 s per-call timeout, 0 retries), trace 1f1bb5b7-31dd-6960-8baa-9f37c9b8b7e9, no edits
+- (commit) Core ferro/handoff-stated-rules c417a0a23d7e57cabbf599780dd16bf85d60abe1
+- (tag) Core 1.7.5-branch-20260928-170415 -> c417a0a23d7e57cabbf599780dd16bf85d60abe1
+- ri.pull-request.main.pull-request.5ff5a3c1-04a9-46de-8c14-6ab37e9547a7 Core PR ferro/handoff-stated-rules (B21, B23)
+- ri.branch..branch.e250ac8d-8a31-470c-8803-548e952e3f56 global branch ferro/handoff-stated-rules (rebind Continue + Resume handoff to 1.7.5-branch-20260928-170415)
+- (commit) React ferro/money-and-scroll 2781a651b3b7073571fa8cceee136caad98386ad
+- ri.pull-request.main.pull-request.c4de8173-2018-4410-adeb-87c1427cd6cf React PR ferro/money-and-scroll (F11 Money tab, F12 pane scrolling)
+- (error) Core PR 5ff5a3c1 CI and tag 1.7.5-branch-20260928-170415 FAILED on c417a0a (test asserted rejected drafts are not kept in the turn); not published
+- (commit) Core ferro/handoff-stated-rules 15101701675698407645061b673299e0b3328566 (test fix)
+- (tag) Core 1.7.5-branch-20260928-172435 -> 15101701675698407645061b673299e0b3328566
+- 2026-09-28 React PR c4de8173 CI PASSED on 2781a651b3b7073571fa8cceee136caad98386ad
+- 2026-09-28 Core PR 5ff5a3c1 CI PASSED on 15101701675698407645061b673299e0b3328566 (tag 1.7.5-branch-20260928-172435)
+- 2026-09-28 React PR c4de8173 merged; master fa24f7f tree = reviewed 2781a65
+- (tag) React 0.1.0-handoff.18 -> fa24f7f44fa26ca8438adada3cc54a063c4c5503
+- 2026-09-28 Global branch ri.branch..branch.e250ac8d-8a31-470c-8803-548e952e3f56: Owen rebound Continue/Resume handoff to 1.7.5-branch-20260928-172435 + indexed
+- ri.branch..proposal.d3d79221-e11a-4cd1-ab65-7e95bfbfb282 Global proposal 'State every checked rule up front, and bound model calls' (branch e250ac8d, continueHandoff 1.7.5-branch-20260928-172435)
+- 2026-09-28 Proposal ri.branch..proposal.d3d79221-e11a-4cd1-ab65-7e95bfbfb282 DEPLOYED (Continue/Resume handoff on continueHandoff 1.7.5-branch-20260928-172435); Core PR 5ff5a3c1 merged, master a9bb00b0b108faad69818e23ccbbd83882132847 tree = tagged 1510170; Owen set 280 s timeout
+- (commit) React ferro/pane-scroll b7d106af1ef12160b3d3605c28a4a41e3b2bc363
+- ri.pull-request.main.pull-request.303bc6b6-b9f9-4ccc-9104-fb326a0cc9bb React PR ferro/pane-scroll (natural page size + per-pane scroll, tab-strip scrollbar, Sunday-first calendar)
+- 2026-09-28 React PR 303bc6b6 CI passed and merged; master e15db24abf1fac071219126b9c3a640cbe077afe tree = reviewed b7d106a
+- (tag) React 0.1.0-handoff.19 -> e15db24abf1fac071219126b9c3a640cbe077afe
+- (commit) Core ferro/handoff-request-bound 1701f540852778ea71c062fc93e30331bf513f76
+- (tag) Core 1.7.6-branch-20260928-183906 -> 1701f540852778ea71c062fc93e30331bf513f76
+- ri.pull-request.main.pull-request.389108d2-b70c-4d60-87c0-dc882a02f662 Core PR ferro/handoff-request-bound (B24: remove fixed 4-request cap)
+- ri.branch..branch.66523153-6511-42a9-a3f7-56ed9e9788b5 Global branch ferro/handoff-request-bound (rebind to 1.7.6-branch-20260928-183906)
+- (error) Core tag 1.7.6-branch-20260928-183906 FAILED CI on 1701f54 (new test sent 6 requests in a 1-service, 3-party world; case bound 4 rejected it correctly); not published
+- (commit) Core ferro/handoff-request-bound 37039a0f8919329af9ddf99ca1fa72cfa25f00ff (A2 whole conversation, A3 scope 48, A4 no silent cuts, test fix)
+- (tag) Core 1.7.6-branch-20260928-184534 -> 37039a0f8919329af9ddf99ca1fa72cfa25f00ff
+- ri.pull-request.main.pull-request-comment.389108d2-b70c-4d60-87c0-dc882a02f662.5d859b42-7d0b-4be7-bd29-e614c3361148 PR comment: failed tag 183906, bind 1.7.6-branch-20260928-184534
+- 2026-09-28 Core tag 1.7.6-branch-20260928-184534 CI SUCCEEDED on 37039a0 (job ri.jemma.main.job.00000003-2280-85d8-89fe-630ba8286dda)
+- 2026-09-28 Probe: unpinned getHandoffWorkspace queryType resolves to 1.7.6-branch-20260928-184534 (unmerged); pin is protecting main
+- 2026-09-28 Core PR 389108d2 merged by Ferro (Owen delegated merges, (a)): master fast-forwarded a9bb00b -> 37039a0f8919329af9ddf99ca1fa72cfa25f00ff
+- (tag) Core 1.7.6 -> 37039a0f8919329af9ddf99ca1fa72cfa25f00ff (first non-prerelease tag since 1.6.0; needed for Auto upgrade)
+- 2026-09-28 Core tag 1.7.6 CI SUCCEEDED on 37039a0 (job ri.jemma.main.job.00000003-2284-b918-9081-b104e66eb2a1); published, unpinned query resolves to 1.7.6
+- 2026-09-28 Owen set Continue/Resume handoff, Send message, Change work plan, Accept work plan to 1.7.6 with Auto upgrade on, directly on main (ontology version 00000019-2972-74c9-15e0-15ed41ded06f); continueHandoff 1.7.6 timeout 280 s (Owen's report)
+- Action RIDs (correcting earlier ledger swap): Resume handoff ri.actions.main.action-type.86518209-7406-48e8-aa64-6d46e9b084f0; Continue handoff ri.actions.main.action-type.45f9506f-6efe-47ae-aa69-08426e25e29d; Send message ri.actions.main.action-type.283df639-a291-414a-917e-b139928ace8e (fn ri.function-registry.main.function.7c599c2f-4dd3-432a-bf04-ed88b0dcb9f2); Change work plan ri.actions.main.action-type.158e17c5-e67c-409d-b7e0-0e9c34b557b5 (fn ri.function-registry.main.function.5036147c-b612-4176-858e-c07d49905a26); Accept work plan ri.actions.main.action-type.90f96d3e-a3c5-4052-b18c-4a3373a6f9ec (fn ri.function-registry.main.function.0a95a24a-6d0e-4934-b29c-edc850ed6e21)
+- 2026-09-28 Global branch ri.branch..branch.66523153-6511-42a9-a3f7-56ed9e9788b5 closed unused (no longer needed under Auto upgrade)
+- 2026-09-28 w12 fresh case (1.7.6): workspace:7234b7fc6ee4a61bd80aa540dcfa8ddbc7d9e217b67bdf8688d36688c264f02c / handoff:2febb46ef7173ccc3606154312fdff2538f44f28026a10e38c6c83234685c89a
+- ri.actions.main.action.59c210fe-69e1-41a9-9171-c58fcfc9da5b w12 create workspace
+- ri.actions.main.action.db48d566-57c0-421d-a832-531f5f2de7a5 w12 receive notice
+- ri.actions.main.action.2a7abc66-318c-4e86-9b9b-2d30b480ec11 w12 associate Lease, 142 West 88th Street.pdf
+- ri.actions.main.action.76244e6a-7cf1-466e-aebf-61f139fbdbb6 w12 associate Laura Brenner email, June 11, 2024.pdf
+- ri.actions.main.action.faf1404d-d9e9-4d2e-991d-24b711b4dbc8 w12 associate Move-out walk-through, September 24, 2026.pdf
+- ri.actions.main.action.21ca4c46-423d-475a-9957-644a8d0e7838 w12 associate Condition and maintenance history.pdf
+- ri.actions.main.action.26df3e60-335a-4f6a-b974-81c2dfe15892 w12 associate Eleanor Whitcomb email, September 25, 2026.pdf
+- ri.actions.main.action.c1bf7efe-3eca-4ff7-b954-926eff86d70f w12 associate Feld Architecture, kitchen repair sign-off.pdf
+- ri.actions.main.action.44ff72d0-d7eb-4301-a236-2ff1d7b67aa0 w12 associate Access arrangements letter.pdf
+- ri.actions.main.action.df76cccd-1a47-416c-bf7d-9ff0f9df3219 w12 associate Restoration funds letter.pdf
+- ri.actions.main.action.fd143889-fbab-465b-8bdb-2422d2e18b5b w12 associate Feld Architecture PLLC proposal.pdf
+- ri.actions.main.action.c6957543-4b60-44a9-9d81-157389fa4f76 w12 associate Hudson Floor Restoration proposal.pdf
+- ri.actions.main.action.9b980ea1-3980-44d0-8483-16af0c626dae w12 associate Westside Plaster & Paint proposal.pdf
+- ri.actions.main.action.4ca5f7b4-4824-4876-9406-ede50a2f5470 w12 associate Carroll Stair & Millwork proposal.pdf
+- ri.actions.main.action.f3933f2f-80e6-418a-b4c1-72da803be277 w12 associate Broadway Carpet & Runner proposal.pdf
+- ri.actions.main.action.3a041c7a-0792-4930-807f-fcaedf91ed9b set-handoff-access: Connor McPhail Decide on workspace:7234b7fc6ee4a61bd80aa540dcfa8ddbc7d9e217b67bdf8688d36688c264f02c (main)
+- (commit) React ferro/unpinned-fresh-case 47a58499e9ef576e5e80c47ec7fa046769b0db89
+- ri.pull-request.main.pull-request.ad71630c-0cb0-49be-b474-ea31f7f1a966 React PR: no version pins, no guessed sender, app -> w12 workspace:7234b7fc6ee4a61bd80aa540dcfa8ddbc7d9e217b67bdf8688d36688c264f02c
+- 2026-09-28 React PR ad71630c CI SUCCEEDED (job ri.jemma.main.job.00000003-2288-630a-b18c-9e139e4ab2dd); merged by Ferro, master -> 47a58499e9ef576e5e80c47ec7fa046769b0db89
+- (tag) React 0.1.0-handoff.20 -> 47a58499e9ef576e5e80c47ec7fa046769b0db89
+- (commit) Core ferro/assessment-first 6d96fc13fcabf38bbc2ba3fc5d73beb6038bfd7a
+- ri.pull-request.main.pull-request.b2d24aa1-1b00-4ff7-8f66-dd7bf4622b15 Core PR: trades quote against the assessment (B25)
+- 2026-09-28 Core PR b2d24aa1 CI SUCCEEDED (job ri.jemma.main.job.00000003-2290-6ddb-b170-b5877d752ebb); merged by Ferro, master -> 6d96fc13fcabf38bbc2ba3fc5d73beb6038bfd7a
+- (tag) Core 1.7.7 -> 6d96fc13fcabf38bbc2ba3fc5d73beb6038bfd7a
+- (commit) React ferro/money-lines 2729ffcb4bebb9e1f1949ad2670a99ca45545652
+- ri.pull-request.main.pull-request.d6849c5e-1105-4d32-be07-2de60908ae5c React PR: Money line items with toggles (F13)
+- 2026-09-28 Core tag 1.7.7 CI SUCCEEDED (job ri.jemma.main.job.00000003-2293-46ea-8207-44e38492dfbc); latest published = 1.7.7
+- 2026-09-28 React PR d6849c5e CI SUCCEEDED (job ri.jemma.main.job.00000003-2293-4d08-8460-238da39ff087); merged by Ferro, master -> 2729ffcb4bebb9e1f1949ad2670a99ca45545652
+- (tag) React 0.1.0-handoff.21 -> 2729ffcb4bebb9e1f1949ad2670a99ca45545652
+- 2026-09-28 continueHandoff 1.7.7 timeout: Owen had to set 280 s (does NOT carry over under Auto upgrade)
+- (commit) React ferro/calm-refresh f076070245421dd7aeaa942253a76f1a583d0f91
+- ri.pull-request.main.pull-request.bc19acad-f3d9-4bae-9088-b2f0ddd78d5c React PR: steady controls, self-closing notices, folded Money lines (F14-F18)
+- 2026-09-28 React PR bc19acad CI SUCCEEDED (job ri.jemma.main.job.00000003-22a2-88b8-90e0-35c0e2632277); merged by Ferro, master -> f076070245421dd7aeaa942253a76f1a583d0f91
+- (tag) React 0.1.0-handoff.22 -> f076070245421dd7aeaa942253a76f1a583d0f91
+- 2026-09-28 correction: ri.mio.main.media-set.eed7a713-547b-45d4-8207-17b1b2f907f8 is "Handoff Context" (/Handoff/Handoff Context), the project context media set, not a frontend reference set. Items (list_media_items):
+  - ri.mio.main.media-item.01a0acac-3d7c-71bd-9c3b-c83654e36348 Handoff Property-Management Partnership Playbook_ First-Principles Strategy Review.pdf
+  - ri.mio.main.media-item.01a0acac-3fd9-7339-8ca8-c5e6241c4ce4 how-agentic-ai-can-reshape-real-estates-operating-model_final.pdf
+  - ri.mio.main.media-item.01a0acac-42f7-72cd-a51e-5abf0f505096 2209.13020v14.pdf
+  - ri.mio.main.media-item.01a0acac-c9b7-7107-8022-22f34a3f47b1 Public_Evidence_Brief.pdf (earlier)
+  - ri.mio.main.media-item.01a0acac-ca4b-7739-b55b-2a8cac33d141 Deposit_Closeout_Build_Specification.md
+  - ri.mio.main.tombstone.01a0acad-966a-764f-b376-08999fd3dd82 Deposit_Closeout_Build_Specification.md (tombstone)
+  - ri.mio.main.media-item.01a0acae-2f34-7043-8911-7c15196d8852 Public_Evidence_Brief.pdf (later)
+  - ri.mio.main.media-item.01a0acae-34c0-73b0-9c58-2856b765110b Property_Management_0_to_1_Plan.pdf
+- (commit) Core ferro/wording-ready 79890a7e5145f8cfbcccc0547327416d97f57035
+- ri.pull-request.main.pull-request.55049771-c799-4c64-b20f-add006fbb15c Core PR: B26 readiness correction, B27 on-site status, B28 plain lines
+- (commit) React ferro/report-conditions 40b9c4757919c6dd1773dbf3c628b664c926f2d0
+- ri.pull-request.main.pull-request.ffa5efb2-d9de-4b58-8826-fcf8ed50cb8d React PR: report line counts conditions (F19)
+- 2026-09-28 Core PR 55049771 CI SUCCEEDED (job ri.jemma.main.job.00000003-22b0-596a-be71-39e774c27527); merged by Ferro, master -> 79890a7e5145f8cfbcccc0547327416d97f57035
+- (tag) Core 1.7.8 -> 79890a7e5145f8cfbcccc0547327416d97f57035
+- 2026-09-28 React PR ffa5efb2 CI SUCCEEDED (job ri.jemma.main.job.00000003-22b1-004a-9060-7a1f97984eec); merged by Ferro, master -> 40b9c4757919c6dd1773dbf3c628b664c926f2d0
+- (tag) React 0.1.0-handoff.23 -> 40b9c4757919c6dd1773dbf3c628b664c926f2d0
+- (error) Core tag 1.7.8 CI FAILED on 79890a7 (build ri.jemma.main.build.00000003-22b1-8a1b-8e96-99ce62f1cae6): unrelated deposit_closeout phaseDLifecycle test timed out (5211 ms > 5000 ms); 1446 other tests passed; same commit passed branch CI. Not published.
+- (tag) Core 1.7.9 -> 79890a7e5145f8cfbcccc0547327416d97f57035 (rebuild of 1.7.8's commit)
+- (commit) Core ferro/deposit-test-timeout b2b512b2ae8cbd3aa1c48bfcf2243375450b845a
+- ri.pull-request.main.pull-request.1fa7e8ab-edfa-4edb-ba85-e250afc61346 Core PR: 20 s limit on the slow Deposit Closeout lifecycle test
+- 2026-09-28 Core tag 1.7.9 CI SUCCEEDED on 79890a7 (job ri.jemma.main.job.00000003-22b2-ac5b-82d6-2934417fdf15); latest published = 1.7.9
+- 2026-09-28 Owen set continueHandoff 1.7.9 timeout to 280 s
+- 2026-09-28 w13 fresh case (1.7.9): workspace:5fe292ef980e60067602b386c161873e7406615dce569fc60629d2102471390c / handoff:34608c637f87793c879c0d4e8825ad39f2f0c672ae02b84e9c63949386e2d632
+- ri.actions.main.action.c3a92680-7d7d-4c1e-b907-32e8dffc677e w13 create workspace
+- ri.actions.main.action.86ef7b1d-64c6-44f8-afa7-1434eb3889b9 w13 receive notice
+- ri.actions.main.action.8e069e77-9e25-44ef-9bac-abe9e59de648 w13 associate Lease, 142 West 88th Street.pdf
+- ri.actions.main.action.a1c7caee-c869-4c8a-acab-e4281b373a5d w13 associate Laura Brenner email, June 11, 2024.pdf
+- ri.actions.main.action.320a16de-70b2-4d6a-8e4b-57c66f062b37 w13 associate Move-out walk-through, September 24, 2026.pdf
+- ri.actions.main.action.ac1f4c02-8bac-4540-8b3c-0b0701bba21b w13 associate Condition and maintenance history.pdf
+- ri.actions.main.action.3d1f4830-c867-42a3-9439-f711e45a83b5 w13 associate Eleanor Whitcomb email, September 25, 2026.pdf
+- ri.actions.main.action.296cd59e-69b7-4684-9dee-d4f890d98247 w13 associate Feld Architecture, kitchen repair sign-off.pdf
+- ri.actions.main.action.720cdf1c-f261-4bef-b6fa-81c8cba2c490 w13 associate Access arrangements letter.pdf
+- ri.actions.main.action.7a03245a-1c6f-4793-b220-f85a83a2af58 w13 associate Restoration funds letter.pdf
+- ri.actions.main.action.3922bcb2-3273-4c24-bc99-4ab5b1e6eedf w13 associate Feld Architecture PLLC proposal.pdf
+- ri.actions.main.action.2325281e-2537-4f46-839c-44f30f5f8927 w13 associate Hudson Floor Restoration proposal.pdf
+- ri.actions.main.action.8270aae5-4181-41f1-ae1b-fe2db2538178 w13 associate Westside Plaster & Paint proposal.pdf
+- ri.actions.main.action.692290e7-6376-4bda-8a0f-a4a876da966e w13 associate Carroll Stair & Millwork proposal.pdf
+- ri.actions.main.action.af26ef36-cdfb-4e49-9fff-1b67d2331788 w13 associate Broadway Carpet & Runner proposal.pdf
+- ri.actions.main.action.674f1058-ff62-44c6-94f5-7d88e5b13672 set-handoff-access: Connor McPhail Decide on workspace:5fe292ef980e60067602b386c161873e7406615dce569fc60629d2102471390c (main)
+- (commit) React ferro/w13-case 7583c89469d81e0e2fcac42a55f4b0502f1e6aa7
+- ri.pull-request.main.pull-request.d08e531a-4c1e-4deb-9ceb-fc26cc26dc34 React PR: app -> w13 workspace:5fe292ef980e60067602b386c161873e7406615dce569fc60629d2102471390c
+- 2026-09-28 Core PR 1fa7e8ab CI SUCCEEDED (job ri.jemma.main.job.00000003-22b2-f32a-9ff7-10e356d69bd8); merged by Ferro, master -> b2b512b2ae8cbd3aa1c48bfcf2243375450b845a (no release tag; test-only)
+- 2026-09-28 React PR d08e531a CI SUCCEEDED (job ri.jemma.main.job.00000003-22b4-4dab-98ef-0b1d4e5b18f2); merged by Ferro, master -> 7583c89469d81e0e2fcac42a55f4b0502f1e6aa7
+- (tag) React 0.1.0-handoff.24 -> 7583c89469d81e0e2fcac42a55f4b0502f1e6aa7 (app -> w13)
+- 2026-09-28 w13 first turn on 1.7.9: quote requests only to Feld (assessment) and Carroll (railing); plan rev 1 Ready 'Restoration assessment and loft railing safety repair' $2,700.00. Notice activity still old wording: receive-move-out-notice not on Auto upgrade
+- 2026-09-28 w14 showcase case (1.7.9, all 11 actions on Auto upgrade): workspace:433cce6e773072edba75357c931ed5c14efe80c180dbefff8c7258217c3b13ac / handoff:7b07bac353cd156ccc42d587f85408abdf4a3886af54e91e76bfc0767d8c5a64
+- ri.actions.main.action.85186f0f-31ea-4c8e-9dc2-64fb1938d61a w14 create workspace
+- ri.actions.main.action.3ce204b0-9ab7-4645-97b2-f81511f2b14c w14 receive notice
+- ri.actions.main.action.c7e88d38-7289-4b93-8fa3-c9d3aad824ea w14 associate Lease, 142 West 88th Street.pdf
+- ri.actions.main.action.bff4cc03-4860-4e18-bac3-aaf2597254b5 w14 associate Laura Brenner email, June 11, 2024.pdf
+- ri.actions.main.action.1606ecb0-d4fc-4412-9bfc-50bb84aadaee w14 associate Move-out walk-through, September 24, 2026.pdf
+- ri.actions.main.action.30fae105-9531-4b75-a880-2621f65830d7 w14 associate Condition and maintenance history.pdf
+- ri.actions.main.action.fcfbbebe-c402-471f-b78b-c6dc22b5ece2 w14 associate Eleanor Whitcomb email, September 25, 2026.pdf
+- ri.actions.main.action.39e5dd0e-146f-4b69-85bb-f159ca5bd3a1 w14 associate Feld Architecture, kitchen repair sign-off.pdf
+- ri.actions.main.action.397096c4-d289-4921-891f-4b388fcc4225 w14 associate Access arrangements letter.pdf
+- ri.actions.main.action.3fd4fcd0-f7a1-4443-80ba-fbfdc354b384 w14 associate Restoration funds letter.pdf
+- ri.actions.main.action.0bb2a5ec-cbf9-4a4c-8ec7-9dfc22b8729a w14 associate Feld Architecture PLLC proposal.pdf
+- ri.actions.main.action.d6dd8465-6135-4d77-a93f-169d79ce552d w14 associate Hudson Floor Restoration proposal.pdf
+- ri.actions.main.action.92d29907-5ace-4d8c-bc65-de6c6ddbddcd w14 associate Westside Plaster & Paint proposal.pdf
+- ri.actions.main.action.174a7e6e-848a-497a-b750-2675bab34f18 w14 associate Carroll Stair & Millwork proposal.pdf
+- ri.actions.main.action.0641cf29-2b43-43c8-925d-db04700fc568 w14 associate Broadway Carpet & Runner proposal.pdf
+- ri.actions.main.action.551c66ad-1fa5-4691-a1a1-287489111015 set-handoff-access: Connor McPhail Decide on workspace:433cce6e773072edba75357c931ed5c14efe80c180dbefff8c7258217c3b13ac (main)
+- 2026-09-28 Owen put the remaining six function-backed actions (receive notice, create workspace, receive document, associate file, set access, prepare plan) on Auto upgrade at 1.7.9; confirmed by w14 notice wording
+- (commit) React ferro/w14-case ee45e9c321752ee34279322b5eb053b43b69992c
+- ri.pull-request.main.pull-request.909b29cc-a09a-45d7-a57a-d410e7e97d35 React PR: app -> w14 workspace:433cce6e773072edba75357c931ed5c14efe80c180dbefff8c7258217c3b13ac
+- 2026-09-28 React PR 909b29cc CI SUCCEEDED (job ri.jemma.main.job.00000003-22be-bc68-a55a-4c3d990a072d); merged by Ferro, master -> ee45e9c321752ee34279322b5eb053b43b69992c
+- (tag) React 0.1.0-handoff.25 -> ee45e9c321752ee34279322b5eb053b43b69992c (app -> w14)
+- ri.actions.main.action.2a0bb502-cedc-4e6f-8cfc-b2a542d1c174 set-handoff-access: Connor McPhail Admin on workspace:48d6ea1a383b85931e37e869b34563b2d2fb3faf8a2e40227a78d8b2557bf0c8 (main)
+- ri.actions.main.action.3d6dcc95-474a-47d6-b07b-2a3694de97ab set-handoff-access: Connor McPhail Admin on workspace:4f3a68b3f6d07509b8e4f6004689330096a39cfd50431492768ecdac5e4300eb (main)
+- ri.actions.main.action.80be6b26-26ec-4983-849c-3cceb83d4420 set-handoff-access: Connor McPhail Admin on workspace:5614d7483eef9b6c74c5c18cff0145cf581e8674caa64aa55a2d09ce966f8b5b (main)
+- ri.actions.main.action.a85f9b77-873b-495f-b85c-58098d2492f3 set-handoff-access: Connor McPhail Admin on workspace:6ca159d61ebd95bc56c5483a0a85f68cd666a63eaee173b50439de20688dc8f3 (main)
+- ri.actions.main.action.3465eb6d-d8e2-44a0-90d8-a2b37e9892a3 set-handoff-access: Connor McPhail Admin on workspace:5fe292ef980e60067602b386c161873e7406615dce569fc60629d2102471390c (main)
+- ri.actions.main.action.2968df4f-9722-4969-b338-b0bc72d07b9e set-handoff-access: Connor McPhail Admin on workspace:1adcfc427401c3ba3de3994693fa38bfc8cf296c192bf23655536b4bb12f2c0d (main)
+- ri.actions.main.action.bcea2ae1-7c64-4c11-8a04-de6be26a418f set-handoff-access: Connor McPhail Admin on workspace:7234b7fc6ee4a61bd80aa540dcfa8ddbc7d9e217b67bdf8688d36688c264f02c (main)
+- ri.actions.main.action.3a111880-15d4-4e1d-b255-95cac9e3d85b set-handoff-access: Connor McPhail Admin on workspace:9d9b1d9d4d7fcc5bdcce40c27f14e6ab734a6bc8cc8504628e6f7e5951bfb032 (main)
+- ri.actions.main.action.6c017c84-1ee5-4f1f-91a5-e7e721ef15bc set-handoff-access: Connor McPhail Admin on workspace:433cce6e773072edba75357c931ed5c14efe80c180dbefff8c7258217c3b13ac (main)
+- (commit) React ferro/model-scope 6e15a8bf03c8538d038a580667db4d3a6ec22282
+- ri.pull-request.main.pull-request.c991d8e5-3056-4b9f-9b2a-6ef3dd1925f5 React PR: request api:use-language-models-execute (Case controls planning turns refused 401/403)
+- 2026-09-29 Owen enabled api:use-language-models-execute on the Handoff Developer Console app (Platform SDK)
+- 2026-09-29 React PR c991d8e5 CI SUCCEEDED (job ri.jemma.main.job.00000003-22f7-1b13-8770-46809c1fc60f); merged by Ferro, master -> 6e15a8bf03c8538d038a580667db4d3a6ec22282
+- (tag) React 0.1.0-handoff.26 -> 6e15a8bf03c8538d038a580667db4d3a6ec22282

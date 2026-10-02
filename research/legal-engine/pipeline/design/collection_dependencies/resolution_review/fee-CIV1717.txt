@@ -1,0 +1,395 @@
+ 
+ 
+  
+         
+          
+                 
+                 
+     
+     
+     
+
+     
+
+     
+
+     
+     
+
+     
+     
+ 
+         California Code,  CIV 1717. 
+         
+
+         
+            /* Hide page by default*/
+            html { display : none; }
+         
+
+         // = 0)) {
+                        window.top.location.replace(window.location);
+                        top.location = self.location;
+                    }
+                }
+            }
+            // ]]>
+         
+         
+            /* Hide page by default*/
+            html { display : inline; }
+             // 
+   
+
+     
+        function changePlaceHolder() {
+
+            var x = document.getElementById("billheaderinit_form:quick_search_select_id");
+            var input = document.getElementById("billheaderinit_form:searchall");
+
+            if (x !== null) {
+                if (x.options[0].selected) {
+
+                    input.placeholder = "AB1 or ab 1 or ABX1-1";
+                } else {
+                    input.placeholder = "Search phrase";
+                }
+            }
+
+        }
+     
+     
+ 
+ 
+
+
+              
+             
+
+                 
+                       
+                          skip to content  
+                            home  
+                          accessibility  
+                          FAQ  
+                              feedback  
+                          sitemap  
+                       
+
+                          login 
+                         
+                          x   
+                         
+
+
+                     
+                   
+
+
+
+                  
+                          
+                  
+                 
+                     
+                      
+                               
+                              
+                         
+                              
+                     
+                     
+                  
+                     
+                         
+                               Quick Search: 
+                         
+                          	 Bill Number 
+	 Bill Keyword 
+ 
+                               
+                         
+                       
+
+                   
+         
+         
+         
+       
+
+
+
+         
+          
+   
+   
+     
+       
+         Home  
+       
+         Bill Information  
+
+
+       
+         California Law  
+       
+         Publications  
+
+
+       
+         Other Resources  
+       
+         My Subscriptions  
+       
+         My Favorites  
+       
+     
+   
+   
+  
+ 
+          
+     
+ 
+        
+        
+
+       
+         
+             
+                button {
+                    background-image: url('/resources/images/print_24.gif');
+                    background-size: cover;
+                    width: 24px;
+                    height: 24px;
+                    font-size: 2rem; background-color: transparent;
+                    border: 0px;
+                }
+             
+             
+                function printPopup() {
+                    var lawCode = 'CIV';
+                    var sectionNum = '1717.';
+                    var op_statues = '1987'
+                    var op_chapter = '1080';
+                    var op_section = '1';
+                    var article = '';
+                    var url = "printCodeSectionWindow.xhtml?";
+                    if (lawCode)
+                        url += 'lawCode=' + lawCode;
+                    if (article) {
+                        url += '&article=' + article;
+                        //alert(url);
+                    }
+
+                    if (sectionNum)
+                        url += '§ionNum=' + sectionNum;
+                    if (op_statues)
+                        url += '&op_statues=' + op_statues;
+                    if (op_chapter)
+                        url += '&op_chapter=' + op_chapter;
+                    if (op_section)
+                        url += '&op_section=' + op_section;
+                    printWindow = window.open(url, "wind", "width=680," +
+                            "height=768,		" +
+                            "toolbar=no,		" +
+                            "location=no,		" +
+                            "directories=no,	" +
+                            "status=no,		" +
+                            "menubar=yes,		" +
+                            "scrollbars=yes,	" +
+                            "resizable=yes		"
+                            );
+                    printWindow.focus();
+                }
+             
+ 
+ 
+
+                     
+                         
+                              California Law 
+                                >>
+                             
+                               
+                                >>
+                             
+                             Code Section
+                             
+                         
+                      
+ 
+                  
+                 Code Section 
+                 
+                 
+
+                   
+         
+            function myPopup() {
+
+                window.open("popupMessage.xhtml", "Information", "width=330, height=220, toolbar=no, location=no, directories=no, menubar=no, scrollbars=no, top=270, left=150");
+            }
+
+            function setCode() {
+                //         button = document.getElementById('expertsearchformid:executeID');
+                //              document.getElementById('expertsearchformid:parameterID1').value = document.getElementById('expertsearchformid:toctextcodeid').value;
+                //              document.getElementById('expertsearchformid:parameterID2').value ='2'; //just a value to bypass validation
+                //              button.click();
+                if (document.getElementById('expertsearchformid:toctextcodeid').value == 'CONS') {
+                    document.getElementById('expertsearchformid:articlelblid').style.display = 'inline';
+                    document.getElementById('expertsearchformid:articleid').style.display = 'inline';
+                } else {
+                    document.getElementById('expertsearchformid:articlelblid').style.display = 'none';
+                    document.getElementById('expertsearchformid:articleid').style.display = 'none';
+                    document.getElementById('expertsearchformid:articleid').value = "";
+                }
+            }
+
+          
+     
+
+
+         
+             
+                 
+ 
+ 
+ Code:  	 Select Code 
+	 CONS 
+	 BPC 
+	 CIV 
+	 CCP 
+	 COM 
+	 CORP 
+	 EDC 
+	 ELEC 
+	 EVID 
+	 FAM 
+	 FIN 
+	 FGC 
+	 FAC 
+	 GOV 
+	 HNC 
+	 HSC 
+	 INS 
+	 LAB 
+	 MVC 
+	 PEN 
+	 PROB 
+	 PCC 
+	 PRC 
+	 PUC 
+	 RTC 
+	 SHC 
+	 UIC 
+	 VEH 
+	 WAT 
+	 WIC 
+  Article:   Section:   
+                          
+ 
+                 
+                 
+ 
+ 
+ Code:  	 Select Code 
+	 All 
+	 BPC 
+	 CIV 
+	 CCP 
+	 COM 
+	 CORP 
+	 EDC 
+	 ELEC 
+	 EVID 
+	 FAM 
+	 FIN 
+	 FGC 
+	 FAC 
+	 GOV 
+	 HNC 
+	 HSC 
+	 INS 
+	 LAB 
+	 MVC 
+	 PEN 
+	 PROB 
+	 PCC 
+	 PRC 
+	 PUC 
+	 RTC 
+	 SHC 
+	 UIC 
+	 VEH 
+	 WAT 
+	 WIC 
+  Section:     Keyword(s):   
+                            
+ 
+                 
+             
+             
+             
+         
+
+
+     
+         setCode(); 
+    
+
+      
+
+
+ 
+                 
+                  
+ 
+ 
+
+     
+         Code Search  
+       
+         Text Search  
+       
+      
+ 
+ 
+                 
+                 
+                     
+                         
+ 
+ 
+ Up^  << Previous   Next >>  cross-reference chaptered bills  PDF  |  Add To My Favorites 
+                                  
+
+
+                                   
+ 
+
+                         
+
+                     
+ 
+ 
+
+                          Search Phrase:    
+                          
+ 
+ 
+ 
+
+                          Code Text  
+                                  Civil Code - CIV      DIVISION 3. OBLIGATIONS [1427 - 3273.91]     ( Heading of Division 3 amended by Stats. 1988, Ch. 160, Sec. 14. )        PART 3. OBLIGATIONS IMPOSED BY LAW [1708 - 1725]     ( Part 3 enacted 1872. )         1717.     (a) In any action on a contract, where the contract specifically provides that attorney’s fees and costs, which are incurred to enforce that contract, shall be awarded either to one of the parties or to the prevailing party, then the party who is determined to be the party prevailing on the contract, whether he or she is the party specified in the contract or not, shall be entitled to reasonable attorney’s fees in addition to other costs.  Where a contract provides for attorney’s fees, as set forth above, that provision shall be construed as applying to the entire contract, unless each party
+  was represented by counsel in the negotiation and execution of the contract, and the fact of that representation is specified in the contract.  Reasonable attorney’s fees shall be fixed by the court, and shall be an element of the costs of suit.  Attorney’s fees provided for by this section shall not be subject to waiver by the parties to any contract which is entered into after the effective date of this section. Any provision in any such contract which provides for a waiver of attorney’s fees is void.  (b) (1) The court, upon notice and motion by a party, shall determine who is the party prevailing on the contract for purposes of this section, whether or not the suit proceeds to final judgment. Except as provided in paragraph (2), the party prevailing on the contract shall be the party who recovered a greater relief in the action on the
+  contract. The court may also determine that there is no party prevailing on the contract for purposes of this section.  (2) Where an action has been voluntarily dismissed or dismissed pursuant to a settlement of the case, there shall be no prevailing party for purposes of this section.  Where the defendant alleges in his or her answer that he or she tendered to the plaintiff the full amount to which he or she was entitled, and thereupon deposits in court for the plaintiff, the amount so tendered, and the allegation is found to be true, then the defendant is deemed to be a party prevailing on the contract within the meaning of this section.  Where a deposit has been made pursuant to this section, the court shall, on the application of any party to the action, order the deposit to be invested in an insured, interest-bearing account. Interest on the amount shall be
+  allocated to the parties in the same proportion as the original funds are allocated.  (c) In an action which seeks relief in addition to that based on a contract, if the party prevailing on the contract has damages awarded against it on causes of action not on the contract, the amounts awarded to the party prevailing on the contract under this section shall be deducted from any damages awarded in favor of the party who did not prevail on the contract. If the amount awarded under this section exceeds the amount of damages awarded the party not prevailing on the contract, the net amount shall be awarded the party prevailing on the contract and judgment may be entered in favor of the party prevailing on the contract for that net amount.  (Amended by Stats. 1987, Ch. 1080, Sec. 1.)      
+                          
+ 
+
+                 
+         
+        
+
+ 

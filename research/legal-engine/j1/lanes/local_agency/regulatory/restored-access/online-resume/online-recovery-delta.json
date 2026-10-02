@@ -1,0 +1,59 @@
+{
+  "as_of": "2026-10-01 California local date; retrieval 2026-10-02 UTC",
+  "status": "Two action outcomes remain unestablished; online recovery continued beyond prior routes",
+  "new_positive_retrievals": [
+    {
+      "source": "https://www.treasurer.ca.gov/sitemap.xml",
+      "files": "treasurer-sitemap and treasurer-sitemap-1.xml through -11.xml",
+      "finding": "Complete published sitemap contains relevant GoGreen document landing nodes, including July 24 readoption and August 18 adoption package. No permanent certificate disposition identified among these entries."
+    },
+    {
+      "source": "https://oehha.ca.gov/sitemap.xml",
+      "files": "oehha-sitemap-live.html, oehha-sitemap-live-1.html, oehha-sitemap-live-2.html",
+      "finding": "Live browser recovered both complete map parts, including 2026 notices. Target proposal page last-modified June 18 2026. Exact chemical/section entries and all 2026 Proposition 65 notice entries examined; no target final adoption/outcome located. Map contains invalid internal host aliases; actual official-host paths used."
+    },
+    {
+      "source": "https://oal.ca.gov/wp-json/wp/v2/media?search=2026-0826&per_page=100",
+      "files": "oal-media-live.html",
+      "finding": "Browser reached JSON response rest_cannot_access: Only authenticated users can access the REST API; status 401."
+    },
+    {
+      "source": "https://oal.ca.gov/wp-sitemap.xml",
+      "files": "oal-sitemap-live.html",
+      "finding": "Browser retrieved generated sitemap shell with no URL rows."
+    },
+    {
+      "source": "https://www.treasurer.ca.gov/caeatfa/cheef/sblp/regulations/index.asp",
+      "files": "gg-legacy-index, gg-legacy-root",
+      "finding": "Both legacy index routes redirect to already examined current Business regulations page, not a separate historical document repository."
+    },
+    {
+      "source": "https://oal.ca.gov/sitemap.xml",
+      "files": "oal-root-sitemap-live.html, oal-page-sitemap-live.html",
+      "finding": "Browser recovered root index and full page sitemap. Relevant routes resolve to known recent-actions, submitted rules, effective-date tables, and notice-register pages. October 2026 register page is not listed; no separate action-outcome report page found."
+    },
+    {
+      "source": "https://oal.ca.gov/?s=2026-0826-02",
+      "files": "oal-action-search-live.html",
+      "finding": "Live WordPress search finds only the known recent-actions page for this file number, not an endorsed attachment or disposition page."
+    }
+  ],
+  "other_attempts": [
+    "Treasurer 2026 legacy directory and public files directory return 404.",
+    "OAL root search, media REST, alternate rest_route and RSS direct requests return 403; browser recovery distinguished REST 401 from that transport result.",
+    "Westlaw official search endpoints inaccessible to web tool; new indexed searches did not identify target final history.",
+    "October 2 Notice Register 40 is not yet linked on official online index (California local date still October 1); direct PDF attempt 403, no outcome conclusion.",
+    "Internet Archive CDX requests for the two agency document prefixes timed out; no archive-status inference."
+  ],
+  "selection_delta": {
+    "GoGreen": "Retain direct multifamily/disaster repair-financing scope from operating-connection-delta.json. Permanent six-section outcome/version unresolved.",
+    "OEHHA": "Retain conditional chemical-use/exposure connection from actual ISOR. Actual disposition and approved scope of two-entry 25705 amendment unresolved."
+  },
+  "external_contact": "Not authorized and not performed. Prior unsent draft is not a current next action.",
+  "canonical_edits": false,
+  "ongoing_decisions": {
+    "GoGreen": "Which actual OAL disposition and final six-section package applies to 2026-0826-02C?",
+    "OEHHA": "Which actual OAL disposition and final two-chemical amendment applies to 2026-0810-01?"
+  },
+  "conclusion": "The concrete operating selection connections are established. These online routes did not supply the two action outcomes. Neither pending status nor withdrawal nor approval is inferred. This is an unfinished source-selection result, not a claim that online recovery is impossible."
+}

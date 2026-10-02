@@ -1,0 +1,340 @@
+{
+  "cases": [
+    {
+      "id": "d001",
+      "expected": "YES",
+      "reason": "The chapter expressly assigns meanings, including premises and records.",
+      "edge_case": "inclusive_and_exclusion_definition",
+      "downstream_failure": "Missing this assigned meaning prevents the agent from recovering and interpreting a necessary definition. Case-specific edge: inclusive_and_exclusion_definition."
+    },
+    {
+      "id": "d002",
+      "expected": "YES",
+      "reason": "Defined in section 1005.3 is operative incorporation; actual extraction still requires retrieving that provision.",
+      "edge_case": "cross_section_incorporation",
+      "downstream_failure": "Missing this assigned meaning prevents the agent from recovering and interpreting a necessary definition. Case-specific edge: cross_section_incorporation."
+    },
+    {
+      "id": "d003",
+      "expected": "YES",
+      "reason": "The first sentence defines hearing officer; later duties do not erase the definition.",
+      "edge_case": "definition_plus_duty",
+      "downstream_failure": "Missing this assigned meaning prevents the agent from recovering and interpreting a necessary definition. Case-specific edge: definition_plus_duty."
+    },
+    {
+      "id": "d004",
+      "expected": "YES",
+      "reason": "The passage assigns an inclusive meaning to the quoted reasonable-cost expression.",
+      "edge_case": "inclusive_definition",
+      "downstream_failure": "Missing this assigned meaning prevents the agent from recovering and interpreting a necessary definition. Case-specific edge: inclusive_definition."
+    },
+    {
+      "id": "d005",
+      "expected": "NO",
+      "reason": "These are surrender conditions, not an assignment of a term meaning.",
+      "edge_case": "operative_conditions_not_definition",
+      "downstream_failure": "Treating this passage as a definition imports a meaning the passage does not adopt. Case-specific edge: operative_conditions_not_definition."
+    },
+    {
+      "id": "d006",
+      "expected": "NO",
+      "reason": "The rule prohibits a liability inference; it does not define admission or liability.",
+      "edge_case": "negative_operative_language",
+      "downstream_failure": "Treating this passage as a definition imports a meaning the passage does not adopt. Case-specific edge: negative_operative_language."
+    },
+    {
+      "id": "d007",
+      "expected": "NO",
+      "reason": "A retention duty uses defined terms but defines none.",
+      "edge_case": "defined_term_use_only",
+      "downstream_failure": "Treating this passage as a definition imports a meaning the passage does not adopt. Case-specific edge: defined_term_use_only."
+    },
+    {
+      "id": "d008",
+      "expected": "NO",
+      "reason": "The Court reports petitioners proposed reading; this passage does not adopt it as a definition.",
+      "edge_case": "reported_argument_not_adopted",
+      "downstream_failure": "Treating this passage as a definition imports a meaning the passage does not adopt. Case-specific edge: reported_argument_not_adopted."
+    },
+    {
+      "id": "d009",
+      "expected": "YES",
+      "reason": "Act names the Electronic Fund Transfer Act in this regulatory enforcement reference.",
+      "edge_case": "same_sense_cross_section",
+      "downstream_failure": "Rejecting this same-sense use disconnects relevant interpretive evidence. Case-specific edge: same_sense_cross_section."
+    },
+    {
+      "id": "d010",
+      "expected": "NO",
+      "reason": "Here act means conduct to be performed, not the Electronic Fund Transfer Act.",
+      "edge_case": "homonym",
+      "downstream_failure": "Joining these different senses gives the selected use an incorrect meaning. Case-specific edge: homonym."
+    },
+    {
+      "id": "d011",
+      "expected": "NO",
+      "reason": "Provisional credit is an account bookkeeping amount, not a right to defer payment.",
+      "edge_case": "financial_homonym",
+      "downstream_failure": "Joining these different senses gives the selected use an incorrect meaning. Case-specific edge: financial_homonym."
+    },
+    {
+      "id": "d012",
+      "expected": "YES",
+      "reason": "State is the geographic jurisdiction sense, not a condition or assertion.",
+      "edge_case": "same_sense_geographic",
+      "downstream_failure": "Rejecting this same-sense use disconnects relevant interpretive evidence. Case-specific edge: same_sense_geographic."
+    },
+    {
+      "id": "d013",
+      "expected": "YES",
+      "reason": "Person refers to an individual or organizational rights-holder, not grammatical person. This is semantic compatibility, not importation of Regulation E governing scope.",
+      "edge_case": "meaning_not_governing_scope",
+      "downstream_failure": "Rejecting this same-sense use disconnects relevant interpretive evidence. Case-specific edge: meaning_not_governing_scope."
+    },
+    {
+      "id": "d014",
+      "expected": "YES",
+      "reason": "The selected expression is the very role whose supplied definition specifies impartiality and selection.",
+      "edge_case": "express_definition_use",
+      "downstream_failure": "Rejecting this same-sense use disconnects relevant interpretive evidence. Case-specific edge: express_definition_use."
+    },
+    {
+      "id": "d015",
+      "expected": "NO",
+      "reason": "The selected Act is the Electronic Signatures in Global and National Commerce Act, not EFTA.",
+      "edge_case": "same_word_different_named_statute",
+      "downstream_failure": "Joining these different senses gives the selected use an incorrect meaning. Case-specific edge: same_word_different_named_statute."
+    },
+    {
+      "id": "d016",
+      "expected": "NO",
+      "reason": "Present state of a thing denotes condition, not a geographic jurisdiction. This is the Court’s own grammatical reasoning.",
+      "edge_case": "geographic_vs_condition",
+      "downstream_failure": "Joining these different senses gives the selected use an incorrect meaning. Case-specific edge: geographic_vs_condition."
+    },
+    {
+      "id": "d017",
+      "expected": "YES",
+      "reason": "The candidate expressly excuses storage payment under its dwelling and two-day conditions.",
+      "edge_case": "express_notwithstanding",
+      "downstream_failure": "Missing this qualification leaves the unqualified duty in force in cases the text excludes. Case-specific edge: express_notwithstanding."
+    },
+    {
+      "id": "d018",
+      "expected": "YES",
+      "reason": "Formal pleadings do not trigger the initial-communication notice duty.",
+      "edge_case": "trigger_exclusion",
+      "downstream_failure": "Missing this qualification leaves the unqualified duty in force in cases the text excludes. Case-specific edge: trigger_exclusion."
+    },
+    {
+      "id": "d019",
+      "expected": "YES",
+      "reason": "The candidate excuses provisional credit upon either specified condition.",
+      "edge_case": "nested_exception",
+      "downstream_failure": "Missing this qualification leaves the unqualified duty in force in cases the text excludes. Case-specific edge: nested_exception."
+    },
+    {
+      "id": "d020",
+      "expected": "YES",
+      "reason": "The chapter surrender duty is excluded when the specified other procedure or occupancy applies.",
+      "edge_case": "chapter_scope_exclusion",
+      "downstream_failure": "Missing this qualification leaves the unqualified duty in force in cases the text excludes. Case-specific edge: chapter_scope_exclusion."
+    },
+    {
+      "id": "d021",
+      "expected": "NO",
+      "reason": "Authorized electronic form satisfies the disclosure duty; it does not excuse disclosure.",
+      "edge_case": "alternative_satisfaction",
+      "downstream_failure": "Treating this clause as an exception wrongly permits omission of the original duty. Case-specific edge: alternative_satisfaction."
+    },
+    {
+      "id": "d022",
+      "expected": "NO",
+      "reason": "The admission rule does not excuse the collectors notice duty.",
+      "edge_case": "separate_protection",
+      "downstream_failure": "Treating this clause as an exception wrongly permits omission of the original duty. Case-specific edge: separate_protection."
+    },
+    {
+      "id": "d023",
+      "expected": "NO",
+      "reason": "Liability and remedies enforce the surrender duty rather than narrow it.",
+      "edge_case": "remedy_not_exception",
+      "downstream_failure": "Treating this clause as an exception wrongly permits omission of the original duty. Case-specific edge: remedy_not_exception."
+    },
+    {
+      "id": "d024",
+      "expected": "NO",
+      "reason": "Review of own records is a conditionally sufficient way to investigate, not an excuse from investigation or its time limits.",
+      "edge_case": "sufficient_method_not_exception",
+      "downstream_failure": "Treating this clause as an exception wrongly permits omission of the original duty. Case-specific edge: sufficient_method_not_exception."
+    },
+    {
+      "id": "d025",
+      "expected": "YES",
+      "reason": "The expressly cross-referenced ten-business-day investigation time becomes twenty for the stated transfer.",
+      "edge_case": "duration_extension",
+      "downstream_failure": "Missing this modifier computes the wrong due date once its conditions are established. Case-specific edge: duration_extension."
+    },
+    {
+      "id": "d026",
+      "expected": "YES",
+      "reason": "The candidate substitutes ninety days for the forty-five-day investigation period under the listed conditions.",
+      "edge_case": "conditional_extension",
+      "downstream_failure": "Missing this modifier computes the wrong due date once its conditions are established. Case-specific edge: conditional_extension."
+    },
+    {
+      "id": "d027",
+      "expected": "YES",
+      "reason": "For the specified information-based error the sixty-day notice clock runs from sending the requested information.",
+      "edge_case": "trigger_replacement",
+      "downstream_failure": "Missing this modifier computes the wrong due date once its conditions are established. Case-specific edge: trigger_replacement."
+    },
+    {
+      "id": "d028",
+      "expected": "YES",
+      "reason": "The all-codes last-day holiday rule conditionally extends this statutory request period. No date calculation or holiday determination is requested.",
+      "edge_case": "holiday_adjustment",
+      "downstream_failure": "Missing this modifier computes the wrong due date once its conditions are established. Case-specific edge: holiday_adjustment."
+    },
+    {
+      "id": "d029",
+      "expected": "NO",
+      "reason": "The extension replaces ten with twenty, not the independent three-business-day reporting period.",
+      "edge_case": "nearby_wrong_deadline",
+      "downstream_failure": "Applying this candidate changes the wrong duty’s deadline. Case-specific edge: nearby_wrong_deadline."
+    },
+    {
+      "id": "d030",
+      "expected": "NO",
+      "reason": "The written-dispute cessation rule does not extend the five-day notice deadline.",
+      "edge_case": "different_duty",
+      "downstream_failure": "Applying this candidate changes the wrong duty’s deadline. Case-specific edge: different_duty."
+    },
+    {
+      "id": "d031",
+      "expected": "NO",
+      "reason": "The pickup period does not alter the five-day cost-demand period.",
+      "edge_case": "actor_and_trigger_change",
+      "downstream_failure": "Applying this candidate changes the wrong duty’s deadline. Case-specific edge: actor_and_trigger_change."
+    },
+    {
+      "id": "d032",
+      "expected": "NO",
+      "reason": "Post-violation damages and presumed reasonable surrender time do not modify the tenants eighteen-day request period.",
+      "edge_case": "post_deadline_remedy",
+      "downstream_failure": "Applying this candidate changes the wrong duty’s deadline. Case-specific edge: post_deadline_remedy."
+    },
+    {
+      "id": "d033",
+      "expected": "A",
+      "reason": "Act names the federal statute.",
+      "edge_case": "statutory_name",
+      "downstream_failure": "Selecting a different candidate assigns the wrong actor, object, or legal concept to the selected expression. Case-specific edge: statutory_name."
+    },
+    {
+      "id": "d034",
+      "expected": "B",
+      "reason": "The provision computes time for performing conduct.",
+      "edge_case": "homonym",
+      "downstream_failure": "Selecting a different candidate assigns the wrong actor, object, or legal concept to the selected expression. Case-specific edge: homonym."
+    },
+    {
+      "id": "d035",
+      "expected": "B",
+      "reason": "Debiting reverses a provisional account entry.",
+      "edge_case": "accounting_vs_financing",
+      "downstream_failure": "Selecting a different candidate assigns the wrong actor, object, or legal concept to the selected expression. Case-specific edge: accounting_vs_financing."
+    },
+    {
+      "id": "d036",
+      "expected": "NONE",
+      "reason": "The provision defines financing; neither offered sense does.",
+      "edge_case": "real_no_fit",
+      "downstream_failure": "Selecting a different candidate assigns the wrong actor, object, or legal concept to the selected expression. Case-specific edge: real_no_fit."
+    },
+    {
+      "id": "d037",
+      "expected": "A",
+      "reason": "The express impartial-reviewer definition excludes the other candidate.",
+      "edge_case": "actor_exclusion",
+      "downstream_failure": "Selecting a different candidate assigns the wrong actor, object, or legal concept to the selected expression. Case-specific edge: actor_exclusion."
+    },
+    {
+      "id": "d038",
+      "expected": "B",
+      "reason": "The complete alternatives and aide exclusion are explicit.",
+      "edge_case": "qualified_definition",
+      "downstream_failure": "Selecting a different candidate assigns the wrong actor, object, or legal concept to the selected expression. Case-specific edge: qualified_definition."
+    },
+    {
+      "id": "d039",
+      "expected": "NONE",
+      "reason": "Here state means condition, which neither offered candidate expresses.",
+      "edge_case": "no_fit_judicial_grammar",
+      "downstream_failure": "Selecting a different candidate assigns the wrong actor, object, or legal concept to the selected expression. Case-specific edge: no_fit_judicial_grammar."
+    },
+    {
+      "id": "d040",
+      "expected": "A",
+      "reason": "The provision expressly distinguishes personal-property owner from landlord.",
+      "edge_case": "property_and_actor_distinction",
+      "downstream_failure": "Selecting a different candidate assigns the wrong actor, object, or legal concept to the selected expression. Case-specific edge: property_and_actor_distinction."
+    },
+    {
+      "id": "d041",
+      "expected": "NO",
+      "reason": "The Court expressly states it did not agree to address that alternative.",
+      "edge_case": "issue_reserved",
+      "downstream_failure": "Accepting this claim promotes an unsupported proposition into operating guidance. Case-specific edge: issue_reserved."
+    },
+    {
+      "id": "d042",
+      "expected": "NO",
+      "reason": "The selected text attributes this reading to petitioners, not the Court.",
+      "edge_case": "argument_vs_holding",
+      "downstream_failure": "Accepting this claim promotes an unsupported proposition into operating guidance. Case-specific edge: argument_vs_holding."
+    },
+    {
+      "id": "d043",
+      "expected": "YES",
+      "reason": "This is the Court’s expressly narrowed reading; the claim does not generalize to the principal-purpose definition.",
+      "edge_case": "qualified_holding",
+      "downstream_failure": "Rejecting supported evidence conceals a relevant qualified proposition. Case-specific edge: qualified_holding."
+    },
+    {
+      "id": "d044",
+      "expected": "YES",
+      "reason": "The text directly states this exclusion and its limited purpose.",
+      "edge_case": "scope_qualified_claim",
+      "downstream_failure": "Rejecting supported evidence conceals a relevant qualified proposition. Case-specific edge: scope_qualified_claim."
+    },
+    {
+      "id": "d045",
+      "expected": "NO",
+      "reason": "The text requires the property to have remained in the dwelling; the universal offsite claim drops that condition.",
+      "edge_case": "missing_material_condition",
+      "downstream_failure": "Accepting this claim promotes an unsupported proposition into operating guidance. Case-specific edge: missing_material_condition."
+    },
+    {
+      "id": "d046",
+      "expected": "YES",
+      "reason": "Subdivision (b)(2) explicitly caps the actually incurred storage component.",
+      "edge_case": "component_specific_cap",
+      "downstream_failure": "Rejecting supported evidence conceals a relevant qualified proposition. Case-specific edge: component_specific_cap."
+    },
+    {
+      "id": "d047",
+      "expected": "YES",
+      "reason": "The claim preserves the stated transfer timing and exact periods replaced.",
+      "edge_case": "conditional_temporal_rule",
+      "downstream_failure": "Rejecting supported evidence conceals a relevant qualified proposition. Case-specific edge: conditional_temporal_rule."
+    },
+    {
+      "id": "d048",
+      "expected": "NO",
+      "reason": "Paragraph (2) expressly excludes consumer fraud.",
+      "edge_case": "express_exclusion",
+      "downstream_failure": "Accepting this claim promotes an unsupported proposition into operating guidance. Case-specific edge: express_exclusion."
+    }
+  ]
+}

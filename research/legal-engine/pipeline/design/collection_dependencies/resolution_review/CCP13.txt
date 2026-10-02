@@ -1,0 +1,214 @@
+California Code,  CCP 13.
+/* Hide page by default*/
+            html { display : none; }
+//<![CDATA[
+
+            if (self === top) {
+                // Show the page
+                document.documentElement.style.display = 'block';
+            } else {
+                // Inside a frame. Replace the frame.
+                var parentUrl = document.referrer;
+                var num = -1;
+                if (parentUrl !== '') {
+
+                    num = parseInt(parentUrl.indexOf('calchannel.granicus.com'));
+
+                    if (!(num >= 0)) {
+                        window.top.location.replace(window.location);
+                        top.location = self.location;
+                    }
+                }
+            }
+            // ]]>
+/* Hide page by default*/
+            html { display : inline; }
+//<![CDATA[
+function faceletsDebug(URL) {day = new Date();id = day.getTime();eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=800,height=600,left = 240,top = 212');"); };(function() { if (typeof jsfFaceletsDebug === 'undefined') { var jsfFaceletsDebug = false; } if (!jsfFaceletsDebug) {var faceletsOrigKeyup = document.onkeyup;document.onkeyup = function(e) { if (window.event) e = window.event; if (String.fromCharCode(e.keyCode) == 'D' & e.shiftKey & e.ctrlKey) faceletsDebug('/faces/codes_displaySection.xhtml?facelets.ui.DebugOutput=1790795349036'); jsfFaceletsDebug = true; if (faceletsOrigKeyup) faceletsOrigKeyup(e); };
+}})();//]]>
+function changePlaceHolder() {
+
+            var x = document.getElementById("billheaderinit_form:quick_search_select_id");
+            var input = document.getElementById("billheaderinit_form:searchall");
+
+            if (x !== null) {
+                if (x.options[0].selected) {
+
+                    input.placeholder = "AB1 or ab 1 or ABX1-1";
+                } else {
+                    input.placeholder = "Search phrase";
+                }
+            }
+
+        }
+skip to content
+home
+accessibility
+FAQ
+feedback
+sitemap
+login
+x
+Quick Search:
+Bill Number
+Bill Keyword
+Home
+Bill Information
+California Law
+Publications
+Other Resources
+My Subscriptions
+My Favorites
+button {
+                    background-image: url('/resources/images/print_24.gif');
+                    background-size: cover;
+                    width: 24px;
+                    height: 24px;
+                    font-size: 2rem; background-color: transparent;
+                    border: 0px;
+                }
+function printPopup() {
+                    var lawCode = 'CCP';
+                    var sectionNum = '13.';
+                    var op_statues = '1872'
+                    var op_chapter = '';
+                    var op_section = '';
+                    var article = '';
+                    var url = "printCodeSectionWindow.xhtml?";
+                    if (lawCode)
+                        url += 'lawCode=' + lawCode;
+                    if (article) {
+                        url += '&article=' + article;
+                        //alert(url);
+                    }
+
+                    if (sectionNum)
+                        url += '&sectionNum=' + sectionNum;
+                    if (op_statues)
+                        url += '&op_statues=' + op_statues;
+                    if (op_chapter)
+                        url += '&op_chapter=' + op_chapter;
+                    if (op_section)
+                        url += '&op_section=' + op_section;
+                    printWindow = window.open(url, "wind", "width=680," +
+                            "height=768,		" +
+                            "toolbar=no,		" +
+                            "location=no,		" +
+                            "directories=no,	" +
+                            "status=no,		" +
+                            "menubar=yes,		" +
+                            "scrollbars=yes,	" +
+                            "resizable=yes		"
+                            );
+                    printWindow.focus();
+                }
+California Law
+>>
+>>
+Code Section
+Code Section
+function myPopup() {
+
+                window.open("popupMessage.xhtml", "Information", "width=330, height=220, toolbar=no, location=no, directories=no, menubar=no, scrollbars=no, top=270, left=150");
+            }
+
+            function setCode() {
+                //         button = document.getElementById('expertsearchformid:executeID');
+                //              document.getElementById('expertsearchformid:parameterID1').value = document.getElementById('expertsearchformid:toctextcodeid').value;
+                //              document.getElementById('expertsearchformid:parameterID2').value ='2'; //just a value to bypass validation
+                //              button.click();
+                if (document.getElementById('expertsearchformid:toctextcodeid').value == 'CONS') {
+                    document.getElementById('expertsearchformid:articlelblid').style.display = 'inline';
+                    document.getElementById('expertsearchformid:articleid').style.display = 'inline';
+                } else {
+                    document.getElementById('expertsearchformid:articlelblid').style.display = 'none';
+                    document.getElementById('expertsearchformid:articleid').style.display = 'none';
+                    document.getElementById('expertsearchformid:articleid').value = "";
+                }
+            }
+Code:
+Select Code
+CONS
+BPC
+CIV
+CCP
+COM
+CORP
+EDC
+ELEC
+EVID
+FAM
+FIN
+FGC
+FAC
+GOV
+HNC
+HSC
+INS
+LAB
+MVC
+PEN
+PROB
+PCC
+PRC
+PUC
+RTC
+SHC
+UIC
+VEH
+WAT
+WIC
+Article:
+Section:
+Code:
+Select Code
+All
+BPC
+CIV
+CCP
+COM
+CORP
+EDC
+ELEC
+EVID
+FAM
+FIN
+FGC
+FAC
+GOV
+HNC
+HSC
+INS
+LAB
+MVC
+PEN
+PROB
+PCC
+PRC
+PUC
+RTC
+SHC
+UIC
+VEH
+WAT
+WIC
+Section:
+Keyword(s):
+setCode();
+Code Search
+Text Search
+Up^
+<< Previous
+Next >>
+cross-reference chaptered bills
+PDF
+|
+Add To My Favorites
+Search Phrase:
+Code Text
+Code of Civil Procedure - CCP
+PRELIMINARY PROVISIONS
+( Preliminary Provisions enacted 1872. )
+13.
+Whenever any act of a secular nature, other than a work of necessity or mercy, is appointed by law or contract to be performed upon a particular day, which day falls upon a holiday, such act may be performed upon the next business day with the same effect as if it had been performed upon the day appointed.
+(Enacted 1872.)

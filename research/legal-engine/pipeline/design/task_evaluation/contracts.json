@@ -1,0 +1,111 @@
+{
+  "version": "focused-judgments-dev-1",
+  "status": "development; not accepted for routine use",
+  "tasks": {
+    "definition_present": {
+      "primitive": "noul",
+      "instructions": "Does this passage define a term?",
+      "fields": [
+        "passage"
+      ],
+      "source_fields": [
+        "passage"
+      ],
+      "preparation": "Select complete defining or operative language, including the lead-in. A heading or source label is not the passage.",
+      "permits": "Identify a passage for definition extraction; a negative concerns only the selected passage, not the source universe.",
+      "truth_boundary": "YES when the selected passage assigns a meaning to at least one term, expressly or by operative incorporation of a definition elsewhere. Mere use, examples without an assigned meaning, and a reported proposal not adopted by the passage are NO. The object is the passage, not an implicit selected term. Incorporation requires retrieval before extracting the actual meaning.",
+      "criteria": {
+        "true": "The passage assigns a meaning to a term, directly or by adopting a definition from elsewhere.",
+        "false": "The passage does not assign or adopt a meaning; it only uses, illustrates or reports a proposed definition."
+      }
+    },
+    "candidate_term_use": {
+      "primitive": "noul",
+      "instructions": "Does the selected use expression have the meaning given by the definition?",
+      "fields": [
+        "term",
+        "definition_passage",
+        "use_passage",
+        "use_expression"
+      ],
+      "source_fields": [
+        "definition_passage",
+        "use_passage"
+      ],
+      "preparation": "Select one term occurrence, its complete use context and one complete candidate definition. Establish occurrence identity outside the model payload.",
+      "permits": "Connect a candidate meaning to this use. The agent separately establishes whether the definition legally governs the use.",
+      "truth_boundary": "YES when the selected occurrence conveys the meaning expressed by the supplied definition, even if the passage denies that definition legally applies. Different sense is NO. Resolve which occurrence is selected and recover context before judgment."
+    },
+    "exception_to_requirement": {
+      "primitive": "noul",
+      "instructions": "Does the candidate create an exception to the requirement?",
+      "fields": [
+        "requirement",
+        "candidate"
+      ],
+      "source_fields": [
+        "requirement",
+        "candidate"
+      ],
+      "preparation": "Select one requirement and one candidate with their governing language. Resolve relative references needed to understand their relation before dispatch.",
+      "permits": "Identify a qualification requiring synthesis; does not establish that an exception applies to a particular tenancy.",
+      "truth_boundary": "YES when the candidate removes or narrows the selected duty in stated circumstances. A substitute means that satisfies the same unchanged duty, an additional duty, or a remedy alone is NO. An alternative that expressly excuses the original duty is YES. This is the conditional textual relation, not satisfaction of the condition in a case.",
+      "criteria": {
+        "true": "The candidate excuses or narrows the requirement in stated circumstances.",
+        "false": "The candidate leaves the requirement unchanged, including merely adding a duty, remedy or way to satisfy it."
+      }
+    },
+    "changes_deadline": {
+      "primitive": "noul",
+      "instructions": "Does the candidate change the deadline for this requirement?",
+      "fields": [
+        "requirement",
+        "candidate"
+      ],
+      "source_fields": [
+        "requirement",
+        "candidate"
+      ],
+      "preparation": "Include the requirement's stated deadline and the complete candidate modification, with any necessary governing language.",
+      "permits": "Identify a deadline modifier. Agent establishes applicability and inputs; code computes dates.",
+      "truth_boundary": "YES when the candidate changes the selected requirement’s temporal rule through duration, extension, tolling, holiday adjustment, service addition or trigger replacement. An independent deadline or post-deadline remedy is NO. This judgment establishes the relation; code performs the calculation. Historical amendments need complete version context and are not assumed current.",
+      "criteria": {
+        "true": "The candidate modifies when this requirement is due, including an extension, tolling, adjustment or changed trigger.",
+        "false": "The candidate does not modify when this requirement is due."
+      }
+    },
+    "candidate_meaning": {
+      "primitive": "choice",
+      "instructions": "Which meaning fits the selected use expression?",
+      "fields": [
+        "term",
+        "use_passage",
+        "use_expression"
+      ],
+      "source_fields": [
+        "use_passage"
+      ],
+      "preparation": "Agent supplies distinct candidate meanings as Choice criteria and complete use context. Include a none option when no offered meaning can fit. Resolve overlapping alternatives before dispatch; do not force an exclusive choice between jointly applicable meanings.",
+      "permits": "Select among prepared meanings; does not establish candidate completeness, legal scope or ultimate applicability.",
+      "truth_boundary": "Choose the offered meaning matching the selected use; NONE means no offered meaning fits, not missing evidence. Incomplete context must be recovered before dispatch. Overlapping alternatives require agent separation or independent binary judgments and completed review, not a forced Choice. Actual ambiguity requires completed agent interpretation with independently reviewed reasoning."
+    },
+    "supports_claim": {
+      "primitive": "noul",
+      "instructions": "Does the supplied text support this claim?",
+      "fields": [
+        "claim",
+        "text"
+      ],
+      "source_fields": [
+        "text"
+      ],
+      "preparation": "Supply one claim and complete operative evidence, including qualifications needed to assess it. Keep the agent-authored claim distinct from source text.",
+      "permits": "Assess support for that claim from that evidence. Agent still checks completeness of the resulting legal interpretation.",
+      "truth_boundary": "YES only if the supplied evidence directly states or necessarily implies the complete individual proposition, including its modality and conditions. Mere compatibility, topical overlap or a reported argument not adopted as the source’s conclusion is NO for a claim that the source establishes the rule. A claim explicitly about what someone argued is judged as that different proposition.",
+      "criteria": {
+        "true": "The text states or necessarily implies the claim with its conditions.",
+        "false": "The text does not establish the claim; compatibility or mentioning the subject is insufficient."
+      }
+    }
+  }
+}

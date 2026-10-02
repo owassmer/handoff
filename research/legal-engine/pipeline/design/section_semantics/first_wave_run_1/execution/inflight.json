@@ -1,0 +1,133 @@
+{
+  "case_id": "ca_return.j121+ca_return.j122+ca_return.j123+ca_return.j124+ca_return.j125+ca_return.j126+ca_return.j219+ca_return.j220+ca_return.j225+ca_return.j226+ca_return.j235+ca_return.j236",
+  "request_hash": "1f49aef2f9e398213a5c9b510afa6856ac846fbeb7188fbf4185c711ecc687c5",
+  "started_at": "2026-10-01T18:13:06.461591+00:00",
+  "transport": [
+    {
+      "url": "https://openrouter.ai/api/v1/systemone",
+      "body": {
+        "state": {
+          "selected_text": "(a) Where personal property remains on the premises after a tenancy has terminated and the premises have been vacated by the tenant, the landlord shall give written notice to the tenant and to any other person the landlord reasonably believes to be the owner of the property. If the property consists of records, the tenant shall be presumed to be the owner of the records for the purposes of this chapter.\n(b) The notice shall describe the property in a manner reasonably adequate to permit the owner of the property to identify it. The notice may describe all or a portion of the property, but the limitation of liability provided by Section 1989 does not protect the landlord from any liability arising from the disposition of property not described in the notice except that a trunk, valise, box, or other container which is locked, fastened, or tied in a manner which deters immediate access to its contents may be described as such without describing its contents. The notice shall advise the person to be notified that reasonable costs of storage may be charged before the property is returned, where the property may be claimed, and the date before which the claim must be made. The date specified in the notice shall be a date not less than 15 days after the notice is personally delivered or, if mailed, not less than 18 days after the notice is deposited in the mail.\n(c) The notice shall be personally delivered to the person to be notified or sent by first-class mail, postage prepaid, to the person to be notified at his or her last known address and, if there is reason to believe that the notice sent to that address will not be received by that person, also to any other address known to the landlord where the person may reasonably be expected to receive the notice. If the notice is sent by mail to the former tenant, one copy shall be sent to the premises vacated by the tenant. If the former tenant provided the landlord with the tenant’s email address, the landlord may also send the notice by email.",
+          "governing_section": "(a) The personal property described in the notice shall be released by the landlord to the former tenant or, at the landlord’s option, to any person reasonably believed by the landlord to be its owner if that tenant or other person pays the reasonable cost of storage and takes possession of the property not later than the date specified in the notice for taking possession.\n(b) Where personal\nproperty is not released pursuant to subdivision (a) and the notice stated that the personal property would be sold at a public sale, the landlord shall release the personal property to the former tenant if he or she claims it prior to the time it is sold and pays the reasonable cost of storage, advertising, and sale incurred prior to the time the property is withdrawn from sale.\n(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling."
+        },
+        "model": "typesafe/jev-1.13",
+        "questions": {
+          "ca_return.j121": {
+            "type": "choice",
+            "instructions": "For The date specified in the notice shall be a date, which timing.personal.interval is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+            "criteria": {
+              "INTERVAL": "{'number': 15, 'unit': 'days'}",
+              "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+            }
+          },
+          "ca_return.j122": {
+            "type": "choice",
+            "instructions": "For The date specified in the notice shall be a date, which timing.personal.relation is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+            "criteria": {
+              "FIXED_AFTER": "The event is legally deemed to occur at this interval after the anchor.",
+              "MINIMUM_AFTER": "A minimum interval after the anchor.",
+              "MINIMUM_BEFORE": "A minimum interval before the anchor.",
+              "MAXIMUM_AFTER": "A deadline no later than this interval after the anchor.",
+              "EXPIRES_AFTER": "An authorization expires after this interval, subject to separate exceptions.",
+              "STRICTLY_BEFORE": "Performance must precede the anchor; equality is not enough.",
+              "NO_LATER_THAN": "Performance can occur at the anchor but not later.",
+              "REASONABLE": "A reasonableness standard rather than a fixed elapsed interval.",
+              "PRESUMPTION": "Only a rebuttable presumption, not a fixed rule.",
+              "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+            }
+          },
+          "ca_return.j123": {
+            "type": "choice",
+            "instructions": "For The date specified in the notice shall be a date, which timing.personal.anchor is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+            "criteria": {
+              "ANCHOR": "personal delivery of notice",
+              "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+            }
+          },
+          "ca_return.j124": {
+            "type": "choice",
+            "instructions": "For The date specified in the notice shall be a date, which timing.mail.interval is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+            "criteria": {
+              "INTERVAL": "{'number': 18, 'unit': 'days'}",
+              "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+            }
+          },
+          "ca_return.j125": {
+            "type": "choice",
+            "instructions": "For The date specified in the notice shall be a date, which timing.mail.relation is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+            "criteria": {
+              "FIXED_AFTER": "The event is legally deemed to occur at this interval after the anchor.",
+              "MINIMUM_AFTER": "A minimum interval after the anchor.",
+              "MINIMUM_BEFORE": "A minimum interval before the anchor.",
+              "MAXIMUM_AFTER": "A deadline no later than this interval after the anchor.",
+              "EXPIRES_AFTER": "An authorization expires after this interval, subject to separate exceptions.",
+              "STRICTLY_BEFORE": "Performance must precede the anchor; equality is not enough.",
+              "NO_LATER_THAN": "Performance can occur at the anchor but not later.",
+              "REASONABLE": "A reasonableness standard rather than a fixed elapsed interval.",
+              "PRESUMPTION": "Only a rebuttable presumption, not a fixed rule.",
+              "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+            }
+          },
+          "ca_return.j126": {
+            "type": "choice",
+            "instructions": "For The date specified in the notice shall be a date, which timing.mail.anchor is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+            "criteria": {
+              "ANCHOR": "depositing notice in mail",
+              "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+            }
+          },
+          "ca_return.j219": {
+            "type": "noul",
+            "instructions": "Must notice go to the tenant and to any other person the landlord reasonably believes owns the property, rather than allowing notice to just one of those categories?",
+            "criteria": {
+              "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+              "false": "This proposed field or relation is not established; no opposite is inferred."
+            }
+          },
+          "ca_return.j220": {
+            "type": "noul",
+            "instructions": "If the property consists of records, is the tenant presumed its owner for this chapter, rather than ownership being conclusively transferred?",
+            "criteria": {
+              "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+              "false": "This proposed field or relation is not established; no opposite is inferred."
+            }
+          },
+          "ca_return.j225": {
+            "type": "noul",
+            "instructions": "May a locked, fastened or tied container deterring immediate contents access be described without separately describing its contents?",
+            "criteria": {
+              "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+              "false": "This proposed field or relation is not established; no opposite is inferred."
+            }
+          },
+          "ca_return.j226": {
+            "type": "noul",
+            "instructions": "Does1989 immunity fail to protect disposition of property not described in the notice, subject to the specified closed-container description exception?",
+            "criteria": {
+              "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+              "false": "This proposed field or relation is not established; no opposite is inferred."
+            }
+          },
+          "ca_return.j235": {
+            "type": "noul",
+            "instructions": "When notice is mailed to the former tenant, must one copy also be sent to the vacated premises?",
+            "criteria": {
+              "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+              "false": "This proposed field or relation is not established; no opposite is inferred."
+            }
+          },
+          "ca_return.j236": {
+            "type": "noul",
+            "instructions": "If the former tenant supplied an email address, may notice also be emailed, without replacing the personal-or-mail service requirement?",
+            "criteria": {
+              "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+              "false": "This proposed field or relation is not established; no opposite is inferred."
+            }
+          }
+        }
+      },
+      "body_text": "{\"state\":{\"selected_text\":\"(a) Where personal property remains on the premises after a tenancy has terminated and the premises have been vacated by the tenant, the landlord shall give written notice to the tenant and to any other person the landlord reasonably believes to be the owner of the property. If the property consists of records, the tenant shall be presumed to be the owner of the records for the purposes of this chapter.\\n(b) The notice shall describe the property in a manner reasonably adequate to permit the owner of the property to identify it. The notice may describe all or a portion of the property, but the limitation of liability provided by Section 1989 does not protect the landlord from any liability arising from the disposition of property not described in the notice except that a trunk, valise, box, or other container which is locked, fastened, or tied in a manner which deters immediate access to its contents may be described as such without describing its contents. The notice shall advise the person to be notified that reasonable costs of storage may be charged before the property is returned, where the property may be claimed, and the date before which the claim must be made. The date specified in the notice shall be a date not less than 15 days after the notice is personally delivered or, if mailed, not less than 18 days after the notice is deposited in the mail.\\n(c) The notice shall be personally delivered to the person to be notified or sent by first-class mail, postage prepaid, to the person to be notified at his or her last known address and, if there is reason to believe that the notice sent to that address will not be received by that person, also to any other address known to the landlord where the person may reasonably be expected to receive the notice. If the notice is sent by mail to the former tenant, one copy shall be sent to the premises vacated by the tenant. If the former tenant provided the landlord with the tenant’s email address, the landlord may also send the notice by email.\",\"governing_section\":\"(a) The personal property described in the notice shall be released by the landlord to the former tenant or, at the landlord’s option, to any person reasonably believed by the landlord to be its owner if that tenant or other person pays the reasonable cost of storage and takes possession of the property not later than the date specified in the notice for taking possession.\\n(b) Where personal\\nproperty is not released pursuant to subdivision (a) and the notice stated that the personal property would be sold at a public sale, the landlord shall release the personal property to the former tenant if he or she claims it prior to the time it is sold and pays the reasonable cost of storage, advertising, and sale incurred prior to the time the property is withdrawn from sale.\\n(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"ca_return.j121\":{\"type\":\"choice\",\"instructions\":\"For The date specified in the notice shall be a date, which timing.personal.interval is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.\",\"criteria\":{\"INTERVAL\":\"{'number': 15, 'unit': 'days'}\",\"OTHER_OR_UNRESOLVED\":\"The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed.\"}},\"ca_return.j122\":{\"type\":\"choice\",\"instructions\":\"For The date specified in the notice shall be a date, which timing.personal.relation is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.\",\"criteria\":{\"FIXED_AFTER\":\"The event is legally deemed to occur at this interval after the anchor.\",\"MINIMUM_AFTER\":\"A minimum interval after the anchor.\",\"MINIMUM_BEFORE\":\"A minimum interval before the anchor.\",\"MAXIMUM_AFTER\":\"A deadline no later than this interval after the anchor.\",\"EXPIRES_AFTER\":\"An authorization expires after this interval, subject to separate exceptions.\",\"STRICTLY_BEFORE\":\"Performance must precede the anchor; equality is not enough.\",\"NO_LATER_THAN\":\"Performance can occur at the anchor but not later.\",\"REASONABLE\":\"A reasonableness standard rather than a fixed elapsed interval.\",\"PRESUMPTION\":\"Only a rebuttable presumption, not a fixed rule.\",\"OTHER_OR_UNRESOLVED\":\"The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed.\"}},\"ca_return.j123\":{\"type\":\"choice\",\"instructions\":\"For The date specified in the notice shall be a date, which timing.personal.anchor is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.\",\"criteria\":{\"ANCHOR\":\"personal delivery of notice\",\"OTHER_OR_UNRESOLVED\":\"The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed.\"}},\"ca_return.j124\":{\"type\":\"choice\",\"instructions\":\"For The date specified in the notice shall be a date, which timing.mail.interval is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.\",\"criteria\":{\"INTERVAL\":\"{'number': 18, 'unit': 'days'}\",\"OTHER_OR_UNRESOLVED\":\"The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed.\"}},\"ca_return.j125\":{\"type\":\"choice\",\"instructions\":\"For The date specified in the notice shall be a date, which timing.mail.relation is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.\",\"criteria\":{\"FIXED_AFTER\":\"The event is legally deemed to occur at this interval after the anchor.\",\"MINIMUM_AFTER\":\"A minimum interval after the anchor.\",\"MINIMUM_BEFORE\":\"A minimum interval before the anchor.\",\"MAXIMUM_AFTER\":\"A deadline no later than this interval after the anchor.\",\"EXPIRES_AFTER\":\"An authorization expires after this interval, subject to separate exceptions.\",\"STRICTLY_BEFORE\":\"Performance must precede the anchor; equality is not enough.\",\"NO_LATER_THAN\":\"Performance can occur at the anchor but not later.\",\"REASONABLE\":\"A reasonableness standard rather than a fixed elapsed interval.\",\"PRESUMPTION\":\"Only a rebuttable presumption, not a fixed rule.\",\"OTHER_OR_UNRESOLVED\":\"The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed.\"}},\"ca_return.j126\":{\"type\":\"choice\",\"instructions\":\"For The date specified in the notice shall be a date, which timing.mail.anchor is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.\",\"criteria\":{\"ANCHOR\":\"depositing notice in mail\",\"OTHER_OR_UNRESOLVED\":\"The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed.\"}},\"ca_return.j219\":{\"type\":\"noul\",\"instructions\":\"Must notice go to the tenant and to any other person the landlord reasonably believes owns the property, rather than allowing notice to just one of those categories?\",\"criteria\":{\"true\":\"The selected source establishes this specific proposed field or relation with the stated qualifiers.\",\"false\":\"This proposed field or relation is not established; no opposite is inferred.\"}},\"ca_return.j220\":{\"type\":\"noul\",\"instructions\":\"If the property consists of records, is the tenant presumed its owner for this chapter, rather than ownership being conclusively transferred?\",\"criteria\":{\"true\":\"The selected source establishes this specific proposed field or relation with the stated qualifiers.\",\"false\":\"This proposed field or relation is not established; no opposite is inferred.\"}},\"ca_return.j225\":{\"type\":\"noul\",\"instructions\":\"May a locked, fastened or tied container deterring immediate contents access be described without separately describing its contents?\",\"criteria\":{\"true\":\"The selected source establishes this specific proposed field or relation with the stated qualifiers.\",\"false\":\"This proposed field or relation is not established; no opposite is inferred.\"}},\"ca_return.j226\":{\"type\":\"noul\",\"instructions\":\"Does1989 immunity fail to protect disposition of property not described in the notice, subject to the specified closed-container description exception?\",\"criteria\":{\"true\":\"The selected source establishes this specific proposed field or relation with the stated qualifiers.\",\"false\":\"This proposed field or relation is not established; no opposite is inferred.\"}},\"ca_return.j235\":{\"type\":\"noul\",\"instructions\":\"When notice is mailed to the former tenant, must one copy also be sent to the vacated premises?\",\"criteria\":{\"true\":\"The selected source establishes this specific proposed field or relation with the stated qualifiers.\",\"false\":\"This proposed field or relation is not established; no opposite is inferred.\"}},\"ca_return.j236\":{\"type\":\"noul\",\"instructions\":\"If the former tenant supplied an email address, may notice also be emailed, without replacing the personal-or-mail service requirement?\",\"criteria\":{\"true\":\"The selected source establishes this specific proposed field or relation with the stated qualifiers.\",\"false\":\"This proposed field or relation is not established; no opposite is inferred.\"}}}}",
+      "body_sha256": "6f880cf9095ea6554645b0f3d8c962c24b696e76a4e1adc135d54c63e1348f37"
+    }
+  ]
+}

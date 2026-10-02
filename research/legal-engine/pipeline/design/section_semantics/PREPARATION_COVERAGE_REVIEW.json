@@ -1,0 +1,339 @@
+{
+  "reviewer": "/root/reference_final_audit",
+  "status": "changes_required_before_whole_unit_inference",
+  "review_scope": "Independent source-backed preparation review after freezing whole-unit expectations; no model responses or inference. Author is concurrently correcting drafts; findings bind only snapshots below.",
+  "bindings": {
+    "or_entry": {
+      "preparation_path": "research/legal-engine/pipeline/design/section_semantics/worked_units/history/or_entry.independent_review_snapshot.json",
+      "preparation_sha256": "22f76c4bc262fcc393a2d9e842fb702798dca3692b12fcc6dc048c09144136cb",
+      "expectations_sha256": "bcaf368eeebb60738fa57e9b556c163c73aed8572e0170f52a583e1f3bb30483"
+    },
+    "ca_return": {
+      "preparation_path": "research/legal-engine/pipeline/design/section_semantics/worked_units/history/ca_return.independent_review_snapshot.json",
+      "preparation_sha256": "3a6cb848a964c03764a484521e87a22f982f94d2e8d005dc78dd7dfa8b5895aa",
+      "expectations_sha256": "541df95f3c43a1fd18f3d395eaa1e7e9ba539f9e468d0d56afaa283bf4788ef7"
+    }
+  },
+  "checks": {
+    "exact_evidence_spans": 79,
+    "source_hash_and_slice_failures": 0,
+    "or_jobs": 347,
+    "ca_jobs": 198,
+    "independent_expectation_files_changed": false
+  },
+  "findings": [
+    {
+      "id": "P01",
+      "severity": "blocking",
+      "title": "Incomplete dependency compilation",
+      "affected": "OR O01/O23/O25/O27/O28/O29; CA C01/C03/C04/C05/C13\u2013C19",
+      "finding": "OR j345\u2013347 establish reference roles, not notice/cure procedures. OR90.155/160 methods and clocks, chapter applicability and antiwaiver are not compiled. CA j188 preserves an unspecified holiday exception without the applicable calendar; 1983 notice recipients/content/delivery, 1982 lost property, 1986 care, 1988 sale/proceeds, 1989 other-owner protections, 1991 coordination and substantive1965 conditions are missing or only named.",
+      "correction": "Compile the necessary sourced rules and their links. Do not turn captured references into accepted procedure. Exact calendar calculation and late-return/cost decisions must not require source reconstruction."
+    },
+    {
+      "id": "P02",
+      "severity": "blocking",
+      "title": "Missing connections between otherwise present records",
+      "affected": "OR O03/O09/O12/O17/O18/O19/O26; CA C06/C07/C10/C11",
+      "finding": "No proposed relationship links facility exclusion or space-only limit to entry grants, yard written terms to yard entry, specified allowable times to repair permission, or notice methods to emergency postnotice. General abuse/harassment constraints have no grant-qualifying connection. CA cost-allocation/no-duplicate/rate records lack links to relevant return/payment conditions; premises waiver is linked to the dwelling waiver as overlapping, but not to ordinary storage-payment condition.",
+      "correction": "Add independently judged scope, applicability and qualification edges. Explain exact graph interpretation so isolated waivers cannot operate unconditionally and global constraints cannot disappear."
+    },
+    {
+      "id": "P03",
+      "severity": "high",
+      "title": "Accepted predicates still require rereading source",
+      "affected": "CA tenant_all_costs/owner_own_costs; OR actual_notice_methods",
+      "finding": "Both CA cost records propose the identical predicate: claimant is the actor named in this selected subdivision. This retains a deictic reference instead of tenant-versus-other-owner meaning. OR written notice predicate compresses distinct delivery locations into a listed-method phrase; definitions and section pointers alone do not license which method applies to which actor.",
+      "correction": "Use self-contained predicates with explicit claimant categories and delivery recipients/locations. Runtime fact jobs must operate on accepted meanings, not infer omitted law from source excerpts."
+    },
+    {
+      "id": "P04",
+      "severity": "high",
+      "title": "Choice alternatives overlap or lose the needed answer",
+      "affected": "OR j128; CA j127; OR repair_expiration",
+      "finding": "OR j128 INTERVAL=None and NO_FIXED_INTERVAL describe the same result. CA j127 depositing notice in mail overlaps NOTICE_DISPATCH. Expiration actor menu is built around a person although authorization expires by operation of law; emergency waiver object candidates combine tenant or entry time.",
+      "correction": "Make answer alternatives distinct and include actorless legal consequence where appropriate; split recipient and temporal object. Do not call a duplicate-option disagreement a semantic error."
+    },
+    {
+      "id": "P05",
+      "severity": "high",
+      "title": "Branch conditions and dependency licensing are insufficiently bound",
+      "affected": "OR j306\u2013307; CA j132; relationship jobs generally",
+      "finding": "OR damages jobs mention weekly/nonweekly conditions in option prose but license only number/unit to weekly_floor/other_floor, not an explicit applicability predicate or floor operator. CA j132 licenses both interval/event mappings independently of the granular timing jobs, creating overlapping authority for the same meaning; no consistency rule states what happens if answers conflict. Most relationship jobs require endpoint actor/action/object/modality only, although the question also asserts conditions, timing or scope.",
+      "correction": "Store conditional mappings and amount operator explicitly; either use one audited compound judgment or reconcile duplicated authority. Make readiness depend on the precise fields a relationship asserts, including logical conditions, not merely record identity."
+    },
+    {
+      "id": "P06",
+      "severity": "high",
+      "title": "Generic relation labels leave execution semantics unproven",
+      "affected": "OR repair_expiry_exception/specified_vs_reasonable; CA premises_not_dwelling",
+      "finding": "Labels such as qualifies_authorization_duration, alternative_time_rule and distinct_overlapping_no_cost_rule do not by themselves specify which condition is negated, overridden or inherited. The source-specific question includes more legal meaning than the licensed edge.",
+      "correction": "Specify and review relation semantics and affected field paths. Demonstrate seven-day exception, specified-time enforcement and simultaneous no-cost return without consumer rereading the source or inventing edge behavior."
+    },
+    {
+      "id": "P07",
+      "severity": "medium",
+      "title": "Questions test authored propositions with uneven alternatives",
+      "affected": "Field action/object jobs and relationship jobs",
+      "finding": "Action/object choices usually offer one authored candidate and generic rejection alternatives; many relationship questions package several propositions in a favorable candidate. This can validate a supplied candidate but cannot establish that all missing candidates were discovered. Several choices ask modality for an incomplete selected expression without stating the selected candidate action in state; polarity of obtain-consent versus enter therefore depends on preparer context.",
+      "correction": "Treat performance as candidate validation, not autonomous decomposition. Include explicit selected action in modality state and reject or repair compound/ambiguous candidates. Preserve the separate whole-unit omission denominator."
+    },
+    {
+      "id": "P08",
+      "severity": "blocking_for_completion",
+      "title": "Actual changed-case consumer behavior has not been demonstrated",
+      "affected": "Both changed_case_inputs and runtime_case_job_templates",
+      "finding": "Both preparations have an empty changed_case_inputs list and one generic runtime fact-classification template. No execution has occurred; a prose no-source-access promise does not prove that a consumer can issue all concurrent duties, calculate lawful dates/costs, or ask the right unknown-fact questions.",
+      "correction": "Run varied independently judged cases only after the legal records are complete; record actual input/output and source-access traces. Preserve unknown/disputed facts and account separately for unanswered semantics, incorrect semantics, missing components, missing links and consumer defects."
+    }
+  ],
+  "coverage": {
+    "or_entry": [
+      {
+        "component": "O01",
+        "preparation_status": "missing",
+        "assessment": "Chapter applicability not compiled"
+      },
+      {
+        "component": "O02",
+        "preparation_status": "partial",
+        "assessment": "Definitions present; their application needs bindings"
+      },
+      {
+        "component": "O03",
+        "preparation_status": "partial",
+        "assessment": "Purpose candidates present; grant/scope connections incomplete"
+      },
+      {
+        "component": "O04",
+        "preparation_status": "represented",
+        "assessment": "Service entry and waiver records"
+      },
+      {
+        "component": "O05",
+        "preparation_status": "represented",
+        "assessment": "Inclusive emergency definition"
+      },
+      {
+        "component": "O06",
+        "preparation_status": "partial",
+        "assessment": "Emergency grant/waivers present; object and actor contracts need repair"
+      },
+      {
+        "component": "O07",
+        "preparation_status": "partial",
+        "assessment": "Postnotice trigger/content/interval present; clock and method links incomplete"
+      },
+      {
+        "component": "O08",
+        "preparation_status": "partial",
+        "assessment": "Repair route present; absent/no-consent effect expressed as detached predicate"
+      },
+      {
+        "component": "O09",
+        "preparation_status": "partial",
+        "assessment": "Expiration candidates present; specified-time binding and clock incomplete"
+      },
+      {
+        "component": "O10",
+        "preparation_status": "represented",
+        "assessment": "Proof duty and conjunctive conditions"
+      },
+      {
+        "component": "O11",
+        "preparation_status": "partial",
+        "assessment": "Safeguards and reasonable timing present; executable timing attachment needs confirmation"
+      },
+      {
+        "component": "O12",
+        "preparation_status": "partial",
+        "assessment": "Entry and terms records disconnected"
+      },
+      {
+        "component": "O13",
+        "preparation_status": "represented",
+        "assessment": "Yard definitions"
+      },
+      {
+        "component": "O14",
+        "preparation_status": "represented",
+        "assessment": "Denial and actual-notice link"
+      },
+      {
+        "component": "O15",
+        "preparation_status": "partial",
+        "assessment": "Residual notice and reasonable-time records; computation incomplete"
+      },
+      {
+        "component": "O16",
+        "preparation_status": "represented",
+        "assessment": "Denial prohibition and method relationship"
+      },
+      {
+        "component": "O17",
+        "preparation_status": "partial",
+        "assessment": "Prohibitions present; qualification edges incomplete"
+      },
+      {
+        "component": "O18",
+        "preparation_status": "partial",
+        "assessment": "Exclusion present but no scope application to all grants"
+      },
+      {
+        "component": "O19",
+        "preparation_status": "partial",
+        "assessment": "Space-only record not bound to grants"
+      },
+      {
+        "component": "O20",
+        "preparation_status": "represented",
+        "assessment": "Residual access alternatives and extended-absence route"
+      },
+      {
+        "component": "O21",
+        "preparation_status": "represented",
+        "assessment": "Government safe harbor conditions"
+      },
+      {
+        "component": "O22",
+        "preparation_status": "partial",
+        "assessment": "Remedy alternatives/cumulative damages present; procedural safeguards unresolved"
+      },
+      {
+        "component": "O23",
+        "preparation_status": "missing",
+        "assessment": "Only captured procedure/reference role"
+      },
+      {
+        "component": "O24",
+        "preparation_status": "partial",
+        "assessment": "Remedies present; conditional floor licenses incomplete"
+      },
+      {
+        "component": "O25",
+        "preparation_status": "missing",
+        "assessment": "Only captured procedure/reference role"
+      },
+      {
+        "component": "O26",
+        "preparation_status": "partial",
+        "assessment": "Methods/deemed service present; recipient detail and all notice links incomplete"
+      },
+      {
+        "component": "O27",
+        "preparation_status": "missing",
+        "assessment": "No complete day/hour computation"
+      },
+      {
+        "component": "O28",
+        "preparation_status": "missing",
+        "assessment": "No compiled written-service alternatives and safeguards"
+      },
+      {
+        "component": "O29",
+        "preparation_status": "missing",
+        "assessment": "Antiwaiver absent"
+      }
+    ],
+    "ca_return": [
+      {
+        "component": "C01",
+        "preparation_status": "partial",
+        "assessment": "Optional scope/exclusions present; lost-property route absent"
+      },
+      {
+        "component": "C02",
+        "preparation_status": "represented",
+        "assessment": "Definitions present, including investigation exception"
+      },
+      {
+        "component": "C03",
+        "preparation_status": "missing",
+        "assessment": "No complete notice recipients/content/description rules"
+      },
+      {
+        "component": "C04",
+        "preparation_status": "partial",
+        "assessment": "15/18-day mapping present; delivery/content/calendar missing"
+      },
+      {
+        "component": "C05",
+        "preparation_status": "missing",
+        "assessment": "Storage/care not compiled"
+      },
+      {
+        "component": "C06",
+        "preparation_status": "partial",
+        "assessment": "Core mandatory-return conditions present; cost qualifications disconnected"
+      },
+      {
+        "component": "C07",
+        "preparation_status": "partial",
+        "assessment": "Other-owner option present; cost identity/bindings incomplete"
+      },
+      {
+        "component": "C08",
+        "preparation_status": "partial",
+        "assessment": "Late-return conjunction present; cost categories compound and dependencies incomplete"
+      },
+      {
+        "component": "C09",
+        "preparation_status": "represented",
+        "assessment": "Two-day nested OR within AND, distinct release/fee effects and recipient distinction"
+      },
+      {
+        "component": "C10",
+        "preparation_status": "partial",
+        "assessment": "Cost scope records present with deictic claimant and no return links"
+      },
+      {
+        "component": "C11",
+        "preparation_status": "partial",
+        "assessment": "Broader premises waiver/rate present; relation to payment incomplete"
+      },
+      {
+        "component": "C12",
+        "preparation_status": "partial",
+        "assessment": "Cost categories stated in predicates but no complete charge records"
+      },
+      {
+        "component": "C13",
+        "preparation_status": "missing",
+        "assessment": "Disposal route/700 boundary not compiled"
+      },
+      {
+        "component": "C14",
+        "preparation_status": "missing",
+        "assessment": "Sale notice schedule absent"
+      },
+      {
+        "component": "C15",
+        "preparation_status": "missing",
+        "assessment": "Proceeds obligations absent"
+      },
+      {
+        "component": "C16",
+        "preparation_status": "partial",
+        "assessment": "Former-tenant immunity only; other-owner/disposal protection not compiled"
+      },
+      {
+        "component": "C17",
+        "preparation_status": "missing",
+        "assessment": "Combined notice permission absent"
+      },
+      {
+        "component": "C18",
+        "preparation_status": "partial",
+        "assessment": "1965 route name/exclusion only; conditions absent"
+      },
+      {
+        "component": "C19",
+        "preparation_status": "partial",
+        "assessment": "First/last-day candidate only; holidays and terminal-Saturday law absent"
+      }
+    ]
+  },
+  "coverage_status_meaning": "represented means an appropriate proposed job/record exists, not that Jev established it or downstream execution passed. partial/missing are material to completeness; no aggregate passing score is assigned.",
+  "independent_denominator_addendum": "Preparation includes the applicable statutory definition of good faith (ORS90.100(21), honesty in fact), which the frozen OR expectations cited through full90.100 but did not explicitly articulate. This is a source-supported additional component to preserve in the completeness denominator, not a reason to change any expected case outcome. Expectations are unchanged.",
+  "next_review": "Review corrected exact hashes and condition/relationship licenses, then actual inference and consumer outcomes. These drafts receive no completion acceptance."
+}

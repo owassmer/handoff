@@ -1,0 +1,433 @@
+  
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                       
+  num_totalhits ) {
+	  end = num_totalhits ;
+	}
+	if ( start   num_totalhits ) end = num_totalhits ;
+   document.BrowseForm.StartIndex.value = start ;
+	document.BrowseForm.EndIndex.value = end ;
+	requestBrowse( ) ;
+}
+
+function newSearch(){
+   var sURL = cmd_action.replace("Action?","DoMenuRequest?");
+   location.href = sURL;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Called by getNext and getPrevious to submit form.
+function requestBrowse( ) {
+   start = parseInt(document.BrowseForm.StartIndex.value);
+   end = parseInt(document.BrowseForm.EndIndex.value);
+   threshold = parseInt(document.BrowseForm.Threshold.value);
+   noOfHits = parseInt(document.BrowseForm.NoOfHits.value);
+
+   var sURL = cmd_action;
+   sURL += "&CMD_(BrowseRequest)&NoOfHits="+num_totalhits+"&Threshold="+threshold+"&StartIndex="+start+"&EndIndex="+end+(ftitle!=null?"&fromTitle="+ftitle:"");
+   location.href = sURL;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Display previous and next buttons in lower screen.
+function displayDataControl() {
+   var threshold = getSearchKey('Threshold');
+   document.BrowseForm.Threshold.value = (threshold?threshold:othreshold);
+   threshold = parseInt(document.BrowseForm.Threshold.value);
+
+   var content = '      Back     New Search   ';
+
+   content += '  View Cart ';
+   if(reqtype=="ViewCart") content += ' Clear Cart ';
+   if(reqtype=="ViewCart") content += ' Check out ';
+   content += ' ';
+
+   content += '  #!View List ';
+   content += ' Save All ';
+   content += ' Clear List    ';
+   
+   if ( num_totalhits > threshold ) {
+      content += '  ';
+      content += ' ';
+      content += '     ';
+      content += '';
+
+      var pages = Math.ceil(num_totalhits/threshold);
+      var cpage = (parseInt(document.BrowseForm.StartIndex.value)-1)/threshold;
+      var tpage = cpage+1;
+      content += '  Pages   ';
+      for(i=1; i '+i+' ';
+      }
+      content += '  of '+pages+' ';
+      content += '    ';
+      content += ' ';
+      content += '  Show ';
+      content += ' 50 ';
+      content += ' 100 ';
+      content += ' 200 ';
+      content += ' items per page ';
+
+      content += '  ';
+   }
+
+   document.writeln( content ) ;
+   count_list();
+   count_cart();
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Display language-independent "hits" message
+function displayHitsMessage() {
+	content = '  ';
+   if (num_startindex == '1' && num_endindex == num_totalhits) {
+      content += ' ';
+      content += num_totalhits + ' ' + txt_hits_simple.toLowerCase() + ' ';
+   } else {
+      content += ' ';
+      content += txt_hits_simple + ' ' + num_startindex + ' ' + txt_to + ' ' + num_endindex;
+      content += ' '+txt_of + ' ' + num_totalhits + ' ';
+   }
+   content += '  ';
+   if(ftitle!=null && ftitle!='' && ftitle!='null') content += ' from  '+unescape(ftitle)+' ';
+   content += '  ';
+   return content;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+var browseData = new Array();
+var iBData = 0;
+var browseHeader = new Array();
+var iBHeader = 0;
+//browseHeader[iBHeader++] = "sLabel|bRight|bDescend|nWidth|cJustLCR|bBreak|bTotal";
+//browseData[iBdata+=] = 'bTake|nExplode|sParentID|KEYVALUE|Column1|Column2|...|ColumnN'; // repeat as needed
+// START of Browse Data
+
+
+
+
+    browseOffset=3;
+    browseHeader[iBHeader++] = 'bTake||';
+    browseHeader[iBHeader++] = 'bExplode||';
+    browseHeader[iBHeader++] = 'sParentID||';
+
+    
+        browseHeader[iBHeader++] = 'Tag|||3|||';
+    
+        browseHeader[iBHeader++] = 'Title|0||50|L|0|0';
+    
+        browseData[iBData++] = '1|||2656'
+        + '| Board of Chiropractic Examiners   Bill File, Log Books, Board Meeting Minutes, Rules and Regulations, Doctor Directories,  1923-2007   • Accessioned • Click on the title for more detail       Accession No.:   2018-083       ';
+    
+        browseData[iBData++] = '1|||3140'
+        + '| Dept. of Consumer Affairs -- Contractors' State License Board   Legislative Files, Meeting Files, Regulation Background Files, and Similar Records,  1991-2008   • Accessioned • Click on the title for more detail       Accession No.:   2020-033       ';
+    
+        browseData[iBData++] = '1|||3408'
+        + '| Commission on Peace Officer Standards and Training   POST Background Administrative Files,  1960-2013   • Accessioned • Click on the title for more detail       Accession No.:   2020-094       ';
+    
+        browseData[iBData++] = '1|||4977'
+        + '| Dept. of State Hospitals Dept. of Mental Hygiene -- State Hospitals -- Sonoma State Hospital  Sonoma State Hospital/Developmental Center History Project Files, Sonoma State Hospital/Sonoma Developmental Center Admission Records and Other Volumes,  1885-2018   • Accessioned • Click on the title for more detail       Accession No.:   2022-045       ';
+    
+        browseData[iBData++] = '1|||5768'
+        + '| Air Resources Board -- Stationary Source   District Superseded Rulebooks,  1994-1996, 1998   • Accessioned • Click on the title for more detail       Accession No.:   2024-003       ';
+    
+        browseData[iBData++] = '1|0|2238|2239'
+        + '|   Minutes, 1867-1906   • Series •  Click on title for more detail   Board of Commissioners to Manage the Yosemite Valley and Mariposa Big Tree Grove  Contains rules and regulations, by-laws, election of officers; transactions regarding construction bids, purchase of turnpikes, granting/denying applications of individuals and companies to do busines...          ';
+    
+        browseData[iBData++] = '1|0|80522|1732'
+        + '|   Minute Book, 1856-1857   • Series •  Click on title for more detail   Board of State Prison Commissioners  Minutes include a copy of enabling act, plans for erection of a new prison (San Quentin), rules and regulations to govern said prison, duties of warden, guards and inmates plus procedures for convict ...          ';
+    
+        browseData[iBData++] = '1|0|62701|62711'
+        + '|   Federal Rules and Regulations, 1908   • File •  Click on title for more detail   Business and Transportation Agency          ';
+    
+        browseData[iBData++] = '1|0|70819|71096'
+        + '|   Security Section Report, 1968   • Series •  Click on title for more detail   California Exposition and Fair Corporation  By Ronald M. Day, Security Supervisor. Includes Analysis Report to Operations Area Manager, 9/68: Rules and Regulations Manual; 1968 Operations, Copies of Procedures, and Photo Illustrations; Administ...          ';
+    
+        browseData[iBData++] = '1|0|80758|80760'
+        + '|   Subject Files, 1954-1976   • Series •  Click on title for more detail   Davis, Pauline  Subject files can contain newspaper clippings, press releases, correspondence, reports, notes, memorandums, and other materials. The subject files contain information gathered by Davis throughout her ...          ';
+    
+        browseData[iBData++] = '1|0|63192|1530'
+        + '|   Records of the Commodity Advisory Boards, 1939-1969   • Series •  Click on title for more detail   Dept. of Agriculture -- Marketing -- Bureau of Markets  The Marketing Act of 1937 (Stats. 1937, ch. 404), established grower and handler advisory boards to formulate marketing orders and programs designed to control surpluses, establish acceptable standard...          ';
+    
+        browseData[iBData++] = '1|0|2211|12345'
+        + '|   General (Forest Management), 1961-1972   • Series •  Click on title for more detail   Dept. of Conservation -- Division of Forestry Dept. of Forestry Letters received, copies of letters sent, newspaper clippings, reports, and other miscellaneous records regarding forestry management, requests for information, CDF Information Memoranda, American Pul...          ';
+    
+        browseData[iBData++] = '1|0|24602|24628'
+        + '|   Forest Practices Files, 1970-1978   • Series •  Click on title for more detail   Dept. of Conservation -- Executive -- Director  Reports and studies, correspondence, memoranda, legislative committee testimony, timber harvest plans, Board of Forestry resolutions, rules and regulations, newspaper clippings, and press releases reg...          ';
+    
+        browseData[iBData++] = '1|0|24602|24672'
+        + '|   State Lands Commission File, 1971-1976   • Series •  Click on title for more detail   Dept. of Conservation -- Executive -- Director  Memoranda, correspondence, proposed regulations and legislation with Department of Conservation comments related to the work between the State Lands Commission and the Department of Conservation inclu...          ';
+    
+        browseData[iBData++] = '1|0|1780|12166'
+        + '|   Advisory Committee on Pharmacy Standards in Corrections Files, 1983-1989   • Series •  Click on title for more detail   Dept. of Consumer Affairs -- Pharmacy   The series consists of Articles and Publications, Analysis, Board Packets, Committee Participation Interest, Correspondence, Detention Facility Surveys, Hearings, Regulations and Standards, and Rep...          ';
+    
+        browseData[iBData++] = '1|0|81527|81540'
+        + '|   Opinions, Codified Interpretive, 1937-1941   • Series •  Click on title for more detail   Dept. of Employment -- Administrative Services -- Central Files Section  Opinions issued by the Department's Rules and Regulations Office to codify interpretation for determining benefit distribution. Opinions are on subjects such as availability of applicant for work, bas...          ';
+    
+        browseData[iBData++] = '1|0|81416|81417'
+        + '|   Meeting Files, 1941-1955   • Series •  Click on title for more detail   Dept. of Employment -- Executive Division  Agendas and minutes, meeting programs, policy statements, press releases, presentations, and notes for department meetings or conferences. Meetings include:  Executive Staff Conferences/Meetin...          ';
+    
+        browseData[iBData++] = '1|0|81416|81421'
+        + '|   Weekly Division Reports, March 1937-June 1943   • Series •  Click on title for more detail   Dept. of Employment -- Executive Division  Narrative and statistical reports compiled by the various divisions, sections, and units of the Department of Employment for the Executive Director of the California Employment Commission regarding wo...          ';
+    
+        browseData[iBData++] = '1|0|11740|11745'
+        + '|   Board of Control Regulations, 1936-1956   • Series •  Click on title for more detail   Dept. of Finance -- Administration  Correspondence regarding amendments to the State Board of Control Rules and Regulations, in particular concerning the use of vehicles, meal allowances, and instructions on how to present a claim again...          ';
+    
+        browseData[iBData++] = '1|0|71462|71463'
+        + '|   Exhibition Files, 1935   • Series •  Click on title for more detail   Dept. of Finance -- Exhibits Divison -- Board of Directors of the State Agricultural Society  These files helped to manage the exhibitors at the Exposition. Includes the applications for a permit to exhibit at the Exposition. A small amount of correspondence between officials at the California...          ';
+    
+        browseData[iBData++] = '1|0|24990|1456'
+        + '|   Federal Agencies Files, 1960-1972   • Series •  Click on title for more detail   Dept. of Fish and Game -- Executive -- Director    Miscellaneous : Miscellaneous correspondence with various agencies regarding programs, investigations, studies, etc. of interest to the Dept. of Fish and Game. Two files relate to a seminar ...          ';
+    
+        browseData[iBData++] = '1|0|44114|1584'
+        + '|   Hearings, 1958-1960   • Series •  Click on title for more detail   Dept. of Industrial Relations  Transcripts of public hearings to consider proposed rules and regulations to implement, interpret and make specific provisions of the Labor Code (Section 76, 2410 (e) and 2422, and Sections 2410-2525,...          ';
+    
+        browseData[iBData++] = '1|0|38075|1555'
+        + '|   Correspondence, 1958-1964.   • Series •  Click on title for more detail   Dept. of Industrial Relations -- Housing Division  Letters received, copies of letters sent, intradepartmental communications, divisional summaries of operations, proposals, meeting agendas, bulletins, ordinances, blueprints and promotional literature...          ';
+    
+        browseData[iBData++] = '1|0|38075|1579'
+        + '|   Hearings, 1953-1963   • Series •  Click on title for more detail   Dept. of Industrial Relations -- Housing Division  Transcripts of proceedings of public hearings conducted by the Division of Housing for the purpose of considering proposed amendments to: the Rules and Regulations for Independent Trailer Coaches, Str...          ';
+    
+        browseData[iBData++] = '1|0|44113|1585'
+        + '|   Hearings, 1962   • Series •  Click on title for more detail   Dept. of Industrial Relations -- Housing Division  Transcripts of the proceedings of two public hearings held in Los Angeles (August 28-29, 1962) and in Sacramento (August 30, 1962) to consider proposals for amendment, repeal or addition to Rules and ...          ';
+    
+        browseData[iBData++] = '1|0|6102|6103'
+        + '|   Employee and Cadet Handbooks, 1944, 1947, 1950, 1955, 1958, n.d.   • Series •  Click on title for more detail   Dept. of Institutions -- Correctional Schools -- Preston School of Industry Dept. of Youth Authority -- Institutions and Camps -- Preston Youth Correctional Facility Handbooks concern rules and regulations for employees and cadets. An employee handbook relates to such topics as legal basis and philosophy of Youth Authority Organization, Preston's policies and proc...          ';
+    
+        browseData[iBData++] = '1|0|6160|6161'
+        + '|   Superintendent's Correspondence, 1926-1933, 1941-1943, 1952-1954, 1958, 1960, 1962   • Series •  Click on title for more detail   Dept. of Institutions -- Correctional Schools -- Ventura School for Girls Dept. of Youth Authority -- Ventura School for Girls Letters received, copies of letters sent, minutes, reports and memoranda pertaining to study of deliquent girls, parolee placement, medical treatment, building and grounds maintenance, vitamin-enriche...          ';
+    
+        browseData[iBData++] = '1|0|11664|1795'
+        + '|   Chief Deputy Commissioner's Correspondence, 1969-1970   • Series •  Click on title for more detail   Dept. of Investment -- Corporations  Copies of letters sent, reports, and memoranda pertaining to Business and Transportation Agency meetings; proposed legislation; procedures for review and issuance of interpretive opinions and policy l...          ';
+    
+        browseData[iBData++] = '1|0|11664|1854'
+        + '|   Chief Deputy Commissioner's Subject files, 1968-1971   • Series •  Click on title for more detail   Dept. of Investment -- Corporations  Letters received, copies of letters sent, notes, rough drafts, reports, summaries lists, bulletins, press releases, articles, agreements, rules and regulations, amendments, by-laws, and memoranda rela...          ';
+    
+        browseData[iBData++] = '1|0|79178|79194'
+        + '|   Christ's Church Case Publications, 1938-1946   • Series •  Click on title for more detail   Dept. of Justice -- Criminal Law  Books and various weekly, bi-weekly, and monthly newsletters and flyers published by the Mankind United or Christ's Church of the Golden Rule. Publications include Al The Suds Chief's Rainbow Hues of ...          ';
+    
+        browseData[iBData++] = '1|0|79281|79289'
+        + '|   Legislative Files, 1959-1970   • Series •  Click on title for more detail   Dept. of Justice -- Criminal Law and Enforcement -- Charitable Trust Unit  Correspondence, memoranda, reports, newspaper articles, press releases, analyses, lists, comments, and draft bills related to escheated estates, religious exceptions as charities, powers of the Attorn...          ';
+    
+        browseData[iBData++] = '1|0|12938|972'
+        + '|   Correspondence, 1931-1959   • Series •  Click on title for more detail   Dept. of Military and Veterans' Affairs -- Athletics Dept. of Professional and Vocational Standards -- Athletic Commission     Online Resource   Correspondence of the Commission relating to a wide variety of topics. Includes correspondence with professional organizations like the National Boxing Association, the National Wrestling Associati...          ';
+    
+        browseData[iBData++] = '1|0|2211|12347'
+        + '|   General Files (The Forest Practices Act), 1945-1958   • Series •  Click on title for more detail   Dept. of Natural Resources -- Division of Forestry Dept. of Conservation -- Division of Forestry  The Forest Practices Act (Statutes 1945, chapter 85) is designed to promote maximum sustained production of California forest lands.  The Act divided the state into four forest districts (see below...          ';
+    
+        browseData[iBData++] = '1|0|2211|12388'
+        + '|   Timber Taxation Files, 1953-1976   • Series •  Click on title for more detail   Dept. of Natural Resources -- Division of Forestry Dept. of Conservation -- Division of Forestry  (1)	GENERAL (1961-1976): notices of hearings, background information and CDF reports on Board of Equalization hearings on changes in Rules and Regulations regarding timber taxation; statements and ...          ';
+    
+        browseData[iBData++] = '1|0|35619|35623'
+        + '|   Game Management, Miscellaneous, 1911-1945   • Series •  Click on title for more detail   Dept. of Natural Resources -- Fish and Game -- Game Conservation  Miscellaneous rules and regulations and studies relating to game management programs. One study concerns the use of economic poisons, principally thallium, for the control of ground squirrels and the ...          ';
+    
+        browseData[iBData++] = '1|0|3872|3879'
+        + '|   State Agency Files , 1966-1975   • Series •  Click on title for more detail   Dept. of Parks and Recreation -- Administrative Services  Correspondence, memoranda, meeting notices, meeting minutes, notes, newspaper articles, resolutions, and applications concerning interactions between the Department of Parks and Recreation and other s...          ';
+    
+        browseData[iBData++] = '1|0|3979|3991'
+        + '|   Subject Files, 1965-1975   • Series •  Click on title for more detail   Dept. of Parks and Recreation -- Operations -- District 3  Correspondence, memoranda, meeting minutes and notes, reports, speeches, presentations, surveys, and lists related to such topics as use fees, simplification of park unit fee structure, park operation...          ';
+    
+        browseData[iBData++] = '1|0|80232|16113'
+        + '|   Board Meeting Minutes, 1935-1978   • Series •  Click on title for more detail   Dept. of Professional and Vocational Standards -- Contractors' License Bureau Dept. of Professional and Vocational Standards -- Contractors' State License Board Board Meeting Minutes summarize the proceedings and actions taken during Contractors' State License Board (CSLB) meetings. Topics covered during CSLB meetings include Board committees, Board rules and...          ';
+    
+        browseData[iBData++] = '1|0|80232|16115'
+        + '|   Board Meeting Transcripts, 1945-1988   • Series •  Click on title for more detail   Dept. of Professional and Vocational Standards -- Contractors' State License Board Dept. of Consumer Affairs -- Contractors' State License Board Verbatim transcripts of meetings and special hearings conducted by the CSLB. Topics covered during CSLB meetings include Board committees, Board rules and regulations, licensing, construction industry...          ';
+    
+        browseData[iBData++] = '1|0|80232|16121'
+        + '|   Examiner's Files, 1940-1974   • Series •  Click on title for more detail   Dept. of Professional and Vocational Standards -- Contractors' State License Board Dept. of Consumer Affairs -- Contractors' State License Board Under the direction of the Registrar, the Examiner is tasked with supervising the application, classification, examination, and licensing division of the CSLB. The Examiner's job duties require an ext...          ';
+    
+        browseData[iBData++] = '1|14||80232'
+        + '|   Dept. of Consumer Affairs - Contractors' State License Board Records, 1929-1988   • Record group •  Click on title for more detail   Dept. of Professional and Vocational Standards -- Contractors' State License Board Dept. of Consumer Affairs -- Contractors' State License Board     Online Resource   The records of the Contractors' State License Board (CSLB) contain 29.5 cubic feet of textual records spanning the years from 1929 to 1988. The records document the Board's work to protect consumer...      Record group consists of:    14 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|0|80232|16111'
+        + '|   License Files, 1929-1969   • Series •  Click on title for more detail   Dept. of Professional and Vocational Standards -- Registrar of Contractors Dept. of Professional and Vocational Standards -- Contractors' License Bureau  This series primarily contains original contractor license applications. Additional materials, such as informal and formal complaints against licensees, scored exams, and letters of recommendation,...          ';
+    
+        browseData[iBData++] = '1|0|20141|20144'
+        + '|   Richmond-San Rafael Bridge Files, 1950-1965   • File •  Click on title for more detail   Dept. of Public Works -- Administration -- Director  Correspondence, reports, and photographs concerning bonds, financial examinations, toll changes, bus tolls, use for rapid transit, and traffic rules and regulations, including those for hauling flamma...          ';
+    
+        browseData[iBData++] = '1|0|21250|21358'
+        + '|   Richmond-San Rafael Bridge Files, 1950-1970   • Series •  Click on title for more detail   Dept. of Public Works -- Contracts and Rights of Way  Memoranda, correspondence, deeds, newspaper articles, meeting notes, agreements, resolutions, deeds, Attorney General Opinions, orders, quit claims, leases, reports, and similar material pertaining to...          ';
+    
+        browseData[iBData++] = '1|0|18149|18151'
+        + '|   Coded Files, 1913-1961   • Series •  Click on title for more detail   Dept. of Social Welfare -- Aid to the Needy Children Dept. of Social Welfare -- Public Assistance -- Aid to Needy Children Coded Files contain memoranda, correspondence, telegrams, newspaper articles, statements, meeting materials, and reports.  The A1 History file includes a narrative and outline histories of the ANC pro...          ';
+    
+        browseData[iBData++] = '1|0|17804|17968'
+        + '|   Unborn Children - ANC, 1949-1952   • File •  Click on title for more detail   Dept. of Social Welfare -- Public Assistance Dept. of Social Welfare -- Social Security File relates provisions of the ANC rules and regulations relating to assistance for the unborn child and stipulates a dual mode of payment: a flat rate basis for board and care (for the unmarried moth...          ';
+    
+        browseData[iBData++] = '1|0|17986|17991'
+        + '|   Coded Files, 1934-1969   • Series •  Click on title for more detail   Dept. of Social Welfare -- Social Security -- Old Age Security Dept. of Social Welfare -- Public Assistance -- Aid to the Needy Aged -- Old Age Security Coded Files include resolutions, memoranda, transcripts, correspondence, and letters related to Old Age Security.  Coded files vary widely on topic and detail.  One file of particular note is A2.24 wh...          ';
+    
+        browseData[iBData++] = '1|0|18586|18959'
+        + '|   Rulemaking FIles, 1952-1972   • Series •  Click on title for more detail   Dept. of Veterans Affairs -- Administration -- Legal and Legislative Office  The first file documents suggested revisions to the agency's administrative rules and regulations required by the Administrative Procedures Act. This particular regulation defines authority, policy an...          ';
+    
+        browseData[iBData++] = '1|0|19082|19126'
+        + '|   Legal Counsel Files, 1954-1980   • Series •  Click on title for more detail   Dept. of Veterans Affairs -- Veterans Homes -- Veterans Home of California - Yountville  Memorandum, correspondence, and opinions from Veterans Affairs council and the Attorney General's office regarding Home legal policies including admission, rules and regulations, and consumption of al...          ';
+    
+        browseData[iBData++] = '1|9||80307'
+        + '|   Emergency Medical Services Authority Records, 1975-1991   • Record group •  Click on title for more detail   Emergency Medical Services Authority   The records of the California Emergency Medical Services Authority include 20.5 cubic feet of textual records from 1975 to 1991 and concerning the establishment and development of the EMSA and the ...      Record group consists of:    9 record(s) [ browse ]            ';
+    
+
+
+
+// #!BROWSEINFO!#
+// END of Browse Data
+
+function showpage(url,id){
+   var xmlhttp;
+   if (window.XMLHttpRequest) {
+     xmlhttp=new XMLHttpRequest();
+   }
+   else {
+     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+   }
+   xmlhttp.onreadystatechange=function() {
+      if(xmlhttp.readyState==4 && xmlhttp.status == 200) {
+         document.getElementById(id).innerHTML = xmlhttp.responseText;
+         var res = document.getElementById(id);
+         var arr = res.getElementsByTagName("script");
+         for (var n=0; n 0){
+      document.getElementById('GoProcessSelect').getElementsByTagName('option')[0].selected = 'selected';
+      document.getElementById("GoProcess").style.display = "inline";
+   }
+}
+
+function checkStatus(){
+   if(location.href.indexOf('nd=1')!=-1){
+      alert("No record available for public.");
+   }
+}
+
+//--> 
+ Public - Archival descriptions browse 
+ 
+ 
+ 
+ 
+ 
+ 
+  Please wait 
+ 
+ 
+ 
+  
+ 
+	   browse_by_list = getCookie(sysFolder+sTemplateProcessID+"ESIbDispBrowseNav")=="true";
+      var sWebPagePrefix = '../html/';
+      showpage("/webcat/systems/cal/css/"+sWebPagePrefix+"public_search_header.html","page_header");    
+    
+ 
+ 
+      var bPromptUser = new Array( ) ;
+      var sPromptUserText = new Array( ) ;
+      var bPublicOnly = new Array( ) ;
+      var aCtr = 0 ;
+    
+ 
+ 
+      
+ 
+ 
+ Member Go Process  
+ 
+ Options:      
+         bPromptUser[aCtr] = "0" ;
+         sPromptUserText[aCtr] = "" ;
+         bPublicOnly[aCtr] = "0";
+         aCtr++ ;
+           View detail  
+         bPromptUser[aCtr] = "" ;
+         sPromptUserText[aCtr] = "" ;
+         bPublicOnly[aCtr] = "";
+         aCtr++ ;
+           Request materials using default email client       
+	  
+  
+            if(reqtype!="ViewList") document.getElementById('GoProcessSelect').innerHTML = "";
+          
+ 
+ 
+         displayDataControl() ;
+         document.writeln(displayHitsMessage());
+       
+ 
+  
+ 
+         showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_browse_header.html","browse_header");
+       
+ 
+ 
+         
+			   if(browse_by_list) document.write('   ');
+            for(dc=0; dc ");
+               document.write(unescape(tmp4));
+               document.write(" ");
+            }
+            if(getCookie(sysFolder+tableID+"ESIMemberServicesUsername")!=""){
+               showMember_Process();
+               document.getElementById('memberLoggedIn').style.display = 'inline';
+               document.getElementById('memberUserLoggedIn').innerHTML = getCookie(sysFolder+tableID+"ESIMemberServicesUsername");
+            }
+			   if(browse_by_list) document.write(' ');
+         
+          
+ 
+  
+ 
+         if(browse_by_list) $("#myList").listnav({ includeAll: false });
+	      showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_browse_footer.html","browse_footer");
+          
+      if (hasGaWebPropertyId()) {
+        writeGaJsHost();
+      }
+        
+         displayDataControl();
+       
+ 
+ 
+ 
+ Powered by WebGENCAT from  Eloquent Systems Inc  
+ 
+ 
+ 
+  
+ 
+      showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_search_footer.html","page_footer");
+      if(reqtype=="ViewList") document.getElementById("GoProcess").style.display="inline";
+      if(reqtype!="ViewCart") update_button();
+      if(reqtype=="ViewCart") update_cart_button();
+       writeGbooksJsHost();  setTimeout("processGbooks();", 1000); 
+ 
+ 
+ TOP 
+ 
+ 
+ 
+   $(document).ready(function($){
+      $('#backToTop').fadeOut('slow');
+       $(window).scroll(function(){
+           if ($(this).scrollTop() > 50) {
+               $('#backToTop').fadeIn('slow');
+           } else {
+               $('#backToTop').fadeOut('slow');
+           }
+       });
+       $('#backToTop').click(function(){
+           $("html, body").animate({ scrollTop: 0 }, 500);
+           return false;
+       });
+   });
+     
+	if(document.getElementsByClassName("browserecord").length  
+      setTimeout(function(){checkStatus()}, 500);
+    
+   
+ 
+

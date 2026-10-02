@@ -1,0 +1,433 @@
+  
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                       
+  num_totalhits ) {
+	  end = num_totalhits ;
+	}
+	if ( start   num_totalhits ) end = num_totalhits ;
+   document.BrowseForm.StartIndex.value = start ;
+	document.BrowseForm.EndIndex.value = end ;
+	requestBrowse( ) ;
+}
+
+function newSearch(){
+   var sURL = cmd_action.replace("Action?","DoMenuRequest?");
+   location.href = sURL;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Called by getNext and getPrevious to submit form.
+function requestBrowse( ) {
+   start = parseInt(document.BrowseForm.StartIndex.value);
+   end = parseInt(document.BrowseForm.EndIndex.value);
+   threshold = parseInt(document.BrowseForm.Threshold.value);
+   noOfHits = parseInt(document.BrowseForm.NoOfHits.value);
+
+   var sURL = cmd_action;
+   sURL += "&CMD_(BrowseRequest)&NoOfHits="+num_totalhits+"&Threshold="+threshold+"&StartIndex="+start+"&EndIndex="+end+(ftitle!=null?"&fromTitle="+ftitle:"");
+   location.href = sURL;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Display previous and next buttons in lower screen.
+function displayDataControl() {
+   var threshold = getSearchKey('Threshold');
+   document.BrowseForm.Threshold.value = (threshold?threshold:othreshold);
+   threshold = parseInt(document.BrowseForm.Threshold.value);
+
+   var content = '      Back     New Search   ';
+
+   content += '  View Cart ';
+   if(reqtype=="ViewCart") content += ' Clear Cart ';
+   if(reqtype=="ViewCart") content += ' Check out ';
+   content += ' ';
+
+   content += '  #!View List ';
+   content += ' Save All ';
+   content += ' Clear List    ';
+   
+   if ( num_totalhits > threshold ) {
+      content += '  ';
+      content += ' ';
+      content += '     ';
+      content += '';
+
+      var pages = Math.ceil(num_totalhits/threshold);
+      var cpage = (parseInt(document.BrowseForm.StartIndex.value)-1)/threshold;
+      var tpage = cpage+1;
+      content += '  Pages   ';
+      for(i=1; i '+i+' ';
+      }
+      content += '  of '+pages+' ';
+      content += '    ';
+      content += ' ';
+      content += '  Show ';
+      content += ' 50 ';
+      content += ' 100 ';
+      content += ' 200 ';
+      content += ' items per page ';
+
+      content += '  ';
+   }
+
+   document.writeln( content ) ;
+   count_list();
+   count_cart();
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Display language-independent "hits" message
+function displayHitsMessage() {
+	content = '  ';
+   if (num_startindex == '1' && num_endindex == num_totalhits) {
+      content += ' ';
+      content += num_totalhits + ' ' + txt_hits_simple.toLowerCase() + ' ';
+   } else {
+      content += ' ';
+      content += txt_hits_simple + ' ' + num_startindex + ' ' + txt_to + ' ' + num_endindex;
+      content += ' '+txt_of + ' ' + num_totalhits + ' ';
+   }
+   content += '  ';
+   if(ftitle!=null && ftitle!='' && ftitle!='null') content += ' from  '+unescape(ftitle)+' ';
+   content += '  ';
+   return content;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+var browseData = new Array();
+var iBData = 0;
+var browseHeader = new Array();
+var iBHeader = 0;
+//browseHeader[iBHeader++] = "sLabel|bRight|bDescend|nWidth|cJustLCR|bBreak|bTotal";
+//browseData[iBdata+=] = 'bTake|nExplode|sParentID|KEYVALUE|Column1|Column2|...|ColumnN'; // repeat as needed
+// START of Browse Data
+
+
+
+
+    browseOffset=3;
+    browseHeader[iBHeader++] = 'bTake||';
+    browseHeader[iBHeader++] = 'bExplode||';
+    browseHeader[iBHeader++] = 'sParentID||';
+
+    
+        browseHeader[iBHeader++] = 'Tag|||3|||';
+    
+        browseHeader[iBHeader++] = 'Title|0||50|L|0|0';
+    
+        browseData[iBData++] = '1|||1257'
+        + '| Fish and Game Commission   Rulemaking Files, California Condor Recovery Program Files,  1982-2007   • Accessioned • Click on the title for more detail       Accession No.:   2012-098       ';
+    
+        browseData[iBData++] = '1|||1265'
+        + '| Dept. of Aging -- Long Term Care and Aging Services -- Medi-Cal Services -- Adult Day Health Care   Administrative Files, Regulation/Rulemaking Files,  1973-2006   • Accessioned • Click on the title for more detail       Accession No.:   2012-117       ';
+    
+        browseData[iBData++] = '1|||1288'
+        + '| Building Standards Commission   Rulemaking Files,  2006-2010   • Accessioned • Click on the title for more detail       Accession No.:   2015-126       ';
+    
+        browseData[iBData++] = '1|||1295'
+        + '| Building Standards Commission   Rulemaking Files,  2006   • Accessioned • Click on the title for more detail       Accession No.:   2012-131       ';
+    
+        browseData[iBData++] = '1|||1438'
+        + '| Public Utilities Commission -- Administrative Law Judge -- Central Files   Formal Case and Application Files, Commissioner Files,  1982-2010   • Accessioned • Click on the title for more detail       Accession No.:   2013-160       ';
+    
+        browseData[iBData++] = '1|||1486'
+        + '| Agricultural Labor Relations Board -- Executive Secretary   Administrative Files, Rulemaking Files,  1978-2003   • Accessioned • Click on the title for more detail       Accession No.:   2013-085       ';
+    
+        browseData[iBData++] = '1|||1510'
+        + '| Fish and Game Commission   Rulemaking Files, Official Minute Books,  2008, 2002-2005   • Accessioned • Click on the title for more detail       Accession No.:   2013-098       ';
+    
+        browseData[iBData++] = '1|||1906'
+        + '| Dept. of Food and Agriculture -- Executive -- Legal   Attorney General Legal Opinions, Administrative Hearings, Rulemaking Files, and Office Files,  1901-2003   • Accessioned • Click on the title for more detail       Accession No.:   2017-145       ';
+    
+        browseData[iBData++] = '1|||2005'
+        + '| Dept. of Consumer Affairs -- Veterinary Medical Board   Administrative Files,  1980s-2013   • Accessioned • Click on the title for more detail       Accession No.:   2016-137       ';
+    
+        browseData[iBData++] = '1|||2112'
+        + '| Building Standards Commission   Rulemaking Files,  2006-2010   • Accessioned • Click on the title for more detail       Accession No.:   2016-129       ';
+    
+        browseData[iBData++] = '1|||21838'
+        + '| Dept. of Food and Agriculture -- Administrative Services   Administrative Hearing Files, 1962-1971, Rulemaking Files, 1964-1975,  1962-1975   • Accessioned • Click on the title for more detail       Accession No.:   2001-03-41       ';
+    
+        browseData[iBData++] = '1|||3007'
+        + '| Building Standards Commission   Rulemaking Files (2011-2013), Local Ordinances (1999-2010),  1999-2013   • Accessioned • Click on the title for more detail       Accession No.:   2019-107       ';
+    
+        browseData[iBData++] = '1|||3141'
+        + '| Commission on Peace Officer Standards and Training   Meeting files (1959-2015), Advisory commission meetings, POST Administrative Manual and updates,  1959-2016   • Accessioned • Click on the title for more detail       Accession No.:   2020-084       ';
+    
+        browseData[iBData++] = '1|||3184'
+        + '| Dept. of Aging   Issue Memoranda, Informational Memoranda, Policy Memoranda, and Similar Records,  1974-1989   • Accessioned • Click on the title for more detail       Accession No.:   2020-057       ';
+    
+        browseData[iBData++] = '1|||3408'
+        + '| Commission on Peace Officer Standards and Training   POST Background Administrative Files,  1960-2013   • Accessioned • Click on the title for more detail       Accession No.:   2020-094       ';
+    
+        browseData[iBData++] = '1|||4577'
+        + '| Public Utilities Commission -- Administrative Law Judge -- Central Files   Case Files and Applications,  1983-1994   • Accessioned • Click on the title for more detail       Accession No.:   2021-042       ';
+    
+        browseData[iBData++] = '1|||4578'
+        + '| Dept. of Water Resources -- Executive -- California Water Commission   Rulemaking Files: California Water Storage Investment Program,  2016-2017   • Accessioned • Click on the title for more detail       Accession No.:   2021-033       ';
+    
+        browseData[iBData++] = '1|||5549'
+        + '| Dept. of General Services -- Building Standards Commission   Rulemaking Files,  2015-2016   • Accessioned • Click on the title for more detail       Accession No.:   2022-032       ';
+    
+        browseData[iBData++] = '1|||5793'
+        + '| Dept. of Consumer Affairs -- Dental Board of California   Rulemaking Files,  2011   • Accessioned • Click on the title for more detail       Accession No.:   2024-016       ';
+    
+        browseData[iBData++] = '1|||5816'
+        + '| Public Utilities Commission -- Administrative Law Judge   Formal Application Files and Formal Case Files,  1992-1995   • Accessioned • Click on the title for more detail       Accession No.:   2024-079       ';
+    
+        browseData[iBData++] = '1|||5977'
+        + '| San Francisco Bay Conservation and Development Commission -- Planning   Bay Plan Amendment Files and Prior Use Access Files,  1970-2011   • Accessioned • Click on the title for more detail       Accession No.:   2025-050       ';
+    
+        browseData[iBData++] = '1|||919'
+        + '| Business, Transportation and Housing Agency Technology, Trade and Commerce Agency  Rulemaking Files,  1989 - 2003   • Accessioned • Click on the title for more detail       Accession No.:   2011-009       ';
+    
+        browseData[iBData++] = '1|||964'
+        + '| Air Resources Board -- Executive -- Legal Affairs   Staff Files,  1986-2000   • Accessioned • Click on the title for more detail       Accession No.:   2011-159       ';
+    
+        browseData[iBData++] = '1|0|5941|5950'
+        + '|   Land Use Files, 1970-1976   • Series •  Click on title for more detail   Air Resources Board -- Evaluation and Planning Air Resources Board The files have to do with the land use planning issues of the Evaluation and Planning Division. Types of materials include city land use and transportation plans, reports, correspondence, and administ...          ';
+    
+        browseData[iBData++] = '1|1||12696'
+        + '|   William (Bill) Bradley Papers, 1983-1989   • Collection •  Click on title for more detail   Bradley, Bill   The Bill Bradley Papers consist of 9.25 cubic feet of textual records and 1 audiocassette.  These materials document Bradley's activities in the California State Assembly from 1983-1989.  The colle...      Collection consists of:    1 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|12||1444'
+        + '|   Building Standards Commission Records, 1955-1995   • Record group •  Click on title for more detail   Building Standards Commission   The records of the Building Standards Commission (BSC) consist of 14.5 cubic feet of textual records that were processed at two separate times.  The first group was processed in the early 1990s and...      Record group consists of:    12 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|0|62646|62647'
+        + '|   General Correspondence, 1967-1969, 1972   • Sub-series •  Click on title for more detail   Business and Transportation Agency  Correspondence concerning DMV duties and activities. Subjects include: citizen complaints, inquiries about accident reports, suspension of licenses, cancellation of auto insurance, DMV public relation...          ';
+    
+        browseData[iBData++] = '1|0|62741|62742'
+        + '|   General Correspondence, 1967-1969, 1972   • Sub-series •  Click on title for more detail   Business and Transportation Agency  Concerning Department's regulatory duties as overseer of real estate brokers and salesmen, including investigation of complaints, licensing actions, issuance of regulations, department administrative ...          ';
+    
+        browseData[iBData++] = '1|0|3836|3838'
+        + '|   Administrative Files, 1980-1991   • Series •  Click on title for more detail   Dept. of Aging -- Program Development and Administration -- Planning and Program Development  Administrative files contain reports, program memoranda, news clippings, summaries, background information, public hearing announcements, meeting agendas, and correspondence regarding the establishmen...          ';
+    
+        browseData[iBData++] = '1|0|62645|1104'
+        + '|   General Correspondence of Directors Richard Lyng (1968-1969), Jerry Fielder (1969-1972), and C.B. Christensen (1972-75), 1969-1973   • Series •  Click on title for more detail   Dept. of Agriculture -- Administration -- Director  The following code numbers are included: (1) Division of Administrative Services ( 1969 - F3741:1002-1035, 1970 - F3741:1186-1211, 1972 - F3741:1556-1587, 1973 - F3741:1735-1773): Memoranda, correspon...          ';
+    
+        browseData[iBData++] = '1|0|62665|1370'
+        + '|   General Correspondence of Administrative Assistant Charles V. Dick, 1947   • Series •  Click on title for more detail   Dept. of Agriculture -- Administration -- General Office and Administrative Services  Incoming and outgoing correspondence with agricultural commissioners dealing with local problems facing the commissioners; memoranda with Department staff members relating to Civil Service testing for...          ';
+    
+        browseData[iBData++] = '1|0|63192|1530'
+        + '|   Records of the Commodity Advisory Boards, 1939-1969   • Series •  Click on title for more detail   Dept. of Agriculture -- Marketing -- Bureau of Markets  The Marketing Act of 1937 (Stats. 1937, ch. 404), established grower and handler advisory boards to formulate marketing orders and programs designed to control surpluses, establish acceptable standard...          ';
+    
+        browseData[iBData++] = '1|0|63190|1349'
+        + '|   Records of the Bureau of Shipping Point Inspection, 1960-1966   • Series •  Click on title for more detail   Dept. of Agriculture -- Marketing -- Bureau of Shipping Point Inspection  Reports, Minutes, Memoranda: Annual and weekly activity reports by Bureau to Division; district activity reports providing statistical data on the amounts of various commodities inspected; minutes of ...          ';
+    
+        browseData[iBData++] = '1|0|24602|24649'
+        + '|   Administrative Files, 1975-1984   • Series •  Click on title for more detail   Dept. of Conservation -- Executive -- Director  Correspondence, memoranda, regulations, Governor's press releases, policy letters, budget position papers, reports, budget change proposals, management memoranda, lists of environmental accomplishment...          ';
+    
+        browseData[iBData++] = '1|0|24602|24650'
+        + '|   Administrative Files -- Resources Agency, 1976-1983   • Series •  Click on title for more detail   Dept. of Conservation -- Executive -- Director  Reports, memoranda, agendas, meeting minutes and notes, regulations, letters and correspondence, Attorney General Opinions, statements and testimony, newspaper articles and clippings, maps, legislativ...          ';
+    
+        browseData[iBData++] = '1|0|24602|24654'
+        + '|   Division of Oil and Gas Files - Geothermal Resources, 1977-1981   • Series •  Click on title for more detail   Dept. of Conservation -- Executive -- Director  Memoranda, correspondence, Attorney General Opinions, administrative regulations, hearing information, reports, applications, and notes concerning geothermal resources which included development, stat...          ';
+    
+        browseData[iBData++] = '1|0|24602|24656'
+        + '|   State Mining and Geology Board Files, 1977-1983   • Series •  Click on title for more detail   Dept. of Conservation -- Executive -- Director  Memoranda, correspondence, publications, administrative laws and regulations, pre-publication copies of the annual reports for 1977 - 1982, reports, agendas and minutes, Mining and Geology Board prese...          ';
+    
+        browseData[iBData++] = '1|0|24602|24673'
+        + '|   Land Resource Protection Unit Files, 1976-1983   • Series •  Click on title for more detail   Dept. of Conservation -- Executive -- Director  Memoranda, correspondence, reports, statements and presentations, Attorney General Opinions, charts, bill analyses, administrative regulations, newspaper articles, press releases, Environmental Impact...          ';
+    
+        browseData[iBData++] = '1|0|1780|12155'
+        + '|   Bill Files, 1975-1976   • Series •  Click on title for more detail   Dept. of Consumer Affairs -- Pharmacy   Bill files contain analyses, correspondence, notes, reports and background material regarding state legislation that would affect issues under the jurisdiction of the Board of Pharmacy as well as t...          ';
+    
+        browseData[iBData++] = '1|0|1780|12157'
+        + '|   Subject Files, 1962-2000   • Series •  Click on title for more detail   Dept. of Consumer Affairs -- Pharmacy Dept. of Professional and Vocational Standards -- Board of Pharmacy  Subject files may include administrative papers, correspondence, background material, notes, reports, and newspaper clippings. The subject files include files related to the administration of the B...          ';
+    
+        browseData[iBData++] = '1|0|70516|70531'
+        + '|   Teacher Education and Credentials, 1950-1960   • Series •  Click on title for more detail   Dept. of Education -- State Colleges and Teacher Education  Correspondence, memoranda, minutes, and reports include information on the regulations for various types of credentials (Administrative, Physical Education, Provisional, Supervision and Vocational); r...          ';
+    
+        browseData[iBData++] = '1|0|81527|81540'
+        + '|   Opinions, Codified Interpretive, 1937-1941   • Series •  Click on title for more detail   Dept. of Employment -- Administrative Services -- Central Files Section  Opinions issued by the Department's Rules and Regulations Office to codify interpretation for determining benefit distribution. Opinions are on subjects such as availability of applicant for work, bas...          ';
+    
+        browseData[iBData++] = '1|0|24980|1387'
+        + '|   Administrative Files, Part I, 1956-1959   • Series •  Click on title for more detail   Dept. of Fish and Game -- Executive -- Director  Director's correspondence, memoranda, and related records concerning departmental policies, procedures, operations and management.  Includes the following:   (a) Inter-agency -- California Depar...          ';
+    
+        browseData[iBData++] = '1|0|24990|1389'
+        + '|   Inter-Agency Files, 1960-1972   • Series •  Click on title for more detail   Dept. of Fish and Game -- Executive -- Director  Director's administrative correspondence, memoranda, reports and related records in exchange with other California agencies and departments concerning joint operations and/or programs, overlapping pro...          ';
+    
+        browseData[iBData++] = '1|0|2211|12355'
+        + '|   Committees - Coast Forest District - Administrative Files, 1974-1975   • Series •  Click on title for more detail   Dept. of Forestry   Data on the organization and administration of the Coast Forest District including suggested Forest Practice Rules for the district from public and private organizations, controversy of proposal to...          ';
+    
+        browseData[iBData++] = '1|0|2211|12361'
+        + '|   Committees - Southern Forest District - Administrative Files, 1974-1977   • Series •  Click on title for more detail   Dept. of Forestry  The Southern Forest District is comprised of the south Sierra and Southern California.  Information in these files is similar to that for the Northern Forest District and includes administration under...          ';
+    
+        browseData[iBData++] = '1|2||13360'
+        + '|   Dept. of Health Care Services Records, 1960-1974   • Record group •  Click on title for more detail   Dept. of Health Care Services Office of Health Care Services  The records of the Department of Health Care Services (DHCS) document the earliest years of the California Medical Assistance Program (Medi-Cal).  This record group contains 20.5 cubic feet of text...      Record group consists of:    2 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|0|38075|1555'
+        + '|   Correspondence, 1958-1964.   • Series •  Click on title for more detail   Dept. of Industrial Relations -- Housing Division  Letters received, copies of letters sent, intradepartmental communications, divisional summaries of operations, proposals, meeting agendas, bulletins, ordinances, blueprints and promotional literature...          ';
+    
+        browseData[iBData++] = '1|5||1789'
+        + '|   Dept. of Investment Records, 1907-1971   • Record group •  Click on title for more detail   Dept. of Investment  The records of the Department of Investment, and its divisions, document many different facets of California's financial past. The records described in this inventory concern only the Division of Bank...      Record group consists of:    5 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|0|2211|11857'
+        + '|   Legislative Interim Committees, General, 1944-1948   • Series •  Click on title for more detail   Dept. of Natural Resources -- Division of Forestry Dept. of Conservation -- Division of Forestry  Miscellaneous correspondence and memoranda with various committees concerning meetings and hearing schedules and reports, statements and testimony and other information submitted to committees upon...          ';
+    
+
+
+
+// #!BROWSEINFO!#
+// END of Browse Data
+
+function showpage(url,id){
+   var xmlhttp;
+   if (window.XMLHttpRequest) {
+     xmlhttp=new XMLHttpRequest();
+   }
+   else {
+     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+   }
+   xmlhttp.onreadystatechange=function() {
+      if(xmlhttp.readyState==4 && xmlhttp.status == 200) {
+         document.getElementById(id).innerHTML = xmlhttp.responseText;
+         var res = document.getElementById(id);
+         var arr = res.getElementsByTagName("script");
+         for (var n=0; n 0){
+      document.getElementById('GoProcessSelect').getElementsByTagName('option')[0].selected = 'selected';
+      document.getElementById("GoProcess").style.display = "inline";
+   }
+}
+
+function checkStatus(){
+   if(location.href.indexOf('nd=1')!=-1){
+      alert("No record available for public.");
+   }
+}
+
+//--> 
+ Public - Archival descriptions browse 
+ 
+ 
+ 
+ 
+ 
+ 
+  Please wait 
+ 
+ 
+ 
+  
+ 
+	   browse_by_list = getCookie(sysFolder+sTemplateProcessID+"ESIbDispBrowseNav")=="true";
+      var sWebPagePrefix = '../html/';
+      showpage("/webcat/systems/cal/css/"+sWebPagePrefix+"public_search_header.html","page_header");    
+    
+ 
+ 
+      var bPromptUser = new Array( ) ;
+      var sPromptUserText = new Array( ) ;
+      var bPublicOnly = new Array( ) ;
+      var aCtr = 0 ;
+    
+ 
+ 
+      
+ 
+ 
+ Member Go Process  
+ 
+ Options:      
+         bPromptUser[aCtr] = "0" ;
+         sPromptUserText[aCtr] = "" ;
+         bPublicOnly[aCtr] = "0";
+         aCtr++ ;
+           View detail  
+         bPromptUser[aCtr] = "" ;
+         sPromptUserText[aCtr] = "" ;
+         bPublicOnly[aCtr] = "";
+         aCtr++ ;
+           Request materials using default email client       
+	  
+  
+            if(reqtype!="ViewList") document.getElementById('GoProcessSelect').innerHTML = "";
+          
+ 
+ 
+         displayDataControl() ;
+         document.writeln(displayHitsMessage());
+       
+ 
+  
+ 
+         showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_browse_header.html","browse_header");
+       
+ 
+ 
+         
+			   if(browse_by_list) document.write('   ');
+            for(dc=0; dc ");
+               document.write(unescape(tmp4));
+               document.write(" ");
+            }
+            if(getCookie(sysFolder+tableID+"ESIMemberServicesUsername")!=""){
+               showMember_Process();
+               document.getElementById('memberLoggedIn').style.display = 'inline';
+               document.getElementById('memberUserLoggedIn').innerHTML = getCookie(sysFolder+tableID+"ESIMemberServicesUsername");
+            }
+			   if(browse_by_list) document.write(' ');
+         
+          
+ 
+  
+ 
+         if(browse_by_list) $("#myList").listnav({ includeAll: false });
+	      showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_browse_footer.html","browse_footer");
+          
+      if (hasGaWebPropertyId()) {
+        writeGaJsHost();
+      }
+        
+         displayDataControl();
+       
+ 
+ 
+ 
+ Powered by WebGENCAT from  Eloquent Systems Inc  
+ 
+ 
+ 
+  
+ 
+      showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_search_footer.html","page_footer");
+      if(reqtype=="ViewList") document.getElementById("GoProcess").style.display="inline";
+      if(reqtype!="ViewCart") update_button();
+      if(reqtype=="ViewCart") update_cart_button();
+       writeGbooksJsHost();  setTimeout("processGbooks();", 1000); 
+ 
+ 
+ TOP 
+ 
+ 
+ 
+   $(document).ready(function($){
+      $('#backToTop').fadeOut('slow');
+       $(window).scroll(function(){
+           if ($(this).scrollTop() > 50) {
+               $('#backToTop').fadeIn('slow');
+           } else {
+               $('#backToTop').fadeOut('slow');
+           }
+       });
+       $('#backToTop').click(function(){
+           $("html, body").animate({ scrollTop: 0 }, 500);
+           return false;
+       });
+   });
+     
+	if(document.getElementsByClassName("browserecord").length  
+      setTimeout(function(){checkStatus()}, 500);
+    
+   
+ 
+

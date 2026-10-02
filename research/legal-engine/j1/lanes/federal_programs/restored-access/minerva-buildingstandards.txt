@@ -1,0 +1,433 @@
+  
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                       
+  num_totalhits ) {
+	  end = num_totalhits ;
+	}
+	if ( start   num_totalhits ) end = num_totalhits ;
+   document.BrowseForm.StartIndex.value = start ;
+	document.BrowseForm.EndIndex.value = end ;
+	requestBrowse( ) ;
+}
+
+function newSearch(){
+   var sURL = cmd_action.replace("Action?","DoMenuRequest?");
+   location.href = sURL;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Called by getNext and getPrevious to submit form.
+function requestBrowse( ) {
+   start = parseInt(document.BrowseForm.StartIndex.value);
+   end = parseInt(document.BrowseForm.EndIndex.value);
+   threshold = parseInt(document.BrowseForm.Threshold.value);
+   noOfHits = parseInt(document.BrowseForm.NoOfHits.value);
+
+   var sURL = cmd_action;
+   sURL += "&CMD_(BrowseRequest)&NoOfHits="+num_totalhits+"&Threshold="+threshold+"&StartIndex="+start+"&EndIndex="+end+(ftitle!=null?"&fromTitle="+ftitle:"");
+   location.href = sURL;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Display previous and next buttons in lower screen.
+function displayDataControl() {
+   var threshold = getSearchKey('Threshold');
+   document.BrowseForm.Threshold.value = (threshold?threshold:othreshold);
+   threshold = parseInt(document.BrowseForm.Threshold.value);
+
+   var content = '      Back     New Search   ';
+
+   content += '  View Cart ';
+   if(reqtype=="ViewCart") content += ' Clear Cart ';
+   if(reqtype=="ViewCart") content += ' Check out ';
+   content += ' ';
+
+   content += '  #!View List ';
+   content += ' Save All ';
+   content += ' Clear List    ';
+   
+   if ( num_totalhits > threshold ) {
+      content += '  ';
+      content += ' ';
+      content += '     ';
+      content += '';
+
+      var pages = Math.ceil(num_totalhits/threshold);
+      var cpage = (parseInt(document.BrowseForm.StartIndex.value)-1)/threshold;
+      var tpage = cpage+1;
+      content += '  Pages   ';
+      for(i=1; i '+i+' ';
+      }
+      content += '  of '+pages+' ';
+      content += '    ';
+      content += ' ';
+      content += '  Show ';
+      content += ' 50 ';
+      content += ' 100 ';
+      content += ' 200 ';
+      content += ' items per page ';
+
+      content += '  ';
+   }
+
+   document.writeln( content ) ;
+   count_list();
+   count_cart();
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Display language-independent "hits" message
+function displayHitsMessage() {
+	content = '  ';
+   if (num_startindex == '1' && num_endindex == num_totalhits) {
+      content += ' ';
+      content += num_totalhits + ' ' + txt_hits_simple.toLowerCase() + ' ';
+   } else {
+      content += ' ';
+      content += txt_hits_simple + ' ' + num_startindex + ' ' + txt_to + ' ' + num_endindex;
+      content += ' '+txt_of + ' ' + num_totalhits + ' ';
+   }
+   content += '  ';
+   if(ftitle!=null && ftitle!='' && ftitle!='null') content += ' from  '+unescape(ftitle)+' ';
+   content += '  ';
+   return content;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+var browseData = new Array();
+var iBData = 0;
+var browseHeader = new Array();
+var iBHeader = 0;
+//browseHeader[iBHeader++] = "sLabel|bRight|bDescend|nWidth|cJustLCR|bBreak|bTotal";
+//browseData[iBdata+=] = 'bTake|nExplode|sParentID|KEYVALUE|Column1|Column2|...|ColumnN'; // repeat as needed
+// START of Browse Data
+
+
+
+
+    browseOffset=3;
+    browseHeader[iBHeader++] = 'bTake||';
+    browseHeader[iBHeader++] = 'bExplode||';
+    browseHeader[iBHeader++] = 'sParentID||';
+
+    
+        browseHeader[iBHeader++] = 'Tag|||3|||';
+    
+        browseHeader[iBHeader++] = 'Title|0||50|L|0|0';
+    
+        browseData[iBData++] = '1|||1288'
+        + '| Building Standards Commission   Rulemaking Files,  2006-2010   • Accessioned • Click on the title for more detail       Accession No.:   2015-126       ';
+    
+        browseData[iBData++] = '1|||1295'
+        + '| Building Standards Commission   Rulemaking Files,  2006   • Accessioned • Click on the title for more detail       Accession No.:   2012-131       ';
+    
+        browseData[iBData++] = '1|||1298'
+        + '| Energy Resources Conservation and Development Commission -- Executive -- General Counsel   Siting and Rulemaking Proceedings,  1977-1985   • Accessioned • Click on the title for more detail       Accession No.:   2012-165       ';
+    
+        browseData[iBData++] = '1|||1446'
+        + '| Building Standards Commission   Commission Meeting Agendas and Minutes, Rulemaking Files,  1980-2006   • Accessioned • Click on the title for more detail       Accession No.:   2013-074       ';
+    
+        browseData[iBData++] = '1|||2112'
+        + '| Building Standards Commission   Rulemaking Files,  2006-2010   • Accessioned • Click on the title for more detail       Accession No.:   2016-129       ';
+    
+        browseData[iBData++] = '1|||2171'
+        + '| Building Standards Commission   Local Ordinance Files,  1999-2010   • Accessioned • Click on the title for more detail       Accession No.:   2017-085       ';
+    
+        browseData[iBData++] = '1|||2521'
+        + '| Building Standards Commission   Rulemaking Files,  2012   • Accessioned • Click on the title for more detail       Accession No.:   2018-047       ';
+    
+        browseData[iBData++] = '1|||277'
+        + '| Dept. of Consumer Affairs -- Executive   Subject Files, Chronological Correspondence Files,  1997   • Accessioned • Click on the title for more detail       Accession No.:   2008-164       ';
+    
+        browseData[iBData++] = '1|||3007'
+        + '| Building Standards Commission   Rulemaking Files (2011-2013), Local Ordinances (1999-2010),  1999-2013   • Accessioned • Click on the title for more detail       Accession No.:   2019-107       ';
+    
+        browseData[iBData++] = '1|||3026'
+        + '| Dept. of Pesticide Regulation -- Enforcement Regional Offices -- Northern Regional Office Dept. of Food and Agriculture -- Pest Management, Environmental Protection and Worker Safety -- Pesticide Enforcement Branch  Adminstrative and Subject Files,  1972-2011   • Accessioned • Click on the title for more detail       Accession No.:   2019-128       ';
+    
+        browseData[iBData++] = '1|||4956'
+        + '| Dept. of Housing and Community Development -- Codes and Standards   Complaints and PIA Monitoring Files,  1976-1988   • Accessioned • Click on the title for more detail       Accession No.:   93-03-25       ';
+    
+        browseData[iBData++] = '1|||5549'
+        + '| Dept. of General Services -- Building Standards Commission   Rulemaking Files,  2015-2016   • Accessioned • Click on the title for more detail       Accession No.:   2022-032       ';
+    
+        browseData[iBData++] = '1|12||1444'
+        + '|   Building Standards Commission Records, 1955-1995   • Record group •  Click on title for more detail   Building Standards Commission   The records of the Building Standards Commission (BSC) consist of 14.5 cubic feet of textual records that were processed at two separate times.  The first group was processed in the early 1990s and...      Record group consists of:    12 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|0|1444|1445'
+        + '|   Correspondence, 1961-1967   • Series •  Click on title for more detail   Building Standards Commission  Selected incoming and outgoing correspondence, principally chronological files, between the Commission and business groups, other state agencies, individual Commission members, and private citizens. T...          ';
+    
+        browseData[iBData++] = '1|0|1444|1446'
+        + '|   Administrative Files, 1962-1971   • Series •  Click on title for more detail   Building Standards Commission   Meeting Files  (1962-70):  agendas, minutes, memoranda, correspondence, and other official records relating to Commission Meetings. Sub-series also includes biographical sketches of some commission...          ';
+    
+        browseData[iBData++] = '1|0|1444|1464'
+        + '|   Committees and Subcommittees Files, 1958, 1960, 1962-1964, 1967, 1968-1969.   • Series •  Click on title for more detail   Building Standards Commission  Includes Botsai (adoption by reference), Coding, Executive, Handrail, Joint State Agencies Building Code, and Legislative committees. Files contain minutes, agendas, correspondence, memoranda, meeting...          ';
+    
+        browseData[iBData++] = '1|0|1444|1465'
+        + '|   Advisory Panel Files, 1963, 1965-1970.   • Series •  Click on title for more detail   Building Standards Commission  Contains correspondence, memoranda, agendas, minutes, meeting reports, rosters, policy statements, and other materials realting to the drafting and updating of portions of the Code. Includes Architect...          ';
+    
+        browseData[iBData++] = '1|0|1444|1467'
+        + '|   Public and Private Interest Group Files, 1959-1960, 1964, 1967-1971.   • Series •  Click on title for more detail   Building Standards Commission  Contains correspondence, memoranda, minutes, meeting notes, reports, and other material relating to the Commission and the groups affected by State regulations. Includes Committee for a State Uniform ...          ';
+    
+        browseData[iBData++] = '1|0|1444|1468'
+        + '|   Legislation, 1959-1970   • Series •  Click on title for more detail   Building Standards Commission  Contains correspondence, memoranda, drafts of legislation, newsletters, legal interpretations, and other materials relating to legislation endorsed of opposed by the Commission. The Commission activel...          ';
+    
+        browseData[iBData++] = '1|0|1444|4526'
+        + '|   Commission Meeting Agenda Books, 1976-1993   • Series •  Click on title for more detail   Building Standards Commission   The Commission Meeting Agenda Books contain proposed agendas, minutes of meetings, background information, and relevant correspondence for a designated meeting.  Public access to copies of these bo...          ';
+    
+        browseData[iBData++] = '1|0|1444|4527'
+        + '|   Chronological Files, 1988-1993   • Series •  Click on title for more detail   Building Standards Commission  The Chronological Files contain incoming and outgoing correspondence between the Building Standards Commission and representatives of affected state agencies, members of the building industry, and int...          ';
+    
+        browseData[iBData++] = '1|0|1444|4528'
+        + '|   Rulemaking Files, 1980-1995   • Series •  Click on title for more detail   Building Standards Commission  There are two types of files within the Rulemaking Files: Regular Rulemaking Files and Emergency Rulemaking Files. Their chronological order has been maintained.    The Regular Rulemaking Files c...          ';
+    
+        browseData[iBData++] = '1|0|1444|4529'
+        + '|   New Prison Construction Standards Files, 1990   • Series •  Click on title for more detail   Building Standards Commission  Files include exhibits of prison construction elements accumulated during a one-year study by the BSC.  These include feasibility studies, prison specific planning studies, examples of bids and propos...          ';
+    
+        browseData[iBData++] = '1|0|1444|4530'
+        + '|   State Design and Construction Policy Task Force Files, 1988-1989   • Series •  Click on title for more detail   Building Standards Commission  The State Design and Construction Policy Task Force existed for two years in order to research problems regarding design and/or construction encountered by state agencies and to recommend solutions.  ...          ';
+    
+        browseData[iBData++] = '1|0|2739|2740'
+        + '|   Subject Files, 1967-2010   • Series •  Click on title for more detail   California Postsecondary Education Commission Coordinating Council for Higher Education F3909:1-203. The subject files are predominately Commission files and recommendations to identify student educational needs.  They also include institutional program evaluations or analyses of: the Ma...          ';
+    
+        browseData[iBData++] = '1|2||15974'
+        + '|   Lloyd Connelly Papers, 1983-1992   • Collection •  Click on title for more detail   Connelly, Lloyd G.   The Lloyd Connelly Papers consists of 21.5 cubic feet of textual records reflecting Connelly's legislative activity during his time as member of the California State Assembly. The collection is org...      Collection consists of:    2 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|0|3101|1355'
+        + '|   Subject Files of Superintendent Vierling Kersey, 1933-1937   • Series •  Click on title for more detail   Dept. of Education -- Executive -- Superintendent of Public Instruction Kersey, Vierling Correspondence, memoranda, reports, and minutes reflect the Superintendent's role as both an administrator and chief spokesman for the Department. The records mirror the effects of the Depression on e...          ';
+    
+        browseData[iBData++] = '1|1|70497|3116'
+        + '|   Bureau of School Planning Records   • Sub-sub-group •  Click on title for more detail   Dept. of Education -- Public School Administration -- School Planning  The Division of Schoolhouse Planning was created by law in 1927 ( Stats. 1927, ch. 406 ) and charged with establishing standards for school buildings, reviewing school plans and specifications, a...      Sub-sub-group consists of:    1 record(s) [ Public School Administration Division Records - Bureau of School Planning Records">browse ]            ';
+    
+        browseData[iBData++] = '1|0|11748|11750'
+        + '|   Standard Service Agreements, 1931-1950   • Series •  Click on title for more detail   Dept. of Finance -- Administration  Standard Services Agreements and correspondence related to services provided to state departments and agencies by private companies and individuals.  Agreements are for the following departments: Depa...          ';
+    
+        browseData[iBData++] = '1|0|6160|6161'
+        + '|   Superintendent's Correspondence, 1926-1933, 1941-1943, 1952-1954, 1958, 1960, 1962   • Series •  Click on title for more detail   Dept. of Institutions -- Correctional Schools -- Ventura School for Girls Dept. of Youth Authority -- Ventura School for Girls Letters received, copies of letters sent, minutes, reports and memoranda pertaining to study of deliquent girls, parolee placement, medical treatment, building and grounds maintenance, vitamin-enriche...          ';
+    
+        browseData[iBData++] = '1|0|6139|6141'
+        + '|   Superintendent's Monthly Reports, 1939, 1948-1949   • Series •  Click on title for more detail   Dept. of Institutions -- Correctional Schools -- Whittier State School Dept. of Youth Authority -- Institutions and Camps -- Fred C. Nelles Youth Correctional Facility Reports cover such subjects as inmate dress standards; supervision procedure changes; personnel layoffs and vacancies; teacher evaluations; building and grounds maintenance; farm production; retesting...          ';
+    
+        browseData[iBData++] = '1|0|78811|79064'
+        + '|   Agency Files, 1919-1951   • Series •  Click on title for more detail   Dept. of Justice -- Civil Law  Correspondence, memoranda, minutes, newspaper, resolutions, telegrams, blueprints, memoranda, meeting minutes, and similar materials concerning investigations of and requests for investigations by sta...          ';
+    
+        browseData[iBData++] = '1|0|2211|11791'
+        + '|   Buildings and Construction, 1933-1941   • Series •  Click on title for more detail   Dept. of Natural Resources -- Division of Forestry  U.S. Forest Service plans, specifications, material lists and costs, instructions, standards, and amendments thereto, for Forest Service buildings and facilities, ranging from lookout stations to fire...          ';
+    
+        browseData[iBData++] = '1|14||80232'
+        + '|   Dept. of Consumer Affairs - Contractors' State License Board Records, 1929-1988   • Record group •  Click on title for more detail   Dept. of Professional and Vocational Standards -- Contractors' State License Board Dept. of Consumer Affairs -- Contractors' State License Board     Online Resource   The records of the Contractors' State License Board (CSLB) contain 29.5 cubic feet of textual records spanning the years from 1929 to 1988. The records document the Board's work to protect consumer...      Record group consists of:    14 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|0|23805|37980'
+        + '|   Planning and Construction Files, 1969-1971   • Series •  Click on title for more detail   Dept. of Public Health -- Community Health Services and Resources Program  Reports, memoranda, regulations, and correspondence concerning funding for health facilities, construction of health facilities throughout the state, review of applications for construction of mental ...          ';
+    
+        browseData[iBData++] = '1|0|2937|3912'
+        + '|   State Office Building: Motor Vehicle and Appellate Court, 1929-1930   • Item •  Click on title for more detail   Dept. of Public Works -- Division of Architecture   Motor Vehicle and Appellate Court Building : 1. (not numbered) San Bernardino Motor Vehicle (ink on tracing paper)  2. (2) Motor Vehicles and Appellate Court Office Building, first and second fl...          ';
+    
+        browseData[iBData++] = '1|0|37746|71356'
+        + '|   Correspondence, 1931-1940   • Series •  Click on title for more detail   Dept. of Savings and Loan -- Los Angeles Office  Correspondents are Savings and Loan Department officials, officers of savings and loan associations and private citizens. Contains copies of letters sent, letters received, inter-office memoranda, exc...          ';
+    
+        browseData[iBData++] = '1|0|37746|97'
+        + '|   General Records, 1922-1955   • Series •  Click on title for more detail   Dept. of Savings and Loan -- Los Angeles Office  General Records contain files for Burbank Savings and Loan Association, Mutual Building and Loan Association of Fullerton, Pasadena Savings and Loan Association, San Joaquin First Federal Savings and ...          ';
+    
+        browseData[iBData++] = '1|0|18009|18027'
+        + '|   G1-G7 Licensing and Certification Files, 1949   • Series •  Click on title for more detail   Dept. of Social Welfare -- Child Welfare -- Child Welfare Services Dept. of Social Welfare -- Program Development -- Family Services Bureau Licensing and Certification (Code G1-G7) Files include letters received, copies of letters sent, memoranda, minutes, meeting summaries, reports and other records relating to SDSW jurisdiction over lic...          ';
+    
+        browseData[iBData++] = '1|0|17550|17552'
+        + '|   Coded Files, 1961-1980   • Series •  Click on title for more detail   Dept. of Social Welfare -- Division of Administrative Services -- Program Information Bureau Dept. of Social Welfare -- Management Services -- Program Information Bureau Coded Files may include press releases, copies of newspaper articles, legislative summaries, correspondence, questionnaires, reports, consulting proposals, and meeting minutes.  Also included througho...          ';
+    
+        browseData[iBData++] = '1|0|17525|17527'
+        + '|   Coded Files, 1940-1972   • Series •  Click on title for more detail   Dept. of Social Welfare -- Division of Administrative Services -- Research and Statistics Bureau Dept. of Social Welfare -- Research and Statistics Coded Files contain reports, letters, memos, charts, statistics, and general correspondence.  Coded Files vary widely from topic.  However, the majority of coded files relate to Interdepartmental Rela...          ';
+    
+        browseData[iBData++] = '1|1||24216'
+        + '|   Gordon W. Duffy Papers, 1969-1982   • Collection •  Click on title for more detail   Duffy, Gordon W.  The Gordon Duffy Papers consist of Bill Files, 1969-1982. The bill files document most of his legislative activity of his term as a member of the California State Legislature, however, the files are n...      Collection consists of:    1 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|8||5'
+        + '|   Energy Commission Records, 1975-1997   • Record group •  Click on title for more detail   Energy Resources Conservation and Development Commission  The Energy Commission records consist of 83.25 cubic feet of files covering the period 1975-1997. The twenty-seven series include siting files, Commissioners' files, Executive Office files, Solar Offi...      Record group consists of:    8 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|0|78565|78568'
+        + '|   SolarCal Reports, 1979-1983   • Sub-series •  Click on title for more detail   Energy Resources Conservation and Development Commission  The files reflect information not provided in some of the project files. Subjects include conservation, energy contingency plans, marketing plans, and solar energy building standards.          ';
+    
+        browseData[iBData++] = '1|0|37843|1000'
+        + '|   Bill Files, 1975-2000   • Series •  Click on title for more detail   Hughes, Teresa P.   Bill files created by Teresa P. Hughes document legislation she authored while serving as Assembly member, 1975-1992 and Senator, 1993-2000. An average file may contain drafts of bills, analyses by...          ';
+    
+        browseData[iBData++] = '1|0|24315|24466'
+        + '|   Department of Professional and Vocational Standards Files - Boards and Divisions, 1953-1958   • Series •  Click on title for more detail   Knight, Goodwin J.  Correspondence, applications, memoranda, bulletins, articles, reports, and other documents related to administration of the various boards and divisions. Other issues discussed include administration ...          ';
+    
+        browseData[iBData++] = '1|3||70979'
+        + '|   Senate Housing and Land Use Committee Records, 1977-1998   • Record group •  Click on title for more detail   Legislature -- Senate -- Housing and Urban Affairs Committee Legislature -- Senate -- Housing and Land Use Committee The Senate Housing and Land Use Committee Records consist of 24 cubic feet of records including records under both committee names, the Senate Housing and Urban Affairs Committee and the Senate Housin...      Record group consists of:    3 record(s) [ browse ]            ';
+    
+        browseData[iBData++] = '1|0|13595|8134'
+        + '|   Legislation Files, 1964-1984   • Series •  Click on title for more detail   Native American Heritage Commission  The Legislation Files contain information about state and federal legislation affecting issues pertinent to the Native American Heritage Commission. Significant issues discussed in the state legislati...          ';
+    
+        browseData[iBData++] = '1|0|11284|11295'
+        + '|   Railroad Data, 1904-1918   • File •  Click on title for more detail   Public Utilities Commission  Southern Pacific Company, Santa Fe Railway, Pacific Electric Railway, and Salt Lake and Los Angeles Railway charts listing tonnage of freight shipped, passengers carried, and capacities of railroad ya...          ';
+    
+        browseData[iBData++] = '1|2245|9843|9849'
+        + '|   Formal Complaints (Cases), 1908-1984   • Series •  Click on title for more detail   Public Utilities Commission  Formal complaints could be brought by the Commission's own motion on behalf of the people of California, or on complaint of a third party, but having for its object the rendition of an order or decisi...      Series consists of:    2245 record(s) [ Administration Division Records - Formal Complaints (Cases)">browse ]            ';
+    
+
+
+
+// #!BROWSEINFO!#
+// END of Browse Data
+
+function showpage(url,id){
+   var xmlhttp;
+   if (window.XMLHttpRequest) {
+     xmlhttp=new XMLHttpRequest();
+   }
+   else {
+     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+   }
+   xmlhttp.onreadystatechange=function() {
+      if(xmlhttp.readyState==4 && xmlhttp.status == 200) {
+         document.getElementById(id).innerHTML = xmlhttp.responseText;
+         var res = document.getElementById(id);
+         var arr = res.getElementsByTagName("script");
+         for (var n=0; n 0){
+      document.getElementById('GoProcessSelect').getElementsByTagName('option')[0].selected = 'selected';
+      document.getElementById("GoProcess").style.display = "inline";
+   }
+}
+
+function checkStatus(){
+   if(location.href.indexOf('nd=1')!=-1){
+      alert("No record available for public.");
+   }
+}
+
+//--> 
+ Public - Archival descriptions browse 
+ 
+ 
+ 
+ 
+ 
+ 
+  Please wait 
+ 
+ 
+ 
+  
+ 
+	   browse_by_list = getCookie(sysFolder+sTemplateProcessID+"ESIbDispBrowseNav")=="true";
+      var sWebPagePrefix = '../html/';
+      showpage("/webcat/systems/cal/css/"+sWebPagePrefix+"public_search_header.html","page_header");    
+    
+ 
+ 
+      var bPromptUser = new Array( ) ;
+      var sPromptUserText = new Array( ) ;
+      var bPublicOnly = new Array( ) ;
+      var aCtr = 0 ;
+    
+ 
+ 
+      
+ 
+ 
+ Member Go Process  
+ 
+ Options:      
+         bPromptUser[aCtr] = "0" ;
+         sPromptUserText[aCtr] = "" ;
+         bPublicOnly[aCtr] = "0";
+         aCtr++ ;
+           View detail  
+         bPromptUser[aCtr] = "" ;
+         sPromptUserText[aCtr] = "" ;
+         bPublicOnly[aCtr] = "";
+         aCtr++ ;
+           Request materials using default email client       
+	  
+  
+            if(reqtype!="ViewList") document.getElementById('GoProcessSelect').innerHTML = "";
+          
+ 
+ 
+         displayDataControl() ;
+         document.writeln(displayHitsMessage());
+       
+ 
+  
+ 
+         showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_browse_header.html","browse_header");
+       
+ 
+ 
+         
+			   if(browse_by_list) document.write('   ');
+            for(dc=0; dc ");
+               document.write(unescape(tmp4));
+               document.write(" ");
+            }
+            if(getCookie(sysFolder+tableID+"ESIMemberServicesUsername")!=""){
+               showMember_Process();
+               document.getElementById('memberLoggedIn').style.display = 'inline';
+               document.getElementById('memberUserLoggedIn').innerHTML = getCookie(sysFolder+tableID+"ESIMemberServicesUsername");
+            }
+			   if(browse_by_list) document.write(' ');
+         
+          
+ 
+  
+ 
+         if(browse_by_list) $("#myList").listnav({ includeAll: false });
+	      showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_browse_footer.html","browse_footer");
+          
+      if (hasGaWebPropertyId()) {
+        writeGaJsHost();
+      }
+        
+         displayDataControl();
+       
+ 
+ 
+ 
+ Powered by WebGENCAT from  Eloquent Systems Inc  
+ 
+ 
+ 
+  
+ 
+      showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_search_footer.html","page_footer");
+      if(reqtype=="ViewList") document.getElementById("GoProcess").style.display="inline";
+      if(reqtype!="ViewCart") update_button();
+      if(reqtype=="ViewCart") update_cart_button();
+       writeGbooksJsHost();  setTimeout("processGbooks();", 1000); 
+ 
+ 
+ TOP 
+ 
+ 
+ 
+   $(document).ready(function($){
+      $('#backToTop').fadeOut('slow');
+       $(window).scroll(function(){
+           if ($(this).scrollTop() > 50) {
+               $('#backToTop').fadeIn('slow');
+           } else {
+               $('#backToTop').fadeOut('slow');
+           }
+       });
+       $('#backToTop').click(function(){
+           $("html, body").animate({ scrollTop: 0 }, 500);
+           return false;
+       });
+   });
+     
+	if(document.getElementsByClassName("browserecord").length  
+      setTimeout(function(){checkStatus()}, 500);
+    
+   
+ 
+

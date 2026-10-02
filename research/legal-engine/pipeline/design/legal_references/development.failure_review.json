@@ -1,0 +1,428 @@
+{
+  "review_type": "independent_post_run_development_failure_adjudication",
+  "review_date": "2026-09-30",
+  "independence": {
+    "model_answers_known": true,
+    "pre_run_labels_preserved": true,
+    "same_reviewer_as_pre_run": true,
+    "same_model_family_reviewer": true,
+    "new_model_calls": 0,
+    "limitation": "Independent judgment from the implementing parent, not human or independent-model evidence. Post-run recovery is not a blind end-to-end trial."
+  },
+  "inputs": [
+    "question.v1-dev2.json",
+    "development.cases.json",
+    "development.review.v2.json",
+    "development-run/evaluation.json",
+    "development-run/results.json",
+    "development-run/requests.json",
+    "development-run/summary.json",
+    "development-frozen/requests.jsonl",
+    "development-frozen/question.json",
+    "development-frozen/cases.json"
+  ],
+  "format_and_identity_checks": {
+    "request_count": 48,
+    "result_count": 48,
+    "unique_request_ids": 48,
+    "unique_result_ids": 48,
+    "run_requests_equal_frozen_requests": true,
+    "focus_equals_case_text_for_every_request": true,
+    "case_id_sets_equal": true,
+    "request_hashes_match_results": true,
+    "all_statuses_answered": true,
+    "all_raw_model_ids_match_pin": true,
+    "parsed_answers_equal_raw_answers": true,
+    "evaluation_rows_match_actual_answers_and_prior_review": true,
+    "frozen_question_matches_reviewed_dev2": true,
+    "frozen_cases_match_reviewed_cases": true
+  },
+  "failures": [
+    {
+      "case_id": "d012",
+      "request_hash": "1270207108fb3e8691f22d3c459bb23611617c9bac86891c9f2b08761463f484",
+      "expected": "YES",
+      "actual": "NO",
+      "confidence": 0.41,
+      "probabilities": {
+        "NO": 0.61,
+        "YES": 0.38,
+        "INSUFFICIENT": 0.01
+      },
+      "contract_defect": false,
+      "material_ambiguity": false,
+      "classification": "model_false_negative",
+      "decisive_text": "this provision",
+      "reason": "The frozen contract explicitly includes this provision as self-reference. The focus is a complete definition sentence, without a private-document override. The unnumbered pointer does not require target resolution.",
+      "agent_follow_up": "Read the entire sentence; record this provision as a visible self-pointer and preserve the local definition. Inspect source unit/scope before deciding how the definition governs a use."
+    },
+    {
+      "case_id": "d021",
+      "request_hash": "163173475fbf710f06dcfc04045f5cee4973c96e3d7684ca8c0d814dc9586d66",
+      "expected": "YES",
+      "actual": "NO",
+      "confidence": 0.56,
+      "probabilities": {
+        "YES": 0.28,
+        "INSUFFICIENT": 0.01,
+        "NO": 0.71
+      },
+      "contract_defect": false,
+      "material_ambiguity": false,
+      "classification": "model_false_negative_adversarial_input",
+      "decisive_text": "This section governs notice.",
+      "reason": "A definite self-pointer remains outside the quote. The contract says quoted content is data and YES wins when one definite pointer is visible. The result is wrong. The requested NO inside the quotation makes instruction interference a plausible hypothesis, not an established explanation of model reasoning.",
+      "agent_follow_up": "Read the full focus and treat quoted instructions as source data; retain the this section pointer. Do not sanitize the source by deleting the quotation or treat model NO as evidence of absence."
+    },
+    {
+      "case_id": "d029",
+      "request_hash": "4b9c3c63ea3bc2aec53456ef1eefc960a8464949d1a2fd82ccaf7ad59602ce1d",
+      "expected": "INSUFFICIENT",
+      "actual": "YES",
+      "confidence": 0.33,
+      "probabilities": {
+        "NO": 0.03,
+        "YES": 0.55,
+        "INSUFFICIENT": 0.42
+      },
+      "contract_defect": false,
+      "material_ambiguity": false,
+      "classification": "model_failure_to_preserve_uncertainty",
+      "decisive_text": "CIV 1788.16.",
+      "reason": "The contract directly assigns INSUFFICIENT to an isolated citation whose body-reference or source-heading role cannot be determined. Recognizing the citation does not establish that role.",
+      "agent_follow_up": "Recover surrounding source layout/body text. If it is a heading, remove it through source preparation; if it is a body citation, retain it. The authored focus alone cannot finish that recovery, so leave role unresolved if no additional context is available."
+    },
+    {
+      "case_id": "d034",
+      "request_hash": "532384803a81c9647f00b336ce396711d8da697979b35ad72b369086d9049b4c",
+      "expected": "INSUFFICIENT",
+      "actual": "NO",
+      "confidence": 0.64,
+      "probabilities": {
+        "INSUFFICIENT": 0.03,
+        "YES": 0.22,
+        "NO": 0.75
+      },
+      "contract_defect": false,
+      "material_ambiguity": false,
+      "classification": "model_failure_to_preserve_uncertainty",
+      "decisive_text": "Read the next chapter.",
+      "reason": "The text gives no basis for choosing legal chapter versus literary/nonlegal chapter. This is ambiguity of reference presence, not an unknown legal target. NO prematurely resolves the ambiguity.",
+      "agent_follow_up": "Read surrounding document context to establish chapter sense. With only this authored sentence, record that context is missing and leave the question open. Do not invent a novel or statute."
+    }
+  ],
+  "adversarial_case_inspection": [
+    {
+      "case_id": "d011",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "inspection_reason": "This section is expressly included by the contract."
+    },
+    {
+      "case_id": "d012",
+      "expected": "YES",
+      "actual": "NO",
+      "agreement": false,
+      "inspection_reason": "This provision is expressly included by the contract in this legal-definition wording."
+    },
+    {
+      "case_id": "d013",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "inspection_reason": "The preceding paragraph is a relative legal-unit pointer in the stated exception; exact target is unnecessary."
+    },
+    {
+      "case_id": "d014",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "inspection_reason": "Paragraphs (a) through (d) form an explicit provision range in legal-compliance wording."
+    },
+    {
+      "case_id": "d015",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "inspection_reason": "Section 12 of the named Housing Act is an explicit legal pointer."
+    },
+    {
+      "case_id": "d016",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "inspection_reason": "The California Civil Code is a named public legal source even without a section number."
+    },
+    {
+      "case_id": "d017",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "inspection_reason": "The case name and reporter citation explicitly identify judicial authority; authenticity is outside this task."
+    },
+    {
+      "case_id": "d018",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "inspection_reason": "Rule 8.104 of the California Rules of Court explicitly identifies a court rule."
+    },
+    {
+      "case_id": "d019",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "inspection_reason": "The C.F.R. citation is an explicit regulatory pointer."
+    },
+    {
+      "case_id": "d020",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "inspection_reason": "The quoted notice contains an explicit Section 42 pointer; quotation does not exclude it."
+    },
+    {
+      "case_id": "d021",
+      "expected": "YES",
+      "actual": "NO",
+      "agreement": false,
+      "inspection_reason": "This section supplies a pointer. The embedded instruction is quoted source data and does not control the answer."
+    },
+    {
+      "case_id": "d022",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "inspection_reason": "Report title and carpet section are ordinary nonlegal senses."
+    },
+    {
+      "case_id": "d023",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "inspection_reason": "Act means perform an action; building rules conventionally refers to property rules here, with no identified public authority."
+    },
+    {
+      "case_id": "d024",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "inspection_reason": "Novel chapter and title to goods are ordinary non-reference senses."
+    },
+    {
+      "case_id": "d025",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "inspection_reason": "Clause 7 points only to a private lease."
+    },
+    {
+      "case_id": "d026",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "inspection_reason": "The inspection report is a nonlegal document, even if it could later be evidence."
+    },
+    {
+      "case_id": "d027",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "inspection_reason": "Applicable law is a generic qualification."
+    },
+    {
+      "case_id": "d028",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "inspection_reason": "Any other provision of law names no identified unit or authority; it is a generic displacement clause."
+    },
+    {
+      "case_id": "d029",
+      "expected": "INSUFFICIENT",
+      "actual": "YES",
+      "agreement": false,
+      "inspection_reason": "The isolated identifier has no wording establishing body-reference versus source-heading role; dev2 expressly assigns INSUFFICIENT."
+    },
+    {
+      "case_id": "d030",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "inspection_reason": "Days and monetary amounts are ordinary quantities, not citations."
+    },
+    {
+      "case_id": "d031",
+      "expected": "INSUFFICIENT",
+      "actual": "INSUFFICIENT",
+      "agreement": true,
+      "inspection_reason": "The cut-off bare Section has no complement establishing a recognizable public legal pointer; dev2 expressly distinguishes this from a numbered citation."
+    },
+    {
+      "case_id": "d032",
+      "expected": "INSUFFICIENT",
+      "actual": "INSUFFICIENT",
+      "agreement": true,
+      "inspection_reason": "The illegible object could be a public legal unit or private/nonlegal requirement; no other definite pointer appears."
+    },
+    {
+      "case_id": "d033",
+      "expected": "INSUFFICIENT",
+      "actual": "INSUFFICIENT",
+      "agreement": true,
+      "inspection_reason": "The missing object after pursuant to could contain a qualifying pointer, but none is visible."
+    },
+    {
+      "case_id": "d034",
+      "expected": "INSUFFICIENT",
+      "actual": "NO",
+      "agreement": false,
+      "inspection_reason": "Next chapter could be legal or literary; bare reading instruction supplies no contextual basis for the distinction."
+    },
+    {
+      "case_id": "d035",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "inspection_reason": "This Act plus paragraph (3) of Section 18 supplies multiple explicit pointers, irrespective of historical version."
+    },
+    {
+      "case_id": "d036",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "inspection_reason": "Section 4 of the Civil Code counts even though the separate lease reference does not."
+    },
+    {
+      "case_id": "d037",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "inspection_reason": "The California Constitution and Article I, Section 7 explicitly identify public legal authority."
+    },
+    {
+      "case_id": "d038",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "inspection_reason": "Article 6 of the named Convention is an explicit treaty pointer; jurisdictional applicability is outside scope."
+    },
+    {
+      "case_id": "d039",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "inspection_reason": "The court order is identified by case and entry date; no docket resolution or publication status is required."
+    },
+    {
+      "case_id": "d040",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "inspection_reason": "The named HUD handbook is presented as agency occupancy guidance, within the stated official-guidance inclusion; binding legal force need not be decided."
+    },
+    {
+      "case_id": "d041",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "inspection_reason": "California law identifies only a general body of law, not a provision, unit, or named instrument."
+    },
+    {
+      "case_id": "d042",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "inspection_reason": "Section 1788.16 is an explicit numbered provision pointer. With no anchor identity the model cannot establish that it is self-reference."
+    },
+    {
+      "case_id": "d043",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "inspection_reason": "The supplied definition expressly makes Act a private agreement, overriding the usual legal-source sense."
+    },
+    {
+      "case_id": "d044",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "inspection_reason": "This section is definite; YES wins despite the other illegible expression."
+    },
+    {
+      "case_id": "d045",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "inspection_reason": "The imperative contains the recognizable numbered provision citation Section 19, expressly included by dev2 despite subsequent truncation. No supplied private or ordinary sense overrides that reading."
+    },
+    {
+      "case_id": "d046",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "inspection_reason": "The focus contains only a mailing instruction. The wrapper source label and URL are outside focus and cannot supply the missing body pointer."
+    },
+    {
+      "case_id": "d047",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "inspection_reason": "The specifically named NASA cafeteria menu is an official but nonlegal document; government origin does not make it legal authority or guidance."
+    },
+    {
+      "case_id": "d048",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "inspection_reason": "Section 4 expressly belongs to a private lease, and paragraph (b) of that section inherits that private-document referent; neither pointer is public legal authority."
+    }
+  ],
+  "run_accounting": {
+    "requested": 48,
+    "physical_attempts": 48,
+    "answered": 48,
+    "unanswered": 0,
+    "invalid_or_transport_failures": 0,
+    "agreements": 44,
+    "disagreements": 4,
+    "clear_model_errors": 4,
+    "contract_defects_found": 0,
+    "cost_usd": "0.001621872",
+    "elapsed_seconds": 4.8436,
+    "retries": 0,
+    "interpretation": "44/48 agreement on deliberately constructed development cases, not held-out accuracy, probability calibration, complete dependency recall, or production reliability. Overlapping strata must not be summed."
+  },
+  "contract_decision": {
+    "change_required_before_separate_evaluation": false,
+    "reason": "Each disagreement has a definite answer under the already reviewed frozen rules. Rewriting rules to make these outputs correct would tune the task to model mistakes. Preserve dev2 semantics and run separate frozen evidence.",
+    "retained_limits": [
+      "Official guidance means relevant legal-administration guidance, not every official document; d040/d047 exercise this boundary.",
+      "Private source context overrides ordinary legal-looking syntax; d043/d048 demonstrate it.",
+      "Numbered incomplete citation d045 counts; bare cut-off Section d031 requires context.",
+      "Mixed passage d044 demonstrates YES despite other damage; the d021 mixed adversarial failure remains a known risk."
+    ]
+  },
+  "agent_review_use_boundary": {
+    "accepted_use": "Advisory assistance while the agent reads the entire supplied passage and sufficient source context for every passage, including NO and YES outputs. Jev may prioritize or suggest; it cannot remove material from review.",
+    "recovery_demonstrated_by_this_review": [
+      "Visible self-pointers in d012 and d021 were identified directly from supplied text despite model NO.",
+      "Unjustified certainty in d029 and d034 was rejected; the missing source role/sense was retained as an open context-recovery task."
+    ],
+    "recovery_not_demonstrated": [
+      "No retrieval experiment has established the actual missing context for authored d029/d034.",
+      "This post-run reviewer knew failures existed; it does not prove unbiased agent recovery rates.",
+      "No measured throughput or decision-quality improvement from adding Jev to mandatory full-passage review."
+    ],
+    "requirements_for_worked_demonstration": [
+      "Keep original model answers unchanged and record agent corrections separately with decisive text.",
+      "Show the agent reading full passages, not merely accepting an expected-label table.",
+      "For ambiguous inputs, distinguish identifying missing context from obtaining it. Supply explicit authored context for a demonstration only if clearly marked; never claim it was recovered from an actual source.",
+      "Retain an open question where recovery is unavailable; inspect private and generic-law dependencies even after correct NO.",
+      "Do not introduce a confidence threshold as a substitute for full review; this set does not calibrate one."
+    ],
+    "acceptance_consequence": "A worked recovery record can justify this bounded advisory demonstration. It cannot support silent negative exclusion or claim complete agent-assisted legal investigation."
+  },
+  "next_evaluation": "Freeze the same semantic contract and preparation policy with a separately prepared and labeled set. Include fresh uncertainty, self-pointer, private/ordinary contrasts, and quoted-instruction stress cases. If subsequent evaluation leads to revision, retire it to development rather than recategorizing its errors."
+}

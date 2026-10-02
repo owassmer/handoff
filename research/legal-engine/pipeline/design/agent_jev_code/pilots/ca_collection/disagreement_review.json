@@ -1,0 +1,59 @@
+{
+  "review_type": "post_run_disagreement_adjudication",
+  "review_date": "2026-09-30",
+  "inputs": {
+    "request_file": "/Users/owenwassmer/dev/handoff-ferro/research/legal-engine/pipeline/design/agent_jev_code/pilots/ca_collection/requests.jsonl",
+    "model_results_source": "Parent supplied only the two reported labels and confidence values; no model result files inspected.",
+    "reported_run": "42 dispatched answers; 40 agree with frozen blind labels."
+  },
+  "independence": {
+    "post_run": true,
+    "model_answers_known_for_reviewed_cases": true,
+    "frozen_blind_labels_preserved": true,
+    "questions_unchanged": true,
+    "new_model_calls": 0,
+    "limitations": [
+      "Same model family and same reviewer as the pre-run review.",
+      "This is post-run adjudication prompted by disagreement, not a new blind result or evidence from a tuned rerun.",
+      "No model reasoning is available; confidence numbers do not establish why a label was chosen."
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "collection16",
+      "request_hash": "b753d6ed445beccc506ca79bcc244e607538dde5af0393a6fb763f33c36a4e54",
+      "frozen_expected": "YES",
+      "model_answer": "NO",
+      "reported_model_confidence": 0.62,
+      "classification": "contract_ambiguity_self_reference_boundary",
+      "adjudicated_status": "Do not treat as an unambiguous model error. Frozen mismatch remains.",
+      "decisive_text": "Any violation of the provisions of this section",
+      "reason": "YES is the stronger reading of the criterion when the section is the legal unit enclosing the sentence that refers to it. However, the lead question asks about another legal provision, and the focus is the complete section body. A reader can reasonably understand this section as the same unit rather than another or an enclosing unit of the whole focus. Neither the examples nor the criterion explicitly says that a reference to the unit coextensive with the focus counts. That leaves a real boundary ambiguity.",
+      "why_not_insufficient_label": "The source is complete and the reference expression is visible. The uncertainty is in the task contract, not damaged or cut source text, so changing the frozen expected label to INSUFFICIENT would misuse that category.",
+      "reviewer_accountability": "The blind YES assumed that enclosure was measured from the referring expression. The pre-run review did not flag the whole-focus versus referring-expression distinction.",
+      "future_version_correction": "Explicitly include references to the same section or unit that constitutes the focus, if intended. For example: Does focus explicitly name or point to a legal unit, including itself, an enclosing unit, or another provision? Add matched sentence-focus and whole-section-focus fixtures before a separately versioned evaluation."
+    },
+    {
+      "case_id": "collection36",
+      "request_hash": "b4b1403e1495edfa12b5e1ef2aba8018c423c4a8ff7edb5b743482055ab4dff8",
+      "frozen_expected": "YES",
+      "model_answer": "NO",
+      "reported_model_confidence": 0.33,
+      "classification": "clear_model_error_under_frozen_contract",
+      "adjudicated_status": "Clear false negative for an express enclosing-unit reference.",
+      "decisive_text": "the provisions of this title",
+      "reason": "This title explicitly identifies the enclosing title, a legal unit distinct from the focused section. The criterion expressly includes enclosing legal units, and the instructions give this chapter as a relative-reference example. This title is the same kind of reference at a higher level. Neither target resolution nor external hierarchy evidence is needed to detect the reference. The whole-section self-reference ambiguity does not apply.",
+      "confidence_interpretation": "Low reported confidence does not change the clear textual answer or explain the model error.",
+      "future_version_correction": "No task-contract correction is necessary for this case. Retain it as a known failed development example; test additional title/chapter/section relative references on fresh inputs if evaluating generalization."
+    }
+  ],
+  "overall": {
+    "frozen_agreement": "40/42, unchanged",
+    "disagreement_breakdown": {
+      "clear_model_error": 1,
+      "contract_ambiguity": 1
+    },
+    "interpretation": "Report one clear enclosing-title false negative and one self-reference contract ambiguity. Do not relabel either frozen case, turn the ambiguous result into a success, or report a revised 41/42 agreement.",
+    "future_work": "Clarify the self-reference boundary only in a new prompt version. Any later rerun is a development rerun and cannot erase this frozen result."
+  }
+}

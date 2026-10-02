@@ -1,0 +1,741 @@
+{
+  "as_of": "2026-10-01",
+  "status": "29 concrete source/version decisions; bounded quarterly census completed; selected nonstandard/current-codification dependencies remain",
+  "scope": "CA regulatory currentness, regional air/water instruments. Canonical registers unchanged.",
+  "decisions": [
+    {
+      "instrument_id": "CA:CCR8",
+      "operation": "append_version_records",
+      "reason": "Safe residential repair/work and vendor qualification require operative construction/general-industry safety rules.",
+      "official_toc_url": "https://www.dir.ca.gov/samples/search/query.htm",
+      "official_section_url_pattern": "https://www.dir.ca.gov/title8/{section}.html",
+      "versions": [
+        {
+          "sections": "1514",
+          "name": "Proper fit PPE",
+          "effective_from": "2025-08-21",
+          "source_url": "https://www.dir.ca.gov/OSHSB/Proper-Fit-PPE-Horcher.html"
+        },
+        {
+          "sections": "1532.1 5155 5198",
+          "name": "Lead",
+          "effective_from": "2025-01-01",
+          "source_url": "https://www.dir.ca.gov/OSHSB/Lead.html"
+        },
+        {
+          "sections": "1635",
+          "name": "Cone and bar barricades",
+          "effective_from": "2025-10-01",
+          "source_url": "https://www.dir.ca.gov/oshsb/apprvd.html"
+        },
+        {
+          "sections": "1671.1 1716.2 1730 1731",
+          "name": "Residential fall protection",
+          "effective_from": "2025-07-01",
+          "source_url": "https://www.dir.ca.gov/OSHSB/Fall-Protection-in-Residential-Construction.html"
+        },
+        {
+          "sections": "1951 1952 1953 1955 1956 1960 5156",
+          "name": "Confined spaces construction",
+          "effective_from": "2026-01-01",
+          "source_url": "https://www.dir.ca.gov/OSHSB/Confined-Spaces-in-Construction.html"
+        },
+        {
+          "sections": "3396",
+          "name": "Indoor heat",
+          "effective_from": "2024-07-23",
+          "source_url": "https://www.dir.ca.gov/OSHSB/Indoor-Heat.html"
+        },
+        {
+          "sections": "5144 Appendix A",
+          "name": "Respirator fit testing",
+          "effective_from": "2024-06-24",
+          "source_url": "https://www.dir.ca.gov/oshsb/apprvd.html"
+        },
+        {
+          "sections": "5204",
+          "name": "Respirable crystalline silica nonemergency",
+          "effective_from": "2025-02-05",
+          "source_url": "https://www.dir.ca.gov/OSHSB/Respirable-Crystalline-Silica-Non-Emergency.html"
+        }
+      ],
+      "limitation": "Approved index dated July 2026 is not independently proof of absence of later actions; J2 should acquire current official sections and histories, not substitute redline proposals.",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ]
+    },
+    {
+      "instrument_id": "CA-OC:SCAQMD",
+      "operation": "append_version_records",
+      "source_url": "https://www.aqmd.gov/home/rules-compliance/rules/recent-actions",
+      "versions": [
+        {
+          "amended_on": "2026-01-09",
+          "rules": [
+            "463",
+            "1111",
+            "1118"
+          ]
+        },
+        {
+          "amended_on": "2026-04-03",
+          "rules": [
+            "1124",
+            "1144"
+          ]
+        },
+        {
+          "amended_on": "2026-05-01",
+          "rules": [
+            "301",
+            "303",
+            "304",
+            "304.1",
+            "306",
+            "307.1",
+            "308",
+            "309",
+            "311",
+            "313",
+            "314",
+            "315",
+            "316",
+            "316.2"
+          ]
+        },
+        {
+          "amended_on": "2026-06-05",
+          "rules": [
+            "219",
+            "222",
+            "401",
+            "404",
+            "405",
+            "444.1",
+            "1136",
+            "2011",
+            "2012",
+            "2015"
+          ]
+        },
+        {
+          "amended_on": "2026-08-07",
+          "rules": [
+            "1302",
+            "1401"
+          ]
+        },
+        {
+          "amended_on": "2026-09-04",
+          "rules": [
+            "461",
+            "1157"
+          ]
+        }
+      ],
+      "reason": "All are within existing selected regulations; retain amendments for section screening rather than treating general rule-book URL as a dated version.",
+      "direct_text_example": "https://www.aqmd.gov/docs/default-source/rule-book/recent-rules/r1111.pdf?sfvrsn=a4f8697e_4",
+      "source_anomaly": "Rule1111 cover and recent-actions index identify January9 2026; continuation headers say January9 2025. Preserve discrepancy in acquisition metadata. Do not infer universal zero-emissions replacement rule from proposed rule packages.",
+      "temporal_instruction": "Amendment date is not every provision's compliance date. Rule1111 contains dated equipment categories and mitigation options through 2030; retain complete rule and tables.",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ]
+    },
+    {
+      "instrument_id": "CA:CCR2",
+      "operation": "append_version_record",
+      "name": "Civil Rights Department conciliation procedures",
+      "oal_file": "2026-0202-01SR",
+      "effective_from": "2026-04-01",
+      "sections_adopted": [
+        "10280",
+        "10281"
+      ],
+      "sections_amended": [
+        "10000",
+        "10001",
+        "10031",
+        "10063"
+      ],
+      "sections_repealed": [
+        "10024",
+        "10025",
+        "10056",
+        "10057"
+      ],
+      "source_url": "https://calcivilrights.ca.gov/wp-content/uploads/sites/32/2026/02/2026-0202-01SR-Approval-and-Final-Text.pdf",
+      "index_url": "https://oal.ca.gov/april_1_effective_date/",
+      "reason": "Housing discrimination disputes and agency resolution are within the outgoing-account/occupancy aperture.",
+      "acquisition_note": "18-page scanned PDF opened but has no extracted text; require rendered/OCR acquisition, not an empty successful fetch.",
+      "legal_functions": [
+        "anti_discrimination",
+        "courts_procedure"
+      ]
+    },
+    {
+      "instrument_id": "CA:CCR25",
+      "operation": "append_version_record",
+      "name": "Employee Housing, Mobilehome and Special Occupancy Parks",
+      "oal_file": "2026-0603-02S",
+      "effective_from": "2026-07-15",
+      "sections_adopted": [
+        "621.5",
+        "1123",
+        "1609",
+        "2123",
+        "2609.5"
+      ],
+      "sections_amended": [
+        "610",
+        "621",
+        "631",
+        "633",
+        "760",
+        "1002",
+        "1004",
+        "1005",
+        "1006.5",
+        "1010",
+        "1012",
+        "1013",
+        "1018",
+        "1020.6",
+        "1032",
+        "1038",
+        "1042",
+        "1102",
+        "1185",
+        "1317",
+        "1426",
+        "1514",
+        "2002",
+        "2004",
+        "2004.5",
+        "2005",
+        "2006.5",
+        "2010",
+        "2012",
+        "2013",
+        "2018",
+        "2020.6",
+        "2032",
+        "2038",
+        "2042",
+        "2102",
+        "2185",
+        "2317",
+        "2426",
+        "2514"
+      ],
+      "source_url": "https://www.hcd.ca.gov/sites/default/files/docs/building-standards/mobilehome-and-special-occupancy-parks-express-terms.docx",
+      "index_url": "https://oal.ca.gov/Other_Effective_Dates/",
+      "reason": "Conditional special residential types were not excluded at J0; title-wide mirror may lag July change.",
+      "acquisition_note": "OAL direct target is DOCX; web tool rejects its content type, requiring binary download and DOCX extraction in J2.",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ]
+    },
+    {
+      "instrument_id": "CA:CCR22",
+      "operation": "append_version_record",
+      "name": "Onsite Treatment and Reuse of Nonpotable Water",
+      "oal_file": "2026-0310-01",
+      "effective_from": "2026-04-22",
+      "selected_unit": "Complete new chapter, \u00a7\u00a760600\u201360710, all definitions and attachments",
+      "source_url": "https://www.waterboards.ca.gov/drinking_water/certlic/drinkingwater/docs/2026/final-regulation-text.pdf",
+      "index_url": "https://oal.ca.gov/Other_Effective_Dates/",
+      "reason": "Conditional building water treatment, repair and operation; not a generic public utility exclusion.",
+      "acquisition_note": "46-page official final text successfully opened; use direct URL rather than OAL Outlook safe-link.",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ]
+    },
+    {
+      "instrument_id": "CA:CCR24",
+      "operation": "amend_version_scope",
+      "selected_addition": "2025 Part7 emergency supplement SFM EF01-25 plus readoption/certification history",
+      "effective_from": "2026-01-01",
+      "source_url": "https://www.dgs.ca.gov/BSC/Rulemaking/Emergency-Rulemaking-NEW",
+      "supporting_url": "https://www.dgs.ca.gov/BSC/News/Page-Content/CALCode-Quarterly-Newsletters-Archive/CALCode-Quarterly-Winter-2026",
+      "reason": "Base edition alone omits emergency WUI amendments relevant to repairs.",
+      "remaining_dependency": "DGS search text confirms initial supplement effective January1 and April7 readoption statement exists; inspect May6 action and final certified/readopted text and expiry before asserting current operative version.",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ]
+    },
+    {
+      "instrument_id": "CA:ZONE0-2026",
+      "operation": "retain_status",
+      "legal_status": "Not established as operative; no effective date confirmed",
+      "source_url": "https://bof.fire.ca.gov/projects-and-programs/defensible-space-zones-0-1-and-2",
+      "oal_file": "2026-0828-03",
+      "reason": "Current Board page expressly says final review/publication incomplete; an OAL recent-actions entry does not specify disposition.",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ],
+      "level": "regulation",
+      "instrument_kind": "regulatory action",
+      "adopted_on": "2026-08-19",
+      "adoption_status": "Board-adopted package",
+      "oal_status": "Final review pending as reported by issuing agency on the as-of date"
+    },
+    {
+      "instrument_id": "CA-OC:MS4-2026",
+      "operation": "retain_and_clarify_transition",
+      "adopted_on": "2026-09-11",
+      "effective_from": "2027-03-10",
+      "source_url": "https://www.waterboards.ca.gov/santaana/water_issues/programs/stormwater/regional_ms4_permit.html",
+      "transition": "Previous county permits remain until March10 2027 and thereafter for past-violation enforcement. Existing WQMP/TGD requirements continue for initial project applications until 90 days after approval of applicable uniform TGD under VIII.C.4\u20135; uniform TGDs due March10 2029, not automatically effective that date.",
+      "application": "Binds named public permittees. Private operator duties must be traced through local implementation and project-specific coverage.",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ]
+    },
+    {
+      "instrument_id": "CA:CCR20",
+      "operation": "append_version_record",
+      "name": "CPUC Rules of Practice and Procedure",
+      "oal_file": "2026-0804-01S",
+      "approved_on": "2026-09-16",
+      "effective_from": "2027-01-01",
+      "selected_unit": "Complete adopted rules and amendments; retain May 2021 operative rules until transition",
+      "source_url": "https://www.cpuc.ca.gov/-/media/cpuc-website/proceedings-and-rulemaking/documents/2026-0804-01s---approval_cpuc-rules-effective-jan-1-2027.pdf",
+      "index_url": "https://www.cpuc.ca.gov/proceedings-and-rulemaking/rules-of-practice-and-procedure",
+      "legal_functions": [
+        "courts_procedure",
+        "payments"
+      ],
+      "reason": "Utility billing and service disputes can affect account resolution. Agency confirms approval absent from quarterly OAL future table last entry September10.",
+      "acquisition_note": "42-page scan, text extraction empty; require rendered/OCR acquisition."
+    },
+    {
+      "instrument_id": "CA:CCR22",
+      "operation": "append_version_record",
+      "name": "Board of Environmental Safety hazardous waste fee rates",
+      "oal_file": "2026-0915-02E",
+      "adopted_on": "2026-08-26",
+      "filed_on": "2026-09-25",
+      "effective_from": "2026-10-01",
+      "selected_unit": "Division4.5 chapter19 sections66269.41\u201366269.46 and dependencies",
+      "source_url": "https://bes.dtsc.ca.gov/wp-content/uploads/sites/42/2026/09/Approved-Regulatory-Text_ada.pdf",
+      "index_url": "https://bes.dtsc.ca.gov/fees-regulations/",
+      "legal_functions": [
+        "work_standards",
+        "payments"
+      ],
+      "reason": "Repair-related hazardous waste generation and handling; retain conditional fees rather than charging every operator every facility/environmental fee.",
+      "acquisition_note": "5-page approved redline; preserve strikeouts and additions during J2."
+    },
+    {
+      "instrument_id": "CA-OC:WATER-DEMINIMIS2020",
+      "operation": "add_instrument",
+      "name": "General WDR for insignificant threat discharges to surface waters",
+      "order": "R8-2020-0006",
+      "npdes": "CAG998001",
+      "selected_unit": "Entire order and attachments A\u2013F (C unused), including coverage, monitoring, definitions and standard provisions",
+      "adopted_on": "2020-06-19",
+      "effective_from": "2020-07-01",
+      "stated_expiration": "2025-06-30",
+      "source_url": "https://www.waterboards.ca.gov/santaana/board_decisions/adopted_orders/orders/2020/R8-2020-0006.pdf",
+      "legal_functions": [
+        "work_standards",
+        "preconditions",
+        "provider_contracts"
+      ],
+      "reason": "Construction dewatering, subterranean seepage, pool drainage, condensate and maintenance water can arise during residential work. Separate direct discharger coverage from MS4 public permittee duties.",
+      "currentness": "Caltrans current field guide AppendixD identifies administrative extension; current CIWQS residential enrollment corroborates continued use. Regional 2025/2026 adopted-order census found no replacement general order. Retain order; eligibility for new enrollment and individual permit coverage remains a project condition.",
+      "supporting_url": "https://dot.ca.gov/-/media/dot-media/programs/construction/documents/environmental-compliance/field-guide-to-construction-site-dewatering-a11y.pdf"
+    },
+    {
+      "instrument_id": "CA-OC:WATER-NEWPORT2019",
+      "operation": "add_instrument",
+      "order": "R8-2019-0061",
+      "npdes": "CAG918002",
+      "selected_unit": "Entire adopted order and all attachments",
+      "source_url": "https://www.waterboards.ca.gov/santaana/board_decisions/adopted_orders/orders/2019/R8-2019-0061.pdf",
+      "legal_functions": [
+        "work_standards",
+        "preconditions"
+      ],
+      "reason": "Conditional San Diego Creek/Newport Bay dewatering/remediation discharge route; watershed and discharge character determine use, not county membership alone.",
+      "currentness": "Current CIWQS and 2026 public water district project manual retain order; 2025/2026 regional adopted-order census found no replacement. Resolve expiry/continuation provisions in exact order before describing operative temporal span."
+    },
+    {
+      "instrument_id": "CA:WATER-UTILITYVAULT2014",
+      "operation": "add_instrument",
+      "order": "2014-0174-DWQ",
+      "npdes": "CAG990002",
+      "selected_unit": "Entire order with attachments and monitoring/reporting program",
+      "source_url": "https://www.waterboards.ca.gov/board_decisions/adopted_orders/water_quality/2014/wqo2014_0174_dwq.pdf",
+      "legal_functions": [
+        "work_standards",
+        "preconditions",
+        "provider_contracts"
+      ],
+      "reason": "Conditional utility-vault/underground-structure work; direct discharges excluded from regional de minimis permit where this applies.",
+      "currentness": "Order VII.A.d expressly continues administratively after June29 2020 if not replaced, for dischargers covered at expiration. Caltrans current guidance confirms continuation. Do not infer automatic new enrollment."
+    },
+    {
+      "instrument_id": "CA:WATER-DRINKING2014",
+      "operation": "add_instrument",
+      "order": "2014-0194-DWQ",
+      "npdes": "CAG140001",
+      "selected_unit": "Entire order and attachments; community-system and contractor definitions, exceptions and Notice of Applicability conditions",
+      "source_url": "https://www.waterboards.ca.gov/board_decisions/adopted_orders/water_quality/2014/wqo2014_0194_dwq.pdf",
+      "legal_functions": [
+        "work_standards",
+        "preconditions",
+        "provider_contracts"
+      ],
+      "reason": "Conditional private/community water-system maintenance and contractor work; smaller systems can enroll voluntarily, nonenrollment does not remove CWA duties.",
+      "currentness": "Official general permit index still links order; stated expiry February25 2020. Specific continuation/reissuance status remains dependency, so no new operative span asserted."
+    },
+    {
+      "instrument_id": "CA-OC:MS4-NEWPORT-TSO",
+      "operation": "add_dependency",
+      "order": "R8-2025-0003 amending R8-2019-0050 as previously amended R8-2023-0063",
+      "selected_unit": "Complete amendment and incorporated parent TSO/pollution prevention plan",
+      "source_url": "https://www.waterboards.ca.gov/santaana/board_decisions/adopted_orders/orders/2025/r8-2025-0003.pdf",
+      "legal_functions": [
+        "work_standards",
+        "preconditions"
+      ],
+      "reason": "Newport Bay fecal-coliform schedule for named public permittees; retain conditional watershed implementation chain, not a universal private-operator mandate.",
+      "source_anomaly": "Adopted order index and order identify adopted instrument although PDF metadata says Draft."
+    },
+    {
+      "instrument_id": "CA:CCR16",
+      "operation": "append_version_record",
+      "oal_file": "2025-1121-04SR",
+      "name": "Architect application extension",
+      "selected_unit": "109; complete changed sections and incorporated dependencies",
+      "effective_from": "2026-04-01",
+      "source_url": "https://www.cab.ca.gov/docs/regulation_changes/2024-25/ccr_109_ooa.pdf",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ]
+    },
+    {
+      "instrument_id": "CA:CCR16",
+      "operation": "append_version_record",
+      "oal_file": "2026-0212-07S",
+      "name": "Retired architect reinstatement",
+      "selected_unit": "109.1; complete changed sections and incorporated dependencies",
+      "effective_from": "2026-07-01",
+      "source_url": "https://www.cab.ca.gov/docs/regulation_changes/2025-26/ccr_1091_ooa.pdf",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ]
+    },
+    {
+      "instrument_id": "CA:CCR16",
+      "operation": "append_version_record",
+      "oal_file": null,
+      "name": "Architect delegation of certain functions",
+      "selected_unit": "103; complete changed sections and incorporated dependencies",
+      "effective_from": "2026-10-01",
+      "source_url": "https://www.cab.ca.gov/docs/regulation_changes/2025-26/ccr_103_ooa.pdf",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ],
+      "temporal_note": "FiledJune24 2026. Missing from quarterly table; agency approved index and approval PDF establish action."
+    },
+    {
+      "instrument_id": "CA:CCR16",
+      "operation": "append_version_record",
+      "oal_file": "2026-0601-06S",
+      "name": "Architect application review",
+      "selected_unit": "111; complete changed sections and incorporated dependencies",
+      "effective_from": "2026-10-01",
+      "source_url": "https://www.cab.ca.gov/docs/regulation_changes/2025-26/ccr_111_ooa.pdf",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ]
+    },
+    {
+      "instrument_id": "CA:CCR16",
+      "operation": "append_version_record",
+      "oal_file": "2026-0601-04S",
+      "name": "Structural pest examinations, including corrected text",
+      "selected_unit": "1940 1940.1 1941 1942; complete changed sections and incorporated dependencies",
+      "effective_from": "2026-10-01",
+      "source_url": "https://www.pestboard.ca.gov/pestlaw/examinations_corrected_approval.pdf",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ],
+      "temporal_note": "FiledJuly13 2026, correctedJuly23 2026; OAL quarterly table wrongly prints July13 2025. Corrected1942 text must accompany original full package, not replace other sections."
+    },
+    {
+      "instrument_id": "CA:CCR16",
+      "operation": "append_version_record",
+      "oal_file": "2026-0217-01S",
+      "name": "Engineers and geologists fees",
+      "selected_unit": "407 3005; complete changed sections and incorporated dependencies",
+      "effective_from": "2026-07-01",
+      "source_url": "https://www.bpelsg.ca.gov/about_us/407_notice_of_approval.pdf",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ]
+    },
+    {
+      "instrument_id": "CA:CCR10",
+      "operation": "append_version_record",
+      "oal_file": "2026-0213-03S",
+      "name": "Appraisal review and USPAP",
+      "selected_unit": "3705; complete changed sections and incorporated dependencies",
+      "effective_from": "2026-07-01",
+      "source_url": "https://www.brea.ca.gov/pdf/uspap_notice_of_approval_2026.pdf",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ]
+    },
+    {
+      "instrument_id": "CA:CCR10",
+      "operation": "append_version_record",
+      "oal_file": "2026-0520-04S",
+      "name": "Appraiser education qualifications",
+      "selected_unit": "3542 3543 3681; complete changed sections and incorporated dependencies",
+      "effective_from": "2026-10-01",
+      "source_url": "https://www.brea.ca.gov/pdf/aqbednoticeofapproval07152026.pdf",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ]
+    },
+    {
+      "instrument_id": "CA:CCR3",
+      "operation": "append_version_record",
+      "oal_file": "2026-0410-03S",
+      "name": "Pesticide heat illness and chemical resistant PPE",
+      "selected_unit": "6738.1; complete changed sections and incorporated dependencies",
+      "effective_from": "2026-07-01",
+      "source_url": "https://www.cdpr.ca.gov/wp-content/uploads/2025/09/dpr25-004_oal_final_text_ppe_use.pdf",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ]
+    },
+    {
+      "instrument_id": "CA:CCR3",
+      "operation": "append_version_record",
+      "oal_file": "2026-0402-01S",
+      "name": "Pesticide groundwater protection list",
+      "selected_unit": "6622 6624 6800 6804 6805; complete changed sections and incorporated dependencies",
+      "effective_from": "2026-07-01",
+      "source_url": "https://www.cdpr.ca.gov/wp-content/uploads/2025/05/DPR_25-002_OAL_FINAL_TEXT_GWPL_2026.pdf",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ]
+    },
+    {
+      "instrument_id": "CA:CCR14",
+      "operation": "append_version_record",
+      "oal_file": "2026-0330-01S",
+      "name": "CalRecycle informal hearing rules",
+      "selected_unit": "Entire approved package; include18997.5/18997.6 SB1383 hearings; complete changed sections and incorporated dependencies",
+      "effective_from": "2026-07-01",
+      "source_url": "https://www2.calrecycle.ca.gov/Docs/Web/138949",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ]
+    },
+    {
+      "instrument_id": "CA:CCR22",
+      "operation": "append_version_record",
+      "oal_file": "2026-0417-04S",
+      "name": "SB502 safer consumer products framework",
+      "selected_unit": "69503.5 69504 69504.1 69505.1 69506.1; complete changed sections and incorporated dependencies",
+      "effective_from": "2026-10-01",
+      "source_url": "https://dtsc.ca.gov/sb-502-2022-mandated-framework-regulations-amendments/",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts",
+        "preconditions"
+      ]
+    },
+    {
+      "instrument_id": "CA:CCR10",
+      "operation": "append_version_record",
+      "name": "DRE SB164 fee harmonization",
+      "oal_file": "2026-0615-04SR",
+      "effective_from": "2026-06-29",
+      "source_url": "https://dre.ca.gov/files/pdf/relaw/2026/SB164_StatsOf2024_Implementation_Text_Resubmission_062426.pdf",
+      "selected_unit": "2716.1,2847,2851.5,2931,3002,3009 for licensing/rental listing/provider dependencies; retain mixed-package2790.1.5,2790.1.7,2790.6,2793,2799.2,2810.5 with conditional existing subdivision/time-share status rather than assume new development authority",
+      "legal_functions": [
+        "broker_licensing",
+        "provider_contracts",
+        "fees"
+      ],
+      "acquisition_note": "8-page adopted redline; preserve additions and deletions."
+    },
+    {
+      "instrument_id": "CA:CCR14",
+      "operation": "append_version_record",
+      "name": "Covered electronic waste recycling enforcement",
+      "oal_file": "2026-0616-03E",
+      "effective_from": "2026-06-24",
+      "source_url": "https://www2.calrecycle.ca.gov/Docs/Web/139225",
+      "selected_unit": "18660.19,18660.31,18660.44,18660.45,18660.46 and incorporated dependencies",
+      "legal_functions": [
+        "work_standards",
+        "provider_contracts"
+      ],
+      "reason": "Conditional electronic-waste disposal/recycling provider obligations; do not impose recycler duties on every waste generator."
+    }
+  ],
+  "remaining_dependencies": [
+    {
+      "family": "CCR24 adopted-future changes",
+      "evidence": "CBSC meeting index lists August25\u201327 2026 adoption/approval meeting for intervening cycle; pre-cycle page says supplements effective July1 2027.",
+      "source_urls": [
+        "https://www.dgs.ca.gov/BSC/Meetings",
+        "https://www.dgs.ca.gov/BSC/Rulemaking/2025-Intervening-Cycle/PreCycle",
+        "https://www.dgs.ca.gov/DSA/Resources/CALGreen-Code-Development?search=public+comment",
+        "https://www.dgs.ca.gov/BSC/Rulemaking/2025-Intervening-Cycle/Commission-Mtgs/2026-08-25"
+      ],
+      "need": "Exact August25\u201327 meeting indexed page links final express terms and action matrices for BSC packages; recover all adopted package identities and dispositions, including other agencies. Part1 may use 30-day-after-filing effectiveness rather than July1 2027; do not blanket-date all parts.",
+      "recovery": "DGS direct pages yielded 403/internal errors; indexed official search text recovered meeting/cycle information. Browser/network capture recovery remains to perform, so not an exhausted-access gap.",
+      "identified_packages": [
+        "BSC01/25 Part1",
+        "BSC02/25 Part10",
+        "BSC03/25 Part11",
+        "DSA-AC01/25 Part2",
+        "SFM01/25 Part2"
+      ]
+    },
+    {
+      "family": "CCR cross-agency 2026 amendments",
+      "source_urls": [
+        "https://oal.ca.gov/january-1-2027-effective-date/",
+        "https://oal.ca.gov/october-1-2026-effective-date/",
+        "https://oal.ca.gov/july-1-effective_date/",
+        "https://oal.ca.gov/april_1_effective_date/",
+        "https://oal.ca.gov/Other_Effective_Dates/",
+        "https://oal.ca.gov/rulemaking_process/regular_rulemaking_process/recent-actions/"
+      ],
+      "need": "Quarterly table screening now complete in quarterly-screen-ledger.json (89 posted actions, each reasoned retention/exclusion). Agency-level approval completeness is not established by those tables: CAB103 omitted, like CPUC/BES. Finish retained index-only actions, selected nonstandard-date slices and January1 2026 baseline.",
+      "concrete_unscreened_candidates": [
+        "CalRecycle illegal disposal certificate 2026-0120-02C effective March4; MWELO \u00a718989.2 nonsubstantive May4; informal hearings 2026-0330-01S July1",
+        "DPR chemical-resistant PPE \u00a76738.1 and groundwater-protection list July1",
+        "DTSC covered electronic devices July20 and candidate chemicals/framework October1",
+        "Structural Pest Control examination changes \u00a7\u00a71940\u20131942 October1 (index filed year typo requires agency check)",
+        "CDPH childhood lead risk \u00a7\u00a737030/37100 July6",
+        "SWRCB drinking-water nonsubstantive action2026-0827-01, operator fees2026-0821-01/02",
+        "CalRecycle covered battery-embedded waste fee2026-0917-04: agency page still describes scheduled submission; no approval established. BES fee action now separately confirmed in decisions."
+      ],
+      "concrete_recovery_notes": [
+        "CDPH lead final direct URL recovered from Outlook wrapper but returned502: https://www.cdph.ca.gov/Programs/OLS/CDPH%20Document%20Library/DPH-18-007-CLPP-FinalText.pdf",
+        "CEC benchmark agency page links25-OIR-01 docket, but retrieved docket has proposals and May2026 LA/Ventura extension only; it does not expose January20 final1681/1684 amendment. Keep OAL filing observation distinct from unverified final text."
+      ]
+    },
+    {
+      "family": "Direct-discharge water currentness",
+      "need": "Confirm exact temporal continuation/reissuance of drinking-water system and Newport Bay permits. Project enrollment and receiving-water applicability remain later factual conditions. Orders now concretely selected in decisions.",
+      "regional_census_urls": [
+        "https://www.waterboards.ca.gov/santaana/board_decisions/adopted_orders/orders/2025_orders.html",
+        "https://www.waterboards.ca.gov/santaana/board_decisions/adopted_orders/orders/2026_orders.html"
+      ],
+      "bounded_finding": "Full posted 2025 and 2026 adopted-order indexes inspected; no replacement de minimis general order found. Named-site permits/enforcement remain property-conditioned and not automatic countywide law. Middle Santa Ana bacterial schedule R8-2026-0014 needs location and approval chain before selection for HB. This is not a full historical water-instrument census."
+    }
+  ],
+  "coverage_statement": {
+    "SCAQMD": "All amendment cohorts in 2026 recent-actions index through September4 reconciled to existing selected regulations. Underlying rule-book version histories still required for provisions outside this interval.",
+    "OAL": "Quarterly future/2026 and nonstandard effective-date tables plus recent-actions inspected; selected agency cross-checks reveal September omissions. Candidate reconciliation remains incomplete; do not claim complete CCR currentness.",
+    "regional_water": "2025 and 2026 posted Santa Ana adopted-order index census complete for general-order replacement screen. Wider water-policy/source-family census not completed."
+  },
+  "quarterly_action_ledger": "quarterly-screen-ledger.json",
+  "prioritized_remaining_slices": [
+    {
+      "priority": 1,
+      "slice": "Selected nonstandard 2026 actions",
+      "agencies": [
+        "DTSC",
+        "CalRecycle",
+        "CDPH",
+        "DRE",
+        "SWRCB",
+        "CEC",
+        "CDFA"
+      ],
+      "titles": [
+        3,
+        10,
+        14,
+        17,
+        20,
+        22,
+        23
+      ],
+      "interval": "2026-01-01 through2026-10-01",
+      "specifics": "DTSC waste listings/electronic devices/permit corrections; CalRecycle illegal disposal/MWELO/biomethane/e-waste; CDPH lead; DRE June29 fees; SWRCB operator fees/data/water measurement; CEC benchmarking; CDFA plant quarantine. Nonstandard index rows captured; complete final-source/current codification reconciliation."
+    },
+    {
+      "priority": 2,
+      "slice": "Retained quarterly index-only actions",
+      "source": "quarterly-screen-ledger.json",
+      "specifics": "DMV record requests; CHP vehicle criteria; OAL eSubmissions; EDD voluntary-plan reporting; CalVCB Apr2026 mixed package; CDFA landscaping; DFPI licensing/entity dependencies; ARB emergency readoption history. Source retention decided; final version acquisition/currentness still required."
+    },
+    {
+      "priority": 3,
+      "slice": "Recent45day disposition supplement",
+      "agencies": [
+        "OEHHA",
+        "CalRecycle",
+        "OSHSB",
+        "SWRCB",
+        "DTSC",
+        "CPUC"
+      ],
+      "interval": "Latest posted recent-actions window as ofOct1 2026",
+      "specifics": "Distinguish submissions from approval; OEHHA25705 and CalRecycle battery fee remain approval-unverified. CPUC and BES now resolved."
+    },
+    {
+      "priority": 4,
+      "slice": "January1 2026 baseline and earlier emergency history",
+      "specifics": "Read prior quarterly approval table and reconcile still-operative emergency readoptions/certifications. Current selected-division codification can establish baseline, but existing LII browse tree alone does not."
+    },
+    {
+      "priority": 5,
+      "slice": "Title24 exact final packages",
+      "specifics": "DGS Aug25\u201327 final action matrices/express terms and Part7 emergency readoption/certification; direct403, indexed partial evidence, parent browser recovery requested."
+    }
+  ],
+  "integration_contract": {
+    "source_level": "Use the legal source category independently of adoption, filing, approval and operative status. Zone0 is a regulatory action at regulation level even while OAL review is pending.",
+    "whole_document_units": "When a selected whole PDF is materialized as units[].section_list, set source_unit_kind=document on that nested section-list unit. This proposal uses selection descriptions and does not presently emit units[].section_list."
+  }
+}

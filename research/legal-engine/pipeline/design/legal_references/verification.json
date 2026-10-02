@@ -1,0 +1,35 @@
+{
+  "prior_artifacts_checked": 58,
+  "changed_or_missing": [],
+  "bundles": {
+    "development-frozen": {
+      "cases": 48,
+      "source_spans_verified": 10,
+      "changed_frozen_files": []
+    },
+    "development-v4-frozen": {
+      "cases": 48,
+      "source_spans_verified": 10,
+      "changed_frozen_files": []
+    },
+    "retired-v4-frozen": {
+      "cases": 48,
+      "source_spans_verified": 14,
+      "changed_frozen_files": []
+    },
+    "extra-v4-frozen": {
+      "cases": 4,
+      "source_spans_verified": 0,
+      "changed_frozen_files": []
+    },
+    "fresh-evaluation-frozen": {
+      "cases": 48,
+      "source_spans_verified": 16,
+      "changed_frozen_files": []
+    }
+  },
+  "test_command": "python3 -m pytest pipeline/tests -q",
+  "test_result": "90 passed in 12.82s",
+  "test_scope": "Research pipeline, including 7 reference-experiment tests; not model reliability or production behavior.",
+  "independent_test_result": "90 passed in 12.64s; final-audit reviewer rerun"
+}

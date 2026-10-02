@@ -1,0 +1,128 @@
+{
+  "plan_fingerprint": "6b711ad59cdb39c98eaac00f80bd23449950bdd67bf93f5f1fabf86bb5bda335",
+  "registry_fingerprint": "843ab79113fc3d25df5d64c1a39338be4498ef7818ea9cad695f00b2269fd521",
+  "plan_sha256": "b5b7291162163e4cbf033949311836b2a8340ee97ba1e1a13a3d815c1ebd7548",
+  "registry_sha256": "0ac10a6419d559019006de20c859a6755d242ac3e972da23c9af5f8de44daa71",
+  "policies_sha256": "5dd25cef95c97d0b9befd4287cf84cda2da4dca4a6964bee12c7e8cd11329283",
+  "scope_sha256": "49982b7d9eb30c89a6d23239d46b24b422f67fe52e77f03a6de8d90049f50f3f",
+  "reviewer": "prepared_input_review",
+  "model_responses_seen": false,
+  "author_labels_seen": false,
+  "development_only": true,
+  "expected": {
+    "j001": true,
+    "j002": false,
+    "j003": true,
+    "j004": false,
+    "j005": true,
+    "j006": false,
+    "j007": true,
+    "j008": false,
+    "j009": true,
+    "j010": false,
+    "j011": true,
+    "j012": false,
+    "j013": true,
+    "j014": false,
+    "j015": false,
+    "j016": true
+  },
+  "cases": [
+    {
+      "id": "j001",
+      "expected": true,
+      "reason": "The inclusive emergency definition covers a repair problem needing immediate remediation to prevent likely serious damage; the candidate preserves the nonexclusive scope.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "j002",
+      "expected": false,
+      "reason": "The source says includes but is not limited to, so only improperly closes the definition.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "j003",
+      "expected": true,
+      "reason": "The definition expressly lists weeding, mowing and pruning as nonexclusive examples.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "j004",
+      "expected": false,
+      "reason": "The list identifies included activities; it does not require every listed activity on every visit.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "j005",
+      "expected": true,
+      "reason": "The definition expressly excludes security deposits and fees from rent.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "j006",
+      "expected": false,
+      "reason": "The candidate reverses the express exclusion of security deposits and fees.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "j007",
+      "expected": true,
+      "reason": "The definition expressly includes the agent or successor in interest of the listed landlord roles.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "j008",
+      "expected": false,
+      "reason": "The candidate reverses the express inclusion of agents and successors.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "j009",
+      "expected": true,
+      "reason": "The public-sale statement in the notice is an express condition of subdivision (b).",
+      "material_ambiguity": false
+    },
+    {
+      "id": "j010",
+      "expected": false,
+      "reason": "The selected passage conditions release on a public-sale notice, not notice of personal retention by the landlord.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "j011",
+      "expected": true,
+      "reason": "The opening clause expressly requires that property was not released pursuant to subdivision (a).",
+      "material_ambiguity": false
+    },
+    {
+      "id": "j012",
+      "expected": false,
+      "reason": "The candidate reverses the express not-released condition.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "j013",
+      "expected": true,
+      "reason": "Reclamation by the former tenant is one expressly stated alternative in the reclaimant condition, not a sufficient condition for the entire release duty.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "j014",
+      "expected": false,
+      "reason": "The alternative other reclaimant must reasonably be believed by the landlord to own the property; the candidate expressly lacks that condition.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "j015",
+      "expected": false,
+      "reason": "The passage also permits reclamation by another person reasonably believed by the landlord to be its owner, so personal reclamation by the former tenant is not necessary in every case.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "j016",
+      "expected": true,
+      "reason": "The source connects former tenant and reasonably-believed other owner by or; either satisfies the claimant component while other conditions remain necessary.",
+      "material_ambiguity": false
+    }
+  ]
+}

@@ -1,0 +1,827 @@
+{
+  "cases": 48,
+  "answered": 48,
+  "agreements": 43,
+  "unanswered": 0,
+  "disagreements": [
+    "d011",
+    "d012",
+    "d021",
+    "d029",
+    "d034"
+  ],
+  "by_stratum": {
+    "self": {
+      "cases": 5,
+      "answered": 5,
+      "agreements": 3
+    },
+    "whole_section": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "known_failure": {
+      "cases": 3,
+      "answered": 3,
+      "agreements": 3
+    },
+    "sentence_focus": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "enclosing": {
+      "cases": 2,
+      "answered": 2,
+      "agreements": 2
+    },
+    "mixed": {
+      "cases": 7,
+      "answered": 7,
+      "agreements": 6
+    },
+    "range": {
+      "cases": 2,
+      "answered": 2,
+      "agreements": 2
+    },
+    "external": {
+      "cases": 5,
+      "answered": 5,
+      "agreements": 5
+    },
+    "historical": {
+      "cases": 2,
+      "answered": 2,
+      "agreements": 2
+    },
+    "cross_section": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "definition_reference": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "generic_law": {
+      "cases": 4,
+      "answered": 4,
+      "agreements": 4
+    },
+    "private_document": {
+      "cases": 6,
+      "answered": 6,
+      "agreements": 6
+    },
+    "ordinary_negative": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "subordinate": {
+      "cases": 3,
+      "answered": 3,
+      "agreements": 3
+    },
+    "multiple": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "unnumbered": {
+      "cases": 2,
+      "answered": 2,
+      "agreements": 1
+    },
+    "relative": {
+      "cases": 2,
+      "answered": 2,
+      "agreements": 2
+    },
+    "unresolved_target": {
+      "cases": 3,
+      "answered": 3,
+      "agreements": 3
+    },
+    "named_authority": {
+      "cases": 2,
+      "answered": 2,
+      "agreements": 2
+    },
+    "judicial_authority": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "court_rule": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "regulation": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "quoted_notice": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "adversarial_quote": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 0
+    },
+    "lookalike": {
+      "cases": 5,
+      "answered": 5,
+      "agreements": 5
+    },
+    "nonlegal_document": {
+      "cases": 2,
+      "answered": 2,
+      "agreements": 2
+    },
+    "identifier_only": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 0
+    },
+    "numeric_lookalike": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "truncated_target": {
+      "cases": 2,
+      "answered": 2,
+      "agreements": 2
+    },
+    "damaged": {
+      "cases": 2,
+      "answered": 2,
+      "agreements": 2
+    },
+    "truncated": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "ambiguous_word": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 0
+    },
+    "constitution": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "treaty": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "judicial_order": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "official_guidance": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "explicit_number": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "metadata_separation": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    },
+    "official_nonlegal": {
+      "cases": 1,
+      "answered": 1,
+      "agreements": 1
+    }
+  },
+  "rows": [
+    {
+      "case_id": "d001",
+      "request_hash": "51bd85a6c4aa30becda31955a6a50964202f1a80e39c0aacab12ffaa8a16fb49",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "self",
+        "whole_section",
+        "known_failure"
+      ],
+      "confidence": 0.39
+    },
+    {
+      "case_id": "d002",
+      "request_hash": "f83934a3a195bf591db3b356968cf0cdd406f065185542865471d8f6b6017048",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "self",
+        "sentence_focus",
+        "known_failure"
+      ],
+      "confidence": 0.67
+    },
+    {
+      "case_id": "d003",
+      "request_hash": "326cee168cb2d2850a3fa514023549b57221d6c948e1860882e4bfc41521ad40",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "enclosing",
+        "known_failure"
+      ],
+      "confidence": 0.56
+    },
+    {
+      "case_id": "d004",
+      "request_hash": "e8a04069ae4ce6bd052e393e7ad65a358147b6733b9a1596b5ecc75e6775dfba",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "mixed",
+        "range",
+        "external",
+        "historical"
+      ],
+      "confidence": 1
+    },
+    {
+      "case_id": "d005",
+      "request_hash": "89fcdb989eff2c7d96cc8bd47df59cfc8f42f31c09c9547184622e57701ef838",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "self",
+        "cross_section",
+        "mixed",
+        "definition_reference"
+      ],
+      "confidence": 1
+    },
+    {
+      "case_id": "d006",
+      "request_hash": "9de2facd62bfd2bc06f0b676418082c92279f4abbda739fb4bb60b973a6f88b0",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "enclosing"
+      ],
+      "confidence": 0.87
+    },
+    {
+      "case_id": "d007",
+      "request_hash": "d98899ec3ed3f359c201f1e06bbedd379946ec89d5c112f892f5c13e12802da7",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "generic_law"
+      ],
+      "confidence": 0.74
+    },
+    {
+      "case_id": "d008",
+      "request_hash": "878bcde895277cfd274ec26a41abcf665804a2d1041125304c949e068be654cb",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "private_document"
+      ],
+      "confidence": 0.97
+    },
+    {
+      "case_id": "d009",
+      "request_hash": "0f4ad7843344514d9ce00f68c418dcc1a3639a4fa69eff6fae26fab99b29a32f",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "ordinary_negative"
+      ],
+      "confidence": 0.78
+    },
+    {
+      "case_id": "d010",
+      "request_hash": "4dbe11b96cf6e1948e0c4531fe0398c01128d28783a34c66409da322cdb7936d",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "subordinate",
+        "multiple"
+      ],
+      "confidence": 1
+    },
+    {
+      "case_id": "d011",
+      "request_hash": "444a15e0096b99bc5b525ba712b512999604d98d68351041c02185d1f4cd80be",
+      "expected": "YES",
+      "actual": "NO",
+      "agreement": false,
+      "status": "answered",
+      "strata": [
+        "self"
+      ],
+      "confidence": 0.24
+    },
+    {
+      "case_id": "d012",
+      "request_hash": "d034497222153b235bee612b2b05e5a965e5f796340516340247739468165a81",
+      "expected": "YES",
+      "actual": "NO",
+      "agreement": false,
+      "status": "answered",
+      "strata": [
+        "self",
+        "unnumbered"
+      ],
+      "confidence": 0.37
+    },
+    {
+      "case_id": "d013",
+      "request_hash": "8fbbedcd257afd1e545ec9f6b18ff17eb7aaa7b3ee736c382394c9cd3e0a8de3",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "relative",
+        "unresolved_target"
+      ],
+      "confidence": 0.47
+    },
+    {
+      "case_id": "d014",
+      "request_hash": "3a7a0d9f60c40b71aaf915f6dbb0a9c95849d19b06af7e0f6e340c9b318082ba",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "range",
+        "subordinate"
+      ],
+      "confidence": 0.84
+    },
+    {
+      "case_id": "d015",
+      "request_hash": "77abe84465c3a326946e3f224ed0cd82bbf2b09b070fb5782e3eb9028a98d53a",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "named_authority",
+        "external"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "case_id": "d016",
+      "request_hash": "f86328da21c87eee5234423aa6438c45026d05e239cc96e170af1a5f177262cf",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "named_authority",
+        "unnumbered"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "case_id": "d017",
+      "request_hash": "8f8c7fad807c10e8ef690118ec95ac5fdae48abe303c587f467ee30f31585193",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "judicial_authority"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "case_id": "d018",
+      "request_hash": "54d95362cc2a2c36438a186513868f8bab984ab76ca4457140621feba3a0d6a1",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "court_rule"
+      ],
+      "confidence": 1
+    },
+    {
+      "case_id": "d019",
+      "request_hash": "badfaa3ac02a0714a627141668447010887ca8debdb0ee3fae12e819703c48ab",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "regulation"
+      ],
+      "confidence": 1
+    },
+    {
+      "case_id": "d020",
+      "request_hash": "570d73a86615e5606f632f1d269252c7dbf68fc56fcc668c5147b4c1d79ccde3",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "quoted_notice"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "case_id": "d021",
+      "request_hash": "f9d35e9da69b0359f2d2fa9668704de3908b2218b15822ad1edefeebbfa1f4ae",
+      "expected": "YES",
+      "actual": "NO",
+      "agreement": false,
+      "status": "answered",
+      "strata": [
+        "adversarial_quote",
+        "mixed"
+      ],
+      "confidence": 0.73
+    },
+    {
+      "case_id": "d022",
+      "request_hash": "72bfa975d0f9d317b89e6266c68c342343c4c14c833a1616a19f72673a135c87",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "lookalike"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "case_id": "d023",
+      "request_hash": "41dbfe4979649137c0b07a56bbdfaab708cdb6394fd8e238d973e9941b5b413b",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "lookalike",
+        "private_document"
+      ],
+      "confidence": 1
+    },
+    {
+      "case_id": "d024",
+      "request_hash": "9d93de8276ada7c88bc6be98be3366bb18e26bf5c7ee43aa7c952d8cfccb33d5",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "lookalike"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "case_id": "d025",
+      "request_hash": "ec5499487e36f17aaf7084853515c94216e10fdaa99ac4cd7cdf5f79a439726e",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "private_document"
+      ],
+      "confidence": 0.96
+    },
+    {
+      "case_id": "d026",
+      "request_hash": "10178820e713107c843c4a330144cbee84acf6cdef3fd456554615731df64ef3",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "nonlegal_document"
+      ],
+      "confidence": 0.81
+    },
+    {
+      "case_id": "d027",
+      "request_hash": "c035afd99308ace18f4e40bac6dea4475c9367705196b55ff43437c7fb21c441",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "generic_law"
+      ],
+      "confidence": 1
+    },
+    {
+      "case_id": "d028",
+      "request_hash": "4a5241312793d47517a8c8ab2898d9529b865c65928fb35d7f60e3b5389ebf83",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "generic_law",
+        "lookalike"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "case_id": "d029",
+      "request_hash": "58591c278444d84726af6a75e4b6c90e93350e9f96c832f2a28c33f98f6ce776",
+      "expected": "INSUFFICIENT",
+      "actual": "YES",
+      "agreement": false,
+      "status": "answered",
+      "strata": [
+        "identifier_only"
+      ],
+      "confidence": 0.41
+    },
+    {
+      "case_id": "d030",
+      "request_hash": "3fd5eb70e986a17be742782435495d12ccc864a62cc678d8cc822d9da60bcf9b",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "numeric_lookalike"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "case_id": "d031",
+      "request_hash": "c2b6478a995dfbef27624e395e809244e5e3a2afa376e8cf7fa9e257ed1cf1d3",
+      "expected": "INSUFFICIENT",
+      "actual": "INSUFFICIENT",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "truncated_target",
+        "unresolved_target"
+      ],
+      "confidence": 0.42
+    },
+    {
+      "case_id": "d032",
+      "request_hash": "3b8007fff0108d4eae2dc6b5d597844e7e6d93e47134e008f8adbb23133c799a",
+      "expected": "INSUFFICIENT",
+      "actual": "INSUFFICIENT",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "damaged"
+      ],
+      "confidence": 0.54
+    },
+    {
+      "case_id": "d033",
+      "request_hash": "7a9af2d98965a7a5f56beb0d700f275d33cc75886889938877d62b7f5c7f7951",
+      "expected": "INSUFFICIENT",
+      "actual": "INSUFFICIENT",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "truncated"
+      ],
+      "confidence": 0.62
+    },
+    {
+      "case_id": "d034",
+      "request_hash": "3e4b3a1dd9186dc9adb85c145a19dfbe4cfde3d9e6980148d75f31fb51b0aca1",
+      "expected": "INSUFFICIENT",
+      "actual": "NO",
+      "agreement": false,
+      "status": "answered",
+      "strata": [
+        "ambiguous_word"
+      ],
+      "confidence": 0.71
+    },
+    {
+      "case_id": "d035",
+      "request_hash": "d40dd48e23059ef280b3cdaab67e66e314cdcdd158c920ddab1fc74a5547c0f4",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "mixed",
+        "historical",
+        "subordinate"
+      ],
+      "confidence": 1
+    },
+    {
+      "case_id": "d036",
+      "request_hash": "181df432113937704468bf981b624d5e346fed7750417322f32ba7331dd6f9ba",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "mixed",
+        "private_document",
+        "external"
+      ],
+      "confidence": 0.96
+    },
+    {
+      "case_id": "d037",
+      "request_hash": "7c142780b7d52a4cba0c7e2802fd6f15c46f5bcc09c4b0654298dbb564e10e04",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "constitution",
+        "external"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "case_id": "d038",
+      "request_hash": "1adc9529f3f9c9ce93715183a9b85ea2bf6ef44e265f1ccd4344785b3daa087e",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "treaty",
+        "external"
+      ],
+      "confidence": 1
+    },
+    {
+      "case_id": "d039",
+      "request_hash": "d0df55cabd046d486dacec997be9ee21d038ae17eebd589d552db3407ac6fe46",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "judicial_order"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "case_id": "d040",
+      "request_hash": "f3c155b3c631931844ae6c4962ede17f0a8fab31a455f4843d4ee6874bf1e8f3",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "official_guidance"
+      ],
+      "confidence": 0.93
+    },
+    {
+      "case_id": "d041",
+      "request_hash": "d839053058ce0bbdd3ac13779461d9776c209fb6cdcf037d2cadbd92ff2b69c8",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "generic_law"
+      ],
+      "confidence": 0.76
+    },
+    {
+      "case_id": "d042",
+      "request_hash": "fcd55d917b4d2f395d26fa6ec7fef0951c9ab7ceba620af01afb82501c3a3625",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "explicit_number"
+      ],
+      "confidence": 1
+    },
+    {
+      "case_id": "d043",
+      "request_hash": "50a5db2473cf213a9cbce3dc364a06f5e59f9294453e38f63fd0755c8ea7d86d",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "private_document",
+        "lookalike"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "case_id": "d044",
+      "request_hash": "fa55a9bdc82550b4ff88e2e12cf049ca4d33c27e8ff9dda5f45c8fc9fc181726",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "mixed",
+        "damaged"
+      ],
+      "confidence": 0.58
+    },
+    {
+      "case_id": "d045",
+      "request_hash": "8cc853175dee36fd2d542d45b645e2c407e8bd06101c2aab1765c5ed91138d2b",
+      "expected": "YES",
+      "actual": "YES",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "truncated_target",
+        "unresolved_target"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "case_id": "d046",
+      "request_hash": "f808b1416d375acbb7e5f050f7c07d0662d398ddb5608b653ed2374e9c34f458",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "metadata_separation"
+      ],
+      "confidence": 1
+    },
+    {
+      "case_id": "d047",
+      "request_hash": "6d3dcd9c69b05ec274ff4ff684a33857fc6b28ab3b18a19d515edb154c3aa8b1",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "nonlegal_document",
+        "official_nonlegal"
+      ],
+      "confidence": 1
+    },
+    {
+      "case_id": "d048",
+      "request_hash": "b8b6d9c6e9ace51de97ea5fc362f4d64ead95e165cdb8f2b1aa120b08cc5b073",
+      "expected": "NO",
+      "actual": "NO",
+      "agreement": true,
+      "status": "answered",
+      "strata": [
+        "private_document",
+        "relative",
+        "mixed"
+      ],
+      "confidence": 0.83
+    }
+  ],
+  "interpretation": "Agreement on a deliberately constructed benchmark; strata overlap. Not probability calibration or complete dependency recall."
+}

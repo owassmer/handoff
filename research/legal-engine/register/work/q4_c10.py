@@ -1,0 +1,107 @@
+import sys; sys.path.insert(0, 'register/work'); from q4_lib import *
+SC = 'NY Surrogate\'s Court Procedure Act'
+def P(sid, **kw): return rule(sid, instrument=SC, **kw)
+R = []
+s='NY:SCPA 1113'; R.append({'section_id': s, 'decision': 'new_rule', 'reason': 'Imposes a 12-hour death report on anyone keeping a rooming or boarding house in NYC when a tenant dies there; a step in the tenant-death branch no rule states.', 'proposed': [P(s,
+  id='NY:SCPA-1113-rooming-house-death-report', provision='SCPA 1113(1)', actor='landlord or manager keeping a hotel, boarding house or rooming house in New York City', modality='obligation',
+  condition='The landlord keeps a hotel, boarding house or rooming house in one of the counties of New York City, and a roomer or boarder who is not a member of the keeper\'s family dies there.',
+  effect='Within 12 hours of the death the keeper reports in writing to the public administrator of the county the information it has about the deceased. The refund, belongings and any balance then follow the tenant-death rules (NY:ADJ-tenant-death-payee, NY:SCPA-1112-public-administrator).',
+  dependencies=['NY:ADJ-tenant-death-payee', 'NY:SCPA-1112-public-administrator'],
+  quote=q(s, 'Every person keeping a hotel, boarding or rooming house in any of the counties to which this article applies shall report in writing to the public administrator of his county information concerning every person not a member of his family who shall die in his hotel or house within 12 hours after such death.'),
+  construction=[{'source_file': 'register/texts/NY_SCP/1101.txt', 'quote': 'The office of public administrator within the counties of the city of New York hereby is continued.'}],
+  reasoning='Article 11 of the SCPA governs the public administrators of the counties of New York City.',
+  severity='major', walk_step='2.5')]})
+s='NY:SCPA 1115'; R.append({'section_id': s, 'decision': 'partial', 'atom_ids': ['NY:ADJ-tenant-death-payee'], 'reason': 'Adds a payee the rule omits: the public administrator acting without letters on a small estate, whose certificate and receipt discharge the landlord.', 'proposed': [P(s,
+  id='NY:SCPA-1115-pa-small-estate', provision='SCPA 1115(1)-(3)', actor='landlord or managing agent', modality='permission',
+  condition='A former tenant died in New York City with gross assets within the small-estate amount of SCPA 1301 ($50,000), and the county public administrator acts on the estate without letters.',
+  effect='The public administrator has all the powers of a fiduciary. Paying the refund (or delivering belongings) to it against its certificate of authority and receipt is a complete release and discharge, with the same effect as payment to any other fiduciary; the landlord need not see to how it is applied. The landlord\'s claim for a balance is presented to the public administrator.',
+  dependencies=['NY:ADJ-tenant-death-payee'],
+  quote=q(s, 'shall constitute a complete release and discharge for any payment of money or delivery of property made pursuant to the certificate without such person being required to see to the application thereof and with the same effect as if made to any other fiduciary.'),
+  severity='critical', walk_step='2.5', amends='NY:ADJ-tenant-death-payee')]})
+s='NY:SCPA 1118'; R.append({'section_id': s, 'decision': 'partial', 'atom_ids': ['NY:ADJ-tenant-death-payee', 'NY:COMMONLAW-owner-death-agency'], 'reason': 'Adds who collects before letters issue: the public administrator takes the tenant\'s personal property, and collects a deceased owner\'s rents where heirs are unknown or live outside New York or the named executor does not act.', 'proposed': [P(s,
+  id='NY:SCPA-1118-pa-before-letters', provision='SCPA 1118(1)-(2)', actor='landlord or managing agent', modality='obligation',
+  condition='Branch (a): a former tenant died leaving a refund or belongings in the county, and no one is eligible to act as fiduciary, or the named executor refuses or neglects to act, is dead, missing or ineligible. Branch (b): an individual owner died intestate with unknown distributees or distributees domiciled outside New York, or testate with a named executor who does not act, is dead, missing or ineligible.',
+  effect='(a) Before letters, the public administrator may take possession of and collect the tenant\'s personal property in the county: the refund is paid to it and belongings released to it. (b) Before letters, the public administrator may take possession of the building, manage it and collect its rents, so rent and the departing tenant\'s balance are collected for it and the manager takes direction from it (NY:COMMONLAW-owner-death-agency).',
+  dependencies=['NY:SCPA-1112-public-administrator', 'NY:COMMONLAW-owner-death-agency'],
+  quote=q(s, 'Take possession of, manage and collect the rents of the real property of an intestate whose distributees are unknown or, whose distributees if known, are non-domiciliaries'),
+  severity='critical', walk_step='2.5', amends='NY:COMMONLAW-owner-death-agency')]})
+s='NY:SCPA 1804'; R.append({'section_id': s, 'decision': 'new_rule', 'reason': 'Lets the landlord hold back estate assets for a claim not yet fixed (damage not yet repaired, rent until the estate ends the lease), which decides whether that claim can be paid at all.', 'proposed': [P(s,
+  id='NY:SCPA-1804-contingent-claim', provision='SCPA 1804(1)-(2)', actor='landlord or its collector', modality='permission',
+  condition='At a tenant\'s death the landlord\'s claim is contingent or unliquidated (for example rent that will accrue until the estate terminates the lease under NY:RPL-236-a, or damage whose repair cost is not yet known).',
+  effect='The landlord may file with the fiduciary an affidavit showing the facts of the liability and its probable amount; the estate may then make no distribution without reserving assets the court finds adequate to pay the claim when it becomes due. When the claim becomes fixed before the final accounting, the landlord files the fixed claim under SCPA 1803 (NY:SCPA-1803-claim-form); otherwise the final decree keeps assets back to pay it when fixed.',
+  dependencies=['NY:SCPA-1803-claim-form', 'NY:RPL-236-a'],
+  quote=q(s, 'a claimant or a surety shall have the right to file with the fiduciary an affidavit showing the facts upon which the contingent or unliquidated liability is based and the probable amount thereof'),
+  severity='major', walk_step='8.1')]})
+s='NY:SCPA 1806'; R.append({'section_id': s, 'decision': 'new_rule', 'reason': 'Fixes when a presented claim against a deceased tenant\'s estate counts as rejected (90 days), which starts the 60-day suit deadline.', 'proposed': [P(s,
+  id='NY:SCPA-1806-allowance-rejection', provision='SCPA 1806(1)-(4)', actor='landlord or its collector', modality='deadline',
+  condition='The landlord presented its claim for a deceased former tenant\'s balance to the fiduciary under SCPA 1803.',
+  effect='The fiduciary must promptly notify the landlord in writing of allowance or rejection, giving reasons for any rejection. If the fiduciary has not allowed the claim within 90 days after presentation, it is deemed rejected on the 90th day, and the 60-day period to sue runs from then (NY:SCPA-1810-sue-within-60-days). An allowed claim establishes its validity, and the landlord may petition the court to direct the fiduciary to pay it.',
+  dependencies=['NY:SCPA-1803-claim-form', 'NY:SCPA-1810-sue-within-60-days'],
+  quote=q(s, 'If the fiduciary shall fail to allow the claim within 90 days from the date that it has been presented to him, the claim shall be deemed to have been rejected.'),
+  severity='critical', walk_step='8.10')]})
+s='NY:SCPA 1808'; R.append({'section_id': s, 'decision': 'new_rule', 'reason': 'Presentation of the claim counts as commencing a proceeding for limitation purposes, and a rejected claim not sued on is tried on the accounting; both decide whether a deceased tenant\'s balance is time-barred.', 'proposed': [P(s,
+  id='NY:SCPA-1808-presentation-tolls', provision='SCPA 1808(1), (6)', actor='landlord or its collector', modality='limitation',
+  condition='The landlord presents a claim for a deceased former tenant\'s balance under SCPA 1803, and the fiduciary rejects it in whole or part (or it is deemed rejected).',
+  effect='For every limitation period, presenting the claim as SCPA 1803 requires counts as instituting a special proceeding to collect it, so a claim presented before the lease-claim period expires (NY:CPLR-213(2), extended by NY:CPLR-210-death) is timely. If the landlord does not sue within 60 days of rejection (NY:SCPA-1810-sue-within-60-days), the claim\'s validity is tried on the fiduciary\'s judicial accounting, where the landlord may file objections within 8 days of the return of process.',
+  dependencies=['NY:SCPA-1803-claim-form', 'NY:SCPA-1810-sue-within-60-days', 'NY:CPLR-210-death'],
+  quote=q(s, 'the presentation of a claim as provided in 1803 shall be deemed the institution of a special proceeding for the collection of the claim.'),
+  severity='critical', walk_step='8.10')]})
+s='NY:SCPA 1810'; R.append({'section_id': s, 'decision': 'new_rule', 'reason': 'Sets a 60-day deadline to sue after the estate rejects the landlord\'s claim.', 'proposed': [P(s,
+  id='NY:SCPA-1810-sue-within-60-days', provision='SCPA 1810', actor='landlord or its collector', modality='deadline',
+  condition='The fiduciary of a deceased former tenant rejected the landlord\'s presented claim in whole or part, or it was deemed rejected after 90 days (NY:SCPA-1806-allowance-rejection), and the landlord wants to sue in a court of law or equity rather than have the claim tried on the accounting.',
+  effect='The action must be commenced within 60 days after the rejection or deemed rejection. Missing the 60 days does not lose the claim: it is then determined on the judicial settlement of the fiduciary\'s account (NY:SCPA-1808-presentation-tolls), and the landlord keeps any right to a jury trial.',
+  dependencies=['NY:SCPA-1806-allowance-rejection', 'NY:SCPA-1808-presentation-tolls'],
+  quote=q(s, 'where a claim has been presented and rejected or deemed rejected pursuant to 1806 in whole or in part the action must be commenced within 60 days after such rejection.'),
+  severity='critical', walk_step='8.10')]})
+s='NY:SCPA 702'; R.append({'section_id': s, 'decision': 'new_rule', 'reason': 'Limited letters can bar a fiduciary from receiving property or compromising, which decides whether paying or settling with it discharges the landlord.', 'proposed': [P(s,
+  id='NY:SCPA-702-limited-letters', provision='SCPA 702', actor='landlord or managing agent', modality='precondition',
+  condition='The executor or administrator of a deceased tenant (or owner) presents limited or restricted letters.',
+  effect='The fiduciary may act only within the limits stated in the letters: letters limited to prosecuting or defending a claim, or restraining compromise or enforcement of a judgment, or confining it to specified property, do not authorize receiving the refund or settling the balance beyond those limits. Pay or settle only within the letters\' terms; otherwise with a fiduciary holding full letters or the court\'s further order.',
+  dependencies=['NY:ADJ-tenant-death-payee', 'NY:SCPA-703-letters-evidence'],
+  quote=q(s, 'Letters may be granted limiting and restricting the powers and rights of the holder thereof:'),
+  severity='major', walk_step='2.5')]})
+s='NY:SCPA 703'; R.append({'section_id': s, 'decision': 'new_rule', 'reason': 'Fixes what proves a fiduciary\'s authority to receive the refund or settle, and for how long a clerk\'s certificate may be relied on.', 'proposed': [P(s,
+  id='NY:SCPA-703-letters-evidence', provision='SCPA 703(1)-(2)', actor='landlord or managing agent', modality='evidence',
+  condition='A person claims to be the executor or administrator of a deceased tenant or owner.',
+  effect='Letters are conclusive evidence of the holder\'s authority until reversed or modified on appeal, or suspended, modified or revoked by the issuing court. A clerk\'s certificate of letters is sufficient evidence of the letters and the fiduciary\'s identity for six months after it issues; after six months ask for a current certificate before paying. Paying the refund to the holder of letters shown this way discharges the landlord (NY:ADJ-tenant-death-payee).',
+  dependencies=['NY:ADJ-tenant-death-payee'],
+  quote=q(s, 'A certificate of letters testamentary or of administration duly issued by the clerk of the court shall be sufficient evidence, subject to the provisions of subdivision one hereof, of the existence of such letters and the identity of the fiduciary for all purposes for six months after the date of such issuance.'),
+  severity='major', walk_step='2.5')]})
+s='NY:SCPA 706'; R.append({'section_id': s, 'decision': 'new_rule', 'reason': 'Decides who acts for the estate when one of several fiduciaries dies or is removed, or all do.', 'proposed': [P(s,
+  id='NY:SCPA-706-surviving-successor-fiduciary', provision='SCPA 706(1)-(2)', actor='landlord or managing agent', modality='obligation',
+  condition='One of several fiduciaries of a deceased tenant or owner dies, is removed or has its letters revoked; or all of them do.',
+  effect='(a) With one or more remaining, no successor is appointed (unless the will requires one); the remaining fiduciaries complete the administration and continue pending suits, so they receive the refund and settle the balance. (b) If none remains, the court appoints a successor, who completes the administration, continues pending suits in its own name and enforces judgments for the estate; deal with the successor, not with the representative of a deceased fiduciary (NY:EPTL-11-3.4-no-representative-of-representative).',
+  dependencies=['NY:ADJ-tenant-death-payee', 'NY:EPTL-11-3.4-no-representative-of-representative'],
+  quote=q(s, 'the others may proceed and complete the administration of the estate pursuant to the letters or lifetime trust instrument and may continue any action or special proceeding brought by or against all.'),
+  severity='major', walk_step='2.5')]})
+s='NY:SCPA 1302'; R.append({'section_id': s, 'decision': 'partial', 'atom_ids': ['NY:ADJ-tenant-death-payee', 'NY:COMMONLAW-owner-death-agency'], 'reason': 'A voluntary administrator handles personal property only, which limits what it may do when the deceased is the owner.', 'proposed': [P(s,
+  id='NY:SCPA-1302-va-personal-property-only', provision='SCPA 1302', actor='landlord or managing agent', modality='limit',
+  condition='A voluntary administrator (small estate, short certificate) acts for a deceased individual owner or a deceased tenant.',
+  effect='It has no authority over the deceased\'s interest in New York real property. For a deceased owner it may collect rent that had accrued before death (personal property, NY:EPTL-13-1.1-accrued-rent-leasehold) but may not manage the building, collect later rents or direct the manager as to it; that authority lies with the fiduciary on letters or the persons to whom the building passed. For a deceased tenant, the refund and the lease claim are personal property within its authority.',
+  dependencies=['NY:EPTL-13-1.1-accrued-rent-leasehold', 'NY:COMMONLAW-owner-death-agency'],
+  quote=q(s, 'This article is not applicable to any interest in real property in this state owned by a decedent, but his owner ship of an interest in real property shall not prevent the use of this article in administering his personal property.'),
+  severity='major', walk_step='0.5', amends='NY:COMMONLAW-owner-death-agency')]})
+s='NY:SCPA 1309'; R.append({'section_id': s, 'decision': 'partial', 'atom_ids': ['NY:ADJ-tenant-death-payee'], 'reason': 'Adds that a small-estate certificate from another state may be honoured for a tenant who died domiciled there, on reciprocity.', 'proposed': [P(s,
+  id='NY:SCPA-1309-foreign-small-estate', provision='SCPA 1309(1)-(2)', actor='landlord or managing agent', modality='permission',
+  condition='A former tenant died domiciled in another state, and a person presents a certified copy of that state\'s small-estate affidavit or short certificate to collect the refund.',
+  effect='The landlord may recognize it and pay the refund to that person, provided the other state recognizes and pays on New York short certificates. Without that reciprocity, pay only a New York voluntary administrator, a fiduciary on letters (NY:ADJ-tenant-death-payee) or a foreign fiduciary under NY:EPTL-13-3.4-foreign-fiduciary. Using the small-estate route is optional for the estate.',
+  dependencies=['NY:ADJ-tenant-death-payee', 'NY:EPTL-13-3.4-foreign-fiduciary'],
+  quote=q(s, 'may recognize a certified copy of an affidavit or of a short certificate of a judge or clerk of a probate court made under a statute of another state, providing for the settlement of small estates without administration'),
+  severity='critical', walk_step='2.5', amends='NY:ADJ-tenant-death-payee')]})
+s='NY:SCPA 1002'; R.append({'section_id': s, 'decision': 'new_rule', 'reason': 'Gives the landlord, as creditor, a way to get an administrator appointed when no one takes letters for a deceased tenant, so the balance can be claimed.', 'proposed': [P(s,
+  id='NY:SCPA-1002-creditor-petition', provision='SCPA 1002(1); 1001(8)', actor='landlord or its collector', modality='permission',
+  condition='A former tenant died intestate owing a balance (or leaving property the landlord must account for), and no one has sought letters.',
+  effect='The landlord, as a creditor, may petition the surrogate\'s court for letters of administration to be granted to another person or to itself. Where no distributee takes letters and no one is appointed by consent, letters go to the public administrator (or county chief fiscal officer), or in the court\'s discretion to the petitioner. The claim is then presented to the administrator (NY:SCPA-1803-claim-form).',
+  dependencies=['NY:SCPA-1803-claim-form', 'NY:ADJ-tenant-death-payee'],
+  quote=q(s, 'creditor or a person interested in an action brought or about to be brought in which the intestate or the person alleged to be deceased, if living, would be a proper party may present a petition to the court having jurisdiction praying for a decree granting letters of administration to him or to another person'),
+  construction=[{'source_file': 'register/texts/NY_SCP/1001.txt', 'quote': q('NY:SCPA 1001', 'to the petitioner, in the discretion of the court, or')}],
+  reasoning='1002 lets a creditor petition; 1001(8) sets the fallback order when no distributee takes letters.',
+  severity='major', walk_step='8.10')]})
+add(R)
+add([
+ {'section_id': 'NY:SCPA 1304', 'decision': 'stated', 'atom_ids': ['NY:ADJ-tenant-death-payee'], 'reason': 'Qualification of a voluntary administrator by affidavit and its short certificate; the rule already pays a voluntary administrator on that certificate.'},
+ {'section_id': 'NY:SCPA 1306', 'decision': 'stated', 'atom_ids': ['NY:ADJ-tenant-death-payee'], 'reason': 'The voluntary administrator acts as fiduciary for personal property and may sue to compel delivery; the rule already makes it the payee on its certificate.'},
+ {'section_id': 'NY:SCPA 1307', 'decision': 'stated', 'atom_ids': ['NY:ADJ-tenant-death-payee'], 'reason': 'The voluntary administrator pays debts in legal order; the landlord presents its claim to the fiduciary as the rule states.'},
+ {'section_id': 'NY:SCPA 1123', 'decision': 'stated', 'atom_ids': ['NY:ADJ-tenant-death-payee'], 'reason': 'A public administrator holding letters has a fiduciary\'s powers; the rule pays the administrator on letters.'},
+ {'section_id': 'NY:SCPA 1812', 'decision': 'stated', 'atom_ids': ['NY:CPLR-1203-1015-5208-parties'], 'reason': 'Execution against a deceased judgment debtor\'s real property needs the surrogate\'s decree; the rule states that enforcement after the debtor\'s death needs the surrogate\'s leave.'},
+])

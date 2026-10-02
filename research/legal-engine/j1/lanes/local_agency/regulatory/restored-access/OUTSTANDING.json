@@ -1,0 +1,96 @@
+{
+  "as_of": "2026-10-01",
+  "resolved": {
+    "BOF": "bof-delta.json: signed partial withdrawal and future1052.1 amendment, with canopy publisher-history conflict expressly resolved.",
+    "LCRI": "lcri-delta.json: affirmative OAL current pending entry2026-0921-04EFP; Board-approved August package selected; anticipated Nov1,2027 kept separate."
+  },
+  "outstanding": [
+    {
+      "action": "GoGreen2026-0826-02C",
+      "facts_needed": [
+        "What action OAL took (approval/withdrawal/disapproval)",
+        "If approved, filed date and final amendments replacing each emergency chain"
+      ],
+      "best_routes": [
+        "https://www.treasurer.ca.gov/caeatfa/gogreen/business/regulations",
+        "https://website-prod.treasurer.ca.gov/caeatfa/gogreen/business/regulations",
+        "Official CCR4 sections10092.1 and10092.7 post-August histories",
+        "https://oal.ca.gov/rulemaking_process/regular_rulemaking_process/recent-actions/"
+      ],
+      "what_worked": "Native prod HTML captured; document links are usable. Latest page content remains July readoption and June permanent proposal. OAL recent-action row supplies no outcome. Do not infer it from the30-working-day review clock."
+    },
+    {
+      "action": "OEHHA2026-0810-01",
+      "facts_needed": [
+        "Actual disposition",
+        "Final25705(b)(1) values/version and operative date if approved"
+      ],
+      "best_routes": [
+        "https://oehha.ca.gov/proposition-65/crnr/proposed-rulemaking-title-27-california-code-regulations-section-25705-no-significant-risk-level-1",
+        "Official CCR27\u00a725705 current and future editions",
+        "https://oal.ca.gov/january-1-2027-effective-date/"
+      ],
+      "what_worked": "Agency proposal is June modified text; OAL recent-action row identifies action but not result. Neither latest effective-date table nor published2026 disapproval index includes this file."
+    },
+    {
+      "action": "DDW2026-0827-01N",
+      "facts_needed": [
+        "Exact changed sections within Title22 Div4 Ch14\u201317",
+        "Action outcome and filing date",
+        "Final Section100 order/STD400"
+      ],
+      "best_routes": [
+        "https://www.waterboards.ca.gov/drinking_water/certlic/drinkingwater/Section100.html",
+        "https://www.waterboards.ca.gov/drinking_water/certlic/drinkingwater/Recentregs.html",
+        "https://oal.ca.gov/other_effective_dates/"
+      ],
+      "what_worked": "Native archive downloaded; it ends2024 action, updatedApril2025. OAL recent action confirms chapter family only."
+    },
+    {
+      "action": "FPPC2026-0824-04",
+      "facts_needed": [
+        "Actual SOS filing date of18360.1\u2013.3",
+        "Operative date derived from actual filing or express special date"
+      ],
+      "best_routes": [
+        "https://www.fppc.ca.gov/the-law/fppc-regulations/newly-adopted-amended-or-repealed-regulations/",
+        "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/02_new/august-2026/New_18360.3_082426.pdf",
+        "Official CCR2\u00a718360.1\u2013.3 post-August histories"
+      ],
+      "what_worked": "Native index and August24 PDF downloaded. Effective cells remain blank. The PDF footer is amendment preparation date, not filing endorsement."
+    },
+    {
+      "action": "Battery2026-0917-04E",
+      "facts_needed": [
+        "Final endorsed18660.40 amendment",
+        "Actual SOS filing date and emergency endpoint"
+      ],
+      "best_routes": [
+        "https://www2.calrecycle.ca.gov/PublicNotices/_OtherNoticesGridData?page=1&pageSize=100&sort=NoticeDate-desc&Keywords=Battery&TimeFrameID=0",
+        "https://calrecycle.ca.gov/laws/rulemaking/cbewrfer/",
+        "https://govt.westlaw.com/calregs/Document/I0F8884C0A44111F0BB45CAFB55F92A76?viewType=FullText"
+      ],
+      "what_worked": "Native Kendo API recovered, all23 battery notices returned. No2026 final notice;7240 is current proposed-comment notice. OAL explicitly approvedSep24. Current director fee decision is separately complete."
+    },
+    {
+      "action": "Waterfees Res2026-0038",
+      "facts_needed": [
+        "Any subsequent OAL submission/final filing by cutoff, if it occurred; otherwise retain Board-adopted pending implementation status"
+      ],
+      "best_routes": [
+        "https://www.waterboards.ca.gov/board_decisions/adopted_orders/resolutions/2026/rs2026-0038.pdf",
+        "https://www.waterboards.ca.gov/resources/fees/water_quality/",
+        "https://oal.ca.gov/emergency_regulations/emergency_regulations_under_review/",
+        "https://oal.ca.gov/emergency_regulations/recent_actions_taken_on_emergency_regulations/"
+      ],
+      "what_worked": "SignedSep15 resolution downloaded; exact2200/2200.7 selection. Native fee page updatedSep25 still publishesFY25\u201326. Neither Oct1 emergency table provides a matching action. Unlike LCRI, no affirmative pending-entry record yet."
+    }
+  ],
+  "common_sources_reviewed": [
+    "OAL other effective dates (latest visible filingSep21)",
+    "OAL January1,2027 effective dates (latest visibleSep10)",
+    "OAL2026 disapproval list (none of named files)",
+    "Official Notice Registers34\u201338 actual PDF final summaries;39 reviewed earlier"
+  ],
+  "source_access": "Network works for native documents/CDN/API. Westlaw direct transport403; targeted web search can expose official histories, but retrieved histories for remaining actions predate the events. No external messages sent."
+}

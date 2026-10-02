@@ -1,0 +1,433 @@
+  
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                       
+  num_totalhits ) {
+	  end = num_totalhits ;
+	}
+	if ( start   num_totalhits ) end = num_totalhits ;
+   document.BrowseForm.StartIndex.value = start ;
+	document.BrowseForm.EndIndex.value = end ;
+	requestBrowse( ) ;
+}
+
+function newSearch(){
+   var sURL = cmd_action.replace("Action?","DoMenuRequest?");
+   location.href = sURL;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Called by getNext and getPrevious to submit form.
+function requestBrowse( ) {
+   start = parseInt(document.BrowseForm.StartIndex.value);
+   end = parseInt(document.BrowseForm.EndIndex.value);
+   threshold = parseInt(document.BrowseForm.Threshold.value);
+   noOfHits = parseInt(document.BrowseForm.NoOfHits.value);
+
+   var sURL = cmd_action;
+   sURL += "&CMD_(BrowseRequest)&NoOfHits="+num_totalhits+"&Threshold="+threshold+"&StartIndex="+start+"&EndIndex="+end+(ftitle!=null?"&fromTitle="+ftitle:"");
+   location.href = sURL;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Display previous and next buttons in lower screen.
+function displayDataControl() {
+   var threshold = getSearchKey('Threshold');
+   document.BrowseForm.Threshold.value = (threshold?threshold:othreshold);
+   threshold = parseInt(document.BrowseForm.Threshold.value);
+
+   var content = '      Back     New Search   ';
+
+   content += '  View Cart ';
+   if(reqtype=="ViewCart") content += ' Clear Cart ';
+   if(reqtype=="ViewCart") content += ' Check out ';
+   content += ' ';
+
+   content += '  #!View List ';
+   content += ' Save All ';
+   content += ' Clear List    ';
+   
+   if ( num_totalhits > threshold ) {
+      content += '  ';
+      content += ' ';
+      content += '     ';
+      content += '';
+
+      var pages = Math.ceil(num_totalhits/threshold);
+      var cpage = (parseInt(document.BrowseForm.StartIndex.value)-1)/threshold;
+      var tpage = cpage+1;
+      content += '  Pages   ';
+      for(i=1; i '+i+' ';
+      }
+      content += '  of '+pages+' ';
+      content += '    ';
+      content += ' ';
+      content += '  Show ';
+      content += ' 50 ';
+      content += ' 100 ';
+      content += ' 200 ';
+      content += ' items per page ';
+
+      content += '  ';
+   }
+
+   document.writeln( content ) ;
+   count_list();
+   count_cart();
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Display language-independent "hits" message
+function displayHitsMessage() {
+	content = '  ';
+   if (num_startindex == '1' && num_endindex == num_totalhits) {
+      content += ' ';
+      content += num_totalhits + ' ' + txt_hits_simple.toLowerCase() + ' ';
+   } else {
+      content += ' ';
+      content += txt_hits_simple + ' ' + num_startindex + ' ' + txt_to + ' ' + num_endindex;
+      content += ' '+txt_of + ' ' + num_totalhits + ' ';
+   }
+   content += '  ';
+   if(ftitle!=null && ftitle!='' && ftitle!='null') content += ' from  '+unescape(ftitle)+' ';
+   content += '  ';
+   return content;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+var browseData = new Array();
+var iBData = 0;
+var browseHeader = new Array();
+var iBHeader = 0;
+//browseHeader[iBHeader++] = "sLabel|bRight|bDescend|nWidth|cJustLCR|bBreak|bTotal";
+//browseData[iBdata+=] = 'bTake|nExplode|sParentID|KEYVALUE|Column1|Column2|...|ColumnN'; // repeat as needed
+// START of Browse Data
+
+
+
+
+    browseOffset=3;
+    browseHeader[iBHeader++] = 'bTake||';
+    browseHeader[iBHeader++] = 'bExplode||';
+    browseHeader[iBHeader++] = 'sParentID||';
+
+    
+        browseHeader[iBHeader++] = 'Tag|||3|||';
+    
+        browseHeader[iBHeader++] = 'Title|0||50|L|0|0';
+    
+        browseData[iBData++] = '1|0|1233|1267'
+        + '|   Subject Files, 1912-1965   • Series •  Click on title for more detail   Board of Medical Examiners Correspondence, memoranda, reports, studies, newspaper clippings and other records reflecting a cross-section of Board operations and activities. Much of the correspondence relates to physicians inqui...          ';
+    
+        browseData[iBData++] = '1|||1085'
+        + '| Dept. of Developmental Services -- Community Operations Division -- Regional Center Branch -- Regional Center Operations Section   Rulemaking Files,  2002-2003   • Accessioned • Click on the title for more detail       Accession No.:   2011-215       ';
+    
+        browseData[iBData++] = '1|||1123'
+        + '| Dept. of Consumer Affairs -- Podiatric Medicine   Meeting Agendas, Bill Files, Rulemaking Files, and Deceased Podiatrist Files,  1917-2000   • Accessioned • Click on the title for more detail       Accession No.:   2011-223       ';
+    
+        browseData[iBData++] = '1|||1161'
+        + '| Air Resources Board -- Mobile Source Control  -- Emission Research and Regulatory Development   Research and Regulatory (Rulemaking) Files ,  1993-2004   • Accessioned • Click on the title for more detail       Accession No.:   2012-009       ';
+    
+        browseData[iBData++] = '1|||1189'
+        + '| Dept. of Industrial Relations -- Workers' Compensation   Rulemaking Files,  1997-2005   • Accessioned • Click on the title for more detail       Accession No.:   2012-026       ';
+    
+        browseData[iBData++] = '1|||1190'
+        + '| Dept. of Industrial Relations -- Workers' Compensation   Rulemaking Files,  1998-1999   • Accessioned • Click on the title for more detail       Accession No.:   2012-004       ';
+    
+        browseData[iBData++] = '1|||1224'
+        + '| Dept. of Consumer Affairs -- Pharmacy   Board Meeting Files, Board Strategic Committee Files,  1990-2001   • Accessioned • Click on the title for more detail       Accession No.:   2012-047       ';
+    
+        browseData[iBData++] = '1|||1257'
+        + '| Fish and Game Commission   Rulemaking Files, California Condor Recovery Program Files,  1982-2007   • Accessioned • Click on the title for more detail       Accession No.:   2012-098       ';
+    
+        browseData[iBData++] = '1|||1264'
+        + '| Kuehl, Sheila James   Bill Files and Subject Files,  1999-2006   • Accessioned • Click on the title for more detail       Accession No.:   2012-093       ';
+    
+        browseData[iBData++] = '1|||1265'
+        + '| Dept. of Aging -- Long Term Care and Aging Services -- Medi-Cal Services -- Adult Day Health Care   Administrative Files, Regulation/Rulemaking Files,  1973-2006   • Accessioned • Click on the title for more detail       Accession No.:   2012-117       ';
+    
+        browseData[iBData++] = '1|||1281'
+        + '| Dept. of Consumer Affairs -- Pharmacy   Board Meeting Agendas, Board Meeting Minutes, and Strategic Committee Files,  1981-2001   • Accessioned • Click on the title for more detail       Accession No.:   2012-114       ';
+    
+        browseData[iBData++] = '1|||1288'
+        + '| Building Standards Commission   Rulemaking Files,  2006-2010   • Accessioned • Click on the title for more detail       Accession No.:   2015-126       ';
+    
+        browseData[iBData++] = '1|||1295'
+        + '| Building Standards Commission   Rulemaking Files,  2006   • Accessioned • Click on the title for more detail       Accession No.:   2012-131       ';
+    
+        browseData[iBData++] = '1|||133'
+        + '| Fish and Game Commission   Rulemaking Files; Meeting Files,  1995-2004   • Accessioned • Click on the title for more detail       Accession No.:   2007-217       ';
+    
+        browseData[iBData++] = '1|||140'
+        + '| Dept. of Health Services -- Payment Systems   Legislative Files,  1995-2002   • Accessioned • Click on the title for more detail       Accession No.:   2008-034       ';
+    
+        browseData[iBData++] = '1|||1413'
+        + '| Fair Employment and Housing Commission State Fair Employment Practice Commission  Commission Rulemaking Files, Meeting and Hearing Records, Legislative Files, and History,  1959-2013   • Accessioned • Click on the title for more detail       Accession No.:   2013-059       ';
+    
+        browseData[iBData++] = '1|||1434'
+        + '| Technology, Trade and Commerce Agency -- Technology and Community Innovation -- Small Business -- Small Business Development Center Program   Subject Files,  1989-1995   • Accessioned • Click on the title for more detail       Accession No.:   2013-088       ';
+    
+        browseData[iBData++] = '1|||1438'
+        + '| Public Utilities Commission -- Administrative Law Judge -- Central Files   Formal Case and Application Files, Commissioner Files,  1982-2010   • Accessioned • Click on the title for more detail       Accession No.:   2013-160       ';
+    
+        browseData[iBData++] = '1|||1446'
+        + '| Building Standards Commission   Commission Meeting Agendas and Minutes, Rulemaking Files,  1980-2006   • Accessioned • Click on the title for more detail       Accession No.:   2013-074       ';
+    
+        browseData[iBData++] = '1|||1469'
+        + '| Dept. of Social Services -- Regulations Development Bureau Dept. of Social Services -- Administration -- Management and Staff Services -- Regulations Development  Rulemaking Files,  1980-2010   • Accessioned • Click on the title for more detail       Accession No.:   2013-129       ';
+    
+        browseData[iBData++] = '1|||1486'
+        + '| Agricultural Labor Relations Board -- Executive Secretary   Administrative Files, Rulemaking Files,  1978-2003   • Accessioned • Click on the title for more detail       Accession No.:   2013-085       ';
+    
+        browseData[iBData++] = '1|||1510'
+        + '| Fish and Game Commission   Rulemaking Files, Official Minute Books,  2008, 2002-2005   • Accessioned • Click on the title for more detail       Accession No.:   2013-098       ';
+    
+        browseData[iBData++] = '1|||1518'
+        + '| Business, Transportation and Housing Agency -- Secretary   Bill Files, Rulemaking Files, and International Trade Mission Files,  1989-2012   • Accessioned • Click on the title for more detail       Accession No.:   2013-113       ';
+    
+        browseData[iBData++] = '1|||1612'
+        + '| Board of Chiropractic Examiners   Board Agendas and Meeting Packets, Regulations, Licensee Information Cards, Board Meeting Audiotapes,  1977-1994   • Accessioned • Click on the title for more detail       Accession No.:   2014-036       ';
+    
+        browseData[iBData++] = '1|||167'
+        + '| Dept. of Housing and Community Development -- Legal Affairs   Subject Files, Rulemaking Files,  1977-1982   • Accessioned • Click on the title for more detail       Accession No.:   2008-047       ';
+    
+        browseData[iBData++] = '1|||1691'
+        + '| Dept. of Consumer Affairs -- Speech-Language Pathology and Audiology and Hearing Aid Dispensers Board   Board Materials and Rulemaking Files,  1974-2013   • Accessioned • Click on the title for more detail       Accession No.:   2014-102       ';
+    
+        browseData[iBData++] = '1|||171'
+        + '| Dept. of Social Services -- Regulations Development Bureau   Regulation (Rulemaking) Files, Public Hearing Files,  1991-1992   • Accessioned • Click on the title for more detail       Accession No.:   2008-057       ';
+    
+        browseData[iBData++] = '1|||1710'
+        + '| Dept. of Pesticide Regulation -- Executive   General and Technical Files,  2005   • Accessioned • Click on the title for more detail       Accession No.:   2015-030       ';
+    
+        browseData[iBData++] = '1|||1735'
+        + '| Fish and Game Commission   Rulemaking Files,  2009   • Accessioned • Click on the title for more detail       Accession No.:   2015-078       ';
+    
+        browseData[iBData++] = '1|||1849'
+        + '| Managed Risk Medical Insurance Board -- Administration   Access for Infants and Mothers Program (AIM) Advisory Panel Meeting Packets, Healthy Families Program (HFP) Advisory Panel Meeting Packets, Regulation (Rulemaking) Files,  1991-2013   • Accessioned • Click on the title for more detail       Accession No.:   2015-103       ';
+    
+        browseData[iBData++] = '1|||1860'
+        + '| Governor's Office -- Business and Economic Development   Rulemaking Files,  2014-2015   • Accessioned • Click on the title for more detail       Accession No.:   2015-052       ';
+    
+        browseData[iBData++] = '1|||1906'
+        + '| Dept. of Food and Agriculture -- Executive -- Legal   Attorney General Legal Opinions, Administrative Hearings, Rulemaking Files, and Office Files,  1901-2003   • Accessioned • Click on the title for more detail       Accession No.:   2017-145       ';
+    
+        browseData[iBData++] = '1|||1986'
+        + '| Dept. of Pesticide Regulation   General and Technical Files-Director's Office, General and Technical Files-Chief Deputy Director's Office,  2006, 2007   • Accessioned • Click on the title for more detail       Accession No.:   2015-195       ';
+    
+        browseData[iBData++] = '1|||2005'
+        + '| Dept. of Consumer Affairs -- Veterinary Medical Board   Administrative Files,  1980s-2013   • Accessioned • Click on the title for more detail       Accession No.:   2016-137       ';
+    
+        browseData[iBData++] = '1|||2032'
+        + '| Dept. of Forestry and Fire Protection -- Board of Forestry and Fire Protection State Board of Forestry  Rulemaking Files,  1979-1984   • Accessioned • Click on the title for more detail       Accession No.:   2016-071       ';
+    
+        browseData[iBData++] = '1|||20335'
+        + '| Water Resources Control Board -- Regional Water Quality Control Boards -- Santa Ana Region VIII    Case files,  1980-1990   • Accessioned • Click on the title for more detail       Accession No.:   94-11-08       ';
+    
+        browseData[iBData++] = '1|||20337'
+        + '| Water Resources Control Board -- Regional Water Quality Control Boards -- Santa Ana Region VIII    Case Files,  1977-1994   • Accessioned • Click on the title for more detail       Accession No.:   96-01-10       ';
+    
+        browseData[iBData++] = '1|||2040'
+        + '| Dept. of Forestry and Fire Protection -- Board of Forestry and Fire Protection   Rulemaking Files,  1984-1990   • Accessioned • Click on the title for more detail       Accession No.:   2016-051       ';
+    
+        browseData[iBData++] = '1|||20549'
+        + '| Dept. of Social Services   Office Files,  1980-1991   • Accessioned • Click on the title for more detail       Accession No.:   2000-05-10       ';
+    
+        browseData[iBData++] = '1|||20592'
+        + '| Dept. of Social Services -- Management Systems and Evaluation -- Employment Programs -- GAIN and Employment Services Operations   Greater Avenues for Independence Regulation Subject Files,  1982-1986   • Accessioned • Click on the title for more detail       Accession No.:   96-01-27       ';
+    
+        browseData[iBData++] = '1|||20599'
+        + '| Dept. of Social Services -- Administration -- Management and Staff Services   Proposed Regulation Files,  1972-1984   • Accessioned • Click on the title for more detail       Accession No.:   95-06-46       ';
+    
+        browseData[iBData++] = '1|||20600'
+        + '| Dept. of Social Services -- Administration -- Management and Staff Services -- Regulations Development   Rulemaking (Regulations Development) Files,  1984   • Accessioned • Click on the title for more detail       Accession No.:   2000-10-04       ';
+    
+        browseData[iBData++] = '1|||20604'
+        + '| State Board of Equalization -- Special Taxes -- Program Planning and Evaluation   Administrative files,  1972-1979   • Accessioned • Click on the title for more detail       Accession No.:   95-04-24       ';
+    
+        browseData[iBData++] = '1|||20610'
+        + '| State Banking Dept.   Bank Regulation Files,  1978-1983   • Accessioned • Click on the title for more detail       Accession No.:   95-04-17       ';
+    
+        browseData[iBData++] = '1|||20782'
+        + '| Energy Resources Conservation and Development Commission -- Executive -- General Counsel   Office files,  1984-1988   • Accessioned • Click on the title for more detail       Accession No.:   2001-03-35       ';
+    
+        browseData[iBData++] = '1|||20796'
+        + '| Dept. of Social Services -- Administration -- Management and Staff Services -- Regulations Development   Rulemaking (Regulations Development) Files,  1978-1979   • Accessioned • Click on the title for more detail       Accession No.:   1999-02-21       ';
+    
+        browseData[iBData++] = '1|||20821'
+        + '| Dept. of Social Services -- Administration -- Management and Staff Services -- Regulations Development   Public Hearing Files,  1980   • Accessioned • Click on the title for more detail       Accession No.:   96-05-21       ';
+    
+        browseData[iBData++] = '1|||20822'
+        + '| Dept. of Social Services -- Administration -- Management and Staff Services -- Regulations Development   Proposed Regulations,  1974-1976   • Accessioned • Click on the title for more detail       Accession No.:   96-03-34       ';
+    
+        browseData[iBData++] = '1|||2086'
+        + '| Dept. of Forestry and Fire Protection -- Board of Forestry and Fire Protection   Rulemaking Files,  1991-1993   • Accessioned • Click on the title for more detail       Accession No.:   2016-084       ';
+    
+        browseData[iBData++] = '1|||2099'
+        + '| Dept. of Forestry and Fire Protection -- Board of Forestry and Fire Protection   Rulemaking Files,  1992-1996   • Accessioned • Click on the title for more detail       Accession No.:   2016-088       ';
+    
+
+
+
+// #!BROWSEINFO!#
+// END of Browse Data
+
+function showpage(url,id){
+   var xmlhttp;
+   if (window.XMLHttpRequest) {
+     xmlhttp=new XMLHttpRequest();
+   }
+   else {
+     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+   }
+   xmlhttp.onreadystatechange=function() {
+      if(xmlhttp.readyState==4 && xmlhttp.status == 200) {
+         document.getElementById(id).innerHTML = xmlhttp.responseText;
+         var res = document.getElementById(id);
+         var arr = res.getElementsByTagName("script");
+         for (var n=0; n 0){
+      document.getElementById('GoProcessSelect').getElementsByTagName('option')[0].selected = 'selected';
+      document.getElementById("GoProcess").style.display = "inline";
+   }
+}
+
+function checkStatus(){
+   if(location.href.indexOf('nd=1')!=-1){
+      alert("No record available for public.");
+   }
+}
+
+//--> 
+ Public - Archival descriptions browse 
+ 
+ 
+ 
+ 
+ 
+ 
+  Please wait 
+ 
+ 
+ 
+  
+ 
+	   browse_by_list = getCookie(sysFolder+sTemplateProcessID+"ESIbDispBrowseNav")=="true";
+      var sWebPagePrefix = '../html/';
+      showpage("/webcat/systems/cal/css/"+sWebPagePrefix+"public_search_header.html","page_header");    
+    
+ 
+ 
+      var bPromptUser = new Array( ) ;
+      var sPromptUserText = new Array( ) ;
+      var bPublicOnly = new Array( ) ;
+      var aCtr = 0 ;
+    
+ 
+ 
+      
+ 
+ 
+ Member Go Process  
+ 
+ Options:      
+         bPromptUser[aCtr] = "0" ;
+         sPromptUserText[aCtr] = "" ;
+         bPublicOnly[aCtr] = "0";
+         aCtr++ ;
+           View detail  
+         bPromptUser[aCtr] = "" ;
+         sPromptUserText[aCtr] = "" ;
+         bPublicOnly[aCtr] = "";
+         aCtr++ ;
+           Request materials using default email client       
+	  
+  
+            if(reqtype!="ViewList") document.getElementById('GoProcessSelect').innerHTML = "";
+          
+ 
+ 
+         displayDataControl() ;
+         document.writeln(displayHitsMessage());
+       
+ 
+  
+ 
+         showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_browse_header.html","browse_header");
+       
+ 
+ 
+         
+			   if(browse_by_list) document.write('   ');
+            for(dc=0; dc ");
+               document.write(unescape(tmp4));
+               document.write(" ");
+            }
+            if(getCookie(sysFolder+tableID+"ESIMemberServicesUsername")!=""){
+               showMember_Process();
+               document.getElementById('memberLoggedIn').style.display = 'inline';
+               document.getElementById('memberUserLoggedIn').innerHTML = getCookie(sysFolder+tableID+"ESIMemberServicesUsername");
+            }
+			   if(browse_by_list) document.write(' ');
+         
+          
+ 
+  
+ 
+         if(browse_by_list) $("#myList").listnav({ includeAll: false });
+	      showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_browse_footer.html","browse_footer");
+          
+      if (hasGaWebPropertyId()) {
+        writeGaJsHost();
+      }
+        
+         displayDataControl();
+       
+ 
+ 
+ 
+ Powered by WebGENCAT from  Eloquent Systems Inc  
+ 
+ 
+ 
+  
+ 
+      showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_search_footer.html","page_footer");
+      if(reqtype=="ViewList") document.getElementById("GoProcess").style.display="inline";
+      if(reqtype!="ViewCart") update_button();
+      if(reqtype=="ViewCart") update_cart_button();
+       writeGbooksJsHost();  setTimeout("processGbooks();", 1000); 
+ 
+ 
+ TOP 
+ 
+ 
+ 
+   $(document).ready(function($){
+      $('#backToTop').fadeOut('slow');
+       $(window).scroll(function(){
+           if ($(this).scrollTop() > 50) {
+               $('#backToTop').fadeIn('slow');
+           } else {
+               $('#backToTop').fadeOut('slow');
+           }
+       });
+       $('#backToTop').click(function(){
+           $("html, body").animate({ scrollTop: 0 }, 500);
+           return false;
+       });
+   });
+     
+	if(document.getElementsByClassName("browserecord").length  
+      setTimeout(function(){checkStatus()}, 500);
+    
+   
+ 
+

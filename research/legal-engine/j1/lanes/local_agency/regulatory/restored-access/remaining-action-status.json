@@ -1,0 +1,81 @@
+{
+  "as_of": "2026-10-01",
+  "scope": "Finite previously identified regulatory actions; no expansion into unrelated operating functions.",
+  "completed_delta": "bof-delta.json",
+  "actions": [
+    {
+      "action": "LCRI",
+      "actual_status": "Adopted August19,2026; submittedOAL September21; commentperiodclosedSeptember26. Agency page updatedSeptember25 explicitlylistsSOSfilingTBD and anticipatedeffectiveNovember1,2027.",
+      "source_url": "https://www.waterboards.ca.gov/drinking_water/certlic/drinkingwater/lead-copper-rule/ca-lcri-regs.html",
+      "evidence": "lcri.html",
+      "j1_recommendation": "Register adopted/submitted pending-finalfiling source, preserving anticipateddate asanticipated. No requirement to manufacturefuturefilingevent. RecentOALemergencylist mustbereconciled tosettlewhetherlateractionoccurredbycutoff."
+    },
+    {
+      "action": "Waterfees2026-0038",
+      "actual_status": "SignedresolutionadoptedSeptember15,2026; targetsTitle23sections2200and2200.7, allowsminorpre-filingcorrections. AgencyfeeindexupdatedSeptember25stilllistsFY2025\u201326schedule.",
+      "source_url": "https://www.waterboards.ca.gov/board_decisions/adopted_orders/resolutions/2026/rs2026-0038.pdf",
+      "evidence": [
+        "water-res.pdf",
+        "water-res.txt",
+        "water-fee-schedule.html"
+      ],
+      "j1_recommendation": "Retainadoptedpendingfilingselection andoperativeFY2025\u201326source untilactualsuccessoractionestablished; no inferencefrombudgetyearalone."
+    },
+    {
+      "action": "Battery2026-0917-04E",
+      "actual_status": "OALapprovalSeptember24alreadyknown; liveagencyproposedtextanddirectorfeeindependent. NewactualPublicNoticesAPIqueryreturnedall23batteryrecords;latest2026regulatorynotice7240isSeptember10commentnotice, notfinalapproval. Older2025approvalnotices6990/6997mustnotbemistakenfor2026event.",
+      "evidence": [
+        "battery-notices.json",
+        "battery-notice7240.html",
+        "battery.pdf"
+      ],
+      "api_url": "https://www2.calrecycle.ca.gov/PublicNotices/_OtherNoticesGridData?page=1&pageSize=100&sort=NoticeDate-desc&Keywords=Battery&TimeFrameID=0",
+      "api_observation": "ReadendpointandparameterfieldsobservedinnativePublicNoticesHTML KendoOtherNoticesGridconfiguration. Total23;data23;notjustfirstpage.",
+      "remaining": "Approvedfinalendorsedtext/SOSdate/expiration notnewlyestablished."
+    },
+    {
+      "action": "GoGreen2026-0826-02C",
+      "actual_status": "ActualprodagencyHTMLcontinuesJuly24secondreadoptionandJune18permanentproposal. OALrecent-actionstablelistscertificate; currentunder-reviewtabledoesnot.",
+      "evidence": [
+        "gogreen.html",
+        "gogreen.txt"
+      ],
+      "remaining": "Actionoutcomeandfileddateunestablished. DonotlabelpendingOALreview basedonstaleagencyarchive whenOALreportsrecentaction."
+    },
+    {
+      "action": "FPPC2026-0824-04",
+      "actual_status": "Actualnewlyadoptedtableeffectivecellsblank for18360.1\u2013.3; exactAugust24amendmentPDFdownloadedandfooterdateconfirmed, noSOSendorsement. OALrecentactionidentifiesEnforcementPenalties.",
+      "evidence": [
+        "fppc-amendments.html",
+        "fppc-new3.pdf"
+      ],
+      "remaining": "Actualfiling/effectivedates; filenameandamendmentfooterarenotfilingproof."
+    },
+    {
+      "action": "DDW2026-0827-01N",
+      "actual_status": "NativeSection100archiveactuallyretrieved;ends2024packageupdatedApril15,2025. CurrentDDWindexupdatedSeptember25andRecentregsJuly16stillnospecificAugustpackage. OALrecentactionsidentifiesCh14\u201317.",
+      "evidence": [
+        "ddw100.html",
+        "ddw.html"
+      ],
+      "remaining": "Actualaffectedsectioninventoryandoutcome;wholechapterselectiondoesnotpurporttobeamendmentinventory."
+    },
+    {
+      "action": "OEHHA2026-0810-01",
+      "actual_status": "AgencylatestselectedproposalremainsJune17modifiednotice. OALrecentactionsidentifies1-BromopropaneandDiethanolamineNSRL; currentunder-reviewtabledoesnot.",
+      "remaining": "Actualfinaloutcomeandoperativeversion; cannotrelabelpendingsolelyfromproposalpage."
+    }
+  ],
+  "common_followthrough": {
+    "official_summary_downloads": [
+      "register34.pdf",
+      "register35.pdf",
+      "register36.pdf",
+      "register37.pdf",
+      "register38.pdf"
+    ],
+    "result": "ActualfullPDFtextsearchandrelevantfinal-summaryreading yieldednoneoftargetfileidentities/sectionnumbers(exceptolderGoGreenQ2index). Register39earlierreviewlikewisenone. Doesnotprovefinalactionabsence;publicationlagremainspossible.",
+    "access": "PublisherPDF/CDN/nativeHTMLandCalRecycleAPI nowwork. Westlawdirectdocument403; OALHTMLdirect403butwebreaderworks. Nooutgoingagencycontactsent.",
+    "not_claimed": "Allremainingactioneventsclosed;newlegaltextdoesnotexist;automatictestsestablishlegalcompletion."
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "item": "CA-HB:HOME-TBRA-PROVIDER-AGREEMENTS / 2025 incorporated Exhibit A",
+  "research_date": "2026-10-02",
+  "baseline": "2026-10-01",
+  "decision": "Keep the exact edition selection unresolved for both providers. No source-backed change to the existing selected July 2024 or July 2025 instruments is justified.",
+  "exact_unresolved_fact": "The guideline edition actually attached as Exhibit A to Families Forward agreement 25-16978/401289 and Mercy House agreement 25-16978/401293, effective July 1, 2025, or an authoritative administrative record identifying that edition for each agreement.",
+  "direct_basis": [
+    {
+      "url": "https://records.huntingtonbeachca.gov/WebLink/DocView.aspx?id=7236879&dbid=0&repo=COHB",
+      "locators": [
+        "page 2 \u00a71.1",
+        "page 23 \u00a77.9",
+        "page 24 \u00a77.10"
+      ],
+      "finding": "The agreement requires performance under its attached TBRA operating guidelines, amendments require writing, and the entire agreement supersedes prior agreements while incorporating its own Exhibit A. No edition date or express incorporation of the July 2024 agreement appears in those terms."
+    },
+    {
+      "url": "https://records.huntingtonbeachca.gov/WebLink/DocView.aspx?id=7236885&dbid=0&repo=COHB",
+      "locators": [
+        "page 2 \u00a71.1",
+        "page 23 \u00a77.9",
+        "page 24 \u00a77.10"
+      ],
+      "finding": "The agreement requires performance under its attached TBRA operating guidelines, amendments require writing, and the entire agreement supersedes prior agreements while incorporating its own Exhibit A. No edition date or express incorporation of the July 2024 agreement appears in those terms."
+    }
+  ],
+  "new_routes": [
+    {
+      "route": "Laserfiche SearchService.aspx/GetSearchListing",
+      "query": "\"TBRA\"",
+      "capture": "tbra-all.json",
+      "reported_hits": 214,
+      "returned_entries": 214,
+      "finding": "Recovered and inspected the full result set, including entries beyond the prior first-100 truncation. Current dated candidates preserved in current-dated-tbra-candidates.json. No newly identified incorporated guideline counterpart. Index completeness is not document-universe completeness; unindexed/image-only records remain outside this result claim."
+    },
+    {
+      "route": "Laserfiche full-text queries",
+      "captures": [
+        "tbra-2025.json",
+        "operating-2025.json"
+      ],
+      "queries": [
+        "\"TBRA\" & \"2025\"",
+        "\"Operating Guidelines\" & \"2025\""
+      ],
+      "finding": "122 and 11 reported matches respectively; the narrower operating-guidelines query returns existing 2020, 2024 and 2025 carriers, budget documents, and unrelated engineering agreements, not an additional 2025 exhibit edition."
+    },
+    {
+      "route": "Actual CPAB/City Council funding study-session carriers",
+      "urls": [
+        "https://records.huntingtonbeachca.gov/WebLink/DocView.aspx?id=6955036&dbid=0&repo=COHB",
+        "https://records.huntingtonbeachca.gov/WebLink/DocView.aspx?id=7267724&dbid=0&repo=COHB"
+      ],
+      "locators": "March 18, 2025 item 25-081 and March 17, 2026 item 26-206; pages 12\u201315 in each carrier",
+      "captures": "lf-6955036-page*.json; lf-7267724-page*.json",
+      "finding": "Program objectives and funding recommendations identify providers and allocations without identifying operating-guideline editions. These cannot bridge incorporation."
+    },
+    {
+      "route": "September 15, 2026 agenda packet / FY2025\u201326 CAPER",
+      "url": "https://records.huntingtonbeachca.gov/WebLink/ElectronicFile.aspx?docid=7441878&dbid=0&repo=COHB",
+      "captures": [
+        "september2026-packet.pdf",
+        "september2026-packet.txt",
+        "caper2025-26-pages96-144.txt"
+      ],
+      "locators": "Packet pages 92\u201395 staff report; pages 96\u2013144 CAPER; page 132 monitoring; pages 135\u2013137 HOME; page 97 contents",
+      "finding": "New annual reporting carrier confirms both providers delivered assistance during 2025\u201326. It contains program/funding/monitoring reporting, not the contract guideline edition. Its five appended headings are financial summaries, publication and public comments; none is an operating-guideline appendix. Funding and performance do not prove carryforward."
+    },
+    {
+      "route": "Families Forward current public WordPress media index",
+      "urls": [
+        "https://www.families-forward.org/wp-json/wp/v2/media?search=TBRA&per_page=100",
+        "https://www.families-forward.org/wp-json/wp/v2/media?search=Huntington&per_page=100",
+        "https://www.families-forward.org/wp-json/wp/v2/media?search=guidelines&per_page=100",
+        "https://www.families-forward.org/wp-json/wp/v2/media?media_type=application&per_page=100&orderby=date&order=desc"
+      ],
+      "captures": [
+        "ff-media-tbra.txt",
+        "ff-media-huntington.txt",
+        "ff-media-guidelines.txt",
+        "ff-media-applications.json",
+        "ff-media-applications-2.json",
+        "ff-media-applications-3.json",
+        "ff-media-applications-4.json",
+        "ff-media-applications-5.json"
+      ],
+      "finding": "TBRA and Huntington metadata searches returned empty lists; guidelines returned only 2019 and 2021 general income-limit PDFs. All five reported application-media result pages were retrieved and titles/URLs reviewed (463 visible records against header total 466); no HOME agreement/guideline counterpart identified. This is metadata review, not full-body examination of every media asset."
+    }
+  ],
+  "failed_routes": [
+    {
+      "route": "Laserfiche fulltext Rental Assistance AND Guidelines; HOME AND Subrecipient AND amendment; TBRA AND revised",
+      "cause": "60-second request timeout for each; these failures do not prove absence."
+    },
+    {
+      "route": "Current city sitemap.xml",
+      "cause": "HTTP 403; prior archived city-page inventory remains separate evidence."
+    }
+  ],
+  "status_and_scope": "The posted 2025 agreements remain selected under their actual \u00a72.1 continuing-assets terms. Do not invent a 2026 annual replacement. July 2024 remains independently selected but is not relabeled as either 2025 Exhibit A. Relevant scope remains assistance payments, deposits, inspections, lease/exit forms and associated confidentiality.",
+  "next_useful_route": "An actual city Housing Division administrative guideline-distribution/revision record or complete provider execution counterpart is needed. The currently identified public contract records omit it; the new complete text-index review and provider media metadata do not expose an exact counterpart URL. Do not turn that absence into an unchanged-edition finding. No external message or request was made.",
+  "canonical_edits": false
+}

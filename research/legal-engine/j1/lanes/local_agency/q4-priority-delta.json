@@ -1,0 +1,590 @@
+{
+  "instruments": [
+    {
+      "id": "CA:CCR8",
+      "jurisdiction": "CA",
+      "name": "California Code of Regulations, Title 8",
+      "level": "regulation",
+      "functions": [
+        "preconditions",
+        "payments",
+        "work_standards",
+        "provider_contracts"
+      ],
+      "toc_source_url": "https://oal.ca.gov/publications/ccr/",
+      "adapter": "cornell_ccr",
+      "units_in_scope": [
+        {
+          "unit": "Division 1 - Department of Industrial Relations",
+          "heading": "Division 1 - Department of Industrial Relations (Chapter 1 to 8)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-8/division-1",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-20.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Approved amendment Proper fit PPE",
+          "heading": "Proper fit PPE",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR8-approved-1",
+              "heading": "Proper fit PPE \u2014 OAL approved text",
+              "ref": "https://www.dir.ca.gov/OSHSB/documents/Proper-Fit-PPE-Horcher-txtOALapproved.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "version_record_index": 0,
+          "internal_units_in_scope": [
+            "1514"
+          ],
+          "legal_status": "OAL approved text; effective date retained in version record",
+          "acquisition_note": "Exact approved text linked by agency action page"
+        },
+        {
+          "unit": "Approved amendment Lead",
+          "heading": "Lead",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR8-approved-2",
+              "heading": "Lead \u2014 OAL approved text",
+              "ref": "https://www.dir.ca.gov/oshsb/documents/Lead-apprvdtxt.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "version_record_index": 1,
+          "internal_units_in_scope": [
+            "1532.1 5155 5198"
+          ],
+          "legal_status": "OAL approved text; effective date retained in version record",
+          "acquisition_note": "Exact approved text linked by agency action page"
+        },
+        {
+          "unit": "Approved amendment Cone and bar barricades",
+          "heading": "Cone and bar barricades",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR8-approved-3",
+              "heading": "Cone and bar barricades \u2014 OAL approved text",
+              "ref": "https://www.dir.ca.gov/OSHSB/documents/Cone-and-Bar-Barricades-apprvdtxt.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "version_record_index": 2,
+          "internal_units_in_scope": [
+            "1635"
+          ],
+          "legal_status": "OAL approved text; effective date retained in version record",
+          "acquisition_note": "Exact approved text linked by agency action page"
+        },
+        {
+          "unit": "Approved amendment Residential fall protection",
+          "heading": "Residential fall protection",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR8-approved-4",
+              "heading": "Residential fall protection \u2014 OAL approved text",
+              "ref": "https://www.dir.ca.gov/oshsb/documents/Fall-Protection-in-Residential-Construction-apprvdtxt.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "version_record_index": 3,
+          "internal_units_in_scope": [
+            "1671.1 1716.2 1730 1731"
+          ],
+          "legal_status": "OAL approved text; effective date retained in version record",
+          "acquisition_note": "Exact approved text linked by agency action page"
+        },
+        {
+          "unit": "Approved amendment Confined spaces construction",
+          "heading": "Confined spaces construction",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR8-approved-5",
+              "heading": "Confined spaces construction \u2014 OAL approved text",
+              "ref": "https://www.dir.ca.gov/OSHSB/documents/Confined-Spaces-in-Construction-OAL-Changes-Text.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "version_record_index": 4,
+          "internal_units_in_scope": [
+            "1951 1952 1953 1955 1956 1960 5156"
+          ],
+          "legal_status": "OAL approved text; effective date retained in version record",
+          "acquisition_note": "Exact approved text linked by agency action page"
+        },
+        {
+          "unit": "Approved amendment Indoor heat",
+          "heading": "Indoor heat",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR8-approved-6",
+              "heading": "Indoor heat \u2014 OAL approved text",
+              "ref": "https://www.dir.ca.gov/OSHSB/documents/Indoor-Heat-apprvdtxt.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "version_record_index": 5,
+          "internal_units_in_scope": [
+            "3396"
+          ],
+          "legal_status": "OAL approved text; effective date retained in version record",
+          "acquisition_note": "Exact approved text linked by agency action page"
+        },
+        {
+          "unit": "Approved amendment Respirator fit testing",
+          "heading": "Respirator fit testing",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR8-approved-7",
+              "heading": "Respirator fit testing \u2014 OAL approved text",
+              "ref": "https://www.dir.ca.gov/OSHSB/documents/Fit-Testing-Procedures-Mandatory-Horcher-apprvdtxt.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "version_record_index": 6,
+          "internal_units_in_scope": [
+            "5144 Appendix A"
+          ],
+          "legal_status": "OAL approved text; effective date retained in version record",
+          "acquisition_note": "Exact approved text linked by agency action page"
+        },
+        {
+          "unit": "Approved amendment Respirable crystalline silica nonemergency",
+          "heading": "Respirable crystalline silica nonemergency",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR8-approved-8",
+              "heading": "Respirable crystalline silica nonemergency \u2014 OAL approved text",
+              "ref": "https://www.dir.ca.gov/oshsb/documents/Respirable-Crystalline-Silica-Non-Emergency-apprvdtxt.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "version_record_index": 7,
+          "internal_units_in_scope": [
+            "5204"
+          ],
+          "legal_status": "OAL approved text; effective date retained in version record",
+          "acquisition_note": "Scanned silica approved text requires J2 OCR; official linked identity is established."
+        },
+        {
+          "unit": "Employer assessment and fraud surcharge",
+          "heading": "Employer assessment and fraud surcharge",
+          "source_unit_kind": "document",
+          "version_record_index": 8,
+          "internal_units_in_scope": [
+            "15600",
+            "15601.5",
+            "15602",
+            "15603",
+            "15604",
+            "15605",
+            "15606",
+            "15606.1",
+            "15607",
+            "15608",
+            "15609",
+            "15611"
+          ],
+          "legal_status": "OAL filed and operative",
+          "section_list": [
+            {
+              "number": "CA-CCR8-Q4-2025-final",
+              "heading": "Employer assessment and fraud surcharge \u2014 final text",
+              "ref": "https://www.dir.ca.gov/ODRegulations/EmployerAssessmentFraudSurcharge/Text-Of-Regulations.pdf",
+              "source_unit_kind": "document"
+            }
+          ]
+        }
+      ],
+      "units_out": [
+        {
+          "unit": "Division 2 - Agricultural Labor Relations Board",
+          "heading": "Division 2 - Agricultural Labor Relations Board (Chapter 1 to 12)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-8",
+          "reason": "Division 2 - Agricultural Labor Relations Board governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 3 - Public Employment Relations Board",
+          "heading": "Division 3 - Public Employment Relations Board (Chapter 1 to 10)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-8",
+          "reason": "Division 3 - Public Employment Relations Board governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        }
+      ],
+      "acquisition": {
+        "text_adapter": "cornell_ccr",
+        "enumeration": "Traverse the selected mirror division/chapter descendants and retain actual linked leaf references.",
+        "source_authority": "mirror",
+        "official_reconciliation": "Official CCR and issuing-agency enacted/amendment sources determine the authoritative version. Mirror text alone cannot complete J2."
+      },
+      "toc_mirror_url": "https://www.law.cornell.edu/regulations/california/title-8",
+      "source_capture": "j1/sources/ccr-title-8.txt",
+      "currentness_note": "LII supplies the browse tree; official CCR and issuing-agency adoption texts determine legal version. LII quarterly update is not treated as current legal authority.",
+      "version_records": [
+        {
+          "sections": "1514",
+          "name": "Proper fit PPE",
+          "effective_from": "2025-08-21",
+          "source_url": "https://www.dir.ca.gov/OSHSB/documents/Proper-Fit-PPE-Horcher-txtOALapproved.pdf",
+          "proposal_source": "regulatory/proposal.json",
+          "limitation": "Approved index dated July 2026 is not independently proof of absence of later actions; J2 should acquire current official sections and histories, not substitute redline proposals.",
+          "action_page_url": "https://www.dir.ca.gov/OSHSB/Proper-Fit-PPE-Horcher.html"
+        },
+        {
+          "sections": "1532.1 5155 5198",
+          "name": "Lead",
+          "effective_from": "2025-01-01",
+          "source_url": "https://www.dir.ca.gov/oshsb/documents/Lead-apprvdtxt.pdf",
+          "proposal_source": "regulatory/proposal.json",
+          "limitation": "Approved index dated July 2026 is not independently proof of absence of later actions; J2 should acquire current official sections and histories, not substitute redline proposals.",
+          "action_page_url": "https://www.dir.ca.gov/OSHSB/Lead.html"
+        },
+        {
+          "sections": "1635",
+          "name": "Cone and bar barricades",
+          "effective_from": "2025-10-01",
+          "source_url": "https://www.dir.ca.gov/OSHSB/documents/Cone-and-Bar-Barricades-apprvdtxt.pdf",
+          "proposal_source": "regulatory/proposal.json",
+          "limitation": "Approved index dated July 2026 is not independently proof of absence of later actions; J2 should acquire current official sections and histories, not substitute redline proposals.",
+          "action_page_url": "https://www.dir.ca.gov/oshsb/apprvd.html"
+        },
+        {
+          "sections": "1671.1 1716.2 1730 1731",
+          "name": "Residential fall protection",
+          "effective_from": "2025-07-01",
+          "source_url": "https://www.dir.ca.gov/oshsb/documents/Fall-Protection-in-Residential-Construction-apprvdtxt.pdf",
+          "proposal_source": "regulatory/proposal.json",
+          "limitation": "Approved index dated July 2026 is not independently proof of absence of later actions; J2 should acquire current official sections and histories, not substitute redline proposals.",
+          "action_page_url": "https://www.dir.ca.gov/OSHSB/Fall-Protection-in-Residential-Construction.html"
+        },
+        {
+          "sections": "1951 1952 1953 1955 1956 1960 5156",
+          "name": "Confined spaces construction",
+          "effective_from": "2026-01-01",
+          "source_url": "https://www.dir.ca.gov/OSHSB/documents/Confined-Spaces-in-Construction-OAL-Changes-Text.pdf",
+          "proposal_source": "regulatory/proposal.json",
+          "limitation": "Approved index dated July 2026 is not independently proof of absence of later actions; J2 should acquire current official sections and histories, not substitute redline proposals.",
+          "action_page_url": "https://www.dir.ca.gov/OSHSB/Confined-Spaces-in-Construction.html"
+        },
+        {
+          "sections": "3396",
+          "name": "Indoor heat",
+          "effective_from": "2024-07-23",
+          "source_url": "https://www.dir.ca.gov/OSHSB/documents/Indoor-Heat-apprvdtxt.pdf",
+          "proposal_source": "regulatory/proposal.json",
+          "limitation": "Approved index dated July 2026 is not independently proof of absence of later actions; J2 should acquire current official sections and histories, not substitute redline proposals.",
+          "action_page_url": "https://www.dir.ca.gov/OSHSB/Indoor-Heat.html"
+        },
+        {
+          "sections": "5144 Appendix A",
+          "name": "Respirator fit testing",
+          "effective_from": "2024-06-24",
+          "source_url": "https://www.dir.ca.gov/OSHSB/documents/Fit-Testing-Procedures-Mandatory-Horcher-apprvdtxt.pdf",
+          "proposal_source": "regulatory/proposal.json",
+          "limitation": "Approved index dated July 2026 is not independently proof of absence of later actions; J2 should acquire current official sections and histories, not substitute redline proposals.",
+          "action_page_url": "https://www.dir.ca.gov/oshsb/apprvd.html"
+        },
+        {
+          "sections": "5204",
+          "name": "Respirable crystalline silica nonemergency",
+          "effective_from": "2025-02-05",
+          "source_url": "https://www.dir.ca.gov/oshsb/documents/Respirable-Crystalline-Silica-Non-Emergency-apprvdtxt.pdf",
+          "proposal_source": "regulatory/proposal.json",
+          "limitation": "Approved index dated July 2026 is not independently proof of absence of later actions; J2 should acquire current official sections and histories, not substitute redline proposals.",
+          "action_page_url": "https://www.dir.ca.gov/OSHSB/Respirable-Crystalline-Silica-Non-Emergency.html"
+        },
+        {
+          "name": "Employer assessment and fraud surcharge",
+          "filed_on": "2025-10-23",
+          "effective_from": "2025-10-23",
+          "legal_status": "OAL filed and operative",
+          "source_url": "https://www.dir.ca.gov/ODRegulations/EmployerAssessmentFraudSurcharge/Index.html",
+          "final_text_url": "https://www.dir.ca.gov/ODRegulations/EmployerAssessmentFraudSurcharge/Text-Of-Regulations.pdf",
+          "sections": "15600 15601.5 15602 15603 15604 15605 15606 15606.1 15607 15608 15609 15611",
+          "scope_boundary": "Conditional employer or self-insurer assessments; not authority to pass a charge to tenants.",
+          "evidence": "j1/lanes/local_agency/sources/q4-selected-final-routes.txt; regulatory/q4-2025-action-census.json"
+        }
+      ]
+    },
+    {
+      "id": "CA:CCR23",
+      "jurisdiction": "CA",
+      "name": "California Code of Regulations, Title 23",
+      "level": "regulation",
+      "functions": [
+        "preconditions",
+        "payments"
+      ],
+      "toc_source_url": "https://oal.ca.gov/publications/ccr/",
+      "adapter": "cornell_ccr",
+      "units_in_scope": [
+        {
+          "unit": "Division 1 - Central Valley Flood Protection Board",
+          "heading": "Division 1 - Central Valley Flood Protection Board (Chapter 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-23/division-1",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-110.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 1.5 - General Provisions",
+          "heading": "Division 1.5 - General Provisions (Article 1 to 5)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-23/division-1.5",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-110.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 2 - Department of Water Resources",
+          "heading": "Division 2 - Department of Water Resources (Chapter 1 to 7)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-23/division-2",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-110.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 3 - State Water Resources Control Board and Regional Water Quality Control Boards",
+          "heading": "Division 3 - State Water Resources Control Board and Regional Water Quality Control Boards (Chapter 1 to 30)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-23/division-3",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-110.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 4 - Regional Water Quality Control Boards",
+          "heading": "Division 4 - Regional Water Quality Control Boards (Chapter 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-23/division-4",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-110.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 5 - Prevention of Waste, Unreasonable Use or Diversion of Water",
+          "heading": "Division 5 - Prevention of Waste, Unreasonable Use or Diversion of Water (State Water Resources Control Board and Department of Water Resources) (Chapter 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-23/division-5",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-110.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 6 - Delta Stewardship Council",
+          "heading": "Division 6 - Delta Stewardship Council (Chapter 1 to 2)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-23/division-6",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-110.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 7 - California Water Commission",
+          "heading": "Division 7 - California Water Commission (Chapter 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-23/division-7",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-110.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Amendment document 2025-1209-01SR",
+          "heading": "Water measurement and reporting revisions",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2025-1209-01SR",
+              "heading": "Water measurement and reporting revisions",
+              "ref": "https://www.waterboards.ca.gov/waterrights/water_issues/programs/diversion_use/docs/2025/ch-2-and-2-7-revised-regulation.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "Approved Chapters2/2.7 and2.8 amendedsections, including definitions and thresholds"
+          ],
+          "version_record_index": 0,
+          "document_role": "Final amendment or approval package; preserve currentness evidence separately from operative text when package contains only approval notice",
+          "legal_status": "See linked version record; do not infer operation solely from publication",
+          "reason": "Executable acquisition counterpart to selected version record; whole document is not a single legal section."
+        },
+        {
+          "unit": "Underground storage tank Chapter 16 rewrite",
+          "heading": "Underground storage tank Chapter 16 rewrite",
+          "source_unit_kind": "document",
+          "version_record_index": 1,
+          "internal_units_in_scope": [
+            "2610\u20132721;",
+            "mandatory",
+            "appendices"
+          ],
+          "legal_status": "OAL filed and operative",
+          "section_list": [
+            {
+              "number": "CA-CCR23-Q4-2025-final",
+              "heading": "Underground storage tank Chapter 16 rewrite \u2014 final text",
+              "ref": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/docs/ccr23-chapter-16-2026.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "CCR23-Ch16-Appendix-1",
+              "heading": "Appendix 1 \u2014 Statement of Understanding and Compliance",
+              "ref": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/docs/appendix1.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "CCR23-Ch16-Appendix-3",
+              "heading": "Appendix 3 \u2014 Facility Employee Training Certificate",
+              "ref": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/docs/appendix3.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "CCR23-Ch16-Appendix-3.1",
+              "heading": "Appendix 3.1 \u2014 Facility Employee Training Certificate Continuation",
+              "ref": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/docs/appendix3.1.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "CCR23-Ch16-Appendix-4",
+              "heading": "Appendix 4 \u2014 Designated UST Operator Visual Inspection Report",
+              "ref": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/docs/appendix4.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "CCR23-Ch16-Appendix-5.1",
+              "heading": "Appendix 5.1 \u2014 Sensor Test Results Continuation",
+              "ref": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/docs/appendix5.1.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "CCR23-Ch16-Appendix-5.2",
+              "heading": "Appendix 5.2 \u2014 Line Leak Detector Test Results Continuation",
+              "ref": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/docs/appendix5.2.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "CCR23-Ch16-Appendix-6.1",
+              "heading": "Appendix 6.1 \u2014 Spill Containment Testing Report Continuation",
+              "ref": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/docs/appendix6.1.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "CCR23-Ch16-Appendix-8",
+              "heading": "Appendix 8 \u2014 Secondary Containment Testing Report",
+              "ref": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/docs/appendix8.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "CCR23-Ch16-Appendix-8.1",
+              "heading": "Appendix 8.1 \u2014 Tank Test Continuation",
+              "ref": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/docs/appendix8.1.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "CCR23-Ch16-Appendix-8.2",
+              "heading": "Appendix 8.2 \u2014 Pipe Test Continuation",
+              "ref": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/docs/appendix8.2.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "CCR23-Ch16-Appendix-8.3",
+              "heading": "Appendix 8.3 \u2014 Containment Sump and UDC Test Continuation",
+              "ref": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/docs/appendix8.3.pdf",
+              "source_unit_kind": "document"
+            }
+          ]
+        }
+      ],
+      "units_out": [],
+      "acquisition": {
+        "text_adapter": "cornell_ccr",
+        "enumeration": "Traverse the selected mirror division/chapter descendants and retain actual linked leaf references.",
+        "source_authority": "mirror",
+        "official_reconciliation": "Official CCR and issuing-agency enacted/amendment sources determine the authoritative version. Mirror text alone cannot complete J2."
+      },
+      "toc_mirror_url": "https://www.law.cornell.edu/regulations/california/title-23",
+      "source_capture": "j1/sources/ccr-title-23.txt",
+      "currentness_note": "LII supplies the browse tree; official CCR and issuing-agency adoption texts determine legal version. LII quarterly update is not treated as current legal authority.",
+      "version_records": [
+        {
+          "oal_file": "2025-1209-01SR",
+          "name": "Water measurement and reporting revisions",
+          "effective_from": "2026-02-01",
+          "selected_unit": "Approved Chapters2/2.7 and2.8 amendedsections, including definitions and thresholds",
+          "source_url": "https://www.waterboards.ca.gov/waterrights/water_issues/programs/diversion_use/docs/2025/ch-2-and-2-7-revised-regulation.pdf",
+          "additional_source_urls": [
+            "https://www.waterboards.ca.gov/waterrights/water_issues/programs/diversion_use/docs/2026/20260116-chapter-2-8-clean-copy.pdf"
+          ],
+          "reason": "Conditional waterdiverter/extraction/reportingrelationship; not substitute for municipalservice tariff.",
+          "proposal_source": "regulatory/solo-currentness.json"
+        },
+        {
+          "name": "Underground storage tank Chapter 16 rewrite",
+          "filed_on": "2025-10-28",
+          "effective_from": "2026-01-01",
+          "legal_status": "OAL filed and operative",
+          "source_url": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/rewrite.html",
+          "final_text_url": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/docs/ccr23-chapter-16-2026.pdf",
+          "sections": "2610\u20132721; mandatory appendices",
+          "scope_boundary": "Applies where the property or work involves a regulated underground storage tank. Owner/operator duties, construction, monitoring, testing, cleanup and closure are retained; not every residential property has a regulated tank.",
+          "evidence": "j1/lanes/local_agency/sources/q4-selected-final-routes.txt; regulatory/q4-2025-action-census.json",
+          "appendix_link_resolution_pending": [
+            {
+              "appendix": "4.1",
+              "heading": "Containment Sump Inspection Continuation",
+              "landing_url": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/rewrite.html",
+              "reason": "Official adopted edition links the identified form; web click fails before exposing target href. Do not substitute an inferred URL."
+            },
+            {
+              "appendix": "4.2",
+              "heading": "Spill Containment Inspection Continuation",
+              "landing_url": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/rewrite.html",
+              "reason": "Official adopted edition links the identified form; web click fails before exposing target href. Do not substitute an inferred URL."
+            },
+            {
+              "appendix": "4.3",
+              "heading": "Under-Dispenser Containment Inspection Continuation",
+              "landing_url": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/rewrite.html",
+              "reason": "Official adopted edition links the identified form; web click fails before exposing target href. Do not substitute an inferred URL."
+            },
+            {
+              "appendix": "5",
+              "heading": "Release Detection Equipment Testing Report",
+              "landing_url": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/rewrite.html",
+              "reason": "Official adopted edition links the identified form; web click fails before exposing target href. Do not substitute an inferred URL."
+            },
+            {
+              "appendix": "6",
+              "heading": "Spill Containment Testing Report",
+              "landing_url": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/rewrite.html",
+              "reason": "Official adopted edition links the identified form; web click fails before exposing target href. Do not substitute an inferred URL."
+            },
+            {
+              "appendix": "7",
+              "heading": "Overfill Prevention Equipment Testing Report",
+              "landing_url": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/rewrite.html",
+              "reason": "Official adopted edition links the identified form; web click fails before exposing target href. Do not substitute an inferred URL."
+            },
+            {
+              "appendix": "7.1",
+              "heading": "Overfill Prevention Equipment Testing Report Continuation",
+              "landing_url": "https://www.waterboards.ca.gov/ust/leak_prevention/chapter16/rewrite.html",
+              "reason": "Official adopted edition links the identified form; web click fails before exposing target href. Do not substitute an inferred URL."
+            }
+          ],
+          "adopted_on": "2025-09-03"
+        }
+      ]
+    }
+  ]
+}

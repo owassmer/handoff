@@ -1,0 +1,36 @@
+{
+  "integration": "Exact removal proposal only; root owns canonical and ledger. No other CCR22 scope removed.",
+  "instrument_id": "CA:CCR22",
+  "remove_units_in_scope": [
+    {
+      "unit": "Final package - Paid family leave vacation prerequisite removal",
+      "section_list": [
+        {
+          "number": "CCR22-PFL-2025",
+          "heading": "Paid family leave vacation prerequisite removal",
+          "ref": "https://edd.ca.gov/siteassets/files/about_edd/pdf/oal-approval-std-400-and-reg-text.pdf",
+          "source_unit_kind": "document"
+        }
+      ]
+    }
+  ],
+  "remove_version_records": [
+    {
+      "name": "Paid family leave vacation prerequisite removal",
+      "filed_on": "2025-12-23"
+    }
+  ],
+  "ledger_row_patches": [
+    {
+      "row": 120,
+      "title": "22",
+      "filed_on": "12/23/2025",
+      "action": "AMEND: 3303.1 (c)-1",
+      "disposition": "excluded",
+      "reason": "Exclude standalone paid-family-leave benefit administration. This amendment removes the employer requirement to exhaust two weeks of vacation before PFL benefits; it regulates leave/benefit sequencing, not residential access, work safety, contractor coverage, injury responsibility, tenant charges or account closeout. The prior selection rested solely on direct-employer status. Benefit exemptions and tenancy protections in other selected authorities remain intact.",
+      "source_basis": "https://edd.ca.gov/siteassets/files/about_edd/pdf/oal-approval-std-400-and-reg-text.pdf",
+      "evidence": "sources/q4-thpp-edd-boundaries.txt; q4-thpp-edd-delta.json"
+    }
+  ],
+  "review_limit": "Existing agency action description establishes the benefit-administration function. Saved final six-page PDF route had empty mechanical text; no claim of full text extraction."
+}

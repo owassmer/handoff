@@ -1,0 +1,106 @@
+{
+  "as_of": "2026-10-01",
+  "instrument": "CA:CCR24",
+  "scope": "Additive publication-source routes and bounded currentness review; no canonical writes.",
+  "part3_additional_documents": [
+    {
+      "number": "CA-CCR24-P3-CA-AMENDMENTS-20251120",
+      "heading": "2025 California Electrical Code state-specific amendments, revised November 20, 2025",
+      "ref": "https://www.hillsborough.net/DocumentCenter/View/6463/2025-Electrical-Code?bidId=",
+      "source_unit_kind": "document",
+      "publisher": "California state amendments reproduced by Town of Hillsborough official website",
+      "pages": 98,
+      "original_publication": "2025-07-01",
+      "revision": "2025-11-20",
+      "effective_from": "2026-01-01",
+      "scope": "State amendments to incorporated 2023 NEC; includes Article89 applicability and residential electrical requirements. This is not the complete integrated electrical code.",
+      "evidence": "Opened official-host98page PDF. Cover identifies modifications filed January10,2025, operative January1,2026; footer gives publication/revision dates.",
+      "status": "Document identity and direct PDF route settled; complete extraction/internal enumeration is J2."
+    },
+    {
+      "number": "CA-CCR24-P3-ERRATA-20260101",
+      "heading": "2025 California Electrical Code January 1, 2026 errata and history note appendix",
+      "ref": "https://www.dgs.ca.gov/-/media/Divisions/BSC/02-Codes/Errta-01012026-Pt3-CEC-locked.pdf",
+      "source_unit_kind": "document",
+      "effective_from": "2026-01-01",
+      "scope": "Editorial correction overlay for selected Part3, including Preface/Article89, Chapters1–5/7, Informative AnnexC and index.",
+      "status": "Exact agency PDF identity/route established by official indexed history note; direct complete capture remains J2."
+    }
+  ],
+  "part3_publication_identity": {
+    "name": "NFPA70, National Electrical Code with California Amendments (2025)",
+    "official_product_url": "https://www.nfpa.org/product/nfpa-70-ca/p0070acca/california-electrical-code-2025-california-code-of-regulations-title-24-part-3/7025ca",
+    "publisher_selector": {
+      "publication": "70-CA",
+      "model_edition": "2023",
+      "california_edition": "2025"
+    },
+    "selector_evidence_url": "https://link.nfpa.org/all-publications/33/2007",
+    "state_access_instructions_url": "https://www.dgs.ca.gov/BSC/Codes?search=plumbing+code",
+    "evidence": "Publisher product title recovered. NFPA available-publications snapshot identifies70-CA/2023 as the California2025 publication; CBSC says NFPA free online resources require a user login.",
+    "decision": "Retain exact publication and official product route as identity/procurement metadata, not legal-text ref. Do not substitute current2026NEC for incorporated2023NEC. California amendments+errata are a concrete alternate acquisition branch, but do not supply the missing model text.",
+    "remaining_viewer_action": "In an authorized rendered NFPA session select publication70-CA and2023; retain resulting URL and displayed2025California identity. Existing inferred /all-publications/70-CA/2023 URL remains unverified. Neither shell DNS nor current web renderer can perform that selection."
+  },
+  "part7_publication_check": {
+    "official_publisher": "https://codes.iccsafe.org/content/CAWUIC2025P2/arrangement-and-format-of-the-2025-cwuic",
+    "version": "January2026errata",
+    "effective_from": "2026-01-01",
+    "official_codes_index": "https://www.dgs.ca.gov/BSC/Codes?search=plumbing+code",
+    "finding": "Publisher version recovered; CBSC codes index still lists January1,2026 emergency supplement. Neither provides retrieved evidence of May6readoption filing, certification, or current endpoint.",
+    "decision": "Published January version establishes a selected acquisition unit, not continuing emergency validity through October1. Preserve unresolved version-history issue."
+  },
+  "august_final_document_identity": {
+    "index": "https://www.dgs.ca.gov/BSC/Rulemaking/2025-Intervening-Cycle/Commission-Mtgs/2026-08-25",
+    "sfm_selected_labels": {
+      "SFM01/25": [
+        "Final Express Terms",
+        "Commission Action Matrix, Green",
+        "Commission Action Matrix, Yellow",
+        "Commission Action Matrix, Salmon"
+      ],
+      "SFM02/25": [
+        "Final Express Terms",
+        "Commission Action Matrix, Green"
+      ],
+      "SFM03/25": [
+        "Final Express Terms",
+        "Commission Action Matrix, Green",
+        "Commission Action Matrix, Salmon"
+      ],
+      "SFM04/25": [
+        "Final Express Terms",
+        "Commission Action Matrix, Green",
+        "Commission Action Matrix, Yellow"
+      ]
+    },
+    "decision": "These exact index labels identify follow-through documents; each package may have multiple decision matrices, so retrieving only a green matrix can omit contested/amended items. Final labels do not alone prove approval or effective date. No guessed media paths registered."
+  },
+  "new_route_review": [
+    {
+      "route": "CBSC publication/errata bulletin and Codes supplement index",
+      "finding": "Exact current Part3 errata recovered; no indexed later Part7 certification or2027supplement publication found in returned index."
+    },
+    {
+      "route": "Official NFPA product and available-publications selector",
+      "finding": "Identity settled; application renders only JavaScript shell and product page has zero text lines. No verified text-viewer target."
+    },
+    {
+      "route": "Official municipal republication of state Part3 amendments",
+      "finding": "Exact98pageNovember20,2025edition acquired as directPDF route."
+    },
+    {
+      "route": "Secretary of State domain-targeted filed-building-standards search",
+      "finding": "No responsive filing record for selected2026packages returned; search absence is not evidence of nonfiling."
+    },
+    {
+      "route": "SFM and DSA agency approval/transmittal searches",
+      "finding": "Retrieved previously known proposal/inventory materials, no new final filing/date record."
+    },
+    {
+      "route": "Shell publisher request",
+      "finding": "curl could not resolve link.nfpa.org; rendered browser capability is not exposed in this lane."
+    }
+  ],
+  "boundary": "Part3 amendments/errata identities and direct routes may proceed to J2. Exact integrated viewer route remains an acquisition identity verification. Part7 current emergency endpoint and August adopted/future-operation decisions remain substantive J1 gaps; do not mark closed from publications/proposals or generic cycle dates.",
+  "source_evidence_file": "j1/lanes/federal_programs/title24-publication-route-evidence.json"
+}

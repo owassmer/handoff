@@ -1,0 +1,157 @@
+{
+  "format": "section-semantics-first-wave-independent-adjudication-1",
+  "reviewer": "/root/reference_final_audit",
+  "model_responses_seen": true,
+  "prior_blind_expectations_preserved": true,
+  "run_sha256": {
+    "PRE_DISPATCH.json": "cd244c2ef86521346b321cf2ac98fccff2d1b8791e9246520a25e64b36feb543",
+    "execution/requests.json": "d4347753cd1d833ebd7b6b24f16b3a49a9bf10e59d8f6af974a02bf7978e4071",
+    "execution/results.json": "28faca08630daeea9cfacc19c4d3ac7e4d7ea84f480f3dbfdb659354a11079c8",
+    "execution/summary.json": "914b0373a673d4c6b83134eb2e27f0d86b8ec91e5694c83b13112bfd68b97f2f",
+    "or_entry.replayed.json": "7179c3f2c3bd9f324a3249709293d3374cb967014aa14784f1b90b35e783566a",
+    "ca_return.replayed.json": "f86a4423f26f5b415be2c2c5389fdf45b6325b104828207f3f0d5161d43299ab",
+    "comparison.json": "1dc6d8a2ce544141a81b9af92d56681f54b9a57b9da7bd49faa207397d1e3e46"
+  },
+  "verification": {
+    "reviewed_request_groups_match": 8,
+    "wire_bodies_match": 8,
+    "pinned_raw_models_match": 8,
+    "answer_key_sets_match": 8,
+    "reported_cost": "0.000392952",
+    "threshold_abstentions": 8,
+    "established_expected_answers_and_fields": 20,
+    "opposite_determinate_answers": 0,
+    "replayed_accepted_targets_match_pre_response_expectations": 20,
+    "uncertain_reviewed_targets_absent": 8
+  },
+  "uncertain_jobs": [
+    {
+      "job": "or_entry.j052",
+      "raw_noul": 0.89,
+      "policy_result": "uncertain_no_field_established",
+      "expected_answer_upheld": true,
+      "expected_answer": true,
+      "error_classification": "policy_abstention_not_determinate_semantic_error",
+      "preparation_finding": "compound_meaning_and_scope_question",
+      "source_adjudication": "90.322(1)(b) expressly includes urgent repair likely to cause serious damage; definition is nonexhaustive.",
+      "causal_limit": "The record shows a score below the frozen acceptance threshold, not why the model assigned it. Preparation observations are hypotheses to test, not proved causes."
+    },
+    {
+      "job": "or_entry.j166",
+      "raw_noul": 0.74,
+      "policy_result": "uncertain_no_field_established",
+      "expected_answer_upheld": true,
+      "expected_answer": true,
+      "error_classification": "policy_abstention_not_determinate_semantic_error",
+      "preparation_finding": "compound_meaning_and_scope_question",
+      "source_adjudication": "90.322(1)(e)(B)(i) expressly includes weeding, mowing and pruning nonexhaustively.",
+      "causal_limit": "The record shows a score below the frozen acceptance threshold, not why the model assigned it. Preparation observations are hypotheses to test, not proved causes."
+    },
+    {
+      "job": "or_entry.j317",
+      "raw_noul": 0.75,
+      "policy_result": "uncertain_no_field_established",
+      "expected_answer_upheld": true,
+      "expected_answer": true,
+      "error_classification": "policy_abstention_not_determinate_semantic_error",
+      "preparation_finding": "compound_meaning_and_scope_question",
+      "source_adjudication": "90.100(41) assigns rent meaning and excludes deposits, fees and specified utility/service charges.",
+      "causal_limit": "The record shows a score below the frozen acceptance threshold, not why the model assigned it. Preparation observations are hypotheses to test, not proved causes."
+    },
+    {
+      "job": "ca_return.j027",
+      "raw_noul": 0.85,
+      "policy_result": "uncertain_no_field_established",
+      "expected_answer_upheld": true,
+      "expected_answer": true,
+      "error_classification": "policy_abstention_not_determinate_semantic_error",
+      "preparation_finding": "no_demonstrated_preparation_defect",
+      "source_adjudication": "1987(b) begins with nonrelease pursuant to(a); proposition is a stated prerequisite for this branch.",
+      "causal_limit": "The record shows a score below the frozen acceptance threshold, not why the model assigned it. Preparation observations are hypotheses to test, not proved causes."
+    },
+    {
+      "job": "ca_return.j028",
+      "raw_noul": 0.75,
+      "policy_result": "uncertain_no_field_established",
+      "expected_answer_upheld": true,
+      "expected_answer": true,
+      "error_classification": "policy_abstention_not_determinate_semantic_error",
+      "preparation_finding": "no_demonstrated_preparation_defect",
+      "source_adjudication": "1987(b) expressly requires that the notice stated a public sale.",
+      "causal_limit": "The record shows a score below the frozen acceptance threshold, not why the model assigned it. Preparation observations are hypotheses to test, not proved causes."
+    },
+    {
+      "job": "ca_return.j050",
+      "raw_noul": 0.85,
+      "policy_result": "uncertain_no_field_established",
+      "expected_answer_upheld": true,
+      "expected_answer": true,
+      "error_classification": "policy_abstention_not_determinate_semantic_error",
+      "preparation_finding": "alternative_component_wording_ambiguity",
+      "source_adjudication": "1987(c) lists former-tenant reclaim as one arm of an OR, not an individually necessary claimant condition.",
+      "causal_limit": "The record shows a score below the frozen acceptance threshold, not why the model assigned it. Preparation observations are hypotheses to test, not proved causes."
+    },
+    {
+      "job": "ca_return.j051",
+      "raw_noul": 0.88,
+      "policy_result": "uncertain_no_field_established",
+      "expected_answer_upheld": true,
+      "expected_answer": true,
+      "error_classification": "policy_abstention_not_determinate_semantic_error",
+      "preparation_finding": "alternative_component_wording_ambiguity",
+      "source_adjudication": "1987(c) lists another reasonably-believed owner reclaim as the other OR arm; it does not impose universal mandatory third-party delivery.",
+      "causal_limit": "The record shows a score below the frozen acceptance threshold, not why the model assigned it. Preparation observations are hypotheses to test, not proved causes."
+    },
+    {
+      "job": "ca_return.j072",
+      "raw_noul": 0.88,
+      "policy_result": "uncertain_no_field_established",
+      "expected_answer_upheld": true,
+      "expected_answer": true,
+      "error_classification": "policy_abstention_not_determinate_semantic_error",
+      "preparation_finding": "compound_meaning_and_scope_question",
+      "source_adjudication": "1980(a) assigns chapter landlord definition including agent and successor.",
+      "causal_limit": "The record shows a score below the frozen acceptance threshold, not why the model assigned it. Preparation observations are hypotheses to test, not proved causes."
+    }
+  ],
+  "reporting_correction": "comparison.json answer_correct=false/fields_correct=false for uncertain rows means expected result was not established. It must not be summarized as eight wrong answers. Preserve the file; use20established,8abstained,0opposite determinate answers.",
+  "question_findings": [
+    {
+      "issue": "Meaning and scope combined",
+      "jobs": [
+        "or_entry.j052",
+        "or_entry.j166",
+        "or_entry.j317",
+        "ca_return.j072"
+      ],
+      "analysis": "One probability jointly answers faithful meaning assignment and proposed scope. It cannot locate uncertainty in one field. Local OR definitions also receive90.100 preamble as definition_scope_text although their scope is established inside90.322 paragraphs. The intended labels remain legally correct; improve evidence localization and separate judgments.",
+      "repair": "Meaning question: Does the selected provision assign this proposed meaning to the selected term? Supply complete local definition. Scope question separately selects the textual range using actual heading/subsection and scope words. License meaning and scope separately, join only accepted outputs."
+    },
+    {
+      "issue": "Component versus necessity",
+      "jobs": [
+        "ca_return.j050",
+        "ca_return.j051"
+      ],
+      "analysis": "For the selected rule can be read as a necessary condition. Both alternatives are expressly mentioned, but neither alone is necessary. Original expected YES concerned presence of a component, not individual necessity.",
+      "repair": "Is this proposed predicate explicitly expressed as a condition component in the selected provision, including as one alternative? Do not decide necessity, sufficiency or the relationship between components. License the predicate only; judge OR/AND and attachment separately."
+    },
+    {
+      "issue": "Threshold evidence",
+      "jobs": [
+        "ca_return.j027",
+        "ca_return.j028"
+      ],
+      "analysis": "Selected subsection and predicates are adequate. No source defect demonstrated. Their .85/.75 outputs fall in the predeclared abstention interval.",
+      "repair": "Keep unchanged source/candidate controls in a balanced matched comparison. Do not lower acceptance threshold based on positive-only examples."
+    }
+  ],
+  "next_experiment": "Use source-preserving matched original/repaired configurations with independently labeled positive and negative minimal pairs. Add separate scope and necessity questions. Freeze thresholds and controls before inference, preserve full distributions and native groups, count changed candidates as new development data. Repeated positive controls may test stability but are not fresh heldout cases.",
+  "limits": [
+    "28 dependent questions from two units, all Noul labels positive; cannot calibrate false positives or validate a lower cutoff.",
+    "Choice admission uses unique winner probability; ca_return.j123 winner .89 meets .8 despite separate confidence .79. Do not silently change policy to confidence.",
+    "Raw diagnostics YES is not an accepted boolean when policy says uncertain.",
+    "No full-section completeness or actual consumer performance was established. All509 requirements remain.",
+    "Same-model-family independent review, not independent human certification."
+  ]
+}

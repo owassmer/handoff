@@ -1,0 +1,232 @@
+{
+  "reviewed_inputs": {
+    "HANDOFF_CONTEXT.md": "1736d1fe78c4aa92b6aa74996f728ded4e650e79f2b94e75e129d64063b3f4ed",
+    "research/legal-engine/pipeline/design/prepared_tasks/README.md": "50cb2539c6efdf6c93253c03d46ab2556976f4142317536e8d765c8ae3b18486",
+    "research/legal-engine/pipeline/design/prepared_tasks/CONFIGURATION.md": "f9b7ddfd830b75121a90ec8715e36dbdb41bd61aad725b4aa3ff589c0577122f",
+    "research/legal-engine/pipeline/design/prepared_tasks/statutory-pointer.question.json": "ee80128558fa375cdf724278f9fd15a2fc666b86384eb68583de92fab7097e86",
+    "research/legal-engine/pipeline/design/prepared_tasks/statutory.py": "7625aec4ad0839f56d23be07fc08c4bef576e6255da6cc14b732d8620bf176ec",
+    "research/legal-engine/pipeline/design/prepared_tasks/statutory-fresh-corrected-frozen/cases.json": "465a94506c9708e08581ed578d10e4605c0ace031bf3bfb0b5e2de8a44cf1cf3",
+    "research/legal-engine/pipeline/design/prepared_tasks/fresh.coverage.json": "38a8e32979dd397de5c40d1dcc3d500522503c24436d3374cf7a2a47a1fff4f5",
+    "research/legal-engine/pipeline/design/prepared_tasks/fresh-preparation-correction.json": "0ee06a56f2062f1fe26a814898d9d7aeae8685363cc44b6b042b6a03f3e9e683",
+    "research/legal-engine/pipeline/design/prepared_tasks/fresh.followup.json": "e67e89c33fccd4490943136e05d35976784bcac05bd91305d6d27c6a24b5558e",
+    "research/legal-engine/pipeline/design/prepared_tasks/statutory-clause-frozen/cases.json": "09448ea0527049eadfc457a817957033b2db68207691a593b1989dc87e6a9fbc",
+    "research/legal-engine/jurisdictions/CA/texts/CA_CIV/1942.1.txt": "2f85fd85e76fe3fbacc606b570a1c07e454aef6fab120c52ef4b371c9a475c14",
+    "research/legal-engine/jurisdictions/CA/texts/CA_CIV/1942.2.txt": "fed4717b80fe9dfc6fe9c469852e3b29c810b2b14d12aac7681ba135cc52540f",
+    "research/legal-engine/jurisdictions/CA/texts/CA_CIV/1942.6.txt": "375b1fceab9388a5b475973843ddc6c847f6afbd9fe64b909f2e8d6ef5505287",
+    "research/legal-engine/jurisdictions/CA/texts/CA_CIV/1942.txt": "24e61d96406a0726f2b0154982b0d1b031549678acf9336542ca8d1dd81b5960",
+    "research/legal-engine/jurisdictions/CA/texts/CA_CIV/1942.9.txt": "6abaa4992871c5157a269517eae07ca35a612c2d1d30783c7d91f455e9f3a60c"
+  },
+  "review_status": "Independent coverage and preparation review; not fully blind.",
+  "exposure": "The requested README contains aggregate prior observations. The requested fresh.followup.json contains jev_noul and diagnostic_majority fields, which were exposed before final expectations were formed. No dedicated labels or results files were opened. Accordingly these historical expectations are not claimed as blind labels. The forthcoming broader review will avoid author labels and responses.",
+  "final_preparation_coherent": true,
+  "coherence_scope": "Coherent for the bounded task of deciding whether an agent-selected expression names statutory text. This does not validate candidate discovery generally, target resolution, legal applicability, performance calibration, or pipeline completion.",
+  "verification": {
+    "complete_source_bodies_read": 4,
+    "fresh_cases_verified": 27,
+    "clause_cases_verified": 1,
+    "source_hashes_and_exact_passages": "All matched.",
+    "coverage_body_hashes_and_ranges": "All four matched complete operative bodies, excluding source headers, standalone section locators and amendment history.",
+    "coverage_expression_spans": "All 27 match the corrected cases and exact source occurrences.",
+    "duplicate_exact_occurrences": 0
+  },
+  "missing_candidates": [],
+  "duplicated_candidates": [],
+  "coverage_findings": [
+    {
+      "section": "1942.1",
+      "explicit_pointer_occurrences": 3,
+      "finding": "Both section references/ranges and the composite Title 9/Section 1280/Part 3/Code reference are represented. Composite expressions deliberately combine linked statutory units; their constituent targets require downstream expansion."
+    },
+    {
+      "section": "1942.2",
+      "explicit_pointer_occurrences": 3,
+      "finding": "Both enumerated external routes and the final that section are represented. The final reference is clearly statutory; resolving it depends on which utility-payment route applies."
+    },
+    {
+      "section": "1942.6",
+      "explicit_pointer_occurrences": 2,
+      "finding": "Both this section occurrences are distinct and represented. Both existing law occurrences remain explicit broader research leads; their omission from particular-statute classification is accounted for."
+    },
+    {
+      "section": "1942",
+      "explicit_pointer_occurrences": 7,
+      "finding": "External subdivision/section reference, both this section occurrences, this subdivision, the local subdivision (a), Section 1929 or 1941.2, and this chapter are represented. The other applicable statutory or common law lead is retained separately. This remedy and the remedy provided denote remedies, not additional statutory-text pointers."
+    }
+  ],
+  "scope_and_context_ambiguities": [
+    {
+      "issue": "Broad legal leads versus named statutory text",
+      "material_to_binary_labels": false,
+      "assessment": "Existing law (two occurrences) and other applicable statutory or common law (one occurrence) do not name a determinate statute or textual unit. Routing them to agent research is consistent with this narrow task. A complete research workflow must retain them, as the follow-up does."
+    },
+    {
+      "issue": "Conditional antecedent of that section in 1942.2",
+      "material_to_binary_labels": false,
+      "assessment": "The full body supplies enough context to establish a statutory pointer. The precise target depends on the referenced payment branch, so the list of alternatives must not be mistaken for an unconditional applicable target."
+    },
+    {
+      "issue": "Repeated-expression occurrence not conveyed to the model",
+      "material_to_binary_labels": false,
+      "assessment": "statutory.py sends expression string and passage, not a marked occurrence or offset. This is adequate for these repeated expressions because their statutory-versus-subject classifications coincide. It would be insufficient if identical strings in one passage had different referent kinds. Exact source occurrence remains necessary downstream."
+    }
+  ],
+  "correction_review": {
+    "case_id": "fresh-1942-07",
+    "assessment": "Corrected [1211,1226] selects subdivision (a) within subsection (c), pointing to CIV1942(a). Old [105,120] is nested within the external CIV1962(a) reference. Correction repairs occurrence and target identity; it does not change the expression string or its statutory-pointer meaning.",
+    "answer_reuse_limit": "The unchanged binary input can support reuse of that binary observation; reuse does not independently test corrected occurrence selection or target resolution."
+  },
+  "clause_context_review": {
+    "case_id": "confirm-1942.9-03",
+    "expected": "NO",
+    "material_ambiguity": false,
+    "assessment": "The exact clause who has submitted a declaration of COVID-19-related financial distress establishes that the expression denotes a submitted tenant declaration, not statutory text. The complete source confirms that reading. Sufficiency follows from the submission predicate and document referent, independently of any reported score improvement.",
+    "omitted_context": "The following as defined in Section 1179.02 of the Code of Civil Procedure is a separate statutory reference and defines the declaration. It remains necessary to understand declaration requirements; narrowing the classification context must not remove that dependency from research.",
+    "scope_limit": "The isolated clause does not establish applicability, required declaration contents, submission timing, or completeness of the 1942.9 candidate inventory."
+  },
+  "expected_cases": [
+    {
+      "case_id": "fresh-1942.1-01",
+      "expression": "Section 1941 or 1942",
+      "expected": "YES"
+    },
+    {
+      "case_id": "fresh-1942.1-02",
+      "expression": "Any agreement",
+      "expected": "NO"
+    },
+    {
+      "case_id": "fresh-1942.1-03",
+      "expression": "the premises",
+      "expected": "NO"
+    },
+    {
+      "case_id": "fresh-1942.1-04",
+      "expression": "Sections 1941 to 1942.1, inclusive",
+      "expected": "YES"
+    },
+    {
+      "case_id": "fresh-1942.1-05",
+      "expression": "Title 9 (commencing with Section 1280), Part 3 of the Code of Civil Procedure",
+      "expected": "YES"
+    },
+    {
+      "case_id": "fresh-1942.1-06",
+      "expression": "an agreement",
+      "expected": "NO"
+    },
+    {
+      "case_id": "fresh-1942.1-07",
+      "expression": "the arbitrator",
+      "expected": "NO"
+    },
+    {
+      "case_id": "fresh-1942.2-01",
+      "expression": "Section 777, 777.1, 10009, 10009.1, 12822, 12822.1, 16481, or 16481.1 of the Public Utilities Code",
+      "expected": "YES"
+    },
+    {
+      "case_id": "fresh-1942.2-02",
+      "expression": "Section 60371 of the Government Code",
+      "expected": "YES"
+    },
+    {
+      "case_id": "fresh-1942.2-03",
+      "expression": "that section",
+      "expected": "YES"
+    },
+    {
+      "case_id": "fresh-1942.2-04",
+      "expression": "the payment",
+      "expected": "NO"
+    },
+    {
+      "case_id": "fresh-1942.2-05",
+      "expression": "the rent",
+      "expected": "NO"
+    },
+    {
+      "case_id": "fresh-1942.6-01",
+      "expression": "an occupant",
+      "expected": "NO"
+    },
+    {
+      "case_id": "fresh-1942.6-02",
+      "expression": "tenants’ rights",
+      "expected": "NO"
+    },
+    {
+      "case_id": "fresh-1942.6-03",
+      "expression": "this section",
+      "expected": "YES"
+    },
+    {
+      "case_id": "fresh-1942.6-04",
+      "expression": "this section",
+      "expected": "YES"
+    },
+    {
+      "case_id": "fresh-1942-01",
+      "expression": "subdivision (a) of Section 1962",
+      "expected": "YES"
+    },
+    {
+      "case_id": "fresh-1942-02",
+      "expression": "one month’s rent",
+      "expected": "NO"
+    },
+    {
+      "case_id": "fresh-1942-03",
+      "expression": "12-month period",
+      "expected": "NO"
+    },
+    {
+      "case_id": "fresh-1942-04",
+      "expression": "this section",
+      "expected": "YES"
+    },
+    {
+      "case_id": "fresh-1942-05",
+      "expression": "this subdivision",
+      "expected": "YES"
+    },
+    {
+      "case_id": "fresh-1942-06",
+      "expression": "the 30th day following notice",
+      "expected": "NO"
+    },
+    {
+      "case_id": "fresh-1942-07",
+      "expression": "subdivision (a)",
+      "expected": "YES"
+    },
+    {
+      "case_id": "fresh-1942-08",
+      "expression": "Section 1929 or 1941.2",
+      "expected": "YES"
+    },
+    {
+      "case_id": "fresh-1942-09",
+      "expression": "this section",
+      "expected": "YES"
+    },
+    {
+      "case_id": "fresh-1942-10",
+      "expression": "this chapter",
+      "expected": "YES"
+    },
+    {
+      "case_id": "fresh-1942-11",
+      "expression": "the rental\nagreement",
+      "expected": "NO"
+    }
+  ],
+  "followup_review": {
+    "assessment": "The recorded follow-up preserves local pointers, enumerated alternatives, composite ranges, and broad leads as different unfinished research work. All 27 recorded source occurrences match the corrected cases.",
+    "limits": [
+      "The 11 retrieved dependency bodies and current external-law status were not independently adjudicated in this source-coverage review.",
+      "Range expansion against a saved inventory is explicitly provisional; complete official enumeration remains open.",
+      "Parent-target and pointer classification do not establish current applicability or case facts."
+    ]
+  },
+  "conclusion": "No missing explicit statutory-pointer occurrence or duplicated exact candidate was found within these four saved source bodies. The preparation and bounded clause selection are semantically coherent. These findings support proceeding to genuinely blind review of the fresh cases, not a claim of intrinsic model limits or representative performance."
+}

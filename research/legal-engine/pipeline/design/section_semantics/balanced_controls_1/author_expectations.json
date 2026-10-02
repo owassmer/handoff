@@ -1,0 +1,82 @@
+{
+  "j001": {
+    "control_id": "emergency_pos",
+    "expected": true,
+    "reason": "Retains both severity and inclusive definition."
+  },
+  "j002": {
+    "control_id": "emergency_neg",
+    "expected": false,
+    "reason": "Only improperly turns inclusive example into exhaustive definition."
+  },
+  "j003": {
+    "control_id": "yard_pos",
+    "expected": true,
+    "reason": "Examples are nonexhaustive activities, not conjunctive mandatory tasks."
+  },
+  "j004": {
+    "control_id": "yard_neg",
+    "expected": false,
+    "reason": "Examples are nonexhaustive activities, not conjunctive mandatory tasks."
+  },
+  "j005": {
+    "control_id": "rent_pos",
+    "expected": true,
+    "reason": "90.100(41)(b) expressly excludes both categories."
+  },
+  "j006": {
+    "control_id": "rent_neg",
+    "expected": false,
+    "reason": "90.100(41)(b) expressly excludes both categories."
+  },
+  "j007": {
+    "control_id": "landlord_pos",
+    "expected": true,
+    "reason": "1980(a) expressly includes agent/successor."
+  },
+  "j008": {
+    "control_id": "landlord_neg",
+    "expected": false,
+    "reason": "1980(a) expressly includes agent/successor."
+  },
+  "j009": {
+    "control_id": "presale_notice_pos",
+    "expected": true,
+    "reason": "1987(b) specifies public-sale notice, not the alternate low-value retention notice."
+  },
+  "j010": {
+    "control_id": "presale_notice_neg",
+    "expected": false,
+    "reason": "1987(b) specifies public-sale notice, not the alternate low-value retention notice."
+  },
+  "j011": {
+    "control_id": "nonrelease_pos",
+    "expected": true,
+    "reason": "The source negates prior(a)release."
+  },
+  "j012": {
+    "control_id": "nonrelease_neg",
+    "expected": false,
+    "reason": "The source negates prior(a)release."
+  },
+  "j013": {
+    "control_id": "reclaimer_pos",
+    "expected": true,
+    "reason": "Former tenant is one listed alternative; unrelated nonowner is not."
+  },
+  "j014": {
+    "control_id": "reclaimer_neg",
+    "expected": false,
+    "reason": "Former tenant is one listed alternative; unrelated nonowner is not."
+  },
+  "j015": {
+    "control_id": "tenant_individually_necessary",
+    "expected": false,
+    "reason": "Other reasonably-believed owner is an alternative; do not confuse presence with necessity."
+  },
+  "j016": {
+    "control_id": "reclaimer_or_relation",
+    "expected": true,
+    "reason": "The statutory connector is or; dwelling/timing remain separate conjuncts."
+  }
+}

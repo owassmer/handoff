@@ -1,0 +1,48 @@
+{
+  "case_id": "j013+j014+j015+j016",
+  "request_hash": "45ea00409aa69c906c65419f9d7ee63df53a905ad2304fa20cbef9de3114a325",
+  "started_at": "2026-10-01T18:25:21.681769+00:00",
+  "transport": [
+    {
+      "url": "https://openrouter.ai/api/v1/systemone",
+      "body": {
+        "state": [
+          "(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling."
+        ],
+        "model": "typesafe/jev-1.13",
+        "questions": {
+          "j013": {
+            "type": "noul",
+            "instructions": {
+              "question": "Is this candidate condition expressed in the passage?",
+              "candidate": "The former tenant reclaims the property."
+            }
+          },
+          "j014": {
+            "type": "noul",
+            "instructions": {
+              "question": "Is this candidate condition expressed in the passage?",
+              "candidate": "An unrelated person not reasonably believed to be an owner reclaims the property."
+            }
+          },
+          "j015": {
+            "type": "noul",
+            "instructions": {
+              "question": "Is this claimant requirement necessary in every case under the passage?",
+              "candidate": "The former tenant personally reclaims in every case satisfying the reclaimant condition."
+            }
+          },
+          "j016": {
+            "type": "noul",
+            "instructions": {
+              "question": "Does the passage establish this relationship between the claimant alternatives?",
+              "candidate": "Former-tenant reclaim OR reasonably-believed-other-owner reclaim satisfies the claimant component."
+            }
+          }
+        }
+      },
+      "body_text": "{\"state\":[\"(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling.\"],\"model\":\"typesafe/jev-1.13\",\"questions\":{\"j013\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Is this candidate condition expressed in the passage?\",\"candidate\":\"The former tenant reclaims the property.\"}},\"j014\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Is this candidate condition expressed in the passage?\",\"candidate\":\"An unrelated person not reasonably believed to be an owner reclaims the property.\"}},\"j015\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Is this claimant requirement necessary in every case under the passage?\",\"candidate\":\"The former tenant personally reclaims in every case satisfying the reclaimant condition.\"}},\"j016\":{\"type\":\"noul\",\"instructions\":{\"question\":\"Does the passage establish this relationship between the claimant alternatives?\",\"candidate\":\"Former-tenant reclaim OR reasonably-believed-other-owner reclaim satisfies the claimant component.\"}}}}",
+      "body_sha256": "aa407cf4a8ea0905eef8691dd1772e2f05330201d67e6da9e2f9493678e12abf"
+    }
+  ]
+}

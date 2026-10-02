@@ -1,0 +1,17 @@
+{
+  "historical_files_checked": 8836,
+  "changed_or_missing": [],
+  "tests": {
+    "command": ".venv/bin/python -m pytest pipeline/tests -q --tb=short",
+    "passed": 197,
+    "elapsed_seconds": 14.38
+  },
+  "status": "development checkpoint, not capability acceptance",
+  "intervening_test_failure": {
+    "session": 1483,
+    "passed": 130,
+    "errors": 67,
+    "cause": "ENOSPC during temporary fixture copies; no semantic test conclusion",
+    "resolved_by": "Removed regenerable npm download cache; rerun197passed"
+  }
+}

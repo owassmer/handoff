@@ -1,0 +1,838 @@
+[
+  {
+    "case_id": "dev01",
+    "request_hash": "0bf19f8d1a327eeee07d606744be27f86f19c367afaebaf0b60ef43a60503d89",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "definition_present": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "YES": 1,
+            "INSUFFICIENT": 0,
+            "NO": 0
+          },
+          "confidence": 1
+        }
+      },
+      "usage": {
+        "input_tokens": 893,
+        "output_tokens": 42,
+        "cost": 3.7506e-05
+      },
+      "id": "gen-dec-1790815922-mMsDyYOSHpeiIRnIqHyM",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "YES": 1,
+        "INSUFFICIENT": 0,
+        "NO": 0
+      },
+      "confidence": 1
+    },
+    "elapsed_seconds": 0.3835
+  },
+  {
+    "case_id": "dev02",
+    "request_hash": "14dd045af2ca98cadbd20b276a3b1acb42a731ea7389268b9e074a43277959f7",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "definition_present": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "YES": 1,
+            "NO": 0,
+            "INSUFFICIENT": 0
+          },
+          "confidence": 1
+        }
+      },
+      "usage": {
+        "input_tokens": 905,
+        "output_tokens": 42,
+        "cost": 3.801e-05
+      },
+      "id": "gen-dec-1790815923-kRJQMHoHaqtVTZgBMFZy",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "YES": 1,
+        "NO": 0,
+        "INSUFFICIENT": 0
+      },
+      "confidence": 1
+    },
+    "elapsed_seconds": 0.2056
+  },
+  {
+    "case_id": "dev03",
+    "request_hash": "0ad661f44751b10be1b1eb0e2bb709c3d95b39b6a142b2fe75f07c1b75e6ee17",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "definition_present": {
+          "type": "choice",
+          "choice": "NO",
+          "probabilities": {
+            "YES": 0.03,
+            "INSUFFICIENT": 0,
+            "NO": 0.97
+          },
+          "confidence": 0.95
+        }
+      },
+      "usage": {
+        "input_tokens": 738,
+        "output_tokens": 42,
+        "cost": 3.0996e-05
+      },
+      "id": "gen-dec-1790815923-CdQbQNIt0mXNWsm8384g",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "NO",
+      "probabilities": {
+        "YES": 0.03,
+        "INSUFFICIENT": 0,
+        "NO": 0.97
+      },
+      "confidence": 0.95
+    },
+    "elapsed_seconds": 0.4266
+  },
+  {
+    "case_id": "dev04",
+    "request_hash": "d6450ee1d073a58acda2af08d09ba982e1b3c38d07ad9984ee04bb9925495e53",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "reference_present": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "NO": 0,
+            "YES": 1,
+            "INSUFFICIENT": 0
+          },
+          "confidence": 1
+        }
+      },
+      "usage": {
+        "input_tokens": 763,
+        "output_tokens": 42,
+        "cost": 3.2046e-05
+      },
+      "id": "gen-dec-1790815923-6K0hIrjuJUYW5oxlbI9y",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "NO": 0,
+        "YES": 1,
+        "INSUFFICIENT": 0
+      },
+      "confidence": 1
+    },
+    "elapsed_seconds": 0.3473
+  },
+  {
+    "case_id": "dev05",
+    "request_hash": "6702275f89b6a06df04ad92a06bbd2ab9a495d5739b270399512eea3e440f3be",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "reference_present": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "INSUFFICIENT": 0,
+            "YES": 1,
+            "NO": 0
+          },
+          "confidence": 1
+        }
+      },
+      "usage": {
+        "input_tokens": 798,
+        "output_tokens": 42,
+        "cost": 3.3516e-05
+      },
+      "id": "gen-dec-1790815923-enBEUec7jCOyRqZtvtgO",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "INSUFFICIENT": 0,
+        "YES": 1,
+        "NO": 0
+      },
+      "confidence": 1
+    },
+    "elapsed_seconds": 0.2431
+  },
+  {
+    "case_id": "dev06",
+    "request_hash": "86ba51ba2c9b70a5f054e6615bbf1b3583edb781c41f9ca50b2656e9111e416e",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "reference_present": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "INSUFFICIENT": 0,
+            "NO": 0,
+            "YES": 1
+          },
+          "confidence": 1
+        }
+      },
+      "usage": {
+        "input_tokens": 681,
+        "output_tokens": 42,
+        "cost": 2.8602e-05
+      },
+      "id": "gen-dec-1790815923-E65BEn14DEzqA4sL7wCP",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "INSUFFICIENT": 0,
+        "NO": 0,
+        "YES": 1
+      },
+      "confidence": 1
+    },
+    "elapsed_seconds": 0.1708
+  },
+  {
+    "case_id": "dev07",
+    "request_hash": "6f0942ad5f344f373ca65d214dcd5d83e8b9153923359e8dd3a4816ee85d4c14",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "reference_present": {
+          "type": "choice",
+          "choice": "NO",
+          "probabilities": {
+            "NO": 0.99,
+            "INSUFFICIENT": 0,
+            "YES": 0.01
+          },
+          "confidence": 0.98
+        }
+      },
+      "usage": {
+        "input_tokens": 734,
+        "output_tokens": 42,
+        "cost": 3.0828e-05
+      },
+      "id": "gen-dec-1790815923-CS9JnRxVOPlAoYAVd3ut",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "NO",
+      "probabilities": {
+        "NO": 0.99,
+        "INSUFFICIENT": 0,
+        "YES": 0.01
+      },
+      "confidence": 0.98
+    },
+    "elapsed_seconds": 0.1781
+  },
+  {
+    "case_id": "dev08",
+    "request_hash": "772d3dbba73e79a2f1e8753ee5c3b36c7a2f946bdeac7eb03add5e128dc0bdf7",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "candidate_term_use": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "NO": 0.02,
+            "YES": 0.98,
+            "INSUFFICIENT": 0
+          },
+          "confidence": 0.98
+        }
+      },
+      "usage": {
+        "input_tokens": 901,
+        "output_tokens": 43,
+        "cost": 3.7842e-05
+      },
+      "id": "gen-dec-1790815923-Wy4L5DJLDKFpJuJ6dw2m",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "NO": 0.02,
+        "YES": 0.98,
+        "INSUFFICIENT": 0
+      },
+      "confidence": 0.98
+    },
+    "elapsed_seconds": 0.2699
+  },
+  {
+    "case_id": "dev09",
+    "request_hash": "fc1acf2bbc674273b3478ead6bb8e29ba0ef0e2092ed62ba818f3e4c749cc02e",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "candidate_term_use": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "NO": 0.01,
+            "YES": 0.99,
+            "INSUFFICIENT": 0
+          },
+          "confidence": 0.98
+        }
+      },
+      "usage": {
+        "input_tokens": 975,
+        "output_tokens": 43,
+        "cost": 4.095e-05
+      },
+      "id": "gen-dec-1790815923-eG6p8XYlX7HEdpvaitMJ",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "NO": 0.01,
+        "YES": 0.99,
+        "INSUFFICIENT": 0
+      },
+      "confidence": 0.98
+    },
+    "elapsed_seconds": 0.1704
+  },
+  {
+    "case_id": "dev10",
+    "request_hash": "a94c864d17eaa8f1ae21cae0c22ffa5b7748f873d18d3fc2aa66b427f5721976",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "candidate_term_use": {
+          "type": "choice",
+          "choice": "NO",
+          "probabilities": {
+            "INSUFFICIENT": 0,
+            "NO": 0.99,
+            "YES": 0.01
+          },
+          "confidence": 0.99
+        }
+      },
+      "usage": {
+        "input_tokens": 1179,
+        "output_tokens": 43,
+        "cost": 4.9518e-05
+      },
+      "id": "gen-dec-1790815923-L7lR5Hkysvm2nfY4gjDr",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "NO",
+      "probabilities": {
+        "INSUFFICIENT": 0,
+        "NO": 0.99,
+        "YES": 0.01
+      },
+      "confidence": 0.99
+    },
+    "elapsed_seconds": 0.1953
+  },
+  {
+    "case_id": "dev11",
+    "request_hash": "7005b28f07775cc70d06762bdff52bd91faa1088c0d4d851aa3f48e45ee32260",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "scope_includes_use": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "INSUFFICIENT": 0.16,
+            "YES": 0.62,
+            "NO": 0.22
+          },
+          "confidence": 0.44
+        }
+      },
+      "usage": {
+        "input_tokens": 935,
+        "output_tokens": 45,
+        "cost": 3.927e-05
+      },
+      "id": "gen-dec-1790815923-vO6VeFyPawQ4v7Ya6Wd9",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "INSUFFICIENT": 0.16,
+        "YES": 0.62,
+        "NO": 0.22
+      },
+      "confidence": 0.44
+    },
+    "elapsed_seconds": 0.2331
+  },
+  {
+    "case_id": "dev12",
+    "request_hash": "81e2675c3dac2440add2a209bf6386e342d8bbee5bfbfbc04c8b82053068135d",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "scope_includes_use": {
+          "type": "choice",
+          "choice": "NO",
+          "probabilities": {
+            "NO": 0.85,
+            "INSUFFICIENT": 0.11,
+            "YES": 0.04
+          },
+          "confidence": 0.77
+        }
+      },
+      "usage": {
+        "input_tokens": 909,
+        "output_tokens": 45,
+        "cost": 3.8178e-05
+      },
+      "id": "gen-dec-1790815923-umlEUIW6TdJBTAoMNH7y",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "NO",
+      "probabilities": {
+        "NO": 0.85,
+        "INSUFFICIENT": 0.11,
+        "YES": 0.04
+      },
+      "confidence": 0.77
+    },
+    "elapsed_seconds": 0.1929
+  },
+  {
+    "case_id": "dev13",
+    "request_hash": "f215d15e3751dcd8da7c972eb2abca9da4b48097ca3d42f508d72ce68335910c",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "scope_includes_use": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "INSUFFICIENT": 0.24,
+            "YES": 0.52,
+            "NO": 0.24
+          },
+          "confidence": 0.27
+        }
+      },
+      "usage": {
+        "input_tokens": 922,
+        "output_tokens": 45,
+        "cost": 3.8724e-05
+      },
+      "id": "gen-dec-1790815923-Q0x0zaJWtfu7ZS14go94",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "INSUFFICIENT": 0.24,
+        "YES": 0.52,
+        "NO": 0.24
+      },
+      "confidence": 0.27
+    },
+    "elapsed_seconds": 0.2282
+  },
+  {
+    "case_id": "dev14",
+    "request_hash": "4c916b221043f453501db5ae3f158207ce4cabde1f227c4fdbbf4de3a093998b",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "scope_includes_use": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "INSUFFICIENT": 0.1,
+            "NO": 0.28,
+            "YES": 0.62
+          },
+          "confidence": 0.44
+        }
+      },
+      "usage": {
+        "input_tokens": 954,
+        "output_tokens": 45,
+        "cost": 4.0068e-05
+      },
+      "id": "gen-dec-1790815923-dBnhrK9eKZY5BOLXAfX6",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "INSUFFICIENT": 0.1,
+        "NO": 0.28,
+        "YES": 0.62
+      },
+      "confidence": 0.44
+    },
+    "elapsed_seconds": 0.1747
+  },
+  {
+    "case_id": "dev15",
+    "request_hash": "1b80fce91b07390c9f61b92efd7896b823d42390be5de562493331d8a2f7fa67",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "qualifies_requirement": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "INSUFFICIENT": 0,
+            "YES": 1,
+            "NO": 0
+          },
+          "confidence": 1
+        }
+      },
+      "usage": {
+        "input_tokens": 2321,
+        "output_tokens": 45,
+        "cost": 9.7482e-05
+      },
+      "id": "gen-dec-1790815923-UUvkqxa0owrs1zTufNbL",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "INSUFFICIENT": 0,
+        "YES": 1,
+        "NO": 0
+      },
+      "confidence": 1
+    },
+    "elapsed_seconds": 0.1719
+  },
+  {
+    "case_id": "dev16",
+    "request_hash": "347d41faf9330b70a3a0943420880e303b3e19970ef415694584cb99e4461d89",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "qualifies_requirement": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "YES": 0.99,
+            "INSUFFICIENT": 0,
+            "NO": 0.01
+          },
+          "confidence": 0.98
+        }
+      },
+      "usage": {
+        "input_tokens": 2228,
+        "output_tokens": 45,
+        "cost": 9.3576e-05
+      },
+      "id": "gen-dec-1790815923-TyurEqPFRMVUqp2IWCvQ",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "YES": 0.99,
+        "INSUFFICIENT": 0,
+        "NO": 0.01
+      },
+      "confidence": 0.98
+    },
+    "elapsed_seconds": 0.1932
+  },
+  {
+    "case_id": "dev17",
+    "request_hash": "046a31914fff45fbc5d3a049b2e5ce263ae7ab2568c3f1fbc5bef49c22f11bfd",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "qualifies_requirement": {
+          "type": "choice",
+          "choice": "NO",
+          "probabilities": {
+            "NO": 1,
+            "INSUFFICIENT": 0,
+            "YES": 0
+          },
+          "confidence": 1
+        }
+      },
+      "usage": {
+        "input_tokens": 2210,
+        "output_tokens": 45,
+        "cost": 9.282e-05
+      },
+      "id": "gen-dec-1790815924-0cm0gIm1DnwxlqD4QDUL",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "NO",
+      "probabilities": {
+        "NO": 1,
+        "INSUFFICIENT": 0,
+        "YES": 0
+      },
+      "confidence": 1
+    },
+    "elapsed_seconds": 0.2403
+  },
+  {
+    "case_id": "dev18",
+    "request_hash": "1bc3cce7b4b727d06321fa487046d5d5c79c52bdc1f1d9a28e05ec4aa3bccf4e",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "qualifies_requirement": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "NO": 0.03,
+            "YES": 0.97,
+            "INSUFFICIENT": 0
+          },
+          "confidence": 0.96
+        }
+      },
+      "usage": {
+        "input_tokens": 2348,
+        "output_tokens": 45,
+        "cost": 9.8616e-05
+      },
+      "id": "gen-dec-1790815924-i0ExpZJJdGNyhoTRSHgG",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "NO": 0.03,
+        "YES": 0.97,
+        "INSUFFICIENT": 0
+      },
+      "confidence": 0.96
+    },
+    "elapsed_seconds": 0.2117
+  },
+  {
+    "case_id": "dev19",
+    "request_hash": "1ad5b7887160daad936ab02bd84b3cd58287b8cccbe19929b9606541bdaee81a",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "candidate_term_use": {
+          "type": "choice",
+          "choice": "NO",
+          "probabilities": {
+            "NO": 0.81,
+            "INSUFFICIENT": 0,
+            "YES": 0.19
+          },
+          "confidence": 0.71
+        }
+      },
+      "usage": {
+        "input_tokens": 952,
+        "output_tokens": 43,
+        "cost": 3.9984e-05
+      },
+      "id": "gen-dec-1790815924-zN1jjCAhJMbWm9vK4OCg",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "NO",
+      "probabilities": {
+        "NO": 0.81,
+        "INSUFFICIENT": 0,
+        "YES": 0.19
+      },
+      "confidence": 0.71
+    },
+    "elapsed_seconds": 0.2239
+  },
+  {
+    "case_id": "dev20",
+    "request_hash": "df717deb2832468ef6da3ebabbcb309e79e7b170ccf9b162ce79d97038f4f279",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "definition_present": {
+          "type": "choice",
+          "choice": "YES",
+          "probabilities": {
+            "INSUFFICIENT": 0,
+            "YES": 0.86,
+            "NO": 0.14
+          },
+          "confidence": 0.78
+        }
+      },
+      "usage": {
+        "input_tokens": 767,
+        "output_tokens": 42,
+        "cost": 3.2214e-05
+      },
+      "id": "gen-dec-1790815924-OM3p7BMs7DUJzcyKu4D2",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "YES",
+      "probabilities": {
+        "INSUFFICIENT": 0,
+        "YES": 0.86,
+        "NO": 0.14
+      },
+      "confidence": 0.78
+    },
+    "elapsed_seconds": 0.2092
+  },
+  {
+    "case_id": "dev21",
+    "request_hash": "5088535d1e56db894eab51c1ce26033c29a059105fcbec12726b679ca2208296",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "reference_present": {
+          "type": "choice",
+          "choice": "NO",
+          "probabilities": {
+            "NO": 0.96,
+            "INSUFFICIENT": 0,
+            "YES": 0.04
+          },
+          "confidence": 0.94
+        }
+      },
+      "usage": {
+        "input_tokens": 651,
+        "output_tokens": 42,
+        "cost": 2.7342e-05
+      },
+      "id": "gen-dec-1790815924-yBO2Rx0zfik6L146qpAw",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "NO",
+      "probabilities": {
+        "NO": 0.96,
+        "INSUFFICIENT": 0,
+        "YES": 0.04
+      },
+      "confidence": 0.94
+    },
+    "elapsed_seconds": 0.2046
+  },
+  {
+    "case_id": "dev22",
+    "request_hash": "a5fb5c4b325b648daf32323822c0eae18da152556f92f8c290a29e0c5932df91",
+    "status": "answered",
+    "raw": {
+      "model": "typesafe/jev-1.13-20260917",
+      "answers": {
+        "qualifies_requirement": {
+          "type": "choice",
+          "choice": "NO",
+          "probabilities": {
+            "YES": 0,
+            "NO": 1,
+            "INSUFFICIENT": 0
+          },
+          "confidence": 0.99
+        }
+      },
+      "usage": {
+        "input_tokens": 2309,
+        "output_tokens": 45,
+        "cost": 9.6978e-05
+      },
+      "id": "gen-dec-1790815924-CiEEzKQc6M5JKHG7tGkC",
+      "provider": "TypeSafe"
+    },
+    "answer": {
+      "type": "choice",
+      "choice": "NO",
+      "probabilities": {
+        "YES": 0,
+        "NO": 1,
+        "INSUFFICIENT": 0
+      },
+      "confidence": 0.99
+    },
+    "elapsed_seconds": 0.2056
+  }
+]

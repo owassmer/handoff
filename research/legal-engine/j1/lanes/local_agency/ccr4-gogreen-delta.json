@@ -1,0 +1,453 @@
+{
+  "instruments": [
+    {
+      "id": "CA:CCR4",
+      "jurisdiction": "CA",
+      "name": "California Code of Regulations, Title 4",
+      "level": "regulation",
+      "functions": [
+        "housing_assistance",
+        "preconditions",
+        "fees",
+        "work_standards",
+        "provider_contracts"
+      ],
+      "toc_source_url": "https://oal.ca.gov/publications/ccr/",
+      "adapter": "cornell_ccr",
+      "units_in_scope": [
+        {
+          "unit": "Division 3 - Bureau of Household Goods and Services",
+          "heading": "Division 3 - Bureau of Household Goods and Services (Article 1 to 17)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4/division-3",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-10.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 6 - Outdoor Advertising, Department of Transportation",
+          "heading": "Division 6 - Outdoor Advertising, Department of Transportation (Chapter 1 to 5)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4/division-6",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-10.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 7 - Secretary of State",
+          "heading": "Division 7 - Secretary of State (Chapter 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4/division-7",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-10.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 8 - Division of Measurement Standards, Department of Food and Agriculture",
+          "heading": "Division 8 - Division of Measurement Standards, Department of Food and Agriculture (\u00a7 2600 through 3360)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4/division-8",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-10.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 9 - Division of Measurement Standards, Department of Food and Agriculture",
+          "heading": "Division 9 - Division of Measurement Standards, Department of Food and Agriculture (Chapter 1 to 12)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4/division-9",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-10.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 9.5 - California Debt Limit Allocation Committee",
+          "heading": "Division 9.5 - California Debt Limit Allocation Committee (Chapter 1 to 13)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4/division-9.5",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-10.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 9.6 - California Debt and Investment Advisory Commission",
+          "heading": "Division 9.6 - California Debt and Investment Advisory Commission (Chapter 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4/division-9.6",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-10.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 11 - California Pollution Control Financing Authority",
+          "heading": "Division 11 - California Pollution Control Financing Authority (Article 1 to 13)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4/division-11",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-20.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 12 - California Educational Facilities Authority",
+          "heading": "Division 12 - California Educational Facilities Authority (Chapter 1 to 3)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4/division-12",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-20.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 13 - California Alternative Energy and Advanced Transportation Financing Authority",
+          "heading": "Division 13 - California Alternative Energy and Advanced Transportation Financing Authority (Article 1 to 7)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4/division-13",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-20.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 17 - California Tax Credit Allocation Committee Regulations Implementing the Federal and State Low-Income Housing Tax Credit Laws",
+          "heading": "Division 17 - California Tax Credit Allocation Committee Regulations Implementing the Federal and State Low-Income Housing Tax Credit Laws (Chapter 1 to 3)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4/division-17",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-20.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "GoGreen home-consolidated",
+          "heading": "GoGreen Home consolidated agency regulations",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR4-home-consolidated",
+              "heading": "GoGreen Home consolidated agency regulations",
+              "ref": "https://www.treasurer.ca.gov/sites/default/files/2026-03/current.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "10091.1\u201310091.18"
+          ],
+          "legal_status": "Agency consolidated text; emergency temporal overlay below controls",
+          "reason": "Conditional residential retrofit/reconstruction financing, provider qualification, project certification and financing obligations; not general tenant charge authority."
+        },
+        {
+          "unit": "GoGreen home-initial",
+          "heading": "GoGreen Home initial approval and amendment",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR4-home-initial",
+              "heading": "GoGreen Home initial approval and amendment",
+              "ref": "https://www.treasurer.ca.gov/sites/default/files/2026-03/approved400.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "10091.5",
+            "10091.9"
+          ],
+          "legal_status": "2025-1008-01E; effective 2025-10-20; stated expiry 2026-04-21",
+          "reason": "Conditional residential retrofit/reconstruction financing, provider qualification, project certification and financing obligations; not general tenant charge authority."
+        },
+        {
+          "unit": "GoGreen home-first-readopt",
+          "heading": "GoGreen Home first readoption approval and text",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR4-home-first-readopt",
+              "heading": "GoGreen Home first readoption approval and text",
+              "ref": "https://www.treasurer.ca.gov/sites/default/files/caeatfa/4-19-2026-Emergency-Regulations-Readopted-Approved-Form-400.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "10091.5",
+            "10091.9"
+          ],
+          "legal_status": "2026-0324-02EE; approved 2026-04-03; effective 2026-04-21; expiry 2026-07-21",
+          "reason": "Conditional residential retrofit/reconstruction financing, provider qualification, project certification and financing obligations; not general tenant charge authority."
+        },
+        {
+          "unit": "GoGreen home-second-readopt",
+          "heading": "GoGreen Home second readoption approval and text",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR4-home-second-readopt",
+              "heading": "GoGreen Home second readoption approval and text",
+              "ref": "https://www.treasurer.ca.gov/sites/default/files/caeatfa/Approved-Form-400.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "10091.5",
+            "10091.9"
+          ],
+          "legal_status": "2026-0616-01EE; approved/filed 2026-06-24; effective 2026-07-21; expiry 2026-10-20; certificate due 2026-10-19",
+          "reason": "Conditional residential retrofit/reconstruction financing, provider qualification, project certification and financing obligations; not general tenant charge authority."
+        },
+        {
+          "unit": "GoGreen business-consolidated",
+          "heading": "GoGreen Business consolidated agency regulations",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR4-business-consolidated",
+              "heading": "GoGreen Business consolidated agency regulations",
+              "ref": "https://www.treasurer.ca.gov/sites/default/files/2025-12/current_1.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "10092.1\u201310092.16"
+          ],
+          "legal_status": "Agency labels effective 2025-11-06; emergency and pending certificate overlays must be reconciled",
+          "reason": "Conditional residential retrofit/reconstruction financing, provider qualification, project certification and financing obligations; not general tenant charge authority."
+        },
+        {
+          "unit": "GoGreen business-disaster-initial",
+          "heading": "GoGreen Business disaster reconstruction initial approval",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR4-business-disaster-initial",
+              "heading": "GoGreen Business disaster reconstruction initial approval",
+              "ref": "https://www.treasurer.ca.gov/sites/default/files/2025-12/OALApprovalform400%20(1).pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "10092.1",
+            "10092.7"
+          ],
+          "legal_status": "2025-0917-01E; effective 2025-09-29; stated expiry 2026-03-31",
+          "reason": "Conditional residential retrofit/reconstruction financing, provider qualification, project certification and financing obligations; not general tenant charge authority."
+        },
+        {
+          "unit": "GoGreen business-disaster-first-readopt",
+          "heading": "GoGreen Business disaster reconstruction first readoption",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR4-business-disaster-first-readopt",
+              "heading": "GoGreen Business disaster reconstruction first readoption",
+              "ref": "https://www.treasurer.ca.gov/sites/default/files/caeatfa/OALApprovalform400_0.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "10092.1",
+            "10092.7"
+          ],
+          "legal_status": "2026-0320-02EE; effective 2026-03-31; expiry 2026-06-30",
+          "reason": "Conditional residential retrofit/reconstruction financing, provider qualification, project certification and financing obligations; not general tenant charge authority."
+        },
+        {
+          "unit": "GoGreen business-disaster-second-readopt",
+          "heading": "GoGreen Business disaster reconstruction second readoption",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR4-business-disaster-second-readopt",
+              "heading": "GoGreen Business disaster reconstruction second readoption",
+              "ref": "https://www.treasurer.ca.gov/sites/default/files/caeatfa/2026-0602-01EE%20-%20Approval.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "10092.1",
+            "10092.7"
+          ],
+          "legal_status": "Agency confirms effective 2026-06-30 through 2026-09-29; subsequent certificate disposition unresolved; image-only PDF requires J2 OCR",
+          "reason": "Conditional residential retrofit/reconstruction financing, provider qualification, project certification and financing obligations; not general tenant charge authority."
+        },
+        {
+          "unit": "GoGreen business-multifamily-initial",
+          "heading": "GoGreen Business multifamily amendment approval and text",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR4-business-multifamily-initial",
+              "heading": "GoGreen Business multifamily amendment approval and text",
+              "ref": "https://www.treasurer.ca.gov/sites/default/files/2025-12/OALApprovalform400.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "10092.1",
+            "10092.2",
+            "10092.5",
+            "10092.7",
+            "10092.8",
+            "10092.9"
+          ],
+          "legal_status": "2025-1027-01E; effective 2025-11-06; stated expiry 2026-05-06",
+          "reason": "Conditional residential retrofit/reconstruction financing, provider qualification, project certification and financing obligations; not general tenant charge authority."
+        },
+        {
+          "unit": "GoGreen business-multifamily-second-readopt",
+          "heading": "GoGreen Business multifamily second readoption approval and text",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR4-business-multifamily-second-readopt",
+              "heading": "GoGreen Business multifamily second readoption approval and text",
+              "ref": "https://www.treasurer.ca.gov/sites/default/files/caeatfa/2026072402EE__Approval.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "10092.1",
+            "10092.2",
+            "10092.5",
+            "10092.7",
+            "10092.8",
+            "10092.9"
+          ],
+          "legal_status": "2026-0724-02EE; OAL table filed 2026-07-31; effective 2026-08-03; agency expiry 2026-11-03; 12MB tool limit is J2 retrieval issue",
+          "reason": "Conditional residential retrofit/reconstruction financing, provider qualification, project certification and financing obligations; not general tenant charge authority."
+        },
+        {
+          "unit": "GoGreen business-multifamily-first-readopt",
+          "heading": "GoGreen Business multifamily first readoption approval and text",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CCR4-business-multifamily-first-readopt",
+              "heading": "GoGreen Business multifamily first readoption approval and text",
+              "ref": "https://www.treasurer.ca.gov/sites/default/files/caeatfa/20260424-OALApprovalform400.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "10092.1",
+            "10092.2",
+            "10092.5",
+            "10092.7",
+            "10092.8",
+            "10092.9"
+          ],
+          "legal_status": "2026-0406-02EE; approved/filed April15,2026; effective May5,2026. Exact OAL-linked 11.5MB publisher PDF exceeds current tool limit; J2 retrieval."
+        }
+      ],
+      "units_out": [
+        {
+          "unit": "Division 1 - Department of Alcoholic Beverage Control",
+          "heading": "Division 1 - Department of Alcoholic Beverage Control (Article 1 to 25)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4",
+          "reason": "Division 1 - Department of Alcoholic Beverage Control governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 1.1 - Alcoholic Beverage Control Appeals Board",
+          "heading": "Division 1.1 - Alcoholic Beverage Control Appeals Board (Article 1 to 10)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4",
+          "reason": "Division 1.1 - Alcoholic Beverage Control Appeals Board governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 2 - State A thletic Commission",
+          "heading": "Division 2 - State A thletic Commission (Chapter 1 to 6)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4",
+          "reason": "Division 2 - State A thletic Commission governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 4 - California Horse Racing Board",
+          "heading": "Division 4 - California Horse Racing Board (Article 1 to 28)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4",
+          "reason": "Division 4 - California Horse Racing Board governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 5 - Division of Consumer Services",
+          "heading": "Division 5 - Division of Consumer Services (Travel Promoters) (\u00a7 2100 through 2109)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4",
+          "reason": "Division 5 - Division of Consumer Services governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 10 - California Health Facilities Financing Authority",
+          "heading": "Division 10 - California Health Facilities Financing Authority (Chapter 1 to 8)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4",
+          "reason": "Division 10 - California Health Facilities Financing Authority governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 14 - California Student Loan Authority",
+          "heading": "Division 14 - California Student Loan Authority (\u00a7 10101)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4",
+          "reason": "Division 14 - California Student Loan Authority governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 15 - California School Finance Authority",
+          "heading": "Division 15 - California School Finance Authority (Article 1 to 6)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4",
+          "reason": "Division 15 - California School Finance Authority governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 16 - California Passenger Rail Financing Commission",
+          "heading": "Division 16 - California Passenger Rail Financing Commission (Article 1 to 3)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4",
+          "reason": "Division 16 - California Passenger Rail Financing Commission governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 18 - California Gambling Control Commission",
+          "heading": "Division 18 - California Gambling Control Commission (Chapter 1 to 11)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4",
+          "reason": "Division 18 - California Gambling Control Commission governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 19 - Department of Cannabis Control",
+          "heading": "Division 19 - Department of Cannabis Control (Chapter 1 to 13)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-4",
+          "reason": "Division 19 - Department of Cannabis Control governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        }
+      ],
+      "acquisition": {
+        "text_adapter": "cornell_ccr",
+        "enumeration": "Traverse the selected mirror division/chapter descendants and retain actual linked leaf references.",
+        "source_authority": "mirror",
+        "official_reconciliation": "Official CCR and issuing-agency enacted/amendment sources determine the authoritative version. Mirror text alone cannot complete J2."
+      },
+      "toc_mirror_url": "https://www.law.cornell.edu/regulations/california/title-4",
+      "source_capture": "j1/sources/ccr-title-4.txt",
+      "currentness_note": "LII supplies the browse tree; official CCR and issuing-agency adoption texts determine legal version. LII quarterly update is not treated as current legal authority.",
+      "version_records": [
+        {
+          "action": "GoGreen Home emergency amendment and two readoptions",
+          "sections": [
+            "10091.5",
+            "10091.9"
+          ],
+          "legal_status": "Second readoption operative as of 2026-10-01; regular rulemaking notice alone does not establish permanence",
+          "operative_from": "2026-07-21",
+          "stated_expiry": "2026-10-20",
+          "source_url": "https://www.treasurer.ca.gov/sites/default/files/caeatfa/Approved-Form-400.pdf",
+          "source_conflicts": [
+            "Agency current-link label October 10 conflicts with signed initial approval October 20, 2025.",
+            "Agency first-readoption prose says April 3\u2013July 2; signed approval specifies April 21\u2013July 21, 2026.",
+            "OAL summary lists July 24; signed second-readoption notice specifies July 21, 2026.",
+            "First-readoption attached text says enrollment after October 1, 2025; initial and second-readoption signed packages say November 1, 2025. Preserve separate historical versions; do not infer identical text from agency no-modification summary."
+          ]
+        },
+        {
+          "action": "GoGreen Business two emergency amendment chains and certificate 2026-0826-02C",
+          "sections": [
+            "10092.1",
+            "10092.2",
+            "10092.5",
+            "10092.7",
+            "10092.8",
+            "10092.9"
+          ],
+          "legal_status": "Multifamily second-readoption stated term extends through November 3, 2026. Disaster branch stated term ended September 29; permanent certificate disposition must be recovered before deciding current reconstruction provision.",
+          "source_url": "https://www.treasurer.ca.gov/caeatfa/gogreen/business/regulations",
+          "remaining": "OAL recent-actions table identifies certificate 2026-0826-02 but not disposition/date/final text. Agency page still shows proposed regular rulemaking. Do not infer approval or automatic lapse."
+        }
+      ],
+      "gogreen_currentness_remaining": [
+        "Resolve Business certificate 2026-0826-02C disposition and final operative text/date.",
+        "Preserve and reconcile Home first-readoption enrollment-date discrepancy with official codified history for historical applications."
+      ],
+      "gogreen_source_capture": "j1/lanes/local_agency/sources/gogreen-current-pages.txt"
+    }
+  ]
+}

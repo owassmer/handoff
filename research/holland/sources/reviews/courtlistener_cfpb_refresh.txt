@@ -1,0 +1,30 @@
+SOURCE: https://www.courtlistener.com/api/rest/v4/search/ and https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/
+RETRIEVED: 2026-09-30
+PURPOSE: new deposit/small-claims cases naming Holland (filed 2025-01-01 on); CFPB complaint counts for collectors named in Holland records
+
+=== https://www.courtlistener.com/api/rest/v4/search/?q=%22Holland+Residential%22+AND+%28deposit+OR+%22security+deposit%22%29&type=r&filed_after=2025-01-01&order_by=dateFiled+desc
+status 200 count 2
+- 2025-08-15 | [individual debtor, name removed] | United States Bankruptcy Court, C.D. California | 2:25-bk-17102 |  | https://www.courtlistener.com/docket/71122253/[removed]/
+- 2025-03-17 | [individual debtor, name removed] | United States Bankruptcy Court, D. Colorado | 25-11339 |  | https://www.courtlistener.com/docket/69745149/[removed]/
+=== https://www.courtlistener.com/api/rest/v4/search/?q=%22Holland+Partner+Group%22+AND+%28deposit+OR+%22security+deposit%22%29&type=r&filed_after=2025-01-01&order_by=dateFiled+desc
+status 200 count 2
+- 2025-09-15 | American Trash Management, Inc. | United States Bankruptcy Court, N.D. California | 25-30743 |  | https://www.courtlistener.com/docket/71353814/american-trash-management-inc/
+- 2025-06-24 | Zen JV, LLC | United States Bankruptcy Court, D. Delaware | 25-11195 |  | https://www.courtlistener.com/docket/70619299/zen-jv-llc/
+=== https://www.courtlistener.com/api/rest/v4/search/?q=%22Holland+Residential%22+AND+deposit&type=o&filed_after=2025-01-01&order_by=dateFiled+desc
+status 0 count None
+=== https://www.courtlistener.com/api/rest/v4/search/?q=%22Holland+Residential%22&type=r&filed_after=2025-01-01&order_by=dateFiled+desc
+status 0 count None
+=== https://www.courtlistener.com/api/rest/v4/search/?q=%22Holland+Partner+Group%22&type=r&filed_after=2025-01-01&order_by=dateFiled+desc
+status 0 count None
+=== CFPB company search 'IQ Data International': status 403 total {}
+=== CFPB company search 'Preston Mitchell': status 403 total {}
+=== CFPB company search 'Conservice': status 403 total {}
+=== CFPB company search 'Rent Recovery Solutions': status 403 total {}
+=== CFPB company search 'National Credit Systems': status 403 total {}
+=== CFPB company search 'Transworld Systems': status 403 total {}
+=== CFPB company search 'IQ Data International' (browser UA): status 403 total None top-company []
+=== CFPB company search 'Preston Mitchell' (browser UA): status 403 total None top-company []
+=== CFPB company search 'Conservice' (browser UA): status 403 total None top-company []
+=== CFPB company search 'Rent Recovery Solutions' (browser UA): status 403 total None top-company []
+=== CFPB company search 'National Credit Systems' (browser UA): status 403 total None top-company []
+NOTE: CourtListener type=o and later type=r queries returned no response (rate limit) on this pass; the two type=r hits per query are consumer/business bankruptcy dockets listing Holland as a creditor, not deposit suits. Debtor names are public-docket captions and are not used in the analysis.

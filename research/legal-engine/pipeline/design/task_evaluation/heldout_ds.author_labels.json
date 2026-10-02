@@ -1,0 +1,847 @@
+{
+  "cases": [
+    {
+      "id": "hds001",
+      "expected": "YES",
+      "reason": "Adopts external definitions while expressly excluding two meanings.",
+      "edge_case": "incorporation_and_exception",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds002",
+      "expected": "NO",
+      "reason": "Express exclusion defeats the claimed application.",
+      "edge_case": "incorporation_and_exception",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds003",
+      "expected": "YES",
+      "reason": "Inclusive meaning has actual and anticipated-injury branches.",
+      "edge_case": "necessary_implication",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds004",
+      "expected": "YES",
+      "reason": "Future-injury branch necessarily rejects an already-injured prerequisite.",
+      "edge_case": "necessary_implication",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds005",
+      "expected": "YES",
+      "reason": "Assigns content and permissible form to application.",
+      "edge_case": "express_definition_or_operative_rule",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds006",
+      "expected": "YES",
+      "reason": "Final sentence expressly includes written record of oral application.",
+      "edge_case": "express_definition_or_operative_rule",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds007",
+      "expected": "YES",
+      "reason": "Definition plus illustrative application assigns related-company meaning.",
+      "edge_case": "example_with_governing_definition",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds008",
+      "expected": "NO",
+      "reason": "Example retains control condition; claim discards it.",
+      "edge_case": "example_with_governing_definition",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds009",
+      "expected": "YES",
+      "reason": "Term-heading plus complete predicative text assigns meaning.",
+      "edge_case": "non_means_definition",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds010",
+      "expected": "YES",
+      "reason": "Corporation and other business organization necessarily include nonnatural persons.",
+      "edge_case": "non_means_definition",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds011",
+      "expected": "YES",
+      "reason": "Inclusive definition contains express exclusions.",
+      "edge_case": "exception_inside_definition",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds012",
+      "expected": "NO",
+      "reason": "Jewelry other than wedding rings is excluded.",
+      "edge_case": "exception_inside_definition",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds013",
+      "expected": "YES",
+      "reason": "Express state-officer meaning.",
+      "edge_case": "actor_scope",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds014",
+      "expected": "YES",
+      "reason": "Exact express definition.",
+      "edge_case": "actor_scope",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds015",
+      "expected": "YES",
+      "reason": "Separate line-holder and reserve branches assign different measures.",
+      "edge_case": "actor_branch_change",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds016",
+      "expected": "NO",
+      "reason": "Reserve branch uses agreed pay, not schedule.",
+      "edge_case": "actor_branch_change",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds017",
+      "expected": "YES",
+      "reason": "Meaning includes contractual seller-side agents and specified exclusion.",
+      "edge_case": "express_definition_or_operative_rule",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds018",
+      "expected": "YES",
+      "reason": "Exclusion expressly supports the qualified proposition.",
+      "edge_case": "express_definition_or_operative_rule",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds019",
+      "expected": "YES",
+      "reason": "Deeming rule assigns temporal aggregation meaning.",
+      "edge_case": "deemed_meaning_and_time",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds020",
+      "expected": "NO",
+      "reason": "Evasion branch expressly includes one or more days.",
+      "edge_case": "deemed_meaning_and_time",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds021",
+      "expected": "NO",
+      "reason": "Overview and scope description do not assign a term meaning.",
+      "edge_case": "topic_overlap_not_support",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds022",
+      "expected": "NO",
+      "reason": "Description of covered subject does not establish blanket eligibility.",
+      "edge_case": "topic_overlap_not_support",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds023",
+      "expected": "NO",
+      "reason": "Operative prohibition merely uses terms.",
+      "edge_case": "operative_duty",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds024",
+      "expected": "YES",
+      "reason": "Expressly enumerated negotiation prohibition includes religion.",
+      "edge_case": "operative_duty",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds025",
+      "expected": "NO",
+      "reason": "Exception and later history duty do not assign meaning.",
+      "edge_case": "contradictory_evidence",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds026",
+      "expected": "NO",
+      "reason": "Bankruptcy is explicitly exempted.",
+      "edge_case": "contradictory_evidence",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds027",
+      "expected": "NO",
+      "reason": "List of duty subjects and exceptions is not a definition.",
+      "edge_case": "conditional_rule",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds028",
+      "expected": "YES",
+      "reason": "General rule plus exceptions explicitly establishes this limited proposition.",
+      "edge_case": "conditional_rule",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds029",
+      "expected": "NO",
+      "reason": "Prescribed notice states consequences, not assigned meaning.",
+      "edge_case": "quoted_operative_text",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds030",
+      "expected": "NO",
+      "reason": "Notice expressly caps recovery.",
+      "edge_case": "quoted_operative_text",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds031",
+      "expected": "YES",
+      "reason": "Lead-in operatively adopts commerce definition from FTCAct.",
+      "edge_case": "incorporated_meaning_in_duty",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds032",
+      "expected": "YES",
+      "reason": "Clause3(iii) expressly supplies earned-wages exception.",
+      "edge_case": "incorporated_meaning_in_duty",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds033",
+      "expected": "NO",
+      "reason": "Prohibitions and exceptions do not define a term.",
+      "edge_case": "wrong_actor_scope",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds034",
+      "expected": "NO",
+      "reason": "Paragraph3 expressly excludes licensed-attorney services.",
+      "edge_case": "wrong_actor_scope",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds035",
+      "expected": "NO",
+      "reason": "Notice obligations and conditions do not assign meaning.",
+      "edge_case": "counterintuitive_condition",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds036",
+      "expected": "YES",
+      "reason": "Paragraph2 expressly requires posting despite no eligible employees.",
+      "edge_case": "counterintuitive_condition",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds037",
+      "expected": "NO",
+      "reason": "Temporal lead-in and disclaimed duty do not define terms.",
+      "edge_case": "wrong_modality",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds038",
+      "expected": "NO",
+      "reason": "Express disclaimer defeats affirmative evaluation duty.",
+      "edge_case": "wrong_modality",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds039",
+      "expected": "NO",
+      "reason": "Reporting requirement and exception merely use terms.",
+      "edge_case": "necessary_numeric_implication",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds040",
+      "expected": "NO",
+      "reason": "Strict more-than threshold does not include equality.",
+      "edge_case": "necessary_numeric_implication",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds041",
+      "expected": "YES",
+      "reason": "Express meaning has a current-period exclusion.",
+      "edge_case": "temporal_scope_in_definition",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds042",
+      "expected": "YES",
+      "reason": "Claim preserves explicit exclusion.",
+      "edge_case": "temporal_scope_in_definition",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds043",
+      "expected": "YES",
+      "reason": "Embedded definition within installation duty assigns technical meaning.",
+      "edge_case": "embedded_definition_wrong_exclusivity",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds044",
+      "expected": "NO",
+      "reason": "Definition also names FactoryMutual and other nationally recognized testing laboratories.",
+      "edge_case": "embedded_definition_wrong_exclusivity",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds045",
+      "expected": "NO",
+      "reason": "Deposit custody alternatives impose duties without defining terms.",
+      "edge_case": "contradictory_evidence",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds046",
+      "expected": "NO",
+      "reason": "Both account branches expressly prohibit commingling.",
+      "edge_case": "contradictory_evidence",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds047",
+      "expected": "NO",
+      "reason": "Termination/remedy conditions use terms without assigning meaning.",
+      "edge_case": "necessary_conditions_preserved",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds048",
+      "expected": "YES",
+      "reason": "Claim retains introductory conditions and subdivision(a) consequence.",
+      "edge_case": "necessary_conditions_preserved",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds049",
+      "expected": "YES",
+      "reason": "Express actor definition distinguishes occupancy from tenancy obligations.",
+      "edge_case": "actor_distinction",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds050",
+      "expected": "YES",
+      "reason": "Both negative conditions expressly stated.",
+      "edge_case": "actor_distinction",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds051",
+      "expected": "NO",
+      "reason": "Repair and remediation duties do not define a term.",
+      "edge_case": "wrong_modality",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds052",
+      "expected": "NO",
+      "reason": "Express no-subsequent-disclosure clause defeats must.",
+      "edge_case": "wrong_modality",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds053",
+      "expected": "NO",
+      "reason": "Cap, uses, and disposition rules assign no meaning.",
+      "edge_case": "quantity_scope",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds054",
+      "expected": "NO",
+      "reason": "Two-month cap contradicts three-month demand.",
+      "edge_case": "quantity_scope",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds055",
+      "expected": "NO",
+      "reason": "Notice and cure rules define no term.",
+      "edge_case": "conditional_rule",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds056",
+      "expected": "YES",
+      "reason": "B expressly states the qualified proposition.",
+      "edge_case": "conditional_rule",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds057",
+      "expected": "YES",
+      "reason": "Express definition of a legal remedy practice.",
+      "edge_case": "definition_application",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds058",
+      "expected": "YES",
+      "reason": "The stated actor, property and purpose match definition.",
+      "edge_case": "definition_application",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds059",
+      "expected": "NO",
+      "reason": "Habitability covenants and nonwaiver clause are operative duties, not meanings.",
+      "edge_case": "nonwaiver",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds060",
+      "expected": "NO",
+      "reason": "Express nonwaiver covers section covenants.",
+      "edge_case": "nonwaiver",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds061",
+      "expected": "NO",
+      "reason": "Deposit-return duties and compliance alternative do not assign meaning.",
+      "edge_case": "alternative_satisfaction",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds062",
+      "expected": "NO",
+      "reason": "Paragraph(b) expressly treats properly addressed timely mailing as sufficient.",
+      "edge_case": "alternative_satisfaction",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds063",
+      "expected": "YES",
+      "reason": "Adopts general statutory meaning and expressly expands it.",
+      "edge_case": "incorporation_with_expansion",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds064",
+      "expected": "NO",
+      "reason": "Agent is expressly included.",
+      "edge_case": "incorporation_with_expansion",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds065",
+      "expected": "YES",
+      "reason": "Express compact definition.",
+      "edge_case": "express_definition_or_operative_rule",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds066",
+      "expected": "YES",
+      "reason": "Exact meaning is stated.",
+      "edge_case": "express_definition_or_operative_rule",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds067",
+      "expected": "NO",
+      "reason": "Maintenance list imposes duties rather than definitions.",
+      "edge_case": "property_operation_duty",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds068",
+      "expected": "YES",
+      "reason": "Paragraph3 expressly imposes this duty.",
+      "edge_case": "property_operation_duty",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds069",
+      "expected": "NO",
+      "reason": "Demand cap and voluntary-payment qualification define no term.",
+      "edge_case": "condition_and_actor",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds070",
+      "expected": "YES",
+      "reason": "Expressly preserves voluntary advance payment.",
+      "edge_case": "condition_and_actor",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds071",
+      "expected": "NO",
+      "reason": "Tenant obligations do not assign meanings.",
+      "edge_case": "wrong_actor",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds072",
+      "expected": "NO",
+      "reason": "Claim substitutes landlord for tenant.",
+      "edge_case": "wrong_actor",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds073",
+      "expected": "YES",
+      "reason": "Express definition requires exhaustion or expiry.",
+      "edge_case": "missing_condition",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds074",
+      "expected": "NO",
+      "reason": "Claim removes both alternative finality conditions.",
+      "edge_case": "missing_condition",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds075",
+      "expected": "YES",
+      "reason": "Express definition includes unwritten and implied agreements.",
+      "edge_case": "inclusive_definition",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds076",
+      "expected": "NO",
+      "reason": "Claim contradicts both included alternatives.",
+      "edge_case": "inclusive_definition",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds077",
+      "expected": "YES",
+      "reason": "Full definition conditions membership and fee powers.",
+      "edge_case": "necessary_implication",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds078",
+      "expected": "YES",
+      "reason": "The fee-lien authority is an express conjunctive element.",
+      "edge_case": "necessary_implication",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds079",
+      "expected": "YES",
+      "reason": "Meaning expressly includes listed property before title transfer.",
+      "edge_case": "definition_temporal_scope",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds080",
+      "expected": "YES",
+      "reason": "Claim preserves inclusive dedication and no-title condition.",
+      "edge_case": "definition_temporal_scope",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds081",
+      "expected": "YES",
+      "reason": "Court adopts ordinary meanings and synthesizes phrase meaning.",
+      "edge_case": "adopted_judicial_meaning",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds082",
+      "expected": "YES",
+      "reason": "The Court expressly states the phrase meaning, not merely a party proposal.",
+      "edge_case": "adopted_judicial_meaning",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds083",
+      "expected": "YES",
+      "reason": "Court adopts dictionary and precedent meanings of accrual.",
+      "edge_case": "necessary_implication",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds084",
+      "expected": "YES",
+      "reason": "Final sentence expressly makes required injury a prerequisite.",
+      "edge_case": "necessary_implication",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds085",
+      "expected": "YES",
+      "reason": "Court adopts a general action-and-implementation meaning, with context qualification.",
+      "edge_case": "general_meaning_with_context",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds086",
+      "expected": "NO",
+      "reason": "Court rejects that boundless reading and requires misuse at the crux of criminality.",
+      "edge_case": "general_meaning_with_context",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds087",
+      "expected": "YES",
+      "reason": "Dissent itself assigns verb meanings; definition presence does not require majority precedential force.",
+      "edge_case": "dissent_definition_and_authority_attribution",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds088",
+      "expected": "NO",
+      "reason": "Dissent heading and explicit disagreement defeat attribution to majority.",
+      "edge_case": "dissent_definition_and_authority_attribution",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds089",
+      "expected": "YES",
+      "reason": "Parenthetical i.e. assigns arbitrability meaning.",
+      "edge_case": "embedded_non_means_definition",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds090",
+      "expected": "YES",
+      "reason": "Expressly describes an agreement to delegate this threshold question.",
+      "edge_case": "embedded_non_means_definition",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds091",
+      "expected": "NO",
+      "reason": "Reports litigant’s proposed reading without adopting it.",
+      "edge_case": "reported_proposal_not_operative_meaning",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds092",
+      "expected": "YES",
+      "reason": "Claim is expressly about the proposal, not its adoption.",
+      "edge_case": "reported_proposal_not_operative_meaning",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds093",
+      "expected": "NO",
+      "reason": "Holding assigns adjudicative duties and limits, not term meaning.",
+      "edge_case": "contradictory_evidence",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds094",
+      "expected": "NO",
+      "reason": "Express final sentence prohibits ambiguity alone as ground for deference.",
+      "edge_case": "contradictory_evidence",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds095",
+      "expected": "NO",
+      "reason": "Remand instructions and procedural presumption do not assign meaning.",
+      "edge_case": "unresolved_by_source_not_resolved_holding",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds096",
+      "expected": "NO",
+      "reason": "Availability and factual entitlement are expressly left for remand.",
+      "edge_case": "unresolved_by_source_not_resolved_holding",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds097",
+      "expected": "NO",
+      "reason": "Classifies this rule and states its consequence without defining the category.",
+      "edge_case": "operative_classification_not_definition",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds098",
+      "expected": "YES",
+      "reason": "Express consequence is exactly the qualified claim.",
+      "edge_case": "operative_classification_not_definition",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds099",
+      "expected": "NO",
+      "reason": "Limitation, assumed premise and damages holding do not assign meaning.",
+      "edge_case": "assumption_not_holding",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds100",
+      "expected": "NO",
+      "reason": "Source explicitly assumes without deciding the discovery-based premise.",
+      "edge_case": "assumption_not_holding",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds101",
+      "expected": "YES",
+      "reason": "Agency adopts quoted statutory commercial-message meaning.",
+      "edge_case": "administrative_adoption",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds102",
+      "expected": "YES",
+      "reason": "Express sentence says no business-to-business exception.",
+      "edge_case": "administrative_adoption",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds103",
+      "expected": "YES",
+      "reason": "Embedded final-rent treatment assigns advance-rent classification by substance.",
+      "edge_case": "embedded_definition_and_condition",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds104",
+      "expected": "NO",
+      "reason": "Refundable intended-return deposits are expressly excluded on receipt.",
+      "edge_case": "embedded_definition_and_condition",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds105",
+      "expected": "NO",
+      "reason": "Examples illustrate regulated actors without assigning a term meaning.",
+      "edge_case": "illustration_without_definition",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds106",
+      "expected": "YES",
+      "reason": "Claim faithfully states the illustrative coverage without discarding activity conditions.",
+      "edge_case": "illustration_without_definition",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds107",
+      "expected": "NO",
+      "reason": "Requirements use residence without yet assigning its meaning.",
+      "edge_case": "temporal_condition",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds108",
+      "expected": "YES",
+      "reason": "Express up-to-naturalization clause supports duration.",
+      "edge_case": "temporal_condition",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds109",
+      "expected": "YES",
+      "reason": "Identifies blocked persons and expressly glosses blocked as frozen.",
+      "edge_case": "embedded_meaning_wrong_legal_consequence",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds110",
+      "expected": "NO",
+      "reason": "Explicitly retains title with the blocked person and distinguishes seizure.",
+      "edge_case": "embedded_meaning_wrong_legal_consequence",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds111",
+      "expected": "YES",
+      "reason": "Assigns net-worth computation and spousal-equivalent meaning, with residence exclusions.",
+      "edge_case": "computation_definition",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds112",
+      "expected": "YES",
+      "reason": "Both nonrequirements are expressly stated.",
+      "edge_case": "computation_definition",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds113",
+      "expected": "NO",
+      "reason": "Concrete duty despite mixed reasons does not define a term.",
+      "edge_case": "missing_condition_and_wrong_modality",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds114",
+      "expected": "NO",
+      "reason": "Explicit even-small-part requirement contradicts permission.",
+      "edge_case": "missing_condition_and_wrong_modality",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds115",
+      "expected": "NO",
+      "reason": "Coverage statement and exclusions use employee categories without assigning meanings to them.",
+      "edge_case": "scope_exclusions",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds116",
+      "expected": "NO",
+      "reason": "Explicit independent-contractor and other exclusions refute universal coverage.",
+      "edge_case": "scope_exclusions",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds117",
+      "expected": "NO",
+      "reason": "Describes a notice obligation, not a definition.",
+      "edge_case": "historical_vs_present_assertion",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds118",
+      "expected": "NO",
+      "reason": "The dated, expressly nonbinding staff letter supplies no intervening-law evidence establishing its 2026 governing status.",
+      "edge_case": "historical_vs_present_assertion",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    },
+    {
+      "id": "hds119",
+      "expected": "YES",
+      "reason": "Agency expressly adopts statutory investigative-report meaning and its subject-matter condition.",
+      "edge_case": "adopted_external_definition",
+      "downstream_failure": "False extraction/omitted meaning"
+    },
+    {
+      "id": "hds120",
+      "expected": "NO",
+      "reason": "Final sentence requires one of specified subjects; claim removes this limitation.",
+      "edge_case": "adopted_external_definition",
+      "downstream_failure": "Unsupported legal proposition adopted or supported proposition discarded"
+    }
+  ],
+  "cases_sha256": "396222145bfd24fded4fc78dc24678bc52b3cbf8319e74ed8f8b4356c7189986",
+  "contracts_sha256": "6bdcb77fd2edcfe1578b9d475e3dfac3e1c1d855f744e6dce7952a2fc3dfafbc",
+  "authorship": "Source-author expectations before any held-out model execution; not independent review."
+}

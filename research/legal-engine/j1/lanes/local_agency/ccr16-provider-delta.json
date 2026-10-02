@@ -1,0 +1,610 @@
+{
+  "as_of": "2026-10-01",
+  "integration_note": "Merge only new version records 2025-1006-02N and 2025-1020-01N and the two added units into latest CA:CCR16; do not overwrite later canonical changes.",
+  "instruments": [
+    {
+      "id": "CA:CCR16",
+      "jurisdiction": "CA",
+      "name": "California Code of Regulations, Title 16",
+      "level": "regulation",
+      "functions": [
+        "broker_licensing",
+        "preconditions",
+        "courts_procedure",
+        "estates_incapacity",
+        "work_standards",
+        "provider_contracts"
+      ],
+      "toc_source_url": "https://oal.ca.gov/publications/ccr/",
+      "adapter": "cornell_ccr",
+      "units_in_scope": [
+        {
+          "unit": "Division 2 - California Architects Board",
+          "heading": "Division 2 - California Architects Board (Article 1 to 10)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16/division-2",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-60.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 5 - Board for Professional Engineers and Land Surveyors",
+          "heading": "Division 5 - Board for Professional Engineers and Land Surveyors (Article 1 to 4)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16/division-5",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-60.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 7 - Bureau of Security and Investigative Services",
+          "heading": "Division 7 - Bureau of Security and Investigative Services (Article 1 to 9)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16/division-7",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-60.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 8 - Contractors' State License Board",
+          "heading": "Division 8 - Contractors' State License Board (Article 1 to 9)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16/division-8",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-60.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 19 - Structural Pest Control Board",
+          "heading": "Division 19 - Structural Pest Control Board (Article 1 to 6)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16/division-19",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-60.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 22 - State Board of Guide Dogs for the Blind",
+          "heading": "Division 22 - State Board of Guide Dogs for the Blind (Article 1 to 5)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16/division-22",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-60.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 24 - Court Reporters Board of California",
+          "heading": "Division 24 - Court Reporters Board of California (Article 1 to 9)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16/division-24",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-60.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 26 - Landscape Architects Technical Committee",
+          "heading": "Division 26 - Landscape Architects Technical Committee (Article 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16/division-26",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-70.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 27 - Bureau of Household Goods and Services",
+          "heading": "Division 27 - Bureau of Household Goods and Services (Chapter 1 to 2)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16/division-27",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-70.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 29 - Board for Geologists and Geophysicists",
+          "heading": "Division 29 - Board for Geologists and Geophysicists (Article 1 to 5)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16/division-29",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-70.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 35 - California Auctioneer Commission",
+          "heading": "Division 35 - California Auctioneer Commission (Article 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16/division-35",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-70.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 36 - Dispute Resolution Advisory Council",
+          "heading": "Division 36 - Dispute Resolution Advisory Council (Article 1 to 5)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16/division-36",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-70.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 38 - Department of Consumer Affairs",
+          "heading": "Division 38 - Department of Consumer Affairs (Chapter 2 to 6)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16/division-38",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-70.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 41 - Professional Fiduciaries Bureau",
+          "heading": "Division 41 - Professional Fiduciaries Bureau (Article 1 to 11)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16/division-41",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-70.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Amendment document 2025-1121-04SR",
+          "heading": "Architect application extension",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2025-1121-04SR",
+              "heading": "Architect application extension",
+              "ref": "https://www.cab.ca.gov/docs/regulation_changes/2024-25/ccr_109_ooa.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "109; complete changed sections and incorporated dependencies"
+          ],
+          "version_record_index": 0,
+          "document_role": "Final amendment or approval package; preserve currentness evidence separately from operative text when package contains only approval notice",
+          "legal_status": "See linked version record; do not infer operation solely from publication",
+          "reason": "Executable acquisition counterpart to selected version record; whole document is not a single legal section."
+        },
+        {
+          "unit": "Amendment document 2026-0212-07S",
+          "heading": "Retired architect reinstatement",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2026-0212-07S",
+              "heading": "Retired architect reinstatement",
+              "ref": "https://www.cab.ca.gov/docs/regulation_changes/2025-26/ccr_1091_ooa.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "109.1; complete changed sections and incorporated dependencies"
+          ],
+          "version_record_index": 1,
+          "document_role": "Final amendment or approval package; preserve currentness evidence separately from operative text when package contains only approval notice",
+          "legal_status": "See linked version record; do not infer operation solely from publication",
+          "reason": "Executable acquisition counterpart to selected version record; whole document is not a single legal section."
+        },
+        {
+          "unit": "Amendment document CA:CCR16-amendment-3",
+          "heading": "Architect delegation of certain functions",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "CA:CCR16-amendment-3",
+              "heading": "Architect delegation of certain functions",
+              "ref": "https://www.cab.ca.gov/docs/regulation_changes/2025-26/ccr_103_ooa.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "103; complete changed sections and incorporated dependencies"
+          ],
+          "version_record_index": 2,
+          "document_role": "Final amendment or approval package; preserve currentness evidence separately from operative text when package contains only approval notice",
+          "legal_status": "FiledJune24 2026. Missing from quarterly table; agency approved index and approval PDF establish action.",
+          "reason": "Executable acquisition counterpart to selected version record; whole document is not a single legal section."
+        },
+        {
+          "unit": "Amendment document 2026-0601-06S",
+          "heading": "Architect application review",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2026-0601-06S",
+              "heading": "Architect application review",
+              "ref": "https://www.cab.ca.gov/docs/regulation_changes/2025-26/ccr_111_ooa.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "111; complete changed sections and incorporated dependencies"
+          ],
+          "version_record_index": 3,
+          "document_role": "Final amendment or approval package; preserve currentness evidence separately from operative text when package contains only approval notice",
+          "legal_status": "See linked version record; do not infer operation solely from publication",
+          "reason": "Executable acquisition counterpart to selected version record; whole document is not a single legal section."
+        },
+        {
+          "unit": "Amendment document 2026-0601-04S",
+          "heading": "Structural pest examinations, including corrected text",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2026-0601-04S",
+              "heading": "Structural pest examinations, including corrected text",
+              "ref": "https://www.pestboard.ca.gov/pestlaw/examinations_corrected_approval.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "1940 1940.1 1941 1942; complete changed sections and incorporated dependencies"
+          ],
+          "version_record_index": 4,
+          "document_role": "Final amendment or approval package; preserve currentness evidence separately from operative text when package contains only approval notice",
+          "legal_status": "FiledJuly13 2026, correctedJuly23 2026; OAL quarterly table wrongly prints July13 2025. Corrected1942 text must accompany original full package, not replace other sections.",
+          "reason": "Executable acquisition counterpart to selected version record; whole document is not a single legal section."
+        },
+        {
+          "unit": "Amendment document 2026-0217-01S",
+          "heading": "Engineers and geologists fees",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2026-0217-01S",
+              "heading": "Engineers and geologists fees",
+              "ref": "https://www.bpelsg.ca.gov/about_us/407_notice_of_approval.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "407 3005; complete changed sections and incorporated dependencies"
+          ],
+          "version_record_index": 5,
+          "document_role": "Final amendment or approval package; preserve currentness evidence separately from operative text when package contains only approval notice",
+          "legal_status": "See linked version record; do not infer operation solely from publication",
+          "reason": "Executable acquisition counterpart to selected version record; whole document is not a single legal section."
+        },
+        {
+          "unit": "Amendment document 2025-1006-02N",
+          "heading": "Professional fiduciary application cross-reference correction",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2025-1006-02N",
+              "heading": "Professional fiduciary application cross-reference correction",
+              "ref": "https://www.fiduciary.ca.gov/laws_regs/application_requirements_ooala.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "4422; approval and filing evidence"
+          ],
+          "reason": "Fiduciary authority and application prerequisites condition estate/incapacity property operations."
+        },
+        {
+          "unit": "Official codified CSLB 827 and 828 December 2025 version",
+          "heading": "Contractor and home improvement salesperson application processing correction",
+          "section_list": [
+            {
+              "number": "827",
+              "heading": "Review of Application for Original License, Additional Classification, or Replacement of Qualifying Person",
+              "ref": "https://govt.westlaw.com/calregs/Document/ID57D8CF34C8111EC89E5000D3A7C4BC3?viewType=FullText",
+              "source_unit_kind": "section"
+            },
+            {
+              "number": "828",
+              "heading": "Review of Application for Home Improvement Salesperson Registration",
+              "ref": "https://govt.westlaw.com/calregs/Document/ID58507034C8111EC89E5000D3A7C4BC3?viewType=FullText",
+              "source_unit_kind": "section"
+            }
+          ],
+          "reason": "Exact official codified versions close the two-section action without requiring a separate amendment PDF.",
+          "acquisition_note": "Official indexed text/history verified. Direct publisher transport can fail; such failure remains J2 acquisition, not unidentified version."
+        }
+      ],
+      "units_out": [
+        {
+          "unit": "Division 1 - State Board of Accountancy",
+          "heading": "Division 1 - State Board of Accountancy (Article 1 to 13)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 1 - State Board of Accountancy governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 3 - State Board of Barber Examiners [Repealed]",
+          "heading": "Division 3 - State Board of Barber Examiners [Repealed] (Article 1 to 9)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 3 - State Board of Barber Examiners [Repealed] governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 4 - State Board of Chiropractic Examiners",
+          "heading": "Division 4 - State Board of Chiropractic Examiners (Article 1 to 9)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 4 - State Board of Chiropractic Examiners governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 6 - State Board of Fabric Care [Repealed]",
+          "heading": "Division 6 - State Board of Fabric Care [Repealed] (Article 1 to 7)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 6 - State Board of Fabric Care [Repealed] governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 9 - Board of Barbering and Cosmetology",
+          "heading": "Division 9 - Board of Barbering and Cosmetology (Article 1 to 13)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 9 - Board of Barbering and Cosmetology governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 10 - Dental Board of California",
+          "heading": "Division 10 - Dental Board of California (Chapter 1 to 3)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 10 - Dental Board of California governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 11 - Dental Hygiene Board of California",
+          "heading": "Division 11 - Dental Hygiene Board of California (Article 1 to 13)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 11 - Dental Hygiene Board of California governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 12 - Cemetery and Funeral Bureau",
+          "heading": "Division 12 - Cemetery and Funeral Bureau (Article 1 to 9)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 12 - Cemetery and Funeral Bureau governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 13 - Medical Board of California",
+          "heading": "Division 13 - Medical Board of California (Chapter 1 to 4.3)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 13 - Medical Board of California governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 13.1 - Board of Psychology",
+          "heading": "Division 13.1 - Board of Psychology (Article 1 to 10)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 13.1 - Board of Psychology governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 13.2 - Physical Therapy Board of California",
+          "heading": "Division 13.2 - Physical Therapy Board of California (Article 1 to 14)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 13.2 - Physical Therapy Board of California governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 13.3 - Speech-Language Pathology and Audiology and Hearing Aid Dispensers Board of the Department of Consumer Affairs",
+          "heading": "Division 13.3 - Speech-Language Pathology and Audiology and Hearing Aid Dispensers Board of the Department of Consumer Affairs (Article 1 to 7)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 13.3 - Speech-Language Pathology and Audiology and Hearing Aid Dispensers Board of the Department of Consumer Affairs governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 13.4 - Speech-Language Pathology and Audiology and Hearing Aid Dispensers Board of the Department of Consumer Affairs",
+          "heading": "Division 13.4 - Speech-Language Pathology and Audiology and Hearing Aid Dispensers Board of the Department of Consumer Affairs (Article 1 to 13)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 13.4 - Speech-Language Pathology and Audiology and Hearing Aid Dispensers Board of the Department of Consumer Affairs governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 13.5 - Registered Dispensing Opticians of the California State Board of Optometry",
+          "heading": "Division 13.5 - Registered Dispensing Opticians of the California State Board of Optometry (Article 1 to 8)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 13.5 - Registered Dispensing Opticians of the California State Board of Optometry governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 13.6 - Respiratory Care Board of California",
+          "heading": "Division 13.6 - Respiratory Care Board of California (Article 1 to 9)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 13.6 - Respiratory Care Board of California governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 13.7 - Acupuncture",
+          "heading": "Division 13.7 - Acupuncture (Article 1 to 8)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 13.7 - Acupuncture governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 13.8 - Physician Assistant Board",
+          "heading": "Division 13.8 - Physician Assistant Board (Article 1 to 9)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 13.8 - Physician Assistant Board governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 13.9 - Podiatric Medical Board of California",
+          "heading": "Division 13.9 - Podiatric Medical Board of California (Article 1 to 13)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 13.9 - Podiatric Medical Board of California governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 14 - Board of Registered Nursing",
+          "heading": "Division 14 - Board of Registered Nursing (Article 1 to 10)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 14 - Board of Registered Nursing governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 15 - State Board of Optometry",
+          "heading": "Division 15 - State Board of Optometry (Article 1 to 13)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 15 - State Board of Optometry governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 16 - Osteopathic Medical Board of California",
+          "heading": "Division 16 - Osteopathic Medical Board of California (Article 1 to 18)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 16 - Osteopathic Medical Board of California governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 17 - California State Board of Pharmacy",
+          "heading": "Division 17 - California State Board of Pharmacy (Article 1 to 11)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 17 - California State Board of Pharmacy governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 18 - Board of Behavioral Sciences",
+          "heading": "Division 18 - Board of Behavioral Sciences (Article 1 to 10)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 18 - Board of Behavioral Sciences governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 20 - Veterinary Medical Board",
+          "heading": "Division 20 - Veterinary Medical Board (Article 1 to 11)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 20 - Veterinary Medical Board governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 21 - Yacht and Ship Brokers Commission [Repealed]",
+          "heading": "Division 21 - Yacht and Ship Brokers Commission [Repealed] (\u00a7 2100 through 2173)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 21 - Yacht and Ship Brokers Commission [Repealed] governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 23 - Cemetery and Funeral Bureau",
+          "heading": "Division 23 - Cemetery and Funeral Bureau (Article 1 to 9)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 23 - Cemetery and Funeral Bureau governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 25 - Board of Vocational Nurse and Psychiatric Technician Examiners of the State of California",
+          "heading": "Division 25 - Board of Vocational Nurse and Psychiatric Technician Examiners of the State of California (Chapter 1 to 2)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 25 - Board of Vocational Nurse and Psychiatric Technician Examiners of the State of California governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 28 - Bureau of Personnel Services [Repealed]",
+          "heading": "Division 28 - Bureau of Personnel Services [Repealed] (Chapter 1 to 2)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 28 - Bureau of Personnel Services [Repealed] governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 31 - State Board of Examiners of Nursing Home Administrators",
+          "heading": "Division 31 - State Board of Examiners of Nursing Home Administrators (Article 1 to 9)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 31 - State Board of Examiners of Nursing Home Administrators governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 32 - Tax Preparer Program",
+          "heading": "Division 32 - Tax Preparer Program (Article 1 to 6)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 32 - Tax Preparer Program governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 33 - Bureau of Automotive Repair",
+          "heading": "Division 33 - Bureau of Automotive Repair (Chapter 1)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 33 - Bureau of Automotive Repair governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 33.1 - Arbitration Certification Program",
+          "heading": "Division 33.1 - Arbitration Certification Program (Article 1 to 4)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 33.1 - Arbitration Certification Program governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 34 - Polygraph Examiners Board [Repealed]",
+          "heading": "Division 34 - Polygraph Examiners Board [Repealed] (Article 1 to 8)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 34 - Polygraph Examiners Board [Repealed] governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 39 - Board of Occupational Therapy",
+          "heading": "Division 39 - Board of Occupational Therapy (Article 1 to 9)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 39 - Board of Occupational Therapy governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 40 - Naturopathic Medicine Committee",
+          "heading": "Division 40 - Naturopathic Medicine Committee (Article 1 to 11)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 40 - Naturopathic Medicine Committee governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 42 - Bureau of Cannabis Control [Renumbered]",
+          "heading": "Division 42 - Bureau of Cannabis Control [Renumbered] (\u00a7 5000 through 5905)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 42 - Bureau of Cannabis Control [Renumbered] governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 43 - Cannabis Control Appeals Panel",
+          "heading": "Division 43 - Cannabis Control Appeals Panel (Article 1 to 13)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-16",
+          "reason": "Division 43 - Cannabis Control Appeals Panel governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        }
+      ],
+      "acquisition": {
+        "text_adapter": "cornell_ccr",
+        "enumeration": "Traverse the selected mirror division/chapter descendants and retain actual linked leaf references.",
+        "source_authority": "mirror",
+        "official_reconciliation": "Official CCR and issuing-agency enacted/amendment sources determine the authoritative version. Mirror text alone cannot complete J2."
+      },
+      "toc_mirror_url": "https://www.law.cornell.edu/regulations/california/title-16",
+      "source_capture": "j1/sources/ccr-title-16.txt",
+      "currentness_note": "LII supplies the browse tree; official CCR and issuing-agency adoption texts determine legal version. LII quarterly update is not treated as current legal authority.",
+      "version_records": [
+        {
+          "oal_file": "2025-1121-04SR",
+          "name": "Architect application extension",
+          "selected_unit": "109; complete changed sections and incorporated dependencies",
+          "effective_from": "2026-04-01",
+          "source_url": "https://www.cab.ca.gov/docs/regulation_changes/2024-25/ccr_109_ooa.pdf",
+          "proposal_source": "regulatory/proposal.json"
+        },
+        {
+          "oal_file": "2026-0212-07S",
+          "name": "Retired architect reinstatement",
+          "selected_unit": "109.1; complete changed sections and incorporated dependencies",
+          "effective_from": "2026-07-01",
+          "source_url": "https://www.cab.ca.gov/docs/regulation_changes/2025-26/ccr_1091_ooa.pdf",
+          "proposal_source": "regulatory/proposal.json"
+        },
+        {
+          "oal_file": null,
+          "name": "Architect delegation of certain functions",
+          "selected_unit": "103; complete changed sections and incorporated dependencies",
+          "effective_from": "2026-10-01",
+          "source_url": "https://www.cab.ca.gov/docs/regulation_changes/2025-26/ccr_103_ooa.pdf",
+          "temporal_note": "FiledJune24 2026. Missing from quarterly table; agency approved index and approval PDF establish action.",
+          "proposal_source": "regulatory/proposal.json"
+        },
+        {
+          "oal_file": "2026-0601-06S",
+          "name": "Architect application review",
+          "selected_unit": "111; complete changed sections and incorporated dependencies",
+          "effective_from": "2026-10-01",
+          "source_url": "https://www.cab.ca.gov/docs/regulation_changes/2025-26/ccr_111_ooa.pdf",
+          "proposal_source": "regulatory/proposal.json"
+        },
+        {
+          "oal_file": "2026-0601-04S",
+          "name": "Structural pest examinations, including corrected text",
+          "selected_unit": "1940 1940.1 1941 1942; complete changed sections and incorporated dependencies",
+          "effective_from": "2026-10-01",
+          "source_url": "https://www.pestboard.ca.gov/pestlaw/examinations_corrected_approval.pdf",
+          "temporal_note": "FiledJuly13 2026, correctedJuly23 2026; OAL quarterly table wrongly prints July13 2025. Corrected1942 text must accompany original full package, not replace other sections.",
+          "proposal_source": "regulatory/proposal.json"
+        },
+        {
+          "oal_file": "2026-0217-01S",
+          "name": "Engineers and geologists fees",
+          "selected_unit": "407 3005; complete changed sections and incorporated dependencies",
+          "effective_from": "2026-07-01",
+          "source_url": "https://www.bpelsg.ca.gov/about_us/407_notice_of_approval.pdf",
+          "proposal_source": "regulatory/proposal.json"
+        },
+        {
+          "oal_file": "2025-1006-02N",
+          "name": "Professional fiduciary application cross-reference correction",
+          "selected_unit": "4422",
+          "effective_from": "2025-11-12",
+          "source_url": "https://www.fiduciary.ca.gov/laws_regs/application_requirements_ooala.pdf",
+          "legal_status": "Approved and filed November 12, 2025; section 100 change without regulatory effect.",
+          "temporal_note": "Corrects BPC 6534(a)(8) cross-reference; approval and filed form are included with operative amendment."
+        },
+        {
+          "oal_file": "2025-1020-01N",
+          "name": "Contractor and home improvement salesperson application processing correction",
+          "selected_unit": "827; 828",
+          "effective_from": "2025-12-02",
+          "source_url": "https://www.cslb.ca.gov/Resources/BoardPackets/2025/Dec11_MeetingPacket_ada.pdf",
+          "legal_status": "Approved and effective December 2, 2025, established by CSLB December 11 board report and both official codified histories.",
+          "temporal_note": "Repeals historical minimum/median/maximum statistics: 827(a)(6), (b)(5) and 828(d); application decision deadlines remain. Section 828 heading and (a) use salesperson. Board packet is redline; flattened text retains deleted text and must not be treated as consolidated law."
+        }
+      ]
+    }
+  ]
+}

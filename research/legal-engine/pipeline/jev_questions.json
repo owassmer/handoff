@@ -1,0 +1,72 @@
+{
+ "registry_version": "2.0.0",
+ "model": "typesafe/jev-1.13",
+ "model_marker": "jev-1.13",
+ "pinned_build": "typesafe/jev-1.13-20260917",
+ "base_url": "https://openrouter.ai/api",
+ "history": [
+  {"version": "1.0.0", "date": "2026-09-30", "where": "register/jev_questions.json", "note": "NY register triage; the chain and scope were written for a market-rate NYC unit. Imported NY, NYC and US Jev records carry this version."},
+  {"version": "2.0.0", "date": "2026-09-30", "note": "Same two triage questions with the jurisdiction's scope, chain and aperture filled from its profile.json (jev.scope, jev.chain_description, aperture.exclusions), so any jurisdiction can be triaged. Adds the quote-check question (role 2) and the runtime judgment question template (role 3)."}
+ ],
+ "purpose": "Triage only. Jev reads one section of law and says whether it can change a decision in the settlement chain of a residential tenancy in the jurisdiction named in state. Jev never states what the law requires; routing thresholds are owned by code (routing.json).",
+ "global_rules": [
+  "Answer from the supplied state alone: state.section_text is the complete text of one section (or rule) of one legal instrument, state.instrument names the instrument and state.heading its heading.",
+  "Judge the section as written for the chain in state.chain_description, for {scope}.",
+  "state.aperture_exclusions lists regimes that are outside the chain; a section that decides matters only for one of them is not a decision in the chain.",
+  "Do not decide what the section requires, how it applies to a case, or whether it is valid; classify only its role.",
+  "When a section mixes provisions, classify it by its strongest provision: one provision that can change the chain's decisions is enough.",
+  "The question identifier is a label; the question is in the instructions."
+ ],
+ "questions": [
+  {
+   "id": "role",
+   "version": "2.0.0",
+   "primitive": "choice",
+   "question": "What role does this section play in the settlement chain of a residential tenancy in this jurisdiction?",
+   "prompt": {
+    "instructions": "What role does state.section_text play in the chain in state.chain_description? Choose DECIDES if the section imposes a duty, bar, deadline, amount, condition, defense, liability or consequence that can change what a landlord, managing agent, collector or tenant does or owes in that chain, for {scope}. Choose EXCLUDED_REGIME if it decides such matters only for a regime listed in state.aperture_exclusions. Choose NO_DECISION if it contains definitions only, is administrative, concerns other subject matter, or governs conduct outside the chain.",
+    "criteria": {
+     "DECIDES": "The section imposes a duty, bar, deadline, amount, condition, defense, liability or consequence that can change what a landlord, managing agent, collector or tenant does or owes in the chain, for {scope}.",
+     "EXCLUDED_REGIME": "The section decides such matters only for an out-of-aperture regime listed in state.aperture_exclusions.",
+     "NO_DECISION": "The section contains definitions only, is administrative (agency or court organization, reporting, funding), concerns other subject matter, or governs conduct outside the chain."
+    }
+   }
+  },
+  {
+   "id": "chain_duty",
+   "version": "1.0.0",
+   "primitive": "noul",
+   "question": "Does the text impose or alter any obligation, right, deadline, amount or consequence for a party to a residential tenancy, or a person collecting from one, at or after the tenancy's end?",
+   "prompt": {
+    "instructions": "Does state.section_text impose or alter any obligation, right, deadline, amount or consequence for a party to a residential tenancy (landlord, managing agent, tenant, co-tenant, guarantor, successor, estate), or for a person collecting money from one, at or after the tenancy's end? Judge the text only; include general rules (time computation, delivery of notices, capacity to sue, judgment interest, enforcement, exemptions, limitations, discharge, reporting) that reach such a party.",
+    "criteria": {
+     "true": "The text imposes or alters an obligation, right, deadline, amount or consequence that reaches a party to a residential tenancy, or a person collecting from one, at or after the tenancy's end.",
+     "false": "The text imposes nothing that reaches such a party at or after the tenancy's end (it governs other persons, other subject matter, agency or court administration, or only definitions)."
+    }
+   }
+  }
+ ],
+ "quote_check": {
+  "id": "quote_supports_effect",
+  "version": "1.0.0",
+  "primitive": "noul",
+  "use": "J6 and J8: flags for the reviewer; decides nothing.",
+  "prompt": {
+   "instructions": "state.quote is the verbatim text a rule rests on and state.construction the authorities it cites. Does that text, read with the construction, support every part of state.effect under state.condition, including every exception and branch it states?",
+   "criteria": {"true": "Every part of the effect and every branch is supported by the quoted text and construction.", "false": "Some part of the effect or a branch is not supported, or the text supports a different effect."}
+  },
+  "state_fields": ["rule_id", "condition", "effect", "quote", "construction", "section_text"]
+ },
+ "judgment_questions": {
+  "use": "Runtime judgment (role 3): each STANDARD or MIXED rule's judgment terms become typed questions here. An answer binds evidence to a predicate; code computes every date and amount.",
+  "template": {"id": "<rule id>#<term>", "rule_id": "<rule id>", "term": "<judgment term>", "primitive": "noul | choice", "prompt": {"instructions": "Given state.evidence, does <term> hold for <party> under <rule>?", "criteria": {"true": "...", "false": "..."}}, "state_fields": ["evidence", "rule_condition", "authorities"]},
+  "questions": []
+ },
+ "state_fields": {
+  "instrument": "instrument name and section citation",
+  "heading": "section heading",
+  "section_text": "full section text as saved (up to 12,000 characters; longer sections are not sent: they are queued as LONG)",
+  "chain_description": "profile.json jev.chain_description",
+  "aperture_exclusions": "profile.json aperture.exclusions"
+ }
+}

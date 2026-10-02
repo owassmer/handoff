@@ -1,0 +1,68 @@
+{
+  "independent_effects": {
+    "input": [
+      "effects: explicit record paths and optional condition paths"
+    ],
+    "output": "Evaluate each named record separately under its own established conditions, additionally conjoined with any listed condition or negation of an unless condition (unknown preserved). Return all effects; no implication that any record overrides another or that available choices are exclusive."
+  },
+  "attach_requirements": {
+    "input": [
+      "target: record path",
+      "requirements: [{kind, path, when?, unless?}]",
+      "combine: all"
+    ],
+    "output": "Return a typed requirement bundle for target. Each item retains its own conditional scope and provenance. A missing field or unknown trigger leaves that item unresolved. This emits required content/method/time/location; it does not treat existence of the legal field as proof of case compliance."
+  },
+  "cost_component": {
+    "input": [
+      "target: record path",
+      "component: storage",
+      "mode: filter|exclude_duplicate|rate|waive",
+      "when?: condition path",
+      "parameters: typed proposal"
+    ],
+    "output": "Modify only storage component of the target payment requirement. Preserve advertising/sale costs and all nonpayment conditions. Unknown claimant, reasonableness, allocation, actual cost or condition prevents a final amount. Case ledger items require stable IDs, kind, property-interest allocation and previously charged cost IDs."
+  },
+  "notice_methods": {
+    "input": [
+      "target: record path",
+      "method_groups:[{path,kind}]",
+      "combination:any|supplement",
+      "timing_rules: explicit paths"
+    ],
+    "output": "Return authorized notice-method alternatives with their own sender/recipient/location/agreement conditions and deemed-service rules. Never treat an additional method as substitute. Satisfaction requires classified facts, not merely existence of the method record."
+  },
+  "calendar_binding": {
+    "input": [
+      "target_timing: exact field prefix",
+      "calendar: exact rule path",
+      "anchor_from: exact timing anchor path"
+    ],
+    "output": "Compute only after accepted interval/direction/anchor and classified event dates are available. Copy anchor from selected target field; calendar service defaults cannot silently replace an express entry anchor."
+  },
+  "conditional_expiration": {
+    "input": [
+      "target: record path",
+      "timing: timing prefix",
+      "continuation_when: condition path"
+    ],
+    "output": "Permission ends at accepted expiry unless established continuation condition holds; unknown continuation at expiration keeps availability unresolved. Other permission conditions remain required."
+  },
+  "waive_duty": {
+    "input": [
+      "target: record path",
+      "when: condition path",
+      "preserve_optional_performance:true"
+    ],
+    "output": "Remove only the named mandatory performance requirement when condition holds. Do not declare the conduct prohibited, and do not assert the alternative was elected. Unknown condition leaves duty status unresolved."
+  },
+  "alternative_route": {
+    "input": [
+      "route: record path",
+      "when: condition path",
+      "original_route: record path",
+      "exclusive:false"
+    ],
+    "output": "Expose a separately conditioned permissible route without suppressing original legal requirements by implication. Does not itself supply scope or procedural conditions of chosen route."
+  }
+}

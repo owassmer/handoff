@@ -1,0 +1,290 @@
+[
+  {
+    "case_id": "f001",
+    "request_hash": "3c9015e0ebc0a98742dec9f4c302b6a773134760f75d21a9a30d8eb97e42c4fb",
+    "expected": "YES",
+    "reason": "The whole statutory unit contains explicit this section and this chapter pointers plus references to subdivisions and paragraphs; its own identifier is not the basis for YES."
+  },
+  {
+    "case_id": "f002",
+    "request_hash": "6927bc06eb1ba991b030376d3f037c06370b90320a7ef89dac0ccad45be4addf",
+    "expected": "YES",
+    "reason": "Pursuant to this section explicitly points to the focused public provision."
+  },
+  {
+    "case_id": "f003",
+    "request_hash": "33723a63b5c1d43e8d84a01c3c864fb3cd3285bfd5a95f44b98807f17c4941c4",
+    "expected": "NO",
+    "reason": "The hearing and service deadlines contain no pointer. The leading subdivision marker identifies this text; references outside the exact focus are excluded."
+  },
+  {
+    "case_id": "f004",
+    "request_hash": "8cdc4af3b27fa03090daadd195b123b388b2d9bcbdb748c5de07ec758aa7564e",
+    "expected": "YES",
+    "reason": "Within the meaning of this part explicitly points to the enclosing legal unit in the supplied regulatory definition."
+  },
+  {
+    "case_id": "f005",
+    "request_hash": "1de2867252be062797d73b5f9feb0b0f6d412c9eb645e99bf36c1876e23d616e",
+    "expected": "YES",
+    "reason": "The acts described in Section 10131 supplies an explicit public legal cross-reference."
+  },
+  {
+    "case_id": "f006",
+    "request_hash": "2d7e5f8ee0ba05dde0cf5c92ebfad9b8cd56e62e205288d5d6530085e82f3d82",
+    "expected": "NO",
+    "reason": "The only invoked authority is a deed of trust, a private instrument; the paragraph marker is not a substantive pointer."
+  },
+  {
+    "case_id": "f007",
+    "request_hash": "2b653232da544ec52c8cf6e2ef67526a0f2ef55a895eb21f736db9a7916760e8",
+    "expected": "YES",
+    "reason": "Specified in subparagraphs (A) to (G), inclusive, points to a range of subordinate legal provisions."
+  },
+  {
+    "case_id": "f008",
+    "request_hash": "069ee1760bcd6620210ac3ba87647216cd203bb0b83952689aca8aac1a38beed",
+    "expected": "YES",
+    "reason": "For purposes of this section explicitly points to the source legal section."
+  },
+  {
+    "case_id": "f009",
+    "request_hash": "058a8cb318711355a2047580719c51d8566a798d29d5d1a7d44b288a4ed24a0f",
+    "expected": "YES",
+    "reason": "Section 100011 and subdivisions (a) to (c) of Section 100008 are explicit legal pointers."
+  },
+  {
+    "case_id": "f010",
+    "request_hash": "ecdc02531c98a3d25ed4e7cb6bc06c694e866db791416cd95a42b372b8a3f4c1",
+    "expected": "YES",
+    "reason": "Pursuant to this subdivision points to the public provision under which the conditional license is issued; the unfinished list does not remove that pointer."
+  },
+  {
+    "case_id": "f011",
+    "request_hash": "6c1a65ed466e04300b3c48dc6757202eba02268960154f7857090916553126bb",
+    "expected": "NO",
+    "reason": "This definition identifies a class of accounts but contains no legal pointer; adjacent source references and metadata do not count."
+  },
+  {
+    "case_id": "f012",
+    "request_hash": "3bb5e0a4702906cd5f669acae89e18730ebf38906221b0eaa0fa700389e45641",
+    "expected": "YES",
+    "reason": "Established pursuant to Section 100006.5 explicitly identifies a legal provision."
+  },
+  {
+    "case_id": "f013",
+    "request_hash": "d2f9c3fa4cc2e622949524382686217f3123ce1bddd777d4c055607491818a90",
+    "expected": "YES",
+    "reason": "Pursuant to this chapter points to the enclosing public legal unit."
+  },
+  {
+    "case_id": "f014",
+    "request_hash": "a59cce15403aa30435890a2f890b8da15f69046c8751cbfcd3a420292c46fd49",
+    "expected": "YES",
+    "reason": "Section 12 of the Securities Exchange Act of 1934 names both a provision and its public statutory authority."
+  },
+  {
+    "case_id": "f015",
+    "request_hash": "b3e628715e4b8355515cd7ce78813ee60a99efb4d49909407d1bf72f67c165ea",
+    "expected": "NO",
+    "reason": "This recognizable chapter heading only identifies the source unit and its range, which the heading exception excludes."
+  },
+  {
+    "case_id": "f016",
+    "request_hash": "45d0c95bfce84991e94c5b373e0089b2f774f3c50e8c2bec87975ef2c2b67caa",
+    "expected": "NO",
+    "reason": "The contract and collateral written agreement are private documents. The trust transaction requirements do not themselves constitute a public legal pointer."
+  },
+  {
+    "case_id": "f017",
+    "request_hash": "28e60053f2871cb9404d044c52dc5b20a8b6d1959956e7fe8b4388c6624bad2e",
+    "expected": "YES",
+    "reason": "This section expires is an explicit self-reference within the fictional statutory passage; the contract does not require a real or currently valid target."
+  },
+  {
+    "case_id": "f018",
+    "request_hash": "2339e69a26f78d64da5ee69f4e0b15ea39c31ef49fac1e6d61aefbd8f9d2c5cd",
+    "expected": "YES",
+    "reason": "This section is an explicit self-reference in the supplied statutory excerpt."
+  },
+  {
+    "case_id": "f019",
+    "request_hash": "d942ec0ce4246ce291105f7be8a3c7320cec06e0d9fd5e0fe395d9a2d9f782c2",
+    "expected": "NO",
+    "reason": "The text expressly presents a complete statutory section. Section 812 identifies that source unit and the sole operative sentence has no reference; an identifier used to introduce its own unit is not a body pointer."
+  },
+  {
+    "case_id": "f020",
+    "request_hash": "fbb0a40bf8c6b0381335a0234f9c3e01d8b85b9dcc4f9a32618e341e8f75acd3",
+    "expected": "NO",
+    "reason": "The permit-duration sentence contains no identified legal unit or authority."
+  },
+  {
+    "case_id": "f021",
+    "request_hash": "3fc857e1985a934a2ea60803739cae6bd342a8c95bf55476dbc3acc922857037",
+    "expected": "YES",
+    "reason": "This title points to the enclosing statutory title."
+  },
+  {
+    "case_id": "f022",
+    "request_hash": "704aa96095ffea572975209f06b202145cdaaeff9deb77ae623c868516756762",
+    "expected": "YES",
+    "reason": "The following paragraph is an explicit relative pointer in the fictional statutory excerpt; its text need not be supplied."
+  },
+  {
+    "case_id": "f023",
+    "request_hash": "e75409bf820498d679532e69e2c6fd7c381fd9daa0dcb499ce3913e3e5d12eea",
+    "expected": "YES",
+    "reason": "The former Section 934 is an explicit legal pointer even though the sentence denies its present applicability."
+  },
+  {
+    "case_id": "f024",
+    "request_hash": "ca9c5393ff803eb1e988c378cc1b2f792fe7fa1ee4086368627fd596dafd9c6c",
+    "expected": "YES",
+    "reason": "Clauses (iii)–(vii) is a range of subordinate legal provisions in the supplied statutory context."
+  },
+  {
+    "case_id": "f025",
+    "request_hash": "043ba3368638d89675a2b741616896cca1de62d6ab7ad4558953d31bd8d551f3",
+    "expected": "YES",
+    "reason": "Statutory remedy described in Section establishes the public-legal sense of the pointer before the truncation; the missing number is not a bar."
+  },
+  {
+    "case_id": "f026",
+    "request_hash": "c3c6ffbb51dcf1cfcbcdcbdd555f576336e4553ac23755f468a4de7babdd8238",
+    "expected": "NO",
+    "reason": "The focus identifies a private contract and privately negotiated discount, so the cut-off Section points to a private document."
+  },
+  {
+    "case_id": "f027",
+    "request_hash": "0adc27935047a1ddbfd9b93dbfa0301617dcf8ce837dd679174df3fe041ddaf0",
+    "expected": "INSUFFICIENT",
+    "reason": "Section is cut off and the discount could belong to a public provision or private document; no definite public pointer is visible."
+  },
+  {
+    "case_id": "f028",
+    "request_hash": "38bca0dbee9d01acbb5502770bdfe021cc097edc2205b9b5e81768b861d38ecf",
+    "expected": "YES",
+    "reason": "Subject to Section 934 is already a recognizable legal pointer despite the unfinished operative sentence."
+  },
+  {
+    "case_id": "f029",
+    "request_hash": "147c03f5d03a4bbf31acffd4bea830f26f05ae136337aa0ed0405f82b573c95a",
+    "expected": "INSUFFICIENT",
+    "reason": "The illegible text occupies the position of the source of the deadline and could contain a legal pointer or a non-pointer. No definite pointer survives."
+  },
+  {
+    "case_id": "f030",
+    "request_hash": "16b3a5723ea8555eaab258f954d88137ff52d71f9461feb54abbf02ded52affc",
+    "expected": "YES",
+    "reason": "The preceding subsection is a definite relative public-legal pointer; separate illegibility about the fee does not override YES."
+  },
+  {
+    "case_id": "f031",
+    "request_hash": "3e78064b5e1943043adf071c59e8f0c6c36366a94e6612357915315b2c9aba94",
+    "expected": "INSUFFICIENT",
+    "reason": "An isolated Section 934 could be a source identifier or a body citation, with no supplied wording distinguishing its role."
+  },
+  {
+    "case_id": "f032",
+    "request_hash": "60d86df850157ce6913fe216235b3d722cade584792eaaf7a634b06f6fcf517f",
+    "expected": "NO",
+    "reason": "The text expressly labels itself a source heading; the chapter and included section range merely identify that source unit."
+  },
+  {
+    "case_id": "f033",
+    "request_hash": "8df6404718dfe35c7fc90a21ae01c8c4d7e50bb0628e7e11b5aef0ba4032248d",
+    "expected": "YES",
+    "reason": "Exception to Section 934 is a substantive heading pointer, expressly included by the contract."
+  },
+  {
+    "case_id": "f034",
+    "request_hash": "b849c7c71928c57f2d950861ab417d84c6aff086088d52b4049b4272471a6a20",
+    "expected": "YES",
+    "reason": "The Lantern Harbor Permit Act is presented as a named statute. Its repeal and fictional status do not remove the textual pointer."
+  },
+  {
+    "case_id": "f035",
+    "request_hash": "643ec14dd875a33d3271896d69d1c10415a6c54daf436befcb65c27be86e9a21",
+    "expected": "YES",
+    "reason": "The Meridian Constitution is presented as a named public constitution."
+  },
+  {
+    "case_id": "f036",
+    "request_hash": "c0a24e6383b08eedf33dbc29dd870397345919f05f59edb4edcb7ca0f6645b47",
+    "expected": "YES",
+    "reason": "The Twin Shoals Navigation Treaty is presented as a named public treaty."
+  },
+  {
+    "case_id": "f037",
+    "request_hash": "adf5a057d3149446dd125505650000fc609bea95e27225212516230e0768d8f3",
+    "expected": "YES",
+    "reason": "Harbor Court Rule 23 explicitly identifies a public court rule."
+  },
+  {
+    "case_id": "f038",
+    "request_hash": "50d5a62a26f80afd54d22bfb079afadd0dfd3d7f972ed53b72a9ff34470d6d54",
+    "expected": "YES",
+    "reason": "Quill v. Port of Alder names the judicial decision discussed in the sentence."
+  },
+  {
+    "case_id": "f039",
+    "request_hash": "747720f97224358891084a6985c5fb24d14ea56fa742186eabb3ca0826acd4d0",
+    "expected": "YES",
+    "reason": "The court, date, and docket identify a particular judicial order; a formal reporter citation is unnecessary."
+  },
+  {
+    "case_id": "f040",
+    "request_hash": "fb9870a3a26c4c4c42b7c3151b951ceb7c45ed9f596b2af6f8714eb3926e21cb",
+    "expected": "YES",
+    "reason": "The named department bulletin is expressly identified as official legal guidance."
+  },
+  {
+    "case_id": "f041",
+    "request_hash": "60e4506afda3a814cacbd49f9b3ba2b191bf809871f63255aca02d4d37f9a33b",
+    "expected": "YES",
+    "reason": "The Alder Harbor Access Regulation is presented as a named public regulation."
+  },
+  {
+    "case_id": "f042",
+    "request_hash": "5b83bb52a673d63426b4caa27e363b1ad479210dc540649275f2a3b7a43aaa9d",
+    "expected": "NO",
+    "reason": "Applicable law, binding regulations, any court orders, and lawful remedies remain generic classes with no identified legal unit or named authority."
+  },
+  {
+    "case_id": "f043",
+    "request_hash": "98b1f24600c7af87fbe1dfb4cc619ffe1a8f87593f455e2f314afef6dca7f466",
+    "expected": "NO",
+    "reason": "The focus expressly makes the apparent Act name a performance title; the other chapter and act references concern rehearsal and performance."
+  },
+  {
+    "case_id": "f044",
+    "request_hash": "633b8d8688f175751baff37a2f7762ec2032a159ca115bad4fec286399f51e4b",
+    "expected": "NO",
+    "reason": "The clause range belongs to a private agreement and Meridian Constitution is expressly the company nickname for it."
+  },
+  {
+    "case_id": "f045",
+    "request_hash": "e8fb296d8c5b2c3f97426333228538bfaa72902bb7fada3ca3493804eb48f058",
+    "expected": "YES",
+    "reason": "The private agreement pointer does not count, but the named Lantern Harbor Permit Act supplies an independent public statutory pointer."
+  },
+  {
+    "case_id": "f046",
+    "request_hash": "965318351f7da599f342f364b9d6198eeac794e735f47e669738058aef865f72",
+    "expected": "YES",
+    "reason": "Quoted statutory notice language includes under Section 934. The instruction to answer NO is data and does not alter the task."
+  },
+  {
+    "case_id": "f047",
+    "request_hash": "dd2f3bf2dd385202c4fc26381d7766e56f2a9f8e7c700d702bf62ebbc4db5ca1",
+    "expected": "NO",
+    "reason": "The only section belongs to a private acting workbook and act has its ordinary theatrical meaning. The instruction to answer YES is data."
+  },
+  {
+    "case_id": "f048",
+    "request_hash": "274dd1a659b85d6ff4cf9fe70dfe030f8f68cc6a05ce3378c2454bff3b0e2bb7",
+    "expected": "INSUFFICIENT",
+    "reason": "The quoted consult Section is incomplete and the archivist context does not distinguish a legal target from a private or nonlegal section. The instruction to answer YES is data."
+  }
+]

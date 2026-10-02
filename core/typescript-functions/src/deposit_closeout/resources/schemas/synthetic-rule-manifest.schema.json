@@ -1,0 +1,269 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:handoff:deposit-closeout:SyntheticRuleManifest:1.0.0",
+  "$ref": "#/$defs/SyntheticRuleManifest",
+  "$defs": {
+    "SyntheticRuleManifest": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "string",
+          "minLength": 1,
+          "const": "1.0.0"
+        },
+        "ruleReleaseId": {
+          "type": "string",
+          "minLength": 1,
+          "const": "NC_SYNTHETIC_DEMO_V1"
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1,
+          "const": "SYNTHETIC_ONLY"
+        },
+        "implementationStatus": {
+          "type": "string",
+          "minLength": 1,
+          "const": "NOT_IMPLEMENTED"
+        },
+        "legalReviewStatus": {
+          "type": "string",
+          "minLength": 1,
+          "const": "PENDING"
+        },
+        "legalReviewedBy": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "const": null
+        },
+        "legalEffectiveFrom": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "const": null
+        },
+        "legalEffectiveUntil": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "const": null
+        },
+        "allowedOrigins": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "const": [
+            "CONSTRUCTED"
+          ]
+        },
+        "jurisdiction": {
+          "type": "string",
+          "minLength": 1,
+          "const": "NC"
+        },
+        "tenancyRegime": {
+          "type": "string",
+          "minLength": 1,
+          "const": "CONVENTIONAL_RESIDENTIAL"
+        },
+        "currency": {
+          "type": "string",
+          "minLength": 1,
+          "const": "USD"
+        },
+        "allowLiveUse": {
+          "type": "boolean",
+          "const": false
+        },
+        "questionIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "sourceReferences": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SourceReference"
+          }
+        },
+        "syntheticAssumptions": {
+          "$ref": "#/$defs/SyntheticAssumptions"
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "ruleReleaseId",
+        "status",
+        "implementationStatus",
+        "legalReviewStatus",
+        "legalReviewedBy",
+        "legalEffectiveFrom",
+        "legalEffectiveUntil",
+        "allowedOrigins",
+        "jurisdiction",
+        "tenancyRegime",
+        "currency",
+        "allowLiveUse",
+        "questionIds",
+        "sourceReferences",
+        "syntheticAssumptions",
+        "warnings"
+      ],
+      "additionalProperties": false
+    },
+    "SourceReference": {
+      "type": "object",
+      "properties": {
+        "evidenceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceClass": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "CASE_RECORD",
+            "AGREEMENT",
+            "LAW",
+            "PROCEDURE",
+            "TEST_ASSUMPTION",
+            "MODEL_PROPOSAL"
+          ]
+        },
+        "sourceVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "page": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": -2147483648,
+              "maximum": 2147483647
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "minimum": 1
+        },
+        "quote": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "evidenceId",
+        "sourceClass",
+        "sourceVersion",
+        "locator",
+        "page",
+        "quote"
+      ],
+      "additionalProperties": false
+    },
+    "SyntheticAssumptions": {
+      "type": "object",
+      "properties": {
+        "ordinaryPeriodDays": {
+          "type": "integer",
+          "minimum": -2147483648,
+          "maximum": 2147483647,
+          "const": 30
+        },
+        "finalPeriodDays": {
+          "type": "integer",
+          "minimum": -2147483648,
+          "maximum": 2147483647,
+          "const": 60
+        },
+        "periodBasis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "triggerAcceptance": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scopeBasis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "interimQualification": {
+          "type": "string",
+          "minLength": 1,
+          "const": "UNRESOLVED_PENDING_REVIEW"
+        },
+        "interimMoneyHandling": {
+          "type": "string",
+          "minLength": 1,
+          "const": "UNRESOLVED_PENDING_REVIEW"
+        },
+        "missingAddressHandling": {
+          "type": "string",
+          "minLength": 1,
+          "const": "UNRESOLVED_PENDING_REVIEW"
+        },
+        "missingInvoiceTreatment": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "ordinaryPeriodDays",
+        "finalPeriodDays",
+        "periodBasis",
+        "triggerAcceptance",
+        "scopeBasis",
+        "interimQualification",
+        "interimMoneyHandling",
+        "missingAddressHandling",
+        "missingInvoiceTreatment"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

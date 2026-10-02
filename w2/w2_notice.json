@@ -1,0 +1,125 @@
+{
+ "sourceSystem": "ferro-w2-test",
+ "sourceRecordId": "w2-notice-1",
+ "title": "W2 test: return the garden house",
+ "goal": "A secure entrance for the next occupant.",
+ "businessDate": "2026-09-26",
+ "property": {
+  "sourceId": "home-1",
+  "name": "W2 test house",
+  "address": "17 Meadow Street (test)",
+  "description": "Synthetic test property for the information-reply check."
+ },
+ "parties": [
+  {
+   "sourceId": "owner",
+   "name": "Morgan",
+   "kind": "Person",
+   "description": "Owns the house."
+  },
+  {
+   "sourceId": "tenant",
+   "name": "Casey",
+   "kind": "Person",
+   "description": "Departing tenant."
+  },
+  {
+   "sourceId": "provider",
+   "name": "House Care",
+   "kind": "Organization",
+   "description": "Cleaning and small repairs.",
+   "email": "work@example.test"
+  }
+ ],
+ "tenancy": {
+  "sourceId": "tenancy-1",
+  "title": "Garden house tenancy",
+  "landlordPartySourceId": "owner",
+  "tenantPartySourceIds": [
+   "tenant"
+  ],
+  "startDate": "2025-09-01",
+  "endDate": "2026-09-25",
+  "noticeDate": "2026-08-25"
+ },
+ "documents": [
+  {
+   "sourceId": "lease",
+   "title": "Tenancy agreement",
+   "text": "Return the home clean with existing serviceable fittings retained. Owner approval is required before arranging work.",
+   "kind": "Agreement",
+   "sourceKind": "Source"
+  },
+  {
+   "sourceId": "inspection",
+   "title": "Departure inspection",
+   "text": "The entrance latch needs adjustment. Replacement is unnecessary.",
+   "kind": "Inspection",
+   "sourceKind": "Source"
+  },
+  {
+   "sourceId": "quote",
+   "title": "Earlier repair quote",
+   "text": "House Care offers latch adjustment for 12500 cents, tax included.",
+   "kind": "Quote",
+   "partySourceId": "provider",
+   "sourceKind": "Source"
+  },
+  {
+   "sourceId": "services",
+   "title": "House Care services",
+   "kind": "Provider information",
+   "partySourceId": "provider",
+   "sourceKind": "Prepared",
+   "sourceVersion": "1",
+   "text": "House Care adjusts and checks entrance latches. Advance payment is required.",
+   "detailsJson": "{\"services\": [{\"serviceId\": \"entrance\", \"title\": \"Make the entrance secure\", \"kind\": \"Repair\", \"currency\": \"USD\", \"lines\": [{\"lineId\": \"latch\", \"description\": \"Adjust and function-check entrance latch\", \"amountCents\": \"12500\"}], \"depositCents\": \"2500\", \"paymentTerms\": \"Advance of 2500; balance after completion\", \"requirements\": [], \"availableFrom\": \"2026-09-28T09:00:00.000Z\", \"validUntil\": \"2026-10-09T17:00:00.000Z\", \"durationMinutes\": 120, \"responseMinutes\": 1, \"effects\": [{\"lineId\": \"latch\", \"conditionIds\": [\"entrance\"], \"method\": \"Operate the latch and check that the door secures.\"}]}]}"
+  },
+  {
+   "sourceId": "condition",
+   "title": "Entrance condition",
+   "kind": "Property condition",
+   "partySourceId": "owner",
+   "sourceKind": "Prepared",
+   "sourceVersion": "1",
+   "text": "The entrance latch does not catch reliably.",
+   "detailsJson": "{\"coverage\": {\"goal\": \"A secure entrance for the next occupant.\", \"conditionIds\": [\"entrance\"], \"reason\": \"The handoff concerns only the entrance latch, checked by operation.\"}, \"conditions\": [{\"conditionId\": \"entrance\", \"description\": \"Entrance latch\", \"state\": \"Deficient\", \"repairable\": true, \"accessible\": true}]}"
+  },
+  {
+   "sourceId": "funds",
+   "title": "Owner funding confirmation",
+   "kind": "Owner funding",
+   "partySourceId": "owner",
+   "sourceKind": "Prepared",
+   "sourceVersion": "1",
+   "text": "Owner funds are confirmed for property work.",
+   "detailsJson": "{\"ownerPartyId\": \"party:bf675f1c77d9e1b2415f9bc4119a58a236a639f627d4ba7e1118556bd8cec529\", \"currency\": \"USD\", \"confirmedCents\": \"30000\", \"confirmedAt\": \"2026-09-26T00:00:00.000Z\", \"paymentBehavior\": \"Settle\", \"responseMinutes\": 1}"
+  }
+ ],
+ "agreements": [
+  {
+   "sourceId": "terms",
+   "title": "Return of the home",
+   "kind": "Tenancy",
+   "termsText": "Retain serviceable fittings and ask the owner to approve the work.",
+   "sourceDocumentSourceId": "lease",
+   "effectiveFrom": "2025-09-01"
+  }
+ ],
+ "obligations": [
+  {
+   "sourceId": "retain",
+   "title": "Retain serviceable fittings",
+   "description": "Keep serviceable fittings.",
+   "responsiblePartySourceIds": [
+    "owner"
+   ],
+   "beneficiaryPartySourceIds": [
+    "tenant"
+   ],
+   "basisAgreementSourceId": "terms",
+   "basisDocumentSourceId": "lease",
+   "status": "Open"
+  }
+ ]
+}

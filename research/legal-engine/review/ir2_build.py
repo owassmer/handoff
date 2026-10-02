@@ -1,0 +1,460 @@
+"""Independent review 2: build review/independent_review_2.json from the findings below.
+
+Run from research/legal-engine:  python3 review/ir2_build.py
+The first-round verdicts (task 6) are added by ir2_build_task6.py after tasks 1-5 are saved.
+"""
+import json
+import pathlib
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+OUT = ROOT / "review/independent_review_2.json"
+
+W = "review/NYC_MARKET_RATE.md"
+S = "sources/"
+
+findings = [
+    {
+        "id": "R2-01",
+        "kind": "gap",
+        "severity": "critical",
+        "rule_ids": ["NY:GOL-7-108(1-a)(b)-refundable", "NY:CASE-Mihalow-rent-arrears", "NY:CPLR-5001(a)-(b)",
+                     "NYC:ADC-27-2107(b)-rent-stay", "NY:RPL-220"],
+        "step": "0, 1.8, 5.5, 8.10; test cases C4, C7, C14",
+        "finding": (
+            "No rule states Multiple Dwelling Law 301-302. In New York City a multiple dwelling (three or more "
+            "families, including a house certified for one or two families that is actually occupied by three or "
+            "more, a 'de facto multiple dwelling') may not be occupied without a residential certificate of "
+            "occupancy, and while it is so occupied the owner recovers no rent and no use and occupancy for that "
+            "period. The walk treats unpaid rent as always retainable from the deposit (5.5) and always suable "
+            "(8.10, C14), and never asks the certificate-of-occupancy question, although illegal third units in "
+            "two-family houses are common in the scattered small-multifamily segment Handoff serves. The coverage "
+            "note in NYC.json says 'MDL is state, not read', and NY.json has no MDL atom, so the gap is in both files."),
+        "correct_rule": (
+            "NY:MDL-302(1)(b) (new, RULE with a STANDARD exception). Condition: the unit is in a multiple dwelling "
+            "(MDL 4(7): occupied or let as the residence of three or more families living independently), including "
+            "a de facto multiple dwelling, and during the period claimed the dwelling was occupied without a "
+            "certificate of occupancy permitting that residential use (MDL 301(1)); the unit is not in an interim "
+            "multiple dwelling whose owner is in compliance with the Loft Law (MDL 285(1)). Effect: the owner may "
+            "not recover rent or use and occupancy for that period by action, counterclaim, setoff or by applying "
+            "the deposit to it; on the 14-day statement no amount may be retained for rent of that period; damage "
+            "and other non-rent claims are unaffected. The bar is absolute (Caldwell, 2d Dept 2008; followed by 49 "
+            "Bleecker, 1st Dept 2018; Chazon, Court of Appeals 2012, reads the text as it stands); the only "
+            "exception is a tenant who actually prevented the owner from legalizing (Chatsworth 72nd St. v Rigai, "
+            "Court of Appeals 1975, as stated in Caldwell). Obtaining a certificate later does not revive rent for "
+            "the period of unlawful occupancy. Order of authority: MDL 302 is a state statute and controls over any "
+            "lease term; the Appellate Division rule binds the Civil Court in both departments."),
+        "evidence": [
+            {"source_file": S + "REVIEW2_NY_MDL_302_nysenate.txt",
+             "quote": "No rent shall be recovered by the owner of such premises for said period, and no action or special proceeding shall be maintained therefor, or for possession of said premises for nonpayment of such rent."},
+            {"source_file": S + "REVIEW2_NY_MDL_4_nysenate.txt",
+             "quote": "is occupied as the residence or home of three or more families living independently of each other."},
+            {"source_file": S + "REVIEW2_NY_CASE_Caldwell_v_AmericanPackage_2008_2dDept.txt",
+             "quote": "The command of Multiple Dwelling Law § 302 (1) (b) is, by its terms, absolute."},
+            {"source_file": S + "REVIEW2_NY_CASE_Caldwell_v_AmericanPackage_2008_2dDept.txt",
+             "quote": "An owner of a de facto multiple dwelling who fails to obtain a proper certificate of occupancy or comply with the registration requirements of the Multiple Dwelling Law cannot recover for rent or money for use and occupancy"},
+            {"source_file": S + "REVIEW2_NY_CASE_Caldwell_v_AmericanPackage_2008_2dDept.txt",
+             "quote": "where the tenant actually interfered with the owner's"},
+            {"source_file": S + "REVIEW2_NY_CASE_49Bleecker_v_Gatien_2018_1stDept.txt",
+             "quote": "was precluded from charging respondents rent or other remuneration while the building lacked a certificate of occupancy for residential use"},
+            {"source_file": S + "REVIEW2_NY_CASE_Chazon_v_Maugenest_2012_CoA.txt",
+             "quote": "In the absence of compliance, the law's command is quite clear"},
+        ],
+    },
+    {
+        "id": "R2-02",
+        "kind": "stale-source",
+        "severity": "critical",
+        "rule_ids": ["NY:ADJ-lease-balance-not-consumer-credit", "NY:CPLR-213(2)", "NY:CPLR-214-i",
+                     "NY:CASE-Lefferts-rent-not-consumer-credit", "NYC:SHIELD-5-77(i)", "NYC:ADC-20-493.2(b)"],
+        "step": "8.1, 8.5, 8.6; test cases C7, C14",
+        "finding": (
+            "The walk states flatly that the landlord has six years to sue because a lease balance is not consumer "
+            "credit. That is the law today, but the Consumer Debt Uniformity Act (S9760 / A10182-A) passed the "
+            "Senate on 2026-06-02 and the Assembly on 2026-06-03 and awaits delivery to the Governor. It adds CPLR "
+            "105(f-1) 'consumer debt' (a purpose test, like CPLR 5004(b)) and rewrites CPLR 214-i to 'actions "
+            "arising out of consumer debt'. A residential lease balance sued for in a plenary action is a consumer "
+            "debt under that definition (only obligations sought in an RPAPL article 7 summary proceeding are "
+            "excluded), so on the 90th day after the bill becomes law the limit for suing a former tenant who is a "
+            "natural person becomes three years, and the consumer-credit pleading, default and affidavit rules "
+            "(CPLR 3016(j), 3215(j)) follow. No rule records this point-in-time change; the files' family-5 check "
+            "was run before passage and nothing flags it."),
+        "correct_rule": (
+            "NY:CPLR-214-i-consumer-debt (new, point-in-time). Effective_from: the 90th day after S9760/A10182-A "
+            "becomes law (not yet law on 2026-09-29; the Governor acts after delivery, 10 days excluding Sundays, "
+            "or 30 days if delivered after adjournment). Condition: an action (not a summary proceeding) against a "
+            "natural person for a residential lease balance commenced on or after that date. Effect: must be "
+            "commenced within three years of accrual; CPLR 105(f-1) displaces NY:ADJ-lease-balance-not-consumer-"
+            "credit for the limitations period; collectors' limitations procedures (SHIELD 5-77(i), Admin Code "
+            "20-493.2(b)) then measure time-barred status by three years. Until then CPLR 213(2) (six years) "
+            "governs. The rule file should carry both versions with dates, and the walk should state the six-year "
+            "rule as current law with the enacted-but-unsigned change named."),
+        "evidence": [
+            {"source_file": S + "REVIEW2_NY_S9760_A10182A_ConsumerDebtUniformityAct_2026.txt",
+             "quote": "consumer debt to be commenced within three years. An action arising out"},
+            {"source_file": S + "REVIEW2_NY_S9760_A10182A_ConsumerDebtUniformityAct_2026.txt",
+             "quote": "include an obligation or alleged obligation to pay money when sought"},
+            {"source_file": S + "REVIEW2_NY_S9760_A10182A_ConsumerDebtUniformityAct_2026.txt",
+             "quote": "This act shall take effect on the ninetieth day after it shall"},
+            {"source_file": S + "REVIEW2_NY_S9760_A10182A_ConsumerDebtUniformityAct_2026.txt",
+             "quote": "PASSED SENATE"},
+            {"source_file": S + "REVIEW2_NY_S9760_A10182A_ConsumerDebtUniformityAct_2026.txt",
+             "quote": "passed assembly"},
+            {"source_file": W,
+             "quote": "and the landlord has six years to sue, not three"},
+        ],
+    },
+    {
+        "id": "R2-03",
+        "kind": "misstatement-in-review",
+        "severity": "major",
+        "rule_ids": ["NYC:ADC-27-2107(b)-rent-stay", "NYC:ADC-27-2097-registration"],
+        "step": "1.8, 8.10; test cases C7, C14",
+        "finding": (
+            "The walk says an unregistered owner's rent claim 'can be stayed' at the court's discretion. That is "
+            "the city rule (Admin Code 27-2107(b)). For a multiple dwelling the state rule is mandatory: MDL 325(2) "
+            "says no rent shall be recovered by an owner who has not complied with the city's registration "
+            "requirement until he complies. Only a one- or two-family house that must register because neither the "
+            "owner nor a family member lives there falls under the discretionary city stay alone. The state statute "
+            "is the higher authority and the stricter one, so it governs multiple dwellings."),
+        "correct_rule": (
+            "NY:MDL-325(2) (new, RULE). Condition: the unit is in a multiple dwelling in New York City and the owner "
+            "has not filed the HPD registration Admin Code 27-2097 requires. Effect: the owner recovers no rent, by "
+            "action or proceeding, until it registers; registration is a precondition, not a discretionary stay. "
+            "A non-owner-occupied one- or two-family house remains under NYC:ADC-27-2107(b)-rent-stay (discretionary "
+            "stay). In both cases the operator registers before suing or referring for suit; damage claims are not "
+            "claims for rent."),
+        "evidence": [
+            {"source_file": S + "REVIEW2_NY_MDL_325_nysenate.txt",
+             "quote": "no rent shall be recovered by the owner of a multiple dwelling who fails to comply with such registration requirements until he complies with such requirements."},
+            {"source_file": S + "REVIEW1_NYC_ADC_27-2107.txt",
+             "quote": "in the discretion of the court, suffer a stay of proceedings to recover rents, during such period"},
+            {"source_file": W,
+             "quote": "If the owner had to register and has not, the court may stay its claim for rent until it registers."},
+        ],
+    },
+    {
+        "id": "R2-04",
+        "kind": "misstatement-in-review",
+        "severity": "major",
+        "rule_ids": ["NY:RPL-214", "NY:RPL-215", "NY:RPL-211(3)-small-landlord"],
+        "step": "3.1",
+        "finding": (
+            "The walk and NY:RPL-214 list Good Cause Eviction exemptions as 'include' and omit the one most likely to "
+            "decide a market-rate NYC unit: a unit whose monthly rent exceeds 245 percent of HUD fair market rent "
+            "(RPL 214(15)). They also omit units regulated under other law or income-restricted by regulatory "
+            "agreement (214(5)-(6)), an owner-occupied unit sublet under 226-b recovered for personal use (214(3)) "
+            "and employment housing (214(4)). An operator reading the list would treat a high-rent unit as covered "
+            "and fail to treat a tenant who stays after a proper 226-c non-renewal as a holdover owing use and "
+            "occupancy."),
+        "correct_rule": (
+            "NY:RPL-214(15) (add to NY:RPL-214 as an exemption branch). Condition: NYC unit whose monthly rent is "
+            "greater than 245 percent of the HUD fair market rent for its county and unit type, as DHCR publishes it "
+            "by August 1 each year. Effect: article 6-A does not apply; the tenancy ends as RPL 226-c and the lease "
+            "provide, and a tenant who stays after a proper non-renewal is a holdover (RPL 220 use and occupancy; RPL "
+            "229 only if the tenant gave notice). The complete exemption list is 214(1)-(15); the walk should name "
+            "the high-rent test and say the list is complete in the rule."),
+        "evidence": [
+            {"source_file": S + "REVIEW1_NY_RPL_214_nysenate.txt",
+             "quote": "or two hundred forty-five percent of the fair market rent"},
+            {"source_file": S + "REVIEW1_NY_RPL_214_nysenate.txt",
+             "quote": "unit on or within a housing accommodation where such unit is otherwise subject to regulation of rents or evictions pursuant to local, state or federal law, rule, or regulation"},
+            {"source_file": W,
+             "quote": "Exempt units include those of a small landlord (ten units or fewer in the state, counted through every natural-person owner)"},
+        ],
+    },
+    {
+        "id": "R2-05",
+        "kind": "misstatement-in-review",
+        "severity": "major",
+        "rule_ids": ["NY:ADJ-willful-standard", "NY:CASE-Karole-willful", "NY:CASE-Prando-willful",
+                     "NY:CASE-Bogom-Shanon-willful", "NY:GOL-7-108(1-a)(g)"],
+        "step": "7.5",
+        "finding": (
+            "The walk defines 'willful' as 'knew or should have known its conduct broke the law' and says any account "
+            "a manager or Handoff handles cannot defend with ignorance. Read literally, every late statement on a "
+            "managed account is willful and exposes the owner to up to twice the deposit, because a professional "
+            "always 'should have known' the 14 days had run. That is not the law. The authority the rule adopts "
+            "(Karole) starts from the settled meaning that willful conduct is 'not merely negligent' and 'requires "
+            "more than inadvertence', and the Appellate Term upheld a finding that a late return was 'innocent', not "
+            "willful (Prando). The 'should have known' formula in the prevailing-wage cases goes to knowledge of the "
+            "law, not to accidental failures. The rule file's effect keeps 'more than inadvertence or accident'; the "
+            "walk drops it."),
+        "correct_rule": (
+            "NY:ADJ-willful-standard (restate). Willful = a knowing, intentional or deliberate failure, or reckless "
+            "disregard of the statute; negligence and inadvertence are not willful (Karole, applying McLaughlin v "
+            "Richland Shoe; Prando, App Term 2d). Knowledge of the law is charged to an experienced landlord or its "
+            "managing agent and imputed to the owner, so a deliberate choice to keep the deposit without a timely "
+            "written statement is willful whatever the landlord's reading of the law (Karole; Bogom-Shanon). A miss "
+            "caused by an inadvertent error despite a working process (misdated send, a failed delivery, an unknown "
+            "fact such as the tenant's new address) is not willful, even for a manager. The amount is discretionary "
+            "'up to' twice the deposit. The tenant proves willfulness; it is a finding of fact."),
+        "evidence": [
+            {"source_file": S + "NY_CASE_Karole_v_340WEnd_2022.txt",
+             "quote": "it is generally understood to refer to conduct that is not merely negligent"},
+            {"source_file": S + "NY_CASE_Karole_v_340WEnd_2022.txt",
+             "quote": "requires more than inadvertence"},
+            {"source_file": S + "NY_CASE_Prando_v_Kelly_2021.txt",
+             "quote": "not willful, and, thus, that punitive damages were not warranted"},
+            {"source_file": W,
+             "quote": "\"Willful\" means the landlord knew or should have known its conduct broke the law"},
+        ],
+    },
+    {
+        "id": "R2-06",
+        "kind": "gap",
+        "severity": "major",
+        "rule_ids": ["NY:RPL-227-e", "NY:RPL-227-e-waiver", "NY:RPL-235-c", "NY:ADJ-no-fee-retention",
+                     "NY:GOL-7-108(1-a)(b)-refundable"],
+        "step": "3.3, 5.2; test case C6",
+        "finding": (
+            "Many NYC leases carry an early-termination ('lease break') charge or a liquidated-damages clause. The "
+            "walk reaches such clauses only through unconscionability (RPL 235-c), which is the wrong primary test "
+            "and gives the operator no rule. The Court of Appeals test for liquidated damages decides whether the "
+            "charge is owed at all, and RPL 227-e decides whether it can displace mitigation."),
+        "correct_rule": (
+            "NY:CASE-liquidated-damages-lease (new, MIXED). Condition: the lease fixes a sum payable on early "
+            "departure. Effect: (a) the clause is enforceable only if, when the lease was made, the sum bore a "
+            "reasonable proportion to the probable loss and the actual loss was difficult to estimate; a sum plainly "
+            "disproportionate to the probable loss is a penalty and unenforceable, and the landlord is left to "
+            "proven damages (Truck Rent-A-Center, as restated in JMD Holding, Court of Appeals 2005); (b) a clause "
+            "that makes the tenant pay rent for the rest of the term whatever the landlord does to relet, or "
+            "otherwise exempts the landlord from mitigation, is void (RPL 227-e); (c) an enforceable liquidated sum "
+            "is damages, not rent, a utility charge or damage to the unit, so it is not retained from the deposit "
+            "under 7-108(1-a)(b) and is pursued as a claim (NY:ADJ-no-fee-retention reasoning); (d) it is not a "
+            "FARE Act 'fee' because it is not a charge for services (NYC:FARE-damages-rent-not-fees). Judgment on "
+            "proportionality."),
+        "evidence": [
+            {"source_file": S + "REVIEW2_NY_CASE_JMD_Holding_v_Congress_2005_CoA.txt",
+             "quote": "A contractual provision fixing damages in the event of breach will be sustained if the amount liquidated bears a reasonable proportion to the probable loss and the amount of actual loss is incapable or difficult of precise estimation."},
+            {"source_file": S + "REVIEW2_NY_CASE_JMD_Holding_v_Congress_2005_CoA.txt",
+             "quote": "If, however, the amount fixed is plainly or grossly disproportionate to the probable loss, the provision calls for a penalty and will not be enforced"},
+            {"source_file": S + "NY_RPL_227-E.txt",
+             "quote": "Any provision in a lease that exempts a landlord's duty to mitigate damages under this section shall be void as contrary to public policy."},
+            {"source_file": W,
+             "quote": "A court may refuse to enforce an unconscionable clause (for example a move-out fee or cleaning schedule)"},
+        ],
+    },
+    {
+        "id": "R2-07",
+        "kind": "gap",
+        "severity": "major",
+        "rule_ids": ["NY:GOL-7-108(1-a)(b)-refundable", "NY:GOL-7-108(1-a)(e)", "NY:RPL-227-e",
+                     "NY:CASE-Gelbart-rent-offset"],
+        "step": "3.3, 5.5, 6.1; test case C6",
+        "finding": (
+            "When a tenant leaves before the lease ends, the operator must decide at day 14 how much rent the deposit "
+            "may cover. No rule says. The walk (C6) says only that the clock runs from vacating. The statute lets "
+            "the landlord retain the reasonable, itemized cost 'due to non-payment of rent' and return the rest "
+            "within 14 days; rent for months that have not yet fallen due has not gone unpaid, and holding the "
+            "deposit against it would defeat the 14-day return. The Appellate Term allowed an offset of rent that "
+            "accrued after vacating up to the day the new tenant's lease began."),
+        "correct_rule": (
+            "NY:ADJ-early-departure-rent-retention (new, RULE). Condition: tenant vacated before the lease ended; "
+            "unit under 7-108(1-a). Effect: the 14-day statement may retain rent that fell due under the lease and "
+            "was unpaid by the date the statement is sent, including rent falling due after vacating, but only for "
+            "periods before a new tenant's lease took effect (RPL 227-e ends the old lease then; Kunik, App Term 2d "
+            "2023). Rent for periods not yet due on the statement date may not be retained; it is claimed later "
+            "against the tenant, subject to mitigation and the landlord's burden (RPL 227-e). The balance of the "
+            "deposit is returned within the 14 days."),
+        "evidence": [
+            {"source_file": S + "NY_GOL_7-108_nysenate.txt",
+             "quote": "shall return any remaining portion of the deposit to the tenant"},
+            {"source_file": S + "REVIEW2_NY_CASE_Kunik_v_ClubAtPearlRiver_2023_AppTerm2d.txt",
+             "quote": "plaintiffs remained liable for rent from July 1, 2021 to July 14, 2021, which amount defendant could offset from the security"},
+            {"source_file": W,
+             "quote": "The deposit clock still runs from vacating."},
+        ],
+    },
+    {
+        "id": "R2-08",
+        "kind": "gap",
+        "severity": "minor",
+        "rule_ids": ["NY:COMMONLAW-NYC-monthly-tenant-surrender", "NY:RPL-232-c"],
+        "step": "3.2",
+        "finding": (
+            "RPL 232 is not atomized (it is absent from NY.json's read and out lists). In New York City an occupancy "
+            "agreement that does not specify its duration runs until the next October 1. It fixes when an oral or "
+            "open-ended tenancy (common with small owners) ends and how much rent is owed if the tenant leaves "
+            "earlier; only after acceptance of rent past that date does the month-to-month rule of 232-c and T.I.B. "
+            "take over."),
+        "correct_rule": (
+            "NY:RPL-232 (new, RULE). Condition: NYC unit; the agreement for occupancy does not particularly specify "
+            "its duration. Effect: the tenancy continues until the first October 1 after possession began; rent runs "
+            "to that date, subject to mitigation if the tenant leaves early (RPL 227-e); a holdover after it with "
+            "rent accepted is month to month (RPL 232-c)."),
+        "evidence": [
+            {"source_file": S + "REVIEW2_NY_RPL_232_nysenate.txt",
+             "quote": "shall be deemed to continue until the first day of October next after the possession commences under the agreement."},
+        ],
+    },
+    {
+        "id": "R2-09",
+        "kind": "gap",
+        "severity": "minor",
+        "rule_ids": ["NY:OSC-MS11-refunds-due", "NY:ABP-1315(2)"],
+        "step": "6.8; test case C9",
+        "finding": (
+            "Before an unclaimed refund is reported to the Comptroller, the holder must mail the owner a due-"
+            "diligence notice, and a second one by certified mail when the amount exceeds $1,000. No rule states "
+            "this. The notice is excused when the holder has no address or its only address is known not to be "
+            "current, which is the C9 facts (vacated unit), but not when a refund check sent to a forwarding address "
+            "goes uncashed."),
+        "correct_rule": (
+            "NY:ABP-1422 (new, RULE). Condition: an unclaimed deposit refund is to be reported under ABP 1315. "
+            "Effect: not less than 90 days before the reporting date, send the tenant written notice by first-class "
+            "mail at the address in the holder's records; if the amount exceeds $1,000, send a second notice by "
+            "certified mail, return receipt requested, not less than 60 days before the reporting date. Not required "
+            "where the holder has no address or can show its only address is not the tenant's current address, or "
+            "(second notice) where the tenant claimed or the first notice came back undeliverable."),
+        "evidence": [
+            {"source_file": S + "REVIEW2_NY_ABP_1422_justia.txt",
+             "quote": "not less than ninety days prior to the applicable reporting date for such unclaimed property, a written notice by first-class mail"},
+            {"source_file": S + "REVIEW2_NY_ABP_1422_justia.txt",
+             "quote": "send a second written notice to the owner by certified mail, return receipt requested"},
+            {"source_file": S + "REVIEW2_NY_ABP_1422_justia.txt",
+             "quote": "the holder can demonstrate that the only address that the holder has pertaining to the owner is not the current address of the owner"},
+        ],
+    },
+    {
+        "id": "R2-10",
+        "kind": "gap",
+        "severity": "minor",
+        "rule_ids": ["NY:ADJ-lease-balance-not-consumer-credit", "NY:GBL-600(1)"],
+        "step": "8.1, 8.3; test case C14",
+        "finding": (
+            "The walk says GBL art. 29-H does not reach a lease balance but is silent on the DFS debt-collection "
+            "regulation (23 NYCRR Part 1), which a third-party collector in C14 would otherwise follow. Its 'debt' "
+            "definition also requires credit extended, so on the files' own ruling it does not apply to a lease "
+            "balance. A proposed amendment (2021, revised 2022) has not been adopted; the current text governs."),
+        "correct_rule": (
+            "NY:23NYCRR-1.1(d)-not-lease (new, RULE). Condition: a third-party collector or debt buyer collects a "
+            "former tenant's lease balance. Effect: 23 NYCRR Part 1 does not apply, because 'debt' there means an "
+            "obligation arising from a transaction in which credit was extended, and a lease balance is not credit "
+            "(same reasoning as NY:ADJ-lease-balance-not-consumer-credit). The FDCPA, Regulation F and the city "
+            "rules apply on their own terms."),
+        "evidence": [
+            {"source_file": S + "REVIEW2_NY_23NYCRR_1.1_justia.txt",
+             "quote": "which arises out of a transaction wherein credit has been extended to a consumer"},
+        ],
+    },
+    {
+        "id": "R2-11",
+        "kind": "misstatement-in-review",
+        "severity": "minor",
+        "rule_ids": ["NY:CPLR-3215(g)(3)"],
+        "step": "8.9",
+        "finding": (
+            "CPLR 3215(g)(3)(iii) exempts the small claims part from the additional-mailing requirement. The walk "
+            "and the rule state the mailing as universal. It still applies in the commercial claims part and in "
+            "plenary Civil Court actions."),
+        "correct_rule": (
+            "NY:CPLR-3215(g)(3) (add branch). The 20-day 'personal and confidential' mailing and affidavit apply to "
+            "a default judgment against a natural person on a contractual obligation, except in the small claims "
+            "part of any court and in summary proceedings."),
+        "evidence": [
+            {"source_file": S + "REVIEW1_NY_CPLR_3215_justia.txt",
+             "quote": "This requirement shall not apply to cases in the small claims part of any court"},
+        ],
+    },
+    {
+        "id": "R2-12",
+        "kind": "stale-source",
+        "severity": "minor",
+        "rule_ids": ["NYC:ADC-27-2107(b)-rent-stay", "NYC:ADC-27-2097-registration"],
+        "step": "1.8, 8.10",
+        "finding": (
+            "Provenance defect in rules added after review 1. The two HPD rules carry source_url "
+            "codelibrary ...0-0-0-60000 while the saved files were cut from XML sections 0-0-0-61160 (27-2097) and "
+            "0-0-0-61209 (27-2107). The wording matches, so no rule changes. (CPLR 3215 and RPL 211 rest on Justia "
+            "copies; nysenate.gov still returns 'not found' for both on 2026-09-29, so that choice stands, and the "
+            "instrument field says so.)"),
+        "correct_rule": "Re-point each HPD rule's source_url to the section actually saved.",
+        "evidence": [
+            {"source_file": S + "REVIEW1_NYC_ADC_27-2107.txt",
+             "quote": "SOURCE: https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCadmin/0-0-0-61209"},
+            {"source_file": "stage-a/NYC.json",
+             "quote": "https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCadmin/0-0-0-60000"},
+        ],
+    },
+    {
+        "id": "R2-13",
+        "kind": "alignment",
+        "severity": "minor",
+        "rule_ids": [],
+        "step": "front matter; 1.5-1.8",
+        "finding": (
+            "The walk asks Owen to accept that the rules are the law 'with nothing missing'; R2-01, R2-02 and R2-06 to "
+            "R2-10 show that is not yet true. It also still says the corrections were 'each verified against its "
+            "source', which is provenance an operator does not need. Step 1 numbers run 1.5, 1.8, 1.6, 1.7. "
+            "Otherwise the walk is plain, ordered by the decision chain and states rules without hedging."),
+        "correct_rule": "Drop the provenance sentence, renumber Step 1, and state acceptance after the listed corrections are applied.",
+        "evidence": [
+            {"source_file": W, "quote": "That these rules are the law for this chain, stated correctly, with nothing missing."},
+        ],
+    },
+]
+
+confirmed = [
+    {"id": "C-forfeiture-debt", "rule_ids": ["NY:ADJ-forfeiture-claims-survive", "NY:CASE-Levine-counterclaim", "NY:CASE-Paterno-rent-survives"],
+     "basis": "Forfeiture takes the right to retain, not the claim: 7-108(1-a)(e) text; Levine (App Term 1st 2026) decided the damage counterclaim on the merits after full return; Paterno (2d Dept) rent survives the 7-103 forfeiture; no contrary decision found."},
+    {"id": "C-14-day-count", "rule_ids": ["NY:GCN-20", "NY:GCN-25-a(1)", "NY:CASE-Cohen-deadline-count"],
+     "basis": "GCN 20 excludes the event day, 25-a rolls a weekend/holiday end; Cohen (2d Dept 2024) counts July 24 -> August 7."},
+    {"id": "C-written-provide", "rule_ids": ["NY:ADJ-provide-written-dispatch", "NY:CASE-Bogom-Shanon-written"],
+     "basis": "Statement must be written (email/text suffice, STT 305(3)); timeliness by date sent (Cohen, Urban counted the send date)."},
+    {"id": "C-address-branches", "rule_ids": ["NY:ADJ-provide-address-branches", "NY:CASE-Pickens-provide"],
+     "basis": "Use a known forwarding address or electronic channel; with none, send to the vacated unit within 14 days; waiting for an address forfeits (Prando upheld forfeiture for an innocent wait)."},
+    {"id": "C-estimates", "rule_ids": ["NY:CASE-Toporek-estimate"],
+     "basis": "Toporek (1st Dept 2022): a timely statement itemizing estimated costs with photos complied; disputes go to trial on the landlord's burden."},
+    {"id": "C-cotenants", "rule_ids": ["NY:ADJ-cotenants-vacated", "NY:ADJ-cotenants-payee"],
+     "basis": "GCN 35 and 7-103(1): clock at last departure (Holmes, App Term 2d); joint refund discharges on payment to one unless records sever shares (Lasky)."},
+    {"id": "C-fees-not-retained", "rule_ids": ["NY:ADJ-no-fee-retention", "NY:RPL-238-a(2)", "NY:RPL-234-a"],
+     "basis": "7-108(1-a)(b) lists four categories exclusively (Colon canon); Freeland (1st Dept 2026) approved retention only by naming rent and utilities; RPL 234-a bars legal fees without a court order."},
+    {"id": "C-painting", "rule_ids": ["NYC:PAINT-wear-and-tear", "NYC:HMC-27-2013(b)(2)"],
+     "basis": "Owner's 3-year repaint duty; Bohl and Blansett (App Term 2d) require proof beyond wear and tear."},
+    {"id": "C-FARE", "rule_ids": ["NYC:FARE-moveout-service-fee", "NYC:FARE-20-699.22(b)"],
+     "basis": "FARE Act in force: 2d Cir. affirmed denial of a preliminary injunction on 2026-07-13 (REBNY v City of New York); a move-out service fee is chargeable only if it was on the signed pre-lease disclosure."},
+    {"id": "C-mtm-surrender", "rule_ids": ["NY:COMMONLAW-NYC-monthly-tenant-surrender", "NY:RPL-232-b"],
+     "basis": "T.I.B. (App Term 1st, aff'd 1st Dept) and Srinivasan (App Term 2d) hold an NYC month-to-month tenant owes no notice; 232-b is limited to outside NYC."},
+    {"id": "C-auto-renewal", "rule_ids": ["NY:GOL-5-905"],
+     "basis": "Statutory text: a renewal clause binds only with the landlord's 15-30 day notice by personal service or registered/certified mail."},
+    {"id": "C-GCE-end", "rule_ids": ["NY:RPL-215", "NY:RPL-212"],
+     "basis": "RPL 215/216: for a covered unit non-renewal without a court finding of good cause does not end the tenancy (subject to R2-04 on the exemption list)."},
+    {"id": "C-interest-rate", "rule_ids": ["NY:CPLR-5004(a)-consumer-2pct", "NY:CASE-NML-contract-rate", "NY:ADJ-lease-interest-on-rent", "NY:CPLR-5001(a)-(b)"],
+     "basis": "CPLR 5004(b) purpose test covers rent (Allen v Whidbee); lease post-maturity rate governs to judgment (NML, Court of Appeals); interest on late rent is a 238-a(2) late charge."},
+    {"id": "C-not-consumer-credit", "rule_ids": ["NY:ADJ-lease-balance-not-consumer-credit"],
+     "basis": "Current law: GBL 600(1) and CPLR 105(f) require credit extended; Romea's analysis; Lefferts over Kings & Queens; the NYC Bar's 2026 report treats rent arrears as outside 214-i (see R2-02 for the pending change)."},
+    {"id": "C-belongings", "rule_ids": ["NY:COMMONLAW-belongings-owner-keeps", "NY:COMMONLAW-belongings-abandonment"],
+     "basis": "Conversion law: no holding for rent (Facey), no bailment without agreement (8902 Corp., 1st Dept), disposal only on abandonment (Cretaro 4th Dept; Henryka App Term 2d)."},
+    {"id": "C-FDCPA-default", "rule_ids": ["US:15USC1692a(6)(F)(iii)-default-meaning", "US:15USC1692a(6)(F)(iii)-moveout-branches"],
+     "basis": "Alibrandi (2d Cir. 2003) rejects default-on-due-date; referral to a self-identified collector declares default; Franceschi applies 'obtained' to a managing agent."},
+    {"id": "C-fiduciary", "rule_ids": ["US:15USC1692a(6)(F)(i)-manager-incidental", "US:15USC1692a(6)(F)(i)-collection-only"],
+     "basis": "Wilson (4th Cir.) and Harris (11th Cir.) incidental-versus-central test; FTC staff commentary on firms collecting overdue rent."},
+    {"id": "C-handoff-configs", "rule_ids": ["US:HANDOFF-config-pre-default", "US:HANDOFF-config-post-default", "US:HANDOFF-config-owner-name-only", "US:HANDOFF-config-principal-purpose", "US:HANDOFF-config-owns-balance"],
+     "basis": "Each configuration follows from 1692a(6) text, Henson, Barbato, Vincent and Maguire as cited."},
+    {"id": "C-DCWP-licensing", "rule_ids": ["NYC:DCA-manager-for-owners", "NYC:DCA-handoff-incidental", "NYC:DCA-handoff-principal-purpose", "NYC:DCA-debt-buyer"],
+     "basis": "Admin Code 20-489(a) joins principal purpose and regular collection for others; buyer clause; (a)(7)(i) fiduciary exclusion."},
+    {"id": "C-SHIELD-date", "rule_ids": ["NYC:SHIELD-operative-date", "NYC:SHIELD-effective-date"],
+     "basis": "City Record notice of 2026-07-22 and DCWP FAQ (2026-08-04) set 2027-01-01; the conforming amendment was still 'Proposed' after the 2026-09-17 hearing."},
+    {"id": "C-bankruptcy", "rule_ids": ["US:11USC362(a)(7)-deposit-is-setoff", "US:CASE-Strumpf-hold", "US:11USC542-refund-payee"],
+     "basis": "Setoff stayed (Sweet N Sour; Malinowski), temporary hold with prompt motion (Strumpf), refund to the chapter 7 trustee under 542(b)."},
+    {"id": "C-small-claims", "rule_ids": ["NY:CCA-1809(1)", "NY:CCA-1801-A(b)", "NY:CCA-1803-A(b)"],
+     "basis": "CCA text: entities barred from small claims; commercial claims consumer-transaction demand letter and five-per-month certificate."},
+    {"id": "C-default-mailing", "rule_ids": ["NY:CPLR-3215(g)(3)", "US:50USC3931(b)(1)"],
+     "basis": "CPLR 3215(g)(3)(i)-(ii) text (subject to the small-claims exception in R2-11); SCRA affidavit."},
+    {"id": "C-HPD-registration-duty", "rule_ids": ["NYC:ADC-27-2097-registration"],
+     "basis": "27-2097(b)(1) and (3): multiple dwellings and non-owner-occupied one- and two-family houses register (consequence corrected in R2-03)."},
+    {"id": "C-cap-interest", "rule_ids": ["NY:GOL-7-108(1-a)(a)", "NY:GOL-7-103(2-a)", "NY:ADJ-7103-2a-building-count", "NY:GOL-7-103(2)-admin-fee"],
+     "basis": "Statutory text; Gihon (2d Dept) building test; 1% administration fee in lieu of all others."},
+    {"id": "C-HCV", "rule_ids": ["US:24CFR982.313(c)", "US:24CFR982.451(b)(4)", "US:24CFR982.311(d)(1)"],
+     "basis": "eCFR text: tenant share only; owner keeps move-out month HAP; no PHA reimbursement."},
+    {"id": "C-C12-date", "rule_ids": ["NY:GCN-24"],
+     "basis": "Computed: 2026-12-11 is a Friday; day 14 is Friday 2026-12-25 (public holiday); Saturday and Sunday follow; due Monday 2026-12-28."},
+]
+
+data = {"reviewer": "independent reviewer 2", "date": "2026-09-29", "findings": findings,
+        "confirmed": confirmed, "first_round": []}
+existing = json.loads(OUT.read_text()) if OUT.exists() else {}
+if existing.get("first_round"):
+    data["first_round"] = existing["first_round"]
+OUT.write_text(json.dumps(data, indent=1, ensure_ascii=False))
+print(len(findings), "findings;", len(confirmed), "confirmed ->", OUT)

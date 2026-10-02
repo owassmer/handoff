@@ -1,0 +1,742 @@
+[
+  {
+    "case_id": "or_entry.j052",
+    "request_hash": "7e002f62efe0e1265a167ec0da434845cb54a6cf96f901c8c6a8dfb89348389b",
+    "identity": {
+      "format": "semantic-wave-1",
+      "plan_hash": "5781822a0846a412bb29f2280bbbbb13e2ed6b935b1b1ea21ab54c96f1f03b8a",
+      "base_url": "https://openrouter.ai/api",
+      "model": "typesafe/jev-1.13",
+      "pinned_build": "typesafe/jev-1.13-20260917",
+      "questions": {
+        "or_entry.j052": {
+          "primitive": "noul",
+          "instructions": "Does the selected source assign the proposed meaning to the selected term within the supplied scope? Judge the complete meaning, including inclusions, exclusions and non-exhaustive qualifiers.",
+          "criteria": {
+            "true": "The complete proposed meaning and scope are assigned by the source.",
+            "false": "The proposed meaning or scope is not assigned."
+          }
+        }
+      },
+      "state": {
+        "selected_text": "(b) In case of an\nemergency, a landlord may enter the dwelling unit or any portion of the\npremises under a tenant’s exclusive control without consent of the tenant,\nwithout notice to the tenant and at any time. “Emergency” includes but is not\nlimited to a repair problem that, unless remedied immediately, is likely to\ncause serious damage to the premises. If a landlord makes an emergency entry in\nthe tenant’s absence, the landlord shall give the tenant actual notice within\n24 hours after the entry, and the notice shall include the fact of the entry,\nthe date and time of the entry, the nature of the emergency and the names of\nthe persons who entered.",
+        "term": "Emergency",
+        "proposed_meaning": "Includes, but is not limited to, a repair problem that unless remedied immediately is likely to cause serious damage to the premises.",
+        "proposed_scope": "ORS90.322(1)(b)",
+        "definition_scope_text": "As\nused in this chapter, unless the context otherwise requires:"
+      },
+      "predecessors": {}
+    },
+    "expected_wire": {
+      "model": "typesafe/jev-1.13",
+      "state": {
+        "selected_text": "(b) In case of an\nemergency, a landlord may enter the dwelling unit or any portion of the\npremises under a tenant’s exclusive control without consent of the tenant,\nwithout notice to the tenant and at any time. “Emergency” includes but is not\nlimited to a repair problem that, unless remedied immediately, is likely to\ncause serious damage to the premises. If a landlord makes an emergency entry in\nthe tenant’s absence, the landlord shall give the tenant actual notice within\n24 hours after the entry, and the notice shall include the fact of the entry,\nthe date and time of the entry, the nature of the emergency and the names of\nthe persons who entered.",
+        "term": "Emergency",
+        "proposed_meaning": "Includes, but is not limited to, a repair problem that unless remedied immediately is likely to cause serious damage to the premises.",
+        "proposed_scope": "ORS90.322(1)(b)",
+        "definition_scope_text": "As\nused in this chapter, unless the context otherwise requires:"
+      },
+      "questions": {
+        "or_entry.j052": {
+          "type": "noul",
+          "instructions": "Does the selected source assign the proposed meaning to the selected term within the supplied scope? Judge the complete meaning, including inclusions, exclusions and non-exhaustive qualifiers.",
+          "criteria": {
+            "true": "The complete proposed meaning and scope are assigned by the source.",
+            "false": "The proposed meaning or scope is not assigned."
+          }
+        }
+      }
+    }
+  },
+  {
+    "case_id": "or_entry.j061+or_entry.j062+or_entry.j063+or_entry.j389",
+    "request_hash": "c505b5f3f3a04b6387bbd9fd463e2fb400b4460e2721d3e52d0948e3fca126bd",
+    "identity": {
+      "format": "semantic-wave-1",
+      "plan_hash": "5781822a0846a412bb29f2280bbbbb13e2ed6b935b1b1ea21ab54c96f1f03b8a",
+      "base_url": "https://openrouter.ai/api",
+      "model": "typesafe/jev-1.13",
+      "pinned_build": "typesafe/jev-1.13-20260917",
+      "questions": {
+        "or_entry.j061": {
+          "primitive": "choice",
+          "instructions": "For the landlord shall give the tenant actual notice, which timing.post entry.interval is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+          "criteria": {
+            "INTERVAL": "{'number': 24, 'unit': 'hours'}",
+            "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+          }
+        },
+        "or_entry.j062": {
+          "primitive": "choice",
+          "instructions": "For the landlord shall give the tenant actual notice, which timing.post entry.relation is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+          "criteria": {
+            "FIXED_AFTER": "The event is legally deemed to occur at this interval after the anchor.",
+            "MINIMUM_AFTER": "A minimum interval after the anchor.",
+            "MINIMUM_BEFORE": "A minimum interval before the anchor.",
+            "MAXIMUM_AFTER": "A deadline no later than this interval after the anchor.",
+            "EXPIRES_AFTER": "An authorization expires after this interval, subject to separate exceptions.",
+            "STRICTLY_BEFORE": "Performance must precede the anchor; equality is not enough.",
+            "NO_LATER_THAN": "Performance can occur at the anchor but not later.",
+            "REASONABLE": "A reasonableness standard rather than a fixed elapsed interval.",
+            "PRESUMPTION": "Only a rebuttable presumption, not a fixed rule.",
+            "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+          }
+        },
+        "or_entry.j063": {
+          "primitive": "choice",
+          "instructions": "For the landlord shall give the tenant actual notice, which timing.post entry.anchor is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+          "criteria": {
+            "ANCHOR": "the emergency entry",
+            "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+          }
+        },
+        "or_entry.j389": {
+          "primitive": "noul",
+          "instructions": "Does the post-entry notice require all of the fact of entry, date, time, emergency nature, and names of entrants rather than a selection of those items?",
+          "criteria": {
+            "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+            "false": "This proposed field or relation is not established; no opposite is inferred."
+          }
+        }
+      },
+      "state": {
+        "selected_text": "(b) In case of an\nemergency, a landlord may enter the dwelling unit or any portion of the\npremises under a tenant’s exclusive control without consent of the tenant,\nwithout notice to the tenant and at any time. “Emergency” includes but is not\nlimited to a repair problem that, unless remedied immediately, is likely to\ncause serious damage to the premises. If a landlord makes an emergency entry in\nthe tenant’s absence, the landlord shall give the tenant actual notice within\n24 hours after the entry, and the notice shall include the fact of the entry,\nthe date and time of the entry, the nature of the emergency and the names of\nthe persons who entered.",
+        "governing_section": "(1) A landlord or, to the extent\nprovided in this section, a landlord’s agent may enter into the tenant’s\ndwelling unit or any portion of the premises under the tenant’s exclusive\ncontrol in order to inspect the premises, make necessary or agreed repairs,\ndecorations, alterations or improvements, supply necessary or agreed services,\nperform agreed yard maintenance or grounds keeping or exhibit the dwelling unit\nto prospective or actual purchasers, mortgagees, tenants, workers or\ncontractors. The right of access of the landlord or landlord’s agent is limited\nas follows:\n(a) A landlord or\nlandlord’s agent may enter upon the premises under the tenant’s exclusive\ncontrol not including the dwelling unit without consent of the tenant and\nwithout notice to the tenant, for the purpose of serving notices required or\npermitted under this chapter, the rental agreement or any provision of\napplicable law.\n(b) In case of an\nemergency, a landlord may enter the dwelling unit or any portion of the\npremises under a tenant’s exclusive control without consent of the tenant,\nwithout notice to the tenant and at any time. “Emergency” includes but is not\nlimited to a repair problem that, unless remedied immediately, is likely to\ncause serious damage to the premises. If a landlord makes an emergency entry in\nthe tenant’s absence, the landlord shall give the tenant actual notice within\n24 hours after the entry, and the notice shall include the fact of the entry,\nthe date and time of the entry, the nature of the emergency and the names of\nthe persons who entered.\n(c) If the tenant\nrequests repairs or maintenance in writing, the landlord or landlord’s agent,\nwithout further notice, may enter upon demand, in the tenant’s absence or\nwithout the tenant’s consent, for the purpose of making the requested repairs\nuntil the repairs are completed. The tenant’s written request may specify\nallowable times. Otherwise, the entry must be at a reasonable time. The\nauthorization to enter provided by the tenant’s written request expires after\nseven days, unless the repairs are in progress and the landlord or landlord’s\nagent is making a reasonable effort to complete the repairs in a timely manner.\nIf the person entering to do the repairs is not the landlord, upon request of\nthe tenant, the person must show the tenant written evidence from the landlord\nauthorizing that person to act for the landlord in making the repairs.\n(d) A landlord\nand tenant may agree that the landlord or the landlord’s agent may enter the\ndwelling unit and the premises without notice at reasonable times for the\npurpose of showing the premises to a prospective buyer, provided that the\nagreement:\n(A) Is executed\nat a time when the landlord is actively engaged in attempts to sell the\npremises;\n(B) Is reflected\nin a writing separate from the rental agreement and signed by both parties; and\n(C) Is supported\nby separate consideration recited in the agreement.\n(e)(A) If a\nwritten agreement requires the landlord to perform yard maintenance or grounds\nkeeping for the premises:\n(i) A landlord\nand tenant may agree that the landlord or landlord’s agent may enter for that\npurpose upon the premises under the tenant’s exclusive control not including\nthe dwelling unit, without notice to the tenant, at reasonable times and with\nreasonable frequency. The terms of the right of entry must be described in the\nrental agreement or in a separate written agreement.\n(ii) A tenant may\ndeny consent for a landlord or landlord’s agent to enter upon the premises\npursuant to this paragraph if the entry is at an unreasonable time or with\nunreasonable frequency. The tenant must assert the denial by giving actual\nnotice of the denial to the landlord or landlord’s agent prior to, or at the\ntime of, the attempted entry.\n(B) As used in\nthis paragraph:\n(i) “Yard\nmaintenance or grounds keeping” includes, but is not limited to, weeding,\nmowing grass and pruning trees and shrubs.\n(ii) “Unreasonable\ntime” refers to a time of day, day of the week or particular time that\nconflicts with the tenant’s reasonable and specific plans to use the premises.\n(f) In all other\ncases, unless there is an agreement between the landlord and the tenant to the\ncontrary regarding a specific entry, the landlord shall give the tenant at\nleast 24 hours’ actual notice of the intent of the landlord to enter and the\nlandlord or landlord’s agent may enter only at reasonable times. The landlord\nor landlord’s agent may not enter if the tenant, after receiving the landlord’s\nnotice, denies consent to enter. The tenant must assert this denial of consent\nby giving actual notice of the denial to the landlord or the landlord’s agent\nor by attaching a written notice of the denial in a secure manner to the main\nentrance to that portion of the premises or dwelling unit of which the tenant\nhas exclusive control, prior to or at the time of the attempt by the landlord\nor landlord’s agent to enter.\n(2) A landlord\nmay not abuse the right of access or use it to harass the tenant. A tenant may\nnot unreasonably withhold consent from the landlord to enter.\n(3) This section\ndoes not apply to tenancies consisting of a rental of space in a facility for a\nmanufactured dwelling or floating home under ORS 90.505 to 90.850.\n(4) If a tenancy\nconsists of rented space for a manufactured dwelling or floating home that is\nowned by the tenant, but the tenancy is not subject to ORS 90.505 to 90.850\nbecause the space is not in a facility, this section shall allow access only to\nthe rented space and not to the dwelling or home.\n(5) A landlord\nhas no other right of access except:\n(a) Pursuant to\ncourt order;\n(b) As permitted\nby ORS 90.410 (2); or\n(c) When the\ntenant has abandoned or relinquished the premises.\n(6) If a landlord\nis required by a governmental agency to enter a dwelling unit or any portion of\nthe premises under a tenant’s exclusive control, but the landlord fails to gain\nentry after a good faith effort in compliance with this section, the landlord\nmay not be found in violation of any state statute or local ordinance due to\nthe failure.\n(7) If the tenant\nrefuses to allow lawful access, the landlord may obtain injunctive relief to\ncompel access or may terminate the rental agreement under ORS 90.392 and take\npossession as provided in ORS 105.100 to 105.168. In addition, the landlord may\nrecover actual damages.\n(8) If the\nlandlord makes an unlawful entry or a lawful entry in an unreasonable manner or\nmakes repeated demands for entry otherwise lawful but that have the effect of\nunreasonably harassing the tenant, the tenant may obtain injunctive relief to\nprevent the reoccurrence of the conduct or may terminate the rental agreement\npursuant to ORS 90.360 (1). In addition, the tenant may recover actual damages\nnot less than an amount equal to one week’s rent in the case of a week-to-week\ntenancy or one month’s rent in all other cases."
+      },
+      "predecessors": {}
+    },
+    "expected_wire": {
+      "model": "typesafe/jev-1.13",
+      "state": {
+        "selected_text": "(b) In case of an\nemergency, a landlord may enter the dwelling unit or any portion of the\npremises under a tenant’s exclusive control without consent of the tenant,\nwithout notice to the tenant and at any time. “Emergency” includes but is not\nlimited to a repair problem that, unless remedied immediately, is likely to\ncause serious damage to the premises. If a landlord makes an emergency entry in\nthe tenant’s absence, the landlord shall give the tenant actual notice within\n24 hours after the entry, and the notice shall include the fact of the entry,\nthe date and time of the entry, the nature of the emergency and the names of\nthe persons who entered.",
+        "governing_section": "(1) A landlord or, to the extent\nprovided in this section, a landlord’s agent may enter into the tenant’s\ndwelling unit or any portion of the premises under the tenant’s exclusive\ncontrol in order to inspect the premises, make necessary or agreed repairs,\ndecorations, alterations or improvements, supply necessary or agreed services,\nperform agreed yard maintenance or grounds keeping or exhibit the dwelling unit\nto prospective or actual purchasers, mortgagees, tenants, workers or\ncontractors. The right of access of the landlord or landlord’s agent is limited\nas follows:\n(a) A landlord or\nlandlord’s agent may enter upon the premises under the tenant’s exclusive\ncontrol not including the dwelling unit without consent of the tenant and\nwithout notice to the tenant, for the purpose of serving notices required or\npermitted under this chapter, the rental agreement or any provision of\napplicable law.\n(b) In case of an\nemergency, a landlord may enter the dwelling unit or any portion of the\npremises under a tenant’s exclusive control without consent of the tenant,\nwithout notice to the tenant and at any time. “Emergency” includes but is not\nlimited to a repair problem that, unless remedied immediately, is likely to\ncause serious damage to the premises. If a landlord makes an emergency entry in\nthe tenant’s absence, the landlord shall give the tenant actual notice within\n24 hours after the entry, and the notice shall include the fact of the entry,\nthe date and time of the entry, the nature of the emergency and the names of\nthe persons who entered.\n(c) If the tenant\nrequests repairs or maintenance in writing, the landlord or landlord’s agent,\nwithout further notice, may enter upon demand, in the tenant’s absence or\nwithout the tenant’s consent, for the purpose of making the requested repairs\nuntil the repairs are completed. The tenant’s written request may specify\nallowable times. Otherwise, the entry must be at a reasonable time. The\nauthorization to enter provided by the tenant’s written request expires after\nseven days, unless the repairs are in progress and the landlord or landlord’s\nagent is making a reasonable effort to complete the repairs in a timely manner.\nIf the person entering to do the repairs is not the landlord, upon request of\nthe tenant, the person must show the tenant written evidence from the landlord\nauthorizing that person to act for the landlord in making the repairs.\n(d) A landlord\nand tenant may agree that the landlord or the landlord’s agent may enter the\ndwelling unit and the premises without notice at reasonable times for the\npurpose of showing the premises to a prospective buyer, provided that the\nagreement:\n(A) Is executed\nat a time when the landlord is actively engaged in attempts to sell the\npremises;\n(B) Is reflected\nin a writing separate from the rental agreement and signed by both parties; and\n(C) Is supported\nby separate consideration recited in the agreement.\n(e)(A) If a\nwritten agreement requires the landlord to perform yard maintenance or grounds\nkeeping for the premises:\n(i) A landlord\nand tenant may agree that the landlord or landlord’s agent may enter for that\npurpose upon the premises under the tenant’s exclusive control not including\nthe dwelling unit, without notice to the tenant, at reasonable times and with\nreasonable frequency. The terms of the right of entry must be described in the\nrental agreement or in a separate written agreement.\n(ii) A tenant may\ndeny consent for a landlord or landlord’s agent to enter upon the premises\npursuant to this paragraph if the entry is at an unreasonable time or with\nunreasonable frequency. The tenant must assert the denial by giving actual\nnotice of the denial to the landlord or landlord’s agent prior to, or at the\ntime of, the attempted entry.\n(B) As used in\nthis paragraph:\n(i) “Yard\nmaintenance or grounds keeping” includes, but is not limited to, weeding,\nmowing grass and pruning trees and shrubs.\n(ii) “Unreasonable\ntime” refers to a time of day, day of the week or particular time that\nconflicts with the tenant’s reasonable and specific plans to use the premises.\n(f) In all other\ncases, unless there is an agreement between the landlord and the tenant to the\ncontrary regarding a specific entry, the landlord shall give the tenant at\nleast 24 hours’ actual notice of the intent of the landlord to enter and the\nlandlord or landlord’s agent may enter only at reasonable times. The landlord\nor landlord’s agent may not enter if the tenant, after receiving the landlord’s\nnotice, denies consent to enter. The tenant must assert this denial of consent\nby giving actual notice of the denial to the landlord or the landlord’s agent\nor by attaching a written notice of the denial in a secure manner to the main\nentrance to that portion of the premises or dwelling unit of which the tenant\nhas exclusive control, prior to or at the time of the attempt by the landlord\nor landlord’s agent to enter.\n(2) A landlord\nmay not abuse the right of access or use it to harass the tenant. A tenant may\nnot unreasonably withhold consent from the landlord to enter.\n(3) This section\ndoes not apply to tenancies consisting of a rental of space in a facility for a\nmanufactured dwelling or floating home under ORS 90.505 to 90.850.\n(4) If a tenancy\nconsists of rented space for a manufactured dwelling or floating home that is\nowned by the tenant, but the tenancy is not subject to ORS 90.505 to 90.850\nbecause the space is not in a facility, this section shall allow access only to\nthe rented space and not to the dwelling or home.\n(5) A landlord\nhas no other right of access except:\n(a) Pursuant to\ncourt order;\n(b) As permitted\nby ORS 90.410 (2); or\n(c) When the\ntenant has abandoned or relinquished the premises.\n(6) If a landlord\nis required by a governmental agency to enter a dwelling unit or any portion of\nthe premises under a tenant’s exclusive control, but the landlord fails to gain\nentry after a good faith effort in compliance with this section, the landlord\nmay not be found in violation of any state statute or local ordinance due to\nthe failure.\n(7) If the tenant\nrefuses to allow lawful access, the landlord may obtain injunctive relief to\ncompel access or may terminate the rental agreement under ORS 90.392 and take\npossession as provided in ORS 105.100 to 105.168. In addition, the landlord may\nrecover actual damages.\n(8) If the\nlandlord makes an unlawful entry or a lawful entry in an unreasonable manner or\nmakes repeated demands for entry otherwise lawful but that have the effect of\nunreasonably harassing the tenant, the tenant may obtain injunctive relief to\nprevent the reoccurrence of the conduct or may terminate the rental agreement\npursuant to ORS 90.360 (1). In addition, the tenant may recover actual damages\nnot less than an amount equal to one week’s rent in the case of a week-to-week\ntenancy or one month’s rent in all other cases."
+      },
+      "questions": {
+        "or_entry.j061": {
+          "type": "choice",
+          "instructions": "For the landlord shall give the tenant actual notice, which timing.post entry.interval is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+          "criteria": {
+            "INTERVAL": "{'number': 24, 'unit': 'hours'}",
+            "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+          }
+        },
+        "or_entry.j062": {
+          "type": "choice",
+          "instructions": "For the landlord shall give the tenant actual notice, which timing.post entry.relation is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+          "criteria": {
+            "FIXED_AFTER": "The event is legally deemed to occur at this interval after the anchor.",
+            "MINIMUM_AFTER": "A minimum interval after the anchor.",
+            "MINIMUM_BEFORE": "A minimum interval before the anchor.",
+            "MAXIMUM_AFTER": "A deadline no later than this interval after the anchor.",
+            "EXPIRES_AFTER": "An authorization expires after this interval, subject to separate exceptions.",
+            "STRICTLY_BEFORE": "Performance must precede the anchor; equality is not enough.",
+            "NO_LATER_THAN": "Performance can occur at the anchor but not later.",
+            "REASONABLE": "A reasonableness standard rather than a fixed elapsed interval.",
+            "PRESUMPTION": "Only a rebuttable presumption, not a fixed rule.",
+            "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+          }
+        },
+        "or_entry.j063": {
+          "type": "choice",
+          "instructions": "For the landlord shall give the tenant actual notice, which timing.post entry.anchor is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+          "criteria": {
+            "ANCHOR": "the emergency entry",
+            "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+          }
+        },
+        "or_entry.j389": {
+          "type": "noul",
+          "instructions": "Does the post-entry notice require all of the fact of entry, date, time, emergency nature, and names of entrants rather than a selection of those items?",
+          "criteria": {
+            "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+            "false": "This proposed field or relation is not established; no opposite is inferred."
+          }
+        }
+      }
+    }
+  },
+  {
+    "case_id": "or_entry.j166",
+    "request_hash": "cc474b0449716b81705a544ad6219bb277b778558d1dfa5653a7c23373e3b26e",
+    "identity": {
+      "format": "semantic-wave-1",
+      "plan_hash": "5781822a0846a412bb29f2280bbbbb13e2ed6b935b1b1ea21ab54c96f1f03b8a",
+      "base_url": "https://openrouter.ai/api",
+      "model": "typesafe/jev-1.13",
+      "pinned_build": "typesafe/jev-1.13-20260917",
+      "questions": {
+        "or_entry.j166": {
+          "primitive": "noul",
+          "instructions": "Does the selected source assign the proposed meaning to the selected term within the supplied scope? Judge the complete meaning, including inclusions, exclusions and non-exhaustive qualifiers.",
+          "criteria": {
+            "true": "The complete proposed meaning and scope are assigned by the source.",
+            "false": "The proposed meaning or scope is not assigned."
+          }
+        }
+      },
+      "state": {
+        "selected_text": "(e)(A) If a\nwritten agreement requires the landlord to perform yard maintenance or grounds\nkeeping for the premises:\n(i) A landlord\nand tenant may agree that the landlord or landlord’s agent may enter for that\npurpose upon the premises under the tenant’s exclusive control not including\nthe dwelling unit, without notice to the tenant, at reasonable times and with\nreasonable frequency. The terms of the right of entry must be described in the\nrental agreement or in a separate written agreement.\n(ii) A tenant may\ndeny consent for a landlord or landlord’s agent to enter upon the premises\npursuant to this paragraph if the entry is at an unreasonable time or with\nunreasonable frequency. The tenant must assert the denial by giving actual\nnotice of the denial to the landlord or landlord’s agent prior to, or at the\ntime of, the attempted entry.\n(B) As used in\nthis paragraph:\n(i) “Yard\nmaintenance or grounds keeping” includes, but is not limited to, weeding,\nmowing grass and pruning trees and shrubs.\n(ii) “Unreasonable\ntime” refers to a time of day, day of the week or particular time that\nconflicts with the tenant’s reasonable and specific plans to use the premises.",
+        "term": "Yard maintenance or grounds keeping",
+        "proposed_meaning": "Includes but is not limited to weeding, mowing grass, and pruning trees and shrubs.",
+        "proposed_scope": "ORS90.322(1)(e)",
+        "definition_scope_text": "As\nused in this chapter, unless the context otherwise requires:"
+      },
+      "predecessors": {}
+    },
+    "expected_wire": {
+      "model": "typesafe/jev-1.13",
+      "state": {
+        "selected_text": "(e)(A) If a\nwritten agreement requires the landlord to perform yard maintenance or grounds\nkeeping for the premises:\n(i) A landlord\nand tenant may agree that the landlord or landlord’s agent may enter for that\npurpose upon the premises under the tenant’s exclusive control not including\nthe dwelling unit, without notice to the tenant, at reasonable times and with\nreasonable frequency. The terms of the right of entry must be described in the\nrental agreement or in a separate written agreement.\n(ii) A tenant may\ndeny consent for a landlord or landlord’s agent to enter upon the premises\npursuant to this paragraph if the entry is at an unreasonable time or with\nunreasonable frequency. The tenant must assert the denial by giving actual\nnotice of the denial to the landlord or landlord’s agent prior to, or at the\ntime of, the attempted entry.\n(B) As used in\nthis paragraph:\n(i) “Yard\nmaintenance or grounds keeping” includes, but is not limited to, weeding,\nmowing grass and pruning trees and shrubs.\n(ii) “Unreasonable\ntime” refers to a time of day, day of the week or particular time that\nconflicts with the tenant’s reasonable and specific plans to use the premises.",
+        "term": "Yard maintenance or grounds keeping",
+        "proposed_meaning": "Includes but is not limited to weeding, mowing grass, and pruning trees and shrubs.",
+        "proposed_scope": "ORS90.322(1)(e)",
+        "definition_scope_text": "As\nused in this chapter, unless the context otherwise requires:"
+      },
+      "questions": {
+        "or_entry.j166": {
+          "type": "noul",
+          "instructions": "Does the selected source assign the proposed meaning to the selected term within the supplied scope? Judge the complete meaning, including inclusions, exclusions and non-exhaustive qualifiers.",
+          "criteria": {
+            "true": "The complete proposed meaning and scope are assigned by the source.",
+            "false": "The proposed meaning or scope is not assigned."
+          }
+        }
+      }
+    }
+  },
+  {
+    "case_id": "or_entry.j317",
+    "request_hash": "aa399cb5d3cb63e276780c066abcbc76426d0a5f0ff6247a162ddc4873a189ff",
+    "identity": {
+      "format": "semantic-wave-1",
+      "plan_hash": "5781822a0846a412bb29f2280bbbbb13e2ed6b935b1b1ea21ab54c96f1f03b8a",
+      "base_url": "https://openrouter.ai/api",
+      "model": "typesafe/jev-1.13",
+      "pinned_build": "typesafe/jev-1.13-20260917",
+      "questions": {
+        "or_entry.j317": {
+          "primitive": "noul",
+          "instructions": "Does the selected source assign the proposed meaning to the selected term within the supplied scope? Judge the complete meaning, including inclusions, exclusions and non-exhaustive qualifiers.",
+          "criteria": {
+            "true": "The complete proposed meaning and scope are assigned by the source.",
+            "false": "The proposed meaning or scope is not assigned."
+          }
+        }
+      },
+      "state": {
+        "selected_text": "(41)(a) “Rent”\nmeans any payment to be made to the landlord under the rental agreement,\nperiodic or otherwise, in exchange for the right of a tenant and any permitted\npet to occupy a dwelling unit to the exclusion of others and to use the\npremises.\n(b) “Rent” does\nnot include security deposits, fees or utility or service charges as described\nin ORS 90.315 (4) and 90.562.",
+        "term": "Rent",
+        "proposed_meaning": "(41)(a) “Rent”\nmeans any payment to be made to the landlord under the rental agreement,\nperiodic or otherwise, in exchange for the right of a tenant and any permitted\npet to occupy a dwelling unit to the exclusion of others and to use the\npremises.\n(b) “Rent” does\nnot include security deposits, fees or utility or service charges as described\nin ORS 90.315 (4) and 90.562.",
+        "proposed_scope": "Chapter90 unless context otherwise requires; preserve special subpart qualifiers in this definition",
+        "definition_scope_text": "As\nused in this chapter, unless the context otherwise requires:"
+      },
+      "predecessors": {}
+    },
+    "expected_wire": {
+      "model": "typesafe/jev-1.13",
+      "state": {
+        "selected_text": "(41)(a) “Rent”\nmeans any payment to be made to the landlord under the rental agreement,\nperiodic or otherwise, in exchange for the right of a tenant and any permitted\npet to occupy a dwelling unit to the exclusion of others and to use the\npremises.\n(b) “Rent” does\nnot include security deposits, fees or utility or service charges as described\nin ORS 90.315 (4) and 90.562.",
+        "term": "Rent",
+        "proposed_meaning": "(41)(a) “Rent”\nmeans any payment to be made to the landlord under the rental agreement,\nperiodic or otherwise, in exchange for the right of a tenant and any permitted\npet to occupy a dwelling unit to the exclusion of others and to use the\npremises.\n(b) “Rent” does\nnot include security deposits, fees or utility or service charges as described\nin ORS 90.315 (4) and 90.562.",
+        "proposed_scope": "Chapter90 unless context otherwise requires; preserve special subpart qualifiers in this definition",
+        "definition_scope_text": "As\nused in this chapter, unless the context otherwise requires:"
+      },
+      "questions": {
+        "or_entry.j317": {
+          "type": "noul",
+          "instructions": "Does the selected source assign the proposed meaning to the selected term within the supplied scope? Judge the complete meaning, including inclusions, exclusions and non-exhaustive qualifiers.",
+          "criteria": {
+            "true": "The complete proposed meaning and scope are assigned by the source.",
+            "false": "The proposed meaning or scope is not assigned."
+          }
+        }
+      }
+    }
+  },
+  {
+    "case_id": "ca_return.j027+ca_return.j028+ca_return.j029+ca_return.j030",
+    "request_hash": "2ba79cb3eb51cac75d92a632ab4cd3b036308027b12ea32efd12d242285c5ac3",
+    "identity": {
+      "format": "semantic-wave-1",
+      "plan_hash": "7a54f315305d1a22aefb4c5d0f9a17c098ccd342f7abddd368fd9ee7f631200e",
+      "base_url": "https://openrouter.ai/api",
+      "model": "typesafe/jev-1.13",
+      "pinned_build": "typesafe/jev-1.13-20260917",
+      "questions": {
+        "ca_return.j027": {
+          "primitive": "noul",
+          "instructions": "Does the selected text express this proposed condition for the selected rule: Property was not released under subdivision(a).? Distinguish the condition’s textual role from whether it holds in a real case.",
+          "criteria": {
+            "true": "This condition is expressed with the stated actor, scope and polarity.",
+            "false": "This condition, scope or polarity is not expressed."
+          }
+        },
+        "ca_return.j028": {
+          "primitive": "noul",
+          "instructions": "Does the selected text express this proposed condition for the selected rule: Notice stated property would be sold at public sale.? Distinguish the condition’s textual role from whether it holds in a real case.",
+          "criteria": {
+            "true": "This condition is expressed with the stated actor, scope and polarity.",
+            "false": "This condition, scope or polarity is not expressed."
+          }
+        },
+        "ca_return.j029": {
+          "primitive": "noul",
+          "instructions": "Does the selected text express this proposed condition for the selected rule: Former tenant claims before it is sold.? Distinguish the condition’s textual role from whether it holds in a real case.",
+          "criteria": {
+            "true": "This condition is expressed with the stated actor, scope and polarity.",
+            "false": "This condition, scope or polarity is not expressed."
+          }
+        },
+        "ca_return.j030": {
+          "primitive": "noul",
+          "instructions": "Does the selected text express this proposed condition for the selected rule: Former tenant pays required reasonable storage, advertising and sale costs incurred before withdrawal from sale.? Distinguish the condition’s textual role from whether it holds in a real case.",
+          "criteria": {
+            "true": "This condition is expressed with the stated actor, scope and polarity.",
+            "false": "This condition, scope or polarity is not expressed."
+          }
+        }
+      },
+      "state": {
+        "selected_text": "(b) Where personal\nproperty is not released pursuant to subdivision (a) and the notice stated that the personal property would be sold at a public sale, the landlord shall release the personal property to the former tenant if he or she claims it prior to the time it is sold and pays the reasonable cost of storage, advertising, and sale incurred prior to the time the property is withdrawn from sale.",
+        "governing_section": "(a) The personal property described in the notice shall be released by the landlord to the former tenant or, at the landlord’s option, to any person reasonably believed by the landlord to be its owner if that tenant or other person pays the reasonable cost of storage and takes possession of the property not later than the date specified in the notice for taking possession.\n(b) Where personal\nproperty is not released pursuant to subdivision (a) and the notice stated that the personal property would be sold at a public sale, the landlord shall release the personal property to the former tenant if he or she claims it prior to the time it is sold and pays the reasonable cost of storage, advertising, and sale incurred prior to the time the property is withdrawn from sale.\n(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling.",
+        "selected_expression": "the landlord shall release the personal property"
+      },
+      "predecessors": {}
+    },
+    "expected_wire": {
+      "model": "typesafe/jev-1.13",
+      "state": {
+        "selected_text": "(b) Where personal\nproperty is not released pursuant to subdivision (a) and the notice stated that the personal property would be sold at a public sale, the landlord shall release the personal property to the former tenant if he or she claims it prior to the time it is sold and pays the reasonable cost of storage, advertising, and sale incurred prior to the time the property is withdrawn from sale.",
+        "governing_section": "(a) The personal property described in the notice shall be released by the landlord to the former tenant or, at the landlord’s option, to any person reasonably believed by the landlord to be its owner if that tenant or other person pays the reasonable cost of storage and takes possession of the property not later than the date specified in the notice for taking possession.\n(b) Where personal\nproperty is not released pursuant to subdivision (a) and the notice stated that the personal property would be sold at a public sale, the landlord shall release the personal property to the former tenant if he or she claims it prior to the time it is sold and pays the reasonable cost of storage, advertising, and sale incurred prior to the time the property is withdrawn from sale.\n(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling.",
+        "selected_expression": "the landlord shall release the personal property"
+      },
+      "questions": {
+        "ca_return.j027": {
+          "type": "noul",
+          "instructions": "Does the selected text express this proposed condition for the selected rule: Property was not released under subdivision(a).? Distinguish the condition’s textual role from whether it holds in a real case.",
+          "criteria": {
+            "true": "This condition is expressed with the stated actor, scope and polarity.",
+            "false": "This condition, scope or polarity is not expressed."
+          }
+        },
+        "ca_return.j028": {
+          "type": "noul",
+          "instructions": "Does the selected text express this proposed condition for the selected rule: Notice stated property would be sold at public sale.? Distinguish the condition’s textual role from whether it holds in a real case.",
+          "criteria": {
+            "true": "This condition is expressed with the stated actor, scope and polarity.",
+            "false": "This condition, scope or polarity is not expressed."
+          }
+        },
+        "ca_return.j029": {
+          "type": "noul",
+          "instructions": "Does the selected text express this proposed condition for the selected rule: Former tenant claims before it is sold.? Distinguish the condition’s textual role from whether it holds in a real case.",
+          "criteria": {
+            "true": "This condition is expressed with the stated actor, scope and polarity.",
+            "false": "This condition, scope or polarity is not expressed."
+          }
+        },
+        "ca_return.j030": {
+          "type": "noul",
+          "instructions": "Does the selected text express this proposed condition for the selected rule: Former tenant pays required reasonable storage, advertising and sale costs incurred before withdrawal from sale.? Distinguish the condition’s textual role from whether it holds in a real case.",
+          "criteria": {
+            "true": "This condition is expressed with the stated actor, scope and polarity.",
+            "false": "This condition, scope or polarity is not expressed."
+          }
+        }
+      }
+    }
+  },
+  {
+    "case_id": "ca_return.j049+ca_return.j050+ca_return.j051+ca_return.j053",
+    "request_hash": "120629aa57d95d98f1cd6898adbd6c8484526bf6f332ba9ea903ec4948e91a0a",
+    "identity": {
+      "format": "semantic-wave-1",
+      "plan_hash": "7a54f315305d1a22aefb4c5d0f9a17c098ccd342f7abddd368fd9ee7f631200e",
+      "base_url": "https://openrouter.ai/api",
+      "model": "typesafe/jev-1.13",
+      "pinned_build": "typesafe/jev-1.13-20260917",
+      "questions": {
+        "ca_return.j049": {
+          "primitive": "noul",
+          "instructions": "Does the selected text express this proposed condition for the selected rule: The property remained in the dwelling.? Distinguish the condition’s textual role from whether it holds in a real case.",
+          "criteria": {
+            "true": "This condition is expressed with the stated actor, scope and polarity.",
+            "false": "This condition, scope or polarity is not expressed."
+          }
+        },
+        "ca_return.j050": {
+          "primitive": "noul",
+          "instructions": "Does the selected text express this proposed condition for the selected rule: Former tenant reclaims the property.? Distinguish the condition’s textual role from whether it holds in a real case.",
+          "criteria": {
+            "true": "This condition is expressed with the stated actor, scope and polarity.",
+            "false": "This condition, scope or polarity is not expressed."
+          }
+        },
+        "ca_return.j051": {
+          "primitive": "noul",
+          "instructions": "Does the selected text express this proposed condition for the selected rule: Another person reasonably believed by landlord to own the property reclaims it.? Distinguish the condition’s textual role from whether it holds in a real case.",
+          "criteria": {
+            "true": "This condition is expressed with the stated actor, scope and polarity.",
+            "false": "This condition, scope or polarity is not expressed."
+          }
+        },
+        "ca_return.j053": {
+          "primitive": "noul",
+          "instructions": "Does the selected text express this proposed condition for the selected rule: Reclaim occurs within two days of vacating the dwelling.? Distinguish the condition’s textual role from whether it holds in a real case.",
+          "criteria": {
+            "true": "This condition is expressed with the stated actor, scope and polarity.",
+            "false": "This condition, scope or polarity is not expressed."
+          }
+        }
+      },
+      "state": {
+        "selected_text": "(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling.",
+        "governing_section": "(a) The personal property described in the notice shall be released by the landlord to the former tenant or, at the landlord’s option, to any person reasonably believed by the landlord to be its owner if that tenant or other person pays the reasonable cost of storage and takes possession of the property not later than the date specified in the notice for taking possession.\n(b) Where personal\nproperty is not released pursuant to subdivision (a) and the notice stated that the personal property would be sold at a public sale, the landlord shall release the personal property to the former tenant if he or she claims it prior to the time it is sold and pays the reasonable cost of storage, advertising, and sale incurred prior to the time the property is withdrawn from sale.\n(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling.",
+        "selected_expression": "shall release the personal property described in the notice"
+      },
+      "predecessors": {}
+    },
+    "expected_wire": {
+      "model": "typesafe/jev-1.13",
+      "state": {
+        "selected_text": "(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling.",
+        "governing_section": "(a) The personal property described in the notice shall be released by the landlord to the former tenant or, at the landlord’s option, to any person reasonably believed by the landlord to be its owner if that tenant or other person pays the reasonable cost of storage and takes possession of the property not later than the date specified in the notice for taking possession.\n(b) Where personal\nproperty is not released pursuant to subdivision (a) and the notice stated that the personal property would be sold at a public sale, the landlord shall release the personal property to the former tenant if he or she claims it prior to the time it is sold and pays the reasonable cost of storage, advertising, and sale incurred prior to the time the property is withdrawn from sale.\n(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling.",
+        "selected_expression": "shall release the personal property described in the notice"
+      },
+      "questions": {
+        "ca_return.j049": {
+          "type": "noul",
+          "instructions": "Does the selected text express this proposed condition for the selected rule: The property remained in the dwelling.? Distinguish the condition’s textual role from whether it holds in a real case.",
+          "criteria": {
+            "true": "This condition is expressed with the stated actor, scope and polarity.",
+            "false": "This condition, scope or polarity is not expressed."
+          }
+        },
+        "ca_return.j050": {
+          "type": "noul",
+          "instructions": "Does the selected text express this proposed condition for the selected rule: Former tenant reclaims the property.? Distinguish the condition’s textual role from whether it holds in a real case.",
+          "criteria": {
+            "true": "This condition is expressed with the stated actor, scope and polarity.",
+            "false": "This condition, scope or polarity is not expressed."
+          }
+        },
+        "ca_return.j051": {
+          "type": "noul",
+          "instructions": "Does the selected text express this proposed condition for the selected rule: Another person reasonably believed by landlord to own the property reclaims it.? Distinguish the condition’s textual role from whether it holds in a real case.",
+          "criteria": {
+            "true": "This condition is expressed with the stated actor, scope and polarity.",
+            "false": "This condition, scope or polarity is not expressed."
+          }
+        },
+        "ca_return.j053": {
+          "type": "noul",
+          "instructions": "Does the selected text express this proposed condition for the selected rule: Reclaim occurs within two days of vacating the dwelling.? Distinguish the condition’s textual role from whether it holds in a real case.",
+          "criteria": {
+            "true": "This condition is expressed with the stated actor, scope and polarity.",
+            "false": "This condition, scope or polarity is not expressed."
+          }
+        }
+      }
+    }
+  },
+  {
+    "case_id": "ca_return.j072",
+    "request_hash": "5624716593c13925e1ffdc6c0852a3058c9a6a13762756f8304cd82630ff9ff7",
+    "identity": {
+      "format": "semantic-wave-1",
+      "plan_hash": "7a54f315305d1a22aefb4c5d0f9a17c098ccd342f7abddd368fd9ee7f631200e",
+      "base_url": "https://openrouter.ai/api",
+      "model": "typesafe/jev-1.13",
+      "pinned_build": "typesafe/jev-1.13-20260917",
+      "questions": {
+        "ca_return.j072": {
+          "primitive": "noul",
+          "instructions": "Does the selected source assign the proposed meaning to the selected term within the supplied scope? Judge the complete meaning, including inclusions, exclusions and non-exhaustive qualifiers.",
+          "criteria": {
+            "true": "The complete proposed meaning and scope are assigned by the source.",
+            "false": "The proposed meaning or scope is not assigned."
+          }
+        }
+      },
+      "state": {
+        "selected_text": "(a) “Landlord” means any operator, keeper, lessor, or sublessor of any furnished or unfurnished premises for hire, or his or her agent or successor in interest.",
+        "term": "Landlord",
+        "proposed_meaning": "(a) “Landlord” means any operator, keeper, lessor, or sublessor of any furnished or unfurnished premises for hire, or his or her agent or successor in interest.",
+        "proposed_scope": "Chapter5",
+        "definition_scope_text": "As used in this chapter:"
+      },
+      "predecessors": {}
+    },
+    "expected_wire": {
+      "model": "typesafe/jev-1.13",
+      "state": {
+        "selected_text": "(a) “Landlord” means any operator, keeper, lessor, or sublessor of any furnished or unfurnished premises for hire, or his or her agent or successor in interest.",
+        "term": "Landlord",
+        "proposed_meaning": "(a) “Landlord” means any operator, keeper, lessor, or sublessor of any furnished or unfurnished premises for hire, or his or her agent or successor in interest.",
+        "proposed_scope": "Chapter5",
+        "definition_scope_text": "As used in this chapter:"
+      },
+      "questions": {
+        "ca_return.j072": {
+          "type": "noul",
+          "instructions": "Does the selected source assign the proposed meaning to the selected term within the supplied scope? Judge the complete meaning, including inclusions, exclusions and non-exhaustive qualifiers.",
+          "criteria": {
+            "true": "The complete proposed meaning and scope are assigned by the source.",
+            "false": "The proposed meaning or scope is not assigned."
+          }
+        }
+      }
+    }
+  },
+  {
+    "case_id": "ca_return.j121+ca_return.j122+ca_return.j123+ca_return.j124+ca_return.j125+ca_return.j126+ca_return.j219+ca_return.j220+ca_return.j225+ca_return.j226+ca_return.j235+ca_return.j236",
+    "request_hash": "1f49aef2f9e398213a5c9b510afa6856ac846fbeb7188fbf4185c711ecc687c5",
+    "identity": {
+      "format": "semantic-wave-1",
+      "plan_hash": "7a54f315305d1a22aefb4c5d0f9a17c098ccd342f7abddd368fd9ee7f631200e",
+      "base_url": "https://openrouter.ai/api",
+      "model": "typesafe/jev-1.13",
+      "pinned_build": "typesafe/jev-1.13-20260917",
+      "questions": {
+        "ca_return.j121": {
+          "primitive": "choice",
+          "instructions": "For The date specified in the notice shall be a date, which timing.personal.interval is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+          "criteria": {
+            "INTERVAL": "{'number': 15, 'unit': 'days'}",
+            "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+          }
+        },
+        "ca_return.j122": {
+          "primitive": "choice",
+          "instructions": "For The date specified in the notice shall be a date, which timing.personal.relation is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+          "criteria": {
+            "FIXED_AFTER": "The event is legally deemed to occur at this interval after the anchor.",
+            "MINIMUM_AFTER": "A minimum interval after the anchor.",
+            "MINIMUM_BEFORE": "A minimum interval before the anchor.",
+            "MAXIMUM_AFTER": "A deadline no later than this interval after the anchor.",
+            "EXPIRES_AFTER": "An authorization expires after this interval, subject to separate exceptions.",
+            "STRICTLY_BEFORE": "Performance must precede the anchor; equality is not enough.",
+            "NO_LATER_THAN": "Performance can occur at the anchor but not later.",
+            "REASONABLE": "A reasonableness standard rather than a fixed elapsed interval.",
+            "PRESUMPTION": "Only a rebuttable presumption, not a fixed rule.",
+            "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+          }
+        },
+        "ca_return.j123": {
+          "primitive": "choice",
+          "instructions": "For The date specified in the notice shall be a date, which timing.personal.anchor is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+          "criteria": {
+            "ANCHOR": "personal delivery of notice",
+            "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+          }
+        },
+        "ca_return.j124": {
+          "primitive": "choice",
+          "instructions": "For The date specified in the notice shall be a date, which timing.mail.interval is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+          "criteria": {
+            "INTERVAL": "{'number': 18, 'unit': 'days'}",
+            "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+          }
+        },
+        "ca_return.j125": {
+          "primitive": "choice",
+          "instructions": "For The date specified in the notice shall be a date, which timing.mail.relation is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+          "criteria": {
+            "FIXED_AFTER": "The event is legally deemed to occur at this interval after the anchor.",
+            "MINIMUM_AFTER": "A minimum interval after the anchor.",
+            "MINIMUM_BEFORE": "A minimum interval before the anchor.",
+            "MAXIMUM_AFTER": "A deadline no later than this interval after the anchor.",
+            "EXPIRES_AFTER": "An authorization expires after this interval, subject to separate exceptions.",
+            "STRICTLY_BEFORE": "Performance must precede the anchor; equality is not enough.",
+            "NO_LATER_THAN": "Performance can occur at the anchor but not later.",
+            "REASONABLE": "A reasonableness standard rather than a fixed elapsed interval.",
+            "PRESUMPTION": "Only a rebuttable presumption, not a fixed rule.",
+            "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+          }
+        },
+        "ca_return.j126": {
+          "primitive": "choice",
+          "instructions": "For The date specified in the notice shall be a date, which timing.mail.anchor is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+          "criteria": {
+            "ANCHOR": "depositing notice in mail",
+            "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+          }
+        },
+        "ca_return.j219": {
+          "primitive": "noul",
+          "instructions": "Must notice go to the tenant and to any other person the landlord reasonably believes owns the property, rather than allowing notice to just one of those categories?",
+          "criteria": {
+            "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+            "false": "This proposed field or relation is not established; no opposite is inferred."
+          }
+        },
+        "ca_return.j220": {
+          "primitive": "noul",
+          "instructions": "If the property consists of records, is the tenant presumed its owner for this chapter, rather than ownership being conclusively transferred?",
+          "criteria": {
+            "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+            "false": "This proposed field or relation is not established; no opposite is inferred."
+          }
+        },
+        "ca_return.j225": {
+          "primitive": "noul",
+          "instructions": "May a locked, fastened or tied container deterring immediate contents access be described without separately describing its contents?",
+          "criteria": {
+            "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+            "false": "This proposed field or relation is not established; no opposite is inferred."
+          }
+        },
+        "ca_return.j226": {
+          "primitive": "noul",
+          "instructions": "Does1989 immunity fail to protect disposition of property not described in the notice, subject to the specified closed-container description exception?",
+          "criteria": {
+            "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+            "false": "This proposed field or relation is not established; no opposite is inferred."
+          }
+        },
+        "ca_return.j235": {
+          "primitive": "noul",
+          "instructions": "When notice is mailed to the former tenant, must one copy also be sent to the vacated premises?",
+          "criteria": {
+            "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+            "false": "This proposed field or relation is not established; no opposite is inferred."
+          }
+        },
+        "ca_return.j236": {
+          "primitive": "noul",
+          "instructions": "If the former tenant supplied an email address, may notice also be emailed, without replacing the personal-or-mail service requirement?",
+          "criteria": {
+            "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+            "false": "This proposed field or relation is not established; no opposite is inferred."
+          }
+        }
+      },
+      "state": {
+        "selected_text": "(a) Where personal property remains on the premises after a tenancy has terminated and the premises have been vacated by the tenant, the landlord shall give written notice to the tenant and to any other person the landlord reasonably believes to be the owner of the property. If the property consists of records, the tenant shall be presumed to be the owner of the records for the purposes of this chapter.\n(b) The notice shall describe the property in a manner reasonably adequate to permit the owner of the property to identify it. The notice may describe all or a portion of the property, but the limitation of liability provided by Section 1989 does not protect the landlord from any liability arising from the disposition of property not described in the notice except that a trunk, valise, box, or other container which is locked, fastened, or tied in a manner which deters immediate access to its contents may be described as such without describing its contents. The notice shall advise the person to be notified that reasonable costs of storage may be charged before the property is returned, where the property may be claimed, and the date before which the claim must be made. The date specified in the notice shall be a date not less than 15 days after the notice is personally delivered or, if mailed, not less than 18 days after the notice is deposited in the mail.\n(c) The notice shall be personally delivered to the person to be notified or sent by first-class mail, postage prepaid, to the person to be notified at his or her last known address and, if there is reason to believe that the notice sent to that address will not be received by that person, also to any other address known to the landlord where the person may reasonably be expected to receive the notice. If the notice is sent by mail to the former tenant, one copy shall be sent to the premises vacated by the tenant. If the former tenant provided the landlord with the tenant’s email address, the landlord may also send the notice by email.",
+        "governing_section": "(a) The personal property described in the notice shall be released by the landlord to the former tenant or, at the landlord’s option, to any person reasonably believed by the landlord to be its owner if that tenant or other person pays the reasonable cost of storage and takes possession of the property not later than the date specified in the notice for taking possession.\n(b) Where personal\nproperty is not released pursuant to subdivision (a) and the notice stated that the personal property would be sold at a public sale, the landlord shall release the personal property to the former tenant if he or she claims it prior to the time it is sold and pays the reasonable cost of storage, advertising, and sale incurred prior to the time the property is withdrawn from sale.\n(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling."
+      },
+      "predecessors": {}
+    },
+    "expected_wire": {
+      "model": "typesafe/jev-1.13",
+      "state": {
+        "selected_text": "(a) Where personal property remains on the premises after a tenancy has terminated and the premises have been vacated by the tenant, the landlord shall give written notice to the tenant and to any other person the landlord reasonably believes to be the owner of the property. If the property consists of records, the tenant shall be presumed to be the owner of the records for the purposes of this chapter.\n(b) The notice shall describe the property in a manner reasonably adequate to permit the owner of the property to identify it. The notice may describe all or a portion of the property, but the limitation of liability provided by Section 1989 does not protect the landlord from any liability arising from the disposition of property not described in the notice except that a trunk, valise, box, or other container which is locked, fastened, or tied in a manner which deters immediate access to its contents may be described as such without describing its contents. The notice shall advise the person to be notified that reasonable costs of storage may be charged before the property is returned, where the property may be claimed, and the date before which the claim must be made. The date specified in the notice shall be a date not less than 15 days after the notice is personally delivered or, if mailed, not less than 18 days after the notice is deposited in the mail.\n(c) The notice shall be personally delivered to the person to be notified or sent by first-class mail, postage prepaid, to the person to be notified at his or her last known address and, if there is reason to believe that the notice sent to that address will not be received by that person, also to any other address known to the landlord where the person may reasonably be expected to receive the notice. If the notice is sent by mail to the former tenant, one copy shall be sent to the premises vacated by the tenant. If the former tenant provided the landlord with the tenant’s email address, the landlord may also send the notice by email.",
+        "governing_section": "(a) The personal property described in the notice shall be released by the landlord to the former tenant or, at the landlord’s option, to any person reasonably believed by the landlord to be its owner if that tenant or other person pays the reasonable cost of storage and takes possession of the property not later than the date specified in the notice for taking possession.\n(b) Where personal\nproperty is not released pursuant to subdivision (a) and the notice stated that the personal property would be sold at a public sale, the landlord shall release the personal property to the former tenant if he or she claims it prior to the time it is sold and pays the reasonable cost of storage, advertising, and sale incurred prior to the time the property is withdrawn from sale.\n(c) Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling."
+      },
+      "questions": {
+        "ca_return.j121": {
+          "type": "choice",
+          "instructions": "For The date specified in the notice shall be a date, which timing.personal.interval is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+          "criteria": {
+            "INTERVAL": "{'number': 15, 'unit': 'days'}",
+            "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+          }
+        },
+        "ca_return.j122": {
+          "type": "choice",
+          "instructions": "For The date specified in the notice shall be a date, which timing.personal.relation is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+          "criteria": {
+            "FIXED_AFTER": "The event is legally deemed to occur at this interval after the anchor.",
+            "MINIMUM_AFTER": "A minimum interval after the anchor.",
+            "MINIMUM_BEFORE": "A minimum interval before the anchor.",
+            "MAXIMUM_AFTER": "A deadline no later than this interval after the anchor.",
+            "EXPIRES_AFTER": "An authorization expires after this interval, subject to separate exceptions.",
+            "STRICTLY_BEFORE": "Performance must precede the anchor; equality is not enough.",
+            "NO_LATER_THAN": "Performance can occur at the anchor but not later.",
+            "REASONABLE": "A reasonableness standard rather than a fixed elapsed interval.",
+            "PRESUMPTION": "Only a rebuttable presumption, not a fixed rule.",
+            "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+          }
+        },
+        "ca_return.j123": {
+          "type": "choice",
+          "instructions": "For The date specified in the notice shall be a date, which timing.personal.anchor is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+          "criteria": {
+            "ANCHOR": "personal delivery of notice",
+            "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+          }
+        },
+        "ca_return.j124": {
+          "type": "choice",
+          "instructions": "For The date specified in the notice shall be a date, which timing.mail.interval is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+          "criteria": {
+            "INTERVAL": "{'number': 18, 'unit': 'days'}",
+            "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+          }
+        },
+        "ca_return.j125": {
+          "type": "choice",
+          "instructions": "For The date specified in the notice shall be a date, which timing.mail.relation is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+          "criteria": {
+            "FIXED_AFTER": "The event is legally deemed to occur at this interval after the anchor.",
+            "MINIMUM_AFTER": "A minimum interval after the anchor.",
+            "MINIMUM_BEFORE": "A minimum interval before the anchor.",
+            "MAXIMUM_AFTER": "A deadline no later than this interval after the anchor.",
+            "EXPIRES_AFTER": "An authorization expires after this interval, subject to separate exceptions.",
+            "STRICTLY_BEFORE": "Performance must precede the anchor; equality is not enough.",
+            "NO_LATER_THAN": "Performance can occur at the anchor but not later.",
+            "REASONABLE": "A reasonableness standard rather than a fixed elapsed interval.",
+            "PRESUMPTION": "Only a rebuttable presumption, not a fixed rule.",
+            "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+          }
+        },
+        "ca_return.j126": {
+          "type": "choice",
+          "instructions": "For The date specified in the notice shall be a date, which timing.mail.anchor is established by the selected text? Judge only this field, preserving the governing section’s qualifiers.",
+          "criteria": {
+            "ANCHOR": "depositing notice in mail",
+            "OTHER_OR_UNRESOLVED": "The supplied alternatives do not establish this field for the selected expression; another candidate or more context is needed."
+          }
+        },
+        "ca_return.j219": {
+          "type": "noul",
+          "instructions": "Must notice go to the tenant and to any other person the landlord reasonably believes owns the property, rather than allowing notice to just one of those categories?",
+          "criteria": {
+            "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+            "false": "This proposed field or relation is not established; no opposite is inferred."
+          }
+        },
+        "ca_return.j220": {
+          "type": "noul",
+          "instructions": "If the property consists of records, is the tenant presumed its owner for this chapter, rather than ownership being conclusively transferred?",
+          "criteria": {
+            "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+            "false": "This proposed field or relation is not established; no opposite is inferred."
+          }
+        },
+        "ca_return.j225": {
+          "type": "noul",
+          "instructions": "May a locked, fastened or tied container deterring immediate contents access be described without separately describing its contents?",
+          "criteria": {
+            "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+            "false": "This proposed field or relation is not established; no opposite is inferred."
+          }
+        },
+        "ca_return.j226": {
+          "type": "noul",
+          "instructions": "Does1989 immunity fail to protect disposition of property not described in the notice, subject to the specified closed-container description exception?",
+          "criteria": {
+            "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+            "false": "This proposed field or relation is not established; no opposite is inferred."
+          }
+        },
+        "ca_return.j235": {
+          "type": "noul",
+          "instructions": "When notice is mailed to the former tenant, must one copy also be sent to the vacated premises?",
+          "criteria": {
+            "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+            "false": "This proposed field or relation is not established; no opposite is inferred."
+          }
+        },
+        "ca_return.j236": {
+          "type": "noul",
+          "instructions": "If the former tenant supplied an email address, may notice also be emailed, without replacing the personal-or-mail service requirement?",
+          "criteria": {
+            "true": "The selected source establishes this specific proposed field or relation with the stated qualifiers.",
+            "false": "This proposed field or relation is not established; no opposite is inferred."
+          }
+        }
+      }
+    }
+  }
+]

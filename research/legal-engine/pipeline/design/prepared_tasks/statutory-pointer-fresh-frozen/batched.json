@@ -1,0 +1,146 @@
+[
+  {
+    "case_id": "15f5c0c1250a46a870f2e3829f00caa562ddccc981a4dc430d37eb739f0cfcf9",
+    "request_hash": "a0532e10fc7c88518572b7e02fad9b894c4677fae7529d4984bb3c7e1eddd582",
+    "assembler_version": "statutory-expression-1",
+    "task_version": "prepared-statutory-pointer-1",
+    "pinned_build": "typesafe/jev-1.13-20260917",
+    "payload": {
+      "state": {
+        "passage": "(a) A landlord of a commercial real property shall not charge a qualified commercial tenant a fee to recover building operating costs unless all of the following apply:\n(1) The building operating costs are allocated proportionately per tenant, by square footage, or another method as substantiated through supporting documentation provided by the landlord to the qualified commercial tenant.\n(2) The building operating costs have been incurred within the previous 18 months, or are reasonably expected to be incurred within the next 12 months based on reasonable estimates.\n(3) Before the execution of the lease, the landlord\nprovides the prospective qualified commercial tenant a paper or electronic notice stating that the tenant may inspect any supporting documentation of building operating costs upon written request pursuant to paragraph (4).\n(4) Within 30 days of a written request, the landlord provides the qualified commercial tenant supporting documentation of the previously incurred or reasonably expected building operating costs.\n(5) The costs do not include expenses paid by a tenant directly to a third party.\n(6) The costs do not include expenses for which a third party, tenant, or insurance reimbursed the landlord.\n(b) A landlord of a commercial real property shall not charge a fee to recover any building operating costs from the qualified commercial tenant until\nthe landlord provides the qualified commercial tenant supporting documentation.\n(c) During the course of a commercial tenancy, the landlord shall not alter the method or formula used to allocate building operating costs to the qualified commercial tenant in a way that increases the qualified commercial tenant’s share of those costs, unless the qualified commercial tenant is provided with written notice of the change in the method or formula with supporting documentation of the basis of the alteration.\n(d) In an action for an unlawful detainer, ejectment, or other action to recover possession based on a failure to pay a fee to recover building operating costs, a qualified commercial tenant may raise, as an affirmative defense, that the landlord violated this section.\n(e) A landlord of a commercial real property who\nviolates this section shall be liable to a qualified commercial tenant in a civil action for all of the following:\n(1) Actual damages.\n(2) In the courts discretion, reasonable attorney’s fees and costs.\n(3) Upon showing that the landlord, lessor, or their agent has acted willfully or with oppression, fraud, or malice both of the following:\n(A) Three times the amount of actual damages.\n(B) Punitive damages.\n(f) The district attorney, city attorney, or county counsel in the jurisdiction in which the commercial real property is located, in the name of the city or county, may seek injunctive relief based on a violation of this\nsection.\n(g) Any waiver of a right under this section by a qualified commercial tenant shall be void as a matter of public policy.\n(h) For the purposes of this section, the following definitions apply:\n(1) “Building operating costs” means costs that are incurred on behalf of a tenant for the operation, maintenance, or repair of the commercial real property, including, but not limited to, maintenance of common areas, utilities that are not separately metered, and taxes or assessments charged to the landlord pursuant to property ownership.\n(2) “Commercial real property” means all real property in this state, except dwelling units subject to this chapter, mobilehomes, as defined in Section 798.3, and recreational vehicles, as defined in Section 799.29.\n(3) “Microenterprise” has the same meaning as that term is defined in subdivision (a) of Section 18000 of the Business and Professions Code.\n(4) “Nonprofit organization” means any private nonprofit organization that qualifies under Section 501(c)(3) of the United States Internal Revenue Code of 1986.\n(5) “Qualified commercial tenant” means a tenant of commercial real property that meets both of the following requirements:\n(A) The tenant is a microenterprise, a restaurant with fewer than 10 employees, or a nonprofit organization with fewer than 20 employees.\n(B) (i) Subject to clause (ii), the tenant has provided the landlord, within the previous 12 months, a written\nnotice that the tenant is a qualified commercial tenant and a self-attestation regarding the number of employees, at such time the protections under this section come into place.\n(ii) Unless the tenancy is from week to week, month to month, or other period less than a month, the tenant provided the notice and self-attestation described in clause (i) before or upon execution of the lease, and annually thereafter, at such time the protections under this section come into place.\n(6) “Supporting documentation” means a dated and itemized quote, contract, receipt, or invoice from a licensed contractor or a provider of services that includes, but is not limited to, both of the following:\n(A) A tabulation showing how the costs are allocated among tenants in compliance with paragraph (1) of subdivision (a).\n(B) A signed and dated attestation by the landlord that the documentation and costs are true and correct.\n(i) This section shall only apply to the following:\n(1) Leases executed or tenancies commenced or renewed on or after January 1, 2025.\n(2) A tenancy that is from week to week, month to month, or other period less than a month.\n(3) Leases executed or tenancies commenced before January 1, 2025, that do not contain a provision regarding building operating costs.\n(j) This section does not apply to assessment levied pursuant to Part 7 (commencing with Section 36600) of Division 18 of the Streets and Highways\nCode.",
+        "source_kind": "statute"
+      },
+      "questions": {
+        "pointer-fresh-01": {
+          "primitive": "noul",
+          "instructions": "Is \"paragraph (4)\" a pointer to statutory text?",
+          "criteria": {
+            "true": "It names a statute or a unit of statutory text.",
+            "false": "It names something discussed in the text."
+          }
+        },
+        "pointer-fresh-02": {
+          "primitive": "noul",
+          "instructions": "Is \"this section\" a pointer to statutory text?",
+          "criteria": {
+            "true": "It names a statute or a unit of statutory text.",
+            "false": "It names something discussed in the text."
+          }
+        },
+        "pointer-fresh-03": {
+          "primitive": "noul",
+          "instructions": "Is \"this chapter\" a pointer to statutory text?",
+          "criteria": {
+            "true": "It names a statute or a unit of statutory text.",
+            "false": "It names something discussed in the text."
+          }
+        },
+        "pointer-fresh-04": {
+          "primitive": "noul",
+          "instructions": "Is \"Section 798.3\" a pointer to statutory text?",
+          "criteria": {
+            "true": "It names a statute or a unit of statutory text.",
+            "false": "It names something discussed in the text."
+          }
+        },
+        "pointer-fresh-05": {
+          "primitive": "noul",
+          "instructions": "Is \"Section 799.29\" a pointer to statutory text?",
+          "criteria": {
+            "true": "It names a statute or a unit of statutory text.",
+            "false": "It names something discussed in the text."
+          }
+        },
+        "pointer-fresh-06": {
+          "primitive": "noul",
+          "instructions": "Is \"subdivision (a) of Section 18000 of the Business and Professions Code\" a pointer to statutory text?",
+          "criteria": {
+            "true": "It names a statute or a unit of statutory text.",
+            "false": "It names something discussed in the text."
+          }
+        },
+        "pointer-fresh-07": {
+          "primitive": "noul",
+          "instructions": "Is \"Section 501(c)(3) of the United States Internal Revenue Code of 1986\" a pointer to statutory text?",
+          "criteria": {
+            "true": "It names a statute or a unit of statutory text.",
+            "false": "It names something discussed in the text."
+          }
+        },
+        "pointer-fresh-08": {
+          "primitive": "noul",
+          "instructions": "Is \"clause (ii)\" a pointer to statutory text?",
+          "criteria": {
+            "true": "It names a statute or a unit of statutory text.",
+            "false": "It names something discussed in the text."
+          }
+        },
+        "pointer-fresh-09": {
+          "primitive": "noul",
+          "instructions": "Is \"clause (i)\" a pointer to statutory text?",
+          "criteria": {
+            "true": "It names a statute or a unit of statutory text.",
+            "false": "It names something discussed in the text."
+          }
+        },
+        "pointer-fresh-10": {
+          "primitive": "noul",
+          "instructions": "Is \"paragraph (1) of subdivision (a)\" a pointer to statutory text?",
+          "criteria": {
+            "true": "It names a statute or a unit of statutory text.",
+            "false": "It names something discussed in the text."
+          }
+        },
+        "pointer-fresh-11": {
+          "primitive": "noul",
+          "instructions": "Is \"Part 7 (commencing with Section 36600) of Division 18 of the Streets and Highways\\nCode\" a pointer to statutory text?",
+          "criteria": {
+            "true": "It names a statute or a unit of statutory text.",
+            "false": "It names something discussed in the text."
+          }
+        },
+        "pointer-fresh-12": {
+          "primitive": "noul",
+          "instructions": "Is \"a qualified commercial tenant\" a pointer to statutory text?",
+          "criteria": {
+            "true": "It names a statute or a unit of statutory text.",
+            "false": "It names something discussed in the text."
+          }
+        },
+        "pointer-fresh-13": {
+          "primitive": "noul",
+          "instructions": "Is \"supporting documentation\" a pointer to statutory text?",
+          "criteria": {
+            "true": "It names a statute or a unit of statutory text.",
+            "false": "It names something discussed in the text."
+          }
+        },
+        "pointer-fresh-14": {
+          "primitive": "noul",
+          "instructions": "Is \"the previous 18 months\" a pointer to statutory text?",
+          "criteria": {
+            "true": "It names a statute or a unit of statutory text.",
+            "false": "It names something discussed in the text."
+          }
+        },
+        "pointer-fresh-15": {
+          "primitive": "noul",
+          "instructions": "Is \"January 1, 2025\" a pointer to statutory text?",
+          "criteria": {
+            "true": "It names a statute or a unit of statutory text.",
+            "false": "It names something discussed in the text."
+          }
+        },
+        "pointer-fresh-16": {
+          "primitive": "noul",
+          "instructions": "Is \"a dated and itemized quote, contract, receipt, or invoice\" a pointer to statutory text?",
+          "criteria": {
+            "true": "It names a statute or a unit of statutory text.",
+            "false": "It names something discussed in the text."
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13"
+    }
+  }
+]

@@ -1,0 +1,254 @@
+{
+  "reviewed_inputs": {
+    "cases": "53f5b60f211c6c3dbc4ef4db48150dc6ec610705393a377dbe631f801fe03acc",
+    "question": "ee80128558fa375cdf724278f9fd15a2fc666b86384eb68583de92fab7097e86"
+  },
+  "preparation_review": {
+    "blinding": "Expectations formed and recorded from cases, question, and all four complete source files before reading broader.design.md. broader.author_labels.json and model responses were not read.",
+    "source_verification": "All 36 source file hashes, exact passage spans, expression bounds, and source_kind values verified.",
+    "context_sufficiency": "All selected governing passages provide enough context for statutory-text-versus-subject classification. FIN100001 list fragments preserve the governing licensing/definition relationship for each selected phrase; omitted alternatives affect scope of the exemption, not the selected referent. These fragments are not complete inputs for applying the exemption.",
+    "material_ambiguities": [],
+    "limits": [
+      "Selected-expression development evaluation; not representative sampling or candidate-discovery recall.",
+      "CCP339 refers to subdivision 2 of Section 337 while the saved CCP337 uses lettered subdivisions. That target-resolution issue is not resolved by the unambiguous YES pointer label.",
+      "Repeated this section in b006 has the same referent kind in both occurrences; exact selected occurrence must still remain in bookkeeping.",
+      "Classification does not resolve statutory targets, interpret defined terms, or establish applicability."
+    ],
+    "design_reconciliation": {
+      "design_sha256": "905060ba062b80468c38a588ce6c2eb2fbbeaf51d472debba653f60fe56ad371",
+      "timing": "Read only after independent case expectations were written; case labels and reasons unchanged after design read.",
+      "verified_inventory_components": 57,
+      "assessment": "All 57 component spans identify the stated source expressions and are distinct occurrences. 56 table displays are exact; one normalizes a newline. The design retains undispatched repeated/hierarchical pointers and generic-law leads explicitly. The 36 cases are a bounded sample, not complete dispatch of the four source inventories. No unaccounted explicit named statutory unit was found in the four complete bodies.",
+      "display_discrepancy": {
+        "source": "jurisdictions/CA/texts/CA_FIN/100001.txt",
+        "span": [
+          1225,
+          1238
+        ],
+        "exact_text": "this\ndivision",
+        "display_text": "this division",
+        "material": false,
+        "effect": "Undispatched occurrence is identified correctly; table display is not literally the exact source slice. All dispatched case text remains exact."
+      },
+      "limits": "Component inventories do not count independent rules or independent source draws. Conditional generic-law leads in BPC10176(m) and federal law in FIN100001(a) remain outside this evaluated binary sample."
+    }
+  },
+  "cases": [
+    {
+      "case_id": "b001",
+      "expected": "YES",
+      "reason": "Section 336a explicitly identifies a statutory section.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b002",
+      "expected": "NO",
+      "reason": "An instrument in writing is the document founding the contractual obligation, not statutory text.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b003",
+      "expected": "NO",
+      "reason": "Such deed of trust or mortgage points back to the security instrument, not a statute.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b004",
+      "expected": "NO",
+      "reason": "The date of the last item denotes the account event used to start time, not a textual unit.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b005",
+      "expected": "YES",
+      "reason": "Section 359 of the Insurance Code explicitly identifies a statutory section.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b006",
+      "expected": "YES",
+      "reason": "This section refers to the present statutory section governing commencement of the action.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b007",
+      "expected": "YES",
+      "reason": "Section 360 explicitly identifies the statutory source for extension.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b008",
+      "expected": "NO",
+      "reason": "The debt denotes the obligation being collected, not statutory text.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b009",
+      "expected": "YES",
+      "reason": "Section 2725 of the Commercial Code explicitly identifies a statutory section.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b010",
+      "expected": "YES",
+      "reason": "Subdivision 2 of Section 337 of this code identifies a statutory unit. Any issue reconciling its numbering with the saved target concerns target resolution, not pointer presence.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b011",
+      "expected": "NO",
+      "reason": "Title of real property denotes ownership title, not a statutory title.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b012",
+      "expected": "NO",
+      "reason": "A policy of title insurance denotes the insurance contract, not statutory text.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b013",
+      "expected": "NO",
+      "reason": "An official duty denotes an obligation of the official, not the statute that may impose it.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b014",
+      "expected": "YES",
+      "reason": "This chapter identifies the statutory chapter defining the scope of licensed acts.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b015",
+      "expected": "YES",
+      "reason": "Section 10131 identifies the statutory section setting forth the licensed acts.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b016",
+      "expected": "NO",
+      "reason": "Any exclusive agreement denotes a private authorization agreement, not statutory text.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b017",
+      "expected": "YES",
+      "reason": "This chapter identifies the statutory chapter requiring a license.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b018",
+      "expected": "NO",
+      "reason": "Any provision is expressly located in an agreement with a buyer or seller; it is a contractual purchase option, not statutory text.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b019",
+      "expected": "YES",
+      "reason": "This section identifies the statutory section specifying conduct.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b020",
+      "expected": "NO",
+      "reason": "An agreement denotes the private agreement signed by a prospective buyer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b021",
+      "expected": "NO",
+      "reason": "A commitment to make a mortgage loan denotes a lender commitment accepted by the applicant, not statutory text.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b022",
+      "expected": "NO",
+      "reason": "A licensed person denotes the person whose conduct is regulated, not licensing law.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b023",
+      "expected": "YES",
+      "reason": "This division identifies the statutory division requiring licensure.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b024",
+      "expected": "YES",
+      "reason": "Paragraph (2) explicitly points to a statutory paragraph containing the exception.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b025",
+      "expected": "NO",
+      "reason": "A depository institution denotes an entity being exempted. The adjacent Section 1420 reference supplies its definition but does not make the entity phrase statutory text.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b026",
+      "expected": "YES",
+      "reason": "Section 1420 explicitly identifies the statutory definition provision.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b027",
+      "expected": "YES",
+      "reason": "Division 9 explicitly identifies a statutory division.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b028",
+      "expected": "YES",
+      "reason": "Section 22000 explicitly identifies the statutory section commencing Division 9.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b029",
+      "expected": "YES",
+      "reason": "Division 20 explicitly identifies a statutory division.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b030",
+      "expected": "YES",
+      "reason": "Section 50000 explicitly identifies the statutory section commencing Division 20.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b031",
+      "expected": "YES",
+      "reason": "Karnette Rental-Purchase Act names an enactment, and its surrounding parenthetical supplies its statutory location.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b032",
+      "expected": "NO",
+      "reason": "Covered commercial debt denotes the debt being collected. The separate definition citation is statutory text; the selected defined term is not.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b033",
+      "expected": "NO",
+      "reason": "Covered commercial credit denotes the credit being collected. The separate definition citation is statutory text; the selected defined term is not.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b034",
+      "expected": "YES",
+      "reason": "Title 1.6C explicitly identifies a statutory title providing definitions.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b035",
+      "expected": "YES",
+      "reason": "Section 1788 explicitly identifies the statutory section commencing Title 1.6C.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "b036",
+      "expected": "YES",
+      "reason": "This division identifies the statutory division whose application is being limited.",
+      "material_ambiguity": false
+    }
+  ]
+}

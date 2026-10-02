@@ -1,0 +1,628 @@
+<!DOCTYPE html><html lang="en">
+<head><script src="/oats-inst-thought-I-fight-Hauen-top-pretures-Wif" async></script>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<link href="/webcat/default/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+<link href="/webcat/default/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+<link href="/webcat/default/css/listnav.css?v=20728" type="text/css" rel="stylesheet">
+<link media="screen" href="/webcat/default/lightbox/lightbox.css?v=20728" type="text/css" rel="stylesheet">
+<link href="/webcat/systems/cal/css/public.css?v=20728" type="text/css" rel="stylesheet">
+<script src="/webcat/script/jquery-3.2.1.min.js" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/bootstrap.min.js" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/jquery-listnav.min.js?v=20728" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/browseTree.js?v=20728" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/list.js?v=20728" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/windowProperties.js?v=20728" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/filter.js?v=20728" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/publicDisplay.js?v=20728" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/sorttable.js?v=20728" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/header.js?v=20728" language="JavaScript" type="text/javascript"></script><script src="/webcat/script/gbooks.js?v=20728" language="JavaScript" type="text/javascript"></script><script language="JavaScript" type="text/javascript">
+<!--
+
+// BrowseSearchSimple JavaScript functions (WEBCAT)
+// Copyright (c) 2000-2016 by Eloquent Systems Research Inc.
+
+// Replacement variables
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+var typeID = "BrowseSearchSimple";
+var cmd_action = "/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=";
+var num_startindex = "1";
+var num_endindex = "50";
+var num_totalhits = "939";
+var txt_displaying = "Displaying";
+var txt_hits = "Hits";
+var txt_to = "to";
+var txt_of = "of";
+var txt_searchincomplete = "";
+var txt_tselect = "Tag";
+var txt_dischild = "Display children" ;
+var txt_ancestor = "Display ancestor" ;
+var txt_hits_simple = "Result(s)" ;
+var image_path = "/webcat/default/images/";
+var button_path = "/webcat/systems/cal/buttons/";
+var threshold = 50 ;
+var ctr_num = 0 ;
+var ftitle = getSearchKey('fromTitle');
+var reqtype = getSearchKey('RequesterType');
+var sTemplateProcessID = getSearchKey("TemplateProcessID");
+var path_resource = "/webcat/systems/cal/resource/";
+var tableID = getTableId();
+var sysFolder = getSysFolder();
+var othreshold = 50 ;
+var browse_by_list = false;
+var sSystemName = "California State Archives";
+var sClientSession = getSearchKey("ClientSession");
+var sUserId = "csa public";
+var txt_browse_viewlist = "View List";
+var txt_browse_savetolist = "Save to List";
+var txt_browse_removefromlist = "Remove from List";
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Handler (Start Button): Submits request for next n records (n=threshold).
+function getStart( ) {
+   if(!isMobile()) document.getElementById("loading").style.display = "inline";
+	var threshold = parseInt(document.BrowseForm.Threshold.value);
+	var end = parseInt(document.BrowseForm.EndIndex.value);
+	if ( num_totalhits < threshold ) {
+		end = num_totalhits ;
+	} else {
+		end = threshold ;
+	}
+	document.BrowseForm.StartIndex.value = 1 ;
+	document.BrowseForm.EndIndex.value = end ;
+	requestBrowse( ) ;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Handler (End Button): Submits request for next n records (n=threshold).
+function getEnd( ) {
+	var threshold = parseInt(document.BrowseForm.Threshold.value);
+	var start = parseInt(document.BrowseForm.StartIndex.value) ;
+	end = num_totalhits ;
+	start = num_totalhits - (num_totalhits - 1) % threshold ;
+	document.BrowseForm.StartIndex.value = start ;
+	document.BrowseForm.EndIndex.value = end ;
+	requestBrowse( ) ;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Handler (Next Button): Submits request for next n records (n=threshold).
+function getNext( ) {
+   if(!isMobile()) document.getElementById("loading").style.display = "inline";
+	var threshold = parseInt(document.BrowseForm.Threshold.value);
+	var start = parseInt(document.BrowseForm.StartIndex.value) + threshold ;
+	var end = parseInt(document.BrowseForm.StartIndex.value) + (threshold*2) - 1 ;
+	if ( end > num_totalhits ) {
+	  end = num_totalhits ;
+	}
+	if ( start <= num_totalhits ) {
+		document.BrowseForm.StartIndex.value = start ;
+	}
+	document.BrowseForm.EndIndex.value = end ;
+	requestBrowse( ) ;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Handler (Previous Button): Submits request for previous n records (n=threshold).
+function getPrevious( ) {
+   if(!isMobile()) document.getElementById("loading").style.display = "inline";
+	var threshold = parseInt(document.BrowseForm.Threshold.value);
+	var start = parseInt(document.BrowseForm.StartIndex.value) - threshold ;
+	var end = parseInt(document.BrowseForm.EndIndex.value) -
+	          parseInt(document.BrowseForm.EndIndex.value) +
+	          parseInt(document.BrowseForm.StartIndex.value) - 1 ;
+	
+	if ( end < 0 ) {
+	  end = threshold ;
+	}
+	if ( start < 0 ) {
+	  start = 1 ;
+	}
+	if ( end < threshold ) {
+	  end = threshold ;
+	}
+	document.BrowseForm.StartIndex.value = start ;
+	document.BrowseForm.EndIndex.value = end ;
+	requestBrowse( ) ;
+}
+
+function selectpage(pg){
+   if(!isMobile()) document.getElementById("loading").style.display = "inline";
+	var threshold = parseInt(document.BrowseForm.Threshold.value);
+	var start = (pg-1) * threshold + 1;
+	var end = pg * threshold ;
+	if ( end > num_totalhits ) end = num_totalhits ;
+   document.BrowseForm.StartIndex.value = start ;
+	document.BrowseForm.EndIndex.value = end ;
+	requestBrowse( ) ;
+}
+
+function newSearch(){
+   var sURL = cmd_action.replace("Action?","DoMenuRequest?");
+   location.href = sURL;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Called by getNext and getPrevious to submit form.
+function requestBrowse( ) {
+   start = parseInt(document.BrowseForm.StartIndex.value);
+   end = parseInt(document.BrowseForm.EndIndex.value);
+   threshold = parseInt(document.BrowseForm.Threshold.value);
+   noOfHits = parseInt(document.BrowseForm.NoOfHits.value);
+
+   var sURL = cmd_action;
+   sURL += "&CMD_(BrowseRequest)&NoOfHits="+num_totalhits+"&Threshold="+threshold+"&StartIndex="+start+"&EndIndex="+end+(ftitle!=null?"&fromTitle="+ftitle:"");
+   location.href = sURL;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Display previous and next buttons in lower screen.
+function displayDataControl() {
+   var threshold = getSearchKey('Threshold');
+   document.BrowseForm.Threshold.value = (threshold?threshold:othreshold);
+   threshold = parseInt(document.BrowseForm.Threshold.value);
+
+   var content = '<div class="browseControlPanel clearfix"><div class="col-sm-4"><button tabindex="1" type="button" id="btnReturn" class="btn btn-default" onclick="window.history.back();" alt="Back" title="Back"><span class="glyphicon glyphicon-chevron-left"></span> Back</button><button tabindex="1" type="button" id="btnReturn" class="btn btn-default" onclick="newSearch( );" alt="New Search" title="New Search"><span class="glyphicon glyphicon-search"></span> New Search</button></div><div class="col-sm-8 text-right btnList" data-before="My List:">';
+
+   content += '<div class="btn-group"><button tabindex="1" type="button" id="btnViewCart" class="btn btn-default btn-viewcart" style="display:none;" onclick="view_cart();" alt="View Cart" title="View Cart">View Cart</button>';
+   if(reqtype=="ViewCart") content += '<button tabindex="1" type="button" id="btnClearCart" class="btn btn-default" onclick="clear_cart();" alt="Clear Cart" title="Clear Cart">Clear Cart</button>';
+   if(reqtype=="ViewCart") content += '<button tabindex="1" type="button" id="btnCheckout" class="btn btn-default" onclick="checkout_cart();" alt="Check out" title="Check out">Check out</button>';
+   content += '</div>';
+
+   content += '<div class="btn-group"><button tabindex="1" type="button" id="btnViewList" class="btn btn-default btn-viewlist" onclick="view_list();" alt="View List" title="View List">#!View List</button>';
+   content += '<button tabindex="1" type="button" id="btnSaveAll" class="btn btn-default" onclick="save_all();" alt="Save All" title="Save All">Save All</button>';
+   content += '<button tabindex="1" type="button" id="btnClearList" class="btn btn-default" onclick="clear_list();" alt="Clear List" title="Clear List">Clear List</button></div></div></div>';
+   
+   if ( num_totalhits > threshold ) {
+      content += '<div class="row browsePager"><div class="col-sm-12">';
+      content += '<div class="btn-group">';
+      content += '<button tabindex="1" type="button" id="btnPrevious" class="btn btn-default" onclick="getPrevious( );" alt="Previous" title="Previous"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button></span>';
+      content += '';
+
+      var pages = Math.ceil(num_totalhits/threshold);
+      var cpage = (parseInt(document.BrowseForm.StartIndex.value)-1)/threshold;
+      var tpage = cpage+1;
+      content += '<span class="page-selector btn" style="cursor:default;"><label for="selectpages" alt="Pages" title="Pages">Pages</label>&nbsp;<select tabindex="1" id="selectpages" onchange="selectpage(this.value);" style="border:0px;" autocomplete="off" alt="Pages '+tpage+' of '+pages+'" title="Pages '+tpage+' of '+pages+'" aria-label="Pages '+tpage+' of '+pages+'">';
+      for(i=1; i<=pages; i++) {
+         content += '<option value="'+i+'" '+(cpage+1==i?'selected':'')+' alt="Pages'+i+' of '+pages+'" title="Pages'+i+' of '+pages+'" aria-label="Pages'+i+' of '+pages+'">'+i+'</option>';
+      }
+      content += '</select> of '+pages+'</span>';
+      content += '<button tabindex="1" type="button" id="btnNext" class="btn btn-default" onclick="getNext( );" alt="Next" title="Next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>';
+      content += '</div>';
+      content += '&nbsp;<span id="perPage" class="page-selector btn" style="cursor:default;">Show ';
+      content += '<button tabindex="1" class="btn-link perPageLink" onclick="document.BrowseForm.Threshold.value=50; getStart();" alt="Show 50 items per page" title="Show 50 items per page" aria-label="Show 50 items per page">50</button>';
+      content += '<button tabindex="1" class="btn-link perPageLink" onclick="document.BrowseForm.Threshold.value=100; getStart();" alt="Show 100 items per page" title="Show 100 items per page" aria-label="Show 100 items per page">100</button>';
+      content += '<button tabindex="1" class="btn-link perPageLink" onclick="document.BrowseForm.Threshold.value=200; getStart();" alt="Show 200 items per page" title="Show 200 items per page" aria-label="Show 200 items per page">200</button>';
+      content += ' items per page</span>';
+
+      content += '</div></div>';
+   }
+
+   document.writeln( content ) ;
+   count_list();
+   count_cart();
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Display language-independent "hits" message
+function displayHitsMessage() {
+	content = '<DIV CLASS="displayhits-panel"><SPAN CLASS="displayhits">';
+   if (num_startindex == '1' && num_endindex == num_totalhits) {
+      content += '<NOBR>';
+      content += num_totalhits + ' ' + txt_hits_simple.toLowerCase() + '<\/NOBR>';
+   } else {
+      content += '<NOBR>';
+      content += txt_hits_simple + ' ' + num_startindex + ' ' + txt_to + ' ' + num_endindex;
+      content += ' '+txt_of + ' ' + num_totalhits + '<\/NOBR>';
+   }
+   content += '</SPAN><SPAN CLASS="browsefrom">';
+   if(ftitle!=null && ftitle!='' && ftitle!='null') content += ' from <b>'+unescape(ftitle)+'</b>';
+   content += '</SPAN></DIV>';
+   return content;
+}
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+var browseData = new Array();
+var iBData = 0;
+var browseHeader = new Array();
+var iBHeader = 0;
+//browseHeader[iBHeader++] = "sLabel|bRight|bDescend|nWidth|cJustLCR|bBreak|bTotal";
+//browseData[iBdata+=] = 'bTake|nExplode|sParentID|KEYVALUE|Column1|Column2|...|ColumnN'; // repeat as needed
+// START of Browse Data
+
+
+
+
+    browseOffset=3;
+    browseHeader[iBHeader++] = 'bTake||';
+    browseHeader[iBHeader++] = 'bExplode||';
+    browseHeader[iBHeader++] = 'sParentID||';
+
+    
+        browseHeader[iBHeader++] = 'Tag|||3|||';
+    
+        browseHeader[iBHeader++] = 'Title|0||50|L|0|0';
+    
+        browseData[iBData++] = '1|0|1233|1267'
+        + '|%3Cdiv%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20class%3D%22details%2Dref%22%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D6000%5F1051%5F1051%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D6000%5F12280%280%29%26KeyValues%3DKEY%5F1267%22%3ESubject%20Files%2C%201912%2D1965%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Series%20%26%238226%3B%20%20Click%20on%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3EBoard%20of%20Medical%20Examiners%3Cp%20style%3D%22margin%3A25px%200%2025px%200%3B%22%3ECorrespondence%2C%20memoranda%2C%20reports%2C%20studies%2C%20newspaper%20clippings%20and%20other%20records%20reflecting%20a%20cross%2Dsection%20of%20Board%20operations%20and%20activities%2E%20Much%20of%20the%20correspondence%20relates%20to%20physicians%20inqui%2E%2E%2E%3C%2Fp%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1267%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271267%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E%3Cinput%20type%3D%22hidden%22%20value%3D%22UA%2D152412359%2D1%22%20name%3D%22GA%22%20%2F%3E%3Cinput%20id%3D%22gaEvtCat1267%22%20type%3D%22hidden%22%20value%3D%22%5B%5BRecord%20group%5D%20R264%2C%20F3760%2C%20F3503%2C%20F3265%2C%20F1808%5D%20Dept%2E%20of%20Consumer%20Affairs%20%2D%2D%20Board%20of%20Medical%20Examiners%20Records%20%28Key%3A%201233%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtLbl1267%22%20type%3D%22hidden%22%20value%3D%22%5B%5BSeries%5D%20F3760%3A381%2D583%5D%20Subject%20Files%20%28Key%3A%201267%29%22%20%2F%3E%3Cinput%20id%3D%22gaEvtAct1267%22%20type%3D%22hidden%22%20value%3D%22Download%20Full%20Resolution%20Image%22%20%2F%3E%3Cinput%20id%3D%22gaEvtUrl1267%22%20type%3D%22hidden%22%20value%3D%22%22%20%2F%3E';
+    
+        browseData[iBData++] = '1|||1085'
+        + '|%3Cdiv%3EDept%2E%20of%20Developmental%20Services%20%2D%2D%20Community%20Operations%20Division%20%2D%2D%20Regional%20Center%20Branch%20%2D%2D%20Regional%20Center%20Operations%20Section%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1085%22%3ERulemaking%20Files%2C%20%26nbsp%3B2002%2D2003%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2011%2D215%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1085%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271085%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1123'
+        + '|%3Cdiv%3EDept%2E%20of%20Consumer%20Affairs%20%2D%2D%20Podiatric%20Medicine%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1123%22%3EMeeting%20Agendas%2C%20Bill%20Files%2C%20Rulemaking%20Files%2C%20and%20Deceased%20Podiatrist%20Files%2C%20%26nbsp%3B1917%2D2000%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2011%2D223%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1123%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271123%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1161'
+        + '|%3Cdiv%3EAir%20Resources%20Board%20%2D%2D%20Mobile%20Source%20Control%20%20%2D%2D%20Emission%20Research%20and%20Regulatory%20Development%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1161%22%3EResearch%20and%20Regulatory%20%28Rulemaking%29%20Files%20%2C%20%26nbsp%3B1993%2D2004%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2012%2D009%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1161%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271161%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1189'
+        + '|%3Cdiv%3EDept%2E%20of%20Industrial%20Relations%20%2D%2D%20Workers%27%20Compensation%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1189%22%3ERulemaking%20Files%2C%20%26nbsp%3B1997%2D2005%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2012%2D026%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1189%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271189%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1190'
+        + '|%3Cdiv%3EDept%2E%20of%20Industrial%20Relations%20%2D%2D%20Workers%27%20Compensation%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1190%22%3ERulemaking%20Files%2C%20%26nbsp%3B1998%2D1999%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2012%2D004%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1190%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271190%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1224'
+        + '|%3Cdiv%3EDept%2E%20of%20Consumer%20Affairs%20%2D%2D%20Pharmacy%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1224%22%3EBoard%20Meeting%20Files%2C%20Board%20Strategic%20Committee%20Files%2C%20%26nbsp%3B1990%2D2001%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2012%2D047%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1224%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271224%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1257'
+        + '|%3Cdiv%3EFish%20and%20Game%20Commission%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1257%22%3ERulemaking%20Files%2C%20California%20Condor%20Recovery%20Program%20Files%2C%20%26nbsp%3B1982%2D2007%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2012%2D098%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1257%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271257%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1264'
+        + '|%3Cdiv%3EKuehl%2C%20Sheila%20James%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1264%22%3EBill%20Files%20and%20Subject%20Files%2C%20%26nbsp%3B1999%2D2006%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2012%2D093%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1264%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271264%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1265'
+        + '|%3Cdiv%3EDept%2E%20of%20Aging%20%2D%2D%20Long%20Term%20Care%20and%20Aging%20Services%20%2D%2D%20Medi%2DCal%20Services%20%2D%2D%20Adult%20Day%20Health%20Care%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1265%22%3EAdministrative%20Files%2C%20Regulation%2FRulemaking%20Files%2C%20%26nbsp%3B1973%2D2006%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2012%2D117%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1265%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271265%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1281'
+        + '|%3Cdiv%3EDept%2E%20of%20Consumer%20Affairs%20%2D%2D%20Pharmacy%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1281%22%3EBoard%20Meeting%20Agendas%2C%20Board%20Meeting%20Minutes%2C%20and%20Strategic%20Committee%20Files%2C%20%26nbsp%3B1981%2D2001%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2012%2D114%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1281%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271281%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1288'
+        + '|%3Cdiv%3EBuilding%20Standards%20Commission%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1288%22%3ERulemaking%20Files%2C%20%26nbsp%3B2006%2D2010%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2015%2D126%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1288%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271288%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1295'
+        + '|%3Cdiv%3EBuilding%20Standards%20Commission%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1295%22%3ERulemaking%20Files%2C%20%26nbsp%3B2006%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2012%2D131%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1295%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271295%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||133'
+        + '|%3Cdiv%3EFish%20and%20Game%20Commission%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F133%22%3ERulemaking%20Files%3B%20Meeting%20Files%2C%20%26nbsp%3B1995%2D2004%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2007%2D217%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D133%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%27133%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||140'
+        + '|%3Cdiv%3EDept%2E%20of%20Health%20Services%20%2D%2D%20Payment%20Systems%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F140%22%3ELegislative%20Files%2C%20%26nbsp%3B1995%2D2002%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2008%2D034%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D140%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%27140%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1413'
+        + '|%3Cdiv%3EFair%20Employment%20and%20Housing%20Commission%3Cbr%2F%3EState%20Fair%20Employment%20Practice%20Commission%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1413%22%3ECommission%20Rulemaking%20Files%2C%20Meeting%20and%20Hearing%20Records%2C%20Legislative%20Files%2C%20and%20History%2C%20%26nbsp%3B1959%2D2013%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2013%2D059%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1413%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271413%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1434'
+        + '|%3Cdiv%3ETechnology%2C%20Trade%20and%20Commerce%20Agency%20%2D%2D%20Technology%20and%20Community%20Innovation%20%2D%2D%20Small%20Business%20%2D%2D%20Small%20Business%20Development%20Center%20Program%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1434%22%3ESubject%20Files%2C%20%26nbsp%3B1989%2D1995%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2013%2D088%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1434%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271434%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1438'
+        + '|%3Cdiv%3EPublic%20Utilities%20Commission%20%2D%2D%20Administrative%20Law%20Judge%20%2D%2D%20Central%20Files%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1438%22%3EFormal%20Case%20and%20Application%20Files%2C%26nbsp%3BCommissioner%20Files%2C%20%26nbsp%3B1982%2D2010%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2013%2D160%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1438%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271438%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1446'
+        + '|%3Cdiv%3EBuilding%20Standards%20Commission%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1446%22%3ECommission%20Meeting%20Agendas%20and%20Minutes%2C%26nbsp%3BRulemaking%20Files%2C%20%26nbsp%3B1980%2D2006%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2013%2D074%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1446%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271446%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1469'
+        + '|%3Cdiv%3EDept%2E%20of%20Social%20Services%20%2D%2D%20Regulations%20Development%20Bureau%3Cbr%2F%3EDept%2E%20of%20Social%20Services%20%2D%2D%20Administration%20%2D%2D%20Management%20and%20Staff%20Services%20%2D%2D%20Regulations%20Development%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1469%22%3ERulemaking%20Files%2C%20%26nbsp%3B1980%2D2010%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2013%2D129%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1469%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271469%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1486'
+        + '|%3Cdiv%3EAgricultural%20Labor%20Relations%20Board%20%2D%2D%20Executive%20Secretary%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1486%22%3EAdministrative%20Files%2C%20Rulemaking%20Files%2C%20%26nbsp%3B1978%2D2003%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2013%2D085%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1486%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271486%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1510'
+        + '|%3Cdiv%3EFish%20and%20Game%20Commission%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1510%22%3ERulemaking%20Files%2C%26nbsp%3BOfficial%20Minute%20Books%2C%20%26nbsp%3B2008%2C%202002%2D2005%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2013%2D098%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1510%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271510%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1518'
+        + '|%3Cdiv%3EBusiness%2C%20Transportation%20and%20Housing%20Agency%20%2D%2D%20Secretary%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1518%22%3EBill%20Files%2C%20Rulemaking%20Files%2C%20and%20International%20Trade%20Mission%20Files%2C%20%26nbsp%3B1989%2D2012%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2013%2D113%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1518%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271518%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1612'
+        + '|%3Cdiv%3EBoard%20of%20Chiropractic%20Examiners%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1612%22%3EBoard%20Agendas%20and%20Meeting%20Packets%2C%26nbsp%3BRegulations%2C%26nbsp%3BLicensee%20Information%20Cards%2C%26nbsp%3BBoard%20Meeting%20Audiotapes%2C%20%26nbsp%3B1977%2D1994%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2014%2D036%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1612%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271612%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||167'
+        + '|%3Cdiv%3EDept%2E%20of%20Housing%20and%20Community%20Development%20%2D%2D%20Legal%20Affairs%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F167%22%3ESubject%20Files%2C%26nbsp%3BRulemaking%20Files%2C%20%26nbsp%3B1977%2D1982%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2008%2D047%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D167%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%27167%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1691'
+        + '|%3Cdiv%3EDept%2E%20of%20Consumer%20Affairs%20%2D%2D%20Speech%2DLanguage%20Pathology%20and%20Audiology%20and%20Hearing%20Aid%20Dispensers%20Board%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1691%22%3EBoard%20Materials%20and%20Rulemaking%20Files%2C%20%26nbsp%3B1974%2D2013%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2014%2D102%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1691%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271691%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||171'
+        + '|%3Cdiv%3EDept%2E%20of%20Social%20Services%20%2D%2D%20Regulations%20Development%20Bureau%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F171%22%3ERegulation%20%28Rulemaking%29%20Files%2C%20Public%20Hearing%20Files%2C%20%26nbsp%3B1991%2D1992%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2008%2D057%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D171%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%27171%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1710'
+        + '|%3Cdiv%3EDept%2E%20of%20Pesticide%20Regulation%20%2D%2D%20Executive%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1710%22%3EGeneral%20and%20Technical%20Files%2C%20%26nbsp%3B2005%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2015%2D030%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1710%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271710%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1735'
+        + '|%3Cdiv%3EFish%20and%20Game%20Commission%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1735%22%3ERulemaking%20Files%2C%20%26nbsp%3B2009%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2015%2D078%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1735%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271735%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1849'
+        + '|%3Cdiv%3EManaged%20Risk%20Medical%20Insurance%20Board%20%2D%2D%20Administration%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1849%22%3EAccess%20for%20Infants%20and%20Mothers%20Program%20%28AIM%29%20Advisory%20Panel%20Meeting%20Packets%2C%20Healthy%20Families%20Program%20%28HFP%29%20Advisory%20Panel%20Meeting%20Packets%2C%20Regulation%20%28Rulemaking%29%20Files%2C%20%26nbsp%3B1991%2D2013%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2015%2D103%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1849%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271849%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1860'
+        + '|%3Cdiv%3EGovernor%27s%20Office%20%2D%2D%20Business%20and%20Economic%20Development%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1860%22%3ERulemaking%20Files%2C%20%26nbsp%3B2014%2D2015%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2015%2D052%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1860%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271860%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1906'
+        + '|%3Cdiv%3EDept%2E%20of%20Food%20and%20Agriculture%20%2D%2D%20Executive%20%2D%2D%20Legal%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1906%22%3EAttorney%20General%20Legal%20Opinions%2C%20Administrative%20Hearings%2C%20Rulemaking%20Files%2C%20and%20Office%20Files%2C%20%26nbsp%3B1901%2D2003%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2017%2D145%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1906%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271906%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||1986'
+        + '|%3Cdiv%3EDept%2E%20of%20Pesticide%20Regulation%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F1986%22%3EGeneral%20and%20Technical%20Files%2DDirector%27s%20Office%2C%26nbsp%3BGeneral%20and%20Technical%20Files%2DChief%20Deputy%20Director%27s%20Office%2C%20%26nbsp%3B2006%2C%202007%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2015%2D195%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D1986%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%271986%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||2005'
+        + '|%3Cdiv%3EDept%2E%20of%20Consumer%20Affairs%20%2D%2D%20Veterinary%20Medical%20Board%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F2005%22%3EAdministrative%20Files%2C%20%26nbsp%3B1980s%2D2013%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2016%2D137%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D2005%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%272005%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||2032'
+        + '|%3Cdiv%3EDept%2E%20of%20Forestry%20and%20Fire%20Protection%20%2D%2D%20Board%20of%20Forestry%20and%20Fire%20Protection%3Cbr%2F%3EState%20Board%20of%20Forestry%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F2032%22%3ERulemaking%20Files%2C%20%26nbsp%3B1979%2D1984%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2016%2D071%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D2032%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%272032%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||20335'
+        + '|%3Cdiv%3EWater%20Resources%20Control%20Board%20%2D%2D%20Regional%20Water%20Quality%20Control%20Boards%20%2D%2D%20Santa%20Ana%20Region%20VIII%20%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F20335%22%3ECase%20files%2C%20%26nbsp%3B1980%2D1990%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E94%2D11%2D08%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D20335%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2720335%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||20337'
+        + '|%3Cdiv%3EWater%20Resources%20Control%20Board%20%2D%2D%20Regional%20Water%20Quality%20Control%20Boards%20%2D%2D%20Santa%20Ana%20Region%20VIII%20%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F20337%22%3ECase%20Files%2C%20%26nbsp%3B1977%2D1994%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E96%2D01%2D10%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D20337%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2720337%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||2040'
+        + '|%3Cdiv%3EDept%2E%20of%20Forestry%20and%20Fire%20Protection%20%2D%2D%20Board%20of%20Forestry%20and%20Fire%20Protection%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F2040%22%3ERulemaking%20Files%2C%20%26nbsp%3B1984%2D1990%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2016%2D051%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D2040%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%272040%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||20549'
+        + '|%3Cdiv%3EDept%2E%20of%20Social%20Services%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F20549%22%3EOffice%20Files%2C%20%26nbsp%3B1980%2D1991%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2000%2D05%2D10%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D20549%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2720549%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||20592'
+        + '|%3Cdiv%3EDept%2E%20of%20Social%20Services%20%2D%2D%20Management%20Systems%20and%20Evaluation%20%2D%2D%20Employment%20Programs%20%2D%2D%20GAIN%20and%20Employment%20Services%20Operations%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F20592%22%3EGreater%20Avenues%20for%20Independence%20Regulation%20Subject%20Files%2C%20%26nbsp%3B1982%2D1986%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E96%2D01%2D27%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D20592%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2720592%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||20599'
+        + '|%3Cdiv%3EDept%2E%20of%20Social%20Services%20%2D%2D%20Administration%20%2D%2D%20Management%20and%20Staff%20Services%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F20599%22%3EProposed%20Regulation%20Files%2C%20%26nbsp%3B1972%2D1984%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E95%2D06%2D46%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D20599%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2720599%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||20600'
+        + '|%3Cdiv%3EDept%2E%20of%20Social%20Services%20%2D%2D%20Administration%20%2D%2D%20Management%20and%20Staff%20Services%20%2D%2D%20Regulations%20Development%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F20600%22%3ERulemaking%20%28Regulations%20Development%29%20Files%2C%20%26nbsp%3B1984%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2000%2D10%2D04%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D20600%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2720600%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||20604'
+        + '|%3Cdiv%3EState%20Board%20of%20Equalization%20%2D%2D%20Special%20Taxes%20%2D%2D%20Program%20Planning%20and%20Evaluation%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F20604%22%3EAdministrative%20files%2C%20%26nbsp%3B1972%2D1979%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E95%2D04%2D24%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D20604%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2720604%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||20610'
+        + '|%3Cdiv%3EState%20Banking%20Dept%2E%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F20610%22%3EBank%20Regulation%20Files%2C%20%26nbsp%3B1978%2D1983%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E95%2D04%2D17%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D20610%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2720610%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||20782'
+        + '|%3Cdiv%3EEnergy%20Resources%20Conservation%20and%20Development%20Commission%20%2D%2D%20Executive%20%2D%2D%20General%20Counsel%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F20782%22%3EOffice%20files%2C%20%26nbsp%3B1984%2D1988%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2001%2D03%2D35%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D20782%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2720782%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||20796'
+        + '|%3Cdiv%3EDept%2E%20of%20Social%20Services%20%2D%2D%20Administration%20%2D%2D%20Management%20and%20Staff%20Services%20%2D%2D%20Regulations%20Development%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F20796%22%3ERulemaking%20%28Regulations%20Development%29%20Files%2C%20%26nbsp%3B1978%2D1979%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E1999%2D02%2D21%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D20796%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2720796%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||20821'
+        + '|%3Cdiv%3EDept%2E%20of%20Social%20Services%20%2D%2D%20Administration%20%2D%2D%20Management%20and%20Staff%20Services%20%2D%2D%20Regulations%20Development%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F20821%22%3EPublic%20Hearing%20Files%2C%20%26nbsp%3B1980%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E96%2D05%2D21%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D20821%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2720821%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||20822'
+        + '|%3Cdiv%3EDept%2E%20of%20Social%20Services%20%2D%2D%20Administration%20%2D%2D%20Management%20and%20Staff%20Services%20%2D%2D%20Regulations%20Development%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F20822%22%3EProposed%20Regulations%2C%20%26nbsp%3B1974%2D1976%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E96%2D03%2D34%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D20822%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%2720822%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||2086'
+        + '|%3Cdiv%3EDept%2E%20of%20Forestry%20and%20Fire%20Protection%20%2D%2D%20Board%20of%20Forestry%20and%20Fire%20Protection%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F2086%22%3ERulemaking%20Files%2C%20%26nbsp%3B1991%2D1993%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2016%2D084%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D2086%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%272086%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+        browseData[iBData++] = '1|||2099'
+        + '|%3Cdiv%3EDept%2E%20of%20Forestry%20and%20Fire%20Protection%20%2D%2D%20Board%20of%20Forestry%20and%20Fire%20Protection%3Cbr%2F%3E%3Ch3%20style%3D%22margin%3A6px%200%206px%200%3B%22%3E%3Ca%20HREF%3D%22/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=%26TemplateProcessID%3D5006%5F12015%5F12008%26PromptID%3D%26ParamID%3D%26CMD%5F%28DetailRequest%29%5B0%5D%3D%26ProcessID%3D5006%5F52243%280%29%26KeyValues%3DKEY%5F2099%22%3ERulemaking%20Files%2C%20%26nbsp%3B1992%2D1996%3C%2Fa%3E%3Csmall%3E%20%26%238226%3B%20Accessioned%20%26%238226%3B%20Click%20on%20the%20title%20for%20more%20detail%20%3C%2Fsmall%3E%3C%2Fh3%3E%3Ctable%3E%3Ctr%3E%3Ctd%20style%3D%22padding%3A6px%2020px%206px%200%3B%22%20nowrap%20valign%3D%22top%22%3E%3Cstrong%3EAccession%20No%2E%3A%3C%2Fstrong%3E%3C%2Ftd%3E%3Ctd%20style%3D%22padding%3A6px%200px%206px%200%3B%22%3E2016%2D088%3C%2Ftd%3E%3C%2Ftr%3E%3C%2Ftable%3E%3Cinput%20type%3D%22button%22%20class%3D%22btn%20btn%2Ddefault%20btn%2Dsavelist%22%20id%3D%22btn%2Dsavelist%2D2099%22%20value%3D%22Save%20to%20List%22%20onclick%3D%22save%5Flist%28%272099%27%29%3B%22%2F%3E%20%3Chr%3E%3C%2Fdiv%3E';
+    
+
+
+
+// #!BROWSEINFO!#
+// END of Browse Data
+
+function showpage(url,id){
+   var xmlhttp;
+   if (window.XMLHttpRequest) {
+     xmlhttp=new XMLHttpRequest();
+   }
+   else {
+     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+   }
+   xmlhttp.onreadystatechange=function() {
+      if(xmlhttp.readyState==4 && xmlhttp.status == 200) {
+         document.getElementById(id).innerHTML = xmlhttp.responseText;
+         var res = document.getElementById(id);
+         var arr = res.getElementsByTagName("script");
+         for (var n=0; n<arr.length; n++) {
+            eval(arr[n].innerHTML);
+         }
+      }
+   }
+   xmlhttp.open("GET",url,true);
+   xmlhttp.send(null);
+}
+
+function getSearchKey(key) {
+  var re = new RegExp( "[?&]" + key + "=([^&$]*)", "i" );
+  var offset = location.search.search( re );
+  if ( offset == -1 ) return null;
+  return decodeURIComponent(RegExp.$1);
+}
+
+function getBrowseTableId(sData) {
+   sData = unescape(sData);
+   var arr_cmd_action = sData.split("&");
+   for(i=0;i<arr_cmd_action.length;i++) {
+      if(arr_cmd_action[i].substring(0,9) == "ProcessID") {
+         retval = arr_cmd_action[i].substring(10,20).split("_");
+         return (retval[0] == getTableId()) ? "" : retval[0]+"_";
+      }
+   }
+   return "";
+}
+
+function goProcess(button) {
+   var keys = "";
+   var rc = document.getElementsByClassName("browserecord");
+   for(i=0; i<rc.length;i++) {
+      keys += rc[i].id+" ";
+   }
+   if(document.getElementById("GoProcessSelect").value.indexOf("Member_Go_Process")!=-1) keys = getCookie(sysFolder+tableID+"ESIMemberServicesKey");
+
+   var sURL = cmd_action;
+   sURL += "&CMD_(DetailRequest)[0]=&PromptID=&ParamID=&ProcessID="+document.getElementById("GoProcessSelect").value.split("|")[0]+"&Keyword=0&KeyValues=KEY_" + keys; 
+   popupWindow(sURL,"2");
+}
+
+function showMember_Process() {
+   var sCmdAction = cmd_action.replace('TemplateProcessID','TP');
+   sCmdAction += "&TemplateProcessID="+getCookie(sysFolder+tableID+"ESIMemberTableId")+"_"+getCookie(sysFolder+tableID+"ESIMemberKeyEntryPromptId")+"&CMD_(ViewMemberProcess)=&KeyValues=KEY_";
+
+   xmlhttp=null;
+   if (window.XMLHttpRequest){
+     xmlhttp=new XMLHttpRequest();
+   }
+   else if (window.ActiveXObject){
+     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+   }
+   if (xmlhttp!=null) {
+	   sCmdAction +=  sCmdAction + "&" + new Date().getTime();
+      xmlhttp.onreadystatechange = function () {
+	      if (xmlhttp.readyState==4) if (xmlhttp.status==200){ 
+            document.getElementById('memberGoProcess').innerHTML=xmlhttp.responseText;
+            setTimeout(function(){ postMember_Process(window.frames[0].document.body.innerHTML); }, 1000);
+         }
+	   }
+      xmlhttp.open("GET",sCmdAction,true);
+      xmlhttp.send(null);
+   }
+}
+
+function postMember_Process(doc){
+   var el = document.createElement('html');
+   el.innerHTML = doc;
+   var op = el.getElementsByTagName("option");
+   for (i = 0; i < op.length; i++) {
+      var sel = document.getElementById("GoProcessSelect");
+      var opt = document.createElement("option");
+      opt.text = op[i].innerHTML;
+      opt.value = op[i].value+"Member_Go_Process";
+      sel.add(opt,i); 
+   }
+   if(op.length>0){
+      document.getElementById('GoProcessSelect').getElementsByTagName('option')[0].selected = 'selected';
+      document.getElementById("GoProcess").style.display = "inline";
+   }
+}
+
+function checkStatus(){
+   if(location.href.indexOf('nd=1')!=-1){
+      alert("No record available for public.");
+   }
+}
+
+//--></script>
+<title>Public - Archival descriptions browse</title>
+</head>
+<body ONFOCUS="document.getElementById('loading').style.display='none';" class="body-browse" id="body-browse">
+<div style="background-color:rgba(0, 0, 0, 0.0); left: 0; top: 0; width:100%; height:100%; position: fixed; z-index:9999; display:none;" id="loading">
+<div style="display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;">
+<div style="  display: table-cell; vertical-align: middle;">
+<div style="  margin-left: auto; margin-right: auto; width: 200px; text-align: center; padding:20px; background:#F7F7F7; border:1px solid #E8E8E8;">
+<img border="0" alt="Please wait" title="Please wait" src="/webcat/systems/cal/buttons/public_loading.gif"><br>Please wait</div>
+</div>
+</div>
+</div>
+<header ID="page_header"></header>
+<script>
+	   browse_by_list = getCookie(sysFolder+sTemplateProcessID+"ESIbDispBrowseNav")=="true";
+      var sWebPagePrefix = '../html/';
+      showpage("/webcat/systems/cal/css/"+sWebPagePrefix+"public_search_header.html","page_header");    
+   </script>
+<div class="main main-browse">
+<script>
+      var bPromptUser = new Array( ) ;
+      var sPromptUserText = new Array( ) ;
+      var bPublicOnly = new Array( ) ;
+      var aCtr = 0 ;
+   </script>
+<div class="container container-browse">
+<form style="margin:0px; padding:0px;" method="GET" action="/webcat/request/Action?ClientSession=52bdc0:1a0f7f3119a:-7efa&UniqueID=6000_3355_2&TemplateProcessID=6000_3355&PromptID=&ParamID=" name="BrowseForm">
+<input value="" namE="CMD_(BrowseRequest)" type="hidden"><Input value="" Name="PromptID" type="hidden"><Input value="939" Name="NoOfHits" type="hidden"><Input value="50" Name="Threshold" type="hidden"><Input value="1" Name="StartIndex" type="hidden"><Input value="50" Name="EndIndex" type="hidden">
+</form>
+<div class="listControlPanel">
+<SPAN STYLE="display:none;" id="memberGoProcess">Member Go Process</SPAN><SPAN STYLE="display:none;" ID="GoProcess">
+<div class="list-inline saved-list-options">
+<label style="margin-right:5px;" for="GoProcessSelect">Options: </label><SELECT style="width:auto; display:inline;" class="form-control" title="Saved list options" onchange1="setHelpAnchorSelect(this);" NAME="ProcessID" ID="GoProcessSelect"><span id="GoProcessChoose"></span><SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+         bPromptUser[aCtr] = "0" ;
+         sPromptUserText[aCtr] = "" ;
+         bPublicOnly[aCtr] = "0";
+         aCtr++ ;
+         </SCRIPT><OPTION VALUE="6000_3363(0)|                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 ">View detail</OPTION><SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+         bPromptUser[aCtr] = "" ;
+         sPromptUserText[aCtr] = "" ;
+         bPublicOnly[aCtr] = "";
+         aCtr++ ;
+         </SCRIPT><OPTION VALUE="6000_3479(0)|                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 |                 ">Request materials using default email client</OPTION></SELECT><button style="margin-top:-4px; margin-left:4px;" ONCLICK="goProcess(this);" class="btn btn-default btnGo" aria-label="Execute selected saved list option" type="button"><span aria-hidden="true" class="glyphicon glyphicon-play"></span></button>&nbsp;
+	 </div>
+</SPAN><script>
+            if(reqtype!="ViewList") document.getElementById('GoProcessSelect').innerHTML = "";
+         </script>
+</div>
+<script language="JavaScript" type="text/javascript">
+         displayDataControl() ;
+         document.writeln(displayHitsMessage());
+      </script>
+<HR>
+<DIV ID="browse_header"></DIV>
+<script>
+         showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_browse_header.html","browse_header");
+      </script>
+<div id="divBrowse">
+<script language="JavaScript" type="text/javascript">
+         
+			   if(browse_by_list) document.write('<div class="myList-nav" id="{myList}-nav"></div><div id="myList">');
+            for(dc=0; dc<browseData.length; dc++) { 
+               var tmp = browseData[dc].split("|");
+               var tid = getBrowseTableId(tmp[4]);
+               var tmp4 = tmp[4].replace("onclick%3D%22save%5Flist%28%27","onclick%3D%22save%5Flist%28%27"+escape(tid)).replace("id%3D%22btn%2Dsavelist%2D","id%3D%22btn%2Dsavelist%2D"+escape(tid));
+               tmp4 = tmp4.split("%0A").join("%250A");
+               document.write("<div class='browserecord' id='"+tid+tmp[3]+"'>");
+               document.write(unescape(tmp4));
+               document.write("</div>");
+            }
+            if(getCookie(sysFolder+tableID+"ESIMemberServicesUsername")!=""){
+               showMember_Process();
+               document.getElementById('memberLoggedIn').style.display = 'inline';
+               document.getElementById('memberUserLoggedIn').innerHTML = getCookie(sysFolder+tableID+"ESIMemberServicesUsername");
+            }
+			   if(browse_by_list) document.write('</div>');
+         
+         </script>
+</div>
+<DIV ID="browse_footer"></DIV>
+<script>
+         if(browse_by_list) $("#myList").listnav({ includeAll: false });
+	      showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_browse_footer.html","browse_footer");
+      </script><script src="/webcat/script/ga.js?v=20728" type="text/javascript"></script><script type="text/javascript">
+      if (hasGaWebPropertyId()) {
+        writeGaJsHost();
+      }
+      </script><script type="text/javascript">
+         displayDataControl();
+      </script>
+<br>
+<br>
+<div class="powered-by">
+<small>Powered by WebGENCAT from <a title="Eloquent Systems Inc" alt="Eloquent Systems Inc" href="http://eloquent-systems.com">Eloquent Systems Inc</a></small>
+</div>
+</div>
+</div>
+<footer ID="page_footer"></footer>
+<script>
+      showpage((sWebPagePrefix?path_resource+sWebPagePrefix:"/webcat/systems/cal/css/")+"public_search_footer.html","page_footer");
+      if(reqtype=="ViewList") document.getElementById("GoProcess").style.display="inline";
+      if(reqtype!="ViewCart") update_button();
+      if(reqtype=="ViewCart") update_cart_button();
+   </script><script src="/webcat/default/lightbox/lightbox.js?v=20728" language="JavaScript" type="text/javascript"></script><script type="text/javascript">writeGbooksJsHost();</script><script type="text/javascript">setTimeout("processGbooks();", 1000);</script>
+<div alt="Top" title="Top" id="backToTop">
+<div>
+<b>TOP</b>
+</div>
+</div>
+<script>
+   $(document).ready(function($){
+      $('#backToTop').fadeOut('slow');
+       $(window).scroll(function(){
+           if ($(this).scrollTop() > 50) {
+               $('#backToTop').fadeIn('slow');
+           } else {
+               $('#backToTop').fadeOut('slow');
+           }
+       });
+       $('#backToTop').click(function(){
+           $("html, body").animate({ scrollTop: 0 }, 500);
+           return false;
+       });
+   });
+   </script><script>
+	if(document.getElementsByClassName("browserecord").length<10) document.getElementsByClassName("browseControlPanel")[1].style.display="none";
+	
+	</script><script>
+      setTimeout(function(){checkStatus()}, 500);
+   </script>
+<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=924934684" async></script></body>
+</html>
+

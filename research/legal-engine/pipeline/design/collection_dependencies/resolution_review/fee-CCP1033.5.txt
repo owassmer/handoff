@@ -1,0 +1,396 @@
+ 
+ 
+  
+         
+          
+                 
+                 
+     
+     
+     
+
+     
+
+     
+
+     
+     
+
+     
+     
+ 
+         California Code,  CCP 1033.5. 
+         
+
+         
+            /* Hide page by default*/
+            html { display : none; }
+         
+
+         // = 0)) {
+                        window.top.location.replace(window.location);
+                        top.location = self.location;
+                    }
+                }
+            }
+            // ]]>
+         
+         
+            /* Hide page by default*/
+            html { display : inline; }
+             // 
+   
+
+     
+        function changePlaceHolder() {
+
+            var x = document.getElementById("billheaderinit_form:quick_search_select_id");
+            var input = document.getElementById("billheaderinit_form:searchall");
+
+            if (x !== null) {
+                if (x.options[0].selected) {
+
+                    input.placeholder = "AB1 or ab 1 or ABX1-1";
+                } else {
+                    input.placeholder = "Search phrase";
+                }
+            }
+
+        }
+     
+     
+ 
+ 
+
+
+              
+             
+
+                 
+                       
+                          skip to content  
+                            home  
+                          accessibility  
+                          FAQ  
+                              feedback  
+                          sitemap  
+                       
+
+                          login 
+                         
+                          x   
+                         
+
+
+                     
+                   
+
+
+
+                  
+                          
+                  
+                 
+                     
+                      
+                               
+                              
+                         
+                              
+                     
+                     
+                  
+                     
+                         
+                               Quick Search: 
+                         
+                          	 Bill Number 
+	 Bill Keyword 
+ 
+                               
+                         
+                       
+
+                   
+         
+         
+         
+       
+
+
+
+         
+          
+   
+   
+     
+       
+         Home  
+       
+         Bill Information  
+
+
+       
+         California Law  
+       
+         Publications  
+
+
+       
+         Other Resources  
+       
+         My Subscriptions  
+       
+         My Favorites  
+       
+     
+   
+   
+  
+ 
+          
+     
+ 
+        
+        
+
+       
+         
+             
+                button {
+                    background-image: url('/resources/images/print_24.gif');
+                    background-size: cover;
+                    width: 24px;
+                    height: 24px;
+                    font-size: 2rem; background-color: transparent;
+                    border: 0px;
+                }
+             
+             
+                function printPopup() {
+                    var lawCode = 'CCP';
+                    var sectionNum = '1033.5.';
+                    var op_statues = '2017'
+                    var op_chapter = '583';
+                    var op_section = '1';
+                    var article = '';
+                    var url = "printCodeSectionWindow.xhtml?";
+                    if (lawCode)
+                        url += 'lawCode=' + lawCode;
+                    if (article) {
+                        url += '&article=' + article;
+                        //alert(url);
+                    }
+
+                    if (sectionNum)
+                        url += '§ionNum=' + sectionNum;
+                    if (op_statues)
+                        url += '&op_statues=' + op_statues;
+                    if (op_chapter)
+                        url += '&op_chapter=' + op_chapter;
+                    if (op_section)
+                        url += '&op_section=' + op_section;
+                    printWindow = window.open(url, "wind", "width=680," +
+                            "height=768,		" +
+                            "toolbar=no,		" +
+                            "location=no,		" +
+                            "directories=no,	" +
+                            "status=no,		" +
+                            "menubar=yes,		" +
+                            "scrollbars=yes,	" +
+                            "resizable=yes		"
+                            );
+                    printWindow.focus();
+                }
+             
+ 
+ 
+
+                     
+                         
+                              California Law 
+                                >>
+                             
+                               
+                                >>
+                             
+                             Code Section
+                             
+                         
+                      
+ 
+                  
+                 Code Section 
+                 
+                 
+
+                   
+         
+            function myPopup() {
+
+                window.open("popupMessage.xhtml", "Information", "width=330, height=220, toolbar=no, location=no, directories=no, menubar=no, scrollbars=no, top=270, left=150");
+            }
+
+            function setCode() {
+                //         button = document.getElementById('expertsearchformid:executeID');
+                //              document.getElementById('expertsearchformid:parameterID1').value = document.getElementById('expertsearchformid:toctextcodeid').value;
+                //              document.getElementById('expertsearchformid:parameterID2').value ='2'; //just a value to bypass validation
+                //              button.click();
+                if (document.getElementById('expertsearchformid:toctextcodeid').value == 'CONS') {
+                    document.getElementById('expertsearchformid:articlelblid').style.display = 'inline';
+                    document.getElementById('expertsearchformid:articleid').style.display = 'inline';
+                } else {
+                    document.getElementById('expertsearchformid:articlelblid').style.display = 'none';
+                    document.getElementById('expertsearchformid:articleid').style.display = 'none';
+                    document.getElementById('expertsearchformid:articleid').value = "";
+                }
+            }
+
+          
+     
+
+
+         
+             
+                 
+ 
+ 
+ Code:  	 Select Code 
+	 CONS 
+	 BPC 
+	 CIV 
+	 CCP 
+	 COM 
+	 CORP 
+	 EDC 
+	 ELEC 
+	 EVID 
+	 FAM 
+	 FIN 
+	 FGC 
+	 FAC 
+	 GOV 
+	 HNC 
+	 HSC 
+	 INS 
+	 LAB 
+	 MVC 
+	 PEN 
+	 PROB 
+	 PCC 
+	 PRC 
+	 PUC 
+	 RTC 
+	 SHC 
+	 UIC 
+	 VEH 
+	 WAT 
+	 WIC 
+  Article:   Section:   
+                          
+ 
+                 
+                 
+ 
+ 
+ Code:  	 Select Code 
+	 All 
+	 BPC 
+	 CIV 
+	 CCP 
+	 COM 
+	 CORP 
+	 EDC 
+	 ELEC 
+	 EVID 
+	 FAM 
+	 FIN 
+	 FGC 
+	 FAC 
+	 GOV 
+	 HNC 
+	 HSC 
+	 INS 
+	 LAB 
+	 MVC 
+	 PEN 
+	 PROB 
+	 PCC 
+	 PRC 
+	 PUC 
+	 RTC 
+	 SHC 
+	 UIC 
+	 VEH 
+	 WAT 
+	 WIC 
+  Section:     Keyword(s):   
+                            
+ 
+                 
+             
+             
+             
+         
+
+
+     
+         setCode(); 
+    
+
+      
+
+
+ 
+                 
+                  
+ 
+ 
+
+     
+         Code Search  
+       
+         Text Search  
+       
+      
+ 
+ 
+                 
+                 
+                     
+                         
+ 
+ 
+ Up^  << Previous   Next >>  cross-reference chaptered bills  PDF  |  Add To My Favorites 
+                                  
+
+
+                                   
+ 
+
+                         
+
+                     
+ 
+ 
+
+                          Search Phrase:    
+                          
+ 
+ 
+ 
+
+                          Code Text  
+                                  Code of Civil Procedure - CCP      PART 2. OF CIVIL ACTIONS [307 - 1062.34]     ( Part 2 enacted 1872. )        TITLE 14. OF MISCELLANEOUS PROVISIONS [989 - 1062.34]     ( Title 14 enacted 1872. )         CHAPTER 6. Of Costs [1021 - 1038]     ( Chapter 6 enacted 1872. )          1033.5.     (a) The following items are allowable as costs under Section 1032:  (1) Filing, motion, and jury fees.  (2) Juror food and lodging while they are kept together during trial and after the jury retires for deliberation.  (3) (A) Taking, video recording, and transcribing necessary depositions, including an original and one copy of those taken by the claimant and one copy of depositions taken by the party against whom costs are allowed.  (B) Fees of a certified or registered interpreter for the deposition of a party or witness who does not proficiently speak or understand the English language.  (C) Travel expenses to attend depositions.  (4) Service of process by a public officer, registered process server, or other means, as follows:  (A) When service is by a public officer, the recoverable cost is the fee authorized by law at the time of service.  (B) If service is by a
+ process server registered pursuant to Chapter 16 (commencing with Section 22350) of Division 8 of the Business and Professions Code, the recoverable cost is the amount actually incurred in effecting service, including, but not limited to, a stakeout or other means employed in locating the person to be served, unless those charges are successfully challenged by a party to the action.  (C) When service is by publication, the recoverable cost is the sum actually incurred in effecting service.  (D) When service is by a means other than that set forth in subparagraph (A), (B), or (C), the recoverable cost is the lesser of the sum actually incurred, or the amount allowed to a public officer in this state for that service, except that the court may allow the sum actually incurred in effecting service upon application pursuant to paragraph (4) of subdivision (c).  (5) Expenses of attachment including keeper’s fees.  (6) Premiums on necessary surety bonds.  (7) Ordinary witness fees pursuant to Section 68093 of the Government Code.  (8) Fees of expert witnesses ordered by the court.  (9) Transcripts of court proceedings ordered by the court.  (10) Attorney’s fees, when authorized by any of the following:  (A) Contract.  (B) Statute.  (C) Law.  (11) Court reporter fees as established by statute.  (12) Court interpreter fees for a qualified court interpreter authorized by the court for an indigent person represented by a qualified legal services project, as defined in Section 6213 of the Business and Professions Code, or a pro bono attorney, as defined in Section 8030.4 of the Business and Professions Code.  (13) Models, the enlargements of exhibits and photocopies of exhibits, and the electronic presentation of exhibits, including costs of rental equipment and electronic formatting, may be allowed if they were reasonably helpful to aid the trier of fact.  (14) Fees for the electronic filing or service of documents through an electronic filing service provider if a court requires or orders electronic filing or service of documents.  (15) Fees for the hosting of electronic documents if a court requires or orders a party to have documents hosted by an electronic filing service provider. This paragraph shall become inoperative on January 1, 2022.  (16) Any other item that is required to be awarded to the prevailing party pursuant to statute as an incident to prevailing in the action at trial or on appeal.  (b) The following items are not allowable as costs, except when expressly authorized by law:  (1) Fees of experts not ordered by the court.  (2) Investigation expenses in preparing the case for trial.  (3) Postage, telephone, and photocopying charges, except for
+ exhibits.  (4) Costs in investigation of jurors or in preparation for voir dire.  (5) Transcripts of court proceedings not ordered by the court.  (c) An award of costs shall be subject to the following:  (1) Costs are allowable if incurred, whether or not paid.  (2) Allowable costs shall be reasonably necessary to the conduct of the litigation rather than merely convenient or beneficial to its preparation.  (3) Allowable costs shall be reasonable in amount.  (4) Items not mentioned in this section and items assessed upon application may be allowed or denied in the
+ court’s discretion.  (5) (A) If a statute of this state refers to the award of “costs and attorney’s fees,” attorney’s fees are an item and component of the costs to be awarded and are allowable as costs pursuant to subparagraph (B) of paragraph (10) of subdivision (a). A claim not based upon the court’s established schedule of attorney’s fees for actions on a contract shall bear the burden of proof. Attorney’s fees allowable as costs pursuant to subparagraph (B) of paragraph (10) of subdivision (a) may be fixed as follows: (i) upon a noticed motion, (ii) at the time a statement of decision is rendered, (iii) upon application supported by affidavit made concurrently with a claim for other costs, or (iv) upon entry of default judgment. Attorney’s fees allowable as costs pursuant to subparagraph (A) or (C) of paragraph (10) of subdivision (a) shall be fixed either upon a noticed motion or upon entry of a default judgment,
+ unless otherwise provided by stipulation of the parties.  (B) Attorney’s fees awarded pursuant to Section 1717 of the Civil Code are allowable costs under Section 1032 as authorized by subparagraph (A) of paragraph (10) of subdivision (a).  (Amended by Stats. 2017, Ch. 583, Sec. 1.   (AB 828)   Effective January 1, 2018.)      
+                          
+ 
+
+                 
+         
+        
+
+ 

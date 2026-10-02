@@ -1,0 +1,221 @@
+R2011-App_A_Ch_5 (https://www.aqmd.gov/docs/default-source/rule-book/recent-rules/r2011-app_a_ch_5.pdf?sfvrsn=a33a667e_4)
+citeturn2130view0 [wordlim: 200] Crawled: 2 months ago; Content type: application/pdf; Number of pages: 28; Source: click({"ref_id":"turn2129view0","id":127}); Total lines: 851
+L0@P0: 
+L1@P0: R U L E 2 0 1 1 P R O T O C O L -
+L2@P0: C H A P T E R 5
+L3@P0: R E M O T E T E R M I N A L U N I T ( R T U )
+L4@P0-2:  - E L E C T R O N I C R E P O R T I N GTABLE OF CONTENTS
+L5@P2: Protocol for Rule 2011 Amended June 5, 2026
+L6@P2: TABLE OF CONTENTS
+L7@P2: CHAPTER 5 - REMOTE TERMINAL UNIT (RTU)
+L8@P2: A. General.....................................................................................................2011A-5-1
+L9@P2: B. Products....................................................................................................2011A-5-3
+L10@P2: C. Execution .................................................................................................2011A-5-4
+L11@P2: D. Data Requirements.................................................................................2011A-5-10
+L12@P2-4: Appendix G - Diagrams.....................................................................................2011A-5-21PROTOCOL FOR RULE 2011 Amended June 5, 2026
+L13@P4: Rule 2011A-5-1
+L14@P4: This chapter defines the tasks and characteristics for electronic reporting of emissions
+L15@P4: from all sources. The Facility Permit holder of a major source shall use an RTU to
+L16@P4: telecommunicate rule compliance data to the District Central Station Emissions
+L17@P4: Monitoring Computer. The RTU shall collect data, perform calculations, generate the
+L18@P4: appropriate data files, and transmit the data to the Central Station. The Facility Permit
+L19@P4: holder of a large source or process unit may elect to use an RTU. Alternatively, the
+L20@P4: Facility Permit holder of a large source or process unit shall compile the required rule
+L21@P4: compliance data manually, and transmit that data in accordance with the data
+L22@P4: requirements of Section D in this chapter. The Facility Permit holder shall use, when
+L23@P4: required, the appropriate record type specified in this chapter to report to the District
+L24@P4: Central Station emissions from all RECLAIM SOx sources. Alternative to transmitting
+L25@P4: data to the District Central Station, the Facility Permit holder may use the District
+L26@P4: Internet Web Site to report emissions electronically from RECLAIM SOx sources except
+L27@P4: for major sources.
+L28@P4: A. GENERAL
+L29@P4: 1. General
+L30@P4: The Facility Permit holder of a major source shall telecommunicate rule
+L31@P4: compliance data to the District via Remote Terminal Units (RTU). This
+L32@P4: form of reporting may also be used for large sources or process units. The
+L33@P4: RTU shall collect data from a CEMS, a CPMS, or other equipment
+L34@P4: specified in the Facility Permit and send data periodically to the Central
+L35@P4: Station Emissions Monitoring Computer (Central Station).
+L36@P4: This chapter specifies the tasks and characteristics required of the RTU
+L37@P4: and shall be used as a guide for providing the required software/hardware
+L38@P4: for the RTU. Emissions Data Collection System conformity as well as
+L39@P4: establishing and maintaining communications with the emission
+L40@P4: monitoring system and the Central Station shall be the responsibility of the
+L41@P4: Facility Permit holder. This chapter also serves as a functional guideline
+L42@P4: for operating requirements of the RTU, and provides information
+L43@P4: concerning RTU hardware/software procurement, configuration,
+L44@P4: installation, maintenance, and compatibility with the emission monitoring
+L45@P4: system and the Central Station.
+L46@P4: In lieu of using a modem, the Facility Permit holder of a major source may
+L47@P4: elect to use an alternative electronic reporting system approved by the
+L48@P4: Executive Officer to telecommunicate rule compliance data to the South
+L49@P4: Coast AQMD Central Station Emissions Monitoring Computer. Any use
+L50@P4: of an approved alternative electronic reporting system shall be in
+L51@P4: accordance with specifications approved by the Executive Officer.
+L52@P4: 2. RTU and Supporting Equipment Description
+L53@P4: a. Purpose:
+L54@P4: The RTU shall interface to existing data acquisition systems or
+L55@P4: other field instrumentation, and shall gather and store data, and
+L56@P4-5: facilitate telecommunication with the Central Station Computer.PROTOCOL FOR RULE 2011 Amended June 5, 2026
+L57@P5: Rule 2011A-5-2
+L58@P5: b. Environment:
+L59@P5: i. Logical Environment:
+L60@P5: The signal chain includes the process equipment, sensing
+L61@P5: devices, data acquisition system, RTU, modem,
+L62@P5: communications link and District Central Station.
+L63@P5: ii. Physical Environment:
+L64@P5: Typical environments shall include "friendly" and
+L65@P5: "Central Station" environments. Friendly environments
+L66@P5: include clean, air conditioned areas such as computer
+L67@P5: rooms and offices. Hostile environments may include
+L68@P5: exterior spaces or interior spaces without benefit of air
+L69@P5: conditioning, and areas where free floating air particulates
+L70@P5: may impede the normal operation of exposed electronics.
+L71@P5: Each RTU shall be mounted in such a manner as to be
+L72@P5: environmentally qualified.
+L73@P5: iii. Electrical Environment:
+L74@P5: 1) Connected Devices:
+L75@P5: Each RTU may receive information from a local
+L76@P5: computer (DAS) or various field sensing devices,
+L77@P5: calculate and/or store the specified parameters and
+L78@P5: shall make its data available to local and Central
+L79@P5: Stations.
+L80@P5: 2) Sensor-based Data to be acquired:
+L81@P5: Where applicable, the RTU shall be able to directly
+L82@P5: monitor transducers which sense variables required
+L83@P5: for compliance determinations. At a minimum,
+L84@P5: input analog conversion hardware should operate
+L85@P5: with a medium level of resolution (i.e. 12 bit
+L86@P5: resolution) and a sampling rate sufficient to
+L87@P5: accurately characterize the sensor based data.
+L88@P5: iv. Description of Data to be transmitted:
+L89@P5: All data shall be made available at data output ports in
+L90@P5: ASCII format as described below:
+L91@P5: 1) Data Sampling:
+L92@P5: Shall retain selectable status levels about its sensors.
+L93@P5: 2) Rule-specific Data Sets:
+L94@P5: (as specified elsewhere)
+L95@P5: c. Functions:
+L96@P5: The RTU shall provide the following functions:
+L97@P5: i. Power-Up/Restart Mode:
+L98@P5: Upon resumption of power after a loss, the RTU shall
+L99@P5: automatically restart and reset itself to predetermined
+L100@P5-6: system settings.PROTOCOL FOR RULE 2011 Amended June 5, 2026
+L101@P6: Rule 2011A-5-3
+L102@P6: ii. Non-Communicating Mode:
+L103@P6: When in the non-communicating mode the RTU shall
+L104@P6: operate independently of the communications ports as well
+L105@P6: as store its transactions for later communications with the
+L106@P6: Central Station.
+L107@P6: iii. Failure Mode:
+L108@P6: In the event the RTU is unable to initiate communications
+L109@P6: with the Central Station, the RTU shall perform the
+L110@P6: following actions:
+L111@P6: 1) The RTU shall first make four subsequent attempts
+L112@P6: to establish communications with the Central
+L113@P6: Station.
+L114@P6: 2) Upon failure of the fourth attempt, the RTU shall:
+L115@P6: a Revert to the non-communicating mode for
+L116@P6: a period of fifteen (15) minutes and then
+L117@P6: again attempt to establish communications
+L118@P6: with the Central Station.
+L119@P6: b Each failure shall result in the execution of
+L120@P6: the failure mode sequence.
+L121@P6: 3) Error Tolerance:
+L122@P6: The RTU shall perform its specified functions
+L123@P6: without misinterpretation of input information,
+L124@P6: errors in output signals, damage to internal
+L125@P6: components, and loss or change of stored
+L126@P6: information with either common mode to ground or
+L127@P6: differential mode transients present on the
+L128@P6: communication ports, circuits or power sources
+L129@P6: which shall be connected to the inputs and power
+L130@P6: supply terminals to the equipment.
+L131@P6: B. PRODUCTS
+L132@P6: 1. RTU Attributes
+L133@P6: a. Environmental Tolerances: Each RTU shall be installed in such a
+L134@P6: manner as to be environmentally qualified for the particular
+L135@P6: physical environment.
+L136@P6: b. Communications Provisions: The RTU shall provide a minimum
+L137@P6: of one (1) communications connection. The connection shall be
+L138@P6: labeled "Remote".
+L139@P6: c. Real Time Clock: The RTU shall be equipped with a batterybacked Real Time Calendar/Clock (RTC) to provide time signals
+L140@P6: for implementing time dependent programs. The battery back-up
+L141@P6: shall be field replaceable and shall not require replacement more
+L142@P6: often than once every two (2) years. An alarm message shall be
+L143@P6-7: generated when the battery reaches a low voltage point with at PROTOCOL FOR RULE 2011 Amended June 5, 2026
+L144@P7: Rule 2011A-5-4
+L145@P7: least one (1) month life under load left prior to the necessity for
+L146@P7-8: battery replacement. PROTOCOL FOR RULE 2011 Amended June 5, 2026
+L147@P8: Rule 2011A-5-5
+L148@P8: d. Internal Software:
+L149@P8: i. Data Collection and Storage: The RTU shall collect data
+L150@P8: from sensors, generate and store values, and perform
+L151@P8: calculations upon those values. Data shall be collected and
+L152@P8: stored in the Data Sampling memory.
+L153@P8: ii. Calculations and Message Storage: Calculated values and
+L154@P8: messages resulting from calculations performed upon
+L155@P8: sampled data shall be stored as ASCII data strings in
+L156@P8: memory.
+L157@P8: e. Security Provisions:
+L158@P8: i. Message Security: The RTU shall utilize a standard
+L159@P8: protocol encryption method for communications with the
+L160@P8: remote Central Station incorporating error detection. The
+L161@P8: system shall not incorporate error correction. The code
+L162@P8: shall detect one hundred (100) percent of single, double and
+L163@P8: triple errors; one hundred (100) percent of burst errors of
+L164@P8: six bits or fewer; ninety- seven (97) percent of all seven-bit
+L165@P8: bursts; and ninety-eight point four (98.4) percent of all
+L166@P8: other burst as well as a substantial fraction of all random
+L167@P8: error patterns involving more than three (3) bits.
+L168@P8: ii. Message Checking: The RTU shall utilize bitsum checking
+L169@P8: for all messages.
+L170@P8: f. Modem: Provide a modem connected to the Remote Central
+L171@P8: Station communication port.i.Modem Self-Test: The modem shall
+L172@P8: be capable of being operated in self testing mode automatically on
+L173@P8: a periodic basis.
+L174@P8: g. Transient Suppression: Provide hardware, circuitry, components
+L175@P8: or extended component ratings or characteristics necessary to
+L176@P8: prevent interference to correct operation or equipment damage
+L177@P8: from induced transients which may be presented on
+L178@P8: communication circuits and power sources. Transient suppression
+L179@P8: shall utilize the latest revision of the ANSI C37.90a standard.
+L180@P8: C. EXECUTION
+L181@P8: 1. General
+L182@P8: a. Section (C) describes acceptable methods and practices for use in
+L183@P8: completion of this work.
+L184@P8: b. Standards: Perform the work in accordance with the latest
+L185@P8: revisions of the following standards:
+L186@P8-9: i. ANSI American National Standards Institute.PROTOCOL FOR RULE 2011 Amended June 5, 2026
+L187@P9: Rule 2011A-5-6
+L188@P9: ii. UL Underwriters Laboratories.
+L189@P9: iii. EIA Electrical Industries Association.
+L190@P9: iv. NEMA National Electrical Manufacturers
+L191@P9: Association.
+L192@P9: 2. Project Plan
+L193@P9: Develop a project plan for accomplishing the requirements of this
+L194@P9: installation . The plan shall include a checklist for the Submittal date .
+L195@P9: 3. Software Requirements Guideline
+L196@P9: The Software Requirement Guideline (SRG) shall specify tasks and
+L197@P9: characteristics required of the RTU and is to be used as a guide for
+L198@P9: providing the required software for the RTU. Emissions Data Collection
+L199@P9: System conformity as well as establishing and maintaining
+L200@P9: communications with the emission monitoring system and the Central
+L201@P9: Station shall be the responsibility of the Facility Permit holder.
+L202@P9: a. References
+L203@P9: This guideline shall be used in conjunction with the following
+L204@P9: Rules:
+L205@P9: RULE 2011 - Requirements for Monitoring, Reporting and
+--------------------------------------------------------------------------------
+ (https://www.aqmd.gov/docs/default-source/rule-book/reg-xx/rule-2011-appendix-a/r2011attach.pdf?sfvrsn=1acfb161_8)
+citeturn2130view1 [wordlim: 200] Crawled: 3 months ago; Content type: application/pdf; Number of pages: 43; Source: click({"ref_id":"turn2121view2","id":125}); Total lines: 1186
+--------------------------------------------------------------------------------
+ (https://www.aqmd.gov/docs/default-source/rule-book/reg-xx/rule-2011-appendix-a/r2011-2.pdf?sfvrsn=22cfb161_8)
+citeturn2130view2 [wordlim: 200] Crawled: 2 weeks ago; Content type: application/pdf; Number of pages: 44; Source: click({"ref_id":"turn2121view2","id":120}); Total lines: 1811
+--------------------------------------------------------------------------------
+		 (https://www.aqmd.gov/docs/default-source/rule-book/reg-xx/rule-2011-appendix-a/chapter-3.pdf?sfvrsn=422e1d61_7)
+citeturn2130view3 [wordlim: 200] Crawled: last month; Content type: application/pdf; Number of pages: 14; Source: click({"ref_id":"turn2121view2","id":121}); Total lines: 336
+--------------------------------------------------------------------------------
+ (https://www.aqmd.gov/docs/default-source/rule-book/reg-xx/rule-2012-appendix-a/r2012attach.pdf?sfvrsn=23ccb161_12)
+citeturn2130view4 [wordlim: 200] Crawled: last month; Content type: application/pdf; Number of pages: 48; Source: click({"ref_id":"turn2121view2","id":141}); Total lines: 1292
+

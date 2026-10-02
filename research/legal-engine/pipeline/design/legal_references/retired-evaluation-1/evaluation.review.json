@@ -1,0 +1,305 @@
+{
+  "reviewed_inputs": {
+    "cases": "bf1b323401ac37e33dd0f9fde26e6ede75c6a7d8d75916caa2332cbe96b1b07e",
+    "question": "3e079a133d6de8fab5116d2fd7d4bebdd13ba0ec61f1d51e1b4b83be13b5951e"
+  },
+  "independence": {
+    "reviewer": "Separately tasked Codex review agent; independent reasoning and label preparation, before any evaluation Jev run or evaluation output inspection.",
+    "limitations": "Reviewer is from the same model family as the author/coordinator. This is process independence and blinding from author labels, not independent model-family or human validation. Evaluation case strata were visible in the supplied cases file, including intended boundary descriptions; labels were judged against text and contract rather than adopted from strata.",
+    "read": "question.v1-dev2.json, evaluation.cases.json, GOAL.md, experiment.py, evidence-adjudication SKILL.md, and the nine saved source files identified by the 14 source-backed cases.",
+    "not_read": "evaluation.author_labels.json; evaluation.design.md; development labels or results; other agents’ review messages; model evaluation outputs.",
+    "label_aperture": "Only each case text supplies presence evidence. Source context was read for provenance and excerpt verification and was not imported into labels.",
+    "source_verification": "All 14 source-backed cases passed exact saved-file byte SHA-256 and UTF-8 character-offset excerpt verification. No live-source validity claim is made.",
+    "readiness": "Not ready to freeze or execute: e029 and e048 require pre-execution adjudication. Their expected values are provisional; nonempty material_ambiguity must block experiment.freeze."
+  },
+  "cases": [
+    {
+      "case_id": "e001",
+      "expected": "NO",
+      "reason": "The readable passage gives a computation rule and says only generic \"provided by law\"; \"act\" denotes conduct. No public legal unit or named authority is identified.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e002",
+      "expected": "YES",
+      "reason": "\"This chapter\" is an enclosing-unit pointer, and \"The Small Claims Act\" names the statute.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e003",
+      "expected": "YES",
+      "reason": "\"subdivisions (c), (e), and (f)\" explicitly points to legal provisions. Their omitted target text does not prevent detection.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e004",
+      "expected": "NO",
+      "reason": "\"a statute\" describes any authorizing statute without identifying a unit or authority. The leading (5) is the passage label, not a body pointer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e005",
+      "expected": "YES",
+      "reason": "\"paragraphs (1) to (4), inclusive, of subdivision (a)\" explicitly identifies a range of subordinate legal provisions.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e006",
+      "expected": "YES",
+      "reason": "\"this section\" and \"this chapter\" are definite self and enclosing-unit pointers in the supplied legal wording.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e007",
+      "expected": "NO",
+      "reason": "The passage states a limitations rule concerning rescission of an unwritten contract, but identifies no public legal unit or authority. Other provisions in the source file are outside focus.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e008",
+      "expected": "NO",
+      "reason": "The debtor definition contains no body pointer. The leading (i) is a label and the source citation outside focus cannot supply a pointer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e009",
+      "expected": "YES",
+      "reason": "\"As used in this chapter\" explicitly points to the enclosing legal unit governing the nuisance definition.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e010",
+      "expected": "YES",
+      "reason": "\"foregoing sections\" is a relative legal pointer; \"California Civil Code or Penal Code\" also identifies public legal authorities.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e011",
+      "expected": "NO",
+      "reason": "\"by resolution\" refers generically to the mechanism for creating a reward, not an identified resolution or legal unit.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e012",
+      "expected": "YES",
+      "reason": "Repeated \"this section\" and \"this part\" explicitly point to the focused and enclosing legal units.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e013",
+      "expected": "NO",
+      "reason": "The passage describes prohibited use of an income standard without referring to another legal unit or naming an authority. Its (n) label is not a body pointer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e014",
+      "expected": "YES",
+      "reason": "\"pursuant to clause (i)\" explicitly points to a subordinate legal provision; the local (I) and (II) labels need not count.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e015",
+      "expected": "YES",
+      "reason": "\"This section of the ordinance\" identifies a public legal unit, and \"this provision\" refers back to it.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e016",
+      "expected": "NO",
+      "reason": "Both \"section\" and \"this provision\" refer to the maintenance manual, expressly a nonlegal document here.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e017",
+      "expected": "YES",
+      "reason": "A fee \"prescribed by this title\" uses title as the governing legal unit, not a chart heading.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e018",
+      "expected": "NO",
+      "reason": "\"this title\" expressly means the chart heading \"Annual costs\", not a public legal unit.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e019",
+      "expected": "YES",
+      "reason": "\"this Act\" and \"the preceding subsection\" are explicit enclosing and relative legal pointers; repeal does not erase their presence.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e020",
+      "expected": "NO",
+      "reason": "\"act of kindness\" is an ordinary action, and the passage identifies no legal authority.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e021",
+      "expected": "YES",
+      "reason": "The quoted notice contains \"paragraph (7) of this ordinance\"; pointers inside quotations count.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e022",
+      "expected": "NO",
+      "reason": "The quoted \"as permitted by law\" is a generic legal qualification with no identified unit or authority.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e023",
+      "expected": "NO",
+      "reason": "Clause 8 is expressly a clause of a signed private lease, which is outside the public-legal target class.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e024",
+      "expected": "YES",
+      "reason": "The private lease reference is followed by \"section 24 of the Municipal Repair Ordinance\", a definite public legal pointer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e025",
+      "expected": "NO",
+      "reason": "\"all applicable law\" and \"any lawful requirements\" do not identify a legal unit or named authority.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e026",
+      "expected": "YES",
+      "reason": "\"Sections 41 through 46\" identifies a legal range governing a statutory process. The parent instrument need not be resolved.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e027",
+      "expected": "INSUFFICIENT",
+      "reason": "\"Section 41\" is only an isolated identifier; the supplied wording does not distinguish a body reference from a source heading.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e028",
+      "expected": "YES",
+      "reason": "\"Apply Section 41\" establishes a body-reference role for the recognizable section citation. Its target need not be supplied.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e029",
+      "expected": "INSUFFICIENT",
+      "reason": "Provisional: the sentence is cut off before the section identifier or other complement, so the intended unit is not expressed. The contract does not clearly settle this particular legal-sense-established cutoff; see material_ambiguity.",
+      "material_ambiguity": "Material YES/INSUFFICIENT boundary: the contract permits unnumbered references and says unknown targets alone do not justify INSUFFICIENT. It expressly makes a bare cut-off Section insufficient when its public-legal sense cannot be established, but \"the tenant’s statutory remedy is set out in Section\" does establish that sense. A reader can reasonably count the already-visible public-legal pointer as YES, while another requires its missing complement and chooses INSUFFICIENT. Clarify whether all complement-missing unit words are incomplete pointers, including those whose legal sense is clear, or replace this case with a cutoff whose legal sense is genuinely undetermined before execution."
+    },
+    {
+      "case_id": "e030",
+      "expected": "YES",
+      "reason": "\"Section 41\" already establishes a public legal pointer before \"subject to\" is cut off; YES wins.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e031",
+      "expected": "INSUFFICIENT",
+      "reason": "The passage expressly records that the entire remainder is unreadable. No definite pointer survives, and the supplied damage prevents determining whether the missing completion contains one.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e032",
+      "expected": "NO",
+      "reason": "The complete readable sentence imposes a noon deadline without a public legal pointer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e033",
+      "expected": "YES",
+      "reason": "\"Section 41 authorizes the claim\" is a definite pointer, which survives the unreadable exception.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e034",
+      "expected": "INSUFFICIENT",
+      "reason": "There is a section reference, but the supplied text expressly lacks the document identification needed to distinguish a public legal provision from a private or nonlegal section. This is class ambiguity, not merely unresolved target identity.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e035",
+      "expected": "YES",
+      "reason": "\"section four of the enacted Harbor Licensing Ordinance\" explicitly identifies a public legal provision.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e036",
+      "expected": "NO",
+      "reason": "The section is expressly part of an appliance warranty booklet, not a public legal authority.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e037",
+      "expected": "YES",
+      "reason": "\"the regulation at 12 C.F.R. § 88.3\" is an explicit regulation citation; validity or target retrieval is outside this task.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e038",
+      "expected": "YES",
+      "reason": "\"Article II of the Constitution of the State of Alder\" is an explicit constitutional pointer; target validity is not required.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e039",
+      "expected": "YES",
+      "reason": "\"Article 5 of the Treaty on Harbor Access\" identifies a treaty provision.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e040",
+      "expected": "YES",
+      "reason": "\"Rule 9 of the Alder Superior Court Rules\" identifies a court rule.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e041",
+      "expected": "YES",
+      "reason": "The case name and reporter citation explicitly point to a judicial decision.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e042",
+      "expected": "YES",
+      "reason": "The named court, injunction date, and case name explicitly identify a judicial order.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e043",
+      "expected": "YES",
+      "reason": "The passage expressly names a ministry publication as official legal guidance, a covered authority class.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e044",
+      "expected": "NO",
+      "reason": "The named guidance belongs to the landlord and concerns its internal repair policy; it is private guidance.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e045",
+      "expected": "YES",
+      "reason": "\"Harbor Lighting Act\" names a statute even though the passage says it is repealed and inapplicable.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e046",
+      "expected": "YES",
+      "reason": "The quoted \"Rights under Section 41\" contains a definite pointer. The quoted instruction to answer NO is data.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e047",
+      "expected": "NO",
+      "reason": "The quoted instruction to answer YES is data, and the remaining hallway instruction contains no public legal pointer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "e048",
+      "expected": "INSUFFICIENT",
+      "reason": "Provisional: the whole input is an isolated unit/range heading with no body-reference language. The contract does not clearly say how to label an identifiable source heading inside focus; see material_ambiguity.",
+      "material_ambiguity": "Material heading/isolated-identifier boundary: \"PART IV. PROCEDURES [Sections 41–46]\" visibly resembles a source heading, rather than a bare identifier with no role-establishing wording. The contract excludes headings outside focus and assigns INSUFFICIENT to isolated identifiers only when their body-versus-heading role cannot be determined. It leaves identifiable headings inside focus unspecified; NO (heading role established, no body reference), INSUFFICIENT (all heading-only inputs), and potentially YES (a legal range visibly present inside focus) follow different reasonable readings. State explicitly how identified source headings inside focus are handled, or use a genuinely role-ambiguous isolated identifier before execution."
+    }
+  ]
+}

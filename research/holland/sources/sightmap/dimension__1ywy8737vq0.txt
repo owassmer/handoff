@@ -1,0 +1,34 @@
+SOURCE: https://sightmap.com/embed/1ywy8737vq0 (page) -> https://sightmap.com/app/api/v1/x1p8j27dvd6/sightmaps/109725 (the embed's own JSON feed, fetched with curl)
+RETRIEVED: 2026-09-30
+ASSET: Dimension | units on map: 19
+
+FEES/EXPENSES (label | type | frequency | required | refundable | amounts seen across units | tooltip)
+- Application Screening Fee (Non-refundable) | application | one time | req=True | refundable=False | $50.00 | Due per person, over the age of 18
+- Deposit (refundable) | deposit | one time | req=True | refundable=True | $400.00 | May increase to up to 1 month's rent equivalent depending on screening result. Intended to be held through residency and may be applied towards amount owed at move-out. Refunds processed per lease terms
+- Approved Application Deposit | holding | one time | req=True | refundable=True | $400.00 | Due upon approval. Applied to total deposit due at move in.
+- Water | water | month | req=True | refundable=False | Ratio Based | Water usage billed based on apt sq ft & number of occupants
+- Sewer | utilities_other | month | req=True | refundable=False | Ratio Based | Sewer usage billed based on apt sq ft & number of occupants.
+- Sewer Capacity | utilities_other | month | req=True | refundable=False | Ratio Based | King County waste treatment billed based on apt sq ft & number of occupants
+- Trash | trash | month | req=True | refundable=False | Ratio Based | Shared municipal trash hauling fee billed based on number of occupants
+- Third-Party Utility Billing | utilities_admin | month | req=True | refundable=False | $4.15 | Third party billing monthly admin fee
+- Porter Service | maintenance | month | req=True | refundable=False | $10.00 | For maintenance/clearing of building common areas. Amount may vary.
+- Common Area Utilities | utilities_other | month | req=True | refundable=False | Ratio Based | For electric & gas usage in common areas
+- Electricity | electricity | month | req=True | refundable=False | Directly to Provider | Resident must create an account w electric company
+- Internet | internet | month | req=False | refundable=False | Directly to Provider | Resident pays directly to internet provider
+- Pet Deposit (refundable) | pet_deposit_other | one time | req=False | refundable=True | $300.00 | Breed restrictions apply. Limit 2 pets/apt
+- Pet Rent | pet_rent_other | month | req=False | refundable=False | $42.00 | Breed restrictions apply. Limit 2 pets/apt
+- Renter's Liability Insurance | renters_insurance | lease | req=True | refundable=False | Varies | Resident must maintain liability renter's insurance
+- Garage Parking (1 Space) | private_garage | month | req=False | refundable=False | $250.00 - $300.00 | Single parking space in controlled access private garage. Monthly price based on size
+- EV Garage Parking | ev_parking | month | req=False | refundable=False | $325.00 | Reserved EV charging space in garage
+- Motorcycle Parking | motorcycle_parking | month | req=False | refundable=False | $50.00 | Motorcycle parking space in garage
+- Storage Unit | storage_unit | month | req=False | refundable=False | $35.00 - $75.00 | Monthly price based on size
+- Bicycle Storage | bicycle_storage | month | req=False | refundable=False | No charge | Resident provides lock
+- Air Conditioner Rental | community_other | month | req=False | refundable=False | $80.00 | Portable air conditioner
+- Approved Application Deposit Applied | holding | one time | req=True | refundable=True | -$400.00 | The deposit paid upon application approval is applied to the total amount due at move in.
+- NOVA International Credit Screening (Optional) | screening | one time | req=False | refundable=False | $50.00 | Applicants with limited or no credit established in the United States may choose to submit an application via NOVA International Credit for a fee paid directly to the screening agency.
+
+PRICING DISCLAIMER (Holland Base Rent Disclaimer [AZ:CA:OR:WA]): Prices include base rent. For an estimate of total monthly price, including mandatory monthly fees and any user-selected optional fees, use our Calculate My Cost tool after selecting your desired apartment home. Variable and/or usage-based fees are not included. Monthly price and move in costs are estimates and may vary from actual monthly/move in costs based on factors such as move in date, lease term, user-selected options (e.g. parking, pets, etc.) and deposit requirements after screening.
+
+CALCULATOR DISCLAIMER: Amounts provided are estimates and may vary from actual monthly/move in costs based on factors such as move-in date, lease term, user-selections, deposit requirements, etc. The Estimated Monthly Price and Estimated Move In Cost includes base rent, all mandatory monthly & one-time fees, and optional user-selected fees. Variable and usage-based fees not included. Deposits based on application screening results are not included. Additional fees may apply based on the application/lease agreement. Certain fees may not apply to apartments under housing vouchers/affordable programs. All fees are nonrefundable unless stated or required by law. Pricing and fees are subject to application/lease terms. Residents must maintain liability insurance and activate utilities billed directly by the provider.
+
+GENERAL DISCLAIMER: None

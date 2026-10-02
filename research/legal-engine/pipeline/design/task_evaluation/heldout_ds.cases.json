@@ -1,0 +1,2224 @@
+{
+  "cases": [
+    {
+      "id": "hds001",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_24_982_4:selected-issue",
+      "authority_lineage": "2024annual:24CFRpart982",
+      "state": {
+        "passage": "(a)\nDefinitions found elsewhere\n—(1)\nGeneral definitions.\nThe following terms are defined in part 5, subpart A of this title: 1937 Act, covered person, drug, drug-related criminal activity, federally assisted housing, guest, household, HUD, MSA, other person under the tenant's control, public housing, Section 8, and violent criminal activity.\n(2)\nDefinitions concerning family income and rent.\nThe terms “adjusted income,” “annual income,” “extremely low income family,” “tenant rent,” “total tenant payment,” “utility allowance,” “utility reimbursement,” and “welfare assistance” are defined in part 5, subpart F of this title. The definitions of “tenant rent” and “utility reimbursement” in part 5, subpart F of this title do not apply to the HCV program under part 982."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_24_982_4.txt",
+          "sha256": "7d0f1d63164d637dea8ff7e7397ba7745f2b56119d1fc17e33f7dc7cc13b03c1",
+          "start": 404,
+          "end": 1178
+        }
+      }
+    },
+    {
+      "id": "hds002",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_24_982_4:selected-issue",
+      "authority_lineage": "2024annual:24CFRpart982",
+      "state": {
+        "claim": "The part5 tenant-rent and utility-reimbursement definitions apply to the HCV program under part982.",
+        "text": "(a)\nDefinitions found elsewhere\n—(1)\nGeneral definitions.\nThe following terms are defined in part 5, subpart A of this title: 1937 Act, covered person, drug, drug-related criminal activity, federally assisted housing, guest, household, HUD, MSA, other person under the tenant's control, public housing, Section 8, and violent criminal activity.\n(2)\nDefinitions concerning family income and rent.\nThe terms “adjusted income,” “annual income,” “extremely low income family,” “tenant rent,” “total tenant payment,” “utility allowance,” “utility reimbursement,” and “welfare assistance” are defined in part 5, subpart F of this title. The definitions of “tenant rent” and “utility reimbursement” in part 5, subpart F of this title do not apply to the HCV program under part 982."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_24_982_4.txt",
+          "sha256": "7d0f1d63164d637dea8ff7e7397ba7745f2b56119d1fc17e33f7dc7cc13b03c1",
+          "start": 404,
+          "end": 1178
+        }
+      }
+    },
+    {
+      "id": "hds003",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_24_100_20:selected-issue",
+      "authority_lineage": "2024annual:24CFRpart100",
+      "state": {
+        "passage": "Aggrieved person\nincludes any person who—\n(a) Claims to have been injured by a discriminatory housing practice; or\n(b) Believes that such person will be injured by a discriminatory housing practice that is about to occur."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_24_100_20.txt",
+          "sha256": "84e7de3bd2beb6f9e803263345f0dc5dd689ae5a5000d77e8abadcca9494c1db",
+          "start": 443,
+          "end": 664
+        }
+      }
+    },
+    {
+      "id": "hds004",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_24_100_20:selected-issue",
+      "authority_lineage": "2024annual:24CFRpart100",
+      "state": {
+        "claim": "A person who believes an imminent discriminatory housing practice will injure them is included even before injury occurs.",
+        "text": "Aggrieved person\nincludes any person who—\n(a) Claims to have been injured by a discriminatory housing practice; or\n(b) Believes that such person will be injured by a discriminatory housing practice that is about to occur."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_24_100_20.txt",
+          "sha256": "84e7de3bd2beb6f9e803263345f0dc5dd689ae5a5000d77e8abadcca9494c1db",
+          "start": 443,
+          "end": 664
+        }
+      }
+    },
+    {
+      "id": "hds005",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_12_1024_2:selected-issue",
+      "authority_lineage": "2024annual:12CFRpart1024",
+      "state": {
+        "passage": "Application\nmeans the submission of a borrower's financial information in anticipation of a credit decision relating to a federally related mortgage loan, which shall include the borrower's name, the borrower's monthly income, the borrower's social security number to obtain a credit report, the property address, an estimate of the value of the property, the mortgage loan amount sought, and any other information deemed necessary by the loan originator. An application may either be in writing or electronically submitted, including a written record of an oral application."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_12_1024_2.txt",
+          "sha256": "25f8223c9cb78c8d2c73ec698cc23090dc4717a5ac760627ce345029d11e3a21",
+          "start": 476,
+          "end": 1051
+        }
+      }
+    },
+    {
+      "id": "hds006",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_12_1024_2:selected-issue",
+      "authority_lineage": "2024annual:12CFRpart1024",
+      "state": {
+        "claim": "An application may be a written record of an oral application.",
+        "text": "Application\nmeans the submission of a borrower's financial information in anticipation of a credit decision relating to a federally related mortgage loan, which shall include the borrower's name, the borrower's monthly income, the borrower's social security number to obtain a credit report, the property address, an estimate of the value of the property, the mortgage loan amount sought, and any other information deemed necessary by the loan originator. An application may either be in writing or electronically submitted, including a written record of an oral application."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_12_1024_2.txt",
+          "sha256": "25f8223c9cb78c8d2c73ec698cc23090dc4717a5ac760627ce345029d11e3a21",
+          "start": 476,
+          "end": 1051
+        }
+      }
+    },
+    {
+      "id": "hds007",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_12_1022_3:selected-issue",
+      "authority_lineage": "2024annual:12CFRpart1022",
+      "state": {
+        "passage": "(b)\nAffiliate\nmeans any company that is related by common ownership or common corporate control with another company. For example, an affiliate of a Federal credit union is a credit union service corporation, as provided in 12 CFR part 712, that is controlled by the Federal credit union."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_12_1022_3.txt",
+          "sha256": "e7f4493d4c97217120aa7a7dc4235874eae6dd6ea6166a743e1439902d31a61b",
+          "start": 332,
+          "end": 620
+        }
+      }
+    },
+    {
+      "id": "hds008",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_12_1022_3:selected-issue",
+      "authority_lineage": "2024annual:12CFRpart1022",
+      "state": {
+        "claim": "Every service provider used by a federal credit union is an affiliate regardless of ownership or control.",
+        "text": "(b)\nAffiliate\nmeans any company that is related by common ownership or common corporate control with another company. For example, an affiliate of a Federal credit union is a credit union service corporation, as provided in 12 CFR part 712, that is controlled by the Federal credit union."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_12_1022_3.txt",
+          "sha256": "e7f4493d4c97217120aa7a7dc4235874eae6dd6ea6166a743e1439902d31a61b",
+          "start": 332,
+          "end": 620
+        }
+      }
+    },
+    {
+      "id": "hds009",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_16_433_1:selected-issue",
+      "authority_lineage": "2024annual:16CFRpart433",
+      "state": {
+        "passage": "(a)\nPerson.\nAn individual, corporation, or any other business organization."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_16_433_1.txt",
+          "sha256": "1badc8a484c36e35f0f22a75ac0d08c213670277cc62ffcb2174d5e08f720468",
+          "start": 224,
+          "end": 299
+        }
+      }
+    },
+    {
+      "id": "hds010",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_16_433_1:selected-issue",
+      "authority_lineage": "2024annual:16CFRpart433",
+      "state": {
+        "claim": "The defined category of person is not restricted to natural persons.",
+        "text": "(a)\nPerson.\nAn individual, corporation, or any other business organization."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_16_433_1.txt",
+          "sha256": "1badc8a484c36e35f0f22a75ac0d08c213670277cc62ffcb2174d5e08f720468",
+          "start": 224,
+          "end": 299
+        }
+      }
+    },
+    {
+      "id": "hds011",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_16_444_1:selected-issue",
+      "authority_lineage": "2024annual:16CFRpart444",
+      "state": {
+        "passage": "(i)\nHousehold goods.\nClothing, furniture, appliances, one radio and one television, linens, china, crockery, kitchenware, and personal effects (including wedding rings) of the consumer and his or her dependents, provided that the following are not included within the scope of the term\nhousehold goods:\n(1) Works of art;\n(2) Electronic entertainment equipment (except one television and one radio);\n(3) Items acquired as antiques; and\n(4) Jewelry (except wedding rings)."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_16_444_1.txt",
+          "sha256": "487719173678fd9356ea3f2d9e7a3d6acadbba05e5915ef37c90dce507192fd2",
+          "start": 1254,
+          "end": 1724
+        }
+      }
+    },
+    {
+      "id": "hds012",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_16_444_1:selected-issue",
+      "authority_lineage": "2024annual:16CFRpart444",
+      "state": {
+        "claim": "All jewelry is included in household goods under this definition.",
+        "text": "(i)\nHousehold goods.\nClothing, furniture, appliances, one radio and one television, linens, china, crockery, kitchenware, and personal effects (including wedding rings) of the consumer and his or her dependents, provided that the following are not included within the scope of the term\nhousehold goods:\n(1) Works of art;\n(2) Electronic entertainment equipment (except one television and one radio);\n(3) Items acquired as antiques; and\n(4) Jewelry (except wedding rings)."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_16_444_1.txt",
+          "sha256": "487719173678fd9356ea3f2d9e7a3d6acadbba05e5915ef37c90dce507192fd2",
+          "start": 1254,
+          "end": 1724
+        }
+      }
+    },
+    {
+      "id": "hds013",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_16_310_2:selected-issue",
+      "authority_lineage": "2024annual:16CFRpart310",
+      "state": {
+        "passage": "(b)\nAttorney General\nmeans the chief legal officer of a state."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_16_310_2.txt",
+          "sha256": "e781b7e645a623c6a41a830e6ef6c947087d5f815c09f5edccb352b11cb1dfa0",
+          "start": 607,
+          "end": 669
+        }
+      }
+    },
+    {
+      "id": "hds014",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_16_310_2:selected-issue",
+      "authority_lineage": "2024annual:16CFRpart310",
+      "state": {
+        "claim": "Attorney General here means the chief legal officer of a state.",
+        "text": "(b)\nAttorney General\nmeans the chief legal officer of a state."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_16_310_2.txt",
+          "sha256": "e781b7e645a623c6a41a830e6ef6c947087d5f815c09f5edccb352b11cb1dfa0",
+          "start": 607,
+          "end": 669
+        }
+      }
+    },
+    {
+      "id": "hds015",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_29_825_102:selected-issue",
+      "authority_lineage": "2024annual:29CFRpart825",
+      "state": {
+        "passage": "Applicable monthly guarantee\nmeans:\n(1) For an airline flight crew employee who is not on reserve status (line holder), the minimum number of hours for which an employer has\nagreed to\nschedule\nsuch employee for any given month; and\n(2) For an airline flight crew employee who is on reserve status, the number of hours for which an employer has agreed to\npay\nthe employee for any given month.\nSee also\n§ 825.801(b)(1)."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_29_825_102.txt",
+          "sha256": "b9f3fdff2d94880cb8779d635e00a77bb3bf0562f54fdc671712b01e746547de",
+          "start": 935,
+          "end": 1352
+        }
+      }
+    },
+    {
+      "id": "hds016",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_29_825_102:selected-issue",
+      "authority_lineage": "2024annual:29CFRpart825",
+      "state": {
+        "claim": "For an airline crew employee on reserve status, the defined guarantee concerns hours the employer agrees to schedule, rather than pay.",
+        "text": "Applicable monthly guarantee\nmeans:\n(1) For an airline flight crew employee who is not on reserve status (line holder), the minimum number of hours for which an employer has\nagreed to\nschedule\nsuch employee for any given month; and\n(2) For an airline flight crew employee who is on reserve status, the number of hours for which an employer has agreed to\npay\nthe employee for any given month.\nSee also\n§ 825.801(b)(1)."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_29_825_102.txt",
+          "sha256": "b9f3fdff2d94880cb8779d635e00a77bb3bf0562f54fdc671712b01e746547de",
+          "start": 935,
+          "end": 1352
+        }
+      }
+    },
+    {
+      "id": "hds017",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_40_745_103:selected-issue",
+      "authority_lineage": "2024annual:40CFRpart745",
+      "state": {
+        "passage": "Agent\nmeans any party who enters into a contract with a seller or lessor, including any party who enters into a contract with a representative of the seller or lessor, for the purpose of selling or leasing target housing. This term does not apply to purchasers or any purchaser's representative who receives all compensation from the purchaser."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_40_745_103.txt",
+          "sha256": "81317456b44a28af9d239bc425b576c691596410ee34a4d432350b703d16c109",
+          "start": 509,
+          "end": 853
+        }
+      }
+    },
+    {
+      "id": "hds018",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_40_745_103:selected-issue",
+      "authority_lineage": "2024annual:40CFRpart745",
+      "state": {
+        "claim": "A purchaser representative receiving all compensation from the purchaser is excluded from agent here.",
+        "text": "Agent\nmeans any party who enters into a contract with a seller or lessor, including any party who enters into a contract with a representative of the seller or lessor, for the purpose of selling or leasing target housing. This term does not apply to purchasers or any purchaser's representative who receives all compensation from the purchaser."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_40_745_103.txt",
+          "sha256": "81317456b44a28af9d239bc425b576c691596410ee34a4d432350b703d16c109",
+          "start": 509,
+          "end": 853
+        }
+      }
+    },
+    {
+      "id": "hds019",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_31_1010_100:selected-issue",
+      "authority_lineage": "2024annual:31CFRpart1010",
+      "state": {
+        "passage": "(b)\nAt one time.\nFor purposes of § 1010.340 of this part, a person who transports, mails, ships or receives; is about to or attempts to transport, mail or ship; or causes the transportation, mailing, shipment or receipt of monetary instruments, is deemed to do so “at one time” if:\n(1) That person either alone, in conjunction with or on behalf of others;\n(2) Transports, mails, ships or receives in any manner; is about to transport, mail or ship in any manner; or causes the transportation, mailing, shipment or receipt in any manner of;\n(3) Monetary instruments;\n(4) Into the United States or out of the United States;\n(5) Totaling more than $10,000;\n(6)(i) On one calendar day; or\n(ii) If for the purpose of evading the reporting requirements of § 1010.340, on one or more days."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_31_1010_100.txt",
+          "sha256": "1ea194bdeeae49116358a59c1bb9ec2ce324c71d03e12ebb6415863872ff0e57",
+          "start": 1072,
+          "end": 1854
+        }
+      }
+    },
+    {
+      "id": "hds020",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_31_1010_100:selected-issue",
+      "authority_lineage": "2024annual:31CFRpart1010",
+      "state": {
+        "claim": "Transactions on more than one day can never fall within at one time under this definition.",
+        "text": "(b)\nAt one time.\nFor purposes of § 1010.340 of this part, a person who transports, mails, ships or receives; is about to or attempts to transport, mail or ship; or causes the transportation, mailing, shipment or receipt of monetary instruments, is deemed to do so “at one time” if:\n(1) That person either alone, in conjunction with or on behalf of others;\n(2) Transports, mails, ships or receives in any manner; is about to transport, mail or ship in any manner; or causes the transportation, mailing, shipment or receipt in any manner of;\n(3) Monetary instruments;\n(4) Into the United States or out of the United States;\n(5) Totaling more than $10,000;\n(6)(i) On one calendar day; or\n(ii) If for the purpose of evading the reporting requirements of § 1010.340, on one or more days."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_31_1010_100.txt",
+          "sha256": "1ea194bdeeae49116358a59c1bb9ec2ce324c71d03e12ebb6415863872ff0e57",
+          "start": 1072,
+          "end": 1854
+        }
+      }
+    },
+    {
+      "id": "hds021",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_24_982_351:selected-issue",
+      "authority_lineage": "2024annual:24CFRpart982",
+      "state": {
+        "passage": "This subpart describes what kind of housing is eligible for leasing, and the areas where a family can live with tenant-based assistance. The subpart covers:\n(a) Assistance for a family that rents a dwelling unit in the jurisdiction of the PHA that originally selected the family for tenant-based assistance."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_24_982_351.txt",
+          "sha256": "752d44ff265c44fcb9f1ec1059d32ba19db4349a0528e3733f29fb6ebd5dd892",
+          "start": 415,
+          "end": 722
+        }
+      }
+    },
+    {
+      "id": "hds022",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_24_982_351:selected-issue",
+      "authority_lineage": "2024annual:24CFRpart982",
+      "state": {
+        "claim": "The passage guarantees that every dwelling unit in the initial PHA jurisdiction is eligible for assistance.",
+        "text": "This subpart describes what kind of housing is eligible for leasing, and the areas where a family can live with tenant-based assistance. The subpart covers:\n(a) Assistance for a family that rents a dwelling unit in the jurisdiction of the PHA that originally selected the family for tenant-based assistance."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_24_982_351.txt",
+          "sha256": "752d44ff265c44fcb9f1ec1059d32ba19db4349a0528e3733f29fb6ebd5dd892",
+          "start": 415,
+          "end": 722
+        }
+      }
+    },
+    {
+      "id": "hds023",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_24_100_60:selected-issue",
+      "authority_lineage": "2024annual:24CFRpart100",
+      "state": {
+        "passage": "(a) It shall be unlawful for a person to refuse to sell or rent a dwelling to a person who has made a\nbona fide\noffer, because of race, color, religion, sex, familial status, or national origin or to refuse to negotiate with a person for the sale or rental of a dwelling because of race, color, religion, sex, familial status, or national origin, or to discriminate against any person in the sale or rental of a dwelling because of handicap."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_24_100_60.txt",
+          "sha256": "fd524e89767b82b989c9d357c50c7c10b592eaf090bffb65cebc5ffac537f2db",
+          "start": 504,
+          "end": 945
+        }
+      }
+    },
+    {
+      "id": "hds024",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_24_100_60:selected-issue",
+      "authority_lineage": "2024annual:24CFRpart100",
+      "state": {
+        "claim": "Refusing to negotiate a dwelling sale because of the person’s religion is prohibited by the supplied provision.",
+        "text": "(a) It shall be unlawful for a person to refuse to sell or rent a dwelling to a person who has made a\nbona fide\noffer, because of race, color, religion, sex, familial status, or national origin or to refuse to negotiate with a person for the sale or rental of a dwelling because of race, color, religion, sex, familial status, or national origin, or to discriminate against any person in the sale or rental of a dwelling because of handicap."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_24_100_60.txt",
+          "sha256": "fd524e89767b82b989c9d357c50c7c10b592eaf090bffb65cebc5ffac537f2db",
+          "start": 504,
+          "end": 945
+        }
+      }
+    },
+    {
+      "id": "hds025",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_12_1024_17:selected-issue",
+      "authority_lineage": "2024annual:12CFRpart1024",
+      "state": {
+        "passage": "(2)\nNo annual statements in the case of default, foreclosure, or bankruptcy.\nThis paragraph (i)(2) contains an exemption from the provisions of § 1024.17(i)(1). If at the time the servicer conducts the escrow account analysis the borrower is more than 30 days overdue, then the servicer is exempt from the requirements of submitting an annual escrow account statement to the borrower under § 1024.17(i). This exemption also applies in situations where the servicer has brought an action for foreclosure under the underlying federally related mortgage loan, or where the borrower is in bankruptcy proceedings. If the servicer does not issue an annual statement pursuant to this exemption and the loan subsequently is reinstated or otherwise becomes current, the servicer shall provide a history of the account since the last annual statement (which may be longer than 1 year) within 90 days of the date the account became current."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_12_1024_17.txt",
+          "sha256": "8448d331a4a16bc095b68728fe61329fd97871459e5ebfecd7adf345ea872014",
+          "start": 28540,
+          "end": 29469
+        }
+      }
+    },
+    {
+      "id": "hds026",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_12_1024_17:selected-issue",
+      "authority_lineage": "2024annual:12CFRpart1024",
+      "state": {
+        "claim": "The servicer must issue an annual escrow account statement even while the borrower is in bankruptcy proceedings.",
+        "text": "(2)\nNo annual statements in the case of default, foreclosure, or bankruptcy.\nThis paragraph (i)(2) contains an exemption from the provisions of § 1024.17(i)(1). If at the time the servicer conducts the escrow account analysis the borrower is more than 30 days overdue, then the servicer is exempt from the requirements of submitting an annual escrow account statement to the borrower under § 1024.17(i). This exemption also applies in situations where the servicer has brought an action for foreclosure under the underlying federally related mortgage loan, or where the borrower is in bankruptcy proceedings. If the servicer does not issue an annual statement pursuant to this exemption and the loan subsequently is reinstated or otherwise becomes current, the servicer shall provide a history of the account since the last annual statement (which may be longer than 1 year) within 90 days of the date the account became current."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_12_1024_17.txt",
+          "sha256": "8448d331a4a16bc095b68728fe61329fd97871459e5ebfecd7adf345ea872014",
+          "start": 28540,
+          "end": 29469
+        }
+      }
+    },
+    {
+      "id": "hds027",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_12_1022_43:selected-issue",
+      "authority_lineage": "2024annual:12CFRpart1022",
+      "state": {
+        "passage": "(a)\nGeneral rule.\nExcept as otherwise provided in this section, a furnisher must conduct a reasonable investigation of a direct dispute if it relates to:\n(1) The consumer's liability for a credit account or other debt with the furnisher, such as direct disputes relating to whether there is or has been identity theft or fraud against the consumer, whether there is individual or joint liability on an account, or whether the consumer is an authorized user of a credit account;\n(2) The terms of a credit account or other debt with the furnisher, such as direct disputes relating to the type of account, principal balance, scheduled payment amount on an account, or the amount of the credit limit on an open-end account;\n(3) The consumer's performance or other conduct concerning an account or other relationship with the furnisher, such as direct disputes relating to the current payment status, high balance, date a payment was made, the amount of a payment made, or the date an account was opened or closed; or\n(4) Any other information contained in a consumer report regarding an account or other relationship with the furnisher that bears on the consumer's creditworthiness, credit standing, credit capacity, character, general reputation, personal characteristics, or mode of living.\n(b)\nExceptions.\nThe requirements of paragraph (a) of this section do not apply to a furnisher if:\n(1) The direct dispute relates to:\n(i) The consumer's identifying information (other than a direct dispute relating to a consumer's liability for a credit account or other debt with the furnisher, as provided in paragraph (a)(1) of this section) such as name(s), date of birth, Social Security number, telephone number(s), or address(es);\n(ii) The identity of past or present employers;\n(iii) Inquiries or requests for a consumer report;\n(iv) Information derived from public records, such as judgments, bankruptcies, liens, and other legal matters (unless provided by a furnisher with an account or other relationship with the consumer);\n(v) Information related to fraud alerts or active duty alerts; or\n(vi) Information provided to a consumer reporting agency by another furnisher; or\n(2) The furnisher has a reasonable belief that the direct dispute is submitted by, is prepared on behalf of the consumer by, or is submitted on a form supplied to the consumer by, a credit repair organization, as defined in 15 U.S.C. 1679a(3), or an entity that would be a credit repair organization, but for 15 U.S.C. 1679a(3)(B)(i)."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_12_1022_43.txt",
+          "sha256": "7d2409d8de416534d05ba25b56a41a342e04bea459cfdd079e5b16975f799508",
+          "start": 247,
+          "end": 2754
+        }
+      }
+    },
+    {
+      "id": "hds028",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_12_1022_43:selected-issue",
+      "authority_lineage": "2024annual:12CFRpart1022",
+      "state": {
+        "claim": "The general investigation duty has exceptions for specified categories of direct disputes.",
+        "text": "(a)\nGeneral rule.\nExcept as otherwise provided in this section, a furnisher must conduct a reasonable investigation of a direct dispute if it relates to:\n(1) The consumer's liability for a credit account or other debt with the furnisher, such as direct disputes relating to whether there is or has been identity theft or fraud against the consumer, whether there is individual or joint liability on an account, or whether the consumer is an authorized user of a credit account;\n(2) The terms of a credit account or other debt with the furnisher, such as direct disputes relating to the type of account, principal balance, scheduled payment amount on an account, or the amount of the credit limit on an open-end account;\n(3) The consumer's performance or other conduct concerning an account or other relationship with the furnisher, such as direct disputes relating to the current payment status, high balance, date a payment was made, the amount of a payment made, or the date an account was opened or closed; or\n(4) Any other information contained in a consumer report regarding an account or other relationship with the furnisher that bears on the consumer's creditworthiness, credit standing, credit capacity, character, general reputation, personal characteristics, or mode of living.\n(b)\nExceptions.\nThe requirements of paragraph (a) of this section do not apply to a furnisher if:\n(1) The direct dispute relates to:\n(i) The consumer's identifying information (other than a direct dispute relating to a consumer's liability for a credit account or other debt with the furnisher, as provided in paragraph (a)(1) of this section) such as name(s), date of birth, Social Security number, telephone number(s), or address(es);\n(ii) The identity of past or present employers;\n(iii) Inquiries or requests for a consumer report;\n(iv) Information derived from public records, such as judgments, bankruptcies, liens, and other legal matters (unless provided by a furnisher with an account or other relationship with the consumer);\n(v) Information related to fraud alerts or active duty alerts; or\n(vi) Information provided to a consumer reporting agency by another furnisher; or\n(2) The furnisher has a reasonable belief that the direct dispute is submitted by, is prepared on behalf of the consumer by, or is submitted on a form supplied to the consumer by, a credit repair organization, as defined in 15 U.S.C. 1679a(3), or an entity that would be a credit repair organization, but for 15 U.S.C. 1679a(3)(B)(i)."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_12_1022_43.txt",
+          "sha256": "7d2409d8de416534d05ba25b56a41a342e04bea459cfdd079e5b16975f799508",
+          "start": 247,
+          "end": 2754
+        }
+      }
+    },
+    {
+      "id": "hds029",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_16_433_2:selected-issue",
+      "authority_lineage": "2024annual:16CFRpart433",
+      "state": {
+        "passage": "NOTICE\nANY HOLDER OF THIS CONSUMER CREDIT CONTRACT IS SUBJECT TO ALL CLAIMS AND DEFENSES WHICH THE DEBTOR COULD ASSERT AGAINST THE SELLER OF GOODS OR SERVICES OBTAINED PURSUANT HERETO OR WITH THE PROCEEDS HEREOF. RECOVERY HEREUNDER BY THE DEBTOR SHALL NOT EXCEED AMOUNTS PAID BY THE DEBTOR HEREUNDER."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_16_433_2.txt",
+          "sha256": "73958855539bde25f7382dfc93aa0ba960999b22c68bb2b5bdcd5bddf456d4db",
+          "start": 796,
+          "end": 1096
+        }
+      }
+    },
+    {
+      "id": "hds030",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_16_433_2:selected-issue",
+      "authority_lineage": "2024annual:16CFRpart433",
+      "state": {
+        "claim": "Recovery under the quoted notice may exceed the amounts paid by the debtor.",
+        "text": "NOTICE\nANY HOLDER OF THIS CONSUMER CREDIT CONTRACT IS SUBJECT TO ALL CLAIMS AND DEFENSES WHICH THE DEBTOR COULD ASSERT AGAINST THE SELLER OF GOODS OR SERVICES OBTAINED PURSUANT HERETO OR WITH THE PROCEEDS HEREOF. RECOVERY HEREUNDER BY THE DEBTOR SHALL NOT EXCEED AMOUNTS PAID BY THE DEBTOR HEREUNDER."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_16_433_2.txt",
+          "sha256": "73958855539bde25f7382dfc93aa0ba960999b22c68bb2b5bdcd5bddf456d4db",
+          "start": 796,
+          "end": 1096
+        }
+      }
+    },
+    {
+      "id": "hds031",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_16_444_2:selected-issue",
+      "authority_lineage": "2024annual:16CFRpart444",
+      "state": {
+        "passage": "(a) In connection with the extension of credit to consumers in or affecting commerce, as commerce is defined in the Federal Trade Commission Act, it is an unfair act or practice within the meaning of Section 5 of that Act for a lender or retail installment seller directly or indirectly to take or receive from a consumer an obligation that:\n(1) Constitutes or contains a cognovit or confession of judgment (for purposes other than executory process in the State of Louisiana), warrant of attorney, or other waiver of the right to notice and the opportunity to be heard in the event of suit or process thereon.\n(2) Constitutes or contains an executory waiver or a limitation of exemption from attachment, execution, or other process on real or personal property held, owned by, or due to the consumer, unless the waiver applies solely to property subject to a security interest executed in connection with the obligation.\n(3) Constitutes or contains an assignment of wages or other earnings unless:\n(i) The assignment by its terms is revocable at the will of the debtor, or\n(ii) The assignment is a payroll deduction plan or preauthorized payment plan, commencing at the time of the transaction, in which the consumer authorizes a series of wage deductions as a method of making each payment, or\n(iii) The assignment applies only to wages or other earnings already earned at the time of the assignment.\n(4) Constitutes or contains a nonpossessory security interest in household goods other than a purchase money security interest."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_16_444_2.txt",
+          "sha256": "a37d9ee6c970561238d59035136dbe19896db03481a2f6fe216a87a3c1e008ed",
+          "start": 218,
+          "end": 1748
+        }
+      }
+    },
+    {
+      "id": "hds032",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_16_444_2:selected-issue",
+      "authority_lineage": "2024annual:16CFRpart444",
+      "state": {
+        "claim": "An assignment limited to wages already earned falls within an express exception to the assignment prohibition.",
+        "text": "(a) In connection with the extension of credit to consumers in or affecting commerce, as commerce is defined in the Federal Trade Commission Act, it is an unfair act or practice within the meaning of Section 5 of that Act for a lender or retail installment seller directly or indirectly to take or receive from a consumer an obligation that:\n(1) Constitutes or contains a cognovit or confession of judgment (for purposes other than executory process in the State of Louisiana), warrant of attorney, or other waiver of the right to notice and the opportunity to be heard in the event of suit or process thereon.\n(2) Constitutes or contains an executory waiver or a limitation of exemption from attachment, execution, or other process on real or personal property held, owned by, or due to the consumer, unless the waiver applies solely to property subject to a security interest executed in connection with the obligation.\n(3) Constitutes or contains an assignment of wages or other earnings unless:\n(i) The assignment by its terms is revocable at the will of the debtor, or\n(ii) The assignment is a payroll deduction plan or preauthorized payment plan, commencing at the time of the transaction, in which the consumer authorizes a series of wage deductions as a method of making each payment, or\n(iii) The assignment applies only to wages or other earnings already earned at the time of the assignment.\n(4) Constitutes or contains a nonpossessory security interest in household goods other than a purchase money security interest."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_16_444_2.txt",
+          "sha256": "a37d9ee6c970561238d59035136dbe19896db03481a2f6fe216a87a3c1e008ed",
+          "start": 218,
+          "end": 1748
+        }
+      }
+    },
+    {
+      "id": "hds033",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_16_310_4:selected-issue",
+      "authority_lineage": "2024annual:16CFRpart310",
+      "state": {
+        "passage": "(a)\nAbusive conduct generally.\nIt is an abusive telemarketing act or practice and a violation of this Rule for any seller or telemarketer to engage in the following conduct:\n(1) Threats, intimidation, or the use of profane or obscene language;\n(2) Requesting or receiving payment of any fee or consideration for goods or services represented to remove derogatory information from, or improve, a person's credit history, credit record, or credit rating until:\n(i) The time frame in which the seller has represented all of the goods or services will be provided to that person has expired; and\n(ii) The seller has provided the person with documentation in the form of a consumer report from a consumer reporting agency demonstrating that the promised results have been achieved, such report having been issued more than six months after the results were achieved. Nothing in this Rule should be construed to affect the requirement in the Fair Credit Reporting Act, 15 U.S.C. 1681, that a consumer report may only be obtained for a specified permissible purpose;\n(3) Requesting or receiving payment of any fee or consideration from a person for goods or services represented to recover or otherwise assist in the return of money or any other item of value paid for by, or promised to, that person in a previous transaction, until seven (7) business days after such money or other item is delivered to that person. This provision shall not\napply to goods or services provided to a person by a licensed attorney;\n(4) Requesting or receiving payment of any fee or consideration in advance of obtaining a loan or other extension of credit when the seller or telemarketer has guaranteed or represented a high likelihood of success in obtaining or arranging a loan or other extension of credit for a person;"
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_16_310_4.txt",
+          "sha256": "e3a280293a6b365d8ec68deb26cf81d64ae3cfd22cf3d29c3b19539247e5ad74",
+          "start": 279,
+          "end": 2077
+        }
+      }
+    },
+    {
+      "id": "hds034",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_16_310_4:selected-issue",
+      "authority_lineage": "2024annual:16CFRpart310",
+      "state": {
+        "claim": "The recovery-services advance-payment prohibition quoted here also applies to goods or services provided by a licensed attorney.",
+        "text": "(a)\nAbusive conduct generally.\nIt is an abusive telemarketing act or practice and a violation of this Rule for any seller or telemarketer to engage in the following conduct:\n(1) Threats, intimidation, or the use of profane or obscene language;\n(2) Requesting or receiving payment of any fee or consideration for goods or services represented to remove derogatory information from, or improve, a person's credit history, credit record, or credit rating until:\n(i) The time frame in which the seller has represented all of the goods or services will be provided to that person has expired; and\n(ii) The seller has provided the person with documentation in the form of a consumer report from a consumer reporting agency demonstrating that the promised results have been achieved, such report having been issued more than six months after the results were achieved. Nothing in this Rule should be construed to affect the requirement in the Fair Credit Reporting Act, 15 U.S.C. 1681, that a consumer report may only be obtained for a specified permissible purpose;\n(3) Requesting or receiving payment of any fee or consideration from a person for goods or services represented to recover or otherwise assist in the return of money or any other item of value paid for by, or promised to, that person in a previous transaction, until seven (7) business days after such money or other item is delivered to that person. This provision shall not\napply to goods or services provided to a person by a licensed attorney;\n(4) Requesting or receiving payment of any fee or consideration in advance of obtaining a loan or other extension of credit when the seller or telemarketer has guaranteed or represented a high likelihood of success in obtaining or arranging a loan or other extension of credit for a person;"
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_16_310_4.txt",
+          "sha256": "e3a280293a6b365d8ec68deb26cf81d64ae3cfd22cf3d29c3b19539247e5ad74",
+          "start": 279,
+          "end": 2077
+        }
+      }
+    },
+    {
+      "id": "hds035",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_29_825_300:selected-issue",
+      "authority_lineage": "2024annual:29CFRpart825",
+      "state": {
+        "passage": "(a)\nGeneral notice.\n(1) Every employer covered by the FMLA is required to post and keep posted on its premises, in conspicuous places where employees are employed, a notice explaining the Act's provisions and providing information concerning the procedures for filing complaints of violations of the Act with the Wage and Hour Division. The notice must be posted prominently where it can be readily seen by employees and applicants for employment. The poster and the text must be large enough to be easily read and contain fully legible text. Electronic posting is sufficient to meet this posting requirement as long as it otherwise meets the requirements of this section. An employer that willfully violates the posting requirement may be assessed a civil money penalty by the Wage and Hour Division not to exceed $211 for each separate offense.\n(2) Covered employers must post this general notice even if no employees are eligible for FMLA leave.\n(3) If an FMLA-covered employer has any eligible employees, it shall also provide this general notice to each employee by including the notice in employee handbooks or other written guidance to employees concerning employee benefits or leave rights, if such written materials exist, or by distributing a copy of the general notice to each new employee upon hiring. In either case, distribution may be accomplished electronically.\n(4) To meet the requirements of paragraph (a)(3) of this section, employers may duplicate the text of the Department's prototype notice (WHD Publication 1420) or may use another format so long as the information provided includes, at a minimum, all of the information contained in that notice. Where an employer's workforce is comprised of a significant portion of workers who are not literate in English, the employer shall provide the general notice in a language in which the employees are literate. Prototypes are available from the nearest office of the Wage and Hour Division or on the Internet at\nwww.dol.gov/whd.\nEmployers furnishing FMLA notices to sensory-impaired individuals must also comply with all applicable requirements under Federal or State law."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_29_825_300.txt",
+          "sha256": "6aa06891c02a27f67e2eafddfcb3979bc815410c9c031feeb93477f203f77083",
+          "start": 282,
+          "end": 2425
+        }
+      }
+    },
+    {
+      "id": "hds036",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_29_825_300:selected-issue",
+      "authority_lineage": "2024annual:29CFRpart825",
+      "state": {
+        "claim": "Covered employers must post the general notice even when no employee is eligible for FMLA leave.",
+        "text": "(a)\nGeneral notice.\n(1) Every employer covered by the FMLA is required to post and keep posted on its premises, in conspicuous places where employees are employed, a notice explaining the Act's provisions and providing information concerning the procedures for filing complaints of violations of the Act with the Wage and Hour Division. The notice must be posted prominently where it can be readily seen by employees and applicants for employment. The poster and the text must be large enough to be easily read and contain fully legible text. Electronic posting is sufficient to meet this posting requirement as long as it otherwise meets the requirements of this section. An employer that willfully violates the posting requirement may be assessed a civil money penalty by the Wage and Hour Division not to exceed $211 for each separate offense.\n(2) Covered employers must post this general notice even if no employees are eligible for FMLA leave.\n(3) If an FMLA-covered employer has any eligible employees, it shall also provide this general notice to each employee by including the notice in employee handbooks or other written guidance to employees concerning employee benefits or leave rights, if such written materials exist, or by distributing a copy of the general notice to each new employee upon hiring. In either case, distribution may be accomplished electronically.\n(4) To meet the requirements of paragraph (a)(3) of this section, employers may duplicate the text of the Department's prototype notice (WHD Publication 1420) or may use another format so long as the information provided includes, at a minimum, all of the information contained in that notice. Where an employer's workforce is comprised of a significant portion of workers who are not literate in English, the employer shall provide the general notice in a language in which the employees are literate. Prototypes are available from the nearest office of the Wage and Hour Division or on the Internet at\nwww.dol.gov/whd.\nEmployers furnishing FMLA notices to sensory-impaired individuals must also comply with all applicable requirements under Federal or State law."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_29_825_300.txt",
+          "sha256": "6aa06891c02a27f67e2eafddfcb3979bc815410c9c031feeb93477f203f77083",
+          "start": 282,
+          "end": 2425
+        }
+      }
+    },
+    {
+      "id": "hds037",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_40_745_107:selected-issue",
+      "authority_lineage": "2024annual:40CFRpart745",
+      "state": {
+        "passage": "(a) The following activities shall be completed before the purchaser or lessee is obligated under any contract to purchase or lease target housing that is not otherwise an exempt transaction pursuant to § 745.101. Nothing in this section implies a positive obligation on the seller or lessor to conduct any evaluation or reduction activities."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_40_745_107.txt",
+          "sha256": "b13c7eb225186fbec841c7f9fc827b36e5714fb7598d6a1ba9b0a251090f43c6",
+          "start": 402,
+          "end": 744
+        }
+      }
+    },
+    {
+      "id": "hds038",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_40_745_107:selected-issue",
+      "authority_lineage": "2024annual:40CFRpart745",
+      "state": {
+        "claim": "This provision requires the lessor to conduct lead evaluation or reduction activities before leasing target housing.",
+        "text": "(a) The following activities shall be completed before the purchaser or lessee is obligated under any contract to purchase or lease target housing that is not otherwise an exempt transaction pursuant to § 745.101. Nothing in this section implies a positive obligation on the seller or lessor to conduct any evaluation or reduction activities."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_40_745_107.txt",
+          "sha256": "b13c7eb225186fbec841c7f9fc827b36e5714fb7598d6a1ba9b0a251090f43c6",
+          "start": 402,
+          "end": 744
+        }
+      }
+    },
+    {
+      "id": "hds039",
+      "task": "definition_present",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_31_1010_311:selected-issue",
+      "authority_lineage": "2024annual:31CFRpart1010",
+      "state": {
+        "passage": "Each financial institution other than a casino shall file a report of each deposit, withdrawal, exchange of currency or other payment or transfer, by, through, or to such financial institution which involves a transaction in currency of more than $10,000, except as otherwise provided in this section.\nIn the case of the U.S. Postal Service, the obligation contained in the preceding sentence shall not apply to payments or transfers made solely in connection with the purchase of postage or philatelic products."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_31_1010_311.txt",
+          "sha256": "5137716a741f3141ef8bde59e42e7603e62de8a95c2817f11c6ca5c655152f88",
+          "start": 326,
+          "end": 838
+        }
+      }
+    },
+    {
+      "id": "hds040",
+      "task": "supports_claim",
+      "family": "regulatory",
+      "source_cluster": "CFR2024_31_1010_311:selected-issue",
+      "authority_lineage": "2024annual:31CFRpart1010",
+      "state": {
+        "claim": "A transaction involving exactly $10,000, without more, meets the quoted more-than $10,000 reporting threshold.",
+        "text": "Each financial institution other than a casino shall file a report of each deposit, withdrawal, exchange of currency or other payment or transfer, by, through, or to such financial institution which involves a transaction in currency of more than $10,000, except as otherwise provided in this section.\nIn the case of the U.S. Postal Service, the obligation contained in the preceding sentence shall not apply to payments or transfers made solely in connection with the purchase of postage or philatelic products."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/CFR2024_31_1010_311.txt",
+          "sha256": "5137716a741f3141ef8bde59e42e7603e62de8a95c2817f11c6ca5c655152f88",
+          "start": 326,
+          "end": 838
+        }
+      }
+    },
+    {
+      "id": "hds041",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "FL_83_43:selected-issue",
+      "authority_lineage": "Florida2025Chapter83",
+      "state": {
+        "passage": "(2)\n“Advance rent” means moneys paid to the landlord to be applied to future rent payment periods, but does not include rent paid in advance for a current rent payment period."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FL_83_43.txt",
+          "sha256": "8a89365ff5a009100f1fe80443a79a1b148c163622ee4fd4a2eb2285f30a92c4",
+          "start": 2484,
+          "end": 2659
+        }
+      }
+    },
+    {
+      "id": "hds042",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "FL_83_43:selected-issue",
+      "authority_lineage": "Florida2025Chapter83",
+      "state": {
+        "claim": "Rent paid in advance for the current rent period is excluded from this definition of advance rent.",
+        "text": "(2)\n“Advance rent” means moneys paid to the landlord to be applied to future rent payment periods, but does not include rent paid in advance for a current rent payment period."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FL_83_43.txt",
+          "sha256": "8a89365ff5a009100f1fe80443a79a1b148c163622ee4fd4a2eb2285f30a92c4",
+          "start": 2484,
+          "end": 2659
+        }
+      }
+    },
+    {
+      "id": "hds043",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "FL_83_51:selected-issue",
+      "authority_lineage": "Florida2025Chapter83",
+      "state": {
+        "passage": "(b)\nUnless otherwise agreed in writing, at the commencement of the tenancy of a single-family home or duplex, the landlord shall install working smoke detection devices. As used in this paragraph, the term “smoke detection device” means an electrical or battery-operated device which detects visible or invisible particles of combustion and which is listed by Underwriters Laboratories, Inc., Factory Mutual Laboratories, Inc., or any other nationally recognized testing laboratory using nationally accepted testing standards."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FL_83_51.txt",
+          "sha256": "fb1d973dc44cfb02b841d6a516cc047c6e486c257df63257b3e30ad43a88b095",
+          "start": 4241,
+          "end": 4767
+        }
+      }
+    },
+    {
+      "id": "hds044",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "FL_83_51:selected-issue",
+      "authority_lineage": "Florida2025Chapter83",
+      "state": {
+        "claim": "A smoke detection device must be listed by Underwriters Laboratories and no other testing laboratory can qualify it.",
+        "text": "(b)\nUnless otherwise agreed in writing, at the commencement of the tenancy of a single-family home or duplex, the landlord shall install working smoke detection devices. As used in this paragraph, the term “smoke detection device” means an electrical or battery-operated device which detects visible or invisible particles of combustion and which is listed by Underwriters Laboratories, Inc., Factory Mutual Laboratories, Inc., or any other nationally recognized testing laboratory using nationally accepted testing standards."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FL_83_51.txt",
+          "sha256": "fb1d973dc44cfb02b841d6a516cc047c6e486c257df63257b3e30ad43a88b095",
+          "start": 4241,
+          "end": 4767
+        }
+      }
+    },
+    {
+      "id": "hds045",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "FL_83_49:selected-issue",
+      "authority_lineage": "Florida2025Chapter83",
+      "state": {
+        "passage": "(1)\nWhenever money is deposited or advanced by a tenant on a rental agreement as security for performance of the rental agreement or as advance rent for other than the next immediate rental period, the landlord or the landlord’s agent shall either:\n(a)\nHold the total amount of such money in a separate non-interest-bearing account in a Florida financial institution for the benefit of the tenant or tenants. The landlord shall not commingle such moneys with any other funds of the landlord or hypothecate, pledge, or in any other way make use of such moneys until such moneys are actually due the landlord;\n(b)\nHold the total amount of such money in a separate interest-bearing account in a Florida financial institution for the benefit of the tenant or tenants, in which case the tenant shall receive and collect interest in an amount of at least 75 percent of the annualized average interest rate payable on such account or interest at the rate of 5 percent per year, simple interest, whichever the landlord elects. The landlord shall not commingle such moneys with any other funds of the landlord or hypothecate, pledge, or in any other way make use of such moneys until such moneys are actually due the landlord; or\n(c)\nPost a surety bond, executed by the landlord as principal and a surety company authorized and licensed to do business in the state as surety, with the clerk of the circuit court in the county in which the dwelling unit is located in the total amount of the security deposits and advance rent he or she holds on behalf of the tenants or $50,000, whichever is less. The bond shall be conditioned upon the faithful compliance of the landlord with the provisions of this section and shall run to the Governor for the benefit of any tenant injured by the landlord’s violation of the provisions of this section. In addition to posting the surety bond, the landlord shall pay to the tenant interest at the rate of 5 percent per year, simple interest. A landlord, or the landlord’s agent, engaged in the renting of dwelling units in five or more counties, who holds deposit moneys or advance rent and who is otherwise subject to the provisions of this section, may, in lieu of posting a surety bond in each county, elect to post a surety bond in the form and manner provided in this paragraph with the office of the Secretary of State. The bond shall be in the total amount of the security deposit or advance rent held on behalf of tenants or in the amount of $250,000, whichever is less. The bond shall be conditioned upon the faithful compliance of the landlord with the provisions of this section and shall run to the Governor for the benefit of any tenant injured by the landlord’s violation of this section. In addition to posting a surety bond, the landlord shall pay to the tenant interest on the security deposit or advance rent held on behalf of that tenant at the rate of 5 percent per year simple interest."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FL_83_49.txt",
+          "sha256": "0ceaf734c00043980579adcfc8c1dc0da7e47aae2e14800d39c4f223532bd4cc",
+          "start": 2371,
+          "end": 5305
+        }
+      }
+    },
+    {
+      "id": "hds046",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "FL_83_49:selected-issue",
+      "authority_lineage": "Florida2025Chapter83",
+      "state": {
+        "claim": "The landlord may freely commingle money held under the separate-account options with the landlord’s other funds before it is due.",
+        "text": "(1)\nWhenever money is deposited or advanced by a tenant on a rental agreement as security for performance of the rental agreement or as advance rent for other than the next immediate rental period, the landlord or the landlord’s agent shall either:\n(a)\nHold the total amount of such money in a separate non-interest-bearing account in a Florida financial institution for the benefit of the tenant or tenants. The landlord shall not commingle such moneys with any other funds of the landlord or hypothecate, pledge, or in any other way make use of such moneys until such moneys are actually due the landlord;\n(b)\nHold the total amount of such money in a separate interest-bearing account in a Florida financial institution for the benefit of the tenant or tenants, in which case the tenant shall receive and collect interest in an amount of at least 75 percent of the annualized average interest rate payable on such account or interest at the rate of 5 percent per year, simple interest, whichever the landlord elects. The landlord shall not commingle such moneys with any other funds of the landlord or hypothecate, pledge, or in any other way make use of such moneys until such moneys are actually due the landlord; or\n(c)\nPost a surety bond, executed by the landlord as principal and a surety company authorized and licensed to do business in the state as surety, with the clerk of the circuit court in the county in which the dwelling unit is located in the total amount of the security deposits and advance rent he or she holds on behalf of the tenants or $50,000, whichever is less. The bond shall be conditioned upon the faithful compliance of the landlord with the provisions of this section and shall run to the Governor for the benefit of any tenant injured by the landlord’s violation of the provisions of this section. In addition to posting the surety bond, the landlord shall pay to the tenant interest at the rate of 5 percent per year, simple interest. A landlord, or the landlord’s agent, engaged in the renting of dwelling units in five or more counties, who holds deposit moneys or advance rent and who is otherwise subject to the provisions of this section, may, in lieu of posting a surety bond in each county, elect to post a surety bond in the form and manner provided in this paragraph with the office of the Secretary of State. The bond shall be in the total amount of the security deposit or advance rent held on behalf of tenants or in the amount of $250,000, whichever is less. The bond shall be conditioned upon the faithful compliance of the landlord with the provisions of this section and shall run to the Governor for the benefit of any tenant injured by the landlord’s violation of this section. In addition to posting a surety bond, the landlord shall pay to the tenant interest on the security deposit or advance rent held on behalf of that tenant at the rate of 5 percent per year simple interest."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FL_83_49.txt",
+          "sha256": "0ceaf734c00043980579adcfc8c1dc0da7e47aae2e14800d39c4f223532bd4cc",
+          "start": 2371,
+          "end": 5305
+        }
+      }
+    },
+    {
+      "id": "hds047",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "FL_83_56:selected-issue",
+      "authority_lineage": "Florida2025Chapter83",
+      "state": {
+        "passage": "(1)\nIf the landlord materially fails to comply with s.\n83.51\n(1) or material provisions of the rental agreement within 7 days after delivery of written notice by the tenant specifying the noncompliance and indicating the intention of the tenant to terminate the rental agreement by reason thereof, the tenant may terminate the rental agreement. If the failure to comply with s.\n83.51\n(1) or material provisions of the rental agreement is due to causes beyond the control of the landlord and the landlord has made and continues to make every reasonable effort to correct the failure to comply, the rental agreement may be terminated or altered by the parties, as follows:\n(a)\nIf the landlord’s failure to comply renders the dwelling unit untenantable and the tenant vacates, the tenant shall not be liable for rent during the period the dwelling unit remains uninhabitable.\n(b)\nIf the landlord’s failure to comply does not render the dwelling unit untenantable and the tenant remains in occupancy, the rent for the period of noncompliance shall be reduced by an amount in proportion to the loss of rental value caused by the noncompliance."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FL_83_56.txt",
+          "sha256": "bf63d5182d24b11dcb1d45e341e0585f8a0d4a541b8a93dec27c7f48a8578b61",
+          "start": 2317,
+          "end": 3455
+        }
+      }
+    },
+    {
+      "id": "hds048",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "FL_83_56:selected-issue",
+      "authority_lineage": "Florida2025Chapter83",
+      "state": {
+        "claim": "Under the stated beyond-control failure conditions, a tenant who vacates an untenantable dwelling owes no rent while it remains uninhabitable.",
+        "text": "(1)\nIf the landlord materially fails to comply with s.\n83.51\n(1) or material provisions of the rental agreement within 7 days after delivery of written notice by the tenant specifying the noncompliance and indicating the intention of the tenant to terminate the rental agreement by reason thereof, the tenant may terminate the rental agreement. If the failure to comply with s.\n83.51\n(1) or material provisions of the rental agreement is due to causes beyond the control of the landlord and the landlord has made and continues to make every reasonable effort to correct the failure to comply, the rental agreement may be terminated or altered by the parties, as follows:\n(a)\nIf the landlord’s failure to comply renders the dwelling unit untenantable and the tenant vacates, the tenant shall not be liable for rent during the period the dwelling unit remains uninhabitable.\n(b)\nIf the landlord’s failure to comply does not render the dwelling unit untenantable and the tenant remains in occupancy, the rent for the period of noncompliance shall be reduced by an amount in proportion to the loss of rental value caused by the noncompliance."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FL_83_56.txt",
+          "sha256": "bf63d5182d24b11dcb1d45e341e0585f8a0d4a541b8a93dec27c7f48a8578b61",
+          "start": 2317,
+          "end": 3455
+        }
+      }
+    },
+    {
+      "id": "hds049",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "VA_55_1-1200:selected-issue",
+      "authority_lineage": "VirginiaCodeTitle55.1Chapter12",
+      "state": {
+        "passage": "\"Authorized occupant\" means a person entitled to occupy a dwelling unit with the consent of the landlord, but who has not signed the rental agreement and therefore does not have the financial obligations as a tenant under the rental agreement."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/VA_55_1-1200.txt",
+          "sha256": "d3c7b57087ff98f50751c3f2bea489556c7ed9365e2fb1c50e862cbf0e2747f6",
+          "start": 1887,
+          "end": 2130
+        }
+      }
+    },
+    {
+      "id": "hds050",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "VA_55_1-1200:selected-issue",
+      "authority_lineage": "VirginiaCodeTitle55.1Chapter12",
+      "state": {
+        "claim": "The defined authorized occupant has not signed the rental agreement and does not have a tenant’s financial obligations under it.",
+        "text": "\"Authorized occupant\" means a person entitled to occupy a dwelling unit with the consent of the landlord, but who has not signed the rental agreement and therefore does not have the financial obligations as a tenant under the rental agreement."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/VA_55_1-1200.txt",
+          "sha256": "d3c7b57087ff98f50751c3f2bea489556c7ed9365e2fb1c50e862cbf0e2747f6",
+          "start": 1887,
+          "end": 2130
+        }
+      }
+    },
+    {
+      "id": "hds051",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "VA_55_1-1220:selected-issue",
+      "authority_lineage": "VirginiaCodeTitle55.1Chapter12",
+      "state": {
+        "passage": "A. The landlord shall:\n1. Comply with the requirements of applicable building and housing codes materially affecting health and safety;\n2. Make all repairs and do whatever is necessary to put and keep the premises in a fit and habitable condition;\n3. Keep all common areas shared by two or more dwelling units of a multifamily premises in a clean and structurally safe condition;\n4. Maintain in good and safe working order and condition all electrical, plumbing, sanitary, heating, ventilating, air-conditioning, and other facilities and appliances, including elevators, supplied or required to be supplied by him;\n5. Maintain the premises in such a condition as to prevent the accumulation of moisture and the growth of mold and promptly respond to any notices from a tenant as provided in subdivision A 10 of §\n55.1-1227\n. Where there is visible evidence of mold, the landlord shall promptly remediate the mold conditions in accordance with the requirements of subsection E of §\n8.01-226.12\nand reinspect the dwelling unit to confirm that there is no longer visible evidence of mold in the dwelling unit. The landlord shall provide a tenant with a copy of a summary of information related to mold remediation occurring during that tenancy and, upon request of the tenant, make available the full package of such information and reports not protected by attorney-client privilege. Once the mold has been remediated in accordance with professional standards, the landlord shall not be required to make disclosures of a past incidence of mold to subsequent tenants;"
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/VA_55_1-1220.txt",
+          "sha256": "9f9227d341a535f9cc49e1958552a91e3309985d3a75ecfd8c30fbefc9178d96",
+          "start": 1095,
+          "end": 2659
+        }
+      }
+    },
+    {
+      "id": "hds052",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "VA_55_1-1220:selected-issue",
+      "authority_lineage": "VirginiaCodeTitle55.1Chapter12",
+      "state": {
+        "claim": "After professional mold remediation, the landlord must disclose the past mold incidence to every subsequent tenant.",
+        "text": "A. The landlord shall:\n1. Comply with the requirements of applicable building and housing codes materially affecting health and safety;\n2. Make all repairs and do whatever is necessary to put and keep the premises in a fit and habitable condition;\n3. Keep all common areas shared by two or more dwelling units of a multifamily premises in a clean and structurally safe condition;\n4. Maintain in good and safe working order and condition all electrical, plumbing, sanitary, heating, ventilating, air-conditioning, and other facilities and appliances, including elevators, supplied or required to be supplied by him;\n5. Maintain the premises in such a condition as to prevent the accumulation of moisture and the growth of mold and promptly respond to any notices from a tenant as provided in subdivision A 10 of §\n55.1-1227\n. Where there is visible evidence of mold, the landlord shall promptly remediate the mold conditions in accordance with the requirements of subsection E of §\n8.01-226.12\nand reinspect the dwelling unit to confirm that there is no longer visible evidence of mold in the dwelling unit. The landlord shall provide a tenant with a copy of a summary of information related to mold remediation occurring during that tenancy and, upon request of the tenant, make available the full package of such information and reports not protected by attorney-client privilege. Once the mold has been remediated in accordance with professional standards, the landlord shall not be required to make disclosures of a past incidence of mold to subsequent tenants;"
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/VA_55_1-1220.txt",
+          "sha256": "9f9227d341a535f9cc49e1958552a91e3309985d3a75ecfd8c30fbefc9178d96",
+          "start": 1095,
+          "end": 2659
+        }
+      }
+    },
+    {
+      "id": "hds053",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "VA_55_1-1226:selected-issue",
+      "authority_lineage": "VirginiaCodeTitle55.1Chapter12",
+      "state": {
+        "passage": "A. No landlord may demand or receive a security deposit, however denominated, in an amount or value in excess of two months' periodic rent. Upon termination of the tenancy or the date the tenant vacates the dwelling unit, whichever occurs last, such security deposit, whether it is property or money held by the landlord as security as provided in this section, may be applied by the landlord solely to (i) the payment of accrued rent, including the reasonable charges for late payment of rent specified in the rental agreement; (ii) the payment of the amount of damages that the landlord has suffered by reason of the tenant's noncompliance with §\n55.1-1227\n, less reasonable wear and tear; (iii) other damages or charges as provided in the rental agreement; or (iv) actual damages for breach of the rental agreement pursuant to §\n55.1-1251\n. The security deposit and any deductions, damages, and charges shall be itemized by the landlord in a written notice given to the tenant, together with any amount due to the tenant, within 45 days after the termination date of the tenancy or the date the tenant vacates the dwelling unit, whichever occurs last. As of the date of the termination of the tenancy or the date the tenant vacates the dwelling unit, whichever occurs last, the tenant shall be required to deliver possession of the dwelling unit to the landlord. If the termination date is prior to the expiration of the rental agreement or any renewal thereof, or the tenant has not given proper notice of termination of the rental agreement, the tenant shall be liable for actual damages pursuant to §\n55.1-1251\n, in which case, the landlord shall give written notice of security deposit disposition within the 45-day period but may retain any security balance to apply against any financial obligations of the tenant to the landlord pursuant to this chapter or the rental agreement. If the tenant fails to vacate the dwelling unit as of the termination of the tenancy, the landlord may file an unlawful detainer action pursuant to §\n8.01-126\n."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/VA_55_1-1226.txt",
+          "sha256": "60f8cb5b34583ca0f99761a94dc2d4b21b217959640b6ee2e16e606ceaae4d4a",
+          "start": 1047,
+          "end": 3096
+        }
+      }
+    },
+    {
+      "id": "hds054",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "VA_55_1-1226:selected-issue",
+      "authority_lineage": "VirginiaCodeTitle55.1Chapter12",
+      "state": {
+        "claim": "The landlord may demand a security deposit equal to three months’ periodic rent.",
+        "text": "A. No landlord may demand or receive a security deposit, however denominated, in an amount or value in excess of two months' periodic rent. Upon termination of the tenancy or the date the tenant vacates the dwelling unit, whichever occurs last, such security deposit, whether it is property or money held by the landlord as security as provided in this section, may be applied by the landlord solely to (i) the payment of accrued rent, including the reasonable charges for late payment of rent specified in the rental agreement; (ii) the payment of the amount of damages that the landlord has suffered by reason of the tenant's noncompliance with §\n55.1-1227\n, less reasonable wear and tear; (iii) other damages or charges as provided in the rental agreement; or (iv) actual damages for breach of the rental agreement pursuant to §\n55.1-1251\n. The security deposit and any deductions, damages, and charges shall be itemized by the landlord in a written notice given to the tenant, together with any amount due to the tenant, within 45 days after the termination date of the tenancy or the date the tenant vacates the dwelling unit, whichever occurs last. As of the date of the termination of the tenancy or the date the tenant vacates the dwelling unit, whichever occurs last, the tenant shall be required to deliver possession of the dwelling unit to the landlord. If the termination date is prior to the expiration of the rental agreement or any renewal thereof, or the tenant has not given proper notice of termination of the rental agreement, the tenant shall be liable for actual damages pursuant to §\n55.1-1251\n, in which case, the landlord shall give written notice of security deposit disposition within the 45-day period but may retain any security balance to apply against any financial obligations of the tenant to the landlord pursuant to this chapter or the rental agreement. If the tenant fails to vacate the dwelling unit as of the termination of the tenancy, the landlord may file an unlawful detainer action pursuant to §\n8.01-126\n."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/VA_55_1-1226.txt",
+          "sha256": "60f8cb5b34583ca0f99761a94dc2d4b21b217959640b6ee2e16e606ceaae4d4a",
+          "start": 1047,
+          "end": 3096
+        }
+      }
+    },
+    {
+      "id": "hds055",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "VA_55_1-1245:selected-issue",
+      "authority_lineage": "VirginiaCodeTitle55.1Chapter12",
+      "state": {
+        "passage": "A. Except as otherwise provided in this chapter, if there is a material noncompliance by the tenant with the rental agreement or a violation of §\n55.1-1227\nmaterially affecting health and safety, the landlord may serve a written notice on the tenant specifying the acts and omissions constituting the breach and stating that the rental agreement will terminate upon a date not less than 30 days after receipt of the notice if the breach is not remedied in 21 days and that the rental agreement shall terminate as provided in the notice.\nB. If the breach is remediable by repairs or the payment of damages or otherwise and the tenant adequately remedies the breach prior to the date specified in the notice, the rental agreement shall not terminate."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/VA_55_1-1245.txt",
+          "sha256": "11f6eeb6ac8e9ce4c62168eb96dc177c3b357675d2bdbd521e54b22ea18c3d70",
+          "start": 1503,
+          "end": 2251
+        }
+      }
+    },
+    {
+      "id": "hds056",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "VA_55_1-1245:selected-issue",
+      "authority_lineage": "VirginiaCodeTitle55.1Chapter12",
+      "state": {
+        "claim": "If the remediable breach is adequately cured before the specified date, the rental agreement shall not terminate under the stated cure rule.",
+        "text": "A. Except as otherwise provided in this chapter, if there is a material noncompliance by the tenant with the rental agreement or a violation of §\n55.1-1227\nmaterially affecting health and safety, the landlord may serve a written notice on the tenant specifying the acts and omissions constituting the breach and stating that the rental agreement will terminate upon a date not less than 30 days after receipt of the notice if the breach is not remedied in 21 days and that the rental agreement shall terminate as provided in the notice.\nB. If the breach is remediable by repairs or the payment of damages or otherwise and the tenant adequately remedies the breach prior to the date specified in the notice, the rental agreement shall not terminate."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/VA_55_1-1245.txt",
+          "sha256": "11f6eeb6ac8e9ce4c62168eb96dc177c3b357675d2bdbd521e54b22ea18c3d70",
+          "start": 1503,
+          "end": 2251
+        }
+      }
+    },
+    {
+      "id": "hds057",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "MN_504B_001:selected-issue",
+      "authority_lineage": "MinnesotaChapter504B",
+      "state": {
+        "passage": "Subd. 3.\nDistress for rent.\n\"Distress for rent\" means the act of a landlord seizing personal property of the tenant or other person to enforce payment of rent."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/MN_504B_001.txt",
+          "sha256": "67a321c0e5b15468c8ef01a5cae34c2fe4f82a49da946db20623e3ce4febf320",
+          "start": 5340,
+          "end": 5499
+        }
+      }
+    },
+    {
+      "id": "hds058",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "MN_504B_001:selected-issue",
+      "authority_lineage": "MinnesotaChapter504B",
+      "state": {
+        "claim": "Seizing a tenant’s personal property to enforce rent payment falls within the defined distress for rent.",
+        "text": "Subd. 3.\nDistress for rent.\n\"Distress for rent\" means the act of a landlord seizing personal property of the tenant or other person to enforce payment of rent."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/MN_504B_001.txt",
+          "sha256": "67a321c0e5b15468c8ef01a5cae34c2fe4f82a49da946db20623e3ce4febf320",
+          "start": 5340,
+          "end": 5499
+        }
+      }
+    },
+    {
+      "id": "hds059",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "MN_504B_161:selected-issue",
+      "authority_lineage": "MinnesotaChapter504B",
+      "state": {
+        "passage": "Subdivision 1.\nRequirements.\n(a) In every lease or license of residential premises, the landlord or licensor covenants:\n(1) that the premises and all common areas are fit for the use intended by the parties;\n(2) to keep the premises and all common areas in reasonable repair during the term of the lease or license, including services and conditions listed in section\n504B.381, subdivision 1\n, and extermination of insects, rodents, vermin, or other pests on the premises, except when the disrepair has been caused by the willful, malicious, or irresponsible conduct of the tenant or licensee or a person under the direction or control of the tenant or licensee;\n(3) to make the premises and all common areas reasonably energy efficient by installing weatherstripping, caulking, storm windows, and storm doors when any such measure will result in energy procurement cost savings, based on current and projected average residential energy costs in Minnesota, that will exceed the cost of implementing that measure, including interest, amortized over the ten-year period following the incurring of the cost;\n(4) to maintain the premises and all common areas in compliance with the applicable health and safety laws of the United States, of the state, and of the local units of government, including ordinances regulating rental licensing, where the premises are located during the term of the lease or license, except when violation of the health and safety laws has been caused by the willful, malicious, or irresponsible conduct of the tenant or licensee or a person under the direction or control of the tenant or licensee; and\n(5) to equip or furnish heat at a minimum temperature of 68 degrees Fahrenheit in all places intended for habitation including kitchens and bathrooms from October 1 through April 30, unless a utility company requires and instructs the heat to be reduced.\n(b) The parties to a lease or license of residential premises may not waive or modify the covenants imposed by this section."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/MN_504B_161.txt",
+          "sha256": "1c422a28762a2945b68dfb638786a5dfd69ec4489fbae1f93322c122c69020aa",
+          "start": 5079,
+          "end": 7087
+        }
+      }
+    },
+    {
+      "id": "hds060",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "MN_504B_161:selected-issue",
+      "authority_lineage": "MinnesotaChapter504B",
+      "state": {
+        "claim": "The parties may waive the heating covenant imposed by this section.",
+        "text": "Subdivision 1.\nRequirements.\n(a) In every lease or license of residential premises, the landlord or licensor covenants:\n(1) that the premises and all common areas are fit for the use intended by the parties;\n(2) to keep the premises and all common areas in reasonable repair during the term of the lease or license, including services and conditions listed in section\n504B.381, subdivision 1\n, and extermination of insects, rodents, vermin, or other pests on the premises, except when the disrepair has been caused by the willful, malicious, or irresponsible conduct of the tenant or licensee or a person under the direction or control of the tenant or licensee;\n(3) to make the premises and all common areas reasonably energy efficient by installing weatherstripping, caulking, storm windows, and storm doors when any such measure will result in energy procurement cost savings, based on current and projected average residential energy costs in Minnesota, that will exceed the cost of implementing that measure, including interest, amortized over the ten-year period following the incurring of the cost;\n(4) to maintain the premises and all common areas in compliance with the applicable health and safety laws of the United States, of the state, and of the local units of government, including ordinances regulating rental licensing, where the premises are located during the term of the lease or license, except when violation of the health and safety laws has been caused by the willful, malicious, or irresponsible conduct of the tenant or licensee or a person under the direction or control of the tenant or licensee; and\n(5) to equip or furnish heat at a minimum temperature of 68 degrees Fahrenheit in all places intended for habitation including kitchens and bathrooms from October 1 through April 30, unless a utility company requires and instructs the heat to be reduced.\n(b) The parties to a lease or license of residential premises may not waive or modify the covenants imposed by this section."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/MN_504B_161.txt",
+          "sha256": "1c422a28762a2945b68dfb638786a5dfd69ec4489fbae1f93322c122c69020aa",
+          "start": 5079,
+          "end": 7087
+        }
+      }
+    },
+    {
+      "id": "hds061",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "MN_504B_178:selected-issue",
+      "authority_lineage": "MinnesotaChapter504B",
+      "state": {
+        "passage": "Subd. 3.\nReturn of security deposit.\n(a) Every landlord shall:\n(1) within three weeks after termination of the tenancy; or\n(2) within five days of the date when the tenant leaves the building or dwelling due to the legal condemnation of the building or dwelling in which the tenant lives for reasons not due to willful, malicious, or irresponsible conduct of the tenant,\nand after receipt of the tenant's mailing address or delivery instructions, return the deposit to the tenant, with interest thereon as provided in subdivision 2, or furnish to the tenant a written statement showing the specific reason for the withholding of the deposit or any portion thereof.\n(b) It shall be sufficient compliance with the time requirement of this subdivision if the deposit or written statement required by this subdivision is placed in the United States mail as first class mail, postage prepaid, in an envelope with a proper return address, correctly addressed according to the mailing address or delivery instructions furnished by the tenant, within the time required by this subdivision. The landlord may withhold from the deposit only amounts reasonably necessary:\n(1) to remedy tenant defaults in the payment of rent or of other funds due to the landlord pursuant to an agreement; or\n(2) to restore the premises to their condition at the commencement of the tenancy, ordinary wear and tear excepted."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/MN_504B_178.txt",
+          "sha256": "592f18adeb9be2970b066bd99eaed560f240d34bdde835e59d43a57f35fac448",
+          "start": 6226,
+          "end": 7621
+        }
+      }
+    },
+    {
+      "id": "hds062",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "MN_504B_178:selected-issue",
+      "authority_lineage": "MinnesotaChapter504B",
+      "state": {
+        "claim": "Timely first-class mailing cannot satisfy the deposit-return time requirement; physical receipt by the deadline is required.",
+        "text": "Subd. 3.\nReturn of security deposit.\n(a) Every landlord shall:\n(1) within three weeks after termination of the tenancy; or\n(2) within five days of the date when the tenant leaves the building or dwelling due to the legal condemnation of the building or dwelling in which the tenant lives for reasons not due to willful, malicious, or irresponsible conduct of the tenant,\nand after receipt of the tenant's mailing address or delivery instructions, return the deposit to the tenant, with interest thereon as provided in subdivision 2, or furnish to the tenant a written statement showing the specific reason for the withholding of the deposit or any portion thereof.\n(b) It shall be sufficient compliance with the time requirement of this subdivision if the deposit or written statement required by this subdivision is placed in the United States mail as first class mail, postage prepaid, in an envelope with a proper return address, correctly addressed according to the mailing address or delivery instructions furnished by the tenant, within the time required by this subdivision. The landlord may withhold from the deposit only amounts reasonably necessary:\n(1) to remedy tenant defaults in the payment of rent or of other funds due to the landlord pursuant to an agreement; or\n(2) to restore the premises to their condition at the commencement of the tenancy, ordinary wear and tear excepted."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/MN_504B_178.txt",
+          "sha256": "592f18adeb9be2970b066bd99eaed560f240d34bdde835e59d43a57f35fac448",
+          "start": 6226,
+          "end": 7621
+        }
+      }
+    },
+    {
+      "id": "hds063",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "MN_504B_211:selected-issue",
+      "authority_lineage": "MinnesotaChapter504B",
+      "state": {
+        "passage": "Subdivision 1.\nDefinitions.\nFor purposes of this section, \"landlord\" has the meaning defined in section\n504B.001, subdivision 7\n, and also includes the landlord's agent or other person acting under the landlord's direction and control."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/MN_504B_211.txt",
+          "sha256": "8ef6fdae89f94af0cc3f933c45a895d8f0896dc6ae7babfa6e33cd1db8541c5d",
+          "start": 5029,
+          "end": 5264
+        }
+      }
+    },
+    {
+      "id": "hds064",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "MN_504B_211:selected-issue",
+      "authority_lineage": "MinnesotaChapter504B",
+      "state": {
+        "claim": "The definition of landlord in this section excludes the landlord’s agent.",
+        "text": "Subdivision 1.\nDefinitions.\nFor purposes of this section, \"landlord\" has the meaning defined in section\n504B.001, subdivision 7\n, and also includes the landlord's agent or other person acting under the landlord's direction and control."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/MN_504B_211.txt",
+          "sha256": "8ef6fdae89f94af0cc3f933c45a895d8f0896dc6ae7babfa6e33cd1db8541c5d",
+          "start": 5029,
+          "end": 5264
+        }
+      }
+    },
+    {
+      "id": "hds065",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "AZ_33-1310:selected-issue",
+      "authority_lineage": "ArizonaTitle33Chapter10",
+      "state": {
+        "passage": "5. \"Good faith\" means honesty in fact in the conduct or transaction concerned."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/AZ_33-1310.txt",
+          "sha256": "19fb300cf8653528d37cf654b9d1f00d6b55c3685467dc6591affe6d6b6b2162",
+          "start": 1108,
+          "end": 1186
+        }
+      }
+    },
+    {
+      "id": "hds066",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "AZ_33-1310:selected-issue",
+      "authority_lineage": "ArizonaTitle33Chapter10",
+      "state": {
+        "claim": "Good faith means honesty in fact in the conduct or transaction concerned.",
+        "text": "5. \"Good faith\" means honesty in fact in the conduct or transaction concerned."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/AZ_33-1310.txt",
+          "sha256": "19fb300cf8653528d37cf654b9d1f00d6b55c3685467dc6591affe6d6b6b2162",
+          "start": 1108,
+          "end": 1186
+        }
+      }
+    },
+    {
+      "id": "hds067",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "AZ_33-1324:selected-issue",
+      "authority_lineage": "ArizonaTitle33Chapter10",
+      "state": {
+        "passage": "A. The landlord shall:\n1. Comply with the requirements of applicable building codes materially affecting health and safety as prescribed in section 9-1303.\n2. Make all repairs and do whatever is necessary to put and keep the premises in a fit and habitable condition.\n3. Keep all common areas of the premises in a clean and safe condition.\n4. Maintain in good and safe working order and condition all electrical, plumbing, sanitary, heating, ventilating, air-conditioning and other facilities and appliances, including elevators, supplied or required to be supplied by him.\n5. Provide and maintain appropriate receptacles and conveniences for the removal of ashes, garbage, rubbish and other waste incidental to the occupancy of the dwelling unit and arrange for their removal.\n6. Supply running water and reasonable amounts of hot water at all times, reasonable heat and reasonable air-conditioning or cooling where such units are installed and offered, when required by seasonal weather conditions, except where the building that includes the dwelling unit is not required by law to be equipped for that purpose or the dwelling unit is so constructed that heat, air-conditioning, cooling or hot water is generated by an installation within the exclusive control of the tenant and supplied by a direct public utility connection."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/AZ_33-1324.txt",
+          "sha256": "673f821a475bb210f7c0ed1bcab51769a98cab891393ce4d5a3cbccc04b80922",
+          "start": 88,
+          "end": 1417
+        }
+      }
+    },
+    {
+      "id": "hds068",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "AZ_33-1324:selected-issue",
+      "authority_lineage": "ArizonaTitle33Chapter10",
+      "state": {
+        "claim": "The landlord’s listed duties include keeping all common areas clean and safe.",
+        "text": "A. The landlord shall:\n1. Comply with the requirements of applicable building codes materially affecting health and safety as prescribed in section 9-1303.\n2. Make all repairs and do whatever is necessary to put and keep the premises in a fit and habitable condition.\n3. Keep all common areas of the premises in a clean and safe condition.\n4. Maintain in good and safe working order and condition all electrical, plumbing, sanitary, heating, ventilating, air-conditioning and other facilities and appliances, including elevators, supplied or required to be supplied by him.\n5. Provide and maintain appropriate receptacles and conveniences for the removal of ashes, garbage, rubbish and other waste incidental to the occupancy of the dwelling unit and arrange for their removal.\n6. Supply running water and reasonable amounts of hot water at all times, reasonable heat and reasonable air-conditioning or cooling where such units are installed and offered, when required by seasonal weather conditions, except where the building that includes the dwelling unit is not required by law to be equipped for that purpose or the dwelling unit is so constructed that heat, air-conditioning, cooling or hot water is generated by an installation within the exclusive control of the tenant and supplied by a direct public utility connection."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/AZ_33-1324.txt",
+          "sha256": "673f821a475bb210f7c0ed1bcab51769a98cab891393ce4d5a3cbccc04b80922",
+          "start": 88,
+          "end": 1417
+        }
+      }
+    },
+    {
+      "id": "hds069",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "AZ_33-1321:selected-issue",
+      "authority_lineage": "ArizonaTitle33Chapter10",
+      "state": {
+        "passage": "A. A landlord shall not demand or receive security, however denominated, including prepaid rent in an amount or value of more than one and one-half month's rent.  This subsection does not prohibit a tenant from voluntarily paying more than one and one-half month's rent in advance."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/AZ_33-1321.txt",
+          "sha256": "9290da7d110e82085599c1fbb7e61d29bf052b00d0775bd9e51a6696ac9ce3ed",
+          "start": 56,
+          "end": 337
+        }
+      }
+    },
+    {
+      "id": "hds070",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "AZ_33-1321:selected-issue",
+      "authority_lineage": "ArizonaTitle33Chapter10",
+      "state": {
+        "claim": "The subsection does not prohibit a tenant voluntarily paying more than one and one-half months’ rent in advance.",
+        "text": "A. A landlord shall not demand or receive security, however denominated, including prepaid rent in an amount or value of more than one and one-half month's rent.  This subsection does not prohibit a tenant from voluntarily paying more than one and one-half month's rent in advance."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/AZ_33-1321.txt",
+          "sha256": "9290da7d110e82085599c1fbb7e61d29bf052b00d0775bd9e51a6696ac9ce3ed",
+          "start": 56,
+          "end": 337
+        }
+      }
+    },
+    {
+      "id": "hds071",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "AZ_33-1341:selected-issue",
+      "authority_lineage": "ArizonaTitle33Chapter10",
+      "state": {
+        "passage": "The tenant shall:\n1. Comply with all obligations primarily imposed upon tenants by applicable provisions of building codes materially affecting health and safety.\n2. Keep that part of the premises that he occupies and uses as clean and safe as the condition of the premises permit.\n3. Dispose from his dwelling unit all ashes, rubbish, garbage and other waste in a clean and safe manner.\n4. Keep all plumbing fixtures in the dwelling unit or used by the tenant as clean as their condition permits.\n5. Use in a reasonable manner all electrical, plumbing, sanitary, heating, ventilating, air-conditioning and other facilities and appliances including elevators in the premises.\n6. Not deliberately or negligently destroy, deface, damage, impair or remove any part of the premises or knowingly permit any person to do so.\n7. Conduct himself and require other persons on the premises with his consent to conduct themselves in a manner that will not disturb his neighbors' peaceful enjoyment of the premises.\n8. Promptly notify the landlord in writing of any situation or occurrence that requires the landlord to provide maintenance or make repairs or otherwise requires the landlord to take action as prescribed in section 33-1324."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/AZ_33-1341.txt",
+          "sha256": "ea157f38800ff366e3d671eb57f296e80d17175b2a2f834eb70dc3a8af9c9664",
+          "start": 86,
+          "end": 1313
+        }
+      }
+    },
+    {
+      "id": "hds072",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "AZ_33-1341:selected-issue",
+      "authority_lineage": "ArizonaTitle33Chapter10",
+      "state": {
+        "claim": "The quoted list requires the landlord to keep the plumbing fixtures used by the tenant clean.",
+        "text": "The tenant shall:\n1. Comply with all obligations primarily imposed upon tenants by applicable provisions of building codes materially affecting health and safety.\n2. Keep that part of the premises that he occupies and uses as clean and safe as the condition of the premises permit.\n3. Dispose from his dwelling unit all ashes, rubbish, garbage and other waste in a clean and safe manner.\n4. Keep all plumbing fixtures in the dwelling unit or used by the tenant as clean as their condition permits.\n5. Use in a reasonable manner all electrical, plumbing, sanitary, heating, ventilating, air-conditioning and other facilities and appliances including elevators in the premises.\n6. Not deliberately or negligently destroy, deface, damage, impair or remove any part of the premises or knowingly permit any person to do so.\n7. Conduct himself and require other persons on the premises with his consent to conduct themselves in a manner that will not disturb his neighbors' peaceful enjoyment of the premises.\n8. Promptly notify the landlord in writing of any situation or occurrence that requires the landlord to provide maintenance or make repairs or otherwise requires the landlord to take action as prescribed in section 33-1324."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/AZ_33-1341.txt",
+          "sha256": "ea157f38800ff366e3d671eb57f296e80d17175b2a2f834eb70dc3a8af9c9664",
+          "start": 86,
+          "end": 1313
+        }
+      }
+    },
+    {
+      "id": "hds073",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "FL_501_203:selected-issue",
+      "authority_lineage": "FloridaFDUTPA",
+      "state": {
+        "passage": "(1)\n“Final judgment” means a judgment, including any supporting opinion, that determines the rights of the parties and concerning which appellate remedies have been exhausted or the time for appeal has expired."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FL_501_203.txt",
+          "sha256": "159db39fb899f5b41b28ddd7c1aaa34b77b6df5a3f380594d584751b9c99099a",
+          "start": 2404,
+          "end": 2614
+        }
+      }
+    },
+    {
+      "id": "hds074",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "FL_501_203:selected-issue",
+      "authority_lineage": "FloridaFDUTPA",
+      "state": {
+        "claim": "A trial judgment counts as final under this definition even while appellate remedies remain unexhausted and appeal time has not expired.",
+        "text": "(1)\n“Final judgment” means a judgment, including any supporting opinion, that determines the rights of the parties and concerning which appellate remedies have been exhausted or the time for appeal has expired."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FL_501_203.txt",
+          "sha256": "159db39fb899f5b41b28ddd7c1aaa34b77b6df5a3f380594d584751b9c99099a",
+          "start": 2404,
+          "end": 2614
+        }
+      }
+    },
+    {
+      "id": "hds075",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "FL_713_01:selected-issue",
+      "authority_lineage": "FloridaConstructionLiens",
+      "state": {
+        "passage": "(6)\n“Contract” means an agreement for improving real property, written or unwritten, express or implied, and includes extras or change orders."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FL_713_01.txt",
+          "sha256": "af9b295fbc92d91a11431bf92726b6caa7b5e0f95fe3ab7461163c362c006f16",
+          "start": 3100,
+          "end": 3242
+        }
+      }
+    },
+    {
+      "id": "hds076",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "FL_713_01:selected-issue",
+      "authority_lineage": "FloridaConstructionLiens",
+      "state": {
+        "claim": "Only written express agreements can be contracts under this definition.",
+        "text": "(6)\n“Contract” means an agreement for improving real property, written or unwritten, express or implied, and includes extras or change orders."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FL_713_01.txt",
+          "sha256": "af9b295fbc92d91a11431bf92726b6caa7b5e0f95fe3ab7461163c362c006f16",
+          "start": 3100,
+          "end": 3242
+        }
+      }
+    },
+    {
+      "id": "hds077",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "FL_468_431:selected-issue",
+      "authority_lineage": "FloridaCommunityAssociationManagement",
+      "state": {
+        "passage": "(1)\n“Community association” means a residential homeowners’ association in which membership is a condition of ownership of a unit in a planned unit development, or of a lot for a home or a mobile home, or of a townhouse, villa, condominium, cooperative, or other residential unit which is part of a residential development scheme and which is authorized to impose a fee which may become a lien on the parcel."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FL_468_431.txt",
+          "sha256": "d6c0dc97f029bcea9975131be5902f0cd490f76b46595ebbb12343da22b75b10",
+          "start": 2350,
+          "end": 2758
+        }
+      }
+    },
+    {
+      "id": "hds078",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "FL_468_431:selected-issue",
+      "authority_lineage": "FloridaCommunityAssociationManagement",
+      "state": {
+        "claim": "The defined community association has authority to impose a fee that may become a lien on the parcel.",
+        "text": "(1)\n“Community association” means a residential homeowners’ association in which membership is a condition of ownership of a unit in a planned unit development, or of a lot for a home or a mobile home, or of a townhouse, villa, condominium, cooperative, or other residential unit which is part of a residential development scheme and which is authorized to impose a fee which may become a lien on the parcel."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FL_468_431.txt",
+          "sha256": "d6c0dc97f029bcea9975131be5902f0cd490f76b46595ebbb12343da22b75b10",
+          "start": 2350,
+          "end": 2758
+        }
+      }
+    },
+    {
+      "id": "hds079",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "FL_720_301:selected-issue",
+      "authority_lineage": "FloridaHomeownersAssociations",
+      "state": {
+        "passage": "(2)\n“Common area” means all real property within a community which is owned or leased by an association or dedicated for use or maintenance by the association or its members, including, regardless of whether title has been conveyed to the association:\n(a)\nReal property the use of which is dedicated to the association or its members by a recorded plat; or\n(b)\nReal property committed by a declaration of covenants to be leased or conveyed to the association."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FL_720_301.txt",
+          "sha256": "b2ce2131731b985cd504f9dcd0e4d712797cd1ea4211cccdbdf78b8732c7ce9b",
+          "start": 2700,
+          "end": 3159
+        }
+      }
+    },
+    {
+      "id": "hds080",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "FL_720_301:selected-issue",
+      "authority_lineage": "FloridaHomeownersAssociations",
+      "state": {
+        "claim": "Dedicated property can fall within the defined common area regardless of whether title has been conveyed to the association.",
+        "text": "(2)\n“Common area” means all real property within a community which is owned or leased by an association or dedicated for use or maintenance by the association or its members, including, regardless of whether title has been conveyed to the association:\n(a)\nReal property the use of which is dedicated to the association or its members by a recorded plat; or\n(b)\nReal property committed by a declaration of covenants to be leased or conveyed to the association."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FL_720_301.txt",
+          "sha256": "b2ce2131731b985cd504f9dcd0e4d712797cd1ea4211cccdbdf78b8732c7ce9b",
+          "start": 2700,
+          "end": 3159
+        }
+      }
+    },
+    {
+      "id": "hds081",
+      "task": "definition_present",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_Truck:selected-issue",
+      "authority_lineage": "SCOTUS2024:Truck",
+      "state": {
+        "passage": "The ordinary meaning of the terms “party” and “interest”\nconfrms this. “Party” in this context is best understood as\n“[a] person who constitutes or is one of those who compose\n. . . one or [the] other of the two sides in an action or affair;\none concerned in an affair; a participator; as, a party in inter-\nest.” Webster's New International Dictionary 1784 (2d ed.\n1949). “Interest” is best understood as “[c]oncern, or the\nPage Proof Pending Publication\nstate of being concerned or affected, esp[ecially] with respect\nto advantage, personal or general.” Id., at 1294. The plain\nmeaning of the phrase thus refers to entities that are poten-\ntially concerned with or affected by a proceeding.3 The par-\nties in this case land on roughly this same defnition. See\nBrief for Petitioner 26 (defning “party in interest” as anyone\nthat may be “ `directly and adversely affected' by the reorga-\nnization” (alterations omitted)); Brief for Debtor-Side Re-\nspondents 29 (“To the extent Truck acknowledges that a\n`party in interest' under Section 1109(b) is someone `directly\nand adversely affected by the reorganization,' the parties are\n\n   3\n     Legal dictionaries from the time of § 1109(b)'s enactment and onward\nsimilarly defne the phrase “party in interest.” See Ballentine's Law Dic-\ntionary 920 (3d ed. 1969) (defning “party in interest” as a “party to an\naction who has an actual interest in the controversy, as distinguished from\na nominal party”); cf. Black's Law Dictionary 1122 (6th ed. 1990) (“Primary\nmeaning ascribed the term `party in interest' in bankruptcy cases is\none whose pecuniary interest is directly affected by the bankruptcy\nproceeding”).\n\f                       Cite as: 602 U. S. 268 (2024)                     279\n\n                           Opinion of the Court\n\nin violent agreement”); Brief for Claimant Respondents 1\n(similar).4"
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_Truck.txt",
+          "sha256": "319d04628d0eea9d8d3bfc5df066a3c3f058f7da36a4256fafe923d82156400c",
+          "start": 25227,
+          "end": 27082
+        }
+      }
+    },
+    {
+      "id": "hds082",
+      "task": "supports_claim",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_Truck:selected-issue",
+      "authority_lineage": "SCOTUS2024:Truck",
+      "state": {
+        "claim": "The passage understands party in interest to include entities potentially concerned with or affected by a proceeding.",
+        "text": "The ordinary meaning of the terms “party” and “interest”\nconfrms this. “Party” in this context is best understood as\n“[a] person who constitutes or is one of those who compose\n. . . one or [the] other of the two sides in an action or affair;\none concerned in an affair; a participator; as, a party in inter-\nest.” Webster's New International Dictionary 1784 (2d ed.\n1949). “Interest” is best understood as “[c]oncern, or the\nPage Proof Pending Publication\nstate of being concerned or affected, esp[ecially] with respect\nto advantage, personal or general.” Id., at 1294. The plain\nmeaning of the phrase thus refers to entities that are poten-\ntially concerned with or affected by a proceeding.3 The par-\nties in this case land on roughly this same defnition. See\nBrief for Petitioner 26 (defning “party in interest” as anyone\nthat may be “ `directly and adversely affected' by the reorga-\nnization” (alterations omitted)); Brief for Debtor-Side Re-\nspondents 29 (“To the extent Truck acknowledges that a\n`party in interest' under Section 1109(b) is someone `directly\nand adversely affected by the reorganization,' the parties are\n\n   3\n     Legal dictionaries from the time of § 1109(b)'s enactment and onward\nsimilarly defne the phrase “party in interest.” See Ballentine's Law Dic-\ntionary 920 (3d ed. 1969) (defning “party in interest” as a “party to an\naction who has an actual interest in the controversy, as distinguished from\na nominal party”); cf. Black's Law Dictionary 1122 (6th ed. 1990) (“Primary\nmeaning ascribed the term `party in interest' in bankruptcy cases is\none whose pecuniary interest is directly affected by the bankruptcy\nproceeding”).\n\f                       Cite as: 602 U. S. 268 (2024)                     279\n\n                           Opinion of the Court\n\nin violent agreement”); Brief for Claimant Respondents 1\n(similar).4"
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_Truck.txt",
+          "sha256": "319d04628d0eea9d8d3bfc5df066a3c3f058f7da36a4256fafe923d82156400c",
+          "start": 25227,
+          "end": 27082
+        }
+      }
+    },
+    {
+      "id": "hds083",
+      "task": "definition_present",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_Corner:selected-issue",
+      "authority_lineage": "SCOTUS2024:Corner",
+      "state": {
+        "passage": "In 1948, as now, “accrue” had a well-settled meaning: A\n“right accrues when it comes into existence,” United States\nv. Lindsay, 346 U. S. 568, 569 (1954)—i. e., “ `when the plain-\ntiff has a complete and present cause of action,' ” Gabelli v.\nSEC, 568 U. S. 442, 448 (2013) (quoting Wallace v. Kato, 549\nU. S. 384, 388 (2007)). This defnition has appeared “in dic-\ntionaries from the 19th century up until today.” Gabelli, 568\nU. S., at 448. Legal dictionaries in the 1940s and 1950s uni-\nformly explained that a cause of action “ `accrues' when a suit\nPage Proof Pending Publication\nmay be maintained thereon.” Black's Law Dictionary 37\n(4th ed. 1951) (Black's); see also, e. g., Ballentine's Law Dic-\ntionary 15 (2d ed. 1948) (Ballentine's) (“[A]ccrual of cause of\naction” defned as the “coming or springing into existence of\na right to sue” (boldface deleted)). Thus, we have explained\nthat a cause of action “does not become `complete and pres-\nent' for limitations purposes”—it does not accrue—“until the\nplaintiff can fle suit and obtain relief.” Bay Area Laundry\nand Dry Cleaning Pension Trust Fund v. Ferbar Corp. of\nCal., 522 U. S. 192, 201 (1997).\n   Importantly, contemporaneous dictionaries also explained\nthat a cause of action accrues “on [the] date that damage is\nsustained and not [the] date when causes are set in motion\nwhich ultimately produce injury.” Black's 37. “[I]f an act\nis not legally injurious until certain consequences occur, it is\nnot the mere doing of the act that gives rise to a cause of\naction, but the subsequent occurrence of damage or loss as\nthe consequence of the act, and in such case no cause of\naction accrues until the loss or damage occurs.” Ballen-\n\f                    Cite as: 603 U. S. 799 (2024)             811\n\n                       Opinion of the Court\n\ntine's 16 (emphasis added). Thus, when Congress used the\nphrase “right of action frst accrues” in § 2401(a), it was well\nunderstood that a claim does not “accrue” as soon as the de-\nfendant acts, but only after the plaintiff suffers the injury\nrequired to press her claim in court."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_Corner.txt",
+          "sha256": "28eb4924affcbe39030d1537a95aa6041cce3aec4a404179c266a9506c04723b",
+          "start": 29887,
+          "end": 31976
+        }
+      }
+    },
+    {
+      "id": "hds084",
+      "task": "supports_claim",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_Corner:selected-issue",
+      "authority_lineage": "SCOTUS2024:Corner",
+      "state": {
+        "claim": "Under the accrual meaning explained here, a claim does not accrue before the plaintiff suffers the injury required to press it in court.",
+        "text": "In 1948, as now, “accrue” had a well-settled meaning: A\n“right accrues when it comes into existence,” United States\nv. Lindsay, 346 U. S. 568, 569 (1954)—i. e., “ `when the plain-\ntiff has a complete and present cause of action,' ” Gabelli v.\nSEC, 568 U. S. 442, 448 (2013) (quoting Wallace v. Kato, 549\nU. S. 384, 388 (2007)). This defnition has appeared “in dic-\ntionaries from the 19th century up until today.” Gabelli, 568\nU. S., at 448. Legal dictionaries in the 1940s and 1950s uni-\nformly explained that a cause of action “ `accrues' when a suit\nPage Proof Pending Publication\nmay be maintained thereon.” Black's Law Dictionary 37\n(4th ed. 1951) (Black's); see also, e. g., Ballentine's Law Dic-\ntionary 15 (2d ed. 1948) (Ballentine's) (“[A]ccrual of cause of\naction” defned as the “coming or springing into existence of\na right to sue” (boldface deleted)). Thus, we have explained\nthat a cause of action “does not become `complete and pres-\nent' for limitations purposes”—it does not accrue—“until the\nplaintiff can fle suit and obtain relief.” Bay Area Laundry\nand Dry Cleaning Pension Trust Fund v. Ferbar Corp. of\nCal., 522 U. S. 192, 201 (1997).\n   Importantly, contemporaneous dictionaries also explained\nthat a cause of action accrues “on [the] date that damage is\nsustained and not [the] date when causes are set in motion\nwhich ultimately produce injury.” Black's 37. “[I]f an act\nis not legally injurious until certain consequences occur, it is\nnot the mere doing of the act that gives rise to a cause of\naction, but the subsequent occurrence of damage or loss as\nthe consequence of the act, and in such case no cause of\naction accrues until the loss or damage occurs.” Ballen-\n\f                    Cite as: 603 U. S. 799 (2024)             811\n\n                       Opinion of the Court\n\ntine's 16 (emphasis added). Thus, when Congress used the\nphrase “right of action frst accrues” in § 2401(a), it was well\nunderstood that a claim does not “accrue” as soon as the de-\nfendant acts, but only after the plaintiff suffers the injury\nrequired to press her claim in court."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_Corner.txt",
+          "sha256": "28eb4924affcbe39030d1537a95aa6041cce3aec4a404179c266a9506c04723b",
+          "start": 29887,
+          "end": 31976
+        }
+      }
+    },
+    {
+      "id": "hds085",
+      "task": "definition_present",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_Dubin:selected-issue",
+      "authority_lineage": "SCOTUS:Dubin",
+      "state": {
+        "passage": "The “ ‘ordinary or natural\nmeaning’ ” of “ ‘use’ ” is “variously defined as ‘[t]o convert to\none’s service,’ ‘to employ,’ ‘to avail oneself of,’ and ‘to carry\nout a purpose or action by means of.’ ” Bailey, 516 U. S., at\n145. “These various definitions of ‘use’ imply action and im-\nplementation.” Ibid. Beyond that general concept, how-\never, “ ‘use’ takes on different meanings depending on con-\ntext,” and because it “draws meaning from its context, . . .\nwe will look not only to the word itself, but also to the stat-\nute and the [surrounding] scheme, to determine the mean-\ning Congress intended.” Id., at 143; see also Leocal, 543\nU. S., at 9 (“Particularly when interpreting a statute that\nfeatures as elastic a word as ‘use,’ we construe language in\nits context and in light of the terms surrounding it”)."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_Dubin.txt",
+          "sha256": "1cbdde780cd2050bb033f57d0fa61382a53b77abdc09dd06221e558d241315f4",
+          "start": 22257,
+          "end": 23071
+        }
+      }
+    },
+    {
+      "id": "hds086",
+      "task": "supports_claim",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_Dubin:selected-issue",
+      "authority_lineage": "SCOTUS:Dubin",
+      "state": {
+        "claim": "Using another person’s identifying information as an ancillary feature of an overbilling method always suffices for the aggravated-identity-theft violation discussed here.",
+        "text": "The text and context of the statute do not support such a\nboundless interpretation. Instead, §1028A(a)(1) is violated\nwhen the defendant’s misuse of another person’s means of\nidentification is at the crux of what makes the underlying\noffense criminal, rather than merely an ancillary feature of\na billing method. Here, the crux of petitioner’s overbilling\nwas inflating the value of services actually provided, while\n\f2                     DUBIN v. UNITED STATES\n\n                          Opinion of the Court\n\nthe patient’s means of identification was an ancillary part\nof the Medicaid billing process.\n                               I"
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_Dubin.txt",
+          "sha256": "1cbdde780cd2050bb033f57d0fa61382a53b77abdc09dd06221e558d241315f4",
+          "start": 12977,
+          "end": 13614
+        }
+      }
+    },
+    {
+      "id": "hds087",
+      "task": "definition_present",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_Fischer:selected-issue",
+      "authority_lineage": "SCOTUS:Fischer",
+      "state": {
+        "passage": "JUSTICE BARRETT, with whom JUSTICE SOTOMAYOR and\nJUSTICE KAGAN join, dissenting.\n   Joseph Fischer allegedly joined a mob of rioters that\nbreached the Capitol on January 6, 2021. At the time, Con-\ngress was meeting in a joint session to certify the Electoral\nCollege results. The riot forced Congress to suspend the\nproceeding, delaying it for several hours.\n   The Court does not dispute that Congress’s joint session\nqualifies as an “official proceeding”; that rioters delayed the\nproceeding; or even that Fischer’s alleged conduct (which\nincludes trespassing and a physical confrontation with law\nenforcement) was part of a successful effort to forcibly halt\nthe certification of the election results. Given these prem-\nises, the case that Fischer can be tried for “obstructing, in-\nfluencing, or impeding an official proceeding” seems open\nand shut. So why does the Court hold otherwise?\n   Because it simply cannot believe that Congress meant\nwhat it said. Section 1512(c)(2) is a very broad provision,\nand admittedly, events like January 6th were not its target.\n(Who could blame Congress for that failure of imagination?)\nBut statutes often go further than the problem that in-\nspired them, and under the rules of statutory interpreta-\ntion, we stick to the text anyway. The Court, abandoning\nthat approach, does textual backflips to find some way—\n\f2                    FISCHER v. UNITED STATES\n\n                          BARRETT, J., dissenting\n\nany way—to narrow the reach of subsection (c)(2). I re-\nspectfully dissent.\n                                I\n  The case for the Government’s interpretation is straight-\nforward. It can be accomplished in three paragraphs, as\ncompared to the Court’s many, many more. Ante, at 4–12.\n  Start with the verbs: To “obstruct” and to “impede” mean\nto “hinder” or “retard” something’s “passage” or “progress.”\n10 Oxford English Dictionary 668 (2d ed. 1989); 7 id., at\n705. We have previously explained that these words are\n“broad.” Marinello v. United States, 584 U. S. 1, 7 (2018).\nTo “influence” is similarly expansive, meaning “[t]o affect\nthe condition of ” or “to have an effect on” something. 7 Ox-\nford English Dictionary, at 940. The object of these verbs is\nan “official proceeding,” defined to include “a proceeding be-\nfore the Congress.” 18 U. S. C. §1515(a)(1)(B).1 So (c)(2)\ncovers all sorts of actions that affect or interfere with official\nproceedings."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_Fischer.txt",
+          "sha256": "17e55b60ed675f3fe3085a4e5d0bb74813af2cecbf86687b287cb850e36c086a",
+          "start": 60202,
+          "end": 62617
+        }
+      }
+    },
+    {
+      "id": "hds088",
+      "task": "supports_claim",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_Fischer:selected-issue",
+      "authority_lineage": "SCOTUS:Fischer",
+      "state": {
+        "claim": "The broad interpretation advocated in this passage is the majority’s adopted interpretation of subsection (c)(2).",
+        "text": "JUSTICE BARRETT, with whom JUSTICE SOTOMAYOR and\nJUSTICE KAGAN join, dissenting.\n   Joseph Fischer allegedly joined a mob of rioters that\nbreached the Capitol on January 6, 2021. At the time, Con-\ngress was meeting in a joint session to certify the Electoral\nCollege results. The riot forced Congress to suspend the\nproceeding, delaying it for several hours.\n   The Court does not dispute that Congress’s joint session\nqualifies as an “official proceeding”; that rioters delayed the\nproceeding; or even that Fischer’s alleged conduct (which\nincludes trespassing and a physical confrontation with law\nenforcement) was part of a successful effort to forcibly halt\nthe certification of the election results. Given these prem-\nises, the case that Fischer can be tried for “obstructing, in-\nfluencing, or impeding an official proceeding” seems open\nand shut. So why does the Court hold otherwise?\n   Because it simply cannot believe that Congress meant\nwhat it said. Section 1512(c)(2) is a very broad provision,\nand admittedly, events like January 6th were not its target.\n(Who could blame Congress for that failure of imagination?)\nBut statutes often go further than the problem that in-\nspired them, and under the rules of statutory interpreta-\ntion, we stick to the text anyway. The Court, abandoning\nthat approach, does textual backflips to find some way—\n\f2                    FISCHER v. UNITED STATES\n\n                          BARRETT, J., dissenting\n\nany way—to narrow the reach of subsection (c)(2). I re-\nspectfully dissent.\n                                I\n  The case for the Government’s interpretation is straight-\nforward. It can be accomplished in three paragraphs, as\ncompared to the Court’s many, many more. Ante, at 4–12.\n  Start with the verbs: To “obstruct” and to “impede” mean\nto “hinder” or “retard” something’s “passage” or “progress.”\n10 Oxford English Dictionary 668 (2d ed. 1989); 7 id., at\n705. We have previously explained that these words are\n“broad.” Marinello v. United States, 584 U. S. 1, 7 (2018).\nTo “influence” is similarly expansive, meaning “[t]o affect\nthe condition of ” or “to have an effect on” something. 7 Ox-\nford English Dictionary, at 940. The object of these verbs is\nan “official proceeding,” defined to include “a proceeding be-\nfore the Congress.” 18 U. S. C. §1515(a)(1)(B).1 So (c)(2)\ncovers all sorts of actions that affect or interfere with official\nproceedings."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_Fischer.txt",
+          "sha256": "17e55b60ed675f3fe3085a4e5d0bb74813af2cecbf86687b287cb850e36c086a",
+          "start": 60202,
+          "end": 62617
+        }
+      }
+    },
+    {
+      "id": "hds089",
+      "task": "definition_present",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_Coinbase:selected-issue",
+      "authority_lineage": "SCOTUS2024:Coinbase",
+      "state": {
+        "passage": "As relevant here, parties can form multiple levels of agree-\nments concerning arbitration. At a basic level, parties can\nagree to send the merits of a dispute to an arbitrator. They\ncan also “agree by contract that an arbitrator, rather than a\ncourt, will resolve threshold arbitrability questions as well\nas underlying merits disputes.” Henry Schein, Inc. v. Ar-\ncher & White Sales, Inc., 586 U. S. 63, 65 (2019). An agree-\nment to allow an arbitrator to decide whether a dispute is\nsubject to arbitration—i. e., its arbitrability—“is simply an\nadditional, antecedent agreement . . . , and the FAA operates\non this additional arbitration agreement just as it does on\nany other.” Rent-A-Center, 561 U. S., at 70."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_Coinbase.txt",
+          "sha256": "b48be49dbaca091f231e67ef048f1447fd95a57b47d2d5a9447b75ff9fb90d10",
+          "start": 13591,
+          "end": 14303
+        }
+      }
+    },
+    {
+      "id": "hds090",
+      "task": "supports_claim",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_Coinbase:selected-issue",
+      "authority_lineage": "SCOTUS2024:Coinbase",
+      "state": {
+        "claim": "Parties can agree that an arbitrator will decide whether their dispute is subject to arbitration.",
+        "text": "As relevant here, parties can form multiple levels of agree-\nments concerning arbitration. At a basic level, parties can\nagree to send the merits of a dispute to an arbitrator. They\ncan also “agree by contract that an arbitrator, rather than a\ncourt, will resolve threshold arbitrability questions as well\nas underlying merits disputes.” Henry Schein, Inc. v. Ar-\ncher & White Sales, Inc., 586 U. S. 63, 65 (2019). An agree-\nment to allow an arbitrator to decide whether a dispute is\nsubject to arbitration—i. e., its arbitrability—“is simply an\nadditional, antecedent agreement . . . , and the FAA operates\non this additional arbitration agreement just as it does on\nany other.” Rent-A-Center, 561 U. S., at 70."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_Coinbase.txt",
+          "sha256": "b48be49dbaca091f231e67ef048f1447fd95a57b47d2d5a9447b75ff9fb90d10",
+          "start": 13591,
+          "end": 14303
+        }
+      }
+    },
+    {
+      "id": "hds091",
+      "task": "definition_present",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_Pulsifer:selected-issue",
+      "authority_lineage": "SCOTUS:Pulsifer",
+      "state": {
+        "passage": "As Pulsifer\nreads the paragraph, the “and” joins three features of a de-\nfendant’s criminal history into a single disqualifying char-\nacteristic. The conjunction of Subparagraphs A, B, and C\nproduces the thing he labels “the complete combo”; the\nquestion then becomes whether the defendant has or “does\nnot have” that full package.          Brief for Pulsifer 19;\n§3553(f )(1). Some grade-school math notation may help re-\nveal the proposed ordering. It is as if Pulsifer inserted pa-\nrentheses into the paragraph, so that it asks whether “the\ndefendant does not have (A, B, and C).” Much as a student\nwould solve “5 - (2 + 1)” by first adding 2 and 1 and then\nsubtracting the sum from 5, so Pulsifer wants a court first\n\f8                PULSIFER v. UNITED STATES\n\n                      Opinion of the Court\n\nto combine A, B, and C and then to determine whether the\ndefendant has the total."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_Pulsifer.txt",
+          "sha256": "991d570a00cce11d171803c5bdf789af7b10156cd5f12339e5cd9835aa26d8fb",
+          "start": 22903,
+          "end": 23794
+        }
+      }
+    },
+    {
+      "id": "hds092",
+      "task": "supports_claim",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_Pulsifer:selected-issue",
+      "authority_lineage": "SCOTUS:Pulsifer",
+      "state": {
+        "claim": "The proposed ordering described here combines A, B, and C before asking whether the defendant has the total package.",
+        "text": "As Pulsifer\nreads the paragraph, the “and” joins three features of a de-\nfendant’s criminal history into a single disqualifying char-\nacteristic. The conjunction of Subparagraphs A, B, and C\nproduces the thing he labels “the complete combo”; the\nquestion then becomes whether the defendant has or “does\nnot have” that full package.          Brief for Pulsifer 19;\n§3553(f )(1). Some grade-school math notation may help re-\nveal the proposed ordering. It is as if Pulsifer inserted pa-\nrentheses into the paragraph, so that it asks whether “the\ndefendant does not have (A, B, and C).” Much as a student\nwould solve “5 - (2 + 1)” by first adding 2 and 1 and then\nsubtracting the sum from 5, so Pulsifer wants a court first\n\f8                PULSIFER v. UNITED STATES\n\n                      Opinion of the Court\n\nto combine A, B, and C and then to determine whether the\ndefendant has the total."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_Pulsifer.txt",
+          "sha256": "991d570a00cce11d171803c5bdf789af7b10156cd5f12339e5cd9835aa26d8fb",
+          "start": 22903,
+          "end": 23794
+        }
+      }
+    },
+    {
+      "id": "hds093",
+      "task": "definition_present",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_Loper:selected-issue",
+      "authority_lineage": "SCOTUS2024:Loper",
+      "state": {
+        "passage": "Chevron is overruled. Courts must exercise their inde-\npendent judgment in deciding whether an agency has acted\nwithin its statutory authority, as the APA requires. Careful\n\f                   Cite as: 603 U. S. 369 (2024)            413\n\n                     Thomas, J., concurring\n\nattention to the judgment of the Executive Branch may help\ninform that inquiry. And when a particular statute dele-\ngates authority to an agency consistent with constitutional\nlimits, courts must respect the delegation, while ensuring\nthat the agency acts within it. But courts need not and\nunder the APA may not defer to an agency interpretation of\nthe law simply because a statute is ambiguous."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_Loper.txt",
+          "sha256": "0233dbdd877d4424c813f19cb875abc6ea8339ed4acd2a9a098d35b3584c804f",
+          "start": 105533,
+          "end": 106213
+        }
+      }
+    },
+    {
+      "id": "hds094",
+      "task": "supports_claim",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_Loper:selected-issue",
+      "authority_lineage": "SCOTUS2024:Loper",
+      "state": {
+        "claim": "A court must defer to an agency’s statutory interpretation simply because the statute is ambiguous.",
+        "text": "Chevron is overruled. Courts must exercise their inde-\npendent judgment in deciding whether an agency has acted\nwithin its statutory authority, as the APA requires. Careful\n\f                   Cite as: 603 U. S. 369 (2024)            413\n\n                     Thomas, J., concurring\n\nattention to the judgment of the Executive Branch may help\ninform that inquiry. And when a particular statute dele-\ngates authority to an agency consistent with constitutional\nlimits, courts must respect the delegation, while ensuring\nthat the agency acts within it. But courts need not and\nunder the APA may not defer to an agency interpretation of\nthe law simply because a statute is ambiguous."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_Loper.txt",
+          "sha256": "0233dbdd877d4424c813f19cb875abc6ea8339ed4acd2a9a098d35b3584c804f",
+          "start": 105533,
+          "end": 106213
+        }
+      }
+    },
+    {
+      "id": "hds095",
+      "task": "definition_present",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_Harrow:selected-issue",
+      "authority_lineage": "SCOTUS2024:Harrow",
+      "state": {
+        "passage": "The Government says it\ncan rebut that presumption, but we are not the right court to\n   *The Government also invokes Lindahl v. Offce of Personnel Manage-\nment, 470 U. S. 768 (1985), in support of its position, but that decision helps\nit no more than Bowles. In Lindahl, the Court held that the Federal\nCircuit has jurisdiction over Board decisions denying disability retirement\nclaims. See 470 U. S., at 799. In doing so, we referred to not only § 1295\nbut also § 7703(b)(1) as “jurisdictional.” Id., at 792–793. But that is just\none more example (our recent decisions have offered many) of how this\nCourt used to apply the term “jurisdiction” in a “profigate” manner, fail-\ning to distinguish between statutes spelling out a court's power and those\nspecifying what steps litigants should take. Arbaugh v. Y & H Corp., 546\nU. S. 500, 510 (2006); see Kontrick v. Ryan, 540 U. S. 443, 454–455 (2004).\nAnd in any event, Lindahl concerned only the scope of claims that may be\nbrought to the Federal Circuit; it had nothing to do with time limits—\nwhich, we repeat, are generally non-jurisdictional. See United States v.\nKwai Fun Wong, 575 U. S. 402, 410 (2015); supra, at 484–485.\n\f490        HARROW v. DEPARTMENT OF DEFENSE\n\n                      Opinion of the Court\n\nnow determine whether that is so. The Government did not\nbroach the issue below; the Federal Circuit did not address\nit; and it is not included in the question presented. We\ntherefore leave the matter (including any waiver issues in-\nvolved) to the Federal Circuit on remand. And if that court\nfnds equitable tolling available, it should decide whether, on\nthe facts here, Harrow is entitled to that relief."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_Harrow.txt",
+          "sha256": "880395a9f82e11c2e343f7727d7ebf1521fb7ce392fe570f4c0b2a7918319872",
+          "start": 22810,
+          "end": 24484
+        }
+      }
+    },
+    {
+      "id": "hds096",
+      "task": "supports_claim",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_Harrow:selected-issue",
+      "authority_lineage": "SCOTUS2024:Harrow",
+      "state": {
+        "claim": "The Court decided that Harrow was entitled to equitable tolling on the facts of his case.",
+        "text": "The Government says it\ncan rebut that presumption, but we are not the right court to\n   *The Government also invokes Lindahl v. Offce of Personnel Manage-\nment, 470 U. S. 768 (1985), in support of its position, but that decision helps\nit no more than Bowles. In Lindahl, the Court held that the Federal\nCircuit has jurisdiction over Board decisions denying disability retirement\nclaims. See 470 U. S., at 799. In doing so, we referred to not only § 1295\nbut also § 7703(b)(1) as “jurisdictional.” Id., at 792–793. But that is just\none more example (our recent decisions have offered many) of how this\nCourt used to apply the term “jurisdiction” in a “profigate” manner, fail-\ning to distinguish between statutes spelling out a court's power and those\nspecifying what steps litigants should take. Arbaugh v. Y & H Corp., 546\nU. S. 500, 510 (2006); see Kontrick v. Ryan, 540 U. S. 443, 454–455 (2004).\nAnd in any event, Lindahl concerned only the scope of claims that may be\nbrought to the Federal Circuit; it had nothing to do with time limits—\nwhich, we repeat, are generally non-jurisdictional. See United States v.\nKwai Fun Wong, 575 U. S. 402, 410 (2015); supra, at 484–485.\n\f490        HARROW v. DEPARTMENT OF DEFENSE\n\n                      Opinion of the Court\n\nnow determine whether that is so. The Government did not\nbroach the issue below; the Federal Circuit did not address\nit; and it is not included in the question presented. We\ntherefore leave the matter (including any waiver issues in-\nvolved) to the Federal Circuit on remand. And if that court\nfnds equitable tolling available, it should decide whether, on\nthe facts here, Harrow is entitled to that relief."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_Harrow.txt",
+          "sha256": "880395a9f82e11c2e343f7727d7ebf1521fb7ce392fe570f4c0b2a7918319872",
+          "start": 22810,
+          "end": 24484
+        }
+      }
+    },
+    {
+      "id": "hds097",
+      "task": "definition_present",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_McIntosh:selected-issue",
+      "authority_lineage": "SCOTUS2024:McIntosh",
+      "state": {
+        "passage": "This Court agrees with the Second Circuit and the Gov-\nernment that Rule 32.2(b)(2)(B) establishes a time-related di-\nPage Proof Pending Publication\nrective. Accordingly, a district judge's failure to enter a\npreliminary order prior to sentencing does not deprive a\njudge of the power to order forfeiture."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_McIntosh.txt",
+          "sha256": "4a44e0520748274b0b82c471b1aeca5cb48b89ebbeb29d7ed1e2d7dfc043c12c",
+          "start": 21266,
+          "end": 21571
+        }
+      }
+    },
+    {
+      "id": "hds098",
+      "task": "supports_claim",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_McIntosh:selected-issue",
+      "authority_lineage": "SCOTUS2024:McIntosh",
+      "state": {
+        "claim": "Failure to enter the preliminary order before sentencing does not deprive the judge of power to order forfeiture.",
+        "text": "This Court agrees with the Second Circuit and the Gov-\nernment that Rule 32.2(b)(2)(B) establishes a time-related di-\nPage Proof Pending Publication\nrective. Accordingly, a district judge's failure to enter a\npreliminary order prior to sentencing does not deprive a\njudge of the power to order forfeiture."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_McIntosh.txt",
+          "sha256": "4a44e0520748274b0b82c471b1aeca5cb48b89ebbeb29d7ed1e2d7dfc043c12c",
+          "start": 21266,
+          "end": 21571
+        }
+      }
+    },
+    {
+      "id": "hds099",
+      "task": "definition_present",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_Warner:selected-issue",
+      "authority_lineage": "SCOTUS2024:Warner",
+      "state": {
+        "passage": "The Copyright Act's statute of limitations provides that a\ncopyright owner must bring an infringement claim within\nthree years of its accrual. See 17 U. S. C. § 507(b). In this\ncase, we assume without deciding that a claim is timely\nunder that provision if brought within three years of when\nthe plaintiff discovered an infringement, no matter when the\ninfringement happened. We then consider whether a claim\nsatisfying that rule is subject to another time-based limit—\nthis one, preventing the recovery of damages for any in-\nfringement that occurred more than three years before a\nlawsuit's fling. We hold that no such limit on damages ex-\nists. The Copyright Act entitles a copyright owner to re-\ncover damages for any timely claim.\n\n                                    I"
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_Warner.txt",
+          "sha256": "1df7e2a0a1b6c54f0355b2b1a8d2fe6d1cf2129aa7efe659126f4c438de64eff",
+          "start": 5855,
+          "end": 6629
+        }
+      }
+    },
+    {
+      "id": "hds100",
+      "task": "supports_claim",
+      "family": "judicial",
+      "source_cluster": "SCOTUS_Warner:selected-issue",
+      "authority_lineage": "SCOTUS2024:Warner",
+      "state": {
+        "claim": "The Court definitively adopted the discovery rule as the Copyright Act’s timeliness rule in this passage.",
+        "text": "The Copyright Act's statute of limitations provides that a\ncopyright owner must bring an infringement claim within\nthree years of its accrual. See 17 U. S. C. § 507(b). In this\ncase, we assume without deciding that a claim is timely\nunder that provision if brought within three years of when\nthe plaintiff discovered an infringement, no matter when the\ninfringement happened. We then consider whether a claim\nsatisfying that rule is subject to another time-based limit—\nthis one, preventing the recovery of damages for any in-\nfringement that occurred more than three years before a\nlawsuit's fling. We hold that no such limit on damages ex-\nists. The Copyright Act entitles a copyright owner to re-\ncover damages for any timely claim.\n\n                                    I"
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SCOTUS_Warner.txt",
+          "sha256": "1df7e2a0a1b6c54f0355b2b1a8d2fe6d1cf2129aa7efe659126f4c438de64eff",
+          "start": 5855,
+          "end": 6629
+        }
+      }
+    },
+    {
+      "id": "hds101",
+      "task": "definition_present",
+      "family": "administrative",
+      "source_cluster": "FTC_CANSPAM:selected-issue",
+      "authority_lineage": "FTC_CANSPAM:official-guidance",
+      "state": {
+        "passage": "Despite its name, the CAN-SPAM Act doesn’t apply just to bulk email. It covers all commercial messages, which the law defines as “any electronic mail message the primary purpose of which is the commercial advertisement or promotion of a commercial product or service,” including email that promotes content on commercial websites. The law makes no exception for business-to-business email. That means all email – for example, a message to former customers announcing a new product line – must comply with the law."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FTC_CANSPAM.txt",
+          "sha256": "724f01e1e6b1cf3f634e8ff3a93db847710b0dffde6c216f4837a3b40fc1e634",
+          "start": 7031,
+          "end": 7544
+        }
+      }
+    },
+    {
+      "id": "hds102",
+      "task": "supports_claim",
+      "family": "administrative",
+      "source_cluster": "FTC_CANSPAM:selected-issue",
+      "authority_lineage": "FTC_CANSPAM:official-guidance",
+      "state": {
+        "claim": "Business-to-business commercial email is not categorically excepted by the law described in this passage.",
+        "text": "Despite its name, the CAN-SPAM Act doesn’t apply just to bulk email. It covers all commercial messages, which the law defines as “any electronic mail message the primary purpose of which is the commercial advertisement or promotion of a commercial product or service,” including email that promotes content on commercial websites. The law makes no exception for business-to-business email. That means all email – for example, a message to former customers announcing a new product line – must comply with the law."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FTC_CANSPAM.txt",
+          "sha256": "724f01e1e6b1cf3f634e8ff3a93db847710b0dffde6c216f4837a3b40fc1e634",
+          "start": 7031,
+          "end": 7544
+        }
+      }
+    },
+    {
+      "id": "hds103",
+      "task": "definition_present",
+      "family": "administrative",
+      "source_cluster": "IRS_RENT:selected-issue",
+      "authority_lineage": "IRS_RENT:official-guidance",
+      "state": {
+        "passage": "Security deposits\nDo not include a security deposit in your income when you receive it if you plan to return it to your tenant at the end of the lease. But if you keep part or all of the security deposit during any year because your tenant does not live up to the terms of the lease, include the amount you keep in your income in that year.\nIf an amount called a security deposit is to be used as a final payment of rent, it is advance rent. Include it in your income when you receive it."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/IRS_RENT.txt",
+          "sha256": "535a6b7c1445e0d79a2960fba8894049b0a828af3c7be2efda8a37b5053b29b4",
+          "start": 6168,
+          "end": 6656
+        }
+      }
+    },
+    {
+      "id": "hds104",
+      "task": "supports_claim",
+      "family": "administrative",
+      "source_cluster": "IRS_RENT:selected-issue",
+      "authority_lineage": "IRS_RENT:official-guidance",
+      "state": {
+        "claim": "Every security deposit must be included in rental income immediately upon receipt.",
+        "text": "Security deposits\nDo not include a security deposit in your income when you receive it if you plan to return it to your tenant at the end of the lease. But if you keep part or all of the security deposit during any year because your tenant does not live up to the terms of the lease, include the amount you keep in your income in that year.\nIf an amount called a security deposit is to be used as a final payment of rent, it is advance rent. Include it in your income when you receive it."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/IRS_RENT.txt",
+          "sha256": "535a6b7c1445e0d79a2960fba8894049b0a828af3c7be2efda8a37b5053b29b4",
+          "start": 6168,
+          "end": 6656
+        }
+      }
+    },
+    {
+      "id": "hds105",
+      "task": "definition_present",
+      "family": "administrative",
+      "source_cluster": "EPA_RRP:selected-issue",
+      "authority_lineage": "EPA_RRP:official-guidance",
+      "state": {
+        "passage": "In general, anyone who is paid to perform work that disturbs paint in housing and child-occupied facilities built before 1978 must be certified. This includes all firms, even sole proprietorships.\nExamples of the types of firms covered:\nResidential rental property owners/managers;\nGeneral contractors; and\nSpecial trade contractors, including painters, plumbers, carpenters and electricians.\nFirms cannot advertise or perform renovation activities covered by the RRP Rule in homes or child-occupied facilities built before 1978 without firm certification."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/EPA_RRP.txt",
+          "sha256": "b2ac3e9ad53e40507b75a2c39d390b9e70f8660420af6887990f328c2b2f90d3",
+          "start": 2730,
+          "end": 3286
+        }
+      }
+    },
+    {
+      "id": "hds106",
+      "task": "supports_claim",
+      "family": "administrative",
+      "source_cluster": "EPA_RRP:selected-issue",
+      "authority_lineage": "EPA_RRP:official-guidance",
+      "state": {
+        "claim": "Residential rental property owners and managers are among the examples of firms covered by the stated certification requirements.",
+        "text": "In general, anyone who is paid to perform work that disturbs paint in housing and child-occupied facilities built before 1978 must be certified. This includes all firms, even sole proprietorships.\nExamples of the types of firms covered:\nResidential rental property owners/managers;\nGeneral contractors; and\nSpecial trade contractors, including painters, plumbers, carpenters and electricians.\nFirms cannot advertise or perform renovation activities covered by the RRP Rule in homes or child-occupied facilities built before 1978 without firm certification."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/EPA_RRP.txt",
+          "sha256": "b2ac3e9ad53e40507b75a2c39d390b9e70f8660420af6887990f328c2b2f90d3",
+          "start": 2730,
+          "end": 3286
+        }
+      }
+    },
+    {
+      "id": "hds107",
+      "task": "definition_present",
+      "family": "administrative",
+      "source_cluster": "USCIS_RESIDENCE:selected-issue",
+      "authority_lineage": "USCIS_RESIDENCE:official-guidance",
+      "state": {
+        "passage": "An applicant for naturalization under the general provision\n[1]\nmust have resided continuously in the United States after his or her lawful permanent resident (LPR) admission for at least 5 years prior to filing the naturalization application and up to the time of naturalization. An applicant must also establish that he or she has resided in the state or service district having jurisdiction over the application for 3 months prior to filing.\n[2]"
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/USCIS_RESIDENCE.txt",
+          "sha256": "ac014a35477b987350ba418e072c183725ce36002cb7b84840b998109c8e23d7",
+          "start": 5174,
+          "end": 5622
+        }
+      }
+    },
+    {
+      "id": "hds108",
+      "task": "supports_claim",
+      "family": "administrative",
+      "source_cluster": "USCIS_RESIDENCE:selected-issue",
+      "authority_lineage": "USCIS_RESIDENCE:official-guidance",
+      "state": {
+        "claim": "For an applicant under the stated general provision, the continuous-residence requirement extends up to naturalization, not just application filing.",
+        "text": "An applicant for naturalization under the general provision\n[1]\nmust have resided continuously in the United States after his or her lawful permanent resident (LPR) admission for at least 5 years prior to filing the naturalization application and up to the time of naturalization. An applicant must also establish that he or she has resided in the state or service district having jurisdiction over the application for 3 months prior to filing.\n[2]"
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/USCIS_RESIDENCE.txt",
+          "sha256": "ac014a35477b987350ba418e072c183725ce36002cb7b84840b998109c8e23d7",
+          "start": 5174,
+          "end": 5622
+        }
+      }
+    },
+    {
+      "id": "hds109",
+      "task": "definition_present",
+      "family": "administrative",
+      "source_cluster": "OFAC_BLOCKED:selected-issue",
+      "authority_lineage": "OFAC_BLOCKED:official-guidance",
+      "state": {
+        "passage": "OFAC authorities may require U.S. persons to block all property and interests in property of certain persons, known as \"blocked persons.\" When this is the case, any property and interests in property of a blocked person that are within the United States or within the possession or control of a U.S. person must be blocked (i.e., \"frozen\")—not seized—and may not be transferred, withdrawn, or otherwise dealt in. Title to the blocked property remains with the blocked person, but the exercise of powers and privileges normally associated with ownership is prohibited without authorization from OFAC."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/OFAC_BLOCKED.txt",
+          "sha256": "1fef83748dded7cc7b4595c8dd6e40046537aac5434bc22b21f949318b662461",
+          "start": 1973,
+          "end": 2572
+        }
+      }
+    },
+    {
+      "id": "hds110",
+      "task": "supports_claim",
+      "family": "administrative",
+      "source_cluster": "OFAC_BLOCKED:selected-issue",
+      "authority_lineage": "OFAC_BLOCKED:official-guidance",
+      "state": {
+        "claim": "Blocking property transfers title from the blocked person to the United States government.",
+        "text": "OFAC authorities may require U.S. persons to block all property and interests in property of certain persons, known as \"blocked persons.\" When this is the case, any property and interests in property of a blocked person that are within the United States or within the possession or control of a U.S. person must be blocked (i.e., \"frozen\")—not seized—and may not be transferred, withdrawn, or otherwise dealt in. Title to the blocked property remains with the blocked person, but the exercise of powers and privileges normally associated with ownership is prohibited without authorization from OFAC."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/OFAC_BLOCKED.txt",
+          "sha256": "1fef83748dded7cc7b4595c8dd6e40046537aac5434bc22b21f949318b662461",
+          "start": 1973,
+          "end": 2572
+        }
+      }
+    },
+    {
+      "id": "hds111",
+      "task": "definition_present",
+      "family": "administrative",
+      "source_cluster": "SEC_ACCREDITED:selected-issue",
+      "authority_lineage": "SEC_ACCREDITED:official-guidance",
+      "state": {
+        "passage": "How do I calculate my net worth?\nGenerally, to qualify as an accredited investor under the net worth test, you must have a net worth that exceeds $1 million, either alone or with a spouse or\nspousal equivalent\n, at the time of the sale of the securities.  If calculating joint net worth with a spouse or\nspousal equivalent\n, it is not necessary that property be held jointly and the securities being purchased do not have to be acquired jointly.  Calculating net worth involves adding up all your assets and subtracting all your liabilities.  The resulting sum is your net worth.\nSpousal equivalent.\nA\nspousal equivalent\nmeans a cohabitant occupying a relationship generally equivalent to that of a spouse.\nThe value of your primary residence is not included in your net worth calculation.\nIn addition, any mortgage or other loan on the primary residence does not count as a liability up to the fair market value of the residence.  If the loan is for more than the fair market value of the primary residence (\ni.e.\n, if your mortgage is underwater), then the loan amount that is over the fair market value counts as a liability under the net worth test.\nFurther, any increase in the loan amount (other than for the purchase of the primary residence) in the 60 days prior to your purchase of the securities (even if the loan amount does not exceed the value of the primary residence) will count as a liability as well.  The reason for this is to prevent net worth from being artificially inflated through converting home equity into cash or other assets."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SEC_ACCREDITED.txt",
+          "sha256": "ca2f22847153b3ab7789c70993618f1ab88644bf95af001039e46d7cec573ccf",
+          "start": 5200,
+          "end": 6753
+        }
+      }
+    },
+    {
+      "id": "hds112",
+      "task": "supports_claim",
+      "family": "administrative",
+      "source_cluster": "SEC_ACCREDITED:selected-issue",
+      "authority_lineage": "SEC_ACCREDITED:official-guidance",
+      "state": {
+        "claim": "When calculating joint net worth under the guidance, property need not be held jointly and purchased securities need not be acquired jointly.",
+        "text": "How do I calculate my net worth?\nGenerally, to qualify as an accredited investor under the net worth test, you must have a net worth that exceeds $1 million, either alone or with a spouse or\nspousal equivalent\n, at the time of the sale of the securities.  If calculating joint net worth with a spouse or\nspousal equivalent\n, it is not necessary that property be held jointly and the securities being purchased do not have to be acquired jointly.  Calculating net worth involves adding up all your assets and subtracting all your liabilities.  The resulting sum is your net worth.\nSpousal equivalent.\nA\nspousal equivalent\nmeans a cohabitant occupying a relationship generally equivalent to that of a spouse.\nThe value of your primary residence is not included in your net worth calculation.\nIn addition, any mortgage or other loan on the primary residence does not count as a liability up to the fair market value of the residence.  If the loan is for more than the fair market value of the primary residence (\ni.e.\n, if your mortgage is underwater), then the loan amount that is over the fair market value counts as a liability under the net worth test.\nFurther, any increase in the loan amount (other than for the purchase of the primary residence) in the 60 days prior to your purchase of the securities (even if the loan amount does not exceed the value of the primary residence) will count as a liability as well.  The reason for this is to prevent net worth from being artificially inflated through converting home equity into cash or other assets."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/SEC_ACCREDITED.txt",
+          "sha256": "ca2f22847153b3ab7789c70993618f1ab88644bf95af001039e46d7cec573ccf",
+          "start": 5200,
+          "end": 6753
+        }
+      }
+    },
+    {
+      "id": "hds113",
+      "task": "definition_present",
+      "family": "administrative",
+      "source_cluster": "FTC_LANDLORD:selected-issue",
+      "authority_lineage": "FTC_LANDLORD:official-guidance",
+      "state": {
+        "passage": "The adverse action notice is required even if information in the consumer report wasn’t the primary reason for the decision. Even if the information in the report played only a small part in the overall decision, you must notify the applicant or tenant."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FTC_LANDLORD.txt",
+          "sha256": "8286721e594af2c4050c7b09c7a0babed6a5c380843123307161f20b14b25150",
+          "start": 10691,
+          "end": 10944
+        }
+      }
+    },
+    {
+      "id": "hds114",
+      "task": "supports_claim",
+      "family": "administrative",
+      "source_cluster": "FTC_LANDLORD:selected-issue",
+      "authority_lineage": "FTC_LANDLORD:official-guidance",
+      "state": {
+        "claim": "A landlord may omit adverse-action notice whenever the consumer report played only a small part in the decision.",
+        "text": "The adverse action notice is required even if information in the consumer report wasn’t the primary reason for the decision. Even if the information in the report played only a small part in the overall decision, you must notify the applicant or tenant."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FTC_LANDLORD.txt",
+          "sha256": "8286721e594af2c4050c7b09c7a0babed6a5c380843123307161f20b14b25150",
+          "start": 10691,
+          "end": 10944
+        }
+      }
+    },
+    {
+      "id": "hds115",
+      "task": "definition_present",
+      "family": "administrative",
+      "source_cluster": "NLRB_CONCERTED:selected-issue",
+      "authority_lineage": "NLRB_CONCERTED:official-guidance",
+      "state": {
+        "passage": "Most employees in the private sector are covered by the NLRA. However, the Act specifically excludes individuals who are:\nemployed by Federal, state, or local government\nemployed as agricultural laborers\nemployed in the domestic service of any person or family in a home\nemployed by a parent or spouse\nemployed as an independent contractor\nemployed as a supervisor (supervisors who have been discriminated against for refusing to violate the NLRA may be covered)\nemployed by an employer subject to the Railway Labor Act, such as railroads and airlines\nemployed by any other person who is not an employer as defined in the NLRA"
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/NLRB_CONCERTED.txt",
+          "sha256": "ee626e01d9696585847b8138ab90b4e57be49704bb93962f63bfd2ad020605c9",
+          "start": 9391,
+          "end": 10017
+        }
+      }
+    },
+    {
+      "id": "hds116",
+      "task": "supports_claim",
+      "family": "administrative",
+      "source_cluster": "NLRB_CONCERTED:selected-issue",
+      "authority_lineage": "NLRB_CONCERTED:official-guidance",
+      "state": {
+        "claim": "Every private-sector worker is covered by the NLRA without exception.",
+        "text": "Most employees in the private sector are covered by the NLRA. However, the Act specifically excludes individuals who are:\nemployed by Federal, state, or local government\nemployed as agricultural laborers\nemployed in the domestic service of any person or family in a home\nemployed by a parent or spouse\nemployed as an independent contractor\nemployed as a supervisor (supervisors who have been discriminated against for refusing to violate the NLRA may be covered)\nemployed by an employer subject to the Railway Labor Act, such as railroads and airlines\nemployed by any other person who is not an employer as defined in the NLRA"
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/NLRB_CONCERTED.txt",
+          "sha256": "ee626e01d9696585847b8138ab90b4e57be49704bb93962f63bfd2ad020605c9",
+          "start": 9391,
+          "end": 10017
+        }
+      }
+    },
+    {
+      "id": "hds117",
+      "task": "definition_present",
+      "family": "administrative",
+      "source_cluster": "FTC_RIDDLE:selected-issue",
+      "authority_lineage": "FTC1999RiddleAdvisoryOpinion",
+      "state": {
+        "passage": "Thus, landlords who use\nconsumer reports\nmust now provide applicants Section 615(a) adverse action notices when they refuse to rent or lease a dwelling, or require an increased security deposit as a precondition to the rental, based on a consumer report."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FTC_RIDDLE.txt",
+          "sha256": "136c3fc8d32b9739c179ab48e3fed54554903bba81234ec33cb9bba49e1680b0",
+          "start": 8817,
+          "end": 9071
+        }
+      }
+    },
+    {
+      "id": "hds118",
+      "task": "supports_claim",
+      "family": "administrative",
+      "source_cluster": "FTC_RIDDLE:selected-issue",
+      "authority_lineage": "FTC1999RiddleAdvisoryOpinion",
+      "state": {
+        "claim": "This 1999 staff letter establishes that its Section 615(b)(1) interpretation remains the governing rule on October 1, 2026.",
+        "text": "March 17, 1999\nClarine Nardi Riddle, Esq.\nNational Multi Housing Council\n1850 M Street NW\nWashington, D.C. 20036\nRe: Section 615(b)(1) of the Fair Credit Reporting Act\nDear Ms. Riddle:\nThis is in response to your letter requesting the staff's views on the extent to which Section 615(b)(1) of the amended Fair Credit Reporting Act (FCRA) applies to the situation where an owner/manager of residential property takes an adverse action -- i.e., refuses to rent or lease a dwelling -- based on information obtained from the applicant's previous landlord. For the reasons set forth below, we believe that Section 615(b)(1) does not apply to landlords in this situation.\nBefore setting forth our views on this issue, it is important to note that, as a result of the 1996 amendments to the FCRA, landlords now have obligations under Section 615(a) the FCRA when they take adverse actions based on credit reports or other types of consumer reports (such as reports from tenant screening organizations). Prior to the 1996 amendments, the Commission took the position in its Commentary on the FCRA that the landlord-tenant relationship did not involve \"credit\" and was, therefore, not covered by the adverse action notice procedures set out in Section 615 of the FCRA.\n(1)\n(At the time, Section 615 required adverse action notices only in connection with \"credit,\" \"insurance,\" or \"employment\" transactions.) In the 1996 amendments, Congress changed that result by adding a broad definition of the term \"adverse action\" in Section 603(k) of the FCRA.\n\"Adverse action\" is now defined broadly in Section 603(k) of the FCRA to cover adverse actions in credit (including the denial of credit or the termination of an account), employment (including the denial of employment), licenses or benefits from a governmental entity (including denial or cancellation), and insurance (including the denial of coverage). In addition, Congress added a broad \"catch-all\" in Section 603(k)(1)(B)(iv), which covers, inter alia, all actions or determinations \"adverse to the interests of the consumer\" made in connection with an application made by, or a transaction initiated by, the consumer. The catch-all provision clearly covers the landlord-tenant situation. Thus, landlords who use\nconsumer reports\nmust now provide applicants Section 615(a) adverse action notices when they refuse to rent or lease a dwelling, or require an increased security deposit as a precondition to the rental, based on a consumer report.\nHowever, the issue you raise is a different one: whether landlords now have any obligations under another portion of Section 615 -- sub-section (b)(1). This sub-section requires notice \"[w]henever\ncredit\nfor personal, family, or household purposes ... is denied or the charge for such credit is increased . . . because of information obtained from a person\nother than a consumer reporting agency\nbearing upon a consumer's credit worthiness, credit standing, credit capacity, character, general reputation, personal characteristics, or mode of living\" (emphasis added). The notice required by this provision is not triggered by an \"adverse action\" as defined in Section 603(k), but has a more limited trigger -- the denial of (or increased charge for) \"credit.\"\nAs you can see, Congress did not amend Section 615(b)(1) to refer to the newly added \"adverse action\" definition as the trigger for requiring a notice under this sub-section, and we have found nothing in the legislative history of the 1996 amendments that indicates Congress intended to change the Commission's determination that the landlord-tenant relationship is not generally a \"credit\" relationship. It appears that Congress was concerned in the relevant 1996 amendments with the situation where landlords use consumer reports as a basis for adverse actions, and that it addressed this issue by adding a fairly broad definition of \"adverse action\" to the statute and by referencing this definition in Section 615(a).\nAccordingly, it is our view that the Commission's position in the Commentary that the landlord-tenant relationship is not a \"credit\" relationship remains in force. As a result, we believe that landlords have no obligations under Section 615(b)(1) to provide notices when they base an adverse landlord-tenant decision upon information obtained from persons other than\nconsumer reporting\nagencies, such as information from an applicant's previous landlord. Such a decision does not constitute a denial of, or an increase in the charge for, \"credit\" under Section 615(b)(1).\nI hope that this information is helpful for you. The opinions set forth in this informal staff letter are not binding on the Commission. If you have any further questions, please feel free to contact me."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FTC_RIDDLE.txt",
+          "sha256": "136c3fc8d32b9739c179ab48e3fed54554903bba81234ec33cb9bba49e1680b0",
+          "start": 6581,
+          "end": 11330
+        }
+      }
+    },
+    {
+      "id": "hds119",
+      "task": "definition_present",
+      "family": "administrative",
+      "source_cluster": "FTC_HAWKEY:selected-issue",
+      "authority_lineage": "FTC1997HawkeyAdvisoryOpinion",
+      "state": {
+        "passage": "An \"investigative consumer report\" is defined by Section 603(e) as a consumer report in which information is gathered by interviews with a consumer's neighbors, friends, or others who have knowledge of the consumer. The information gathered must involve a consumer's character, general reputation, personal characteristics, or mode of living."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FTC_HAWKEY.txt",
+          "sha256": "235306150fb62653357c9b3994835fb2d00108f77c9a194d3d560adc51668829",
+          "start": 7771,
+          "end": 8113
+        }
+      }
+    },
+    {
+      "id": "hds120",
+      "task": "supports_claim",
+      "family": "administrative",
+      "source_cluster": "FTC_HAWKEY:selected-issue",
+      "authority_lineage": "FTC1997HawkeyAdvisoryOpinion",
+      "state": {
+        "claim": "Under this passage, any information gathered in an interview qualifies regardless of the subject matter of that information.",
+        "text": "An \"investigative consumer report\" is defined by Section 603(e) as a consumer report in which information is gathered by interviews with a consumer's neighbors, friends, or others who have knowledge of the consumer. The information gathered must involve a consumer's character, general reputation, personal characteristics, or mode of living."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/heldout_ds_sources/FTC_HAWKEY.txt",
+          "sha256": "235306150fb62653357c9b3994835fb2d00108f77c9a194d3d560adc51668829",
+          "start": 7771,
+          "end": 8113
+        }
+      }
+    }
+  ]
+}

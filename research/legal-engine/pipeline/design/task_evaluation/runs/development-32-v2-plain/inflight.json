@@ -1,0 +1,25 @@
+{
+  "case_id": "d048",
+  "request_hash": "53262f1a227073205e5353c8d676399241136e94f72731c25be7d4c209087d72",
+  "started_at": "2026-10-01T16:44:58.460155+00:00",
+  "transport": [
+    {
+      "url": "https://openrouter.ai/api/v1/systemone",
+      "body": {
+        "state": {
+          "claim": "A transfer initiated with fraudulent intent by the consumer is an unauthorized electronic fund transfer under this definition.",
+          "text": "(m) “Unauthorized electronic fund transfer” means an electronic fund transfer from a consumer's account initiated by a person other than the consumer without actual authority to initiate the transfer and from which the consumer receives no benefit. The term does not include an electronic fund transfer initiated:\n(1) By a person who was furnished the access device to the consumer's account by the consumer, unless the consumer has notified the financial institution that transfers by that person are no longer authorized;\n(2) With fraudulent intent by the consumer or any person acting in concert with the consumer; or\n(3) By the financial institution or its employee."
+        },
+        "model": "typesafe/jev-1.13",
+        "questions": {
+          "judgment": {
+            "type": "noul",
+            "instructions": "Does the supplied text support this claim?"
+          }
+        }
+      },
+      "body_text": "{\"state\":{\"claim\":\"A transfer initiated with fraudulent intent by the consumer is an unauthorized electronic fund transfer under this definition.\",\"text\":\"(m) “Unauthorized electronic fund transfer” means an electronic fund transfer from a consumer's account initiated by a person other than the consumer without actual authority to initiate the transfer and from which the consumer receives no benefit. The term does not include an electronic fund transfer initiated:\\n(1) By a person who was furnished the access device to the consumer's account by the consumer, unless the consumer has notified the financial institution that transfers by that person are no longer authorized;\\n(2) With fraudulent intent by the consumer or any person acting in concert with the consumer; or\\n(3) By the financial institution or its employee.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"judgment\":{\"type\":\"noul\",\"instructions\":\"Does the supplied text support this claim?\"}}}",
+      "body_sha256": "1b29c4d40027c084e5b64a8645b71432861895c39ac0c7e2cd6cb116a519cf84"
+    }
+  ]
+}

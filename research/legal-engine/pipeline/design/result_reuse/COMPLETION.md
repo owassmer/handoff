@@ -1,0 +1,50 @@
+# Goal 2 — result reuse completion evidence
+
+October 1, 2026. The main research pipeline now reuses a judgment only when the complete current prepared request and exact pinned build match, the saved response passes validation, and its original attribution remains intact. Rejection means unavailable evidence. It never supplies a semantic NO. This changes evidence handling, not question meaning, routing thresholds, legal conclusions, or the agent/Jev/code division of work.
+
+## Acceptance reconciliation
+
+| Original criterion | Implementation and observed evidence |
+|---|---|
+| 1. Every producer/reader accounted | The path table below reconciles the main client, embedded/current consumers, historical import/export, standalone execution and experiments. Independent initial and implementation reviews traced these consumers. |
+| 2. Complete effective identity | `jev_results.identity` binds endpoint, requested model, expected exact returned build, assembly/format, registry and active question versions, full built native question content, and complete prepared state. Canonical object keys preserve equivalent map order; list order remains material. `prepare` uses actual saved body text, heading, instrument name/citation, profile chain, aperture and scope-filled questions. Identity and prepared-input tests vary these components. Native SDK serialization was inspected independently and is checked in the mocked live lifecycle. |
+| 3. Shared strict response checks | Both live acceptance and disk reads use `validate`. Exact answer IDs, types, finite/ranged values, complete probability keys, coherent Choice, Score legend/rubric correspondence and expected score are checked. Envelope request/response hashes, timezone-bearing origin timestamp, and reported cost are checked. Invalid JSON, duplicate keys, nonfinite numbers and unsupported top-level shapes reject. Tests cover wrong build, shape, cost, missing/extra IDs, boolean numbers, contradictions and modified raw responses. |
+| 4. Positive reuse and explicit legacy behavior | Lifecycle test runs real preparation, SDK question construction, client coordination and persistence with provider I/O replaced; subsequent ordinary and cached-only reads reuse the saved answer without another call or credentials and retain original timestamps/configuration. Legacy formats lack the complete origin request and are rejected without migration or rewriting. Exact rejected bytes are preserved on recovery. |
+| 5. Embedded/downstream closure | `reroute` reloads validated current cache entries rather than trusting caller projections or old embedded values. Failed and limited triage cannot retain stale current scores or claim completeness. Batch plans and own-label reporting recompute current routing. Register checks compare every embedded record, including stated/review-queue rows, against validated current evidence. Import retains old judgments/routes under `legacy`, sets active Jev empty, and recomputes routing while retaining reviewer decisions. Export explicitly labels historical observations. |
+| 6. Persistence and honest accounting | Atomic replacement preserves prior cache/snapshot bytes; interruption tests prove original bytes survive and temporary files are removed. Exchanges retain failures; outcomes separate cache hit/miss/rejection, preparation error, execution failure, invalid response and unsent work. Results contain only the current run's validated answers and append origin-bearing history. Calibration preserves previous report bytes and records actual selected values, origin timestamp, request key and response hash; independent reproduction distinguished two answers to the same request. Missing source inputs, unanswered negatives and limit-deferred populations remain visible and incomplete. |
+| 7. Adversarial review and corpus evidence | Independent review found two material defects—Score schema handling and calibration history—and independently rechecked both fixes. `TESTS.txt`: 159 passed, no skips, SDK environment. `VERIFICATION.json`: all 7,962 protected historical files unchanged; exact implementation hashes recorded. `CORPUS_INSPECTION.json`: all 3,582 old cache entries and current jurisdiction rows inspected read-only. |
+
+## Result paths and boundary decisions
+
+| Path | Current behavior / exclusion |
+|---|---|
+| Main cached-only lookup | Read-only expected-request reconstruction and strict envelope/response validation. No SDK or credentials required. Every requested item has an outcome. |
+| Main ordinary lookup/live inference | Same lookup; only misses/rejections dispatch. A successful response must pass the shared checks and persist its envelope before becoming a current answer. Build mismatch stops further unsent work. Invalid output never replaces the old cache. |
+| In-memory SDK questions | Keyed by the entire built question specification, preserving native Noul/Choice/Score configuration and structured content. |
+| Triage, rerun, direct reroute, limit | Embedded projections are not reusable proof. Rerun includes compatible rows in lookup; it does not force paid re-inference. Displaced observations keep their original fields in history. Deferred work returns incomplete. |
+| Calibration, pooled inputs, own labels | Uses validated answers with each source profile/context. Missing inputs stay in population; negative/eligible-positive nonresponse fails completion. Reports bind the selected response, not just its request key. Own labels describe today's recomputed routing and explicitly say review-time routing was not captured. |
+| Batch planning/writing | Scores and priorities come from freshly validated current rows. Writing batch membership preserves original register observations; it does not claim to refresh those stored rows. |
+| Register/J4 checks | Default verification rejects unverified embedded evidence and uses validated evidence for Jev-based set-aside checks. `verify_jev=False` is explicitly structural-only, used for checker self-tests; it cannot establish current Jev compatibility. Saved tiers/reasons are not individually certified here; score consumers recompute them. |
+| Results, exchanges, run logs | Results are current-run snapshots, not an input cache. Previous bytes are archived; append-only records distinguish origin from later observation. Logs are diagnostic, never answer sources. SDK/credential initialization failure raises an explicit execution error rather than producing semantic answers. |
+| Legacy import/export | Imported original fields remain historical, and cache copies remain unverified legacy evidence. Exported gold data uses reviewer labels/text for calibration; historical Jev scores never become current predictions. |
+| Standalone register inference | New execution raises an explicit historical-only error directing new work to the main pipeline. No silent redirection to a different legal question. Existing read/reproduction tools remain historical tools. |
+| Frozen design experiments | Immutable observations outside the main reuse cache; previous request validators and regression tests remain intact. No retrospective relabeling or alteration of measured results. |
+| Source download caches; legal applicability/currentness; runtime production integration | Excluded mechanisms: they neither produce nor reuse main-client Jev judgments. They remain separately scoped work in the plan. |
+
+## Identity and validation policy
+
+Registry/question version changes invalidate conservatively even when wording is unchanged. Unrelated registry history or unused quote/runtime templates do not invalidate an unchanged active request. File path, retrieval header and stored source hash are not model inputs: the actual prepared body and context are bound. This is request compatibility, not a certification that a source is legally current.
+
+Probability sums allow 0.02 rounding error, without normalization. Choice must select a maximum-probability option, with ties allowed. Score requires the exact ordered rubric legend; weighted-score agreement allows 0.05 rounding error. The installed native SDK permits one or more Score criteria with no invented maximum. These are explicit acceptance tolerances; the validator does not repair responses. One historical response selected NO_DECISION at 0.49 while assigning DECIDES 0.50. It remains preserved and would be rejected as internally inconsistent; no legal or semantic conclusion is inferred from rejection.
+
+The cache assumes a local trusted workspace, not hostile tampering: hashes identify content, they are not signatures. Atomic replacement protects against interrupted writes; diagnostic JSONL logs are not a transactional database. No multiprocess coordination or production service guarantee is claimed.
+
+## Current and relative state
+
+The current CA register has 166 sections and CA-HB has 12. None contains embedded Jev results or compatible main-client cache entries. CA has 157 cache misses and nine explicit input-limit exclusions; CA-HB has 12 misses. The nine long sections remain unasked under the existing limit, including CIV 1950.5; they are not model-negative evidence. Goal 2 does not claim these sections have now been inferred or legally mapped.
+
+All 3,582 historical register cache files returned the pinned build, but none contains the complete new request identity. Shape/build checks alone cannot certify their reuse. 3,581 pass the new typed-answer checks; one has the Choice inconsistency noted above. All original bytes remain unchanged.
+
+No external inference was needed for this mechanical reliability goal. Tests substitute only provider I/O and exercise the actual SDK question objects and client/cache/consumer implementation. Provider availability, new model quality measurements, corpus-wide recall and production integration are not established by this result. Goal 3 remains the separate substantive dependency investigation in PLAN.md.
+
+Evidence: `INDEPENDENT_INITIAL.md`, `INDEPENDENT_IMPLEMENTATION.md`, `TESTS.txt`, `VERIFICATION.json`, `CORPUS_INSPECTION.json`, and `pipeline/tests/test_jev_result_reuse.py`.

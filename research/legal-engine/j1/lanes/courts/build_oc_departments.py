@@ -1,0 +1,48 @@
+import json,re
+from pathlib import Path
+P=Path(__file__).parent
+capture=(P/'oc-official-trial-targets.txt').read_text()
+urls=re.findall(r'^.*?\((https://www\.occourts\.org/[^\n]+)\)\n',capture,re.M)
+assert len(urls)==25,len(urls)
+names=['C25 Apkarian policies','C21 policies captioned Servino','N14 Bancroft trial standing order','C34 Colover policies','C13 Dourbetas policies','C27 Erdosi pretrial standing order','C11 Fish trial standing order with attachments','C32 Gabriel policies','N16 Gaffney policies','N17 Griffin policies','C23 Hesseltine policies','C20 Howard policies','C31 Knill policies','C33 Leal standing order','W15 Lee standing trial order','C44 Lo policies','C16 Luege policies','C24 Martinez policies','C28 McConville policies','C10 Nelson policies','W8 Recio standing trial order','N18 Steiner policies','C15 Torres policies','CX102 Melzer policies','CX105 McCormick policies']
+rows=[]
+def add(identity,title,url,note=None):
+ u={'unit':identity,'heading':title,'toc_url':url,'reason':'Generally applicable filing, discovery, trial, evidence or access procedure in the current OC forum; attach by assigned department and proceeding.','source_unit_kind':'document','section_list':[{'number':identity,'heading':title,'ref':url}]}
+ if note:u['currentness_note']=note
+ rows.append(u)
+for title,url in zip(names,urls):
+ dept=title.split()[0];add(dept+'-'+('trial-order' if 'standing' in title else 'policies'),title,url)
+for dept,name in [('N14','bancroft'),('C27','erdosi'),('C33','leal'),('W15','lee'),('C12','manssourian'),('W8','recio'),('N15','vu')]:add(dept+'-general-policies',dept+' '+name.title()+' general policies','https://www.occourts.org/system/files/civil/'+name+'procedures.pdf')
+for dept,name in [('C11','fish'),('CM02','cruz'),('CX101','cx101'),('CX103','hoffer')]:add(dept+'-general-policies',dept+' '+('De La Cruz discovery department' if dept=='CM02' else name.title())+' policies','https://www.occourts.org/system/files?file=civil%2F'+name+'procedures.pdf')
+add('W15-discovery-conference','W15 Lee pre-trial discovery conference guidelines','https://www.occourts.org/system/files/civil/pre-trial-discovery-conference-guidelines.pdf')
+add('limited-civil-courtroom-requirements','Limited civil courtroom schedule and requirements','https://www.occourts.org/system/files/general/limitedcivilcourtroomscheduleandrequirements.pdf')
+for id,title,path in [
+ ('discovery-launch-2025-06','Discovery department launch effective June 30, 2025','general/discovery_department_news_releasefinal.pdf'),
+ ('discovery-expansion-2025-10','Discovery department expansion effective October 1, 2025','general/discovery_-dept_expansion_news_release.pdf'),
+ ('discovery-expansion-2026-01','Discovery department expansion effective January 26, 2026','civil/discovery-dept-expansion-news-release.pdf'),
+ ('discovery-expansion-2026-09','Discovery department expansion effective September 14, 2026','general/discovery-dept-expansion-news-release-91126.pdf'),
+ ('evidence-pilot-protocol-2026-07','Civil unlimited electronic evidence pilot protocol effective July 1, 2026','civil/electronic-evidence-civil-unlimited-pilot-protocol.pdf')]:add(id,title,'https://www.occourts.org/system/files/'+path)
+for dept in [15,16,24,25,27]:add(f'C{dept}-evidence-pilot-order',f'C{dept} electronic evidence order and stipulation','https://www.occourts.org/system/files/civil/electronic-evidence-order-and-stipulation-'+str(dept)+'.pdf')
+for id,title,path in [
+ ('probate-trial-guidelines','Probate hearing and trial guidelines, revised February 2026','system/files/hearing_trial_guidelines_for_probate_dec2021.pdf'),
+ ('probate-continuances','Probate statement on continuances, February 2021','system/files/statement_on_continuances.pdf'),
+ ('probate-ex-parte','Probate ex parte procedures','divisions/probate/probate-ex-parte-procedures'),
+ ('probate-efiling','Probate and mental-health electronic filing requirements','online-services/efiling/efiling-probate-mental-health'),
+ ('probate-calendar','Probate courtroom schedule and requirements','divisions/probate/probate-courtroom-schedule-requirements'),
+ ('electronic-evidence-portal','Electronic evidence portal: department attachment and submission requirements','online-services/electronic-evidence-portal')]:add(id,title,'https://www.occourts.org/'+path)
+for dept in ['03','05','06','08']:
+ filename='cm08-standing-order.pdf' if dept=='08' else 'cm'+dept+'_standing_order.pdf'
+ add('CM'+dept+'-standing-order','CM'+dept+' probate trial expectations and pretrial orders','https://www.occourts.org/system/files/general/'+filename)
+for u in rows:
+ if u['unit']=='C21-policies':u['currentness_note']='Current official calendar assigns Arthur and lists general policies; recovered C21 policy remains captioned Deborah Servino, updated November 22, 2024. Preserve source conflict; do not relabel as an Arthur-signed order. Assignment/current adoption requires J2 review against actual calendar and orders.'
+ if u['unit']=='C44-policies':u['currentness_note']='Actual PDF names Thomas Lo, C44, revised July 31, 2026 despite legacy larshprocedures filename; current roster confirms assignment.'
+ if u['unit']=='C15-policies':u['currentness_note']='Actual PDF names Yolanda Torres, C15, revised August 13, 2026 despite legacy strickrothprocedures filename.'
+ if u['unit']=='C28-policies':u['currentness_note']='Actual retrieved PDF revision September 24, 2026; older indexed excerpts are not current text.'
+ if u['unit']=='CX102-policies':u['currentness_note']='Read with separately registered CX102 standing order. Retain differing CMC timing provisions for dated precedence adjudication; do not flatten them.'
+ if u['unit']=='W15-trial-order':u['currentness_note']='Image-only PDF; J2 OCR and visual header verification required. Current roster assigns Lee to W15; caption may retain old courthouse.'
+add('civil-calendar-instructions','Unlimited civil courtroom schedule and requirements','https://voypubapps.occourts.org/civil-calendar','Source body includes judgment-debtor hearing scheduling, ex parte filing and courtesy-copy requirements in addition to linked policy PDFs. Search-cache body recovered; direct HTTP returns empty JS app. J2 requires rendered-page/manual official capture, not generic empty-shell success.')
+inst={'id':'CA-OC:DEPARTMENT-PROCEDURES','jurisdiction':'CA-OC','name':'Orange County civil and probate department policies, trial orders, discovery program and electronic-evidence pilot','level':'court rule','adapter':'generic','functions':['courts_procedure','estates_incapacity'],'toc_source_url':'https://voypubapps.occourts.org/civil-calendar','units_in_scope':rows,'units_out':[{'unit':'Case-specific tentative ruling bodies','reason':'Not generally operative source rules; J5 holdings research is later.'},{'unit':'Former Claustro C22, Wilson CX102 and old Lo C63 policies','reason':'Current roster and actual recovered current documents establish changed assignments. Do not silently retain old judge PDFs as current department rules.'}],'acquisition':{'text_adapter':'generic','enumeration':'Explicit whole-document targets. J2 must subdivide internal numbered provisions, OCR scanned PDFs, preserve editions and adjudicate conflicting dates/captions. No PDF is counted as one legal section.'},'currentness_note':'As of October 1, 2026. General policies, separate trial orders and later pilot/discovery-program changes are complementary sources; department assignment and effective dates govern attachment. Current court calendar and August 24 roster corroborate identities; third-party link directory used solely to recover official PDF URLs, not as rule authority.','source_review':'j1/lanes/courts/OC_DEPARTMENTS.md'}
+inst['units_out'].extend([{'unit': 'Apkarian vehicle-warranty discovery stipulation', 'source_url': 'https://www.occourts.org/system/files/civil/song_beverly_discovery_stip_and_order-judge_apkarian.pdf', 'reason': 'Actual published stipulation addresses subject motor vehicles, vehicle models/years, dealer repair records and vehicle inspection; independent motor-vehicle warranty litigation outside residential work/account scope. Not excluded merely because Song-Beverly appears in heading.'}, {'unit': 'Fish vehicle-warranty discovery stipulation', 'source_url': 'https://www.occourts.org/system/files?file=civil%2Ffishvoluntarystipulation.pdf', 'reason': 'Actual published stipulation addresses subject motor vehicles, vehicle models/years, dealer repair records and vehicle inspection; independent motor-vehicle warranty litigation outside residential work/account scope. Not excluded merely because Song-Beverly appears in heading.'}, {'unit': 'Griffin vehicle-warranty discovery stipulation', 'source_url': 'https://www.occourts.org/system/files/civil/n17_song_beverly_discovery_stip_and_order.pdf', 'reason': 'Actual published stipulation addresses subject motor vehicles, vehicle models/years, dealer repair records and vehicle inspection; independent motor-vehicle warranty litigation outside residential work/account scope. Not excluded merely because Song-Beverly appears in heading.'}, {'unit': 'Lee vehicle-warranty discovery stipulation', 'source_url': 'https://www.occourts.org/system/files/general/songbeverlydiscoverystipandorder.pdf', 'reason': 'Actual published stipulation addresses subject motor vehicles, vehicle models/years, dealer repair records and vehicle inspection; independent motor-vehicle warranty litigation outside residential work/account scope. Not excluded merely because Song-Beverly appears in heading.'}])
+assert len({u['unit'] for u in rows})==len(rows)
+(P/'oc_department_additions.json').write_text(json.dumps({'as_of':'2026-10-01','instruments':[inst]},indent=2)+'\n')
+print(len(rows))

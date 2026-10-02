@@ -1,0 +1,461 @@
+{
+  "instruments": [
+    {
+      "id": "CA:CCR3",
+      "jurisdiction": "CA",
+      "name": "California Code of Regulations, Title 3",
+      "level": "regulation",
+      "functions": [
+        "preconditions",
+        "work_standards",
+        "provider_contracts"
+      ],
+      "toc_source_url": "https://oal.ca.gov/publications/ccr/",
+      "adapter": "cornell_ccr",
+      "units_in_scope": [
+        {
+          "unit": "Division 1 - Administration",
+          "heading": "Division 1 - Administration (Chapter 1 to 5)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-3/division-1",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-0.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 2 - Animal Industry",
+          "heading": "Division 2 - Animal Industry (Chapter 1 to 10)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-3/division-2",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-0.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 3 - Economics",
+          "heading": "Division 3 - Economics (Chapter 1 to 5)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-3/division-3:",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-10.txt",
+          "toc_retrieval": "failed; publisher-linked URL resolved"
+        },
+        {
+          "unit": "Division 4 - Plant Industry",
+          "heading": "Division 4 - Plant Industry (Chapter 1 to 8)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-3/division-4",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-10.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Division 6 - Pesticides and Pest Control Operations",
+          "heading": "Division 6 - Pesticides and Pest Control Operations (Chapter 1 to 4)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-3/division-6",
+          "reason": "Complete mixed agency unit: retain duties, definitions, exceptions, enforcement and program conditions for section review.",
+          "toc_authority": "mirror",
+          "toc_route_evidence": "j1/sources/ccr-routes-10.txt",
+          "toc_retrieval": "TOC retrieved"
+        },
+        {
+          "unit": "Amendment document 2026-0410-03S",
+          "heading": "Pesticide heat illness and chemical resistant PPE",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2026-0410-03S",
+              "heading": "Pesticide heat illness and chemical resistant PPE",
+              "ref": "https://www.cdpr.ca.gov/wp-content/uploads/2025/09/dpr25-004_oal_final_text_ppe_use.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "6738.1; complete changed sections and incorporated dependencies"
+          ],
+          "version_record_index": 0,
+          "document_role": "Final amendment or approval package; preserve currentness evidence separately from operative text when package contains only approval notice",
+          "legal_status": "See linked version record; do not infer operation solely from publication",
+          "reason": "Executable acquisition counterpart to selected version record; whole document is not a single legal section."
+        },
+        {
+          "unit": "Amendment document 2026-0402-01S",
+          "heading": "Pesticide groundwater protection list",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2026-0402-01S",
+              "heading": "Pesticide groundwater protection list",
+              "ref": "https://www.cdpr.ca.gov/wp-content/uploads/2025/05/DPR_25-002_OAL_FINAL_TEXT_GWPL_2026.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "6622 6624 6800 6804 6805; complete changed sections and incorporated dependencies"
+          ],
+          "version_record_index": 1,
+          "document_role": "Final amendment or approval package; preserve currentness evidence separately from operative text when package contains only approval notice",
+          "legal_status": "See linked version record; do not infer operation solely from publication",
+          "reason": "Executable acquisition counterpart to selected version record; whole document is not a single legal section."
+        },
+        {
+          "unit": "Amendment document 2026-0410-02SR",
+          "heading": "Spotted Lanternfly Interior Quarantine and Eradication Area",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2026-0410-02SR",
+              "heading": "Spotted Lanternfly Interior Quarantine and Eradication Area",
+              "ref": "https://www.cdfa.ca.gov/plant/docs/2026/3446_finalapproval_202605.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "Complete approved amendment package, internally subdivided against retained parent units in J2"
+          ],
+          "version_record_index": 2,
+          "document_role": "Final amendment or approval package; preserve currentness evidence separately from operative text when package contains only approval notice",
+          "legal_status": "See linked version record; do not infer operation solely from publication",
+          "reason": "Executable acquisition counterpart to selected version record; whole document is not a single legal section."
+        },
+        {
+          "unit": "Amendment document 2026-0410-04S",
+          "heading": "Spotted Lanternfly Exterior Quarantine",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2026-0410-04S",
+              "heading": "Spotted Lanternfly Exterior Quarantine",
+              "ref": "https://www.cdfa.ca.gov/plant/docs/2026/3287_finalapproval.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "Complete approved amendment package, internally subdivided against retained parent units in J2"
+          ],
+          "version_record_index": 3,
+          "document_role": "Final amendment or approval package; preserve currentness evidence separately from operative text when package contains only approval notice",
+          "legal_status": "See linked version record; do not infer operation solely from publication",
+          "reason": "Executable acquisition counterpart to selected version record; whole document is not a single legal section."
+        },
+        {
+          "unit": "Amendment document 2026-0729-01SR",
+          "heading": "Oak Mortality Disease Control",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2026-0729-01SR",
+              "heading": "Oak Mortality Disease Control",
+              "ref": "https://www.cdfa.ca.gov/plant/docs/2026/3700_final_approval.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "Complete approved amendment package, internally subdivided against retained parent units in J2"
+          ],
+          "version_record_index": 4,
+          "document_role": "Final amendment or approval package; preserve currentness evidence separately from operative text when package contains only approval notice",
+          "legal_status": "See linked version record; do not infer operation solely from publication",
+          "reason": "Executable acquisition counterpart to selected version record; whole document is not a single legal section."
+        },
+        {
+          "unit": "Amendment document 2026-0803-02S",
+          "heading": "Guava Root-Knot Nematode Eradication Area",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2026-0803-02S",
+              "heading": "Guava Root-Knot Nematode Eradication Area",
+              "ref": "https://www.cdfa.ca.gov/plant/docs/2026/3591.34_grkn_Final_Approval.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "Complete approved amendment package, internally subdivided against retained parent units in J2"
+          ],
+          "version_record_index": 5,
+          "document_role": "Final amendment or approval package; preserve currentness evidence separately from operative text when package contains only approval notice",
+          "legal_status": "See linked version record; do not infer operation solely from publication",
+          "reason": "Executable acquisition counterpart to selected version record; whole document is not a single legal section."
+        },
+        {
+          "unit": "Amendment document 2026-0804-02S",
+          "heading": "Lethal Yellowing and Lethal Decline of Palm",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2026-0804-02S",
+              "heading": "Lethal Yellowing and Lethal Decline of Palm",
+              "ref": "https://www.cdfa.ca.gov/plant/docs/2026/3282_final_appproval.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "Complete approved amendment package, internally subdivided against retained parent units in J2"
+          ],
+          "version_record_index": 6,
+          "document_role": "Final amendment or approval package; preserve currentness evidence separately from operative text when package contains only approval notice",
+          "legal_status": "See linked version record; do not infer operation solely from publication",
+          "reason": "Executable acquisition counterpart to selected version record; whole document is not a single legal section."
+        },
+        {
+          "unit": "Amendment document 2026-0901-02C",
+          "heading": "Cotton jassid exterior quarantine certificate",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2026-0901-02C",
+              "heading": "Cotton jassid exterior quarantine certificate",
+              "ref": "https://www.cdfa.ca.gov/plant/docs/2026/3290_Final_Approval.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "3290 with current hostarticle/geographic/application conditions"
+          ],
+          "version_record_index": 7,
+          "document_role": "Final amendment or approval package; preserve currentness evidence separately from operative text when package contains only approval notice",
+          "legal_status": "See linked version record; do not infer operation solely from publication",
+          "reason": "Executable acquisition counterpart to selected version record; whole document is not a single legal section."
+        },
+        {
+          "unit": "Amendment document 2026-0420-02E",
+          "heading": "Japanese beetle exterior quarantine",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2026-0420-02E",
+              "heading": "Japanese beetle exterior quarantine",
+              "ref": "https://www.cdfa.ca.gov/plant/docs/2026/2026-0420-02e-approval.pdf",
+              "source_unit_kind": "document"
+            }
+          ],
+          "internal_units_in_scope": [
+            "3280(c)"
+          ],
+          "version_record_index": 8,
+          "document_role": "Final amendment or approval package; preserve currentness evidence separately from operative text when package contains only approval notice",
+          "legal_status": "See linked version record; do not infer operation solely from publication",
+          "reason": "Executable acquisition counterpart to selected version record; whole document is not a single legal section."
+        },
+        {
+          "unit": "DPR section 6502 final text and incorporated renewal forms",
+          "heading": "DPR section 6502 final text and incorporated renewal forms",
+          "source_unit_kind": "document",
+          "version_record_index": 9,
+          "internal_units_in_scope": [
+            "6502",
+            "LIC-192",
+            "LIC-186",
+            "LIC-191",
+            "LIC-190"
+          ],
+          "section_list": [
+            {
+              "number": "6502-final",
+              "heading": "6502 final regulatory text",
+              "ref": "https://www.cdpr.ca.gov/wp-content/uploads/2025/12/section_100_oal_text_business_license_renewal_application_forms.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "LIC-192",
+              "heading": "Pest Control Business Renewal Application LIC-192 Rev. 09/25",
+              "ref": "https://www.cdpr.ca.gov/wp-content/uploads/2025/12/lic-192_pcb_renewal.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "LIC-186",
+              "heading": "Maintenance Gardener Pest Control Business Renewal Application LIC-186 Rev. 09/25",
+              "ref": "https://www.cdpr.ca.gov/wp-content/uploads/2025/12/lic-186_mgb_renewal.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "LIC-191",
+              "heading": "Pest Control Dealer License Renewal Application LIC-191 Rev. 09/25",
+              "ref": "https://www.cdpr.ca.gov/wp-content/uploads/2025/12/lic-191_pcd_renewal.pdf",
+              "source_unit_kind": "document"
+            },
+            {
+              "number": "LIC-190",
+              "heading": "Pesticide Broker License Renewal Application LIC-190 Rev. 09/25",
+              "ref": "https://www.cdpr.ca.gov/wp-content/uploads/2025/12/lic-190_pc_broker_renewal.pdf",
+              "source_unit_kind": "document"
+            }
+          ]
+        },
+        {
+          "unit": "DPR25-003 final text",
+          "heading": "Pesticide Use Near Schoolsites final amendments",
+          "version_record_index": 10,
+          "source_unit_kind": "document",
+          "internal_units_in_scope": [
+            "6428",
+            "6434",
+            "6623",
+            "6624",
+            "6690",
+            "6692"
+          ],
+          "section_list": [
+            {
+              "number": "DPR25-003-final",
+              "heading": "DPR25-003 Pesticide Use Near Schoolsites \u2014 final text",
+              "ref": "https://www.cdpr.ca.gov/wp-content/uploads/2025/05/drp25-003_final_text.pdf",
+              "source_unit_kind": "document"
+            }
+          ]
+        }
+      ],
+      "units_out": [
+        {
+          "unit": "Division 5 - Livestock Drugs",
+          "heading": "Division 5 - Livestock Drugs (Chapter 1 to 2)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-3",
+          "reason": "Division 5 - Livestock Drugs governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 7 - Fairs and Expositions",
+          "heading": "Division 7 - Fairs and Expositions (Chapter 1 to 2)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-3",
+          "reason": "Division 7 - Fairs and Expositions governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        },
+        {
+          "unit": "Division 8 - Cannabis Cultivation",
+          "heading": "Division 8 - Cannabis Cultivation (Chapter 1 to 3)",
+          "toc_url": "https://www.law.cornell.edu/regulations/california/title-3",
+          "reason": "Division 8 - Cannabis Cultivation governs a separate industry, institutional administration or program outside residential physical work and account resolution."
+        }
+      ],
+      "acquisition": {
+        "text_adapter": "cornell_ccr",
+        "enumeration": "Traverse the selected mirror division/chapter descendants and retain actual linked leaf references.",
+        "source_authority": "mirror",
+        "official_reconciliation": "Official CCR and issuing-agency enacted/amendment sources determine the authoritative version. Mirror text alone cannot complete J2."
+      },
+      "toc_mirror_url": "https://www.law.cornell.edu/regulations/california/title-3",
+      "source_capture": "j1/sources/ccr-title-3.txt",
+      "currentness_note": "LII supplies the browse tree; official CCR and issuing-agency adoption texts determine legal version. LII quarterly update is not treated as current legal authority.",
+      "version_records": [
+        {
+          "oal_file": "2026-0410-03S",
+          "name": "Pesticide heat illness and chemical resistant PPE",
+          "selected_unit": "6738.1; complete changed sections and incorporated dependencies",
+          "effective_from": "2026-07-01",
+          "source_url": "https://www.cdpr.ca.gov/wp-content/uploads/2025/09/dpr25-004_oal_final_text_ppe_use.pdf",
+          "proposal_source": "regulatory/proposal.json"
+        },
+        {
+          "oal_file": "2026-0402-01S",
+          "name": "Pesticide groundwater protection list",
+          "selected_unit": "6622 6624 6800 6804 6805; complete changed sections and incorporated dependencies",
+          "effective_from": "2026-07-01",
+          "source_url": "https://www.cdpr.ca.gov/wp-content/uploads/2025/05/DPR_25-002_OAL_FINAL_TEXT_GWPL_2026.pdf",
+          "proposal_source": "regulatory/proposal.json"
+        },
+        {
+          "oal_file": "2026-0410-02SR",
+          "name": "Spotted Lanternfly Interior Quarantine and Eradication Area",
+          "effective_from": "2026-07-01",
+          "source_url": "https://www.cdfa.ca.gov/plant/docs/2026/3446_finalapproval_202605.pdf",
+          "selected_unit": "Complete approved amendment package, internally subdivided against retained parent units in J2",
+          "reason": "Conditional landscape plant movement and pest eradication controls.",
+          "source_scope_excerpt": "2026-0410-02SR  | Spotted Lanternfly Interior Quarantine and Eradication Area  | Title 03\nL73: Adopt:\nL74: 3446, 3591.31  | May 21, 2026  | \ue200cite\ue20225\u2020",
+          "acquisition_note": "Exact publisher final target established by official OAL approved-document link. Mechanical retrieval failures do not leave an unknown J1 identity.",
+          "proposal_source": "regulatory/quarterly-final-targets.json"
+        },
+        {
+          "oal_file": "2026-0410-04S",
+          "name": "Spotted Lanternfly Exterior Quarantine",
+          "effective_from": "2026-07-01",
+          "source_url": "https://www.cdfa.ca.gov/plant/docs/2026/3287_finalapproval.pdf",
+          "selected_unit": "Complete approved amendment package, internally subdivided against retained parent units in J2",
+          "reason": "Conditional landscape plant import/movement controls.",
+          "source_scope_excerpt": "2026-0410-04S  | Spotted Lanternfly Exterior Quarantine  | Title 3\nL76: Amend:\nL77: 3287  | May 21, 2026  | \ue200cite\ue20226\u2020",
+          "acquisition_note": "Exact publisher final target established by official OAL approved-document link. Mechanical retrieval failures do not leave an unknown J1 identity.",
+          "proposal_source": "regulatory/quarterly-final-targets.json"
+        },
+        {
+          "oal_file": "2026-0729-01SR",
+          "name": "Oak Mortality Disease Control",
+          "effective_from": "2027-01-01",
+          "source_url": "https://www.cdfa.ca.gov/plant/docs/2026/3700_final_approval.pdf",
+          "selected_unit": "Complete approved amendment package, internally subdivided against retained parent units in J2",
+          "reason": "Conditional tree/plant disease treatment and movement controls.",
+          "source_scope_excerpt": "2026-0729-01SR  | Oak Mortality Disease Control  | Title 3\nL40: Amend:\nL41: 3700  | September 8, 2026\nL42:  | \ue200cite\ue20219\u2020",
+          "acquisition_note": "Exact publisher final target established by official OAL approved-document link. Mechanical retrieval failures do not leave an unknown J1 identity.",
+          "proposal_source": "regulatory/quarterly-final-targets.json"
+        },
+        {
+          "oal_file": "2026-0803-02S",
+          "name": "Guava Root-Knot Nematode Eradication Area",
+          "effective_from": "2027-01-01",
+          "source_url": "https://www.cdfa.ca.gov/plant/docs/2026/3591.34_grkn_Final_Approval.pdf",
+          "selected_unit": "Complete approved amendment package, internally subdivided against retained parent units in J2",
+          "reason": "Conditional landscape eradication-area rules; geographic application remains a fact.",
+          "source_scope_excerpt": "2026-0803-02S  | Guava Root-Knot Nematode Eradication Area  | Title 3\nL44: Adopt:\nL45: 3591.34  | September 9, 2026\nL46:  | \ue200cite\ue20220\u2020",
+          "acquisition_note": "Exact publisher final target established by official OAL approved-document link. Mechanical retrieval failures do not leave an unknown J1 identity.",
+          "proposal_source": "regulatory/quarterly-final-targets.json"
+        },
+        {
+          "oal_file": "2026-0804-02S",
+          "name": "Lethal Yellowing and Lethal Decline of Palm",
+          "effective_from": "2027-01-01",
+          "source_url": "https://www.cdfa.ca.gov/plant/docs/2026/3282_final_appproval.pdf",
+          "selected_unit": "Complete approved amendment package, internally subdivided against retained parent units in J2",
+          "reason": "Conditional palm landscape disease/movement controls.",
+          "source_scope_excerpt": "2026-0804-02S  | Lethal Yellowing and Lethal Decline of Palm  | Title 3\nL48: Amend:\nL49: 3282  | September 10, 2026\nL50:  | \ue200cite\ue20221\u2020",
+          "acquisition_note": "Exact publisher final target established by official OAL approved-document link. Mechanical retrieval failures do not leave an unknown J1 identity.",
+          "proposal_source": "regulatory/quarterly-final-targets.json"
+        },
+        {
+          "oal_file": "2026-0901-02C",
+          "name": "Cotton jassid exterior quarantine certificate",
+          "effective_from": "2026-09-21",
+          "selected_unit": "3290 with current hostarticle/geographic/application conditions",
+          "source_url": "https://www.cdfa.ca.gov/plant/docs/2026/3290_Final_Approval.pdf",
+          "reason": "Conditional landscaping plantmovement dependency; certificate replaces emergencyonlystatus, not unrestrictedgeneralworkprohibition.",
+          "proposal_source": "regulatory/solo-currentness.json"
+        },
+        {
+          "oal_file": "2026-0420-02E",
+          "name": "Japanese beetle exterior quarantine",
+          "effective_from": "2026-04-28",
+          "selected_unit": "3280(c)",
+          "source_url": "https://www.cdfa.ca.gov/plant/docs/2026/2026-0420-02e-approval.pdf",
+          "reason": "Approval says removesOregon from quarantinearea; flattext retainsstruckwordOregon, so J2mustpreserveredline. Conditional plantmaterial/workimport application.",
+          "proposal_source": "regulatory/solo-currentness.json"
+        },
+        {
+          "name": "DPR business license renewal forms, September 2025 revisions",
+          "oal_file": "2025-1030-05N",
+          "filed_on": "2025-12-16",
+          "legal_status": "Approved change without regulatory effect; filed December 16 2025",
+          "sections": [
+            "6502"
+          ],
+          "source_url": "https://www.cdpr.ca.gov/proposed-regulation/section-100-business-license-renewal-application-forms/",
+          "scope_boundary": "Provider licensing dependencies for pest control and maintenance gardening. Dealer and broker forms retained only for those distinct provider roles.",
+          "evidence": "j1/lanes/local_agency/sources/q4-dpr-final.txt"
+        },
+        {
+          "name": "DPR25-003 Pesticide Use Near Schoolsites",
+          "filed_on": "2025-12-17",
+          "effective_from": "2026-01-01",
+          "future_trigger": "Private K\u201312 schoolsites definition applies December 31 2026",
+          "source_url": "https://www.cdpr.ca.gov/proposed-regulation/dpr-25-003-pesticide-use-near-schoolsites/",
+          "final_text_url": "https://www.cdpr.ca.gov/wp-content/uploads/2025/05/drp25-003_final_text.pdf",
+          "sections": [
+            "6428",
+            "6434",
+            "6623",
+            "6624",
+            "6690",
+            "6692"
+          ],
+          "scope_boundary": "Not an ordinary residential repair or structural pest-control obligation. Action governs pesticide use in production of an agricultural commodity near schoolsites. Preserve conditional agricultural land-use scope in CCR3; do not apply solely because residential property is near a school.",
+          "legal_status": "Adopted final regulation; retained within complete selected mixed division with agricultural-production condition"
+        }
+      ]
+    }
+  ]
+}

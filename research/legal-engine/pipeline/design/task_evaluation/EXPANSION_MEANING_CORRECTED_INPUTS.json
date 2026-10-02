@@ -1,0 +1,118 @@
+{
+  "status": "Corrected development input recommendations; not executed, not fresh held-out material",
+  "original_cases_sha256": "16eb5c0437e620460df20c4f9f1c2cf14f18ef2a0d9ef52587ac3586ca821057",
+  "recommended_instructions": {
+    "candidate_term_use": "Does the selected occurrence of the term within use_expression convey the meaning given by definition_passage?",
+    "candidate_meaning": "Which candidate meaning fits the selected occurrence of the term within use_expression?"
+  },
+  "recommended_contract_clarification": "use_expression identifies one occurrence of term. Judge that occurrence, not the meaning of the entire surrounding clause. Sharing a label, topic, or some instances does not establish the same meaning. Legal applicability is a separate question.",
+  "cases": [
+    {
+      "id": "exp018-meaning-reprepared",
+      "task": "candidate_term_use",
+      "family": "administrative",
+      "source_cluster": "business-precise",
+      "state": {
+        "term": "business day",
+        "definition_passage": "a day on which the creditor's offices are open to the public for carrying on substantially all of its business functions",
+        "use_passage": "A more precise rule for what is a business day (all calendar days except Sundays and the Federal legal holidays specified in 5 U.S.C. 6103(a)) applies when the right of rescission, the receipt of disclosures for certain dwelling- or real estate-secured mortgage transactions under §§ 1026.19(a)(1)(ii), 1026.19(a)(2), 1026.19(e)(1)(iii)(B), 1026.19(e)(1)(iv), 1026.19(e)(2)(i)(A), 1026.19(e)(4)(ii), 1026.19(f)(1)(ii), 1026.19(f)(1)(iii), 1026.20(e)(5), 1026.31(c), or the receipt of disclosures for private education loans under § 1026.46(d)(4) is involved. Four Federal legal holidays are identified in 5 U.S.C. 6103(a) by a specific date: New Year's Day, January 1; Independence Day, July 4; Veterans Day, November 11; and Christmas Day, December 25. When one of these holidays (July 4, for example) falls on a Saturday, Federal offices and other entities might observe the holiday on the preceding Friday (July 3). In cases where the more precise rule applies, the observed holiday (in the example, July 3) is a business day.",
+        "use_expression": "what is a business day",
+        "context": "(6) Business day\nmeans a day on which the creditor's offices are open to the public for carrying on substantially all of its business functions. However, for purposes of rescission under §§\n1026.15\nand 1026.23, and for purposes of §§\n1026.19(a)(1)(ii),\n1026.19(a)(2), 1026.19(e)(1)(iii)(B), 1026.19(e)(1)(iv), 1026.19(e)(2)(i)(A), 1026.19(e)(4)(ii), 1026.19(f)(1)(ii), 1026.19(f)(1)(iii), 1026.20(e)(5), 1026.31, and 1026.46(d)(4), the term means all calendar days except Sundays and the legal public holidays specified in 5 U.S.C. 6103(a), such as New Year's Day, the Birthday of Martin Luther King, Jr., Washington's Birthday, Memorial Day, Independence Day, Labor Day, Columbus Day, Veterans Day, Thanksgiving Day, and Christmas Day.\n"
+      },
+      "sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_2.txt",
+          "sha256": "28c3f5e5f0d20bfe4ac92580c6a8e4370e87363869ad6605e1361f5bc27efa73",
+          "start": 20790,
+          "end": 20910
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_2.txt",
+          "sha256": "28c3f5e5f0d20bfe4ac92580c6a8e4370e87363869ad6605e1361f5bc27efa73",
+          "start": 22226,
+          "end": 23255
+        },
+        "context": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_2.txt",
+          "sha256": "28c3f5e5f0d20bfe4ac92580c6a8e4370e87363869ad6605e1361f5bc27efa73",
+          "start": 20767,
+          "end": 21504
+        }
+      },
+      "original_case_id": "exp018"
+    },
+    {
+      "id": "exp032-meaning-reprepared",
+      "task": "candidate_term_use",
+      "family": "statutory",
+      "source_cluster": "wa-dwelling",
+      "state": {
+        "term": "dwelling unit",
+        "definition_passage": "“Dwelling unit” regarding a\nperson who rents a space for a manufactured dwelling or recreational vehicle or\nregarding a person who rents moorage space for a floating home as defined in\nORS 830.700, but does not rent the home, means the space rented and not the\nmanufactured dwelling, recreational vehicle or floating home itself.",
+        "use_passage": "(1) If a governmental agency responsible for the enforcement of a building, housing, or other appropriate code has notified the landlord that a dwelling is condemned or unlawful to occupy due to the existence of conditions that violate applicable codes, statutes, ordinances, or regulations, a landlord shall not enter into a rental agreement for the dwelling unit until the conditions are corrected.",
+        "use_expression": "for the dwelling unit",
+        "context": "(10) \"Dwelling unit\" is a structure or that part of a structure which is used as a home, residence, or sleeping place by one person or by two or more persons maintaining a common household, including but not limited to single-family residences and units of multiplexes, apartment buildings, and mobile homes."
+      },
+      "sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+          "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+          "start": 17439,
+          "end": 17768
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 73154,
+          "end": 73554
+        },
+        "context": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 16322,
+          "end": 16630
+        }
+      },
+      "original_case_id": "exp032"
+    },
+    {
+      "id": "exp038-meaning-reprepared",
+      "task": "candidate_meaning",
+      "family": "administrative",
+      "source_cluster": "representative-scope",
+      "state": {
+        "term": "customer service representative",
+        "use_passage": "Service by a customer service representative of a creditor means any payment made to the consumer's account with the assistance of a live representative or agent of the creditor, including those made in person, on the telephone, or by electronic means. A customer service representative does not include automated means of making payment that do not involve a live representative or agent of the creditor, such as a voice response unit or interactive voice response system. Service by a customer service representative includes any payment transaction which involves the assistance of a live representative or agent of the creditor, even if an automated system is required for a portion of the transaction.",
+        "use_expression": "A customer service representative"
+      },
+      "sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 24306,
+          "end": 25012
+        }
+      },
+      "criteria": {
+        "A": "An automated payment system without a live representative.",
+        "B": "A live representative or agent assisting a payment.",
+        "NONE": "Neither offered meaning fits."
+      },
+      "original_case_id": "exp038"
+    }
+  ],
+  "independent_judgments": [
+    {
+      "id": "exp018-meaning-reprepared",
+      "expected": "NO"
+    },
+    {
+      "id": "exp032-meaning-reprepared",
+      "expected": "NO"
+    },
+    {
+      "id": "exp038-meaning-reprepared",
+      "expected": "B"
+    }
+  ]
+}

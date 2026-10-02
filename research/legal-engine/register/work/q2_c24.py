@@ -1,0 +1,37 @@
+from q2_lib import *
+
+APP = "NY:CPLR-321-JUD-495-appearance"
+rows = [
+    D("NY:22 NYCRR 202.12", "no_decision", "Supreme Court preliminary conferences and discovery scheduling; in-suit mechanics that change no amount, deadline, precondition or payee in the settlement."),
+    D("NY:22 NYCRR 202.16", "no_decision", "Matrimonial action rules; not a claim in the chain."),
+    D("NY:22 NYCRR 202.33", "no_decision", "Conduct of jury voir dire; trial mechanics."),
+    D("NY:22 NYCRR 202.58", "no_decision", "Small claims real property tax assessment review; not a claim in the chain."),
+    D("NY:22 NYCRR 202.5b", "no_decision",
+      "Consensual e-filing in Supreme Court (consent, NYSCEF mechanics, e-service between consenting parties); the commencement and service consequences that matter are stated at proposed NY:22NYCRR-202.5bb-mandatory-efiling and NY:CPLR-304-commencement."),
+    D("NY:22 NYCRR 202.63", "no_decision",
+      "Court administration of a debtor's general assignment for the benefit of creditors (clerk records, the assignee's duties, sales, accountings); a landlord creditor's rights in such an assignment arise under the Debtor and Creditor Law, and these rules add no step for it."),
+    D("NY:22 NYCRR 208.6", "new_rule",
+      "Prescribes the NYC Civil Court summons form: county division and court location, the parties, the plaintiff's residence address, the basis of venue, the sum and interest-start date for default judgment, and the 20/30-day answer notice; the consumer-credit legends and extra mailing do not apply to a lease balance.",
+      proposed=[R("NY:22NYCRR-208.6-summons-form", "NY:22 NYCRR 208.6", "22 NYCRR 208.6(a)-(c)", "landlord (plaintiff) or its attorney", "obligation",
+                  "The landlord sues a former tenant for the balance in the NYC Civil Court.",
+                  "The summons follows the prescribed form: it states the county division and location of the court, the names of the parties, the plaintiff's residence address and the basis of the venue designated; it summons the tenant to file an answer to the endorsed summons or annexed complaint and states that on default judgment will be taken for a stated sum with interest from a stated date plus costs (the interest date follows NY:CPLR-5001(a)-(b)); it carries the notice that the tenant must answer within 20 days after personal delivery in the city, or within 30 days after proof of service is filed for any other service (NY:CCA-402-answer-time); it is signed by the clerk or the landlord's attorney with post-office address and telephone. A defendant appearing by attorney serves its answer on the plaintiff at or before filing. The 'CONSUMER CREDIT TRANSACTION' legends, Spanish translation, default-proof rule and clerk's additional mailing of subdivisions (d)-(h) apply only to consumer credit transactions, which a lease balance is not (NY:ADJ-lease-balance-not-consumer-credit).",
+                  "(a) The summons shall state the county division and location of the court in which the action is brought,", "at or before the time of filing the original answer with proof of service thereof.",
+                  severity="minor", walk_step="8.10", dependencies=["NY:CCA-402-answer-time", "NY:CCA-401-summons-form", "NY:ADJ-lease-balance-not-consumer-credit"])]),
+    D("NY:CCA 110", "partial",
+      "The housing part hears summary proceedings and rent judgments that may precede the move-out and HP actions; 110(l) lets a corporation appear there by an officer, director or principal stockholder, which the appearance rule does not state. The post-vacatur balance suit is a money action in the regular part, not the housing part.",
+      atoms=[APP],
+      proposed=[R("NY:CCA-110-housing-part-appearance", "NY:CCA 110", "CCA 110(a)(5), (l)", "landlord (entity owner)", "rule",
+                  "An entity owner is a party in the NYC Civil Court housing part: a summary proceeding to recover possession and rent from the tenant before it vacated (or the tenant's HP proceeding over conditions). Branch (a): the owner is a corporation. Branch (b): the owner is an LLC or partnership. Branch (c): after the tenant has vacated, the owner sues for the balance.",
+                  "The housing part hears all summary proceedings to recover possession of residential premises and to render judgment for rent due, and housing-standards actions. Branch (a): a corporation may be represented there by its officer, director or principal stockholder, not by a managing agent or Handoff. Branch (b): section 110(l) names only corporations, so an LLC or partnership appears by an attorney (NY:CPLR-321-JUD-495-appearance). Branch (c): a plenary action for a former tenant's balance is a money action in the regular part (or small or commercial claims), where the appearance rule applies without this exception.",
+                  "(5) Actions and proceedings under article seven-A of the real property actions and proceedings law,", "A corporation which is a party may be represented by an officer, director or a principal stockholder.",
+                  severity="minor", walk_step="3.8", amends=APP, dependencies=[APP, "NY:RPAPL-749(3)-after-proceeding"])]),
+    D("NY:CPLR 5241", "no_decision", "Income executions for child and spousal support; a landlord's income execution on a money judgment is CPLR 5231, stated at NY:CPLR-5205-5231-enforcement-limits."),
+    D("NY:CPLR 8021", "new_rule",
+      "County clerk fees outside court actions include $25 in New York City to file a transcript of a Civil Court judgment and $15 to issue a transcript of the docket; the cost of docketing the landlord's judgment to reach real property or other counties.",
+      proposed=[R("NY:CPLR-8021-transcript-fees", "NY:CPLR 8021", "CPLR 8021", "landlord (judgment creditor)", "rule",
+                  "The landlord dockets its NYC Civil Court judgment against a former tenant with a county clerk (NY:CCA-1502-transcript, NY:CPLR-5018-docketing), or obtains a transcript of the docket to docket in another county.",
+                  "The county clerk charges $25 in New York City counties ($10 elsewhere) to file a transcript of judgment, and $15 in New York City ($5 elsewhere) to issue a transcript of the docket of a judgment; no fee is charged to file a satisfaction, partial satisfaction, assignment or amendment of the judgment. These are recoverable as prospective transcript charges in the judgment (NY:CCA-1908-disbursements).",
+                  "For filing a transcript of judgment, in counties within the city of New York, twenty-five dollars,", "reversal, cancellation or amendment, of judgment or lien.",
+                  severity="minor", walk_step="8.12", dependencies=["NY:CCA-1502-transcript", "NY:CCA-1908-disbursements"])]),
+]
+write(rows)

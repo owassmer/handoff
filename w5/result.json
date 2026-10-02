@@ -1,0 +1,228 @@
+{
+ "steps": [
+  {
+   "at": "05:09:13",
+   "name": "receive notice (attempt 1)",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:09:37",
+   "name": "plan turn 1: resume -> Waiting for information | Entrance latch is deficient (doesn\u2019t catch reliably) and needs adjustment; inspections say replacement is unnecessary. We have provider capa",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:10:47",
+   "name": "plan turn 2: resume -> Ready to continue | A correspondent has replied. Review the new information and continue the work.",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:11:58",
+   "name": "plan turn 3: resume -> Ready to continue | A correspondent has replied. Review the new information and continue the work.",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:14:05",
+   "name": "plan turn 4: resume -> Ready to continue | A correspondent has replied. Review the new information and continue the work.",
+   "code": 400,
+   "error": "{\"errorCode\":\"INVALID_ARGUMENT\",\"errorName\":\"FunctionExecutionTimedOut\",\"errorInstanceId\":\"a388d050-e268-47c4-a020-7d92f89044ce\",\"parameters\":{\"functionRid\":\"ri.function-registry.main.function.7b2cb50c-2df4-4947-9867-095585c768a6\",\"functionVersion\":\"1.6.5-branch-20260927-045842\"}}"
+  },
+  {
+   "at": "05:16:13",
+   "name": "plan turn 5: resume -> Ready to continue | A correspondent has replied. Review the new information and continue the work.",
+   "code": 400,
+   "error": "{\"errorCode\":\"INVALID_ARGUMENT\",\"errorName\":\"FunctionExecutionTimedOut\",\"errorInstanceId\":\"d5ee32cc-9a90-427e-b690-6a3bbae6236e\",\"parameters\":{\"functionRid\":\"ri.function-registry.main.function.7b2cb50c-2df4-4947-9867-095585c768a6\",\"functionVersion\":\"1.6.5-branch-20260927-045842\"}}"
+  },
+  {
+   "at": "05:18:02",
+   "name": "plan turn 6: resume -> Waiting for decision | Entrance latch is reported not catching reliably; adjustment (not replacement) is needed to provide a secure entrance for the next occupant.",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:18:05",
+   "name": "accept plan",
+   "code": 400,
+   "error": "{\"errorCode\":\"INVALID_ARGUMENT\",\"errorName\":\"ApplyActionFailed\",\"errorInstanceId\":\"8da22075-ca38-4bd9-a3d0-760f2a408571\",\"parameters\":{\"originalErrorName\":\"Actions:WritebackWebhookOrFunctionWithExternalCallsNotAllowedOnBranch\",\"userErrorMessage\":\"Failed to apply changes due to a configuration issue.\",\"builderErrorMessage\":\"The action tried to run a TSv2/Python function or one that calls an external system (either via\\nfunctions or writeback webhooks) . OSDK / External calls in actions are disabled on branches by default. Configure the function branch setting on the action type to run this acti"
+  },
+  {
+   "at": "05:19:13",
+   "name": "delivery turn 1: resume -> Ready to continue | A correspondent has replied. Review the new information and continue the work.",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:20:54",
+   "name": "delivery turn 2: resume -> Waiting for decision | Entrance latch is reported to not catch reliably. A House Care quote is available to adjust and function-check the existing latch (no door r",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:22:01",
+   "name": "delivery turn 3: resume -> Waiting for decision | Entrance latch is reported to not catch reliably. A House Care quote is available to adjust and function-check the existing latch (no door r",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:23:08",
+   "name": "delivery turn 4: resume -> Waiting for decision | Entrance latch is reported to not catch reliably. A House Care quote is available to adjust and function-check the existing latch (no door r",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:24:16",
+   "name": "delivery turn 5: resume -> Waiting for decision | Entrance latch is reported to not catch reliably. A House Care quote is available to adjust and function-check the existing latch (no door r",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:25:23",
+   "name": "delivery turn 6: resume -> Waiting for decision | Entrance latch is reported to not catch reliably. A House Care quote is available to adjust and function-check the existing latch (no door r",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:26:30",
+   "name": "delivery turn 7: resume -> Waiting for decision | Entrance latch is reported to not catch reliably. A House Care quote is available to adjust and function-check the existing latch (no door r",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:27:37",
+   "name": "delivery turn 8: resume -> Waiting for decision | Entrance latch is reported to not catch reliably. A House Care quote is available to adjust and function-check the existing latch (no door r",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:28:45",
+   "name": "delivery turn 9: resume -> Waiting for decision | Entrance latch is reported to not catch reliably. A House Care quote is available to adjust and function-check the existing latch (no door r",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:29:52",
+   "name": "delivery turn 10: resume -> Waiting for decision | Entrance latch is reported to not catch reliably. A House Care quote is available to adjust and function-check the existing latch (no door r",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:30:59",
+   "name": "delivery turn 11: resume -> Waiting for decision | Entrance latch is reported to not catch reliably. A House Care quote is available to adjust and function-check the existing latch (no door r",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:32:07",
+   "name": "delivery turn 12: resume -> Waiting for decision | Entrance latch is reported to not catch reliably. A House Care quote is available to adjust and function-check the existing latch (no door r",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:33:14",
+   "name": "delivery turn 13: resume -> Waiting for decision | Entrance latch is reported to not catch reliably. A House Care quote is available to adjust and function-check the existing latch (no door r",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:34:22",
+   "name": "delivery turn 14: resume -> Waiting for decision | Entrance latch is reported to not catch reliably. A House Care quote is available to adjust and function-check the existing latch (no door r",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:35:32",
+   "name": "delivery turn 15: resume -> Waiting for decision | Entrance latch is reported to not catch reliably. A House Care quote is available to adjust and function-check the existing latch (no door r",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "05:36:39",
+   "name": "delivery turn 16: resume -> Waiting for decision | Entrance latch is reported to not catch reliably. A House Care quote is available to adjust and function-check the existing latch (no door r",
+   "code": 200,
+   "error": ""
+  }
+ ],
+ "mainBefore": {
+  "HandoffWorkspace": 3,
+  "HandoffCase": 3,
+  "HandoffJob": 0,
+  "HandoffMessage": 123
+ },
+ "workspaceId": "workspace:a9578a5862eee0ba9020f3001e2e8d3ed8a19b6c7bf0ba1517c3dc4fc4d08cc0",
+ "handoffId": "handoff:0c20ec4c067600de5ac10ddd38b8098c8cc495893fe11b7a53a83091c0ec478c",
+ "plan": {
+  "workPlanId": "plan:11ca8d3090562e068a46f705ca142c2cfb28eac9b13c1cd826c5878fd62ca50d",
+  "revision": "1",
+  "status": "Ready",
+  "title": "Secure entrance: adjust existing latch (keep existing door)",
+  "fixedRequirements": [
+   "Keep the existing entrance door."
+  ],
+  "estimatedCostCents": "12500",
+  "budgetCents": "12500"
+ },
+ "jobs": [],
+ "messages": [
+  {
+   "createdAt": "2026-09-27T05:09:17.067Z",
+   "direction": "Outgoing",
+   "purpose": "Quote",
+   "title": "Quote for Make the entrance secure",
+   "body": "Please issue a formal quote for serviceId \"entrance\" to: adjust and function-check the existing entrance latch so it catches reliably and the entrance is secure. Must keep the existing entrance door (no replacement). Include total price, any deposit/advance requirements, earliest availability, and any access requirements.",
+   "detailsJson": "{\"providerDocumentId\":\"document:088ef5e4fdc8f881487341d91787d22767db4fd434ddcbfd9c3027bf9a03df52\",\"purpose\":\"Quote\",\"question\":\"Please issue a formal quote for serviceId \\\"entrance\\\" to: adjust and function-check the existing entrance latch so it catches reliably and the entrance is secure. Must keep the existing entrance door (no replacement). Include total price, any deposit/advance requirements, earliest availability, and any access requirements.\",\"recipientPartyId\":\"party:56d16260929cdd656b7a7554a770b95f2e25e53157b2e757a3dfc41eb5064b99\",\"serviceId\":\"entrance\"}"
+  },
+  {
+   "createdAt": "2026-09-27T05:09:17.067Z",
+   "direction": "Outgoing",
+   "purpose": "Information",
+   "title": "Information requested",
+   "body": "Per the tenancy agreement requiring owner approval before arranging work: do you approve scheduling House Care to adjust and function-check the existing entrance latch (keeping the existing entrance door), to achieve a secure entrance for the next occupant? If yes, please confirm preferred access window (provider shows availability starting 2026-09-28).",
+   "detailsJson": "{\"purpose\":\"Information\",\"question\":\"Per the tenancy agreement requiring owner approval before arranging work: do you approve scheduling House Care to adjust and function-check the existing entrance latch (keeping the existing entrance door), to achieve a secure entrance for the next occupant? If yes, please confirm preferred access window (provider shows availability starting 2026-09-28).\",\"recipientPartyId\":\"party:3c2056399a2038582084fd1598b08181658a626bcf804cf0da80edf97bd65aa5\"}"
+  },
+  {
+   "createdAt": "2026-09-27T05:10:45.256Z",
+   "direction": "Incoming",
+   "purpose": "Information",
+   "title": "Reply received",
+   "body": "Owner funding confirmation: Owner funds are confirmed for property work.",
+   "detailsJson": "{\"quoteId\":null,\"unanswered\":false}"
+  },
+  {
+   "createdAt": "2026-09-27T05:11:55.118Z",
+   "direction": "Incoming",
+   "purpose": "Quote",
+   "title": "Provider offer received",
+   "body": "Make the entrance secure. Adjust and function-check entrance latch: $125.00. Advance of 2500; balance after completion",
+   "detailsJson": "{\"quoteId\":\"quote:359156833a3c20976b5dacfd6291dbb74957ffdcaa6b1a769061d62ecc61b05e\",\"unanswered\":false}"
+  },
+  {
+   "createdAt": "2026-09-27T05:17:20.351Z",
+   "direction": "Outgoing",
+   "purpose": "Information",
+   "title": "Information requested",
+   "body": "Per the agreement requiring owner approval before arranging work: do you approve scheduling House Care to adjust and function-check the existing entrance latch (keeping the existing entrance door) to secure the entrance? If yes, please confirm (1) preferred access window on/after 2026-09-28 and (2) who will provide access/keys.",
+   "detailsJson": "{\"purpose\":\"Information\",\"question\":\"Per the agreement requiring owner approval before arranging work: do you approve scheduling House Care to adjust and function-check the existing entrance latch (keeping the existing entrance door) to secure the entrance? If yes, please confirm (1) preferred access window on/after 2026-09-28 and (2) who will provide access/keys.\",\"recipientPartyId\":\"party:3c2056399a2038582084fd1598b08181658a626bcf804cf0da80edf97bd65aa5\"}"
+  },
+  {
+   "createdAt": "2026-09-27T05:19:10.833Z",
+   "direction": "Incoming",
+   "purpose": "Information",
+   "title": "Reply received",
+   "body": "Owner funding confirmation: Owner funds are confirmed for property work.",
+   "detailsJson": "{\"quoteId\":null,\"unanswered\":false}"
+  }
+ ],
+ "work": {
+  "status": "Waiting for decision",
+  "nextStep": "Entrance latch is reported to not catch reliably. A House Care quote is available to adjust and function-check the existing latch (no door replacement). Owner funding is confirmed, but we still need explicit owner scheduling approval and access/keys details before booking."
+ },
+ "mainAfter": {
+  "HandoffWorkspace": 3,
+  "HandoffCase": 3,
+  "HandoffJob": 0,
+  "HandoffMessage": 123
+ }
+}

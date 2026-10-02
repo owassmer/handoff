@@ -1,0 +1,199 @@
+{
+  "status": "completed author recoveries; withhold from blinded reviewer until provisional expectations saved",
+  "no_model_execution": true,
+  "recoveries": [
+    {
+      "id": "exp-recovery-incorporation",
+      "initial_case_id": "exp013",
+      "missing_context": "The operative incorporation establishes definition presence but does not contain the adopted distressed-home meaning.",
+      "action_completed": "Retrieved official RCW61.34.020 and read both branches of its distressed-home definition.",
+      "retrieval_url": "https://app.leg.wa.gov/RCW/default.aspx?cite=61.34.020",
+      "recovered": {
+        "path": "pipeline/design/task_evaluation/expansion_sources/WA_61_34_020.txt",
+        "sha256": "978436836770a53ae87c0ce21bced7aeb85dbd2557007b1b5b0432ac46149f8e",
+        "start": 4673,
+        "end": 4945,
+        "text": "\"Distressed home\" means either:\n(a) A dwelling that is in danger of foreclosure or at risk of loss due to nonpayment of taxes; or\n(b) A dwelling that is in danger of foreclosure or that is in the process of being foreclosed due to a default under the terms of a mortgage.\n"
+      },
+      "completed_judgment": {
+        "definition_present": "YES",
+        "extracted_meaning": "A dwelling in danger of foreclosure or at risk of loss due to nonpayment of taxes; or a dwelling in danger of foreclosure or being foreclosed due to mortgage default.",
+        "limit": "This completes meaning recovery for extraction, not a finding that a particular home satisfies either branch."
+      }
+    },
+    {
+      "id": "exp-recovery-adopted-holding",
+      "initial_selection": {
+        "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+        "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+        "start": 9733,
+        "end": 10253,
+        "text": "The question presented: Does the word “tolled,” as used in\n§ 1367(d), mean the state limitations period is suspended dur-\ning the pendency of the federal suit; or does “tolled” mean\nthat, although the state limitations period continues to run,\na plaintiff is accorded a grace period of 30 days to refle in\nstate court post dismissal of the federal case? Petitioner\nurges the frst, or stop-the-clock, reading. Respondent\nurges, and the District of Columbia Court of Appeals\nadopted, the second, or grace-period, reading.\n"
+      },
+      "missing_context": "The competing readings alone do not establish the Supreme Court’s adopted meaning.",
+      "action_completed": "Read further in the same captured majority opinion and recovered its express stop-clock holding.",
+      "completed_case_id": "exp092",
+      "completed_state": {
+        "claim": "The Court holds that the statutory instruction to toll means stopping the limitations clock.",
+        "text": "We hold that § 1367(d)'s instruction to “toll” a\nstate limitations period means to hold it in abeyance, i. e., to\nstop the clock."
+      },
+      "completed_sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 10863,
+          "end": 10992
+        }
+      },
+      "completed_expected": "YES",
+      "reason": "Final text expressly adopts suspension; earlier competing-reading excerpt cannot be mistaken for the holding."
+    },
+    {
+      "id": "exp-recovery-age-qualification",
+      "initial_selection": {
+        "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+        "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+        "start": 3689,
+        "end": 3861,
+        "text": "The 180 calendar day filing deadline is extended to 300 calendar days if a state or local agency enforces a law that prohibits employment discrimination on the same basis. "
+      },
+      "missing_context": "General300-day extension does not resolve the special age-discrimination local-law branch.",
+      "action_completed": "Read the immediately following complete age-discrimination qualification; recovered state-law/state-agency requirement and express local-only exclusion.",
+      "completed_case_id": "exp087",
+      "completed_state": {
+        "claim": "A local age-discrimination law alone extends the age charge deadline to300days.",
+        "text": "The anti-discrimination laws give you a limited amount of time to file a charge of discrimination. In general, you need to file a charge within 180 calendar days from the day the discrimination took place. The 180 calendar day filing deadline is extended to 300 calendar days if a state or local agency enforces a law that prohibits employment discrimination on the same basis. The rules are slightly different for age discrimination charges. For age discrimination, the filing deadline is only extended to 300 days if there is a\nstate\nlaw prohibiting age discrimination in employment and a state agency or authority enforcing that law. The deadline is\nnot\nextended if\nonly\na local law prohibits age discrimination."
+      },
+      "completed_sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 3483,
+          "end": 4198
+        }
+      },
+      "completed_expected": "NO",
+      "reason": "Complete paragraph expressly denies extension based solely on a local age-discrimination law."
+    }
+  ],
+  "source_registry": [
+    {
+      "id": "CFPB_1026_2",
+      "url": "https://www.consumerfinance.gov/rules-policy/regulations/1026/2/",
+      "resolved_url": "https://www.consumerfinance.gov/rules-policy/regulations/1026/2/",
+      "raw_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/CFPB_1026_2.html",
+      "text_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/CFPB_1026_2.txt",
+      "raw_sha256": "3f37ff7b0fb11b2d7cda9b687b35b47816c47cfedc6927fe027b249107c223f1",
+      "text_sha256": "28c3f5e5f0d20bfe4ac92580c6a8e4370e87363869ad6605e1361f5bc27efa73",
+      "text_extraction": "HTMLParser text data or pdftotext -layout; UTF8, explicit LF normalization; offsets index Unicode characters in raw UTF8 decode",
+      "retrieved_date": "2026-10-01"
+    },
+    {
+      "id": "CFPB_1026_10",
+      "url": "https://www.consumerfinance.gov/rules-policy/regulations/1026/10/",
+      "resolved_url": "https://www.consumerfinance.gov/rules-policy/regulations/1026/10/",
+      "raw_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.html",
+      "text_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+      "raw_sha256": "d31514345817bb12817fafaa4d418bb6756cd7e6bfa468b10476c9448d8f3b62",
+      "text_sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+      "text_extraction": "HTMLParser text data or pdftotext -layout; UTF8, explicit LF normalization; offsets index Unicode characters in raw UTF8 decode",
+      "retrieved_date": "2026-10-01"
+    },
+    {
+      "id": "EEOC_ACCOMMODATION",
+      "url": "https://www.eeoc.gov/laws/guidance/enforcement-guidance-reasonable-accommodation-and-undue-hardship-under-ada",
+      "resolved_url": "https://www.eeoc.gov/laws/guidance/enforcement-guidance-reasonable-accommodation-and-undue-hardship-under-ada",
+      "raw_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.html",
+      "text_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+      "raw_sha256": "04e407605c4efea397692722feb458cc73d00c351904f9dc5db69e849d4c22a8",
+      "text_sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+      "text_extraction": "HTMLParser text data or pdftotext -layout; UTF8, explicit LF normalization; offsets index Unicode characters in raw UTF8 decode",
+      "retrieved_date": "2026-10-01"
+    },
+    {
+      "id": "EEOC_CHARGE",
+      "url": "https://www.eeoc.gov/time-limits-filing-charge",
+      "resolved_url": "https://www.eeoc.gov/time-limits-filing-charge",
+      "raw_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.html",
+      "text_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+      "raw_sha256": "3906df3cdab6aaa421dc1369c3e6f10b2f671be71d628b933318c569e09d7d4a",
+      "text_sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+      "text_extraction": "HTMLParser text data or pdftotext -layout; UTF8, explicit LF normalization; offsets index Unicode characters in raw UTF8 decode",
+      "retrieved_date": "2026-10-01"
+    },
+    {
+      "id": "OREGON_90",
+      "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors090.html",
+      "resolved_url": "https://www.oregonlegislature.gov/bills_laws/ors/ors090.html",
+      "raw_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/OREGON_90.html",
+      "text_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+      "raw_sha256": "baa019d59a4abd116a7f132cbaa1ac69fc1a529dab78bdd4e861acb678548631",
+      "text_sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+      "extraction_encoding": "windows-1252 per HTML meta",
+      "text_extraction": "HTMLParser text data or pdftotext -layout; UTF8, explicit LF normalization; offsets index Unicode characters in raw UTF8 decode",
+      "retrieved_date": "2026-10-01"
+    },
+    {
+      "id": "WASHINGTON_59_18",
+      "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=59.18&full=true",
+      "resolved_url": "https://app.leg.wa.gov/RCW/default.aspx?cite=59.18&full=true",
+      "raw_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.html",
+      "text_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+      "raw_sha256": "0f939de2cbf06a32ad45630df85b3dcb498043f503b29d4d63b7e9f9168dc6c1",
+      "text_sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+      "text_extraction": "HTMLParser text data or pdftotext -layout; UTF8, explicit LF normalization; offsets index Unicode characters in raw UTF8 decode",
+      "retrieved_date": "2026-10-01"
+    },
+    {
+      "id": "BOECHLER",
+      "url": "https://www.supremecourt.gov/opinions/21pdf/20-1472_6j37.pdf",
+      "raw_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/BOECHLER.pdf",
+      "text_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+      "raw_sha256": "4c2bdffa99245390f394306526a23e50144a60476588249287f107ef5770b553",
+      "text_sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+      "text_extraction": "HTMLParser text data or pdftotext -layout; UTF8, explicit LF normalization; offsets index Unicode characters in raw UTF8 decode",
+      "retrieved_date": "2026-10-01"
+    },
+    {
+      "id": "FORT_BEND",
+      "url": "https://www.supremecourt.gov/opinions/18pdf/18-525_m6hn.pdf",
+      "raw_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/FORT_BEND.pdf",
+      "text_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/FORT_BEND.txt",
+      "raw_sha256": "6b2b771c2d20d76066ca78763f665eb50357c52633cec74f38aef9bd8ece006f",
+      "text_sha256": "8cd77d55bb52fc77cd21149b7749385fed91c189869a7dd9831a26eed49a2993",
+      "text_extraction": "HTMLParser text data or pdftotext -layout; UTF8, explicit LF normalization; offsets index Unicode characters in raw UTF8 decode",
+      "retrieved_date": "2026-10-01"
+    },
+    {
+      "id": "ARTIS",
+      "url": "https://www.govinfo.gov/content/pkg/USREPORTS-583/pdf/USREPORTS-583-71.pdf",
+      "raw_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/ARTIS.pdf",
+      "text_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+      "raw_sha256": "a48016e9d46808d02f1607dda5ac754401996b3527b50ac51676d621f51889e7",
+      "text_sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+      "text_extraction": "HTMLParser text data or pdftotext -layout; UTF8, explicit LF normalization; offsets index Unicode characters in raw UTF8 decode",
+      "retrieved_date": "2026-10-01"
+    },
+    {
+      "id": "WA_61_34_020",
+      "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=61.34.020",
+      "raw_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/WA_61_34_020.html",
+      "text_path": "research/legal-engine/pipeline/design/task_evaluation/expansion_sources/WA_61_34_020.txt",
+      "raw_sha256": "0f64fe2adc9799a4938b2f850aaa30c42644cbca2a415237751a8ef65bf2370b",
+      "text_sha256": "978436836770a53ae87c0ce21bced7aeb85dbd2557007b1b5b0432ac46149f8e",
+      "purpose": "completed definition incorporation recovery; not a new96-case instrument",
+      "text_extraction": "HTMLParser text data or pdftotext -layout; UTF8, explicit LF normalization; offsets index Unicode characters in raw UTF8 decode",
+      "retrieved_date": "2026-10-01"
+    }
+  ],
+  "preparation_repairs": [
+    {
+      "issue": "Oregon original HTML declares windows-1252; initial UTF8 decoding introduced replacement characters.",
+      "resolution": "Re-extracted from unchanged raw HTML using declared windows-1252 before final case freeze."
+    },
+    {
+      "issue": "HTML data nodes retained CR/newline characters; helper initially used universal-newline reads incompatible with runner raw UTF8 offsets.",
+      "resolution": "Explicitly normalized derived text to LF, retained prior derived bytes in extraction_history, regenerated hashes and offsets and successfully prepared96cases with actual nativeSDK without inference."
+    }
+  ]
+}

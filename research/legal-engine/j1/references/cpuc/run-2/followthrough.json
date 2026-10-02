@@ -1,0 +1,42 @@
+{
+  "source": "CPUC D05-04-031",
+  "run": "j1/references/cpuc/run-2",
+  "answered_passages": 29,
+  "followthrough": [
+    {
+      "targets": [
+        "PUC739.5"
+      ],
+      "coverage": "CA:PUC selected public-utility regulation units",
+      "use": "Submetered residential bills, discounts, rebates, maintenance and information. Existing source selection retained."
+    },
+    {
+      "targets": [
+        "D04-11-033 findings33,45–54,56; conclusions11,22; ordering paragraph13; p21"
+      ],
+      "coverage": "CA:CPUC-D04-11-033; original + modifying order now exact PDF units",
+      "use": "Retain complete original and modification; no findings deleted by modifying order can be treated as operative."
+    },
+    {
+      "targets": [
+        "R03-03-017",
+        "I03-03-018",
+        "WMA rehearing application",
+        "PG&E and SCE responses",
+        "January16 2004 joint motion"
+      ],
+      "use": "Proceeding and party-submission references explain procedural history and arguments; no incorporated external customer obligation is supplied by them. Register includes final orders. Party filings are not separate general operating instruments."
+    },
+    {
+      "targets": [
+        "People v Hull (1991)1Cal4th266,271",
+        "City of Santa Cruz v Municipal Court (1989)49Cal3d74,90",
+        "Tracy v Municipal Court (1978)22Cal3d760,764",
+        "Moyer v Workers Compensation Appeals Board (1973)10Cal3d222,230",
+        "People v Baker (1968)69Cal2d44,50"
+      ],
+      "use": "Authorities cited for statutory construction. Preserved as concrete J5 authority leads; this J1 source-selection task does not perform or claim completed controlling-authority interpretation."
+    }
+  ],
+  "preparation": "Official DOC preserves main paragraphs and footnotes separately. Corrected pagebreak split and kept quoted findings under footnote introduction; run1 retained as superseded input."
+}

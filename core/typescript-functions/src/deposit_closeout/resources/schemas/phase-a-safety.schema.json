@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:handoff:deposit-closeout:SafetyProfile:1.0.0",
+  "$ref": "#/$defs/SafetyProfile",
+  "$defs": {
+    "SafetyProfile": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "string",
+          "minLength": 1,
+          "const": "1.0.0"
+        },
+        "phase": {
+          "type": "string",
+          "minLength": 1,
+          "const": "A"
+        },
+        "syntheticOnly": {
+          "type": "boolean",
+          "const": true
+        },
+        "allowOntologyWrites": {
+          "type": "boolean",
+          "const": false
+        },
+        "allowExternalEffects": {
+          "type": "boolean",
+          "const": false
+        },
+        "allowModelAssistance": {
+          "type": "boolean",
+          "const": false
+        },
+        "allowRuleActivation": {
+          "type": "boolean",
+          "const": false
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "phase",
+        "syntheticOnly",
+        "allowOntologyWrites",
+        "allowExternalEffects",
+        "allowModelAssistance",
+        "allowRuleActivation"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

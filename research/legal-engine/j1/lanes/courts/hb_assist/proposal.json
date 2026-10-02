@@ -1,0 +1,130 @@
+{
+  "as_of": "2026-10-01",
+  "instruments": [
+    {
+      "id": "CA-HB:REFUSE:BASE",
+      "jurisdiction": "CA-HB",
+      "name": "Revised and Restated Refuse Collection and Disposal Services Franchise Agreement",
+      "level": "local code",
+      "instrument_kind": "municipal franchise agreement",
+      "functions": [
+        "fees",
+        "payments",
+        "provider_contracts",
+        "work_standards"
+      ],
+      "adapter": "generic",
+      "toc_source_url": "https://www.huntingtonbeachca.gov/departments/public_works/trash_recycling.php",
+      "units_in_scope": [
+        {
+          "unit": "DOCUMENT",
+          "heading": "Revised and Restated Refuse Collection and Disposal Services Franchise Agreement",
+          "toc_url": "https://www.huntingtonbeachca.gov/Documents/Departments/Trash%20and%20Recycling/Solid-Waste-Franchise-Agreement.pdf?t=202404051227240",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "DOCUMENT",
+              "heading": "Revised and Restated Refuse Collection and Disposal Services Franchise Agreement",
+              "ref": "https://www.huntingtonbeachca.gov/Documents/Departments/Trash%20and%20Recycling/Solid-Waste-Franchise-Agreement.pdf?t=202404051227240"
+            }
+          ],
+          "reason": "Residential physical work/debris services and operator utility-account obligations; conditional on actual provider/service configuration."
+        }
+      ],
+      "units_out": [],
+      "acquisition": {
+        "text_adapter": "generic",
+        "status": "Current city publisher identifies adoption July17,2006 and expiration June30,2037; actual33pagePDF resolved, text extraction empty.",
+        "subdivision_status": "Whole-document target; internal subdivision remains J2."
+      },
+      "publisher_date": "2006-07-17"
+    },
+    {
+      "id": "CA-HB:REFUSE:FIRST-AMENDMENT",
+      "jurisdiction": "CA-HB",
+      "name": "First Amendment to Rainbow/Republic refuse franchise, effective July2,2026",
+      "level": "local code",
+      "instrument_kind": "municipal franchise agreement",
+      "functions": [
+        "fees",
+        "payments",
+        "provider_contracts",
+        "work_standards"
+      ],
+      "adapter": "generic",
+      "toc_source_url": "https://www.huntingtonbeachca.gov/departments/public_works/trash_recycling.php",
+      "units_in_scope": [
+        {
+          "unit": "DOCUMENT",
+          "heading": "First Amendment to Rainbow/Republic refuse franchise, effective July2,2026",
+          "toc_url": "https://www.huntingtonbeachca.gov/Documents/Departments/Trash%20and%20Recycling/First%20Amendment%20-%20Rainbow%20Republic%202026%20WEBSITE.pdf?t=202608031739410",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "DOCUMENT",
+              "heading": "First Amendment to Rainbow/Republic refuse franchise, effective July2,2026",
+              "ref": "https://www.huntingtonbeachca.gov/Documents/Departments/Trash%20and%20Recycling/First%20Amendment%20-%20Rainbow%20Republic%202026%20WEBSITE.pdf?t=202608031739410"
+            }
+          ],
+          "reason": "Residential physical work/debris services and operator utility-account obligations; conditional on actual provider/service configuration."
+        }
+      ],
+      "units_out": [],
+      "acquisition": {
+        "text_adapter": "generic",
+        "status": "Current city publisher expressly identifies this amendment as effective July2,2026. Actual linked filename and query observed; root-relative path normalized after web resolved relative link under page directory. PDF transport remains unavailable.",
+        "subdivision_status": "Whole-document target; internal subdivision remains J2."
+      },
+      "publisher_date": "2026-07-02"
+    },
+    {
+      "id": "CA-HB:WATER-RATES2026-PUBLISHED",
+      "jurisdiction": "CA-HB",
+      "name": "Published water and sewer rates effective August15,2026",
+      "level": "agency rule",
+      "instrument_kind": "published administrative rate schedule",
+      "functions": [
+        "fees",
+        "payments",
+        "provider_contracts",
+        "work_standards"
+      ],
+      "adapter": "generic",
+      "toc_source_url": "https://www.huntingtonbeachca.gov/departments/public_works/water_and_sewer/rates_and_fees.php",
+      "units_in_scope": [
+        {
+          "unit": "DOCUMENT",
+          "heading": "Published water and sewer rates effective August15,2026",
+          "toc_url": "https://www.huntingtonbeachca.gov/departments/public_works/water_and_sewer/rates_and_fees.php",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "DOCUMENT",
+              "heading": "Published water and sewer rates effective August15,2026",
+              "ref": "https://www.huntingtonbeachca.gov/departments/public_works/water_and_sewer/rates_and_fees.php"
+            }
+          ],
+          "reason": "Residential physical work/debris services and operator utility-account obligations; conditional on actual provider/service configuration."
+        }
+      ],
+      "units_out": [],
+      "acquisition": {
+        "text_adapter": "generic",
+        "status": "Full official HTML recovered; publisher expressly states effective August15,2026. Administrative rate publication, not the signed adopting2024 resolutions. Preserve publisher discrepancies for J2/J3 comparison.",
+        "subdivision_status": "Whole-document target; internal subdivision remains J2."
+      },
+      "publisher_date": "2026-08-15"
+    }
+  ],
+  "integration_notes": [
+    "Replace null exact-target dependencies for refuse base and first amendment; operative status is now independently established by current city publishing department, not inferred from introduction.",
+    "Keep CA-HB:ORD4348 original for ordinance commencement/certification; current publication establishes amendment's operative identity but not every ordinance clause.",
+    "Do not apply Republic franchise to Sunset Beach Sanitary District accounts: city page expressly distinguishes that provider.",
+    "Published rates source does not settle original reduced-CIP amended resolution text. Sewer daily-rate header and four-inch capital daily/monthly mismatch must remain source conflicts, not silently corrected."
+  ],
+  "remaining": [
+    "HB4348 signed ordinance and final adopted2024-18/20 schedules remain unrecovered.",
+    "HBweed2026-07/32 final parcel/cost instruments remain unresolved; conditional parcel applicability retained.",
+    "OCfinal actions remain as prior oc_assist report; no changed-input new route found in this pass."
+  ]
+}

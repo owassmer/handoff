@@ -1,0 +1,2139 @@
+{
+  "cases": [
+    {
+      "id": "exp001",
+      "task": "definition_present",
+      "family": "administrative",
+      "source_cluster": "EEOC_ACCOMMODATION:hardship",
+      "state": {
+        "passage": "\"Undue hardship\" means significant difficulty or expense and focuses on the resources and circumstances of the particular employer in relationship to the cost or difficulty of providing a specific accommodation. Undue hardship refers not only to financial difficulty, but to reasonable accommodations that are unduly extensive, substantial, or disruptive, or those that would fundamentally alter the nature or operation of the business."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 15889,
+          "end": 16325
+        }
+      }
+    },
+    {
+      "id": "exp002",
+      "task": "definition_present",
+      "family": "administrative",
+      "source_cluster": "CFPB_1026_10:receipt",
+      "state": {
+        "passage": "The “date of receipt” is the date that the payment instrument or other means of completing the payment reaches the creditor."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 11530,
+          "end": 11654
+        }
+      }
+    },
+    {
+      "id": "exp003",
+      "task": "definition_present",
+      "family": "administrative",
+      "source_cluster": "CFPB_1026_10:expedited",
+      "state": {
+        "passage": "For purposes of § 1026.10(e), the term “expedited” means crediting a payment the same day or, if the payment is received after any cut-off time established by the creditor, the next business day."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 24061,
+          "end": 24256
+        }
+      }
+    },
+    {
+      "id": "exp004",
+      "task": "definition_present",
+      "family": "administrative",
+      "source_cluster": "CFPB_1026_10:representative",
+      "state": {
+        "passage": "Service by a customer service representative of a creditor means any payment made to the consumer's account with the assistance of a live representative or agent of the creditor, including those made in person, on the telephone, or by electronic means. A customer service representative does not include automated means of making payment that do not involve a live representative or agent of the creditor, such as a voice response unit or interactive voice response system. Service by a customer service representative includes any payment transaction which involves the assistance of a live representative or agent of the creditor, even if an automated system is required for a portion of the transaction."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 24306,
+          "end": 25012
+        }
+      }
+    },
+    {
+      "id": "exp005",
+      "task": "definition_present",
+      "family": "administrative",
+      "source_cluster": "EEOC_ACCOMMODATION:choice",
+      "state": {
+        "passage": "The employer may choose among reasonable accommodations as long as the chosen accommodation is effective."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 32105,
+          "end": 32210
+        }
+      }
+    },
+    {
+      "id": "exp006",
+      "task": "definition_present",
+      "family": "administrative",
+      "source_cluster": "EEOC_ACCOMMODATION:prompt",
+      "state": {
+        "passage": "An employer should respond expeditiously to a request for reasonable accommodation. If the employer and the individual with a disability need to engage in an interactive process, this too should proceed as quickly as possible."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 35329,
+          "end": 35555
+        }
+      }
+    },
+    {
+      "id": "exp007",
+      "task": "definition_present",
+      "family": "administrative",
+      "source_cluster": "EEOC_ACCOMMODATION:personal",
+      "state": {
+        "passage": "An employer does not have to provide as reasonable accommodations personal use items needed in accomplishing daily activities both on and off the job. Thus, an employer is not required to provide an employee with a prosthetic limb, a wheelchair, eyeglasses, hearing aids, or similar devices if they are also needed off the job. Furthermore, an employer is not required to provide personal use amenities, such as a hot pot or refrigerator, if those items are not provided to employees without disabilities. However, items that might otherwise be considered personal may be required as reasonable accommodations where they are specifically designed or required to meet job-related rather than personal needs."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 14958,
+          "end": 15664
+        }
+      }
+    },
+    {
+      "id": "exp008",
+      "task": "definition_present",
+      "family": "administrative",
+      "source_cluster": "EEOC_CHARGE:grievance",
+      "state": {
+        "passage": "Time limits for filing a charge with EEOC generally will not be extended while you attempt to resolve a dispute through another forum such as an internal grievance procedure, a union grievance, arbitration or mediation before filing a charge with EEOC. Other forums for resolution may be pursued at the same time as the processing of the EEOC charge."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 4535,
+          "end": 4885
+        }
+      }
+    },
+    {
+      "id": "exp009",
+      "task": "definition_present",
+      "family": "judicial",
+      "source_cluster": "BOECHLER:boechler_def",
+      "state": {
+        "passage": "Jurisdictional requirements mark the bounds of a “court’s\nadjudicatory authority.” Kontrick v. Ryan, 540 U. S. 443,\n455 (2004)."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 11860,
+          "end": 11987
+        }
+      }
+    },
+    {
+      "id": "exp010",
+      "task": "definition_present",
+      "family": "judicial",
+      "source_cluster": "ARTIS:artis_def",
+      "state": {
+        "passage": "We hold that § 1367(d)'s instruction to “toll” a\nstate limitations period means to hold it in abeyance, i. e., to\nstop the clock."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 10863,
+          "end": 10992
+        }
+      }
+    },
+    {
+      "id": "exp011",
+      "task": "definition_present",
+      "family": "judicial",
+      "source_cluster": "ARTIS:artis_proposal",
+      "state": {
+        "passage": "The question presented: Does the word “tolled,” as used in\n§ 1367(d), mean the state limitations period is suspended dur-\ning the pendency of the federal suit; or does “tolled” mean\nthat, although the state limitations period continues to run,\na plaintiff is accorded a grace period of 30 days to refle in\nstate court post dismissal of the federal case? Petitioner\nurges the frst, or stop-the-clock, reading. Respondent\nurges, and the District of Columbia Court of Appeals\nadopted, the second, or grace-period, reading."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 9733,
+          "end": 10252
+        }
+      }
+    },
+    {
+      "id": "exp012",
+      "task": "definition_present",
+      "family": "judicial",
+      "source_cluster": "BOECHLER:boechler_hold",
+      "state": {
+        "passage": "None of this is to say that Boechler is entitled to equitable\ntolling on the facts of this case. That should be determined\non remand. We simply hold that §6330(d)(1)’s filing dead-\nline, like most others, can be equitably tolled in appropriate\ncases.\n                         *    *    *\n  Section 6330(d)(1)’s 30-day time limit to file a petition for\nreview of a collection due process determination is an ordi-\nnary, nonjurisdictional deadline subject to equitable tolling.\nWe reverse the contrary judgment of the Court of Appeals\nand remand the case for further proceedings consistent\nwith this opinion."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 29417,
+          "end": 30023
+        }
+      }
+    },
+    {
+      "id": "exp013",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "WASHINGTON_59_18:wa_incorporation",
+      "state": {
+        "passage": "(7) \"Distressed home\" has the same meaning as in RCW\n61.34.020\n."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 16106,
+          "end": 16170
+        }
+      }
+    },
+    {
+      "id": "exp014",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "OREGON_90:or_dwelling",
+      "state": {
+        "passage": "(14) “Dwelling\nunit” means a structure or the part of a structure that is used as a home,\nresidence or sleeping place by one person who maintains a household or by two\nor more persons who maintain a common household. “Dwelling unit” regarding a\nperson who rents a space for a manufactured dwelling or recreational vehicle or\nregarding a person who rents moorage space for a floating home as defined in\nORS 830.700, but does not rent the home, means the space rented and not the\nmanufactured dwelling, recreational vehicle or floating home itself."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+          "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+          "start": 17222,
+          "end": 17768
+        }
+      }
+    },
+    {
+      "id": "exp015",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "WASHINGTON_59_18:wa_condemned",
+      "state": {
+        "passage": "(1) If a governmental agency responsible for the enforcement of a building, housing, or other appropriate code has notified the landlord that a dwelling is condemned or unlawful to occupy due to the existence of conditions that violate applicable codes, statutes, ordinances, or regulations, a landlord shall not enter into a rental agreement for the dwelling unit until the conditions are corrected."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 73154,
+          "end": 73554
+        }
+      }
+    },
+    {
+      "id": "exp016",
+      "task": "definition_present",
+      "family": "statutory",
+      "source_cluster": "OREGON_90:or_alternative",
+      "state": {
+        "passage": "(3) A landlord or\ntenant may utilize alternative methods of notifying the other so long as the\nalternative method is in addition to one of the service methods described in\nsubsection (1) of this section."
+      },
+      "sources": {
+        "passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+          "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+          "start": 45329,
+          "end": 45532
+        }
+      }
+    },
+    {
+      "id": "exp017",
+      "task": "candidate_term_use",
+      "family": "administrative",
+      "source_cluster": "business-precise",
+      "state": {
+        "term": "business day",
+        "definition_passage": "all calendar days except Sundays and the Federal legal holidays specified in 5 U.S.C. 6103(a)",
+        "use_passage": "A more precise rule for what is a business day (all calendar days except Sundays and the Federal legal holidays specified in 5 U.S.C. 6103(a)) applies when the right of rescission, the receipt of disclosures for certain dwelling- or real estate-secured mortgage transactions under §§ 1026.19(a)(1)(ii), 1026.19(a)(2), 1026.19(e)(1)(iii)(B), 1026.19(e)(1)(iv), 1026.19(e)(2)(i)(A), 1026.19(e)(4)(ii), 1026.19(f)(1)(ii), 1026.19(f)(1)(iii), 1026.20(e)(5), 1026.31(c), or the receipt of disclosures for private education loans under § 1026.46(d)(4) is involved. Four Federal legal holidays are identified in 5 U.S.C. 6103(a) by a specific date: New Year's Day, January 1; Independence Day, July 4; Veterans Day, November 11; and Christmas Day, December 25. When one of these holidays (July 4, for example) falls on a Saturday, Federal offices and other entities might observe the holiday on the preceding Friday (July 3). In cases where the more precise rule applies, the observed holiday (in the example, July 3) is a business day.",
+        "use_expression": "what is a business day"
+      },
+      "sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_2.txt",
+          "sha256": "28c3f5e5f0d20bfe4ac92580c6a8e4370e87363869ad6605e1361f5bc27efa73",
+          "start": 22274,
+          "end": 22367
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_2.txt",
+          "sha256": "28c3f5e5f0d20bfe4ac92580c6a8e4370e87363869ad6605e1361f5bc27efa73",
+          "start": 22226,
+          "end": 23255
+        }
+      }
+    },
+    {
+      "id": "exp018",
+      "task": "candidate_term_use",
+      "family": "administrative",
+      "source_cluster": "business-precise",
+      "state": {
+        "term": "business day",
+        "definition_passage": "a day on which the creditor's offices are open to the public for carrying on substantially all of its business functions",
+        "use_passage": "A more precise rule for what is a business day (all calendar days except Sundays and the Federal legal holidays specified in 5 U.S.C. 6103(a)) applies when the right of rescission, the receipt of disclosures for certain dwelling- or real estate-secured mortgage transactions under §§ 1026.19(a)(1)(ii), 1026.19(a)(2), 1026.19(e)(1)(iii)(B), 1026.19(e)(1)(iv), 1026.19(e)(2)(i)(A), 1026.19(e)(4)(ii), 1026.19(f)(1)(ii), 1026.19(f)(1)(iii), 1026.20(e)(5), 1026.31(c), or the receipt of disclosures for private education loans under § 1026.46(d)(4) is involved. Four Federal legal holidays are identified in 5 U.S.C. 6103(a) by a specific date: New Year's Day, January 1; Independence Day, July 4; Veterans Day, November 11; and Christmas Day, December 25. When one of these holidays (July 4, for example) falls on a Saturday, Federal offices and other entities might observe the holiday on the preceding Friday (July 3). In cases where the more precise rule applies, the observed holiday (in the example, July 3) is a business day.",
+        "use_expression": "what is a business day"
+      },
+      "sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_2.txt",
+          "sha256": "28c3f5e5f0d20bfe4ac92580c6a8e4370e87363869ad6605e1361f5bc27efa73",
+          "start": 20790,
+          "end": 20910
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_2.txt",
+          "sha256": "28c3f5e5f0d20bfe4ac92580c6a8e4370e87363869ad6605e1361f5bc27efa73",
+          "start": 22226,
+          "end": 23255
+        }
+      }
+    },
+    {
+      "id": "exp019",
+      "task": "candidate_term_use",
+      "family": "administrative",
+      "source_cluster": "creditor-scope",
+      "state": {
+        "term": "creditor",
+        "definition_passage": "For purposes of § 1026.10(e), the term “creditor” includes a third party that collects, receives, or processes payments on behalf of a creditor.",
+        "use_passage": "i. Assume that a creditor uses a service provider to receive, collect, or process on the creditor's behalf payments made through the creditor's Web site or made through an automated telephone payment service. In these circumstances, the service provider would be considered a creditor for purposes of paragraph (e).",
+        "use_expression": "considered a creditor"
+      },
+      "sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 25026,
+          "end": 25170
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 25184,
+          "end": 25499
+        }
+      }
+    },
+    {
+      "id": "exp020",
+      "task": "candidate_term_use",
+      "family": "administrative",
+      "source_cluster": "creditor-scope",
+      "state": {
+        "term": "creditor",
+        "definition_passage": "For purposes of § 1026.10(e), the term “creditor” includes a third party that collects, receives, or processes payments on behalf of a creditor.",
+        "use_passage": "ii. Assume that a consumer pays a fee to a money transfer or payment service in order to transmit a payment to the creditor on the consumer's behalf. In these circumstances, the money transfer or payment service would not be considered a creditor for purposes of paragraph (e).",
+        "use_expression": "considered a creditor"
+      },
+      "sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 25026,
+          "end": 25170
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 25500,
+          "end": 25777
+        }
+      }
+    },
+    {
+      "id": "exp021",
+      "task": "candidate_term_use",
+      "family": "administrative",
+      "source_cluster": "fee-scope",
+      "state": {
+        "term": "separate fee",
+        "definition_passage": "For purposes of § 1026.10(e), the term “separate fee” means a fee imposed on a consumer for making a payment to the consumer's account. A fee or other charge imposed if payment is made after the due date, such as a late fee or finance charge, is not a separate fee to allow consumers to make a payment for purposes of § 1026.10(e).",
+        "use_passage": "For purposes of § 1026.10(e), the term “separate fee” means a fee imposed on a consumer for making a payment to the consumer's account. A fee or other charge imposed if payment is made after the due date, such as a late fee or finance charge, is not a separate fee to allow consumers to make a payment for purposes of § 1026.10(e).",
+        "use_expression": "is not a separate fee"
+      },
+      "sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 23715,
+          "end": 24046
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 23715,
+          "end": 24046
+        }
+      }
+    },
+    {
+      "id": "exp022",
+      "task": "candidate_term_use",
+      "family": "administrative",
+      "source_cluster": "representative-scope",
+      "state": {
+        "term": "customer service representative",
+        "definition_passage": "Service by a customer service representative of a creditor means any payment made to the consumer's account with the assistance of a live representative or agent of the creditor, including those made in person, on the telephone, or by electronic means. A customer service representative does not include automated means of making payment that do not involve a live representative or agent of the creditor, such as a voice response unit or interactive voice response system. Service by a customer service representative includes any payment transaction which involves the assistance of a live representative or agent of the creditor, even if an automated system is required for a portion of the transaction.",
+        "use_passage": "Service by a customer service representative of a creditor means any payment made to the consumer's account with the assistance of a live representative or agent of the creditor, including those made in person, on the telephone, or by electronic means. A customer service representative does not include automated means of making payment that do not involve a live representative or agent of the creditor, such as a voice response unit or interactive voice response system. Service by a customer service representative includes any payment transaction which involves the assistance of a live representative or agent of the creditor, even if an automated system is required for a portion of the transaction.",
+        "use_expression": "A customer service representative does not include automated means"
+      },
+      "sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 24306,
+          "end": 25012
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 24306,
+          "end": 25012
+        }
+      }
+    },
+    {
+      "id": "exp023",
+      "task": "candidate_term_use",
+      "family": "administrative",
+      "source_cluster": "hardship",
+      "state": {
+        "term": "Undue hardship",
+        "definition_passage": "\"Undue hardship\" means significant difficulty or expense and focuses on the resources and circumstances of the particular employer in relationship to the cost or difficulty of providing a specific accommodation. Undue hardship refers not only to financial difficulty, but to reasonable accommodations that are unduly extensive, substantial, or disruptive, or those that would fundamentally alter the nature or operation of the business.",
+        "use_passage": "\"Undue hardship\" means significant difficulty or expense and focuses on the resources and circumstances of the particular employer in relationship to the cost or difficulty of providing a specific accommodation. Undue hardship refers not only to financial difficulty, but to reasonable accommodations that are unduly extensive, substantial, or disruptive, or those that would fundamentally alter the nature or operation of the business.",
+        "use_expression": "Undue hardship refers not only to financial difficulty"
+      },
+      "sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 15889,
+          "end": 16325
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 15889,
+          "end": 16325
+        }
+      }
+    },
+    {
+      "id": "exp024",
+      "task": "candidate_term_use",
+      "family": "administrative",
+      "source_cluster": "accommodation",
+      "state": {
+        "term": "reasonable accommodation",
+        "definition_passage": "In the context of job performance, this means that a reasonable accommodation enables the individual to perform the essential functions of the position. Similarly, a reasonable accommodation enables an applicant with a disability to have an equal opportunity to participate in the application process and to be considered for a job. Finally, a reasonable accommodation allows an employee with a disability an equal opportunity to enjoy the benefits and privileges of employment that employees without disabilities enjoy.",
+        "use_passage": "The employer may choose among reasonable accommodations as long as the chosen accommodation is effective.",
+        "use_expression": "among reasonable accommodations"
+      },
+      "sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 11702,
+          "end": 12222
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 32105,
+          "end": 32210
+        }
+      }
+    },
+    {
+      "id": "exp025",
+      "task": "candidate_term_use",
+      "family": "judicial",
+      "source_cluster": "artis-meaning",
+      "state": {
+        "term": "toll",
+        "definition_passage": "We hold that § 1367(d)'s instruction to “toll” a\nstate limitations period means to hold it in abeyance, i. e., to\nstop the clock.",
+        "use_passage": "We hold that § 1367(d)'s instruction to “toll” a\nstate limitations period means to hold it in abeyance, i. e., to\nstop the clock.",
+        "use_expression": "instruction to “toll”"
+      },
+      "sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 10863,
+          "end": 10992
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 10863,
+          "end": 10992
+        }
+      }
+    },
+    {
+      "id": "exp026",
+      "task": "candidate_term_use",
+      "family": "judicial",
+      "source_cluster": "ARTIS:Hardin-historical-grace-usage",
+      "state": {
+        "term": "tolling",
+        "definition_passage": "We hold that § 1367(d)'s instruction to “toll” a\nstate limitations period means to hold it in abeyance, i. e., to\nstop the clock.",
+        "use_passage": "Turning from statutory texts to judicial decisions, only\nonce did an opinion of this Court employ tolling language to\ndescribe a grace period: Hardin v. Straub, 490 U. S. 536\n(1989). In Hardin, we held that, in 42 U. S. C. § 1983 suits,\nfederal courts should give effect to state statutes sheltering\nclaims from time bars during periods of a plaintiff's legal\ndisability. We there characterized a state statute providing\na one-year grace period as “tolling” or “suspend[ing]” the\nlimitations period “until one year after the disability has\nbeen removed.” 490 U. S., at 537. This atypical use of\n“tolling” or “suspending” to mean something other than\nstopping the clock on a limitations period is a feather on the\nscale against the weight of decisions in which “tolling” a\nstatute of limitations signals stopping the clock.",
+        "use_expression": "as “tolling”"
+      },
+      "sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 10863,
+          "end": 10992
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 29240,
+          "end": 30062
+        }
+      }
+    },
+    {
+      "id": "exp027",
+      "task": "candidate_term_use",
+      "family": "judicial",
+      "source_cluster": "ARTIS:Hardin-historical-grace-usage",
+      "state": {
+        "term": "tolling",
+        "definition_passage": "We there characterized a state statute providing\na one-year grace period as “tolling” or “suspend[ing]” the\nlimitations period “until one year after the disability has\nbeen removed.” 490 U. S., at 537.",
+        "use_passage": "Turning from statutory texts to judicial decisions, only\nonce did an opinion of this Court employ tolling language to\ndescribe a grace period: Hardin v. Straub, 490 U. S. 536\n(1989). In Hardin, we held that, in 42 U. S. C. § 1983 suits,\nfederal courts should give effect to state statutes sheltering\nclaims from time bars during periods of a plaintiff's legal\ndisability. We there characterized a state statute providing\na one-year grace period as “tolling” or “suspend[ing]” the\nlimitations period “until one year after the disability has\nbeen removed.” 490 U. S., at 537. This atypical use of\n“tolling” or “suspending” to mean something other than\nstopping the clock on a limitations period is a feather on the\nscale against the weight of decisions in which “tolling” a\nstatute of limitations signals stopping the clock.",
+        "use_expression": "as “tolling”"
+      },
+      "sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 29612,
+          "end": 29813
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 29240,
+          "end": 30062
+        }
+      }
+    },
+    {
+      "id": "exp028",
+      "task": "candidate_term_use",
+      "family": "judicial",
+      "source_cluster": "boechler-jurisdiction",
+      "state": {
+        "term": "jurisdictional",
+        "definition_passage": "Jurisdictional requirements mark the bounds of a “court’s\nadjudicatory authority.” Kontrick v. Ryan, 540 U. S. 443,\n455 (2004).",
+        "use_passage": "Boechler, P.C., the petitioner in this case, missed the\ndeadline by one day. According to the Commissioner of the\nIRS, this tardiness extinguished Boechler’s opportunity to\nseek review of the agency’s determination. The Commis-\nsioner insists that the deadline is jurisdictional, which\nmeans that the Tax Court has no authority to consider late-\nfiled petitions. And even if it is not jurisdictional, the Com-\nmissioner argues, the Tax Court lacks the power to accept\na tardy filing by applying the doctrine of equitable tolling.\nWe disagree with the Commissioner on both scores.",
+        "use_expression": "the deadline is jurisdictional"
+      },
+      "sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 11860,
+          "end": 11987
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 9719,
+          "end": 10298
+        }
+      }
+    },
+    {
+      "id": "exp029",
+      "task": "candidate_term_use",
+      "family": "statutory",
+      "source_cluster": "wa-dwelling",
+      "state": {
+        "term": "dwelling unit",
+        "definition_passage": "(10) \"Dwelling unit\" is a structure or that part of a structure which is used as a home, residence, or sleeping place by one person or by two or more persons maintaining a common household, including but not limited to single-family residences and units of multiplexes, apartment buildings, and mobile homes.",
+        "use_passage": "(1) If a governmental agency responsible for the enforcement of a building, housing, or other appropriate code has notified the landlord that a dwelling is condemned or unlawful to occupy due to the existence of conditions that violate applicable codes, statutes, ordinances, or regulations, a landlord shall not enter into a rental agreement for the dwelling unit until the conditions are corrected.",
+        "use_expression": "for the dwelling unit"
+      },
+      "sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 16322,
+          "end": 16630
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 73154,
+          "end": 73554
+        }
+      }
+    },
+    {
+      "id": "exp030",
+      "task": "candidate_term_use",
+      "family": "statutory",
+      "source_cluster": "or-entry",
+      "state": {
+        "term": "landlord",
+        "definition_passage": "(25) “Landlord”\nmeans the owner, lessor or sublessor of the dwelling unit or the building or\npremises of which it is a part. “Landlord” includes a person who is authorized\nby the owner, lessor or sublessor to manage the premises or to enter into a\nrental agreement.",
+        "use_passage": "(f) In all other\ncases, unless there is an agreement between the landlord and the tenant to the\ncontrary regarding a specific entry, the landlord shall give the tenant at\nleast 24 hours’ actual notice of the intent of the landlord to enter and the\nlandlord or landlord’s agent may enter only at reasonable times. The landlord\nor landlord’s agent may not enter if the tenant, after receiving the landlord’s\nnotice, denies consent to enter. The tenant must assert this denial of consent\nby giving actual notice of the denial to the landlord or the landlord’s agent\nor by attaching a written notice of the denial in a secure manner to the main\nentrance to that portion of the premises or dwelling unit of which the tenant\nhas exclusive control, prior to or at the time of the attempt by the landlord\nor landlord’s agent to enter.",
+        "use_expression": "the landlord shall give the tenant"
+      },
+      "sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+          "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+          "start": 20463,
+          "end": 20728
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+          "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+          "start": 143749,
+          "end": 144575
+        }
+      }
+    },
+    {
+      "id": "exp031",
+      "task": "candidate_term_use",
+      "family": "administrative",
+      "source_cluster": "receipt-date",
+      "state": {
+        "term": "date of receipt",
+        "definition_passage": "The “date of receipt” is the date that the payment instrument or other means of completing the payment reaches the creditor.",
+        "use_passage": "Section 1026.10(a) does not require the creditor to post the payment to the consumer's account on a particular date; the creditor is only required to credit the payment\nas of\nthe date of receipt.",
+        "use_expression": "the date of receipt"
+      },
+      "sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 11530,
+          "end": 11654
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 11314,
+          "end": 11509
+        }
+      }
+    },
+    {
+      "id": "exp032",
+      "task": "candidate_term_use",
+      "family": "statutory",
+      "source_cluster": "wa-dwelling",
+      "state": {
+        "term": "dwelling unit",
+        "definition_passage": "“Dwelling unit” regarding a\nperson who rents a space for a manufactured dwelling or recreational vehicle or\nregarding a person who rents moorage space for a floating home as defined in\nORS 830.700, but does not rent the home, means the space rented and not the\nmanufactured dwelling, recreational vehicle or floating home itself.",
+        "use_passage": "(1) If a governmental agency responsible for the enforcement of a building, housing, or other appropriate code has notified the landlord that a dwelling is condemned or unlawful to occupy due to the existence of conditions that violate applicable codes, statutes, ordinances, or regulations, a landlord shall not enter into a rental agreement for the dwelling unit until the conditions are corrected.",
+        "use_expression": "for the dwelling unit"
+      },
+      "sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+          "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+          "start": 17439,
+          "end": 17768
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 73154,
+          "end": 73554
+        }
+      }
+    },
+    {
+      "id": "exp033",
+      "task": "candidate_meaning",
+      "family": "administrative",
+      "source_cluster": "business-precise",
+      "state": {
+        "term": "business day",
+        "use_passage": "A more precise rule for what is a business day (all calendar days except Sundays and the Federal legal holidays specified in 5 U.S.C. 6103(a)) applies when the right of rescission, the receipt of disclosures for certain dwelling- or real estate-secured mortgage transactions under §§ 1026.19(a)(1)(ii), 1026.19(a)(2), 1026.19(e)(1)(iii)(B), 1026.19(e)(1)(iv), 1026.19(e)(2)(i)(A), 1026.19(e)(4)(ii), 1026.19(f)(1)(ii), 1026.19(f)(1)(iii), 1026.20(e)(5), 1026.31(c), or the receipt of disclosures for private education loans under § 1026.46(d)(4) is involved. Four Federal legal holidays are identified in 5 U.S.C. 6103(a) by a specific date: New Year's Day, January 1; Independence Day, July 4; Veterans Day, November 11; and Christmas Day, December 25. When one of these holidays (July 4, for example) falls on a Saturday, Federal offices and other entities might observe the holiday on the preceding Friday (July 3). In cases where the more precise rule applies, the observed holiday (in the example, July 3) is a business day.",
+        "use_expression": "what is a business day"
+      },
+      "sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_2.txt",
+          "sha256": "28c3f5e5f0d20bfe4ac92580c6a8e4370e87363869ad6605e1361f5bc27efa73",
+          "start": 22226,
+          "end": 23255
+        }
+      },
+      "criteria": {
+        "A": "Calendar days except Sundays and specified federal legal holidays.",
+        "B": "Days the creditor opens for substantially all business functions.",
+        "NONE": "Neither offered meaning fits."
+      }
+    },
+    {
+      "id": "exp034",
+      "task": "candidate_meaning",
+      "family": "administrative",
+      "source_cluster": "business-precise",
+      "state": {
+        "term": "business day",
+        "use_passage": "A more precise rule for what is a business day (all calendar days except Sundays and the Federal legal holidays specified in 5 U.S.C. 6103(a)) applies when the right of rescission, the receipt of disclosures for certain dwelling- or real estate-secured mortgage transactions under §§ 1026.19(a)(1)(ii), 1026.19(a)(2), 1026.19(e)(1)(iii)(B), 1026.19(e)(1)(iv), 1026.19(e)(2)(i)(A), 1026.19(e)(4)(ii), 1026.19(f)(1)(ii), 1026.19(f)(1)(iii), 1026.20(e)(5), 1026.31(c), or the receipt of disclosures for private education loans under § 1026.46(d)(4) is involved. Four Federal legal holidays are identified in 5 U.S.C. 6103(a) by a specific date: New Year's Day, January 1; Independence Day, July 4; Veterans Day, November 11; and Christmas Day, December 25. When one of these holidays (July 4, for example) falls on a Saturday, Federal offices and other entities might observe the holiday on the preceding Friday (July 3). In cases where the more precise rule applies, the observed holiday (in the example, July 3) is a business day.",
+        "use_expression": "what is a business day"
+      },
+      "sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_2.txt",
+          "sha256": "28c3f5e5f0d20bfe4ac92580c6a8e4370e87363869ad6605e1361f5bc27efa73",
+          "start": 22226,
+          "end": 23255
+        }
+      },
+      "criteria": {
+        "A": "Days the creditor opens for substantially all business functions.",
+        "B": "Calendar days except Sundays and specified federal legal holidays.",
+        "NONE": "Neither offered meaning fits."
+      }
+    },
+    {
+      "id": "exp035",
+      "task": "candidate_meaning",
+      "family": "administrative",
+      "source_cluster": "creditor-scope",
+      "state": {
+        "term": "creditor",
+        "use_passage": "i. Assume that a creditor uses a service provider to receive, collect, or process on the creditor's behalf payments made through the creditor's Web site or made through an automated telephone payment service. In these circumstances, the service provider would be considered a creditor for purposes of paragraph (e).",
+        "use_expression": "considered a creditor"
+      },
+      "sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 25184,
+          "end": 25499
+        }
+      },
+      "criteria": {
+        "A": "The creditor category including a third party acting on its behalf in receiving or processing payments.",
+        "B": "A person owing money on a consumer account.",
+        "NONE": "Neither offered meaning fits."
+      }
+    },
+    {
+      "id": "exp036",
+      "task": "candidate_meaning",
+      "family": "administrative",
+      "source_cluster": "creditor-scope",
+      "state": {
+        "term": "creditor",
+        "use_passage": "ii. Assume that a consumer pays a fee to a money transfer or payment service in order to transmit a payment to the creditor on the consumer's behalf. In these circumstances, the money transfer or payment service would not be considered a creditor for purposes of paragraph (e).",
+        "use_expression": "considered a creditor"
+      },
+      "sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 25500,
+          "end": 25777
+        }
+      },
+      "criteria": {
+        "A": "A person owing money on a consumer account.",
+        "B": "The creditor category including a third party acting on its behalf in receiving or processing payments.",
+        "NONE": "Neither offered meaning fits."
+      }
+    },
+    {
+      "id": "exp037",
+      "task": "candidate_meaning",
+      "family": "administrative",
+      "source_cluster": "fee-scope",
+      "state": {
+        "term": "separate fee",
+        "use_passage": "For purposes of § 1026.10(e), the term “separate fee” means a fee imposed on a consumer for making a payment to the consumer's account. A fee or other charge imposed if payment is made after the due date, such as a late fee or finance charge, is not a separate fee to allow consumers to make a payment for purposes of § 1026.10(e).",
+        "use_expression": "is not a separate fee"
+      },
+      "sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 23715,
+          "end": 24046
+        }
+      },
+      "criteria": {
+        "A": "A judicial grant of adjudicatory authority.",
+        "B": "The expiration date of a limitation period.",
+        "NONE": "Neither offered meaning fits."
+      }
+    },
+    {
+      "id": "exp038",
+      "task": "candidate_meaning",
+      "family": "administrative",
+      "source_cluster": "representative-scope",
+      "state": {
+        "term": "customer service representative",
+        "use_passage": "Service by a customer service representative of a creditor means any payment made to the consumer's account with the assistance of a live representative or agent of the creditor, including those made in person, on the telephone, or by electronic means. A customer service representative does not include automated means of making payment that do not involve a live representative or agent of the creditor, such as a voice response unit or interactive voice response system. Service by a customer service representative includes any payment transaction which involves the assistance of a live representative or agent of the creditor, even if an automated system is required for a portion of the transaction.",
+        "use_expression": "A customer service representative does not include automated means"
+      },
+      "sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 24306,
+          "end": 25012
+        }
+      },
+      "criteria": {
+        "A": "An automated payment system without a live representative.",
+        "B": "A live representative or agent assisting a payment.",
+        "NONE": "Neither offered meaning fits."
+      }
+    },
+    {
+      "id": "exp039",
+      "task": "candidate_meaning",
+      "family": "administrative",
+      "source_cluster": "hardship",
+      "state": {
+        "term": "Undue hardship",
+        "use_passage": "\"Undue hardship\" means significant difficulty or expense and focuses on the resources and circumstances of the particular employer in relationship to the cost or difficulty of providing a specific accommodation. Undue hardship refers not only to financial difficulty, but to reasonable accommodations that are unduly extensive, substantial, or disruptive, or those that would fundamentally alter the nature or operation of the business.",
+        "use_expression": "Undue hardship refers not only to financial difficulty"
+      },
+      "sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 15889,
+          "end": 16325
+        }
+      },
+      "criteria": {
+        "A": "Significant difficulty or expense for the particular employer.",
+        "B": "Any preference for a cheaper accommodation.",
+        "NONE": "Neither offered meaning fits."
+      }
+    },
+    {
+      "id": "exp040",
+      "task": "candidate_meaning",
+      "family": "administrative",
+      "source_cluster": "accommodation",
+      "state": {
+        "term": "reasonable accommodation",
+        "use_passage": "The employer may choose among reasonable accommodations as long as the chosen accommodation is effective.",
+        "use_expression": "among reasonable accommodations"
+      },
+      "sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 32105,
+          "end": 32210
+        }
+      },
+      "criteria": {
+        "A": "A hotel room supplied to a traveler.",
+        "B": "An effective workplace adjustment removing disability-related barriers.",
+        "NONE": "Neither offered meaning fits."
+      }
+    },
+    {
+      "id": "exp041",
+      "task": "candidate_meaning",
+      "family": "judicial",
+      "source_cluster": "artis-meaning",
+      "state": {
+        "term": "toll",
+        "use_passage": "We hold that § 1367(d)'s instruction to “toll” a\nstate limitations period means to hold it in abeyance, i. e., to\nstop the clock.",
+        "use_expression": "instruction to “toll”"
+      },
+      "sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 10863,
+          "end": 10992
+        }
+      },
+      "criteria": {
+        "A": "Suspension of a limitations clock.",
+        "B": "A grace period while the original limitations clock continues to run.",
+        "NONE": "Neither offered meaning fits."
+      }
+    },
+    {
+      "id": "exp042",
+      "task": "candidate_meaning",
+      "family": "judicial",
+      "source_cluster": "ARTIS:Hardin-historical-grace-usage",
+      "state": {
+        "term": "tolling",
+        "use_passage": "Turning from statutory texts to judicial decisions, only\nonce did an opinion of this Court employ tolling language to\ndescribe a grace period: Hardin v. Straub, 490 U. S. 536\n(1989). In Hardin, we held that, in 42 U. S. C. § 1983 suits,\nfederal courts should give effect to state statutes sheltering\nclaims from time bars during periods of a plaintiff's legal\ndisability. We there characterized a state statute providing\na one-year grace period as “tolling” or “suspend[ing]” the\nlimitations period “until one year after the disability has\nbeen removed.” 490 U. S., at 537. This atypical use of\n“tolling” or “suspending” to mean something other than\nstopping the clock on a limitations period is a feather on the\nscale against the weight of decisions in which “tolling” a\nstatute of limitations signals stopping the clock.",
+        "use_expression": "as “tolling”"
+      },
+      "sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 29240,
+          "end": 30062
+        }
+      },
+      "criteria": {
+        "A": "Suspension of a limitations clock.",
+        "B": "A grace period while the original limitations clock continues to run.",
+        "NONE": "Neither offered meaning fits."
+      }
+    },
+    {
+      "id": "exp043",
+      "task": "candidate_meaning",
+      "family": "judicial",
+      "source_cluster": "ARTIS:Hardin-historical-grace-usage",
+      "state": {
+        "term": "tolling",
+        "use_passage": "Turning from statutory texts to judicial decisions, only\nonce did an opinion of this Court employ tolling language to\ndescribe a grace period: Hardin v. Straub, 490 U. S. 536\n(1989). In Hardin, we held that, in 42 U. S. C. § 1983 suits,\nfederal courts should give effect to state statutes sheltering\nclaims from time bars during periods of a plaintiff's legal\ndisability. We there characterized a state statute providing\na one-year grace period as “tolling” or “suspend[ing]” the\nlimitations period “until one year after the disability has\nbeen removed.” 490 U. S., at 537. This atypical use of\n“tolling” or “suspending” to mean something other than\nstopping the clock on a limitations period is a feather on the\nscale against the weight of decisions in which “tolling” a\nstatute of limitations signals stopping the clock.",
+        "use_expression": "as “tolling”"
+      },
+      "sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 29240,
+          "end": 30062
+        }
+      },
+      "criteria": {
+        "A": "A grace period while the original limitations clock continues to run.",
+        "B": "Suspension of a limitations clock.",
+        "NONE": "Neither offered meaning fits."
+      }
+    },
+    {
+      "id": "exp044",
+      "task": "candidate_meaning",
+      "family": "judicial",
+      "source_cluster": "boechler-jurisdiction",
+      "state": {
+        "term": "jurisdictional",
+        "use_passage": "Boechler, P.C., the petitioner in this case, missed the\ndeadline by one day. According to the Commissioner of the\nIRS, this tardiness extinguished Boechler’s opportunity to\nseek review of the agency’s determination. The Commis-\nsioner insists that the deadline is jurisdictional, which\nmeans that the Tax Court has no authority to consider late-\nfiled petitions. And even if it is not jurisdictional, the Com-\nmissioner argues, the Tax Court lacks the power to accept\na tardy filing by applying the doctrine of equitable tolling.\nWe disagree with the Commissioner on both scores.",
+        "use_expression": "the deadline is jurisdictional"
+      },
+      "sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 9719,
+          "end": 10298
+        }
+      },
+      "criteria": {
+        "A": "A requirement governing litigation procedure without conditioning adjudicatory authority.",
+        "B": "A limitation on the court’s authority to adjudicate.",
+        "NONE": "Neither offered meaning fits."
+      }
+    },
+    {
+      "id": "exp045",
+      "task": "candidate_meaning",
+      "family": "statutory",
+      "source_cluster": "wa-dwelling",
+      "state": {
+        "term": "dwelling unit",
+        "use_passage": "(1) If a governmental agency responsible for the enforcement of a building, housing, or other appropriate code has notified the landlord that a dwelling is condemned or unlawful to occupy due to the existence of conditions that violate applicable codes, statutes, ordinances, or regulations, a landlord shall not enter into a rental agreement for the dwelling unit until the conditions are corrected.",
+        "use_expression": "for the dwelling unit"
+      },
+      "sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 73154,
+          "end": 73554
+        }
+      },
+      "criteria": {
+        "A": "A judicial grant of adjudicatory authority.",
+        "B": "The expiration date of a limitation period.",
+        "NONE": "Neither offered meaning fits."
+      }
+    },
+    {
+      "id": "exp046",
+      "task": "candidate_meaning",
+      "family": "statutory",
+      "source_cluster": "or-entry",
+      "state": {
+        "term": "landlord",
+        "use_passage": "(f) In all other\ncases, unless there is an agreement between the landlord and the tenant to the\ncontrary regarding a specific entry, the landlord shall give the tenant at\nleast 24 hours’ actual notice of the intent of the landlord to enter and the\nlandlord or landlord’s agent may enter only at reasonable times. The landlord\nor landlord’s agent may not enter if the tenant, after receiving the landlord’s\nnotice, denies consent to enter. The tenant must assert this denial of consent\nby giving actual notice of the denial to the landlord or the landlord’s agent\nor by attaching a written notice of the denial in a secure manner to the main\nentrance to that portion of the premises or dwelling unit of which the tenant\nhas exclusive control, prior to or at the time of the attempt by the landlord\nor landlord’s agent to enter.",
+        "use_expression": "the landlord shall give the tenant"
+      },
+      "sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+          "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+          "start": 143749,
+          "end": 144575
+        }
+      },
+      "criteria": {
+        "A": "The resident renting the home from its owner.",
+        "B": "An owner, lessor, sublessor or authorized premises manager.",
+        "NONE": "Neither offered meaning fits."
+      }
+    },
+    {
+      "id": "exp047",
+      "task": "candidate_meaning",
+      "family": "administrative",
+      "source_cluster": "receipt-date",
+      "state": {
+        "term": "date of receipt",
+        "use_passage": "Section 1026.10(a) does not require the creditor to post the payment to the consumer's account on a particular date; the creditor is only required to credit the payment\nas of\nthe date of receipt.",
+        "use_expression": "the date of receipt"
+      },
+      "sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 11314,
+          "end": 11509
+        }
+      },
+      "criteria": {
+        "A": "The date the payment instrument or means reaches the creditor.",
+        "B": "The date a deposited check finally clears.",
+        "NONE": "Neither offered meaning fits."
+      }
+    },
+    {
+      "id": "exp048",
+      "task": "candidate_meaning",
+      "family": "statutory",
+      "source_cluster": "wa-dwelling",
+      "state": {
+        "term": "dwelling unit",
+        "use_passage": "(1) If a governmental agency responsible for the enforcement of a building, housing, or other appropriate code has notified the landlord that a dwelling is condemned or unlawful to occupy due to the existence of conditions that violate applicable codes, statutes, ordinances, or regulations, a landlord shall not enter into a rental agreement for the dwelling unit until the conditions are corrected.",
+        "use_expression": "for the dwelling unit"
+      },
+      "sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 73154,
+          "end": 73554
+        }
+      },
+      "criteria": {
+        "A": "Only the rented site beneath a separately owned manufactured home.",
+        "B": "A residential structure or part of one used as a home or sleeping place.",
+        "NONE": "Neither offered meaning fits."
+      }
+    },
+    {
+      "id": "exp049",
+      "task": "exception_to_requirement",
+      "family": "administrative",
+      "source_cluster": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:hardship_exception",
+      "state": {
+        "requirement": "Reasonable accommodations must be provided to qualified employees regardless of whether they work part- time or full-time, or are considered \"probationary.\" Generally, the individual with a disability must inform the employer that an accommodation is needed.",
+        "candidate": "The only statutory limitation on an employer's obligation to provide \"reasonable accommodation\" is that no such change or modification is required if it would cause \"undue hardship\" to the employer."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 10661,
+          "end": 10919
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 15685,
+          "end": 15883
+        }
+      }
+    },
+    {
+      "id": "exp050",
+      "task": "exception_to_requirement",
+      "family": "administrative",
+      "source_cluster": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:personal",
+      "state": {
+        "requirement": "Reasonable accommodations must be provided to qualified employees regardless of whether they work part- time or full-time, or are considered \"probationary.\" Generally, the individual with a disability must inform the employer that an accommodation is needed.",
+        "candidate": "An employer does not have to provide as reasonable accommodations personal use items needed in accomplishing daily activities both on and off the job. Thus, an employer is not required to provide an employee with a prosthetic limb, a wheelchair, eyeglasses, hearing aids, or similar devices if they are also needed off the job. Furthermore, an employer is not required to provide personal use amenities, such as a hot pot or refrigerator, if those items are not provided to employees without disabilities. However, items that might otherwise be considered personal may be required as reasonable accommodations where they are specifically designed or required to meet job-related rather than personal needs."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 10661,
+          "end": 10919
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 14958,
+          "end": 15664
+        }
+      }
+    },
+    {
+      "id": "exp051",
+      "task": "exception_to_requirement",
+      "family": "administrative",
+      "source_cluster": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:choice",
+      "state": {
+        "requirement": "Reasonable accommodations must be provided to qualified employees regardless of whether they work part- time or full-time, or are considered \"probationary.\" Generally, the individual with a disability must inform the employer that an accommodation is needed.",
+        "candidate": "The employer may choose among reasonable accommodations as long as the chosen accommodation is effective."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 10661,
+          "end": 10919
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 32105,
+          "end": 32210
+        }
+      }
+    },
+    {
+      "id": "exp052",
+      "task": "exception_to_requirement",
+      "family": "administrative",
+      "source_cluster": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:prompt",
+      "state": {
+        "requirement": "Reasonable accommodations must be provided to qualified employees regardless of whether they work part- time or full-time, or are considered \"probationary.\" Generally, the individual with a disability must inform the employer that an accommodation is needed.",
+        "candidate": "An employer should respond expeditiously to a request for reasonable accommodation. If the employer and the individual with a disability need to engage in an interactive process, this too should proceed as quickly as possible."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 10661,
+          "end": 10919
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 35329,
+          "end": 35555
+        }
+      }
+    },
+    {
+      "id": "exp053",
+      "task": "exception_to_requirement",
+      "family": "administrative",
+      "source_cluster": "CFPB_1026_10:creditdate|CFPB_1026_10:webpay",
+      "state": {
+        "requirement": "Section 1026.10(a) does not require the creditor to post the payment to the consumer's account on a particular date; the creditor is only required to credit the payment\nas of\nthe date of receipt.",
+        "candidate": "iv. Payment made via the creditor's Web site is received on the date on which the consumer authorizes the creditor to effect the payment, even if the consumer gives the instruction authorizing that payment in advance of the date on which the creditor is authorized to effect the payment. If the consumer authorizes the creditor to effect the payment immediately, but the consumer's instruction is received after 5 p.m. or any later cut-off time specified by the creditor, the date on which the consumer authorizes the creditor to effect the payment is deemed to be the next business day."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 11314,
+          "end": 11509
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 13463,
+          "end": 14050
+        }
+      }
+    },
+    {
+      "id": "exp054",
+      "task": "exception_to_requirement",
+      "family": "administrative",
+      "source_cluster": "EEOC_ACCOMMODATION:records_base|EEOC_ACCOMMODATION:records_extension",
+      "state": {
+        "requirement": "Employers, however, must keep all employment records, including records of requests for reasonable accommodation, for one year from the making of the record or the personnel action involved, whichever occurs later.",
+        "candidate": "If a charge is filed, records must be preserved until the charge is resolved."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 130276,
+          "end": 130490
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 130491,
+          "end": 130568
+        }
+      }
+    },
+    {
+      "id": "exp055",
+      "task": "exception_to_requirement",
+      "family": "administrative",
+      "source_cluster": "EEOC_CHARGE:epa|EEOC_CHARGE:titlevii",
+      "state": {
+        "requirement": "Keep in mind, Title VII also makes it illegal to discriminate based on sex in the payment of wages and benefits. What this means is, if you have an Equal Pay Act claim, you may also want to file a Title VII claim. In order to pursue a Title VII claim, you must file a charge with EEOC first. Filing a Title VII charge will not extend the deadline for filing an EPA lawsuit. Figuring out how much time you have to file a charge is complicated. It also can be difficult to figure out the pros and cons of filing a charge under the EPA instead of a lawsuit. Our field office staff would be happy to speak with you to explore your options.",
+        "candidate": "If you plan to file a charge alleging a violation of the Equal Pay Act (which prohibits sex discrimination in wages and benefits), different deadlines apply. Under the Equal Pay Act, you don't need to file a charge of discrimination with EEOC. Instead, you are allowed to go directly to court and file a lawsuit. The deadline for filing a charge or lawsuit under the EPA is two years from the day you received the last discriminatory paycheck (this is extended to three years in the case of willful discrimination)."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 6826,
+          "end": 7461
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 6266,
+          "end": 6781
+        }
+      }
+    },
+    {
+      "id": "exp056",
+      "task": "exception_to_requirement",
+      "family": "administrative",
+      "source_cluster": "EEOC_CHARGE:charge180|EEOC_CHARGE:charge300",
+      "state": {
+        "requirement": "In general, you need to file a charge within 180 calendar days from the day the discrimination took place.",
+        "candidate": "The 180 calendar day filing deadline is extended to 300 calendar days if a state or local agency enforces a law that prohibits employment discrimination on the same basis."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 3582,
+          "end": 3688
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 3689,
+          "end": 3860
+        }
+      }
+    },
+    {
+      "id": "exp057",
+      "task": "exception_to_requirement",
+      "family": "judicial",
+      "source_cluster": "BOECHLER:boechler_hold|BOECHLER:boechler_req",
+      "state": {
+        "requirement": "Under §6330(d)(1), Boechler had 30 days to pe-\ntition the Tax Court to review this collection due process\ndetermination.",
+        "candidate": "None of this is to say that Boechler is entitled to equitable\ntolling on the facts of this case. That should be determined\non remand. We simply hold that §6330(d)(1)’s filing dead-\nline, like most others, can be equitably tolled in appropriate\ncases.\n                         *    *    *\n  Section 6330(d)(1)’s 30-day time limit to file a petition for\nreview of a collection due process determination is an ordi-\nnary, nonjurisdictional deadline subject to equitable tolling.\nWe reverse the contrary judgment of the Court of Appeals\nand remand the case for further proceedings consistent\nwith this opinion."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 11337,
+          "end": 11457
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 29417,
+          "end": 30023
+        }
+      }
+    },
+    {
+      "id": "exp058",
+      "task": "exception_to_requirement",
+      "family": "judicial",
+      "source_cluster": "BOECHLER:boechler_def|BOECHLER:boechler_req",
+      "state": {
+        "requirement": "Under §6330(d)(1), Boechler had 30 days to pe-\ntition the Tax Court to review this collection due process\ndetermination.",
+        "candidate": "Jurisdictional requirements mark the bounds of a “court’s\nadjudicatory authority.” Kontrick v. Ryan, 540 U. S. 443,\n455 (2004)."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 11337,
+          "end": 11457
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 11860,
+          "end": 11987
+        }
+      }
+    },
+    {
+      "id": "exp059",
+      "task": "exception_to_requirement",
+      "family": "judicial",
+      "source_cluster": "BOECHLER:boechler_intro|BOECHLER:boechler_req",
+      "state": {
+        "requirement": "Under §6330(d)(1), Boechler had 30 days to pe-\ntition the Tax Court to review this collection due process\ndetermination.",
+        "candidate": "Boechler, P.C., the petitioner in this case, missed the\ndeadline by one day. According to the Commissioner of the\nIRS, this tardiness extinguished Boechler’s opportunity to\nseek review of the agency’s determination. The Commis-\nsioner insists that the deadline is jurisdictional, which\nmeans that the Tax Court has no authority to consider late-\nfiled petitions. And even if it is not jurisdictional, the Com-\nmissioner argues, the Tax Court lacks the power to accept\na tardy filing by applying the doctrine of equitable tolling.\nWe disagree with the Commissioner on both scores."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 11337,
+          "end": 11457
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 9719,
+          "end": 10298
+        }
+      }
+    },
+    {
+      "id": "exp060",
+      "task": "exception_to_requirement",
+      "family": "judicial",
+      "source_cluster": "ARTIS:artis_law|ARTIS:artis_proposal",
+      "state": {
+        "requirement": "Section 1367(d), addressing that issue, provides:\n     “The period of limitations for any [state] claim [joined\n     with a claim within federal-court competence] shall be\n     tolled while the claim is pending [in federal court] and\n     for a period of 30 days after it is dismissed unless State\n     law provides for a longer tolling period.”",
+        "candidate": "The question presented: Does the word “tolled,” as used in\n§ 1367(d), mean the state limitations period is suspended dur-\ning the pendency of the federal suit; or does “tolled” mean\nthat, although the state limitations period continues to run,\na plaintiff is accorded a grace period of 30 days to refle in\nstate court post dismissal of the federal case? Petitioner\nurges the frst, or stop-the-clock, reading. Respondent\nurges, and the District of Columbia Court of Appeals\nadopted, the second, or grace-period, reading."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 9387,
+          "end": 9732
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 9733,
+          "end": 10252
+        }
+      }
+    },
+    {
+      "id": "exp061",
+      "task": "exception_to_requirement",
+      "family": "statutory",
+      "source_cluster": "WASHINGTON_59_18:wa_disaster|WASHINGTON_59_18:wa_relocation",
+      "state": {
+        "requirement": "(3)(a) If a governmental agency responsible for the enforcement of a building, housing, or other appropriate code has notified the landlord that a dwelling will be condemned or will be unlawful to occupy due to the existence of conditions that violate applicable codes, statutes, ordinances, or regulations, a landlord, who knew or should have known of the existence of these conditions, shall be required to pay relocation assistance to the displaced tenants except that:",
+        "candidate": "(ii) A landlord shall not be required to pay relocation assistance to any displaced tenant in a case in which the condemnation or no occupancy order affects one or more dwelling units and results from conditions arising from a natural disaster such as, but not exclusively, an earthquake, tsunami, windstorm, or hurricane; and"
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 74148,
+          "end": 74620
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 74939,
+          "end": 75265
+        }
+      }
+    },
+    {
+      "id": "exp062",
+      "task": "exception_to_requirement",
+      "family": "statutory",
+      "source_cluster": "WASHINGTON_59_18:wa_illegal|WASHINGTON_59_18:wa_relocation",
+      "state": {
+        "requirement": "(3)(a) If a governmental agency responsible for the enforcement of a building, housing, or other appropriate code has notified the landlord that a dwelling will be condemned or will be unlawful to occupy due to the existence of conditions that violate applicable codes, statutes, ordinances, or regulations, a landlord, who knew or should have known of the existence of these conditions, shall be required to pay relocation assistance to the displaced tenants except that:",
+        "candidate": "(i) A landlord shall not be required to pay relocation assistance to any displaced tenant in a case in which the condemnation or no occupancy order affects one or more dwelling units and directly results from conditions caused by a tenant's or any third party's illegal conduct without the landlord's prior knowledge;"
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 74148,
+          "end": 74620
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 74621,
+          "end": 74938
+        }
+      }
+    },
+    {
+      "id": "exp063",
+      "task": "exception_to_requirement",
+      "family": "statutory",
+      "source_cluster": "WASHINGTON_59_18:wa_condemned|WASHINGTON_59_18:wa_damages",
+      "state": {
+        "requirement": "(1) If a governmental agency responsible for the enforcement of a building, housing, or other appropriate code has notified the landlord that a dwelling is condemned or unlawful to occupy due to the existence of conditions that violate applicable codes, statutes, ordinances, or regulations, a landlord shall not enter into a rental agreement for the dwelling unit until the conditions are corrected.",
+        "candidate": "(2) If a landlord knowingly violates subsection (1) of this section, the tenant shall recover either three months' periodic rent or up to treble the actual damages sustained as a result of the violation, whichever is greater, costs of suit, or arbitration and reasonable attorneys' fees. If the tenant elects to terminate the tenancy as a result of the conditions leading to the posting, or if the appropriate governmental agency requires that the tenant vacate the premises, the tenant also shall recover:"
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 73154,
+          "end": 73554
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 73555,
+          "end": 74061
+        }
+      }
+    },
+    {
+      "id": "exp064",
+      "task": "exception_to_requirement",
+      "family": "statutory",
+      "source_cluster": "OREGON_90:or_emergency|OREGON_90:or_entry",
+      "state": {
+        "requirement": "(f) In all other\ncases, unless there is an agreement between the landlord and the tenant to the\ncontrary regarding a specific entry, the landlord shall give the tenant at\nleast 24 hours’ actual notice of the intent of the landlord to enter and the\nlandlord or landlord’s agent may enter only at reasonable times. The landlord\nor landlord’s agent may not enter if the tenant, after receiving the landlord’s\nnotice, denies consent to enter. The tenant must assert this denial of consent\nby giving actual notice of the denial to the landlord or the landlord’s agent\nor by attaching a written notice of the denial in a secure manner to the main\nentrance to that portion of the premises or dwelling unit of which the tenant\nhas exclusive control, prior to or at the time of the attempt by the landlord\nor landlord’s agent to enter.",
+        "candidate": "(b) In case of an\nemergency, a landlord may enter the dwelling unit or any portion of the\npremises under a tenant’s exclusive control without consent of the tenant,\nwithout notice to the tenant and at any time. “Emergency” includes but is not\nlimited to a repair problem that, unless remedied immediately, is likely to\ncause serious damage to the premises. If a landlord makes an emergency entry in\nthe tenant’s absence, the landlord shall give the tenant actual notice within\n24 hours after the entry, and the notice shall include the fact of the entry,\nthe date and time of the entry, the nature of the emergency and the names of\nthe persons who entered."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+          "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+          "start": 143749,
+          "end": 144575
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+          "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+          "start": 140545,
+          "end": 141201
+        }
+      }
+    },
+    {
+      "id": "exp065",
+      "task": "changes_deadline",
+      "family": "administrative",
+      "source_cluster": "EEOC_CHARGE:charge180|EEOC_CHARGE:charge300",
+      "state": {
+        "requirement": "In general, you need to file a charge within 180 calendar days from the day the discrimination took place.",
+        "candidate": "The 180 calendar day filing deadline is extended to 300 calendar days if a state or local agency enforces a law that prohibits employment discrimination on the same basis."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 3582,
+          "end": 3688
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 3689,
+          "end": 3860
+        }
+      }
+    },
+    {
+      "id": "exp066",
+      "task": "changes_deadline",
+      "family": "administrative",
+      "source_cluster": "EEOC_CHARGE:charge180|EEOC_CHARGE:holiday",
+      "state": {
+        "requirement": "In general, you need to file a charge within 180 calendar days from the day the discrimination took place.",
+        "candidate": "Holidays and weekends are included in the calculation, although if the deadline falls on a weekend or holiday, you will have until the next business day. Figuring out how much time you have to file a charge is complicated. If you aren't sure how much time is left, you should contact one of our field offices as soon as possible so we can assess whether you still have time."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 3582,
+          "end": 3688
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 4886,
+          "end": 5260
+        }
+      }
+    },
+    {
+      "id": "exp067",
+      "task": "changes_deadline",
+      "family": "administrative",
+      "source_cluster": "EEOC_CHARGE:charge180|EEOC_CHARGE:grievance",
+      "state": {
+        "requirement": "In general, you need to file a charge within 180 calendar days from the day the discrimination took place.",
+        "candidate": "Time limits for filing a charge with EEOC generally will not be extended while you attempt to resolve a dispute through another forum such as an internal grievance procedure, a union grievance, arbitration or mediation before filing a charge with EEOC. Other forums for resolution may be pursued at the same time as the processing of the EEOC charge."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 3582,
+          "end": 3688
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 4535,
+          "end": 4885
+        }
+      }
+    },
+    {
+      "id": "exp068",
+      "task": "changes_deadline",
+      "family": "administrative",
+      "source_cluster": "EEOC_CHARGE:events|EEOC_CHARGE:harassment",
+      "state": {
+        "requirement": "Also, if more than one discriminatory event took place, the deadline usually applies to each event. For example, let's say you were demoted and then fired a year later. You believe the employer based its decision to demote and fire you on your race, and you file a charge the day after your discharge. In this case, only your claim of discriminatory discharge is timely. In other words, you must have filed a charge challenging the demotion within 180/300 days from the day you were demoted. If you didn't, we would only investigate your discharge. There is one exception to this general rule and that is if you are alleging ongoing harassment.",
+        "candidate": "In harassment cases, you must file your charge within 180 or 300 days of the last incident of harassment, although we will look at all incidents of harassment when investigating your charge, even if the earlier incidents happened more than 180/300 days earlier."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 5310,
+          "end": 5954
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 5974,
+          "end": 6235
+        }
+      }
+    },
+    {
+      "id": "exp069",
+      "task": "changes_deadline",
+      "family": "administrative",
+      "source_cluster": "EEOC_CHARGE:epa_base|EEOC_CHARGE:epa_extension",
+      "state": {
+        "requirement": "The deadline for filing a charge or lawsuit under the EPA is two years from the day you received the last discriminatory paycheck",
+        "candidate": "this is extended to three years in the case of willful discrimination"
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 6579,
+          "end": 6708
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 6710,
+          "end": 6779
+        }
+      }
+    },
+    {
+      "id": "exp070",
+      "task": "changes_deadline",
+      "family": "administrative",
+      "source_cluster": "EEOC_CHARGE:epa_base|EEOC_CHARGE:titlevii",
+      "state": {
+        "requirement": "The deadline for filing a charge or lawsuit under the EPA is two years from the day you received the last discriminatory paycheck",
+        "candidate": "Keep in mind, Title VII also makes it illegal to discriminate based on sex in the payment of wages and benefits. What this means is, if you have an Equal Pay Act claim, you may also want to file a Title VII claim. In order to pursue a Title VII claim, you must file a charge with EEOC first. Filing a Title VII charge will not extend the deadline for filing an EPA lawsuit. Figuring out how much time you have to file a charge is complicated. It also can be difficult to figure out the pros and cons of filing a charge under the EPA instead of a lawsuit. Our field office staff would be happy to speak with you to explore your options."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 6579,
+          "end": 6708
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 6826,
+          "end": 7461
+        }
+      }
+    },
+    {
+      "id": "exp071",
+      "task": "changes_deadline",
+      "family": "administrative",
+      "source_cluster": "EEOC_ACCOMMODATION:records_base|EEOC_ACCOMMODATION:records_extension",
+      "state": {
+        "requirement": "Employers, however, must keep all employment records, including records of requests for reasonable accommodation, for one year from the making of the record or the personnel action involved, whichever occurs later.",
+        "candidate": "If a charge is filed, records must be preserved until the charge is resolved."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 130276,
+          "end": 130490
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 130491,
+          "end": 130568
+        }
+      }
+    },
+    {
+      "id": "exp072",
+      "task": "changes_deadline",
+      "family": "administrative",
+      "source_cluster": "CFPB_1026_10:creditdate|CFPB_1026_10:webpay",
+      "state": {
+        "requirement": "Section 1026.10(a) does not require the creditor to post the payment to the consumer's account on a particular date; the creditor is only required to credit the payment\nas of\nthe date of receipt.",
+        "candidate": "iv. Payment made via the creditor's Web site is received on the date on which the consumer authorizes the creditor to effect the payment, even if the consumer gives the instruction authorizing that payment in advance of the date on which the creditor is authorized to effect the payment. If the consumer authorizes the creditor to effect the payment immediately, but the consumer's instruction is received after 5 p.m. or any later cut-off time specified by the creditor, the date on which the consumer authorizes the creditor to effect the payment is deemed to be the next business day."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 11314,
+          "end": 11509
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 13463,
+          "end": 14050
+        }
+      }
+    },
+    {
+      "id": "exp073",
+      "task": "changes_deadline",
+      "family": "judicial",
+      "source_cluster": "BOECHLER:boechler_hold|BOECHLER:boechler_req",
+      "state": {
+        "requirement": "Under §6330(d)(1), Boechler had 30 days to pe-\ntition the Tax Court to review this collection due process\ndetermination.",
+        "candidate": "None of this is to say that Boechler is entitled to equitable\ntolling on the facts of this case. That should be determined\non remand. We simply hold that §6330(d)(1)’s filing dead-\nline, like most others, can be equitably tolled in appropriate\ncases.\n                         *    *    *\n  Section 6330(d)(1)’s 30-day time limit to file a petition for\nreview of a collection due process determination is an ordi-\nnary, nonjurisdictional deadline subject to equitable tolling.\nWe reverse the contrary judgment of the Court of Appeals\nand remand the case for further proceedings consistent\nwith this opinion."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 11337,
+          "end": 11457
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 29417,
+          "end": 30023
+        }
+      }
+    },
+    {
+      "id": "exp074",
+      "task": "changes_deadline",
+      "family": "judicial",
+      "source_cluster": "BOECHLER:boechler_def|BOECHLER:boechler_req",
+      "state": {
+        "requirement": "Under §6330(d)(1), Boechler had 30 days to pe-\ntition the Tax Court to review this collection due process\ndetermination.",
+        "candidate": "Jurisdictional requirements mark the bounds of a “court’s\nadjudicatory authority.” Kontrick v. Ryan, 540 U. S. 443,\n455 (2004)."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 11337,
+          "end": 11457
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 11860,
+          "end": 11987
+        }
+      }
+    },
+    {
+      "id": "exp075",
+      "task": "changes_deadline",
+      "family": "judicial",
+      "source_cluster": "BOECHLER:boechler_req|FORT_BEND:fort_objection",
+      "state": {
+        "requirement": "Under §6330(d)(1), Boechler had 30 days to pe-\ntition the Tax Court to review this collection due process\ndetermination.",
+        "candidate": "But an objection based on a mandatory claim-\nprocessing rule may be forfeited “if the party asserting the\nrule waits too long to raise the point.” Id., at 15 (quoting\nKontrick, 540 U. S., at 456).5"
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 11337,
+          "end": 11457
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/FORT_BEND.txt",
+          "sha256": "8cd77d55bb52fc77cd21149b7749385fed91c189869a7dd9831a26eed49a2993",
+          "start": 18526,
+          "end": 18723
+        }
+      }
+    },
+    {
+      "id": "exp076",
+      "task": "changes_deadline",
+      "family": "judicial",
+      "source_cluster": "ARTIS:artis_law|ARTIS:artis_three_year",
+      "state": {
+        "requirement": "The D. C. False Claims Act and the tort of wrongful termination each\nhave a three-year statute of limitations that started to run on the day\nArtis lost her job in November 2010. See D. C. Code § 2–381.04(c) (2001)\n(D. C. False Claims Act); Stephenson v. American Dental Assn., 789 A. 2d\n1248, 1249, 1252 (D. C. 2002) (tort of wrongful termination governed by\nthe District's catchall three-year limitations period and claim accrues on\nthe date when plaintiff has unequivocal notice of termination).",
+        "candidate": "Section 1367(d), addressing that issue, provides:\n     “The period of limitations for any [state] claim [joined\n     with a claim within federal-court competence] shall be\n     tolled while the claim is pending [in federal court] and\n     for a period of 30 days after it is dismissed unless State\n     law provides for a longer tolling period.”"
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 18309,
+          "end": 18806
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 9387,
+          "end": 9732
+        }
+      }
+    },
+    {
+      "id": "exp077",
+      "task": "changes_deadline",
+      "family": "statutory",
+      "source_cluster": "OREGON_90:or_email_cancel|OREGON_90:or_mail",
+      "state": {
+        "requirement": "(D) Allows the\nlandlord or tenant to terminate the service of written notice by electronic\nmail or to change their specified electronic mail address for receipt of\nwritten notice by giving no less than three days’ written notice; and",
+        "candidate": "(2) If a notice\nis served by mail under subsection (1)(b) of this section, the minimum period\nfor compliance or termination of tenancy, as appropriate, shall be extended by\nthree days, and the notice shall include the extension in the period provided.",
+        "context": "90.155 Service\nor delivery of written notice.\n(1) Except as provided in ORS 90.300, 90.315, 90.425 and 90.675, where this\nchapter requires written notice, service or delivery of that written notice\nshall be executed by one or more of the following methods:\n(a) Personal\ndelivery to the landlord or tenant.\n(b) First class\nmail to the landlord or tenant.\n(c) If allowed\nunder a written rental agreement, both first class mail and attachment to a\ndesignated location. In order for a written rental agreement to provide for\nmail and attachment service of written notices from the landlord to the tenant,\nthe agreement must also provide for such service of written notices from the\ntenant to the landlord. Mail and attachment service of written notices shall be\nexecuted as follows:\n(A) For written\nnotices from the landlord to the tenant, the first class mail notice copy shall\nbe addressed to the tenant at the premises and the second notice copy shall be\nattached in a secure manner to the main entrance to that portion of the premises\nof which the tenant has possession; and\n(B) For written\nnotices from the tenant to the landlord, the first class mail notice copy shall\nbe addressed to the landlord at an address as designated in the written rental\nagreement and the second notice copy shall be attached in a secure manner to the\nlandlord’s designated location, which shall be described with particularity in\nthe written rental agreement, reasonably located in relation to the tenant and\navailable at all hours.\n(d) Except as\nprovided in subsection (5) of this section, electronic mail, for written\nnotices to the landlord or the tenant, only if allowed under a written addendum\nto the rental agreement that:\n(A) Specifies the\nelectronic mail address from which the landlord agrees to send, and at which\nthe landlord agrees to receive, electronic mail;\n(B) Specifies the\nelectronic mail address from which the tenant agrees to send, and at which the\ntenant agrees to receive, electronic mail;\n(C) Is executed\nby both parties after the tenancy begins and the tenant has occupied the\npremises;\n(D) Allows the\nlandlord or tenant to terminate the service of written notice by electronic\nmail or to change their specified electronic mail address for receipt of\nwritten notice by giving no less than three days’ written notice; and\n(E) Includes\nnotice in substantially the following form:\n______________________________________________________________________________\nTHIS\nIS AN IMPORTANT NOTICE\nABOUT\nYOUR RIGHTS REGARDING\nRECEIPT\nOF WRITTEN NOTICES.\nBy signing this\naddendum, you agree to receive written notices from your landlord by e-mail.\nThis may include important legal notices, including rent increase and tenancy\ntermination notices. Failure to read or respond to a written notice could\nresult in you losing your housing or being unaware of a change in rent. Signing\nthis addendum is voluntary. Only agree to service of written notices\nelectronically if you check your e-mail regularly.\n______________________________________________________________________________\n(2) If a notice\nis served by mail under subsection (1)(b) of this section, the minimum period\nfor compliance or termination of tenancy, as appropriate, shall be extended by\nthree days, and the notice shall include the extension in the period provided.\n(3) A landlord or\ntenant may utilize alternative methods of notifying the other so long as the\nalternative method is in addition to one of the service methods described in\nsubsection (1) of this section.\n(4) After 30 days’\nwritten notice, a landlord may unilaterally amend a rental agreement for a\nmanufactured dwelling or floating home that is subject to ORS 90.505 to 90.850\nto provide for service or delivery of written notices by mail and attachment\nservice as provided by subsection (1)(c) of this section.\n(5) A party to a\nrental agreement may use electronic mail to give a written notice terminating\nthe tenancy only if allowed under subsection (1)(d) of this section and the\ntermination notice is sent by both first class mail and electronic mail. [Formerly\n90.910; 1997 c.577 §6; 2001 c.596 §29a; 2015 c.388 §9; 2019 c.625 §50; 2023\nc.296 §1]"
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+          "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+          "start": 44099,
+          "end": 44332
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+          "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+          "start": 45077,
+          "end": 45328
+        },
+        "context": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+          "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+          "start": 42006,
+          "end": 46180
+        }
+      }
+    },
+    {
+      "id": "exp078",
+      "task": "changes_deadline",
+      "family": "statutory",
+      "source_cluster": "OREGON_90:or_emergency|OREGON_90:or_entry",
+      "state": {
+        "requirement": "(f) In all other\ncases, unless there is an agreement between the landlord and the tenant to the\ncontrary regarding a specific entry, the landlord shall give the tenant at\nleast 24 hours’ actual notice of the intent of the landlord to enter and the\nlandlord or landlord’s agent may enter only at reasonable times. The landlord\nor landlord’s agent may not enter if the tenant, after receiving the landlord’s\nnotice, denies consent to enter. The tenant must assert this denial of consent\nby giving actual notice of the denial to the landlord or the landlord’s agent\nor by attaching a written notice of the denial in a secure manner to the main\nentrance to that portion of the premises or dwelling unit of which the tenant\nhas exclusive control, prior to or at the time of the attempt by the landlord\nor landlord’s agent to enter.",
+        "candidate": "(b) In case of an\nemergency, a landlord may enter the dwelling unit or any portion of the\npremises under a tenant’s exclusive control without consent of the tenant,\nwithout notice to the tenant and at any time. “Emergency” includes but is not\nlimited to a repair problem that, unless remedied immediately, is likely to\ncause serious damage to the premises. If a landlord makes an emergency entry in\nthe tenant’s absence, the landlord shall give the tenant actual notice within\n24 hours after the entry, and the notice shall include the fact of the entry,\nthe date and time of the entry, the nature of the emergency and the names of\nthe persons who entered."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+          "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+          "start": 143749,
+          "end": 144575
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+          "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+          "start": 140545,
+          "end": 141201
+        }
+      }
+    },
+    {
+      "id": "exp079",
+      "task": "changes_deadline",
+      "family": "statutory",
+      "source_cluster": "WASHINGTON_59_18:wa_advance|WASHINGTON_59_18:wa_seven",
+      "state": {
+        "requirement": "(c) The landlord shall pay relocation assistance and any prepaid deposit and prepaid rent to displaced tenants within seven days of the governmental agency sending notice of the condemnation, eviction, or displacement order to the landlord.",
+        "candidate": "If the landlord fails to complete payment of relocation assistance within the period required under this subsection, the city, town, county, or municipal corporation may advance the cost of the relocation assistance payments to the displaced tenants."
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 75889,
+          "end": 76129
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 76447,
+          "end": 76697
+        }
+      }
+    },
+    {
+      "id": "exp080",
+      "task": "changes_deadline",
+      "family": "statutory",
+      "source_cluster": "WASHINGTON_59_18:wa_damages|WASHINGTON_59_18:wa_seven",
+      "state": {
+        "requirement": "(c) The landlord shall pay relocation assistance and any prepaid deposit and prepaid rent to displaced tenants within seven days of the governmental agency sending notice of the condemnation, eviction, or displacement order to the landlord.",
+        "candidate": "(2) If a landlord knowingly violates subsection (1) of this section, the tenant shall recover either three months' periodic rent or up to treble the actual damages sustained as a result of the violation, whichever is greater, costs of suit, or arbitration and reasonable attorneys' fees. If the tenant elects to terminate the tenancy as a result of the conditions leading to the posting, or if the appropriate governmental agency requires that the tenant vacate the premises, the tenant also shall recover:"
+      },
+      "sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 75889,
+          "end": 76129
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 73555,
+          "end": 74061
+        }
+      }
+    },
+    {
+      "id": "exp081",
+      "task": "supports_claim",
+      "family": "administrative",
+      "source_cluster": "EEOC_ACCOMMODATION:hardship",
+      "state": {
+        "claim": "Undue hardship is limited to financial difficulty.",
+        "text": "\"Undue hardship\" means significant difficulty or expense and focuses on the resources and circumstances of the particular employer in relationship to the cost or difficulty of providing a specific accommodation. Undue hardship refers not only to financial difficulty, but to reasonable accommodations that are unduly extensive, substantial, or disruptive, or those that would fundamentally alter the nature or operation of the business."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 15889,
+          "end": 16325
+        }
+      }
+    },
+    {
+      "id": "exp082",
+      "task": "supports_claim",
+      "family": "administrative",
+      "source_cluster": "EEOC_ACCOMMODATION:choice",
+      "state": {
+        "claim": "An employer may choose among reasonable accommodations if the chosen accommodation is effective.",
+        "text": "The employer may choose among reasonable accommodations as long as the chosen accommodation is effective."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 32105,
+          "end": 32210
+        }
+      }
+    },
+    {
+      "id": "exp083",
+      "task": "supports_claim",
+      "family": "administrative",
+      "source_cluster": "EEOC_ACCOMMODATION:personal",
+      "state": {
+        "claim": "An employer is never required to provide an item that might otherwise be considered personal.",
+        "text": "An employer does not have to provide as reasonable accommodations personal use items needed in accomplishing daily activities both on and off the job. Thus, an employer is not required to provide an employee with a prosthetic limb, a wheelchair, eyeglasses, hearing aids, or similar devices if they are also needed off the job. Furthermore, an employer is not required to provide personal use amenities, such as a hot pot or refrigerator, if those items are not provided to employees without disabilities. However, items that might otherwise be considered personal may be required as reasonable accommodations where they are specifically designed or required to meet job-related rather than personal needs."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 14958,
+          "end": 15664
+        }
+      }
+    },
+    {
+      "id": "exp084",
+      "task": "supports_claim",
+      "family": "administrative",
+      "source_cluster": "EEOC_ACCOMMODATION:documentation",
+      "state": {
+        "claim": "An employer cannot ask for documentation when both the disability and need for accommodation are obvious.",
+        "text": "Yes. An employer cannot ask for documentation when: (1) both the disability and the need for reasonable accommodation are obvious, or (2) the individual has already provided the employer with sufficient information to substantiate that s/he has an ADA disability and needs the reasonable accommodation requested."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 29074,
+          "end": 29386
+        }
+      }
+    },
+    {
+      "id": "exp085",
+      "task": "supports_claim",
+      "family": "administrative",
+      "source_cluster": "CFPB_1026_10:provider_no",
+      "state": {
+        "claim": "The consumer-side money transfer service in this example is a creditor for purposes of paragraph(e).",
+        "text": "ii. Assume that a consumer pays a fee to a money transfer or payment service in order to transmit a payment to the creditor on the consumer's behalf. In these circumstances, the money transfer or payment service would not be considered a creditor for purposes of paragraph (e)."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 25500,
+          "end": 25777
+        }
+      }
+    },
+    {
+      "id": "exp086",
+      "task": "supports_claim",
+      "family": "administrative",
+      "source_cluster": "CFPB_1026_2:business",
+      "state": {
+        "claim": "Under the precise rule described, July3 is a business day when July4 falls on Saturday.",
+        "text": "A more precise rule for what is a business day (all calendar days except Sundays and the Federal legal holidays specified in 5 U.S.C. 6103(a)) applies when the right of rescission, the receipt of disclosures for certain dwelling- or real estate-secured mortgage transactions under §§ 1026.19(a)(1)(ii), 1026.19(a)(2), 1026.19(e)(1)(iii)(B), 1026.19(e)(1)(iv), 1026.19(e)(2)(i)(A), 1026.19(e)(4)(ii), 1026.19(f)(1)(ii), 1026.19(f)(1)(iii), 1026.20(e)(5), 1026.31(c), or the receipt of disclosures for private education loans under § 1026.46(d)(4) is involved. Four Federal legal holidays are identified in 5 U.S.C. 6103(a) by a specific date: New Year's Day, January 1; Independence Day, July 4; Veterans Day, November 11; and Christmas Day, December 25. When one of these holidays (July 4, for example) falls on a Saturday, Federal offices and other entities might observe the holiday on the preceding Friday (July 3). In cases where the more precise rule applies, the observed holiday (in the example, July 3) is a business day."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_2.txt",
+          "sha256": "28c3f5e5f0d20bfe4ac92580c6a8e4370e87363869ad6605e1361f5bc27efa73",
+          "start": 22226,
+          "end": 23255
+        }
+      }
+    },
+    {
+      "id": "exp087",
+      "task": "supports_claim",
+      "family": "administrative",
+      "source_cluster": "EEOC_CHARGE:charge",
+      "state": {
+        "claim": "A local age-discrimination law alone extends the age charge deadline to300days.",
+        "text": "The anti-discrimination laws give you a limited amount of time to file a charge of discrimination. In general, you need to file a charge within 180 calendar days from the day the discrimination took place. The 180 calendar day filing deadline is extended to 300 calendar days if a state or local agency enforces a law that prohibits employment discrimination on the same basis. The rules are slightly different for age discrimination charges. For age discrimination, the filing deadline is only extended to 300 days if there is a\nstate\nlaw prohibiting age discrimination in employment and a state agency or authority enforcing that law. The deadline is\nnot\nextended if\nonly\na local law prohibits age discrimination."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 3483,
+          "end": 4198
+        }
+      }
+    },
+    {
+      "id": "exp088",
+      "task": "supports_claim",
+      "family": "administrative",
+      "source_cluster": "EEOC_CHARGE:epa",
+      "state": {
+        "claim": "An Equal Pay Act claimant is allowed to go directly to court without filing an EEOC charge.",
+        "text": "If you plan to file a charge alleging a violation of the Equal Pay Act (which prohibits sex discrimination in wages and benefits), different deadlines apply. Under the Equal Pay Act, you don't need to file a charge of discrimination with EEOC. Instead, you are allowed to go directly to court and file a lawsuit. The deadline for filing a charge or lawsuit under the EPA is two years from the day you received the last discriminatory paycheck (this is extended to three years in the case of willful discrimination)."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 6266,
+          "end": 6781
+        }
+      }
+    },
+    {
+      "id": "exp089",
+      "task": "supports_claim",
+      "family": "judicial",
+      "source_cluster": "BOECHLER:boechler_hold",
+      "state": {
+        "claim": "The Court held that Boechler itself was entitled to equitable tolling on these facts.",
+        "text": "None of this is to say that Boechler is entitled to equitable\ntolling on the facts of this case. That should be determined\non remand. We simply hold that §6330(d)(1)’s filing dead-\nline, like most others, can be equitably tolled in appropriate\ncases.\n                         *    *    *\n  Section 6330(d)(1)’s 30-day time limit to file a petition for\nreview of a collection due process determination is an ordi-\nnary, nonjurisdictional deadline subject to equitable tolling.\nWe reverse the contrary judgment of the Court of Appeals\nand remand the case for further proceedings consistent\nwith this opinion."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 29417,
+          "end": 30023
+        }
+      }
+    },
+    {
+      "id": "exp090",
+      "task": "supports_claim",
+      "family": "judicial",
+      "source_cluster": "BOECHLER:boechler_intro",
+      "state": {
+        "claim": "The Commissioner argued that the Tax Court lacked power to accept a tardy filing through equitable tolling.",
+        "text": "Boechler, P.C., the petitioner in this case, missed the\ndeadline by one day. According to the Commissioner of the\nIRS, this tardiness extinguished Boechler’s opportunity to\nseek review of the agency’s determination. The Commis-\nsioner insists that the deadline is jurisdictional, which\nmeans that the Tax Court has no authority to consider late-\nfiled petitions. And even if it is not jurisdictional, the Com-\nmissioner argues, the Tax Court lacks the power to accept\na tardy filing by applying the doctrine of equitable tolling.\nWe disagree with the Commissioner on both scores."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 9719,
+          "end": 10298
+        }
+      }
+    },
+    {
+      "id": "exp091",
+      "task": "supports_claim",
+      "family": "judicial",
+      "source_cluster": "ARTIS:artis_proposal",
+      "state": {
+        "claim": "The Supreme Court adopted the grace-period interpretation in this passage.",
+        "text": "The question presented: Does the word “tolled,” as used in\n§ 1367(d), mean the state limitations period is suspended dur-\ning the pendency of the federal suit; or does “tolled” mean\nthat, although the state limitations period continues to run,\na plaintiff is accorded a grace period of 30 days to refle in\nstate court post dismissal of the federal case? Petitioner\nurges the frst, or stop-the-clock, reading. Respondent\nurges, and the District of Columbia Court of Appeals\nadopted, the second, or grace-period, reading."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 9733,
+          "end": 10252
+        }
+      }
+    },
+    {
+      "id": "exp092",
+      "task": "supports_claim",
+      "family": "judicial",
+      "source_cluster": "ARTIS:artis_def",
+      "state": {
+        "claim": "The Court holds that the statutory instruction to toll means stopping the limitations clock.",
+        "text": "We hold that § 1367(d)'s instruction to “toll” a\nstate limitations period means to hold it in abeyance, i. e., to\nstop the clock."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 10863,
+          "end": 10992
+        }
+      }
+    },
+    {
+      "id": "exp093",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "WASHINGTON_59_18:wa_relocation",
+      "state": {
+        "claim": "Every landlord must pay relocation assistance whenever a unit is condemned.",
+        "text": "(3)(a) If a governmental agency responsible for the enforcement of a building, housing, or other appropriate code has notified the landlord that a dwelling will be condemned or will be unlawful to occupy due to the existence of conditions that violate applicable codes, statutes, ordinances, or regulations, a landlord, who knew or should have known of the existence of these conditions, shall be required to pay relocation assistance to the displaced tenants except that:"
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 74148,
+          "end": 74620
+        }
+      }
+    },
+    {
+      "id": "exp094",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "WASHINGTON_59_18:wa_disaster",
+      "state": {
+        "claim": "The specified natural-disaster condemnation condition excuses relocation assistance.",
+        "text": "(ii) A landlord shall not be required to pay relocation assistance to any displaced tenant in a case in which the condemnation or no occupancy order affects one or more dwelling units and results from conditions arising from a natural disaster such as, but not exclusively, an earthquake, tsunami, windstorm, or hurricane; and"
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 74939,
+          "end": 75265
+        }
+      }
+    },
+    {
+      "id": "exp095",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "OREGON_90:or_emergency",
+      "state": {
+        "claim": "Emergency entry always requires24hours of advance notice.",
+        "text": "(b) In case of an\nemergency, a landlord may enter the dwelling unit or any portion of the\npremises under a tenant’s exclusive control without consent of the tenant,\nwithout notice to the tenant and at any time. “Emergency” includes but is not\nlimited to a repair problem that, unless remedied immediately, is likely to\ncause serious damage to the premises. If a landlord makes an emergency entry in\nthe tenant’s absence, the landlord shall give the tenant actual notice within\n24 hours after the entry, and the notice shall include the fact of the entry,\nthe date and time of the entry, the nature of the emergency and the names of\nthe persons who entered."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+          "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+          "start": 140545,
+          "end": 141201
+        }
+      }
+    },
+    {
+      "id": "exp096",
+      "task": "supports_claim",
+      "family": "statutory",
+      "source_cluster": "OREGON_90:or_mail",
+      "state": {
+        "claim": "First-class-mail service under the specified subsection extends the compliance or termination period by three days.",
+        "text": "90.155 Service\nor delivery of written notice.\n(1) Except as provided in ORS 90.300, 90.315, 90.425 and 90.675, where this\nchapter requires written notice, service or delivery of that written notice\nshall be executed by one or more of the following methods:\n(a) Personal\ndelivery to the landlord or tenant.\n(b) First class\nmail to the landlord or tenant.\n(c) If allowed\nunder a written rental agreement, both first class mail and attachment to a\ndesignated location. In order for a written rental agreement to provide for\nmail and attachment service of written notices from the landlord to the tenant,\nthe agreement must also provide for such service of written notices from the\ntenant to the landlord. Mail and attachment service of written notices shall be\nexecuted as follows:\n(A) For written\nnotices from the landlord to the tenant, the first class mail notice copy shall\nbe addressed to the tenant at the premises and the second notice copy shall be\nattached in a secure manner to the main entrance to that portion of the premises\nof which the tenant has possession; and\n(B) For written\nnotices from the tenant to the landlord, the first class mail notice copy shall\nbe addressed to the landlord at an address as designated in the written rental\nagreement and the second notice copy shall be attached in a secure manner to the\nlandlord’s designated location, which shall be described with particularity in\nthe written rental agreement, reasonably located in relation to the tenant and\navailable at all hours.\n(d) Except as\nprovided in subsection (5) of this section, electronic mail, for written\nnotices to the landlord or the tenant, only if allowed under a written addendum\nto the rental agreement that:\n(A) Specifies the\nelectronic mail address from which the landlord agrees to send, and at which\nthe landlord agrees to receive, electronic mail;\n(B) Specifies the\nelectronic mail address from which the tenant agrees to send, and at which the\ntenant agrees to receive, electronic mail;\n(C) Is executed\nby both parties after the tenancy begins and the tenant has occupied the\npremises;\n(D) Allows the\nlandlord or tenant to terminate the service of written notice by electronic\nmail or to change their specified electronic mail address for receipt of\nwritten notice by giving no less than three days’ written notice; and\n(E) Includes\nnotice in substantially the following form:\n______________________________________________________________________________\nTHIS\nIS AN IMPORTANT NOTICE\nABOUT\nYOUR RIGHTS REGARDING\nRECEIPT\nOF WRITTEN NOTICES.\nBy signing this\naddendum, you agree to receive written notices from your landlord by e-mail.\nThis may include important legal notices, including rent increase and tenancy\ntermination notices. Failure to read or respond to a written notice could\nresult in you losing your housing or being unaware of a change in rent. Signing\nthis addendum is voluntary. Only agree to service of written notices\nelectronically if you check your e-mail regularly.\n______________________________________________________________________________\n(2) If a notice\nis served by mail under subsection (1)(b) of this section, the minimum period\nfor compliance or termination of tenancy, as appropriate, shall be extended by\nthree days, and the notice shall include the extension in the period provided."
+      },
+      "sources": {
+        "text": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+          "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+          "start": 42006,
+          "end": 45328
+        }
+      }
+    }
+  ]
+}

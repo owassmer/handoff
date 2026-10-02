@@ -1,0 +1,473 @@
+    <!-- #region Login -->
+    <!-- #endregion -->
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head id="Head1">
+		    <title>&#167; 55.1-1226. Security deposits</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<link rel="apple-touch-icon" href="./images/favicon-law16.png" sizes="16x16" />
+		<link rel="apple-touch-icon" href="./images/favicon-law32.png" sizes="32x32" />
+        <script src="/Scripts/session.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="/Content/base.css" type="text/css" media="all" />
+		<!--[if lt IE 9 ]><link rel="stylesheet" href="./Content/720_grid.css" type="text/css" /><![endif]-->
+		<link rel="stylesheet" href="/Content/720_grid.css" type="text/css" media="screen and (min-width: 720px)" />
+		<link rel="stylesheet" href="/Content/986_grid.css" type="text/css" media="screen and (min-width: 986px)" />
+		<link rel="stylesheet" href="/Content/1236_grid.css" media="screen and (min-width: 1236px)" />
+		<link rel="stylesheet" href="/Content/font-awesome.min.css" />
+		<link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css' />
+		<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Serif:r,i,400,700" />
+		
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,700,300,300italic,400italic,700italic' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="/Content/jquery.fancybox.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="/Content/jquery.qtip.min.css" type="text/css" media="all" />
+		
+		<meta name='docid' content='281830' /><meta name='title' content='Title 55.1. Property and Conveyances' /><meta name='COVtitle' content='Title 55.1. Property and Conveyances' /><meta name='subject' content='' /><meta name='subject' content='' />
+
+		<style type="text/css">.fancybox-margin {margin-right: 0px;}</style>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-F6YYKCXH17"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-F6YYKCXH17');
+        </script>
+        <script src="/Scripts/jquery.min.js" type="text/javascript"></script>
+        <script src="/Scripts/jquery-ui.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $('document').ready(function () {
+                $('#print').attr("aria-label", "Print Button");
+                $('#txtsearch-in').attr("aria-label", "Search within the current selection");
+                
+                $("#mobile-menu-toggle").click(function () {
+                    $("#section-menu").toggleClass("open");
+                    $(".mobile-overlay").toggleClass("open");
+                });
+
+                $(".mobile-overlay").click(function () {
+                    $("#section-menu").removeClass("open");
+                    $(".mobile-overlay").removeClass("open");
+                });
+            });
+        </script>
+        <script>
+            $(function () {
+                var searchList = document.getElementById("searchList");
+                if (!searchList.length) {
+                    return;
+                }
+
+                var path = (window.location.pathname || "").toLowerCase();
+                var selectedValue = "all";
+                document.getElementById("searchList").value = "LAW";
+
+                if (path.includes("/admincode")) {
+                    selectedValue = "admin";
+                    document.getElementById("searchBtn").value = "Administrative_Code";
+                } else if (path.includes("/constitution")) {
+                    selectedValue = "constitution";
+                    document.getElementById("searchBtn").value = "Constitution";
+                } else if (path.includes("/vacode")) {
+                    selectedValue = "code";
+                    document.getElementById("searchBtn").value = "Code_of_Virginia";
+                } else if (path.includes("/charters")) {
+                    selectedValue = "charters";
+                    document.getElementById("searchBtn").value = "Charters";
+                } else if (path.includes("/authorities")) {
+                    selectedValue = "authorities";
+                    document.getElementById("searchBtn").value = "Authorities";
+                } else if (path.includes("/compacts")) {
+                    selectedValue = "compacts";
+                    document.getElementById("searchBtn").value = "Compacts";
+                } else if (path.includes("/uncodifiedacts")) {
+                    selectedValue = "uncodified";
+                    document.getElementById("searchBtn").value = "Uncodified_Acts";
+                }
+
+                searchList.querySelectorAll("option").forEach(function(option) {
+                    option.selected = false;
+                });
+                var selectedOption = searchList.querySelector('option[value="' + selectedValue + '"]');
+                if (selectedOption) {
+                    selectedOption.selected = true;
+                }
+            });
+        </script>
+	</head>
+
+<body>
+    <input aria-hidden="true" type="text" style="width:0;height:0;visibility:hidden;position:absolute;left:0;top:0" /> 
+    <input aria-hidden="true" type="password" style="width:0;height:0;visibility:hidden;position:absolute;left:0;top:0" />
+    <input aria-hidden="true" type="hidden" id="hidSignIn" value="0" />
+    
+    
+    <div class="mobile-overlay"></div>
+    <div class="top-bar"></div>
+    <header>
+        <nav>
+            <div class="lis-links-content full">
+                <ul>
+                    <li><a href="https://virginiageneralassembly.gov/">Virginia General Assembly</a> /</li>
+                    <li><a href="https://help.lis.virginia.gov">LIS Learning Center</a> /</li>
+                    <li><a href="https://lis.virginia.gov/privacy">Privacy Policy</a> /</li>
+                    <li><a href="https://lis.virginia.gov">LIS home</a> /</li>
+                    <li><a href="https://lis.virginia.gov/register-account">Register Account</a> /</li>
+                    <li><a href="https://lis.virginia.gov/login">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="grid-wrapper one-and-three halves">
+        
+			<a href="https://lis.virginia.gov" id="logo-link">
+				<img alt="LIS Logo" src="/images/lis_logo.png" /> 
+			</a>
+		
+        <div class="portal-links">
+            <ul>
+                <li>
+                    <a class="txt-blue" href="https://lis.virginia.gov">Session Information</a>
+                </li>
+                <li>
+                    <a class="txt-dark-blue" href="https://lis.virginia.gov/bill-search">Bills & Resolutions</a>
+                </li>
+                <li>
+                    <a class="txt-green" href="https://budget.lis.virginia.gov/default/2025/1">State Budget</a>
+                </li>
+                <li>
+                    <a class="txt-light-green" href="https://law.lis.virginia.gov/">Virginia Law</a>
+                </li>
+                <li>
+                    <a class="txt-orange" href="https://rga.lis.virginia.gov/">Reports to the General Assembly</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mobile-menu">
+            <i id="mobile-menu-toggle" class="fa fa-bars"></i>
+        </div>
+    </div>
+        
+        
+        <div class="va-law">
+            <div class="grid">
+                <div class="row">
+                    <div class="slot-0-1-2">
+                        <h1><a href="https://law.lis.virginia.gov">Virginia Law</a></h1>
+                    </div>
+                    <div class="slot-3-4-5">
+                        <div class="input-group .search-comp ">
+                            <div class="input-group-btn">
+                                <label for="searchList" class="sr-only">Select Search Type</label>
+                                <select id="searchList" name="searchTypeSelect" class="btn input-sm btn-default dropdown-toggle" aria-label="Select Search Type">
+                                    <option value="all">All</option>
+                                    <option value="code">Code of Virginia</option>
+                                    <option value="admin">Administrative Code</option>
+                                    <option value="constitution">Constitution</option>
+                                    <option value="charters">Charters</option>
+                                    <option value="authorities">Authorities</option>
+                                    <option value="compacts">Compacts</option>
+                                    <option value="uncodified">Uncodified Acts</option>
+                                </select>
+                            </div>
+                            <input aria-label="search input" type="text" id="txtSearch" class="form-control input-sm" placeholder="Search" />
+                            <span class="input-group-btn">
+                                <button aria-label="search button" class="btn btn-sm btn-default" id="searchBtn" type="submit" value="LAW">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                        <!-- /input-group -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="grid">
+            <!-- #region Variables -->
+<!-- #endregion -->
+<!-- #region Highlights -->
+<!-- #endregion -->
+<!-- #region Build Pages -->
+<!-- #endregion -->
+
+
+<body class="flipcol ">
+	<input type="hidden" id="hidST" />
+	<input type="hidden" id="hidToC" value="1" />
+	<input type="hidden" id="hidID" />
+	<input type="hidden" id="hidNote"/>
+	<input type="hidden" id="hidBiP" value="false" />
+	<input type="hidden" id="hidReport" value="0" />
+	<input type="hidden" id="hidSegments" value="55.1-1226" />
+    <input type="hidden" id="hidPage" value="vacode" />
+	<div class="grid">
+		<div class="row">
+			<div class="slot-6-7-8">
+				<section id="pageTitle"><h2 class='pg-title'>Code of Virginia</h2></section>
+				<section class="breadcrumbs" id="breadcrumbs"><p><a href='/vacode/'>Table of Contents</a> &raquo; <a href='/vacode/title55.1/'>Title 55.1. Property and Conveyances</a> &raquo; <a href='/vacode/title55.1#subtitleIII/'>Subtitle III. Rental Conveyances</a>  &raquo; <a href='/vacode/title55.1/chapter12/'>Chapter 12. Virginia Residential Landlord and Tenant Act</a>  &raquo; <a href='/vacode/title55.1/chapter12#article2/'>Article 2. Landlord Obligations</a>  &raquo; <span class='breadcrumb-inactive'>§ 55.1-1226. Security deposits</span></p></section>
+				<section class="content-header-menu" id="menucontainer">
+					<nav class="content-header-menu-left"><ul><li><a title='§ 55.1-1225. Tenancy at will; effect of notice of change of terms or provisions of tenancy' href='/vacode/title55.1/chapter12/section55.1-1225/''><i class='fa fa-long-arrow-left'></i></a> Section <a title='§ 55.1-1227. Tenant to maintain dwelling unit' href='/vacode/title55.1/chapter12/section55.1-1227/''><i class='fa fa-long-arrow-right'></i></a></li></ul></nav>
+					<a href="#" class="scroll_top" aria-hidden="true"><i class="fa fa-arrow-up"></i></a>
+					<nav class="content-header-menu-middle"><ul><li><span id='printIE' class='printPDF'><a id='A1' onclick='PrintPreview();' title='Print page' href=''><i class='fa fa-print'></i> Print</a></span></li><li><a id='A3' data-section='vacode/55.1-1226' title='Download PDF' href=''><i class='fa fa-file-text'></i> PDF</a></li><li><a class='fancybox fancybox.iframe' href='/emailForm'><i class='fa fa-envelope'></i> email</a></li></ul></nav>
+							<nav class="content-header-menu-right"></nav>
+
+				</section>
+				<p class="sidenote alert rptCheckbox"><strong>Creating a Report:</strong> Check the sections you'd like to appear in the report, then use the "Create Report" button at the bottom of the page to generate your report. Once the report is generated you'll then have the option to download it as a pdf, print or email the report.</p>
+				<article id="vacode" class="content">
+					<div id="printStuff"><div id='printHeader'>Code of Virginia<br/>Title 55.1. Property and Conveyances<br/>Chapter 12. Virginia Residential Landlord and Tenant Act</div><div id='printDate'>10/1/2026</div></div>
+					<span id='va_code' class="content"><!--googleon: index--><h2> <span id='v0'>§ 55.1-1226</span>. Security deposits.</h2><section class='body editable' id='edit39374' data-table='CoV' data-field='body'><p>A. No landlord may demand or receive a security deposit, however denominated, in an amount or value in excess of two months' periodic rent. Upon termination of the tenancy or the date the tenant vacates the dwelling unit, whichever occurs last, such security deposit, whether it is property or money held by the landlord as security as provided in this section, may be applied by the landlord solely to (i) the payment of accrued rent, including the reasonable charges for late payment of rent specified in the rental agreement; (ii) the payment of the amount of damages that the landlord has suffered by reason of the tenant's noncompliance with § <a href='/vacode/55.1-1227/'>55.1-1227</a>, less reasonable wear and tear; (iii) other damages or charges as provided in the rental agreement; or (iv) actual damages for breach of the rental agreement pursuant to § <a href='/vacode/55.1-1251/'>55.1-1251</a>. The security deposit and any deductions, damages, and charges shall be itemized by the landlord in a written notice given to the tenant, together with any amount due to the tenant, within 45 days after the termination date of the tenancy or the date the tenant vacates the dwelling unit, whichever occurs last. As of the date of the termination of the tenancy or the date the tenant vacates the dwelling unit, whichever occurs last, the tenant shall be required to deliver possession of the dwelling unit to the landlord. If the termination date is prior to the expiration of the rental agreement or any renewal thereof, or the tenant has not given proper notice of termination of the rental agreement, the tenant shall be liable for actual damages pursuant to § <a href='/vacode/55.1-1251/'>55.1-1251</a>, in which case, the landlord shall give written notice of security deposit disposition within the 45-day period but may retain any security balance to apply against any financial obligations of the tenant to the landlord pursuant to this chapter or the rental agreement. If the tenant fails to vacate the dwelling unit as of the termination of the tenancy, the landlord may file an unlawful detainer action pursuant to § <a href='/vacode/8.01-126/'>8.01-126</a>.</p><p>B. Where there is more than one tenant subject to a rental agreement, unless otherwise agreed to in writing by each of the tenants, disposition of the security deposit shall be made with one check being payable to all such tenants and sent to a forwarding address provided by one of the tenants. The landlord shall make the security deposit disposition within the 45-day time period required by subsection A, but if no forwarding address is provided to the landlord, the landlord may continue to hold such security deposit in escrow. If a tenant fails to provide a forwarding address to the landlord to enable the landlord to make a refund of the security deposit, upon the expiration of one year from the date of the end of the 45-day time period, the landlord may remit such sum to the State Treasurer as unclaimed property on a form prescribed by the administrator that includes the name; social security number, if known; and last known address of each tenant on the rental agreement. If the landlord or managing agent is a real estate licensee, compliance with this subsection shall be deemed compliance with § <a href='/vacode/54.1-2108/'>54.1-2108</a> and corresponding regulations of the Real Estate Board.</p><p>C. Nothing in this section shall be construed by a court of law or otherwise as entitling the tenant, upon the termination of the tenancy, to an immediate credit against the tenant's delinquent rent account in the amount of the security deposit. The landlord shall apply the security deposit in accordance with this section within the 45-day time period required by subsection A. However, provided that the landlord has given prior written notice in accordance with this section, the landlord may withhold a reasonable portion of the security deposit to cover an amount of the balance due on the water, sewer, or other utility account that is an obligation of the tenant to a third-party provider under the rental agreement for the dwelling unit, and upon payment of such obligations the landlord shall provide written confirmation to the tenant within 10 days, along with payment to the tenant of any balance otherwise due to the tenant. In order to withhold such funds as part of the disposition of the security deposit, the landlord shall have so advised the tenant of his rights and obligations under this section in (i) a termination notice to the tenant in accordance with this chapter, (ii) a written notice to the tenant confirming the vacating date in accordance with this section, or (iii) a separate written notice to the tenant at least 15 days prior to the disposition of the security deposit. Any written notice to the tenant shall be given in accordance with § <a href='/vacode/55.1-1202/'>55.1-1202</a>.</p><p>The tenant may provide the landlord with written confirmation of the payment of the final water, sewer, or other utility bill for the dwelling unit, in which case the landlord shall refund the security deposit, unless there are other authorized deductions, within the 45-day period required by subsection A. If the tenant provides such written confirmation after the expiration of the 45-day period, the landlord shall refund any remaining balance of the security deposit held to the tenant within 10 days following the receipt of such written confirmation provided by the tenant. If the landlord otherwise receives confirmation of payment of the final water, sewer, or other utility bill for the dwelling unit, the landlord shall refund the security deposit, unless there are other authorized deductions, within the 45-day period.</p><p>D. Nothing in this section shall be construed to prohibit the landlord from making the disposition of the security deposit prior to the 45-day period required by subsection A and charging an administrative fee to the tenant for such expedited processing, if the rental agreement so provides and the tenant requests expedited processing in a separate written document.</p><p>E. The landlord shall notify the tenant in writing of any deductions provided by this section to be made from the tenant's security deposit during the course of the tenancy. Such notification shall be made within 30 days of the date of the determination of the deduction and shall itemize the reasons in the same manner as provided in subsection F. No such notification shall be required for deductions made less than 30 days prior to the termination of the rental agreement. If the landlord willfully fails to comply with this section, the court shall order the return of the security deposit to the tenant, together with actual damages and reasonable attorney fees, unless the tenant owes rent to the landlord, in which case the court shall order an amount equal to the security deposit credited against the rent due to the landlord. In the event that damages to the premises exceed the amount of the security deposit and require the services of a third-party contractor, the landlord shall give written notice to the tenant advising him of that fact within the 45-day period required by subsection A. If notice is given as prescribed in this subsection, the landlord shall have an additional 15-day period to provide an itemization of the damages and the cost of repair. This section shall not preclude the landlord or tenant from recovering other damages to which he may be entitled under this chapter. The holder of the landlord's interest in the premises at the time of the termination of the tenancy, regardless of how the interest is acquired or transferred, is bound by this section and shall be required to return any security deposit received by the original landlord that is duly owed to the tenant, whether or not such security deposit is transferred with the landlord's interest by law or equity, regardless of any contractual agreements between the original landlord and his successors in interest.</p><p>F. The landlord shall:</p><p>1. Maintain and itemize records for each tenant of all deductions from security deposits provided for under this section that the landlord has made by reason of a tenant's noncompliance with § <a href='/vacode/55.1-1227/'>55.1-1227</a>, or for any other reason set out in this section, during the preceding two years; and</p><p>2. Permit a tenant or his authorized agent or attorney to inspect such tenant's records of deductions at any time during normal business hours.</p><p>G. Upon request by the landlord to a tenant to vacate, or within five days after receipt of notice by the landlord of the tenant's intent to vacate, the landlord shall provide written notice to the tenant of the tenant's right to be present at the landlord's inspection of the dwelling unit for the purpose of determining the amount of security deposit to be returned. If the tenant desires to be present when the landlord makes the inspection, he shall, in writing, so advise the landlord, who in turn shall notify the tenant of the date and time of the inspection, which must be made within 72 hours of delivery of possession. Following the move-out inspection, the landlord shall provide the tenant with a written security deposit disposition statement, including an itemized list of damages. If additional damages are discovered by the landlord after the security deposit disposition has been made, nothing in this section shall be construed to preclude the landlord from recovery of such damages against the tenant, provided, however, that the tenant may present into evidence a copy of the move-out report to support the tenant's position that such additional damages did not exist at the time of the move-out inspection.</p><p>H. If the tenant has any assignee or sublessee, the landlord shall be entitled to hold a security deposit from only one party in compliance with the provisions of this section.</p><p>I. The landlord may permit a tenant to provide damage insurance coverage in lieu of the payment of a security deposit. Such damage insurance in lieu of a security deposit shall conform to the following criteria:</p><p>1. The provider of damage insurance is licensed or approved by the Virginia State Corporation Commission;</p><p>2. The coverage is effective upon the payment of the first premium and remains effective for the entire lease term;</p><p>3. The coverage provided per claim is no less than the amount the landlord requires for security deposits;</p><p>4. The provider of damage insurance agrees to approve or deny payment of a claim; and</p><p>5. The provider of damage insurance shall notify the landlord within 10 days if the damage policy lapses or is canceled.</p><p>J. A tenant who initially opts to provide damage insurance in lieu of a security deposit may, at any time without consent of the landlord, opt to pay the full security deposit to the landlord in lieu of maintaining a damage insurance policy. The landlord shall not alter the terms of the lease in the event a tenant opts to pay the full amount of the security deposit pursuant to this subsection.</p><p>2000, cc. <a href='http://LegacyLIS.virginia.gov/cgi-bin/legp604.exe?001+ful+CHAP0760'>760</a>, <a href='http://LegacyLIS.virginia.gov/cgi-bin/legp604.exe?001+ful+CHAP0761'>761</a>, § 55-248.15:1; 2001, c. <a href='http://LegacyLIS.virginia.gov/cgi-bin/legp604.exe?011+ful+CHAP0524'>524</a>; 2003, c. <a href='http://LegacyLIS.virginia.gov/cgi-bin/legp604.exe?031+ful+CHAP0438'>438</a>; 2007, c. <a href='http://LegacyLIS.virginia.gov/cgi-bin/legp604.exe?071+ful+CHAP0634'>634</a>; 2010, c. <a href='http://LegacyLIS.virginia.gov/cgi-bin/legp604.exe?101+ful+CHAP0550'>550</a>; 2013, c. <a href='http://LegacyLIS.virginia.gov/cgi-bin/legp604.exe?131+ful+CHAP0563'>563</a>; 2014, c. <a href='http://LegacyLIS.virginia.gov/cgi-bin/legp604.exe?141+ful+CHAP0651'>651</a>; 2015, c. <a href='http://LegacyLIS.virginia.gov/cgi-bin/legp604.exe?151+ful+CHAP0596'>596</a>; 2017, c. <a href='http://LegacyLIS.virginia.gov/cgi-bin/legp604.exe?171+ful+CHAP0730'>730</a>; 2018, c. <a href='http://LegacyLIS.virginia.gov/cgi-bin/legp604.exe?181+ful+CHAP0221'>221</a>; 2019, c. <a href='http://LegacyLIS.virginia.gov/cgi-bin/legp604.exe?191+ful+CHAP0712'>712</a>; 2020, cc. <a href='http://LegacyLIS.virginia.gov/cgi-bin/legp604.exe?201+ful+CHAP0384'>384</a>, <a href='http://LegacyLIS.virginia.gov/cgi-bin/legp604.exe?201+ful+CHAP0823'>823</a>, <a href='http://LegacyLIS.virginia.gov/cgi-bin/legp604.exe?201+ful+CHAP0998'>998</a>; 2021, Sp. Sess. I, c. <a href='http://LegacyLIS.virginia.gov/cgi-bin/legp604.exe?212+ful+CHAP0427'>427</a>; 2023, cc. <a href='http://LegacyLIS.virginia.gov/cgi-bin/legp604.exe?231+ful+CHAP0433'>433</a>, <a href='http://LegacyLIS.virginia.gov/cgi-bin/legp604.exe?231+ful+CHAP0434'>434</a>.</p></section><input type='hidden' class='dataType' id='dataTable' value='CoV'/><input type='hidden' class='dataType' id='dataMember' value='id'/><input type='hidden' class='dataType' id='dataField' value='body'/><!--googleoff: index--></span>
+
+
+
+				</article>
+				<div id="HistoryNote"><p class='sidenote'>The chapters of the acts of assembly referenced in the historical citation at the end of this section may not constitute a comprehensive list of such chapters and may exclude chapters whose provisions have expired.</p></div>
+						<nav class="content-footer-menu"><ul><li><a title='§ 55.1-1225. Tenancy at will; effect of notice of change of terms or provisions of tenancy' href='/vacode/title55.1/chapter12/section55.1-1225/''><i class='fa fa-long-arrow-left'></i></a> Section <a title='§ 55.1-1227. Tenant to maintain dwelling unit' href='/vacode/title55.1/chapter12/section55.1-1227/''><i class='fa fa-long-arrow-right'></i></a></li></ul></nav>
+
+			</div>
+			<div class="slot-9">
+				<nav id="section-menu">
+					<ul class="section-header-menu">
+						<li class="selected" aria-label="Currently selected page">
+							<a href="/vacode">Code of Virginia</a>
+						</li>
+						<li class="sub-menu">
+							<a href="/vacodepopularnames">Popular Names</a>
+						</li>
+						<li id="covUpdates" class="sub-menu">
+							<a  href='/vacodeupdates/'>2026 Updates</a>
+						</li>
+						<li id='search-box' class="sub-menu">
+							<label class="form-title" for="search-text">Section Look Up</label>
+						
+						
+							<div action='/search' id='search-form' method='get' target='_top'>
+								<input aria-label="Section look up input" title="Section look up input" type="text" id='search-text' name='q' placeholder='ex.  2.2-4007.01' readonly onfocus="if (this.hasAttribute('readonly')) {this.removeAttribute('readonly'); this.blur(); this.focus(); }"/>
+								<button aria-label="Section look up button" title="Section look up button" id='search-button' type='submit'>Go</button>
+							</div>
+						</li>
+						<li>
+							<a href="/admincode">Administrative Code</a>
+						</li>
+						<li>
+							<a href="/constitution">Constitution of Virginia</a>
+						</li>
+						<li>
+							<a href="/charters">Charters</a>
+						</li>
+						<li>
+							<a href="/authorities">Authorities</a>
+						</li>
+						<li>
+							<a href="/compacts">Compacts</a>
+						</li>
+						<li>
+							<a href="/uncodifiedacts">Uncodified Acts</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+    <script type="text/javascript">var siteurl = 'https://law.lis.virginia.gov';</script>
+	<script src="/Scripts/jquery.min.js" type="text/javascript"></script>
+	<script src="/Scripts/responsive.js" type="text/javascript"></script>
+	<script src="/Scripts/modernizer.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/Scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/Scripts/jquery.fancybox.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/Scripts/fancybox/jquery.easing-1.3.pack.js" type="text/javascript"></script>
+	<script src="/Scripts/fancybox/jquery.mousewheel-3.0.4.pack.js" type="text/javascript"></script>
+	<script src="/Scripts/jquery.floatThead.min.js" type="text/javascript"></script>
+	<script src="/Scripts/printThisCoV.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.cookie.js" type="text/javascript"></script>
+	<script src="/Scripts/search.js" type="text/javascript"></script>
+	<script src="/Scripts/searchCoV.js" type="text/javascript"></script>
+	<script src="/Scripts/isFontFaceSupported.js" type="text/javascript"></script>
+	<script src="/Scripts/jquery.qtip.js" type="text/javascript"></script>
+	
+	<link rel="stylesheet" href="/Content/msgBoxLight.css" />
+	<script src="/Scripts/jquery.msgBox.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/Scripts/tinymce/tinymce.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/Scripts/edit.js" type="text/javascript"></script>
+	<script src="/Scripts/CoVInit.js" type="text/javascript"></script>
+	
+	<script src="/Scripts/report.js" type="text/javascript"></script>
+	<script src="/Scripts/default.js" type="text/javascript"></script>
+	<script src="/Scripts/pdf.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		    $('document').ready(function () {
+		        $('#print').click(function () {
+		            $("#vacode").printThis();
+		            return (false);
+		        });
+
+		        var val = parseInt($.browser.version);
+		        if ($.browser.msie || (val > 7 && val <= 11)) {
+		            //stuff here (like adding an IE10 class to the body or html tag
+		            $(".input-sm").css("margin-top", "1px");
+		        }
+
+		        $('a.fancybox').fancybox({
+		            type: "iframe",
+		            'width': 650,
+		            'height': 520
+		        });
+
+		        $("a.single_image").fancybox({
+		            type: "iframe",
+		            'width': 650,
+		            'height': 720
+		        });
+
+		        $('.fancybox').attr('href', "/emailForm?parent=vacode/" + $('#hidSegments').val());
+
+		        $('.hdr-read-text a').fancybox({
+		            type: "iframe",
+		            'width': 650,
+		            'height': 701,
+		            'autoDimensions': false,
+		            'autoSize': false,
+		            afterClose: function (event, ui) {
+		                //parent.document.getElementById("hidBiP").value = "false";
+		                parent.$("#hidBiP").val("false");
+		            }
+		        });
+
+		        var _hidVal = $('#hidBiP').val();
+		        if (_hidVal == 'true') {
+		            $('.hdr-read-text a').click();
+		        }
+
+		        if (isFontFaceSupported() == false) {
+		            $('.fa').iconfontFallback();
+		        }
+
+		        $('p.hdr-read-text a').qtip({
+		            content: 'Bills currently before the General Assembly',
+		            style: {
+		                textAlign: 'center',
+		                tip: true,
+		                classes: 'qtip-rounded qtip-shadow',
+		            },
+		            position: {
+		                my: 'top center',
+		                at: 'bottom center'
+		            }
+		        });
+
+				$('#reportClick').attr("aria-label", "Create a report based on the current selection");
+				$('.number-descrip-list > dt > input').each(function () {
+					$(this).attr('aria-label', $(this).attr("id") + " checkbox");
+		    	});
+				$('.parentCheck').attr('aria-label', "Select all children in selection checkbox")
+				$('.va-law-footer').attr('style', "padding-top: 20px;");
+				$('.reportClick.rptCheckbox').attr('aria-label', "Cancel Report");
+				$('.reportClick.rptCheckbox').attr('name', "Cancel Report");
+				$('.fancybox-iframe').attr('title', "Email form" );
+
+			});
+
+		    function PrintPreview() {
+		        $('table').floatThead('reflow');
+		        $('table').floatThead('reflow');
+		        printWindow = window.open("", "", "location=1,status=1,scrollbars=1,width=650,height=600");
+		        printWindow.document.write('<!DOCTYPE html><html><head>');
+		        printWindow.document.write('<link rel="stylesheet" href="./css/base.css" type="text/css" media="all" />');
+		        printWindow.document.write('<link rel="stylesheet" href="./css/720_grid.css" type="text/css" media="all" />');
+		        printWindow.document.write('<style type="text/css">@media print{.no-print, .no-print *{display: none !important;}h6{display:none !important;}#printPages{display:none !important;}}#printDate {display:none !important;}</style>');
+		        printWindow.document.write('<style type="text/css">#printHeader{display:block;font-size:1em;line-height:1.3em;text-align:left;margin-bottom:.8em;}</style>');
+
+		        printWindow.document.write('<style type="text/css">body{color:#444;font-family:"PT Serif",Georgia,serif;line-height:1.3em;font-size: .95em;}h2{margin:0 0 .1em 0;font-weight:normal;line-height:1.2em;font-size:1.4em;letter-spacing:.01em;padding:0 .35em 0 0.25em;}');
+		        printWindow.document.write('.hdr-read-text,.read-text,.rptCheckbox{display:none;}ul .outline{margin-bottom:1em;}ul{list-style:none;}.outline ul{margin-left:1em;}a, a:link{color:#1a73ae;text-decoration:none;}');
+		        printWindow.document.write('b{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;}.number-descrip-list{line-height:1.55em;margin-bottom:1em;height:auto;}');
+		        printWindow.document.write('.number-descrip-list dt {clear: left;float: left;display: table-cell;font-weight: bold;width: 6.75em;}.number-descrip-list dd {padding-bottom: .125em;display: table-cell;}');
+		        printWindow.document.write('.number-descrip-list-outline{margin-left:1em;line-height:1.55em;}.number-descrip-list-outline dt{width:7em;font-weight:bold;}');
+		        printWindow.document.write('.number-descrip-list-outline dd{display:table-cell;padding-bottom:0;}</style>');
+
+		        printWindow.document.write('<style type="text/css">h6 {font-family: "Lato", Helvetica, Arial, sans-serif;font-size: 14px;border-bottom: 1px solid #ddd;padding-bottom: 15px;}');
+		        printWindow.document.write('table{border-collapse: collapse;border-spacing: 0;margin-bottom: 15px;}.printButtons {width: 100%;text-align: right;position: absolute;right: 10px;top: 28px;}</style>');
+		        printWindow.document.write('<style>#printPages{position:absolute;left: 120px;top: 30px;}.hiddenTable {display: none !important;}</style>');
+
+		        printWindow.document.write('</head><body>');
+		        printWindow.document.write('<h6>Print Preview</h6><span id="printPages"></span>')
+		        printWindow.document.write('<div class="printButtons">');
+
+		        //Print and cancel button
+		        printWindow.document.write('<input type="button" id="btnPrint" value="Print" class="no-print" onclick="window.print();window.onfocus=function(){window.close();}" />');
+		        printWindow.document.write('<input type="button" id="btnCancel" value="Cancel" class="no-print" onclick="window.close()" />');
+
+		        printWindow.document.write('</div>');
+
+		        //You can include any data this way.
+		        var _page = '<div id="va_code" class="va_code">' + $('#printStuff').html() + $('#va_code').html() + '</div>';
+		        printWindow.document.write(_page);
+		        printWindow.document.write('<scr' + 'ipt type="text/javascript">var divHeight;var obj = document.getElementById("va_code");if(obj.offsetHeight){divHeight=obj.offsetHeight;}else if(obj.style.pixelHeight){divHeight=obj.style.pixelHeight;}document.getElementById("printPages").innerHTML="Approximate Number of Pages: " + Math.ceil(divHeight / 850);</sc' + 'ript>');
+		        printWindow.document.write('</body></html>');
+		        printWindow.document.close();
+		        printWindow.focus();
+		    }
+	</script>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+</body>
+        </div>
+        
+        
+        <div class="footer">
+            <nav class="footer-links" style="line-height: 1.4;">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div aria-hidden="true" id='generic_login_div' style="display:none;z-index:9999;padding:10px;" class="corners dropshadow">
+                            <h3>Sign In</h3>
+                            <div class='form-row'>
+                                <label id='lblusername' for='username'>Username:&nbsp; </label>
+                                <input type='text' class="user" name='username' placeholder="Username" id='username' />
+                                <label id="userError"></label>
+                            </div>
+                            <div class='form-row'>
+                                <label id='lblpassword' for='password'>Password:&nbsp; </label>
+                                <input type='password' class="pass" name='password' placeholder="Password" id='password' />
+                                <label id="passError"></label>
+                            </div>
+                            <div class='submit-row'>
+                                <input type='button' id="btnLogin" class="button" value='Login' />
+                                <a onclick='hideLogin()' class="hover">Cancel</a>
+                            </div>
+                        </div>
+                        <div id="dialog-modal" style="display:none;"></div>
+                        <span class="col-xs-12 text-center">
+                            <ul>
+                                <li><a href="https://lis.virginia.gov">LIS Home</a></li>
+                                <li><a id="aLIAB" href="https://lis.virginia.gov/register-account">Lobbyist-in-a-Box</a></li>
+                                <li><a href="https://lis.virginia.gov/privacy">Privacy Policy</a></li>
+                                
+                            </ul>
+                            <p>
+                                © Copyright Commonwealth of Virginia,
+                                <script>document.write(new Date().getFullYear())</script>. All rights reserved. Site developed by the <a href="http://dlas.virginia.gov">Division of Legislative Automated Systems (DLAS)</a>.
+                                <a aria-hidden="true" href="" id="signin" onclick="showLogin();return false;">Sign In</a>
+                                
+                            </p>
+                        </span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+</body>
+</html>
+
+<!--[if lt IE 10 ]><script async src="<%: FriendlyUrl.Href("~/Scripts/placeHolder.js" type="text/javascript"></script><![endif]-->
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="~/Scripts/html5shiv.js"></script>
+<script src="~/Scripts/respond.js"></script>
+<![endif]-->
+
+<script src="/Scripts/SwitchMode.js" type="text/javascript"></script>

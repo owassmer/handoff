@@ -1,0 +1,392 @@
+ 
+ 
+  
+         
+          
+                 
+                 
+     
+     
+     
+
+     
+
+     
+
+     
+     
+
+     
+     
+ 
+         California Code,  CIV 3300. 
+         
+
+         
+            /* Hide page by default*/
+            html { display : none; }
+         
+
+         // = 0)) {
+                        window.top.location.replace(window.location);
+                        top.location = self.location;
+                    }
+                }
+            }
+            // ]]>
+         
+         
+            /* Hide page by default*/
+            html { display : inline; }
+             // 
+   
+
+     
+        function changePlaceHolder() {
+
+            var x = document.getElementById("billheaderinit_form:quick_search_select_id");
+            var input = document.getElementById("billheaderinit_form:searchall");
+
+            if (x !== null) {
+                if (x.options[0].selected) {
+
+                    input.placeholder = "AB1 or ab 1 or ABX1-1";
+                } else {
+                    input.placeholder = "Search phrase";
+                }
+            }
+
+        }
+     
+     
+ 
+ 
+
+
+              
+             
+
+                 
+                       
+                          skip to content  
+                            home  
+                          accessibility  
+                          FAQ  
+                              feedback  
+                          sitemap  
+                       
+
+                          login 
+                         
+                          x   
+                         
+
+
+                     
+                   
+
+
+
+                  
+                          
+                  
+                 
+                     
+                      
+                               
+                              
+                         
+                              
+                     
+                     
+                  
+                     
+                         
+                               Quick Search: 
+                         
+                          	 Bill Number 
+	 Bill Keyword 
+ 
+                               
+                         
+                       
+
+                   
+         
+         
+         
+       
+
+
+
+         
+          
+   
+   
+     
+       
+         Home  
+       
+         Bill Information  
+
+
+       
+         California Law  
+       
+         Publications  
+
+
+       
+         Other Resources  
+       
+         My Subscriptions  
+       
+         My Favorites  
+       
+     
+   
+   
+  
+ 
+          
+     
+ 
+        
+        
+
+       
+         
+             
+                button {
+                    background-image: url('/resources/images/print_24.gif');
+                    background-size: cover;
+                    width: 24px;
+                    height: 24px;
+                    font-size: 2rem; background-color: transparent;
+                    border: 0px;
+                }
+             
+             
+                function printPopup() {
+                    var lawCode = 'CIV';
+                    var sectionNum = '[3300.]';
+                    var op_statues = ''
+                    var op_chapter = '612';
+                    var op_section = '';
+                    var article = '1.';
+                    var url = "printCodeSectionWindow.xhtml?";
+                    if (lawCode)
+                        url += 'lawCode=' + lawCode;
+                    if (article) {
+                        url += '&article=' + article;
+                        //alert(url);
+                    }
+
+                    if (sectionNum)
+                        url += '§ionNum=' + sectionNum;
+                    if (op_statues)
+                        url += '&op_statues=' + op_statues;
+                    if (op_chapter)
+                        url += '&op_chapter=' + op_chapter;
+                    if (op_section)
+                        url += '&op_section=' + op_section;
+                    printWindow = window.open(url, "wind", "width=680," +
+                            "height=768,		" +
+                            "toolbar=no,		" +
+                            "location=no,		" +
+                            "directories=no,	" +
+                            "status=no,		" +
+                            "menubar=yes,		" +
+                            "scrollbars=yes,	" +
+                            "resizable=yes		"
+                            );
+                    printWindow.focus();
+                }
+             
+ 
+ 
+
+                     
+                         
+                              California Law 
+                                >>
+                             
+                               
+                                >>
+                             
+                             Code Section
+                             
+                         
+                      
+ 
+                  
+                 Code Section 
+                 
+                 
+
+                   
+         
+            function myPopup() {
+
+                window.open("popupMessage.xhtml", "Information", "width=330, height=220, toolbar=no, location=no, directories=no, menubar=no, scrollbars=no, top=270, left=150");
+            }
+
+            function setCode() {
+                //         button = document.getElementById('expertsearchformid:executeID');
+                //              document.getElementById('expertsearchformid:parameterID1').value = document.getElementById('expertsearchformid:toctextcodeid').value;
+                //              document.getElementById('expertsearchformid:parameterID2').value ='2'; //just a value to bypass validation
+                //              button.click();
+                if (document.getElementById('expertsearchformid:toctextcodeid').value == 'CONS') {
+                    document.getElementById('expertsearchformid:articlelblid').style.display = 'inline';
+                    document.getElementById('expertsearchformid:articleid').style.display = 'inline';
+                } else {
+                    document.getElementById('expertsearchformid:articlelblid').style.display = 'none';
+                    document.getElementById('expertsearchformid:articleid').style.display = 'none';
+                    document.getElementById('expertsearchformid:articleid').value = "";
+                }
+            }
+
+          
+     
+
+
+         
+             
+                 
+ 
+ 
+ Code:  	 Select Code 
+	 CONS 
+	 BPC 
+	 CIV 
+	 CCP 
+	 COM 
+	 CORP 
+	 EDC 
+	 ELEC 
+	 EVID 
+	 FAM 
+	 FIN 
+	 FGC 
+	 FAC 
+	 GOV 
+	 HNC 
+	 HSC 
+	 INS 
+	 LAB 
+	 MVC 
+	 PEN 
+	 PROB 
+	 PCC 
+	 PRC 
+	 PUC 
+	 RTC 
+	 SHC 
+	 UIC 
+	 VEH 
+	 WAT 
+	 WIC 
+  Article:   Section:   
+                          
+ 
+                 
+                 
+ 
+ 
+ Code:  	 Select Code 
+	 All 
+	 BPC 
+	 CIV 
+	 CCP 
+	 COM 
+	 CORP 
+	 EDC 
+	 ELEC 
+	 EVID 
+	 FAM 
+	 FIN 
+	 FGC 
+	 FAC 
+	 GOV 
+	 HNC 
+	 HSC 
+	 INS 
+	 LAB 
+	 MVC 
+	 PEN 
+	 PROB 
+	 PCC 
+	 PRC 
+	 PUC 
+	 RTC 
+	 SHC 
+	 UIC 
+	 VEH 
+	 WAT 
+	 WIC 
+  Section:     Keyword(s):   
+                            
+ 
+                 
+             
+             
+             
+         
+
+
+     
+         setCode(); 
+    
+
+      
+
+
+ 
+                 
+                  
+ 
+ 
+
+     
+         Code Search  
+       
+         Text Search  
+       
+      
+ 
+ 
+                 
+                 
+                     
+                         
+ 
+ 
+ Up^  << Previous   Next >>  cross-reference chaptered bills  PDF  |  Add To My Favorites 
+                                  
+
+
+                                   
+ 
+
+                         
+
+                     
+ 
+ 
+
+                          Search Phrase:    
+                          
+ 
+ 
+ 
+
+                          Code Text  
+                                  Civil Code - CIV      DIVISION 4. GENERAL PROVISIONS [3274 - 9566]     ( Heading of Division 4 amended by Stats. 1988, Ch. 160, Sec. 16. )        PART 1. RELIEF [3274 - 3428]     ( Part 1 enacted 1872. )        TITLE 2. COMPENSATORY RELIEF [3281 - 3361]     ( Title 2 enacted 1872. )        CHAPTER 2. Measure of Damages [[3300.] - 3361]     ( Chapter 2 enacted 1872. )         ARTICLE 1. Damages for Breach of Contract [[3300.] - 3322]     ( Article 1 enacted 1872. )          [3300.]      Section Thirty-three Hundred. For the breach of an obligation arising from contract, the measure of damages, except where otherwise expressly provided by this Code, is the amount which will compensate the party aggrieved for all the detriment proximately caused thereby, or which, in the ordinary course of things, would be likely to result therefrom.  (Amended by Code Amendments 1873-74, Ch. 612.)      
+                          
+ 
+
+                 
+         
+        
+
+ 

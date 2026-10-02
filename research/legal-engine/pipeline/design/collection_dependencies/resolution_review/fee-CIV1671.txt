@@ -1,0 +1,393 @@
+ 
+ 
+  
+         
+          
+                 
+                 
+     
+     
+     
+
+     
+
+     
+
+     
+     
+
+     
+     
+ 
+         California Code,  CIV 1671. 
+         
+
+         
+            /* Hide page by default*/
+            html { display : none; }
+         
+
+         // = 0)) {
+                        window.top.location.replace(window.location);
+                        top.location = self.location;
+                    }
+                }
+            }
+            // ]]>
+         
+         
+            /* Hide page by default*/
+            html { display : inline; }
+             // 
+   
+
+     
+        function changePlaceHolder() {
+
+            var x = document.getElementById("billheaderinit_form:quick_search_select_id");
+            var input = document.getElementById("billheaderinit_form:searchall");
+
+            if (x !== null) {
+                if (x.options[0].selected) {
+
+                    input.placeholder = "AB1 or ab 1 or ABX1-1";
+                } else {
+                    input.placeholder = "Search phrase";
+                }
+            }
+
+        }
+     
+     
+ 
+ 
+
+
+              
+             
+
+                 
+                       
+                          skip to content  
+                            home  
+                          accessibility  
+                          FAQ  
+                              feedback  
+                          sitemap  
+                       
+
+                          login 
+                         
+                          x   
+                         
+
+
+                     
+                   
+
+
+
+                  
+                          
+                  
+                 
+                     
+                      
+                               
+                              
+                         
+                              
+                     
+                     
+                  
+                     
+                         
+                               Quick Search: 
+                         
+                          	 Bill Number 
+	 Bill Keyword 
+ 
+                               
+                         
+                       
+
+                   
+         
+         
+         
+       
+
+
+
+         
+          
+   
+   
+     
+       
+         Home  
+       
+         Bill Information  
+
+
+       
+         California Law  
+       
+         Publications  
+
+
+       
+         Other Resources  
+       
+         My Subscriptions  
+       
+         My Favorites  
+       
+     
+   
+   
+  
+ 
+          
+     
+ 
+        
+        
+
+       
+         
+             
+                button {
+                    background-image: url('/resources/images/print_24.gif');
+                    background-size: cover;
+                    width: 24px;
+                    height: 24px;
+                    font-size: 2rem; background-color: transparent;
+                    border: 0px;
+                }
+             
+             
+                function printPopup() {
+                    var lawCode = 'CIV';
+                    var sectionNum = '1671.';
+                    var op_statues = '1977'
+                    var op_chapter = '198';
+                    var op_section = '';
+                    var article = '';
+                    var url = "printCodeSectionWindow.xhtml?";
+                    if (lawCode)
+                        url += 'lawCode=' + lawCode;
+                    if (article) {
+                        url += '&article=' + article;
+                        //alert(url);
+                    }
+
+                    if (sectionNum)
+                        url += '§ionNum=' + sectionNum;
+                    if (op_statues)
+                        url += '&op_statues=' + op_statues;
+                    if (op_chapter)
+                        url += '&op_chapter=' + op_chapter;
+                    if (op_section)
+                        url += '&op_section=' + op_section;
+                    printWindow = window.open(url, "wind", "width=680," +
+                            "height=768,		" +
+                            "toolbar=no,		" +
+                            "location=no,		" +
+                            "directories=no,	" +
+                            "status=no,		" +
+                            "menubar=yes,		" +
+                            "scrollbars=yes,	" +
+                            "resizable=yes		"
+                            );
+                    printWindow.focus();
+                }
+             
+ 
+ 
+
+                     
+                         
+                              California Law 
+                                >>
+                             
+                               
+                                >>
+                             
+                             Code Section
+                             
+                         
+                      
+ 
+                  
+                 Code Section 
+                 
+                 
+
+                   
+         
+            function myPopup() {
+
+                window.open("popupMessage.xhtml", "Information", "width=330, height=220, toolbar=no, location=no, directories=no, menubar=no, scrollbars=no, top=270, left=150");
+            }
+
+            function setCode() {
+                //         button = document.getElementById('expertsearchformid:executeID');
+                //              document.getElementById('expertsearchformid:parameterID1').value = document.getElementById('expertsearchformid:toctextcodeid').value;
+                //              document.getElementById('expertsearchformid:parameterID2').value ='2'; //just a value to bypass validation
+                //              button.click();
+                if (document.getElementById('expertsearchformid:toctextcodeid').value == 'CONS') {
+                    document.getElementById('expertsearchformid:articlelblid').style.display = 'inline';
+                    document.getElementById('expertsearchformid:articleid').style.display = 'inline';
+                } else {
+                    document.getElementById('expertsearchformid:articlelblid').style.display = 'none';
+                    document.getElementById('expertsearchformid:articleid').style.display = 'none';
+                    document.getElementById('expertsearchformid:articleid').value = "";
+                }
+            }
+
+          
+     
+
+
+         
+             
+                 
+ 
+ 
+ Code:  	 Select Code 
+	 CONS 
+	 BPC 
+	 CIV 
+	 CCP 
+	 COM 
+	 CORP 
+	 EDC 
+	 ELEC 
+	 EVID 
+	 FAM 
+	 FIN 
+	 FGC 
+	 FAC 
+	 GOV 
+	 HNC 
+	 HSC 
+	 INS 
+	 LAB 
+	 MVC 
+	 PEN 
+	 PROB 
+	 PCC 
+	 PRC 
+	 PUC 
+	 RTC 
+	 SHC 
+	 UIC 
+	 VEH 
+	 WAT 
+	 WIC 
+  Article:   Section:   
+                          
+ 
+                 
+                 
+ 
+ 
+ Code:  	 Select Code 
+	 All 
+	 BPC 
+	 CIV 
+	 CCP 
+	 COM 
+	 CORP 
+	 EDC 
+	 ELEC 
+	 EVID 
+	 FAM 
+	 FIN 
+	 FGC 
+	 FAC 
+	 GOV 
+	 HNC 
+	 HSC 
+	 INS 
+	 LAB 
+	 MVC 
+	 PEN 
+	 PROB 
+	 PCC 
+	 PRC 
+	 PUC 
+	 RTC 
+	 SHC 
+	 UIC 
+	 VEH 
+	 WAT 
+	 WIC 
+  Section:     Keyword(s):   
+                            
+ 
+                 
+             
+             
+             
+         
+
+
+     
+         setCode(); 
+    
+
+      
+
+
+ 
+                 
+                  
+ 
+ 
+
+     
+         Code Search  
+       
+         Text Search  
+       
+      
+ 
+ 
+                 
+                 
+                     
+                         
+ 
+ 
+ Up^  << Previous   Next >>  cross-reference chaptered bills  PDF  |  Add To My Favorites 
+                                  
+
+
+                                   
+ 
+
+                         
+
+                     
+ 
+ 
+
+                          Search Phrase:    
+                          
+ 
+ 
+ 
+
+                          Code Text  
+                                  Civil Code - CIV      DIVISION 3. OBLIGATIONS [1427 - 3273.91]     ( Heading of Division 3 amended by Stats. 1988, Ch. 160, Sec. 14. )        PART 2. CONTRACTS [1549 - 1701]     ( Part 2 enacted 1872. )        TITLE 4.5. LIQUIDATED DAMAGES [1671 - 1681]     ( Heading of Title 4.5 added by Stats. 1977, Ch. 198. )         CHAPTER 1. General Provisions [1671- 1671.]     ( Heading of Chapter 1 added by Stats. 1977, Ch. 198. )          1671.     (a) This section does not apply in any case where another statute expressly applicable to the contract prescribes the rules or standard for determining the validity of a provision in the contract liquidating the damages for the breach of the contract.  (b) Except as provided in subdivision (c), a provision in a contract liquidating the damages for the breach of the contract is valid unless the party seeking to invalidate the provision establishes that the provision was unreasonable under the circumstances existing at the time the contract was made.  (c) The validity of a liquidated damages provision shall be determined under subdivision (d) and not under subdivision (b) where the liquidated damages are sought to be recovered from either:  (1) A party to a contract for the retail purchase, or rental, by such party of personal property or services, primarily for the party’s personal, family, or household purposes; or  (2) A party to a lease of real property for use as a dwelling by the party or those dependent upon the party for support.  (d) In the cases described in subdivision (c), a provision in a contract liquidating damages for the breach of the contract is void except that the parties to such a contract may agree therein upon an amount which shall be presumed to be the amount of damage sustained by
+a breach thereof, when, from the nature of the case, it would be impracticable or extremely difficult to fix the actual damage.  (Amended by Stats. 1977, Ch. 198.)      
+                          
+ 
+
+                 
+         
+        
+
+ 

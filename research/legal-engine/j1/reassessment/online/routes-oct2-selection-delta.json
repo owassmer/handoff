@@ -1,0 +1,62 @@
+{
+  "as_of": "2026-10-02",
+  "historical_cutoff": "2026-10-01",
+  "canonical_changes": false,
+  "external_messages_sent": false,
+  "new_routes": [
+    {
+      "route": "Live official Westlaw \u00a718360.1 browser and HTTP acquisition",
+      "url": "https://govt.westlaw.com/calregs/Document/I01F0B5F01AC411F09B99F2310E8A039A?viewType=FullText",
+      "result": "403 verification screen in actual browser and HTTP client; no current history read. Browser closed.",
+      "evidence": [
+        "fppc-westlaw.raw",
+        "fppc-codifier-browser.yml"
+      ]
+    },
+    {
+      "route": "Official Westlaw \u00a72200.7 web reader",
+      "url": "https://govt.westlaw.com/calregs/Document/IE6358824A0FE11EF9CCAB69739765D8C?viewType=FullText",
+      "result": "Web reader reports URL inaccessible. Indexed result exposes only a June5,2026 edition, before the adopted amendment."
+    },
+    {
+      "route": "New October2 Notice Register40 expected PDF",
+      "url": "https://oal.ca.gov/wp-content/uploads/sites/166/2026/10/2026-Notice-Register-No.-40-Z-October-2-2026.pdf",
+      "result": "404 native response. Public current register index still endsSeptember. No future publication assumed.",
+      "evidence": [
+        "register40.raw"
+      ]
+    },
+    {
+      "route": "FPPC October executive report expected asset",
+      "url": "https://www.fppc.ca.gov/siteassets/documents/agendadocuments/executive-staff-reports/2026/oct_2026_executive_staff_report.pdf",
+      "result": "404. No filing fact obtained.",
+      "evidence": [
+        "fppc-octoberreport.raw"
+      ]
+    },
+    {
+      "route": "OAL public media metadata named-file search",
+      "result": "401 rest_cannot_access. Coordinated with root and ceased this route; other worker independently already covered metadata and sitemap."
+    }
+  ],
+  "item_decisions": [
+    {
+      "action": "DDW2026-0827-01N",
+      "selection_delta": null,
+      "remaining": "Exact changed units and actual outcome are still unestablished. No new public action record obtained; do not replace with entire chapter inventory or classify as completed."
+    },
+    {
+      "action": "FPPC2026-0824-04",
+      "selection_delta": null,
+      "remaining": "Exact adopted PDFs remain identified; SOS filing/operative status still unestablished. FPPC action type is not ordinary OAL substantive approval, and its generic recent-action row does not name the result."
+    },
+    {
+      "action": "waterfeesRes2026-0038",
+      "selection_delta": {
+        "unit_correction": "The public resolution index prints2000.7; signed resolution and actual proposed text establish2200.7. Keep2200/2200.7, not an extra2000.7 unit."
+      },
+      "remaining": "Board adoption identified; subsequent filing/final corrected edition not established. October6 executive report only corroborates adoption, not filing."
+    }
+  ],
+  "conclusion": "This pass did not recover the three missing factual records. It supplies no basis to change their open status. Existing narrow records-request draft remains unsent; online-only instruction preserved."
+}

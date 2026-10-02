@@ -1,0 +1,1606 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:handoff:deposit-closeout:ReviewRequest:1.0.0",
+  "$ref": "#/$defs/ReviewRequest",
+  "$defs": {
+    "ReviewRequest": {
+      "type": "object",
+      "properties": {
+        "snapshot": {
+          "$ref": "#/$defs/CaseSnapshot"
+        },
+        "ruleReleaseId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewClock": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "Z$"
+        }
+      },
+      "required": [
+        "snapshot",
+        "ruleReleaseId",
+        "reviewClock"
+      ],
+      "additionalProperties": false
+    },
+    "CaseSnapshot": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "string",
+          "minLength": 1,
+          "const": "1.0.0"
+        },
+        "caseId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "managementCompanyId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "homeId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tenancyId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991,
+          "x-foundry-type": "Long"
+        },
+        "origin": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "CONSTRUCTED",
+            "PUBLIC_RECONSTRUCTION",
+            "AUTHORIZED_OPERATOR"
+          ]
+        },
+        "jurisdiction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tenancyRegime": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tenancyEndsInFull": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "cashSecurityDeposit": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "currency": {
+          "type": "string",
+          "minLength": 1,
+          "const": "USD"
+        },
+        "agreementEvidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "dates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DateFact"
+          }
+        },
+        "parties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CaseParty"
+          }
+        },
+        "authorityGrants": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/AuthorityGrant"
+          }
+        },
+        "recipients": {
+          "$ref": "#/$defs/RecipientInstructions"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/EvidenceInput"
+          }
+        },
+        "charges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ChargeInput"
+          }
+        },
+        "depositBalance": {
+          "$ref": "#/$defs/BalanceSnapshot"
+        },
+        "moneyEvents": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/MoneyEvent"
+          }
+        },
+        "otherBalances": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/OtherBalance"
+          }
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/OpenQuestion"
+          }
+        },
+        "specialCircumstances": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "interimConditionState": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "UNCONFIRMED",
+            "ACCEPTED",
+            "DISPUTED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "interimConditionEvidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "interimConditionReason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "priorStatements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/StatementFact"
+          }
+        },
+        "priorApprovals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ApprovalFact"
+          }
+        },
+        "priorRequests": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/RequestFact"
+          }
+        },
+        "executionEvents": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ExecutionFact"
+          }
+        },
+        "relatedTasks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/RelatedTaskFact"
+          }
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "caseId",
+        "managementCompanyId",
+        "homeId",
+        "tenancyId",
+        "revision",
+        "origin",
+        "jurisdiction",
+        "tenancyRegime",
+        "tenancyEndsInFull",
+        "cashSecurityDeposit",
+        "currency",
+        "agreementEvidenceIds",
+        "dates",
+        "parties",
+        "authorityGrants",
+        "recipients",
+        "evidence",
+        "charges",
+        "depositBalance",
+        "moneyEvents",
+        "otherBalances",
+        "questions",
+        "specialCircumstances",
+        "interimConditionState",
+        "interimConditionEvidenceIds",
+        "interimConditionReason",
+        "priorStatements",
+        "priorApprovals",
+        "priorRequests",
+        "executionEvents",
+        "relatedTasks"
+      ],
+      "additionalProperties": false
+    },
+    "DateFact": {
+      "type": "object",
+      "properties": {
+        "factKey": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "NOTICE",
+            "INTENDED_DEPARTURE",
+            "AGREEMENT_END",
+            "VACANCY",
+            "KEY_RETURN",
+            "LEGAL_POSSESSION",
+            "ACCOUNTING_TRIGGER"
+          ]
+        },
+        "state": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "UNCONFIRMED",
+            "ACCEPTED",
+            "DISPUTED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "acceptedBy": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "factKey",
+        "state",
+        "value",
+        "evidenceIds",
+        "acceptedBy",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "CaseParty": {
+      "type": "object",
+      "properties": {
+        "partyId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "displayLabel": {
+          "type": "string",
+          "minLength": 1
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "enum": [
+              "MANAGER",
+              "ACCOUNTANT",
+              "AUTHORITY_ADMIN",
+              "OWNER",
+              "RESIDENT",
+              "SIGNATORY",
+              "CUSTODIAN",
+              "REVIEWER",
+              "DEMO_TESTER",
+              "AUTOMATION"
+            ]
+          }
+        },
+        "effectiveFrom": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "effectiveUntil": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "principalId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "partyId",
+        "displayLabel",
+        "roles",
+        "effectiveFrom",
+        "effectiveUntil",
+        "principalId",
+        "evidenceIds"
+      ],
+      "additionalProperties": false
+    },
+    "AuthorityGrant": {
+      "type": "object",
+      "properties": {
+        "grantId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "partyId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authorityVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "allowedActionKinds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "enum": [
+              "OPEN_CASE",
+              "ADD_EVIDENCE",
+              "ACCEPT_OR_CORRECT_FACT",
+              "SET_OR_REVOKE_AUTHORITY",
+              "RECORD_CHARGE_DECISION",
+              "CHOOSE_OR_WAIVE_CHARGE",
+              "SET_RECIPIENT_INSTRUCTIONS",
+              "RECONCILE_MONEY_RECORD",
+              "PREPARE_STATEMENT",
+              "APPROVE_EXACT_VERSION",
+              "REJECT_OR_REVOKE_APPROVAL",
+              "REQUEST_STATEMENT_DISPATCH",
+              "REQUEST_REFUND",
+              "REQUEST_LEDGER_POSTING",
+              "RECORD_DEMO_OUTCOME",
+              "RECORD_MANUAL_CONFIRMATION",
+              "RESOLVE_UNKNOWN_RESULT",
+              "AUTHORIZE_REPLACEMENT_ATTEMPT",
+              "ASSIGN_WORK",
+              "RECORD_RELATED_TASK_RESULT",
+              "RECHECK_CASE",
+              "ADVANCE_DEMO_CLOCK"
+            ]
+          }
+        },
+        "amountLimitCents": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991,
+              "x-foundry-type": "Long"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "minimum": 0
+        },
+        "effectiveFrom": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "Z$"
+        },
+        "effectiveUntil": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "revoked": {
+          "type": "boolean"
+        },
+        "evidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "grantId",
+        "partyId",
+        "authorityVersion",
+        "allowedActionKinds",
+        "amountLimitCents",
+        "effectiveFrom",
+        "effectiveUntil",
+        "revoked",
+        "evidenceIds"
+      ],
+      "additionalProperties": false
+    },
+    "RecipientInstructions": {
+      "type": "object",
+      "properties": {
+        "versionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "statementPartyIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "refundPartyIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "state": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "VERIFIED",
+            "MISSING",
+            "DISPUTED",
+            "REVIEW_REQUIRED"
+          ]
+        },
+        "statementMethod": {
+          "type": "string",
+          "minLength": 1
+        },
+        "refundMethod": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verifiedRouteReference": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "versionId",
+        "statementPartyIds",
+        "refundPartyIds",
+        "state",
+        "statementMethod",
+        "refundMethod",
+        "verifiedRouteReference",
+        "evidenceIds"
+      ],
+      "additionalProperties": false
+    },
+    "EvidenceInput": {
+      "type": "object",
+      "properties": {
+        "evidenceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recordKind": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "AGREEMENT",
+            "CONDITION_OBSERVATION",
+            "SERVICE_REQUEST",
+            "WORK_COMPLETION",
+            "ESTIMATE",
+            "INVOICE",
+            "BALANCE_RECORD",
+            "SOURCE_EVENT",
+            "RECIPIENT_INSTRUCTIONS",
+            "AUTHORITY_RECORD",
+            "FACT_ASSERTION",
+            "MODEL_PROPOSAL"
+          ]
+        },
+        "sourceClass": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "CASE_RECORD",
+            "AGREEMENT",
+            "LAW",
+            "PROCEDURE",
+            "TEST_ASSUMPTION",
+            "MODEL_PROPOSAL"
+          ]
+        },
+        "externalRecordId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "occurredAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "learnedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "Z$"
+        },
+        "supersedesEvidenceId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "proposedItemIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "associationAccepted": {
+          "type": "boolean"
+        },
+        "excerpt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "evidenceId",
+        "recordKind",
+        "sourceClass",
+        "externalRecordId",
+        "sourceVersion",
+        "locator",
+        "occurredAt",
+        "learnedAt",
+        "supersedesEvidenceId",
+        "proposedItemIds",
+        "associationAccepted",
+        "excerpt"
+      ],
+      "additionalProperties": false
+    },
+    "ChargeInput": {
+      "type": "object",
+      "properties": {
+        "itemId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1
+        },
+        "costState": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "KNOWN",
+            "UNKNOWN",
+            "DISPUTED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "vendorCostCents": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991,
+              "x-foundry-type": "Long"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "minimum": 0
+        },
+        "costVersionId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "proposedAllocation": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "TENANT",
+            "OWNER",
+            "SPLIT",
+            "OTHER",
+            "UNRESOLVED"
+          ]
+        },
+        "acceptedAllocation": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "TENANT",
+            "OWNER",
+            "SPLIT",
+            "OTHER",
+            "UNRESOLVED"
+          ]
+        },
+        "allowabilityState": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "SUPPORTED",
+            "DISALLOWED",
+            "UNRESOLVED",
+            "NOT_EVALUATED"
+          ]
+        },
+        "supportedAmountCents": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991,
+              "x-foundry-type": "Long"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "minimum": 0
+        },
+        "choiceState": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "NOT_DECIDED",
+            "CHOSEN",
+            "WAIVED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "chosenAmountCents": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991,
+              "x-foundry-type": "Long"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "minimum": 0
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "unresolvedQuestionIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "reviewRequired": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "itemId",
+        "location",
+        "description",
+        "category",
+        "costState",
+        "vendorCostCents",
+        "costVersionId",
+        "proposedAllocation",
+        "acceptedAllocation",
+        "allowabilityState",
+        "supportedAmountCents",
+        "choiceState",
+        "chosenAmountCents",
+        "reason",
+        "evidenceIds",
+        "unresolvedQuestionIds",
+        "reviewRequired"
+      ],
+      "additionalProperties": false
+    },
+    "BalanceSnapshot": {
+      "type": "object",
+      "properties": {
+        "balanceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "amountCents": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991,
+              "x-foundry-type": "Long"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "minimum": 0
+        },
+        "asOf": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "Z$"
+        },
+        "custodianPartyId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sourceEvidenceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "basis": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "SNAPSHOT_WITH_EXPLICIT_INCLUDED_TRANSACTIONS",
+            "UNRECONCILED"
+          ]
+        },
+        "includedTransactionIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "reconciliationState": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "RECONCILED",
+            "UNRECONCILED",
+            "CONFLICT"
+          ]
+        }
+      },
+      "required": [
+        "balanceId",
+        "amountCents",
+        "asOf",
+        "custodianPartyId",
+        "sourceEvidenceId",
+        "basis",
+        "includedTransactionIds",
+        "reconciliationState"
+      ],
+      "additionalProperties": false
+    },
+    "MoneyEvent": {
+      "type": "object",
+      "properties": {
+        "eventId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonicalTransactionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceEventId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "DEPOSIT_RECEIPT",
+            "DEPOSIT_TRANSFER_IN",
+            "DEPOSIT_TRANSFER_OUT",
+            "DEPOSIT_APPLICATION",
+            "DEPOSIT_APPLICATION_REVERSAL",
+            "CHARGE_POSTING",
+            "CHARGE_POSTING_REVERSAL",
+            "REFUND_INITIATED",
+            "REFUND_SETTLED",
+            "REFUND_FAILED",
+            "REFUND_RETURNED",
+            "CORRECTION"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "PENDING",
+            "SETTLED",
+            "FAILED",
+            "RETURNED",
+            "REVERSED",
+            "UNKNOWN"
+          ]
+        },
+        "amountCents": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991,
+          "x-foundry-type": "Long"
+        },
+        "occurredAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "Z$"
+        },
+        "learnedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "Z$"
+        },
+        "sourceEvidenceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "requestId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reversesTransactionId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "chargeItemId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "eventId",
+        "canonicalTransactionId",
+        "sourceEventId",
+        "kind",
+        "status",
+        "amountCents",
+        "occurredAt",
+        "learnedAt",
+        "sourceEvidenceId",
+        "requestId",
+        "reversesTransactionId",
+        "chargeItemId"
+      ],
+      "additionalProperties": false
+    },
+    "OtherBalance": {
+      "type": "object",
+      "properties": {
+        "balanceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "amountCents": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991,
+              "x-foundry-type": "Long"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "minimum": 0
+        },
+        "state": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "KNOWN",
+            "UNKNOWN",
+            "DISPUTED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "sourceEvidenceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "unresolvedQuestionIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "balanceId",
+        "description",
+        "amountCents",
+        "state",
+        "sourceEvidenceId",
+        "unresolvedQuestionIds"
+      ],
+      "additionalProperties": false
+    },
+    "OpenQuestion": {
+      "type": "object",
+      "properties": {
+        "questionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "resolverRole": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "MANAGER",
+            "ACCOUNTANT",
+            "AUTHORITY_ADMIN",
+            "OWNER",
+            "RESIDENT",
+            "SIGNATORY",
+            "CUSTODIAN",
+            "REVIEWER",
+            "DEMO_TESTER",
+            "AUTOMATION"
+          ]
+        },
+        "resolverPartyId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "neededRecord": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "affectedItemIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "affectedActionKinds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "enum": [
+              "OPEN_CASE",
+              "ADD_EVIDENCE",
+              "ACCEPT_OR_CORRECT_FACT",
+              "SET_OR_REVOKE_AUTHORITY",
+              "RECORD_CHARGE_DECISION",
+              "CHOOSE_OR_WAIVE_CHARGE",
+              "SET_RECIPIENT_INSTRUCTIONS",
+              "RECONCILE_MONEY_RECORD",
+              "PREPARE_STATEMENT",
+              "APPROVE_EXACT_VERSION",
+              "REJECT_OR_REVOKE_APPROVAL",
+              "REQUEST_STATEMENT_DISPATCH",
+              "REQUEST_REFUND",
+              "REQUEST_LEDGER_POSTING",
+              "RECORD_DEMO_OUTCOME",
+              "RECORD_MANUAL_CONFIRMATION",
+              "RESOLVE_UNKNOWN_RESULT",
+              "AUTHORIZE_REPLACEMENT_ATTEMPT",
+              "ASSIGN_WORK",
+              "RECORD_RELATED_TASK_RESULT",
+              "RECHECK_CASE",
+              "ADVANCE_DEMO_CLOCK"
+            ]
+          }
+        }
+      },
+      "required": [
+        "questionId",
+        "question",
+        "reason",
+        "resolverRole",
+        "resolverPartyId",
+        "neededRecord",
+        "affectedItemIds",
+        "affectedActionKinds"
+      ],
+      "additionalProperties": false
+    },
+    "StatementFact": {
+      "type": "object",
+      "properties": {
+        "versionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "INTERIM",
+            "FINAL",
+            "CORRECTION"
+          ]
+        },
+        "reviewId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contentHash": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recipientInstructionsVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "issuedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "issuanceEvidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "versionId",
+        "kind",
+        "reviewId",
+        "contentHash",
+        "recipientInstructionsVersion",
+        "issuedAt",
+        "issuanceEvidenceIds"
+      ],
+      "additionalProperties": false
+    },
+    "ApprovalFact": {
+      "type": "object",
+      "properties": {
+        "approvalId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decision": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "APPROVED",
+            "REJECTED",
+            "REVOKED"
+          ]
+        },
+        "actionKind": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "OPEN_CASE",
+            "ADD_EVIDENCE",
+            "ACCEPT_OR_CORRECT_FACT",
+            "SET_OR_REVOKE_AUTHORITY",
+            "RECORD_CHARGE_DECISION",
+            "CHOOSE_OR_WAIVE_CHARGE",
+            "SET_RECIPIENT_INSTRUCTIONS",
+            "RECONCILE_MONEY_RECORD",
+            "PREPARE_STATEMENT",
+            "APPROVE_EXACT_VERSION",
+            "REJECT_OR_REVOKE_APPROVAL",
+            "REQUEST_STATEMENT_DISPATCH",
+            "REQUEST_REFUND",
+            "REQUEST_LEDGER_POSTING",
+            "RECORD_DEMO_OUTCOME",
+            "RECORD_MANUAL_CONFIRMATION",
+            "RESOLVE_UNKNOWN_RESULT",
+            "AUTHORIZE_REPLACEMENT_ATTEMPT",
+            "ASSIGN_WORK",
+            "RECORD_RELATED_TASK_RESULT",
+            "RECHECK_CASE",
+            "ADVANCE_DEMO_CLOCK"
+          ]
+        },
+        "targetVersionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "payloadFingerprint": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authorityVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "actorPartyId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decidedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "Z$"
+        },
+        "revokedApprovalId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "approvalId",
+        "decision",
+        "actionKind",
+        "targetVersionId",
+        "payloadFingerprint",
+        "authorityVersion",
+        "actorPartyId",
+        "decidedAt",
+        "revokedApprovalId"
+      ],
+      "additionalProperties": false
+    },
+    "RequestFact": {
+      "type": "object",
+      "properties": {
+        "requestId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "actionKind": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "OPEN_CASE",
+            "ADD_EVIDENCE",
+            "ACCEPT_OR_CORRECT_FACT",
+            "SET_OR_REVOKE_AUTHORITY",
+            "RECORD_CHARGE_DECISION",
+            "CHOOSE_OR_WAIVE_CHARGE",
+            "SET_RECIPIENT_INSTRUCTIONS",
+            "RECONCILE_MONEY_RECORD",
+            "PREPARE_STATEMENT",
+            "APPROVE_EXACT_VERSION",
+            "REJECT_OR_REVOKE_APPROVAL",
+            "REQUEST_STATEMENT_DISPATCH",
+            "REQUEST_REFUND",
+            "REQUEST_LEDGER_POSTING",
+            "RECORD_DEMO_OUTCOME",
+            "RECORD_MANUAL_CONFIRMATION",
+            "RESOLVE_UNKNOWN_RESULT",
+            "AUTHORIZE_REPLACEMENT_ATTEMPT",
+            "ASSIGN_WORK",
+            "RECORD_RELATED_TASK_RESULT",
+            "RECHECK_CASE",
+            "ADVANCE_DEMO_CLOCK"
+          ]
+        },
+        "targetVersionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "payloadFingerprint": {
+          "type": "string",
+          "minLength": 1
+        },
+        "amountCents": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991,
+              "x-foundry-type": "Long"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "minimum": 0
+        },
+        "state": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "READY",
+            "CLAIMED",
+            "REQUESTED",
+            "ACKNOWLEDGED",
+            "OUTCOME_UNKNOWN",
+            "SUCCEEDED",
+            "FAILED",
+            "CANCELLED",
+            "SUPERSEDED"
+          ]
+        },
+        "approvalIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "externalReference": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "requestId",
+        "actionKind",
+        "targetVersionId",
+        "payloadFingerprint",
+        "amountCents",
+        "state",
+        "approvalIds",
+        "externalReference"
+      ],
+      "additionalProperties": false
+    },
+    "ExecutionFact": {
+      "type": "object",
+      "properties": {
+        "eventId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "COMMAND_RECEIPT",
+            "ATTEMPT",
+            "RESULT",
+            "RECONCILIATION",
+            "MANUAL_CONFIRMATION",
+            "ADMINISTRATIVE",
+            "EFFORT"
+          ]
+        },
+        "requestId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "attemptId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "occurredAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "Z$"
+        },
+        "learnedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "Z$"
+        },
+        "resultCode": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "eventId",
+        "kind",
+        "requestId",
+        "attemptId",
+        "occurredAt",
+        "learnedAt",
+        "resultCode",
+        "evidenceIds"
+      ],
+      "additionalProperties": false
+    },
+    "RelatedTaskFact": {
+      "type": "object",
+      "properties": {
+        "taskId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "state": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "OPEN",
+            "BLOCKED",
+            "READY",
+            "PENDING",
+            "FULFILLED",
+            "FAILED",
+            "REOPENED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "responsibleRole": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "MANAGER",
+            "ACCOUNTANT",
+            "AUTHORITY_ADMIN",
+            "OWNER",
+            "RESIDENT",
+            "SIGNATORY",
+            "CUSTODIAN",
+            "REVIEWER",
+            "DEMO_TESTER",
+            "AUTOMATION"
+          ]
+        },
+        "completionEvidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "taskId",
+        "description",
+        "state",
+        "responsibleRole",
+        "completionEvidenceIds"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

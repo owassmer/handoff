@@ -1,0 +1,2058 @@
+{
+  "at": "2026-10-01T05:51:11.843201+00:00",
+  "status": "complete: preservation, source hashes, fee artifacts, accepted review bindings and current index links verified",
+  "protected_files_checked": 7962,
+  "protected_changed_or_missing": [],
+  "implementation_files_checked": 11,
+  "implementation_changed_or_missing": [],
+  "implementation_sha256": {
+    "pipeline/jev.py": "c87b7e77ca07eb5e55a27d6aab4c8d47df449ed6c1036e2f16580b530d16b25b",
+    "pipeline/jev_results.py": "734833362cfee7ec6965a41ebc78297297fb02c082a4fc3872a97119f2c4ba03",
+    "pipeline/triage.py": "9f6750654ff101b9d457a60b8b53aa139f14d906581651670997c7a7b7db6698",
+    "pipeline/batch.py": "d63d55eab0eca8765f174cfb779171576b926a4f8adbdeec59a7df4bd2bebf90",
+    "pipeline/registercheck.py": "d0dd464d7904fb737a8afdea6eea3d20e33ebab95a67c2fa35592566ec608300",
+    "pipeline/legacy_import.py": "f31808228b3179bf04d11e6d3851a675c788502342b2f140c937ee16ec4d69c9",
+    "pipeline/export.py": "11ab78b5d7a6e54fdf4181555de0af22a61363ba7f31dc2b46fadbffc635694c",
+    "pipeline/tests/test_jev_result_reuse.py": "f8f80b6f81c4c04b59504cbc70833ce26daa83370586cdf7df2cfff37d998900",
+    "pipeline/tests/test_importer.py": "fdd12ee7b41b37ef6908d682d3dea06c3982fbc8c6c3680c24aa1597cef4fc6c",
+    "pipeline/tests/test_routing_batching.py": "d2c57ccbde98a863104be5133e26dd3b943bb2b6da5d3f55fec7c2f643d4b1f4",
+    "register/jev_triage.py": "86e534843cf63e975a44575394c303ffd00757a9815aa001dc9d80c48b8d01a1"
+  },
+  "tests": "No software changes; preserved Goal 2 evidence records 159 passing tests. No new software test result is claimed.",
+  "source_manifest_records": [
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CIV7.html",
+      "recorded_status": 200,
+      "sha256": "a428af25714cf3229d6824953d62a0804efbb120f74bcb2583ce6bf0b9b32d0a",
+      "matched_file": "resolution_review/CIV7.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CIV9.html",
+      "recorded_status": 200,
+      "sha256": "557218becfa826897501f035a360fb2279f51c89b67d3c1e5889cc4ec5626938",
+      "matched_file": "resolution_review/CIV9.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CIV10.html",
+      "recorded_status": 200,
+      "sha256": "9e727110a70ada2183733cf9d1acc3d0a9ddd31ef08022757e49b9b35ea02b4c",
+      "matched_file": "resolution_review/CIV10.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CIV11.html",
+      "recorded_status": 200,
+      "sha256": "90dbc60be8b9454038451aadf997fa3ef6d5e0487768e087f99a7de0d01922f0",
+      "matched_file": "resolution_review/CIV11.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CIV1788.11.html",
+      "recorded_status": 200,
+      "sha256": "df01c2277ec4b47630d6a35f857310853f4f1d318b101e0a44dd0ddeef71f47a",
+      "matched_file": "resolution_review/CIV1788.11.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CIV1788.14.5.html",
+      "recorded_status": 200,
+      "sha256": "94b1eb8f7232712b55aefea7a6276d8c4211bb405156740df8fa13bfe1eece89",
+      "matched_file": "resolution_review/CIV1788.14.5.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CIV1788.18.html",
+      "recorded_status": 200,
+      "sha256": "88d607b4c463420174e78247632f4a30c53c77039fc271dbd12725e754478d34",
+      "matched_file": "resolution_review/CIV1788.18.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CIV1788.52.html",
+      "recorded_status": 200,
+      "sha256": "c96326e4fa534a57282a5afb1dd8e3ce34e434ff5d3ddc7330877c0908008088",
+      "matched_file": "resolution_review/CIV1788.52.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CIV1788.54.html",
+      "recorded_status": 200,
+      "sha256": "34b6c1d90c45db0f6926ea496ee63b35f62b3cd5fbe53b94d2dafde8b25a30c8",
+      "matched_file": "resolution_review/CIV1788.54.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CCP12.html",
+      "recorded_status": 200,
+      "sha256": "0cf850b35d49616297097f59a310e6778057bce3db9266eb5d85e03e6b8e0414",
+      "matched_file": "resolution_review/CCP12.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CCP12a.html",
+      "recorded_status": 200,
+      "sha256": "70812ecb2208db17ca5c97f10889535f23bb46640db5abb99724ea36994d24a2",
+      "matched_file": "resolution_review/CCP12a.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CCP12b.html",
+      "recorded_status": 200,
+      "sha256": "acd3c13c416c87e9f3cc64fa356df53bfe2fcdde73e6a5ca5d09394a0fffb147",
+      "matched_file": "resolution_review/CCP12b.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CCP13.html",
+      "recorded_status": 200,
+      "sha256": "a1de40038fac5ce6ba40a40dbe7c6b5aa0e874e569e1814a85cb3eba6a645d93",
+      "matched_file": "resolution_review/CCP13.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CCP135.html",
+      "recorded_status": 200,
+      "sha256": "422431af33f9844f1872ad8e6c77fcddedd0de92af7d78021904c1d9ba93a6f1",
+      "matched_file": "resolution_review/CCP135.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "GOV6700.html",
+      "recorded_status": 200,
+      "sha256": "7673cfc22ab1ddd57d88ea2cdac89e908fa445b60821da69064f5e837d581b53",
+      "matched_file": "resolution_review/GOV6700.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "GOV6701.html",
+      "recorded_status": 200,
+      "sha256": "64bc2da9dcb9ba67537e79c65feffe2c1ddab91672806a7da59d547dc6258a17",
+      "matched_file": "resolution_review/GOV6701.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "GOV6702.html",
+      "recorded_status": 200,
+      "sha256": "cb6d77666a560c77b49f798465bbd79f28e7c0dfbe12f705c01c73b77232e56e",
+      "matched_file": "resolution_review/GOV6702.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "FIN100000.html",
+      "recorded_status": 200,
+      "sha256": "82131945dba53960efb191e9631f350a1e8223768e860cbc78b96ca86d9ae55f",
+      "matched_file": "resolution_review/FIN100000.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "FIN100001.html",
+      "recorded_status": 200,
+      "sha256": "4577d19a90aa415d815b09cab6e84c0e729933d198a167b70bdc373ee2dafed4",
+      "matched_file": "resolution_review/FIN100001.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "FIN100002.html",
+      "recorded_status": 200,
+      "sha256": "66227b51de7cf0b331bce6c0b64c173fa67ea45aed4db4d61e5dd4f5f57a9bdb",
+      "matched_file": "resolution_review/FIN100002.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": null,
+      "recorded_status": null,
+      "error": "HTTP Error 403: Forbidden",
+      "hash_record": false
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": null,
+      "recorded_status": null,
+      "error": "HTTP Error 403: Forbidden",
+      "hash_record": false
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": null,
+      "recorded_status": null,
+      "error": "HTTP Error 403: Forbidden",
+      "hash_record": false
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": null,
+      "recorded_status": null,
+      "error": "HTTP Error 403: Forbidden",
+      "hash_record": false
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "PuniPau.pdf",
+      "recorded_status": 200,
+      "sha256": "33e40bee2ace2d187ae4d879f6f9312efd64b7b8882275e49b158c5da611d5ff",
+      "matched_file": "resolution_review/PuniPau.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": null,
+      "recorded_status": null,
+      "error": "HTTP Error 403: Forbidden",
+      "hash_record": false
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": null,
+      "recorded_status": null,
+      "error": "HTTP Error 403: Forbidden",
+      "hash_record": false
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CIV7.1.html",
+      "recorded_status": 200,
+      "sha256": "88d60faf9cdd3c813db1167095c2da60bda4c54c79820e0970194c6b4d9dea5e",
+      "matched_file": "resolution_review/CIV7.1.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "RegF-1.html",
+      "recorded_status": 200,
+      "sha256": "8326d0b7e8a790f42256739020d95ab98eea5bcb028569812a0a2114db04e665",
+      "matched_file": "resolution_review/RegF-1.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "RegF-2.html",
+      "recorded_status": 200,
+      "sha256": "49dafe6be8db900d63d5025027a1e8b7494a0f5f6298786ca5530f15f3898e03",
+      "matched_file": "resolution_review/RegF-2.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "RegF-6.html",
+      "recorded_status": 200,
+      "sha256": "0e346f813eb4ed91a1c0075d80eec48114abe559970daeda38b622dcb50681f8",
+      "matched_file": "resolution_review/RegF-6.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "RegF-10.html",
+      "recorded_status": 200,
+      "sha256": "57d372f2e283a936b67dbea574ae1ca0c517bf45c1b76e900147ca89228b2313",
+      "matched_file": "resolution_review/RegF-10.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "RegF-14.html",
+      "recorded_status": 200,
+      "sha256": "fda70d039ffb728366f58192bd1a315419257077cf83899d71f27d7ba59e3b5b",
+      "matched_file": "resolution_review/RegF-14.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "RegF-18.html",
+      "recorded_status": 200,
+      "sha256": "c74dd64fca10c9e139654c940962d28030c5fab74f9f65dfd94bbc81f6105848",
+      "matched_file": "resolution_review/RegF-18.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "RegF-22.html",
+      "recorded_status": 200,
+      "sha256": "f3b72f32002057e5acd99ab72964dc11cf07e455ecbf8000b4147f0426d8d92b",
+      "matched_file": "resolution_review/RegF-22.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "RegF-26.html",
+      "recorded_status": 200,
+      "sha256": "873afb9bf32832038df79d1b47018950db6b8ee9802b39edd7163b5e89024d26",
+      "matched_file": "resolution_review/RegF-26.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "RegF-30.html",
+      "recorded_status": 200,
+      "sha256": "f663899ed81fec9fb6e9b7a04f55df18635033cd6fc1dcdadc0d91bc5be9093e",
+      "matched_file": "resolution_review/RegF-30.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "RegF-34.html",
+      "recorded_status": 200,
+      "sha256": "44a3a49095ed15ab5d179e5692a057d2efdfea3a77dda9c5dffd040468c13029",
+      "matched_file": "resolution_review/RegF-34.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "RegF-38.html",
+      "recorded_status": 200,
+      "sha256": "071d451f3c481cfaad44de53c1c53fe161e6cf7b119c0f1ff0cbd5c5169ca9b0",
+      "matched_file": "resolution_review/RegF-38.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "RegF-42.html",
+      "recorded_status": 200,
+      "sha256": "50ba6292628e787a54e57a9ac84285ef4e371d5aef4ea65714125f187e52c83b",
+      "matched_file": "resolution_review/RegF-42.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "RegF-100.html",
+      "recorded_status": 200,
+      "sha256": "c613892195700b1e08c8fd7cbf813b3315f580750cb2dd630523527e7e2d9a7c",
+      "matched_file": "resolution_review/RegF-100.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "RegF-104.html",
+      "recorded_status": 200,
+      "sha256": "1569a07b0fe3190f06d517493de06d12a882ce593b610881a689c6bf37460ef7",
+      "matched_file": "resolution_review/RegF-104.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "USC15-7001.html",
+      "recorded_status": 200,
+      "sha256": "f66b287d3f8b919a1b60083ec2aa76b593b51c0a4dbd3f1d30fd9d907e9754db",
+      "matched_file": "resolution_review/USC15-7001.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "USC15-7002.html",
+      "recorded_status": 200,
+      "sha256": "c0012b63e782830e8d91d6af49df3efc4ba75066bc22c8602e97aff0ea5f53ac",
+      "matched_file": "resolution_review/USC15-7002.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "USC15-7003.html",
+      "recorded_status": 200,
+      "sha256": "a863f91ef605a8b24910e9b58830effa0c6dfbcb62daf600ab31ec6a61bc5c3c",
+      "matched_file": "resolution_review/USC15-7003.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CIV1633.3.html",
+      "recorded_status": 200,
+      "sha256": "e779a112e87c337089381cd5023d980f5e3618cd41b276b579ef3a90bce34f27",
+      "matched_file": "resolution_review/CIV1633.3.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CIV1633.5.html",
+      "recorded_status": 200,
+      "sha256": "3ec17c263362c8b3186c39b5ecd989d2667ac0ac7e2c8cde327ab90e62779d71",
+      "matched_file": "resolution_review/CIV1633.5.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CIV1633.8.html",
+      "recorded_status": 200,
+      "sha256": "92b17d1e8379ef490bd68fa80bc64b203868d960e8192cf7cc384bc301557b07",
+      "matched_file": "resolution_review/CIV1633.8.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CIV1633.15.html",
+      "recorded_status": 200,
+      "sha256": "cca7a615a860a59868937b6ffd1dd57ef108b261e770ce889fce42aa8f3ce1b4",
+      "matched_file": "resolution_review/CIV1633.15.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "RegF-final2020.pdf",
+      "recorded_status": 200,
+      "sha256": "5fea77bfe9f3c8ddd183b3dd8b33794d0b2ed35e4d6e7fafea54837ef38f4d56",
+      "matched_file": "resolution_review/RegF-final2020.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": null,
+      "recorded_status": null,
+      "error": "HTTP Error 403: Forbidden",
+      "hash_record": false
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": null,
+      "recorded_status": null,
+      "error": "HTTP Error 403: Forbidden",
+      "hash_record": false
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": null,
+      "recorded_status": null,
+      "error": "HTTP Error 403: Forbidden",
+      "hash_record": false
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CIV1812.700.html",
+      "recorded_status": 200,
+      "sha256": "90f3fff6df4e4bf44fde8b818a11dd8a3e338b4f4b083e5666e3b625764ce658",
+      "matched_file": "resolution_review/CIV1812.700.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CIV1812.701.html",
+      "recorded_status": 200,
+      "sha256": "2191a70951b1d0ca91f3ef8a2166331045c969834f5243182b534b5cb0b31b33",
+      "matched_file": "resolution_review/CIV1812.701.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CIV1812.702.html",
+      "recorded_status": 200,
+      "sha256": "523f423ea1f1ee2a349965bff343c4e74345518d20cd23ee2fd2c11a357b8876",
+      "matched_file": "resolution_review/CIV1812.702.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "BPC10130.html",
+      "recorded_status": 200,
+      "sha256": "adee7043a1beb1d448b6cf91b642d9f47cbe3f76b4712924d7a90cd8396d797f",
+      "matched_file": "resolution_review/BPC10130.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "BPC10131.html",
+      "recorded_status": 200,
+      "sha256": "29ced853497029ca980bd5ec19748ab08ba344944e61233749e8f23e3ece3249",
+      "matched_file": "resolution_review/BPC10131.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "BPC10133.html",
+      "recorded_status": 200,
+      "sha256": "57e213182307a68f80df5091d3ef013a5b96a31e7100dc450dfd7a17da21226d",
+      "matched_file": "resolution_review/BPC10133.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CFPB-guide.pdf",
+      "recorded_status": 200,
+      "sha256": "73d27f1389a057d963b092c547db03d6999aef8e1439f3f69e720bb85f80d3b3",
+      "matched_file": "resolution_review/CFPB-guide.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "USC5-6103.html",
+      "recorded_status": 200,
+      "sha256": "6909183aef19c2e16b1540ff3058f3a1bbb2c5ca13f249dee494f059604ea28f",
+      "matched_file": "resolution_review/USC5-6103.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "BPC10131.01.html",
+      "recorded_status": 200,
+      "sha256": "c67be0d3244e1996e6efcbf741cccd5fd5f803b6b4e7006132b579212a8f7937",
+      "matched_file": "resolution_review/BPC10131.01.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "DRE-AI.html",
+      "recorded_status": 200,
+      "sha256": "05a93719feaab17e157317b14df4e6b99b1810b5fcac0c7dd71956630e86badc",
+      "matched_file": "resolution_review/DRE-AI.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "DRE-assistants.pdf",
+      "recorded_status": 200,
+      "sha256": "7bafb33574f61ca7645ffc0c229d854517e839ab1eac44b5526dc6bd9901eaa3",
+      "matched_file": "resolution_review/DRE-assistants.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CIV1788.14.html",
+      "recorded_status": 200,
+      "sha256": "20468a658805ea34505f539df6f5b942ef437ee26f675447c771c1955cff808c",
+      "matched_file": "resolution_review/CIV1788.14.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "DRE-regs2026.pdf",
+      "recorded_status": 200,
+      "sha256": "79d6b457bf5f7782613d13a48068600bf6399a9660a10caed0c4496586523792",
+      "matched_file": "resolution_review/DRE-regs2026.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "DeSimone2024.pdf",
+      "recorded_status": 200,
+      "sha256": "92c9ff5c4bdac917376571cf19827d95cd7ca04200f6a0231271787e28ca6ba5",
+      "matched_file": "resolution_review/DeSimone2024.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "Torliatt2021.pdf",
+      "recorded_status": 200,
+      "sha256": "f0e776f1d2b5647b61235a894122bcdef933004e099e44d1004dd4d71efcc00a",
+      "matched_file": "resolution_review/Torliatt2021.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "BPC10163.html",
+      "recorded_status": 200,
+      "sha256": "bd184b62750efcb7740ee61666f6bd39390ec57b8acca40730400af2f2ff4621",
+      "matched_file": "resolution_review/BPC10163.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_review/sources.json",
+      "id": "CCP1162.html",
+      "recorded_status": 200,
+      "sha256": "dfd8004c819f2c06c158d13ee6e15e6e1cf24322d631468e11dba2c6f44845ce",
+      "matched_file": "resolution_review/CCP1162.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_identity/sources.json",
+      "id": "CIV_1798.92",
+      "recorded_status": 200,
+      "sha256": "30fa4db4cdb6eda79892c4c1cc602768152fce5135401ed80b2157930245b025",
+      "matched_file": "resolution_identity/sources/CIV_1798.92.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_identity/sources.json",
+      "id": "CIV_1798.93",
+      "recorded_status": 200,
+      "sha256": "a51b67af58399e1bb74314e733229f747d3b6818dbcba8c447f2cd621e572778",
+      "matched_file": "resolution_identity/sources/CIV_1798.93.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_identity/sources.json",
+      "id": "CIV_1798.94",
+      "recorded_status": 200,
+      "sha256": "08cf187d4d32523a0c6b44e02389cc13caef936da100fe326c8f0a09ed2fc7d9",
+      "matched_file": "resolution_identity/sources/CIV_1798.94.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_identity/sources.json",
+      "id": "CIV_1798.95",
+      "recorded_status": 200,
+      "sha256": "f93d5fe1acbddf6ee100236f9641055cef48db42a3fb312f9f9a7ff1d52f57cd",
+      "matched_file": "resolution_identity/sources/CIV_1798.95.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_identity/sources.json",
+      "id": "CIV_1798.96",
+      "recorded_status": 200,
+      "sha256": "f781ca9443cd94c698159bef5d44973b25dd4a8f3e3068c781717814c3bf3257",
+      "matched_file": "resolution_identity/sources/CIV_1798.96.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_identity/sources.json",
+      "id": "CIV_1798.97",
+      "recorded_status": 200,
+      "sha256": "3a8294d32bf84e2afee8a8b5b699862f78ba6bcc38654435191cf05c86930013",
+      "matched_file": "resolution_identity/sources/CIV_1798.97.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_identity/sources.json",
+      "id": "PEN_530.5",
+      "recorded_status": 200,
+      "sha256": "a6dfd5d85bf7d14b94e477f97e02fc4fd942eb1d4a2259749fcec6b6c2b8748b",
+      "matched_file": "resolution_identity/sources/PEN_530.5.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_identity/sources.json",
+      "id": "PEN_530.8",
+      "recorded_status": 200,
+      "sha256": "1736e04747534d4f3a487b6d566282f238aa21412dc14bc023580a897dfa8b06",
+      "matched_file": "resolution_identity/sources/PEN_530.8.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_identity/sources.json",
+      "id": "USC1681g_current",
+      "recorded_status": 200,
+      "sha256": "f081f71b935f56e39f0fc970aea9586cdca7d0d9e93a501119efc705b598952d",
+      "matched_file": "resolution_identity/sources/USC1681g_current.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_identity/sources.json",
+      "id": "USC1681g_2024",
+      "recorded_status": 200,
+      "sha256": "2b3326632d11aea904abb31c16ddb03b8f99066a5250660dcf0ee149b4504be4",
+      "matched_file": "resolution_identity/sources/USC1681g_2024.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_identity/sources.json",
+      "id": "FTC_FCRA_March2026",
+      "recorded_status": null,
+      "sha256": "3eb6bf6fbffdb49ed56873ea584fcd4a23c0e772a2db68a337382cdadaec645a",
+      "matched_file": "resolution_identity/sources/FTC_FCRA_March2026.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_identity/sources.json",
+      "id": "Satey2008",
+      "recorded_status": null,
+      "sha256": "332b0f2660444ccfbf5d05d665485efab32ca29be15f4273fb80710460be7ad8",
+      "matched_file": "resolution_identity/sources/Satey2008.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_identity/sources.json",
+      "id": "CIV_1747.10",
+      "recorded_status": 200,
+      "sha256": "3ab943ee2c822217bc324c43d949ccb563c7e2c06019013dcc9673e0a2fdfea0",
+      "matched_file": "resolution_identity/sources/CIV_1747.10.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_identity/sources.json",
+      "id": "RegV_1022_3",
+      "recorded_status": null,
+      "error": "HTTP Error 403: Forbidden",
+      "hash_record": false
+    },
+    {
+      "manifest": "resolution_identity/sources.json",
+      "id": "RegV_1022_3_web_recovery",
+      "recorded_status": null,
+      "sha256": "3074f6bc4bed63167cf11cf033c65db558c622b96c4ecae81800e5b96e8998af",
+      "matched_file": "resolution_identity/sources/RegV_1022_3_web_capture.json",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_identity/calendar_sources.json",
+      "id": "PEN_7",
+      "recorded_status": 200,
+      "sha256": "0c221627180da350baeb5525b1ef87b3978f3a3ca42cceb2d043fcbd9b33047b",
+      "matched_file": "resolution_identity/sources/PEN_7.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_identity/calendar_sources.json",
+      "id": "PEN_10",
+      "recorded_status": 200,
+      "sha256": "e2e0d9699d1906cf42cf0015c8ef0ccfadc67eb585ba4f06af7bda6aac2b7e1e",
+      "matched_file": "resolution_identity/sources/PEN_10.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_identity/calendar_sources.json",
+      "id": "PEN_11",
+      "recorded_status": 200,
+      "sha256": "2bc76bc751b2a3dd53b3fb0b086d7b801e23d8c5078c196b1552290dc86bd2d9",
+      "matched_file": "resolution_identity/sources/PEN_11.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_assigned/sources.json",
+      "id": "Hernandez2016.pdf",
+      "recorded_status": null,
+      "sha256": "976fb69dea17d5049bc773725b9a59275fe6c72bcc0d46ec7e727af84c669396",
+      "matched_file": "resolution_assigned/Hernandez2016.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_assigned/sources.json",
+      "id": "CIV1788_52_current.html",
+      "recorded_status": null,
+      "sha256": "2957552fc20c82e85bc31a819e69248becb009e09312ebd45b12b9e458668f36",
+      "matched_file": "resolution_assigned/CIV1788_52_current.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_assigned/sources.json",
+      "id": "CIV1788_14_5_current.html",
+      "recorded_status": null,
+      "sha256": "e9d1f9500abdee1868d4537bf188d5571835f5c1efb9b551cfcd7cee657944b2",
+      "matched_file": "resolution_assigned/CIV1788_14_5_current.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_assigned/sources.json",
+      "id": "Lane2011.pdf",
+      "recorded_status": null,
+      "sha256": "f1c3725563378040e9a933fcb916e5d22401a194478c6b540666f1bf923aa8d1",
+      "matched_file": "resolution_assigned/Lane2011.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_assigned/sources.json",
+      "id": "CFPB2020final.pdf",
+      "recorded_status": null,
+      "sha256": "6281b13f016bba176d292301596f5329cd3ba968211a074fd0e957d5082ee075",
+      "matched_file": "resolution_assigned/CFPB2020final.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_assigned/sources.json",
+      "id": "judicial_web_retrieval.json",
+      "recorded_status": null,
+      "sha256": "ef7c6e46c2d7755f95f117905b7e070479ea205292f0b1460e08000fb584e99b",
+      "matched_file": "resolution_assigned/judicial_web_retrieval.json",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_federal/sources.json",
+      "id": "FTC129",
+      "recorded_status": "failed_retrieval",
+      "error": "HTTP Error 403: Forbidden",
+      "hash_record": false
+    },
+    {
+      "manifest": "resolution_federal/sources.json",
+      "id": "Heintz",
+      "recorded_status": "retrieved",
+      "sha256": "7a8f9ce956305b60c5b5c6b48d1c79657366dc79e98f814c416506b61d9292d4",
+      "matched_file": "resolution_federal/Heintz.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_federal/sources.json",
+      "id": "Thomas",
+      "recorded_status": "retrieved",
+      "sha256": "a462e3ff7afd0734d78aee975e6544b14b94eda094fe34d01b1608249d8432d1",
+      "matched_file": "resolution_federal/Thomas.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_federal/sources.json",
+      "id": "Vega",
+      "recorded_status": "failed_retrieval",
+      "error": "HTTP Error 404: Not Found",
+      "hash_record": false
+    },
+    {
+      "manifest": "resolution_federal/sources.json",
+      "id": "AB1669",
+      "recorded_status": "failed_retrieval",
+      "error": "HTTP Error 403: Forbidden",
+      "hash_record": false
+    },
+    {
+      "manifest": "resolution_federal/sources.json",
+      "id": "FTC2000",
+      "recorded_status": "retrieved",
+      "sha256": "160a86800f4bee249fa7dc075f99783424a9ad92333ef583fc3e01c90a2405ba",
+      "matched_file": "resolution_federal/FTC2000.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_federal/sources.json",
+      "id": "Vega",
+      "recorded_status": "retrieved",
+      "sha256": "dfbc62aa0b4e8f681110c583a9c25868a7a5c3ec3e1f46b578985edbfa7e6afb",
+      "matched_file": "resolution_federal/Vega.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_federal/sources.json",
+      "id": "AB1669volume",
+      "recorded_status": "retrieved",
+      "sha256": "0eab5aa04b9f0a90f850ee951015bf2ad0a0d69a76d390b5b2c1346f8227894c",
+      "matched_file": "resolution_federal/AB1669volume.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_federal/sources.json",
+      "id": "Goldman",
+      "recorded_status": "failed_retrieval",
+      "error": "HTTP Error 403: Forbidden",
+      "hash_record": false
+    },
+    {
+      "manifest": "resolution_federal/sources.json",
+      "id": "1692n",
+      "recorded_status": "retrieved",
+      "sha256": "e91ed58e65d6068e0a5b4f62e9c98cc116c5243c03cfa77188c439133f055da1",
+      "matched_file": "resolution_federal/1692n.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_federal/sources.json",
+      "id": "PL109351",
+      "recorded_status": "retrieved",
+      "sha256": "1636da19601a51f9f3ad3a104f1268c91aa41aaf9ad5d76c9f057b16476ce661",
+      "matched_file": "resolution_federal/PL109351.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_federal/sources.json",
+      "id": "Goldman-web-recovery",
+      "recorded_status": "web_tool_capture",
+      "sha256": "99231c608c56525af8e79c7bb06d309fbec7c2244a705aeb1e903dbb243172ca",
+      "matched_file": "resolution_federal/Goldman-web-capture.json",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_federal/review-sources.json",
+      "id": "review-Donohue-2010.pdf",
+      "recorded_status": "retrieved",
+      "sha256": "fc3671e45df9f6178c8af2eb01fa9a083231203e711967ae01cf6ebac5567907",
+      "matched_file": "resolution_federal/review-Donohue-2010.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_federal/review-sources.json",
+      "id": "review-Guerrero-2007.pdf",
+      "recorded_status": "failed",
+      "error": "HTTP Error 403: Forbidden",
+      "hash_record": false
+    },
+    {
+      "manifest": "resolution_federal/review-sources.json",
+      "id": "review-JCC-2025.pdf",
+      "recorded_status": "retrieved",
+      "sha256": "c277d2a5a01e732bc264714793ff7085b305eb512faed10ed5a168f85ff5c2ad",
+      "matched_file": "resolution_federal/review-JCC-2025.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_federal/review-sources.json",
+      "id": "review-Guerrero-web.json",
+      "recorded_status": "web_tool_capture",
+      "sha256": "509f18d044d28e8d788d54ce63fc19092e34d2eadc0e8b9f112dcab054d49101",
+      "matched_file": "resolution_federal/review-Guerrero-web.json",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_federal/review-sources.json",
+      "id": "review-Persolve-web.json",
+      "recorded_status": "web_tool_capture",
+      "sha256": "f965b6f69c676cb0389269befeaa31d298f3fd72f9d4f8548472d6a80ee5bbd1",
+      "matched_file": "resolution_federal/review-Persolve-web.json",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_tenancy/sources/manifest.json",
+      "id": "alexander.txt",
+      "recorded_status": null,
+      "sha256": "89311b3bad7e7c0fb6263eea3f472e8741dfd26d7a019532aeebf32b93b79879",
+      "matched_file": "resolution_tenancy/sources/alexander.txt",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_tenancy/sources/manifest.json",
+      "id": "civ1530.html",
+      "recorded_status": null,
+      "sha256": "88b144675dac42e428963cd411f828d0a01768d902c1f3d4673c40a437c86ce1",
+      "matched_file": "resolution_tenancy/sources/civ1530.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_tenancy/sources/manifest.json",
+      "id": "civ1531.html",
+      "recorded_status": null,
+      "sha256": "2ede261e3da25729fc53fa764812dba232789c32e2e09eeedbe350790bb695a3",
+      "matched_file": "resolution_tenancy/sources/civ1531.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_tenancy/sources/manifest.json",
+      "id": "civ1532.html",
+      "recorded_status": null,
+      "sha256": "a62f86a4d209230cdefa840fce50127e6b95bf4d2ae635ead2e4779ba1e2edb3",
+      "matched_file": "resolution_tenancy/sources/civ1532.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_tenancy/sources/manifest.json",
+      "id": "civ1788_2.html",
+      "recorded_status": null,
+      "sha256": "e7744388b8d585e491a9887a2c81264ce7f9109fb7441765a0941af7bf722e08",
+      "matched_file": "resolution_tenancy/sources/civ1788_2.html",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_tenancy/sources/manifest.json",
+      "id": "denicolo_end.txt",
+      "recorded_status": null,
+      "sha256": "902999e31fba11cdeba4ed6fa40f4c2a81cf4797e7eb525f5aeb22d0bc0eebd8",
+      "matched_file": "resolution_tenancy/sources/denicolo_end.txt",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_tenancy/sources/manifest.json",
+      "id": "denicolo_web.txt",
+      "recorded_status": null,
+      "sha256": "fd4006dea140b41805dd95fac14d84b7777cffa64ea19200e60677933de45d7b",
+      "matched_file": "resolution_tenancy/sources/denicolo_web.txt",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_tenancy/sources/manifest.json",
+      "id": "fleming.pdf",
+      "recorded_status": null,
+      "sha256": "f3050305b01d1bd9302e1437c32240cf964087182cef0eb7e011efe84e7f0238",
+      "matched_file": "resolution_tenancy/sources/fleming.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_tenancy/sources/manifest.json",
+      "id": "fleming.txt",
+      "recorded_status": null,
+      "sha256": "903a12821a2367f6b82bd4f55632e4f16753793977901b98cbff671dac781ced",
+      "matched_file": "resolution_tenancy/sources/fleming.txt",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_tenancy/sources/manifest.json",
+      "id": "hagey_hodge_web.txt",
+      "recorded_status": null,
+      "sha256": "01b8cbd7d8daeb91d36e647e1dca0288f40671b619200232a3a2355e6dca399f",
+      "matched_file": "resolution_tenancy/sources/hagey_hodge_web.txt",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_tenancy/sources/manifest.json",
+      "id": "hagey_modification.txt",
+      "recorded_status": null,
+      "sha256": "6280c49158342c9d69c79401780bedbb2455af764803d3eaf09c0346068ecce0",
+      "matched_file": "resolution_tenancy/sources/hagey_modification.txt",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_tenancy/sources/manifest.json",
+      "id": "hawthorne.pdf",
+      "recorded_status": null,
+      "sha256": "4cb1b54061153f2a9d0b1402dbf93ab33c070108a38079085cf5c66ecc6570b2",
+      "matched_file": "resolution_tenancy/sources/hawthorne.pdf",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_tenancy/sources/manifest.json",
+      "id": "hawthorne.txt",
+      "recorded_status": null,
+      "sha256": "5082674d0199f0f05d9b33de43e9bce0c4444be17823a6421241f2de2efda176",
+      "matched_file": "resolution_tenancy/sources/hawthorne.txt",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_tenancy/sources/manifest.json",
+      "id": "hodge_end.txt",
+      "recorded_status": null,
+      "sha256": "1a73cb04b846176da5fa8f56ebe95adab5870eea941c91ba785999f1e805b735",
+      "matched_file": "resolution_tenancy/sources/hodge_end.txt",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_tenancy/sources/manifest.json",
+      "id": "pollice_paymentplan_footnote.txt",
+      "recorded_status": null,
+      "sha256": "f336e1af3bead2e07a37f2a8e4c1c6fb56e38f81e3a75240ee7bf7b7b76e44e0",
+      "matched_file": "resolution_tenancy/sources/pollice_paymentplan_footnote.txt",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_tenancy/sources/manifest.json",
+      "id": "pollice_plans.txt",
+      "recorded_status": null,
+      "sha256": "75d8133133890f10063fc8f927700e657a70a3bd877223c67d9554aee6ba8b00",
+      "matched_file": "resolution_tenancy/sources/pollice_plans.txt",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_tenancy/sources/manifest.json",
+      "id": "pollice_web.txt",
+      "recorded_status": null,
+      "sha256": "a52f0b4353dcdcc9a740e87f58b68d265da2150eb35937675891cd412e87ae14",
+      "matched_file": "resolution_tenancy/sources/pollice_web.txt",
+      "match": true,
+      "hash_record": true
+    },
+    {
+      "manifest": "resolution_tenancy/sources/manifest.json",
+      "id": "urls.json",
+      "recorded_status": null,
+      "sha256": "e7186b6a3b325db14641c55961ed06814ea75401dd46a0d613a3fca47b47c478",
+      "matched_file": "resolution_tenancy/sources/urls.json",
+      "match": true,
+      "hash_record": true
+    }
+  ],
+  "source_hash_records_checked": 114,
+  "source_hash_mismatches": [],
+  "capture_scope_note": "Hash matches verify retained bytes, not substantive retrieval success. Failed retrievals and a House maintenance response remain recorded; recovered primary text and reviews establish substantive source coverage. URL-only fee manifest receives separate final artifact hashes.",
+  "first_pass_source_hash_records_checked": 117,
+  "first_pass_source_hash_mismatches": [],
+  "first_pass_source_checks": [
+    {
+      "manifest": "assigned/calendar_sources.json",
+      "id": "GOV_6700",
+      "sha256": "7a5411db13126ad4367e8c9e5ed0915b771e31c85e1c488c9ef8bd156dac430f",
+      "match": true,
+      "matched_file": "assigned/sources/GOV_6700.html"
+    },
+    {
+      "manifest": "assigned/calendar_sources.json",
+      "id": "GOV_6701",
+      "sha256": "a767a9174756486fa923cdf30a091951b7854dc90d03d9fe5d24e1601e8e78e0",
+      "match": true,
+      "matched_file": "assigned/sources/GOV_6701.html"
+    },
+    {
+      "manifest": "assigned/calendar_sources.json",
+      "id": "GOV_6707",
+      "sha256": "1648edbe2b47e6c6624f9ed004c04d03f9728c9135d0ec32a5b8a053d7da3d41",
+      "match": true,
+      "matched_file": "assigned/sources/GOV_6707.html"
+    },
+    {
+      "manifest": "assigned/sources.json",
+      "id": "CIV_1788.1",
+      "sha256": "b00eb866508974c55a1f5253a640ef3c22c7fb991ae2e6528f8738b0afcb224c",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_1788.1.html"
+    },
+    {
+      "manifest": "assigned/sources.json",
+      "id": "CIV_1788.2",
+      "sha256": "a440bd9f3d1061479f37e78843d74daace2e8f2a2a65d9ae59749e507f7157b5",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_1788.2.html"
+    },
+    {
+      "manifest": "assigned/sources.json",
+      "id": "CIV_1788.14.5",
+      "sha256": "fe07c7a9ea6bf3d272695cccf7a6c03db74691dc1f26ef66739de0b5760b9452",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_1788.14.5.html"
+    },
+    {
+      "manifest": "assigned/sources.json",
+      "id": "CIV_1788.50",
+      "sha256": "d0f1379c13ddd45c6300be765c40394cb67e7af7829a891737f85590b71b57a0",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_1788.50.html"
+    },
+    {
+      "manifest": "assigned/sources.json",
+      "id": "CIV_1788.52",
+      "sha256": "e944fc5a170f239b973fedf848a09238545e07a6518de2d854ce0cbfe09d997b",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_1788.52.html"
+    },
+    {
+      "manifest": "assigned/sources.json",
+      "id": "CIV_1788.54",
+      "sha256": "0f91e98cdd01b74063480f64a3a4e9b596c69ee9997e5cb710edd1c9adecb5c6",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_1788.54.html"
+    },
+    {
+      "manifest": "assigned/sources.json",
+      "id": "CIV_1788.56",
+      "sha256": "7cbe8c1fff60c032a453e329bf3f1270826fcc97b81484eaa08c8bbb5e1d27e0",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_1788.56.html"
+    },
+    {
+      "manifest": "assigned/sources.json",
+      "id": "CIV_1788.58",
+      "sha256": "147214f5409f9825e6f7c62fcd6d5bb8a7cea2e2ec20217cd1b7247c63a5d6ee",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_1788.58.html"
+    },
+    {
+      "manifest": "assigned/sources.json",
+      "id": "CIV_1788.60",
+      "sha256": "ed1b8a49cb76b3f6ad17a58c694ea80aa3a3c79bd547b390190c0e372021a48e",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_1788.60.html"
+    },
+    {
+      "manifest": "assigned/sources.json",
+      "id": "CIV_1788.62",
+      "sha256": "a9800b93e8c035ae9cd910f1208a41bdf255352adc22527e6f965bc1ec6c8b08",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_1788.62.html"
+    },
+    {
+      "manifest": "assigned/sources.json",
+      "id": "CIV_1788.64",
+      "sha256": "039b9fe4897d853e772c643133523a5b3616b6f605f8ecbeb21d8e83307c4b04",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_1788.64.html"
+    },
+    {
+      "manifest": "assigned/sources.json",
+      "id": "CIV_1788.66",
+      "sha256": "d1197a7a1154772e735e46a4b7eb2129a59d7f3b9921bc0e12bb07ace1c391a1",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_1788.66.html"
+    },
+    {
+      "manifest": "assigned/sources.json",
+      "id": "SB531_chaptered",
+      "sha256": "07859534e22497b1e804f17cad53ea2b87057061d4e86be9065dfd7f8b40815c",
+      "match": true,
+      "matched_file": "assigned/sources/SB531_chaptered.html"
+    },
+    {
+      "manifest": "assigned/sources.json",
+      "id": "SB1286_chaptered",
+      "sha256": "158c9751a39297ea4f51191414d643b24f808a9cf79ed9b5aafa92ca1505246d",
+      "match": true,
+      "matched_file": "assigned/sources/SB1286_chaptered.html"
+    },
+    {
+      "manifest": "assigned/supplement_sources.json",
+      "id": "CCP1179_02_current",
+      "sha256": "a04f1af4e9f871be3db1d7e25c8d710cc19ad824ccef5409566f0bdce6aa0e3a",
+      "match": true,
+      "matched_file": "assigned/sources/CCP1179_02_current.html"
+    },
+    {
+      "manifest": "assigned/supplement_sources.json",
+      "id": "AB832_chaptered",
+      "sha256": "343f2eebf93935b453bd8be30af0a0757784084d44fb50adcc1bcf5cdd793d58",
+      "match": true,
+      "matched_file": "assigned/sources/AB832_chaptered.html"
+    },
+    {
+      "manifest": "assigned/supplement_sources.json",
+      "id": "Treasury_ERA_FAQ",
+      "sha256": "4f664f873cde2678df856556e8dbb55abed7a7803d8ec7ad094e4ed24def418f",
+      "match": true,
+      "matched_file": "assigned/sources/Treasury_ERA_FAQ.html"
+    },
+    {
+      "manifest": "assigned/supplement_sources.json",
+      "id": "USC2021_15_9058a",
+      "sha256": "7cfbe27ec62f2351c5bf706d9eff5386d7e0b144e8ec3f90ffaf82acb0e784f1",
+      "match": true,
+      "matched_file": "assigned/sources/USC2021_15_9058a.html"
+    },
+    {
+      "manifest": "assigned/supplement_sources.json",
+      "id": "USC2021_15_9058c",
+      "sha256": "6d6a6c18732d0ff5c9d6677f48f0d760e9b31617bd7f7e5909f08a41b8c46978",
+      "match": true,
+      "matched_file": "assigned/sources/USC2021_15_9058c.html"
+    },
+    {
+      "manifest": "assigned/timing_sources.json",
+      "id": "CIV_7",
+      "sha256": "c9ad53520c2a9335c7cb792336e33b5f77f3ad90016965430c9f1b550b95f585",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_7.html"
+    },
+    {
+      "manifest": "assigned/timing_sources.json",
+      "id": "CIV_9",
+      "sha256": "fb7b76f2a1b360d4dfb00735251151cbfec8ff876d7488d1ba015547fbad599d",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_9.html"
+    },
+    {
+      "manifest": "assigned/timing_sources.json",
+      "id": "CIV_10",
+      "sha256": "2eb0cd62a093093b19e89a819b21d4f9fdc939698144ccd62000fa6db5875256",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_10.html"
+    },
+    {
+      "manifest": "assigned/timing_sources.json",
+      "id": "CIV_11",
+      "sha256": "c6111f6d4b62ebe57cdb12e54fee76a9d2623435f57e4c32e120b41dafce2255",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_11.html"
+    },
+    {
+      "manifest": "assigned/timing_sources.json",
+      "id": "CIV_1788.63",
+      "sha256": "99a605dec2fdc0caff661dc699ce4d37b7675b157125723f6704d05310539ce3",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_1788.63.html"
+    },
+    {
+      "manifest": "assigned/timing_sources.json",
+      "id": "CIV_1788.65",
+      "sha256": "cd03f16dfb2d33a86a27c0dcbe58865bcef87ea9415dbe707c7a455d7be12447",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_1788.65.html"
+    },
+    {
+      "manifest": "assigned/timing_sources.json",
+      "id": "CIV_1940",
+      "sha256": "bad94fb182300cdca1e76daf9797de0588b5abc25367e2d731a2bc267a180937",
+      "match": true,
+      "matched_file": "assigned/sources/CIV_1940.html"
+    },
+    {
+      "manifest": "assigned/timing_sources.json",
+      "id": "USC2021_42_1437a",
+      "sha256": "06461dd9112a98dd9f3cc02b316d1e8ecbd9956c365aefc12255d4a808ae989e",
+      "match": true,
+      "matched_file": "assigned/sources/USC2021_42_1437a.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "CA-1788.17",
+      "sha256": "26316bfd802967554059e1307c4e374b8df5a643c84eb14c1cb543e98c22dabf",
+      "match": true,
+      "matched_file": "federal/CA-1788.17.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "CA-1788.18",
+      "sha256": "eccbc9e32269f1fb8f1ab9af827c07cb93f2ae8df8c8272f0bbab5526fcfe335",
+      "match": true,
+      "matched_file": "federal/CA-1788.18.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2000-1692a",
+      "sha256": "d7a62284edf3fcbef50d6c7f48db7d1d32f00e5117e9710ca870f6802b425371",
+      "match": true,
+      "matched_file": "federal/2000-1692a.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2000-1692b",
+      "sha256": "709f89867108b7a6496b493fcc8bce730de05a065df4e271f460d7215fb161b6",
+      "match": true,
+      "matched_file": "federal/2000-1692b.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2000-1692c",
+      "sha256": "5c2389b2afdbaf9fb1f75cf3343fdab7c9b9c36e56b9c8a9011b4c17c2fc076a",
+      "match": true,
+      "matched_file": "federal/2000-1692c.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2000-1692d",
+      "sha256": "24349ef8e8f433acc46cdaccc5e8b1ab26e207e39e1a75554085aad180a2a7c1",
+      "match": true,
+      "matched_file": "federal/2000-1692d.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2000-1692e",
+      "sha256": "a20d0aea4e79c3748bee9e1135cebfebfaa74cf7a5b0b51e8643d1637d734aa9",
+      "match": true,
+      "matched_file": "federal/2000-1692e.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2000-1692f",
+      "sha256": "659e6326a2f9a40141b54187946068486885e14dfef7f28d1cd10794f26e309c",
+      "match": true,
+      "matched_file": "federal/2000-1692f.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2000-1692g",
+      "sha256": "3f94cdf1bbf762975a63e956875d8ac52b2e469653120d20aeddd9c00e365033",
+      "match": true,
+      "matched_file": "federal/2000-1692g.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2000-1692h",
+      "sha256": "1181fe6053029c9f37b0e71273652faa6e06323efb34b3b7d337fbb7939e8654",
+      "match": true,
+      "matched_file": "federal/2000-1692h.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2000-1692i",
+      "sha256": "50f48e1a4865a0f2d98db90a2a5ef1b5f70be5dda9533c7f5dc52621302cdd32",
+      "match": true,
+      "matched_file": "federal/2000-1692i.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2000-1692j",
+      "sha256": "17f874da65b6bca6558b44579e9cdb24bd82aa9db418c0680e529ceef1abcfef",
+      "match": true,
+      "matched_file": "federal/2000-1692j.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2000-1692k",
+      "sha256": "fe2d00634ac8a9d28ba6323d2182d18c111223199ee74266f5da178f5514254d",
+      "match": true,
+      "matched_file": "federal/2000-1692k.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2024-1692a",
+      "sha256": "dbf7643b5cbf66f8ffa9a800a5f752e68caa7edb134e6817d1669d8ded0f212e",
+      "match": true,
+      "matched_file": "federal/2024-1692a.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2024-1692b",
+      "sha256": "74720e9c856310b1d695c509a51e2fed7dac9f1c595d214b12180485efec0f16",
+      "match": true,
+      "matched_file": "federal/2024-1692b.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2024-1692c",
+      "sha256": "e8d4d3d4a670e7294c70b0ca78ab56dc002c43b35ebf7bfd8061d47cc1906d65",
+      "match": true,
+      "matched_file": "federal/2024-1692c.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2024-1692d",
+      "sha256": "74ff28cc99e4a346f1764691c0d5f577e8c12bf0c5893f1d2482f43ae1341ddd",
+      "match": true,
+      "matched_file": "federal/2024-1692d.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2024-1692e",
+      "sha256": "2474fb90eb796280680d05f90955be581747ef2d2ad447952351b4a8e7e093c8",
+      "match": true,
+      "matched_file": "federal/2024-1692e.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2024-1692f",
+      "sha256": "0d77d7dbd8bee26ff812fff91b6618923386ea0294ac86299d59ce1d036bed99",
+      "match": true,
+      "matched_file": "federal/2024-1692f.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2024-1692g",
+      "sha256": "540b28a2f27f29b879a8eb42080dc9f33ba62bf39336949ec93a957dcb2e087e",
+      "match": true,
+      "matched_file": "federal/2024-1692g.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2024-1692h",
+      "sha256": "b6fac22295686fcb0baf01375d26d015af6c715f8d4330cf7d3e5b0f85a2c968",
+      "match": true,
+      "matched_file": "federal/2024-1692h.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2024-1692i",
+      "sha256": "27f7995f9fcc954bbd1017ae8f1619e8611cd15b953d1301f9f28c025ef277d9",
+      "match": true,
+      "matched_file": "federal/2024-1692i.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2024-1692j",
+      "sha256": "7f37f8c32ad7d630eabd38f6b929bb33451f0e220479078754d3a8850df56c0e",
+      "match": true,
+      "matched_file": "federal/2024-1692j.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "2024-1692k",
+      "sha256": "4316fbcad1c7c661456d705d95ab79dc7ccecff4d48d7acb192d5982b1dfcda3",
+      "match": true,
+      "matched_file": "federal/2024-1692k.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "RegF-1",
+      "sha256": "b1d57f3dec77e8fa1a0757b0abe87d8bc6abbd6caf7f21f32851ab8d504de1da",
+      "match": true,
+      "matched_file": "federal/RegF-1.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "RegF-2",
+      "sha256": "b75e1f3b40b5a12a99c1cb29e187160b1493de7f2bbc3d4235a4a6ed1e40756b",
+      "match": true,
+      "matched_file": "federal/RegF-2.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "RegF-6",
+      "sha256": "7c07af38ad1a340730058aee949e7e5bab40799528936b7ace1dade23e9dc7b5",
+      "match": true,
+      "matched_file": "federal/RegF-6.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "RegF-14",
+      "sha256": "a10671cf6123a2d30b7f879c6742a5afebae8a33cf73a9ebcdfbcb8962e386ef",
+      "match": true,
+      "matched_file": "federal/RegF-14.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "RegF-18",
+      "sha256": "626b3f7ee19b660adc9ed49c4f51e51be71b7a89c3fb6406c7a60768b7d9b606",
+      "match": true,
+      "matched_file": "federal/RegF-18.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "RegF-22",
+      "sha256": "177fa6f6e8c218be71629b1e04f0fb4b09bc9d64805bd64d4d636b724e386fe8",
+      "match": true,
+      "matched_file": "federal/RegF-22.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "RegF-26",
+      "sha256": "08e26c7940037a3dd9f5169e113fb44ea316ad12f0a56cddfc4c5498a09fc5e7",
+      "match": true,
+      "matched_file": "federal/RegF-26.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "RegF-30",
+      "sha256": "fd08733a3600e33cf166447f5e9382d9c186c66ce79b88df6b7d864b58c54361",
+      "match": true,
+      "matched_file": "federal/RegF-30.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "RegF-34",
+      "sha256": "5bb4bf288793f688ca805041ea5071be249091d3a06adec392adb973960b6bb1",
+      "match": true,
+      "matched_file": "federal/RegF-34.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "RegF-38",
+      "sha256": "3c36d4b42135390126ddf13a88177e6d6a76ee07a1965821f31a36eff9a7a7d8",
+      "match": true,
+      "matched_file": "federal/RegF-38.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "RegF-42",
+      "sha256": "253829ddf998462067e015beff098c023b641ad6d3136f20b393f221449a1c23",
+      "match": true,
+      "matched_file": "federal/RegF-42.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "RegF-100",
+      "sha256": "2071db1071f22e2d6f4900814f85cbf414bb2d8c8c32ddb3c20a6962c094f256",
+      "match": true,
+      "matched_file": "federal/RegF-100.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "RegF-104",
+      "sha256": "dbf1c338926a18a43c6324764bd142140272740e7d295d1b9f9eb1a2eb60a416",
+      "match": true,
+      "matched_file": "federal/RegF-104.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "Palermo-1948",
+      "sha256": "11a5e81fbf2b73d65c0eddb9a93384bf3af650b9a8e98f70b85d8e65993eff9e",
+      "match": true,
+      "matched_file": "federal/Palermo-1948.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "Rojas-2023",
+      "sha256": "d42d79c41580a4e5ff7fb7f8c7efcd639640d02b205c4a6d1c108da5c4da63e2",
+      "match": true,
+      "matched_file": "federal/Rojas-2023.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "CIV1788.66",
+      "sha256": "b7f31ffa09f6235df6ab824015b0feeca4f056293f8990021bcb95d7e193672d",
+      "match": true,
+      "matched_file": "federal/CIV1788.66.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "Velazquez-2009",
+      "sha256": "e9dd34c4ec3a4218025af2b113d03c7d9d4eb87e96290a31edba1aea3e68d668",
+      "match": true,
+      "matched_file": "federal/Velazquez-2009.pdf"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "Riggs-2012",
+      "sha256": "96f9e417884f1abb840833bef74c0a8fc876d9f27046865dabeb2b3c073cbba7",
+      "match": true,
+      "matched_file": "federal/Riggs-2012.pdf"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "CIV1788.30",
+      "sha256": "f919eb4f9c0851800d818bb89a7134606da46c5806d237c101c26aea5fdaaa5f",
+      "match": true,
+      "matched_file": "federal/CIV1788.30.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "CIV1788.32",
+      "sha256": "e3720efa44d7362b0bc9cc01c35c2b4f5a8bc6b0460f0f57b8f7ee0322190d13",
+      "match": true,
+      "matched_file": "federal/CIV1788.32.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "CIV1788.33",
+      "sha256": "2e0f021fa90acde403fba42ba61d9674ad931d96010ba58b2661ef8a803aaa4c",
+      "match": true,
+      "matched_file": "federal/CIV1788.33.html"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "Afewerki-2017",
+      "sha256": "6ef3c8c461a5182533a0e6131dcb2af0c80a749d0e7ffc6b9fdb993acfd2b947",
+      "match": true,
+      "matched_file": "federal/Afewerki-2017.pdf"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "Gonzales-2011",
+      "sha256": "3848045f000862ab04169cdaca099bd42d080cf088efe2c843e6c78d43b00df5",
+      "match": true,
+      "matched_file": "federal/Gonzales-2011.pdf"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "Rotkiske-2019",
+      "sha256": "905aba97f5fc26f4b6b5686811080401fcbbd3873c3d99cbb5ffa02ee24aea2c",
+      "match": true,
+      "matched_file": "federal/Rotkiske-2019.pdf"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "Jerman-2010-recovered",
+      "sha256": "c746f5c4ca83e8b939058e7037493048e043b9735595387ad0919d62ab9333cf",
+      "match": true,
+      "matched_file": "federal/Jerman-2010.pdf"
+    },
+    {
+      "manifest": "federal/sources.json",
+      "id": "Timlick-2019-web-capture",
+      "sha256": "f437624679b4b1f73a9f9c87cb1b433d30cc3a5bdbac17382a1a453c5a08d021",
+      "match": true,
+      "matched_file": "federal/Timlick-2019-web-capture.json"
+    },
+    {
+      "manifest": "review_assigned/sources.json",
+      "id": "nguyen.pdf",
+      "sha256": "4c589cddb12fe78734140faa0665fc230d3a0a4a071b5a6524d136646263b236",
+      "match": true,
+      "matched_file": "review_assigned/nguyen.pdf"
+    },
+    {
+      "manifest": "review_assigned/sources.json",
+      "id": "saturn.pdf",
+      "sha256": "ed7872fbe1d7395a9adae73ce3f68d5881c89c1cef249bd318342d11af8ad89c",
+      "match": true,
+      "matched_file": "review_assigned/saturn.pdf"
+    },
+    {
+      "manifest": "review_assigned/sources.json",
+      "id": "aragon.pdf",
+      "sha256": "ff25520449ea040ce4504f1faa5d1351930296e2579c2037c183a897fe7a34ed",
+      "match": true,
+      "matched_file": "review_assigned/aragon.pdf"
+    },
+    {
+      "manifest": "review_assigned/sources.json",
+      "id": "sb531_analysis.pdf",
+      "sha256": "151879d451a3f7f0212867f011cde21fa98c8dbd955c8eb787cbd390c103ce67",
+      "match": true,
+      "matched_file": "review_assigned/sb531_analysis.pdf"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "ab1521.html",
+      "sha256": "466042480f7d289f6b7c71c0756cd6e8d3ce56e375d44803c76acf785dab5b69",
+      "match": true,
+      "matched_file": "tenancy/sources/ab1521.html"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "ab1521.txt",
+      "sha256": "ae17c3423938141c048fb22cd54798cd73671af2d2bf6544256b8cbe9585799f",
+      "match": true,
+      "matched_file": "tenancy/sources/ab1521.txt"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "civ1788_2.html",
+      "sha256": "1273f545d4813bae2d548eddb904a281d8364e5d349083a32a70266cb13c92b4",
+      "match": true,
+      "matched_file": "tenancy/sources/civ1788_2.html"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "civ1788_2.txt",
+      "sha256": "3dd553780a1f56b98fb9773e064114949874bcad58a226cf916ab7c9d81c5778",
+      "match": true,
+      "matched_file": "tenancy/sources/civ1788_2.txt"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "connor_end.txt",
+      "sha256": "ed5ae6cf81cbb8472f6757be19467ef3a6f69d5717efd13948a5f1bbb01b86d5",
+      "match": true,
+      "matched_file": "tenancy/sources/connor_end.txt"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "davidson_end.txt",
+      "sha256": "e08b45f8ec60a7132f7b2d79cc4641f04add4e9ba4d40b8b3da5e0876a3d8ade",
+      "match": true,
+      "matched_file": "tenancy/sources/davidson_end.txt"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "davidson_web.txt",
+      "sha256": "d6d1d883f05c705084ea090d5d4bf2b7b966ed8e3dff248df76666576941024c",
+      "match": true,
+      "matched_file": "tenancy/sources/davidson_web.txt"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "dedios.pdf",
+      "sha256": "0a583bcc502c7f57fa900a9adfdc3c1bfba99e23d27a2eac5c2e674c27816f31",
+      "match": true,
+      "matched_file": "tenancy/sources/dedios.pdf"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "dedios.txt",
+      "sha256": "f9627c41484398a68a1e1238d580f785ce88ccd4c895e8407d7ced25f33f47d9",
+      "match": true,
+      "matched_file": "tenancy/sources/dedios.txt"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "fdcpa_current.html",
+      "sha256": "a06a37b15a12971672f56ccbbd1400c7b5d7a535520b52160c63d247e9e40277",
+      "match": true,
+      "matched_file": "tenancy/sources/fdcpa_current.html"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "fdcpa_current.txt",
+      "sha256": "031e85d554f28d93fd95311359af7f7f2a146929796b2d8a4d40bf532131894b",
+      "match": true,
+      "matched_file": "tenancy/sources/fdcpa_current.txt"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "fin100001.html",
+      "sha256": "0e9195f03eaa1b9441fca4f1fac717fd8887b92f9c42466bcd6869e05f72d727",
+      "match": true,
+      "matched_file": "tenancy/sources/fin100001.html"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "fin100001.txt",
+      "sha256": "8ff7e3495a182447dc2aa283ac38a4ca866d8f694a4229efee4c79490a20efdd",
+      "match": true,
+      "matched_file": "tenancy/sources/fin100001.txt"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "gouskos_web.txt",
+      "sha256": "6c2f6f9473b1e4f8f4344f69e08727a9633ee6a071e522d683fd91da1f6fed01",
+      "match": true,
+      "matched_file": "tenancy/sources/gouskos_web.txt"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "henson.pdf",
+      "sha256": "a44e4f2a82e52f7a1f3f5e74e6f71113bd75d43c6309e7c5dd0df1ce48b33cca",
+      "match": true,
+      "matched_file": "tenancy/sources/henson.pdf"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "henson.txt",
+      "sha256": "1fcb98eb1a67b971810bc49f89886bb77a2f05a9839a9ffd11e873b447cebe7c",
+      "match": true,
+      "matched_file": "tenancy/sources/henson.txt"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "mcadory.pdf",
+      "sha256": "618cb273479b6c8c04268509f2e488b842f9c8fbb9050faa915dd1c1f4412f0f",
+      "match": true,
+      "matched_file": "tenancy/sources/mcadory.pdf"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "mcadory.txt",
+      "sha256": "24aa775d583b019b394fda420a1ecd3fefcd12de3b50b084dd35e8d941508c3e",
+      "match": true,
+      "matched_file": "tenancy/sources/mcadory.txt"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "olson_end.txt",
+      "sha256": "6e0eba98a76805a5a6ef4e8336963c4554e9845e9b16151928c28cebaeaa7ca3",
+      "match": true,
+      "matched_file": "tenancy/sources/olson_end.txt"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "olson_web.txt",
+      "sha256": "7b19f072c04dca80119ea57973591fa33ff82df64b2f377a2cd741dcf24eea40",
+      "match": true,
+      "matched_file": "tenancy/sources/olson_web.txt"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "paredes_petition_appendix.pdf",
+      "sha256": "6a8e71f05fd4cfef934689d8ab3a134e542700dc86a8be02696db0a73cb4c225",
+      "match": true,
+      "matched_file": "tenancy/sources/paredes_petition_appendix.pdf"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "paredes_petition_appendix.txt",
+      "sha256": "c6fe5e158b89b491add5f609981f9a1c4f6c4bc7452d28771c03d6c064088f8d",
+      "match": true,
+      "matched_file": "tenancy/sources/paredes_petition_appendix.txt"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "phillips_9th.pdf",
+      "sha256": "24819a0327cd1ab85ffc2beda68dc27be4edfa7f2a5610758f6e5b629f6bded7",
+      "match": true,
+      "matched_file": "tenancy/sources/phillips_9th.pdf"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "reichert.pdf",
+      "sha256": "673d402001572f81dfea384d7dede7c9113f8e6a2a5800a202ce2d63122d3cd1",
+      "match": true,
+      "matched_file": "tenancy/sources/reichert.pdf"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "reichert.txt",
+      "sha256": "709a03cf6635df9f8358cc8cfa1aff79dd278ce8baed3d341452996e0eb070f7",
+      "match": true,
+      "matched_file": "tenancy/sources/reichert.txt"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "sb1324_analysis.pdf",
+      "sha256": "81f111435f6e7d442e2fe18590ca9a645922179f1a2046af903bc1e17950e333",
+      "match": true,
+      "matched_file": "tenancy/sources/sb1324_analysis.pdf"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "sb1324_analysis.txt",
+      "sha256": "0315ffbca928453145f2e122b37879ed48ba4f50f896d256cecfdf03e58b67a6",
+      "match": true,
+      "matched_file": "tenancy/sources/sb1324_analysis.txt"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "sb1324_status.html",
+      "sha256": "bc5b94896d85665a3470d23bb84bedc9ed2500168fc6dc11758a772cd22c3a0e",
+      "match": true,
+      "matched_file": "tenancy/sources/sb1324_status.html"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "sb1324_status.txt",
+      "sha256": "100cb86d96aeb0fd92eea4b4807b7b561a7d83df4f54d57eb369b877fac33701",
+      "match": true,
+      "matched_file": "tenancy/sources/sb1324_status.txt"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "sb187.html",
+      "sha256": "fae33ba9eecf5a202e0fb8195f02464085432bf33dc1716833f5d7bc6075e4cd",
+      "match": true,
+      "matched_file": "tenancy/sources/sb187.html"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "sb187.txt",
+      "sha256": "78061e5b2f0aa98a43368f4f615edfcb5fcd71185b02186472491044316f0686",
+      "match": true,
+      "matched_file": "tenancy/sources/sb187.txt"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "urls.json",
+      "sha256": "0da29799019920db0df970c4beee87608a8a09035953bd92df37db5f1068a453",
+      "match": true,
+      "matched_file": "tenancy/sources/urls.json"
+    },
+    {
+      "manifest": "tenancy/sources/manifest.json",
+      "id": "yatooma_web.txt",
+      "sha256": "31df7fcdbf1de068a0943b5bdb8614d116195af38dcf39f23ef1ac5866bb9afd",
+      "match": true,
+      "matched_file": "tenancy/sources/yatooma_web.txt"
+    }
+  ],
+  "review_bindings": [
+    {
+      "finding": "resolution_assigned/FINDINGS.md",
+      "review": "resolution_assigned/INDEPENDENT_REVIEW.md",
+      "sha256": "5570dd1cc08ca8a891f962e62ceab3c8cf04704f654e8371da51f93d24a61ec3",
+      "review_contains_current_hash": true
+    },
+    {
+      "finding": "resolution_tenancy/FINDINGS.md",
+      "review": "resolution_tenancy/INDEPENDENT_REVIEW.md",
+      "sha256": "9fff47374c2760cc2ba985f0c17f97537c8b6adc5bc9ddec4314f7423ff89d8e",
+      "review_contains_current_hash": true
+    },
+    {
+      "finding": "resolution_federal/PLEADING_INITIAL_COMMUNICATION.md",
+      "review": "resolution_federal/INDEPENDENT_REVIEW.md",
+      "sha256": "29245ec24b3d4447876ecc2801d4d075457805884ddb2f9d9b8d82f92bb018cc",
+      "review_contains_current_hash": true
+    },
+    {
+      "finding": "resolution_federal/COVID_ASSIGNMENT_SURVIVAL.md",
+      "review": "resolution_federal/INDEPENDENT_REVIEW.md",
+      "sha256": "1f0a105bef06e7daad757e032c956fbd78a928879f92065df16ee67ca97d58c5",
+      "review_contains_current_hash": true
+    },
+    {
+      "finding": "resolution_identity/FINDINGS.md",
+      "review": "resolution_identity/INDEPENDENT_REVIEW.md",
+      "sha256": "9bfed39fb674458ef5d2ad6881b6f4c5efafda24b8d50ec2ff480128cf2fceef",
+      "review_contains_current_hash": true
+    },
+    {
+      "finding": "resolution_review/DEPENDENCY_AUDIT.md",
+      "review": "resolution_review/INDEPENDENT_REVIEW.md",
+      "sha256": "85a15c6b74cc8e12721be302238ffa0cf39faec3334958e1293c8a6af2dc6922",
+      "review_contains_current_hash": true
+    },
+    {
+      "finding": "resolution_identity/PENAL_RECORDS_CALENDAR.md",
+      "review": "resolution_review/INDEPENDENT_REVIEW.md",
+      "sha256": "a88ac8e9cbc6773f13f7a6d98cd9c6bd11b1aef41e92a7e985c1010f51d06a23",
+      "review_contains_current_hash": true
+    },
+    {
+      "finding": "resolution_review/FEE_RESOLUTION.md",
+      "review": "resolution_review/INDEPENDENT_REVIEW.md",
+      "sha256": "0d52e9c8163fcc44c92a1f10f75699101d42eb85ea3f337337e2e88d40e597d1",
+      "review_contains_current_hash": true
+    },
+    {
+      "finding": "OPERATING_BRANCHES.md",
+      "review": "resolution_review/INDEPENDENT_REVIEW.md",
+      "sha256": "18edc6c15b5fc34b7bf73ebcc10d42157c9567cbd0dea2000e1a0ff9332759b1",
+      "review_contains_current_hash": true
+    }
+  ],
+  "fee_artifact_hash_records_checked": 37,
+  "fee_artifact_hash_mismatches": [],
+  "current_index_broken_links": [],
+  "operating_decisions": 20,
+  "authored_adversarial_cases": 35,
+  "latest_verified_at": "2026-10-01T05:55:39.606894+00:00",
+  "current_document_sha256": {
+    "README.md": "9c61c852bc2bbc2ae0b416ec09f4f1ccca9f4da97ec49b7c5f8406ad931eb42a",
+    "GOAL.md": "b446d64d41c13757235fd16689fa8640fe6c60ecf02113c996470ea6c0558c1d",
+    "RESOLVED_INTERPRETATIONS.md": "6b321583ecc4942ef2f118bd0cfadffd03f6f90c791c02948ff6c0c2969951c5",
+    "OPERATING_BRANCHES.md": "18edc6c15b5fc34b7bf73ebcc10d42157c9567cbd0dea2000e1a0ff9332759b1",
+    "COMPLETION_REOPENED.md": "2f51e16f81cad5c26e9d6ae118168143fab4932cfd70084b269c795841ee71f8"
+  },
+  "independent_review_sha256": {
+    "resolution_assigned/INDEPENDENT_REVIEW.md": "ad64aae62f18ccd1066383b3290867cbd829b305542cf9ebc893d31ff8e99739",
+    "resolution_tenancy/INDEPENDENT_REVIEW.md": "be240e780cf7a80b8ac2731b4a9dc7d39149c2edb1453363d4ef1819b5e617b5",
+    "resolution_federal/INDEPENDENT_REVIEW.md": "8c6fa0c1fe56e23bb5f6e80be092c913c41864007c02751a7ab96a77b4a98f27",
+    "resolution_identity/INDEPENDENT_REVIEW.md": "bc0cc07b830e474e5c929559ba536ef6a651450ba10d8979c39251dadf341a56",
+    "resolution_review/INDEPENDENT_REVIEW.md": "e7d86271c5b07f7975f1ccb887caed23474fb801e086dbde0c8ecba4c9def78b"
+  },
+  "completed_at": "2026-10-01T05:56:00.380434+00:00"
+}

@@ -1,0 +1,439 @@
+{
+  "review_type": "independent_label_withheld_development_recheck",
+  "review_date": "2026-09-30",
+  "question_version": "legal-reference-presence-1-dev2",
+  "independence": {
+    "author_labels_read": false,
+    "model_outputs_read": false,
+    "same_model_family_reviewer": true,
+    "held_out_evaluation": false,
+    "prior_review": "development.review.json"
+  },
+  "cases": [
+    {
+      "case_id": "d001",
+      "expected": "YES",
+      "reason": "The whole-section focus explicitly says this section.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d002",
+      "expected": "YES",
+      "reason": "The sentence focus retains the same explicit self-pointer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d003",
+      "expected": "YES",
+      "reason": "This title explicitly points to the enclosing legal unit.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d004",
+      "expected": "YES",
+      "reason": "This title, numbered federal sections/range, Title 15, and this section all qualify; historical target version is immaterial.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d005",
+      "expected": "YES",
+      "reason": "Subdivision (h) of Section 1788.2, this section, and this title supply multiple explicit pointers.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d006",
+      "expected": "YES",
+      "reason": "Both this section and this title are explicit pointers.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d007",
+      "expected": "NO",
+      "reason": "Except as permitted by law invokes law generically without identifying a unit or authority.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d008",
+      "expected": "NO",
+      "reason": "The provision discussed is in a private lease/rental agreement; the subsection marker is only focus identification.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d009",
+      "expected": "NO",
+      "reason": "Delivery instructions refer to notices, addresses, and premises without an explicit public legal pointer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d010",
+      "expected": "YES",
+      "reason": "Subdivision (a) and Sections 1929 and 1941.2 are explicit pointers; their effects are not being decided.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d011",
+      "expected": "YES",
+      "reason": "This section is expressly included by the contract.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d012",
+      "expected": "YES",
+      "reason": "This provision is expressly included by the contract in this legal-definition wording.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d013",
+      "expected": "YES",
+      "reason": "The preceding paragraph is a relative legal-unit pointer in the stated exception; exact target is unnecessary.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d014",
+      "expected": "YES",
+      "reason": "Paragraphs (a) through (d) form an explicit provision range in legal-compliance wording.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d015",
+      "expected": "YES",
+      "reason": "Section 12 of the named Housing Act is an explicit legal pointer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d016",
+      "expected": "YES",
+      "reason": "The California Civil Code is a named public legal source even without a section number.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d017",
+      "expected": "YES",
+      "reason": "The case name and reporter citation explicitly identify judicial authority; authenticity is outside this task.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d018",
+      "expected": "YES",
+      "reason": "Rule 8.104 of the California Rules of Court explicitly identifies a court rule.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d019",
+      "expected": "YES",
+      "reason": "The C.F.R. citation is an explicit regulatory pointer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d020",
+      "expected": "YES",
+      "reason": "The quoted notice contains an explicit Section 42 pointer; quotation does not exclude it.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d021",
+      "expected": "YES",
+      "reason": "This section supplies a pointer. The embedded instruction is quoted source data and does not control the answer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d022",
+      "expected": "NO",
+      "reason": "Report title and carpet section are ordinary nonlegal senses.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d023",
+      "expected": "NO",
+      "reason": "Act means perform an action; building rules conventionally refers to property rules here, with no identified public authority.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d024",
+      "expected": "NO",
+      "reason": "Novel chapter and title to goods are ordinary non-reference senses.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d025",
+      "expected": "NO",
+      "reason": "Clause 7 points only to a private lease.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d026",
+      "expected": "NO",
+      "reason": "The inspection report is a nonlegal document, even if it could later be evidence.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d027",
+      "expected": "NO",
+      "reason": "Applicable law is a generic qualification.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d028",
+      "expected": "NO",
+      "reason": "Any other provision of law names no identified unit or authority; it is a generic displacement clause.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d029",
+      "expected": "INSUFFICIENT",
+      "reason": "The isolated identifier has no wording establishing body-reference versus source-heading role; dev2 expressly assigns INSUFFICIENT.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d030",
+      "expected": "NO",
+      "reason": "Days and monetary amounts are ordinary quantities, not citations.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d031",
+      "expected": "INSUFFICIENT",
+      "reason": "The cut-off bare Section has no complement establishing a recognizable public legal pointer; dev2 expressly distinguishes this from a numbered citation.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d032",
+      "expected": "INSUFFICIENT",
+      "reason": "The illegible object could be a public legal unit or private/nonlegal requirement; no other definite pointer appears.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d033",
+      "expected": "INSUFFICIENT",
+      "reason": "The missing object after pursuant to could contain a qualifying pointer, but none is visible.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d034",
+      "expected": "INSUFFICIENT",
+      "reason": "Next chapter could be legal or literary; bare reading instruction supplies no contextual basis for the distinction.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d035",
+      "expected": "YES",
+      "reason": "This Act plus paragraph (3) of Section 18 supplies multiple explicit pointers, irrespective of historical version.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d036",
+      "expected": "YES",
+      "reason": "Section 4 of the Civil Code counts even though the separate lease reference does not.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d037",
+      "expected": "YES",
+      "reason": "The California Constitution and Article I, Section 7 explicitly identify public legal authority.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d038",
+      "expected": "YES",
+      "reason": "Article 6 of the named Convention is an explicit treaty pointer; jurisdictional applicability is outside scope.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d039",
+      "expected": "YES",
+      "reason": "The court order is identified by case and entry date; no docket resolution or publication status is required.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d040",
+      "expected": "YES",
+      "reason": "The named HUD handbook is presented as agency occupancy guidance, within the stated official-guidance inclusion; binding legal force need not be decided.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d041",
+      "expected": "NO",
+      "reason": "California law identifies only a general body of law, not a provision, unit, or named instrument.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d042",
+      "expected": "YES",
+      "reason": "Section 1788.16 is an explicit numbered provision pointer. With no anchor identity the model cannot establish that it is self-reference.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d043",
+      "expected": "NO",
+      "reason": "The supplied definition expressly makes Act a private agreement, overriding the usual legal-source sense.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d044",
+      "expected": "YES",
+      "reason": "This section is definite; YES wins despite the other illegible expression.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d045",
+      "expected": "YES",
+      "reason": "The imperative contains the recognizable numbered provision citation Section 19, expressly included by dev2 despite subsequent truncation. No supplied private or ordinary sense overrides that reading.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d046",
+      "expected": "NO",
+      "reason": "The focus contains only a mailing instruction. The wrapper source label and URL are outside focus and cannot supply the missing body pointer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d047",
+      "expected": "NO",
+      "reason": "The specifically named NASA cafeteria menu is an official but nonlegal document; government origin does not make it legal authority or guidance.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d048",
+      "expected": "NO",
+      "reason": "Section 4 expressly belongs to a private lease, and paragraph (b) of that section inherits that private-document referent; neither pointer is public legal authority.",
+      "material_ambiguity": false
+    }
+  ],
+  "full_source_validation": {
+    "checks": [
+      {
+        "case_id": "d001",
+        "path": "jurisdictions/CA/texts/CA_CIV/1788.16.txt",
+        "sha256_matches": true,
+        "exact_unicode_character_span_matches": true
+      },
+      {
+        "case_id": "d002",
+        "path": "jurisdictions/CA/texts/CA_CIV/1788.16.txt",
+        "sha256_matches": true,
+        "exact_unicode_character_span_matches": true
+      },
+      {
+        "case_id": "d003",
+        "path": "jurisdictions/CA/texts/CA_CIV/1788.33.txt",
+        "sha256_matches": true,
+        "exact_unicode_character_span_matches": true
+      },
+      {
+        "case_id": "d004",
+        "path": "jurisdictions/CA/texts/CA_CIV/1788.17.txt",
+        "sha256_matches": true,
+        "exact_unicode_character_span_matches": true
+      },
+      {
+        "case_id": "d005",
+        "path": "jurisdictions/CA/texts/CA_CIV/1788.18.txt",
+        "sha256_matches": true,
+        "exact_unicode_character_span_matches": true
+      },
+      {
+        "case_id": "d006",
+        "path": "jurisdictions/CA/texts/CA_CIV/1788.2.txt",
+        "sha256_matches": true,
+        "exact_unicode_character_span_matches": true
+      },
+      {
+        "case_id": "d007",
+        "path": "jurisdictions/CA/texts/CA_CIV/1788.14.txt",
+        "sha256_matches": true,
+        "exact_unicode_character_span_matches": true
+      },
+      {
+        "case_id": "d008",
+        "path": "jurisdictions/CA/texts/CA_CIV/1950.5.txt",
+        "sha256_matches": true,
+        "exact_unicode_character_span_matches": true
+      },
+      {
+        "case_id": "d009",
+        "path": "jurisdictions/CA/texts/CA_CIV/1983.txt",
+        "sha256_matches": true,
+        "exact_unicode_character_span_matches": true
+      },
+      {
+        "case_id": "d010",
+        "path": "jurisdictions/CA/texts/CA_CIV/1942.txt",
+        "sha256_matches": true,
+        "exact_unicode_character_span_matches": true
+      }
+    ],
+    "offset_convention": "Zero-based Unicode character offsets, end exclusive.",
+    "reading_notes": [
+      "Full saved sources inspected for 1788.16, 1788.33, 1788.17, 1788.18, 1788.2, 1788.14, 1983, and 1942.",
+      "For lengthy 1950.5, whole-file hash and exact span verified; the relevant subsection (n) and neighboring provisions inspected. Bulk output of the full file was truncated, so this is not a claim to have read every preceding provision.",
+      "Wrapper citations and references elsewhere in the full section were not imported into focused labels. Real excerpts have intact relevant expressions.",
+      "No live legal-currentness research performed or needed for source-bound textual labels."
+    ],
+    "recheck_note": "All ten saved-source hashes and exact character spans reverified. Prior reading scope unchanged."
+  },
+  "issue_disposition": [
+    {
+      "id": "F1",
+      "status": "resolved",
+      "explanation": "Isolated citation role is explicitly INSUFFICIENT; no unsupported source-heading inference. d029 relabeled under new contract while original review is preserved."
+    },
+    {
+      "id": "F2",
+      "status": "resolved",
+      "explanation": "Bare cut-off Section is explicitly distinguished from a recognizable numbered citation. d031 is INSUFFICIENT; added d045 is YES."
+    },
+    {
+      "id": "F4",
+      "status": "resolved",
+      "explanation": "d042 stratum is now explicit_number. Self-target identity remains outside Jev presence detection."
+    },
+    {
+      "id": "metadata_separation",
+      "status": "demonstrated_at_case_level",
+      "explanation": "d046 separates body text from wrapper citations. Preparation must prove wrapper_metadata does not enter state.focus or semantic context."
+    }
+  ],
+  "contract_findings": [
+    {
+      "id": "C1",
+      "material": false,
+      "finding": "No unresolved material ambiguity found in the 48 supplied cases under dev2.",
+      "recommendation": "Proceed with development execution after code validates exact focus payloads and preserves reviewed artifacts."
+    },
+    {
+      "id": "C2",
+      "material": false,
+      "finding": "Official-guidance inclusion now has a clear official-but-nonlegal contrast in d047. HUD occupancy guidance remains within the intended public legal administration scope.",
+      "recommendation": "Retain the distinction that guidance concerns legal rights, duties, eligibility, or legal administration; government publication alone and legal binding force are not the test."
+    },
+    {
+      "id": "C3",
+      "material": false,
+      "finding": "Added d048 demonstrates that both numbered section syntax and anaphoric paragraph pointers can identify private material.",
+      "recommendation": "Retain explicit private-context overrides; do not turn numbered citation syntax into an unconditional public-source rule."
+    },
+    {
+      "id": "C4",
+      "material": false,
+      "finding": "Empty or structurally invalid focus does not fit a useful semantic answer.",
+      "recommendation": "Reject missing, nonstring, blank, and whitespace-only focus before dispatch; retain preparation failure separately."
+    },
+    {
+      "id": "C5",
+      "material": false,
+      "finding": "Identifier-only uncertainty remains context-recovery work even if code knows source identity elsewhere.",
+      "recommendation": "For INSUFFICIENT, agent should recover text role/context, not retrieve the citation target reflexively. Do not treat this as target-resolution failure."
+    },
+    {
+      "id": "C6",
+      "material": false,
+      "finding": "Generic-law and private-document negatives can contain important legal dependencies.",
+      "recommendation": "Show agent continued investigation of a generic-law exception and lease dependency after NO. Positive only identifies a pointer, not authority or applicability."
+    }
+  ],
+  "acceptance": "Accepted for development Jev run. Original material issues F1/F2 are resolved. All 48 cases reviewed; no unresolved material case flags. The requested official-nonlegal and explicit-private-paragraph contrasts are present. Preparation validation and agent-action demonstrations remain separate work.",
+  "files_preserved": [
+    "development.review.json",
+    "question.v1-dev.json"
+  ]
+}

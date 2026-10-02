@@ -1,0 +1,92 @@
+{
+  "as_of": "2026-10-01",
+  "review_test": "Could resolving the moved fact change instrument/version identity, current/adopted-future status, relevant source-unit selection, or acquisition route?",
+  "reviewed_files": [
+    "j1/completion.json",
+    "j1/lanes/federal_programs/restored-access/part7-filing-continuity-delta.json",
+    "jurisdictions/CA/instruments.json:CA:CCR24",
+    "j1/lanes/federal_programs/restored-access/title24-cam-action-map.json"
+  ],
+  "items": [
+    {
+      "item": "SFM EF 01/25 current emergency status",
+      "decision": "reopen J1 status",
+      "could_change_registration": true,
+      "why": "Continued emergency operation, lapse/reversion, and completed certification are different current statuses and may select different currently operative Part7 versions. Identifying the broad Part7 family and historical approval events does not settle this.",
+      "established": "Initial filing November4 2025 / operation January1 2026; May6 2026 readoption approved; August25 2026 certifying package approved.",
+      "necessary_fact": "Whether the approved readoption was filed and whether emergency operation was continued by timely certification or another legally effective action as of October1 2026. Exact dates are needed only insofar as necessary to decide this status.",
+      "sufficient_resolution": "An actual filed readoption/certificate, official current history, or equivalent affirmative agency record establishing continuation/certification or lapse. Do not require every historical daily interval once current status is established.",
+      "not_established": "Presently continued or permanently certified emergency amendments. Neither approval minutes nor general July2027 supplement schedule establish this.",
+      "correction": "Replace instrument_selection_complete:true in part7_stage_boundary with identity_and_routes_established:true and current_emergency_status_resolved:false. Remove the claim that this entire fact belongs downstream."
+    },
+    {
+      "item": "SFM 04/25 approved future supplement",
+      "decision": "J1 selection established; retain separately",
+      "could_change_registration": false,
+      "why": "Actual August25 approval selects the submitted green/yellow items; original FET and CAM routes identify the approved future package. A certificate filing for the earlier emergency does not erase or replace this distinct approved package, which includes additional amendments.",
+      "necessary_fact_resolved": "Package approval and changed-unit identities established by original matrices plus recorded motion.",
+      "downstream": "Consolidate marked old/new text; apply versions to permit/event facts.",
+      "correction": "Keep approved_future status and scheduled July1 2027 supplement operation; do not label that schedule as proof of emergency continuity."
+    },
+    {
+      "item": "SFM 02/25 and SFM 03/25 item9-4",
+      "decision": "J1 status and selected subset established",
+      "could_change_registration": false,
+      "why": "The recorded withdrawals are already reflected: SFM02/25 entirely out; SFM03/25 ASHRAE15-2024/AddendumA item9-4 out. Remaining approved SFM03/25 rows identify the future selected subset.",
+      "correction": "Retain exclusions. Any legacy assertion that all SFM proposals were approved must explicitly be marked superseded by actual meeting actions."
+    },
+    {
+      "item": "DSA-AC 01/25 split actions",
+      "decision": "J1 status and selected subset established",
+      "could_change_registration": false,
+      "why": "Actual motions and full original CAM row map identify approved18 items, door-standard items25-1..25-4 returned for study, HUD group returned for study, and withdrawals including10-2. The item map includes expanded subitems and their source cells; no unassigned final selection identity was found in that map.",
+      "approved_items": [
+        "13-1",
+        "24-1",
+        "24-2",
+        "24-3",
+        "24-4",
+        "1-2",
+        "2-1",
+        "5-1",
+        "7-1",
+        "19-1",
+        "21-1",
+        "22-1",
+        "22-2",
+        "22-3",
+        "22-4",
+        "22-5",
+        "22-6",
+        "23-1"
+      ],
+      "downstream": "Render original formatting and consolidate amended section numbering/text.",
+      "correction": "Replace stale detail_remaining instruction to normalize expanded subitem identity with a reference to the already saved full CAM map; preserve further-study/withdrawal statuses."
+    },
+    {
+      "item": "Other August approved packages / unpublished January2027 supplements",
+      "decision": "J1 selection established; future publication not required now",
+      "could_change_registration": false,
+      "why": "Original final submission routes plus actual approval motions and explicit exclusions identify approved units. September30 post-adoption publisher report establishes adopted-future supplement schedule. A future consolidated publisher body is not needed to identify these instruments now.",
+      "downstream": "Acquire published consolidated supplement when issued and reconcile to approved marked sources; detailed event-specific operation remains later.",
+      "correction": "Avoid blanket language saying any unresolved final package status may be deferred; this decision rests on recovered actual actions and selected subset map."
+    },
+    {
+      "item": "HCD Part11 August25/August26 date conflict",
+      "decision": "J1 status established; preserve source conflict",
+      "could_change_registration": false,
+      "why": "Both sources affirm approval of the same identified package; actual Day1 recording supplies August25 vote. The one-day reporting conflict does not change approved future status or selected units.",
+      "correction": "Retain actual vote date and agency-page discrepancy; do not reopen package identity."
+    },
+    {
+      "item": "Part3 NFPA route",
+      "decision": "J1 identity/route established; stale metadata correction",
+      "could_change_registration": false,
+      "why": "Official OSFM bulletin supplies the exact 2025 California NFPA viewer; current legacy acquisition.status and remaining_viewer_action still incorrectly report a missing route.",
+      "correction": "Remove stale route-gap language, retain exact official_viewer_url. Authenticated body acquisition and section enumeration remain J2."
+    }
+  ],
+  "conclusion": "Reopen the present Part7 emergency continuation/certification status. Retain established future package selections and mapped actions. The earlier unqualified claim that no instrument-selection decision depended on the filing interval was too broad because it omitted current status.",
+  "canonical_edits_made": false,
+  "completion_correction": "The completion basis/downstream_limits cannot categorically move Part7 filing/continuity downstream. State that current emergency version status remains a J1 item; only historical application intervals and consolidated text work are downstream."
+}

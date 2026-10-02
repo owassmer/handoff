@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/direct/img/favicon.ico"/>
+    <link rel="stylesheet" href="/direct/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/direct/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/direct/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/direct/css/main.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/> 	
+
+    <title>Member login </title>
+    <link rel="stylesheet" href="/direct/css/SFILE1000.css"/>
+<!--    	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/> -->
+</head>
+<body>
+<div>
+    <div class="span12">
+        <div class="head">
+            <div class="row-fluid">
+                <div class="span12 header">
+                </div>
+            </div>
+
+            <!-- <nav class="navbar navbar-light"> -->
+            <nav class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/direct/"><i class="fa fa-home fa-fw"></i></a>
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse">
+                        
+                        <div>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="/direct/login">Sign In</a>
+                                </li>
+<!--                                 <li><a th:href="@{/register}">Sign up</a></li> -->
+                   
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form role="form" name='login-form' method='POST'>
+                        <fieldset>
+                             <div class="text-center">
+                       <!--     <a><font size="3" color="red">BETA VERSION</font></a> -->
+                          	
+                                <h3><i class="fa fa-user fa-3x"></i></h3>
+                                <span class="form-title">Member Login</span>
+                                
+                            </div>
+                             <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input type="text" name="loginId" id="loginId" class="form-control" placeholder="Login ID" required maxlength="35"
+                                           autofocus>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" required
+                                           maxlength="35">
+                                </div>
+                            </div>
+                            <span class="button-checkbox">
+					<button type="button" class="btn" data-color="info">Remember Me</button>
+                   <!--  <input type="checkbox" name="remember-me" id="remember_me" checked="checked" class="hidden"> -->
+                    <input type="checkbox" name="remember-me" id="remember_me" class="hidden">
+					<a href="/direct/password_recover" class="btn btn-link pull-right">Forgot Password?</a>
+				</span>
+                            <hr class="colorgraph">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-12">
+                                    <input type="submit" name="submit" class="btn btn-primary btn-block" value="Sign In">
+                                </div>
+<!--                                 <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <a th:href="@{/register}" class="btn btn-info btn-block">Sign Up</a>
+                                </div> -->
+                            </div>
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="container">
+        <footer>
+            <center>© 2020 Direct Charges Upload System</center>                            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script src="/direct/js/main.js"></script>
+        </footer>
+    </div>
+</div>
+<script src="/direct/js/SFILE1000.js"></script>
+</body>
+</html>

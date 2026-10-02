@@ -1,0 +1,48 @@
+{
+ "section_gaps": [],
+ "instrument_gaps": [
+  {
+   "instrument": "NY:CCA, NY:SCPA",
+   "gap": "Text read from Internet Archive captures of nysenate.gov (2025-04 to 2026-01), not the live site.",
+   "attempted": [
+    "https://www.nysenate.gov/legislation/laws/CCA/1801 (Cloudflare challenge to curl and to the browser)",
+    "https://legislation.nysenate.gov/api/3/laws/CCA/1801 (API key required)",
+    "https://codes.findlaw.com/ny/new-york-city-civil-court-act/nyc-civ-ct-act-sect-1801/ (Cloudflare 403)",
+    "https://law.justia.com/codes/new-york/cca/article-18/1801/ (Cloudflare 403)",
+    "https://public.leginfo.state.ny.us/lawssrch.cgi?NVLWO: (Cloudflare challenge)",
+    "newyork.public.law (does not carry CCA or SCPA)"
+   ],
+   "effect": "An amendment published after a section's capture date would be missing. Each saved text records its capture URL and the page's own 'published on' date."
+  },
+  {
+   "instrument": "NY NYCRR (9, 16, 18, 19, 22, 23)",
+   "gap": "Text from Cornell LII's republication of the official NYCRR (quarterly updates); govt.westlaw.com/nycrr now returns a Cloudflare challenge to curl.",
+   "attempted": [
+    "https://govt.westlaw.com/nycrr/Browse/Home/NewYork/NewYorkCodesRulesandRegulations (Cloudflare 403)"
+   ],
+   "effect": "A rule amended since LII's last quarterly load would be stale; LII notes (amendment history) are saved after each text."
+  },
+  {
+   "instrument": "NY statutes (public.law)",
+   "gap": "newyork.public.law mirrors nysenate.gov (pages state 'last accessed Sep. 26, 2026'); nysenate.gov itself is walled.",
+   "attempted": [
+    "https://www.nysenate.gov/legislation/laws/GOB/7-108 (Cloudflare challenge)"
+   ],
+   "effect": "Text is as of the mirror's last access date recorded on each page."
+  },
+  {
+   "instrument": "NYC:RCNY 6 5-76, 5-77 and ch. 2 subch. S (SHIELD Rule)",
+   "gap": "The register holds the current text from American Legal's XML; the SHIELD amendments adopted 2026-02-26 take effect 2027-01-01 and are not in the current compilation.",
+   "attempted": [
+    "http://files.amlegal.com/pdffiles/NewYorkCity/Rules/XML.zip (current compilation)"
+   ],
+   "effect": "Future-effective text is stated by rule-file atoms from the City Record Notice of Adoption (sources/NYC_DCWP_SHIELD_NOA_2026.txt), not by register sections."
+  },
+  {
+   "instrument": "Pending bills (S9760/A10182-A, S947/A3121, S9650/A659)",
+   "gap": "Not law; tracked by rule-file atoms as dated future items, outside the code register.",
+   "attempted": [],
+   "effect": "None for the current register."
+  }
+ ]
+}

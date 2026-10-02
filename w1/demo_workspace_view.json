@@ -1,0 +1,1564 @@
+{
+ "version": "2",
+ "jobs": [],
+ "quotes": [
+  {
+   "id": "quote:7c405a0228c4880b59fad097a3a6211b81d0d096a47ff3b44b933b4f41a9b242",
+   "title": "Restoration assessment",
+   "providerPartyId": "party:e90b5b81f165efdf9742083bc6c4b3b98fb96d8f2be3d885be4cda9123332de7",
+   "kind": "Assessment",
+   "status": "Offered",
+   "currency": "USD",
+   "lines": [
+    {
+     "lineId": "site-assessment",
+     "description": "site assessment",
+     "amountCents": "60000"
+    },
+    {
+     "lineId": "condition-schedule",
+     "description": "condition and quantity schedule",
+     "amountCents": "30000"
+    },
+    {
+     "lineId": "scope-budget",
+     "description": "scope and preliminary budget note",
+     "amountCents": "30000"
+    }
+   ],
+   "totalCents": "120000",
+   "depositCents": "0",
+   "paymentTerms": "Invoice on report delivery, payable within 14 days.",
+   "requirements": [
+    "Keep kitchen-water work separate from the move-out restoration assessment."
+   ],
+   "availableFrom": "2018-03-05T09:00:00.000Z",
+   "validUntil": "2018-03-09T23:59:59.000Z",
+   "sourceDocumentId": "document:97bac19117f1008682b6bbd5458a6358a2a3419d2a7eb5a68d82fa9c4a1d683d"
+  }
+ ],
+ "inspections": [],
+ "invoices": [],
+ "funding": [],
+ "payments": [],
+ "workspace": {
+  "id": "workspace:9d9b1d9d4d7fcc5bdcce40c27f14e6ab734a6bc8cc8504628e6f7e5951bfb032",
+  "name": "Company A",
+  "mode": "demo"
+ },
+ "handoff": {
+  "id": "handoff:86254eb3e808849877e0300bf14c217da0041d6a6260b104d5b3b877418c24b3",
+  "title": "Property A move-out",
+  "goal": "Make the property ready for its next occupant and resolve the departing tenancy's financial relationship, allowing the two outcomes to progress independently.",
+  "businessDate": "2018-03-08",
+  "physicalProgress": "Plan ready",
+  "financialProgress": "Not started",
+  "nextStep": "No new work decisions are ready beyond the existing, still-valid next step: authorize Architect A\u2019s non-destructive move-out restoration assessment (explicitly excluding kitchen-water work). Quote pricing totals $1,200 and Company A funding is allocated for exactly that amount; appointment availability/quote-extension info is still outstanding, so we should send a focused info request to Architect A to lock a time before Mar 9 or re-issue/extend at same rates if needed.",
+  "revision": "105",
+  "operativeDecisionId": null
+ },
+ "property": {
+  "id": "property:a26dcdba473ea2e5ad7f2f316ac2069ca380b9edf162e372fb811eea4ed075c0",
+  "name": "Property A",
+  "address": "Property A, New York City",
+  "description": "The premises in the supplied move-out case. The operating context uses the established pseudonyms; source originals are retained separately."
+ },
+ "tenancy": {
+  "id": "tenancy:f8151986b2b28217dbedfa2cd88242cb989c9ed61eb55f1c518443dfad1e186d",
+  "title": "Company A tenancy",
+  "startDate": "2015-01-01",
+  "endDate": "2018-02-28",
+  "endingKind": "Tenancy ending"
+ },
+ "parties": [
+  {
+   "id": "party:a6e1d2c46ec2f4a448ca61e7396b39ffb4fcf332c4595d73ac2918ab11de398e",
+   "name": "Owner A",
+   "kind": "Person",
+   "description": "Owner representative and participant in the move-out walk-through."
+  },
+  {
+   "id": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "name": "Resident A",
+   "kind": "Person",
+   "description": "Departing tenant and walk-through participant."
+  },
+  {
+   "id": "party:1409a9048d84dd5e0754b5748dff6bc37972d598760b7ab22dbc35a1e484a1a3",
+   "name": "Company A",
+   "kind": "Organization",
+   "description": "Landlord and customer for the property work."
+  },
+  {
+   "id": "party:b188d7b2fe1903553ba2ebc6d3953c3609db67e2d3043bb05b4e2f8868ebccea",
+   "name": "Resident B",
+   "kind": "Person",
+   "description": "Departing tenant who supplied the earlier condition correspondence."
+  },
+  {
+   "id": "party:e90b5b81f165efdf9742083bc6c4b3b98fb96d8f2be3d885be4cda9123332de7",
+   "name": "Architect A",
+   "kind": "Organization",
+   "description": "Provider offering a non-destructive restoration assessment; earlier kitchen-water work is a separate matter."
+  }
+ ],
+ "agreements": [
+  {
+   "id": "agreement:ace3c4d8be65cc51cf10d983352bbc08816bf9c31e8814cafbda894cdaf77a80",
+   "title": "Lease and ending-tenancy terms",
+   "termsText": "Return the premises in original condition except normal wear and tear. Complete the agreed post-vacancy walk-through within 48 hours. Consider latent defects, permitted pets and earlier condition evidence. The February 2018 modification ended the tenancy at the end of February.",
+   "sourceDocumentId": "document:2f741d6da39d040da51867ce0c532702132762b5c0e2f4aaeb7422c881e381a3"
+  }
+ ],
+ "obligations": [
+  {
+   "id": "obligation:cfd3afa19c1ef237267e6703c65f69274490d07a5e45fa41f0abed46b955198c",
+   "title": "Return the premises in the agreed condition",
+   "description": "Assess remaining return-condition obligations against the agreement and relevant evidence, excluding normal wear and without assuming liability from repair cost alone.",
+   "status": "Under assessment"
+  }
+ ],
+ "documents": [
+  {
+   "id": "document:5c1f63069d03f9531f374dc157d701db6df79df463a49bfe788d1af440999485",
+   "title": "Condition and maintenance history",
+   "sourceKind": "Prepared",
+   "sourceDocumentIds": [
+    "original:3d2bc92597d6a1a92d9a2c44c3641e54bbdae61fd72fb674bf4df7c593dc3c31",
+    "original:74ff0f19abd6a9a3748025fff7043506f992d355173a48de242bd000ac7bc673"
+   ],
+   "text": "On June 11, 2016, Resident B wrote to Owner A that attached photographs detailed screens and other issues existing on arrival. Described subjects included screens, loose or broken hearth tiles, missing molding and a small missing parquet piece. Broker A reported that the apartment had been painted and floors redone before occupancy. The maintenance history records temperature, roof-leak and intercom complaints and related work. Architect A was engaged in January 2018 concerning water in the kitchen. Do not infer that every move-out finding was caused by the departing residents. The package's archival property images are not authenticated move-out-condition photographs.",
+   "kind": "Condition report",
+   "sourceVersion": "a7321e01bfcc67e336053152cb8173c112af06c48874dd2bb6fdf45cd23eddf7",
+   "mimeType": null,
+   "availableFrom": "2018-03-02",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:2e52681d688da9e589e214bb96afde2175a30ecf08ab1e89f06622f856b46963",
+   "title": "Earlier accepted work plan",
+   "sourceKind": "Prepared",
+   "text": "A verified prior Handoff record shows the authorized user accepted revision 1 of Restoration assessment and safety triage on 23 September 2026 at 20:03:47.964 UTC in the earlier demonstration branch. The accepted estimate and spending limit were USD 1,200 for Architect A's non-destructive assessment and report, not repairs or a resident-liability determination. The decision retained the requirement to keep kitchen-water work separate. The application acceptance was followed by one outgoing request and an acknowledgment at 20:03:53.047 UTC. No visit, report, repair or payment was verified for that earlier primary case. This document preserves the verified earlier history; it does not create a new acceptance, prove external performance or claim recovery of the complete old branch state.",
+   "kind": "Prior decision",
+   "sourceVersion": "7e8eddd5041d1a78f4b30fe36450bf19e8d3d714689a7b8eb47b42b369ed22ad",
+   "mimeType": null,
+   "availableFrom": "2018-03-02",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:14668b411bf65a02c16cf128a7d3bf1442ca662c82bd4f31cf20b440edf5fd3a",
+   "title": "Move-out inspection",
+   "sourceKind": "Prepared",
+   "text": "Resident A, Owner A, Broker A and Witness B attended the March 1, 2018 walk-through. Owner A reportedly took 60 photographs. Reported findings include scratches, gouges and missing inlay in living/dining-room floors; stained or gouged window woodwork; broken hearth tiles and damaged doorway casing; torn stair-carpet edges; and dark floor staining in bedrooms and the great room. The southeast bedroom loft-ladder railing was pulled away, with protruding nails and torn wood. Other items include a broken bedroom door, damaged plaster, chipped bathtub porcelain, ceiling/lighting-area damage, stair trim and a sheared veneer section on the common-foyer door. Broker A also reported odors. These are reported findings, not new measurements or completed repairs. Repair methods, quantities and prices need assessment against earlier condition records.",
+   "kind": "Inspection report",
+   "sourceVersion": "68aa8b9af828b58b119bedd7553fd9c4fc05632ccfc7439761576085218c3665",
+   "mimeType": null,
+   "availableFrom": "2018-03-02",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:9be1a801bfbb572b0dc99a104c046a3c42d6366137498c6c2e1b8d7d226a5a15",
+   "title": "Restoration assessment service",
+   "sourceKind": "Prepared",
+   "text": "Architect A offers a non-destructive restoration assessment, quote AS-2018-0302-01, issued March 2, 2018 and valid through March 9. One site visit up to three hours; room-by-room condition and photographic schedule; measurements or quantities sufficient to describe proposed repair areas; immediate safety concerns; written scope and preliminary budget note. Compare available prior condition history, exclude unrelated kitchen-water and owner work, and identify unresolved or concealed conditions. Fixed gross charges: site assessment $600; condition and quantity schedule $300; scope and preliminary budget note $300. Total $1,200 including travel, reporting and applicable charges. Earliest offered visit March 5, subject to agreement. Report due within two business days of the visit; invoice on report delivery, payable within 14 days. Additional work requires separate approval. The fee does not cover repairs, destructive investigation, testing, permitting or resident-liability determination.",
+   "kind": "Provider information",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2018-03-02",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:2f741d6da39d040da51867ce0c532702132762b5c0e2f4aaeb7422c881e381a3",
+   "title": "Lease and move-out terms",
+   "sourceKind": "Prepared",
+   "text": "Company A let Property A to Resident A and Resident B. The lease was signed November 24, 2014; the initial term began January 1, 2015, with actual move-in reported January 9. The April 8, 2016 renewal ran to June 30, 2018, but the February 12, 2018 modification shortened expiry to the end of February 2018. Rider paragraph 6 requires return in the original condition except normal wear and tear. Modification paragraph 8 requires a damage walk-through within 48 hours of vacancy. Lease paragraph 31 records acceptance as-is except for latent defects. Rider paragraph 14 calls for notice of pre-existing damage within two days of occupancy. Four existing dogs were expressly permitted; additional pets required prior permission. These are curated operating excerpts; an invoice does not by itself establish resident responsibility.",
+   "kind": "Agreement",
+   "sourceVersion": "c2ee11f10ca05130b99b6c5ea9d7f0277a2812bc226bf713ef4b8974f201d0d2",
+   "mimeType": null,
+   "availableFrom": "2018-03-02",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:69c48b92eb059f9c95430e94fd277f4ca729d4b24e1ea9f2ca10b36d17e966f8",
+   "title": "Assessment access arrangements",
+   "sourceKind": "Prepared",
+   "text": "The prepared operating scenario supplies these logistics: the premises are vacant, Owner A controls the keys and will meet the provider at the agreed appointment, and electricity and water are available for the non-destructive inspection. Coordinate directly with Owner A through the existing conversation; no lockbox code is needed. Do not use or lean on the damaged loft-ladder railing. Keep that immediate area out of use and inspect it only from a safe position; this is not a claim that the railing has been repaired. The provider should obtain fresh photographs and measurements during its visit. The historic move-out photographs and arrival attachments were not included in the supplied original package; treat that as a preparation/source-acquisition limit, not a task for the operator to repeatedly retrieve the same missing archive. Do not relabel archival property pictures as move-out evidence. Retain the available written condition history and qualify any later responsibility assessment accordingly. These logistics supplement the demonstration; they are not newly verified historic events.",
+   "kind": "Access arrangements",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2018-03-02",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:f102cbbec301daf35a6fb6eaba89947a36af7c1f87c1887c60b14237163d9b92",
+   "title": "Owner work funds",
+   "sourceKind": "Prepared",
+   "text": "Company A has allocated USD 1,200 to the non-destructive restoration assessment. Keep this owner allocation separate from the outgoing resident account and any deposit custody. The allocation does not approve new work or establish resident liability.",
+   "kind": "Owner funding",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2018-03-02",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:97bac19117f1008682b6bbd5458a6358a2a3419d2a7eb5a68d82fa9c4a1d683d",
+   "title": "Restoration assessment",
+   "sourceKind": "Prepared",
+   "text": "Restoration assessment. site assessment: 60000 minor units; condition and quantity schedule: 30000 minor units; scope and preliminary budget note: 30000 minor units. Invoice on report delivery, payable within 14 days.",
+   "kind": "Quote",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2018-03-02",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:4c5897054201a2ba523142de07c5240b1ecafdef43b188a438205784a3ae1799",
+   "title": "Reported property condition",
+   "sourceKind": "Prepared",
+   "text": "Structured operating representation of the reported March 1 walk-through, not newly observed damage or measured quantities. Compare earlier history before interpreting responsibility. No full-property readiness conclusion is supplied.",
+   "kind": "Property condition",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2018-03-02",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:e8f41d3dc79e7ec7f6f4ac2076ced32dad12dfdef72f23af9ca72f1065bd5310",
+   "title": "Owner instructions",
+   "sourceKind": "Prepared",
+   "text": "Prepare a practical, costed restoration plan using the move-out findings, tenancy terms and earlier condition history. Keep kitchen-water work separate from the move-out restoration assessment. Identify immediate safety concerns. Do not equate repair cost with resident liability, or an assessment with completed repairs. The outgoing account is considered separately. Obtain the appropriate operator decision before new commitments; investigate and obtain information without making the operator a message relay.",
+   "kind": "Instruction",
+   "sourceVersion": "76e2696426dd559f2a7f3e4665fa2c50164d52d90e1a9cc3a9d7b6a6e40d8945",
+   "mimeType": null,
+   "availableFrom": "2018-03-02",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "original:3d2bc92597d6a1a92d9a2c44c3641e54bbdae61fd72fb674bf4df7c593dc3c31",
+   "title": "05_Condition_and_Maintenance_History.pdf",
+   "sourceKind": "Original",
+   "text": "Open the attached file.",
+   "kind": "Reconstructed material",
+   "sourceVersion": "1790049083566520",
+   "mimeType": "application/pdf",
+   "availableFrom": "2018-03-08",
+   "mediaSetRid": "ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427",
+   "mediaItemRid": "ri.mio.main.media-item.01a0c73d-60ae-756b-89d1-ef772ca9de82",
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "original:74ff0f19abd6a9a3748025fff7043506f992d355173a48de242bd000ac7bc673",
+   "title": "04_Condition_Report_Email.pdf",
+   "sourceKind": "Original",
+   "text": "Open the attached file.",
+   "kind": "Reconstructed material",
+   "sourceVersion": "1790049083566520",
+   "mimeType": "application/pdf",
+   "availableFrom": "2018-03-08",
+   "mediaSetRid": "ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427",
+   "mediaItemRid": "ri.mio.main.media-item.01a0c73d-60ae-756b-89d1-ef772ca9de81",
+   "pageStart": null,
+   "pageEnd": null
+  }
+ ],
+ "workPlan": {
+  "id": "plan:273e13a2401c1ace620c2e57e71db4dc7438b5116e699681abfda4b4a253706d",
+  "revision": "29",
+  "status": "Ready",
+  "title": "Authorize Architect A non-destructive move-out restoration assessment (exclude kitchen-water)",
+  "summary": "Approve Architect A\u2019s offered up-to-3-hour non-destructive site visit and report package to document current move-out conditions, flag immediate safety hazards (incl. loft-ladder railing), and produce a practical restoration scope + preliminary budget note. Explicitly exclude any kitchen-water investigation/repairs.",
+  "desiredOutcome": "Get an evidence-backed baseline of current conditions and a practical restoration plan to make the property ready for the next occupant, while keeping kitchen-water work and any departing-tenant financial questions separate.",
+  "scope": [
+   "Non-destructive site visit (up to 3 hours) to inspect reported move-out deficiencies and note immediate safety concerns; exclude any kitchen-water investigation/repairs; observe the SE bedroom loft-ladder railing area only from a safe position with no contact/leaning.",
+   "Room-by-room condition and photographic/quantity schedule based on what is actually observed and measured at the visit; clearly distinguish observed/measured items from missing or unavailable supporting materials (e.g., missing arrival-condition photos).",
+   "Written restoration scope and preliminary budget note: practical repair approaches; unknowns; identify items needing specialist trade quotes; flag immediate safety concerns; exclude repairs, destructive investigation, testing, permitting, and any resident-liability determination; keep kitchen-water out of scope."
+  ],
+  "estimatedCostCents": "120000",
+  "budgetCents": "120000",
+  "currency": "USD",
+  "fixedRequirements": [
+   "Keep kitchen-water work separate from the move-out restoration assessment."
+  ],
+  "rationale": "Move-out walk-through reported multiple physical deficiencies plus a potential immediate safety concern at the SE bedroom loft-ladder railing (Move-out inspection, document:14668b...). Repair methods, quantities, and pricing are not yet defined and some conditions may be pre-existing per the condition/maintenance history (document:5c1f63...). Architect A\u2019s non-destructive assessment is the direct next step to define a practical restoration scope and preliminary budget without commencing repairs, without destructive investigation/testing/permitting, and without any resident-liability determination (Restoration assessment service, document:9be1a8..., and quote, document:97bac...). This preserves the explicit requirement to keep kitchen-water separate (Owner instructions, document:e8f41d...). Funding for exactly this assessment amount is evidenced as allocated by Company A (Owner work funds, document:f102cb...).",
+  "sourceDocumentIds": [
+   "document:97bac19117f1008682b6bbd5458a6358a2a3419d2a7eb5a68d82fa9c4a1d683d",
+   "document:9be1a801bfbb572b0dc99a104c046a3c42d6366137498c6c2e1b8d7d226a5a15",
+   "document:69c48b92eb059f9c95430e94fd277f4ca729d4b24e1ea9f2ca10b36d17e966f8",
+   "document:e8f41d3dc79e7ec7f6f4ac2076ced32dad12dfdef72f23af9ca72f1065bd5310",
+   "document:f102cbbec301daf35a6fb6eaba89947a36af7c1f87c1887c60b14237163d9b92",
+   "document:14668b411bf65a02c16cf128a7d3bf1442ca662c82bd4f31cf20b440edf5fd3a",
+   "document:5c1f63069d03f9531f374dc157d701db6df79df463a49bfe788d1af440999485",
+   "document:2f741d6da39d040da51867ce0c532702132762b5c0e2f4aaeb7422c881e381a3"
+  ],
+  "providerPartyId": "party:e90b5b81f165efdf9742083bc6c4b3b98fb96d8f2be3d885be4cda9123332de7",
+  "acceptedDecisionId": null,
+  "selections": [
+   {
+    "quoteId": "quote:7c405a0228c4880b59fad097a3a6211b81d0d096a47ff3b44b933b4f41a9b242",
+    "quoteLineId": "site-assessment",
+    "scope": "Non-destructive site visit (up to 3 hours) to inspect reported move-out deficiencies and note immediate safety concerns; exclude any kitchen-water investigation/repairs; observe the SE bedroom loft-ladder railing area only from a safe position with no contact/leaning.",
+    "reason": "Equivalent to Architect A quote AS-2018-0302-01 line \u2018site assessment\u2019 (Restoration assessment service, document:9be1a8..., v1). Adds only the documented access/safety constraint for the loft-ladder railing from Assessment access arrangements (document:69c48b...) and preserves the kitchen-water exclusion required by the service/quote and Owner instructions (document:e8f41d...)."
+   },
+   {
+    "quoteId": "quote:7c405a0228c4880b59fad097a3a6211b81d0d096a47ff3b44b933b4f41a9b242",
+    "quoteLineId": "condition-schedule",
+    "scope": "Room-by-room condition and photographic/quantity schedule based on what is actually observed and measured at the visit; clearly distinguish observed/measured items from missing or unavailable supporting materials (e.g., missing arrival-condition photos).",
+    "reason": "Equivalent to quote line \u2018condition and quantity schedule\u2019 (service description, document:9be1a8...). Clarifies the evidence gap noted in Condition and maintenance history (document:5c1f63...) and the service instruction to distinguish observed evidence from missing supporting material."
+   },
+   {
+    "quoteId": "quote:7c405a0228c4880b59fad097a3a6211b81d0d096a47ff3b44b933b4f41a9b242",
+    "quoteLineId": "scope-budget",
+    "scope": "Written restoration scope and preliminary budget note: practical repair approaches; unknowns; identify items needing specialist trade quotes; flag immediate safety concerns; exclude repairs, destructive investigation, testing, permitting, and any resident-liability determination; keep kitchen-water out of scope.",
+    "reason": "Equivalent to quote line \u2018scope and preliminary budget note\u2019 and its explicit exclusions (no repairs, destructive investigation, testing, permitting, or resident-liability determination) in the Restoration assessment service (document:9be1a8..., v1). Reinforces Owner instructions (document:e8f41d...) and the fixed kitchen-water separation requirement."
+   }
+  ],
+  "fixedProviderPartyId": null
+ },
+ "decisions": [],
+ "messages": [
+  {
+   "id": "message:608f7e8d02c97341bb158ad43d6b3d4848de5f7dd71bfc84c5e2d03660b0f36b",
+   "title": "Information requested",
+   "body": "Do you still have the original arrival-condition photos referenced in the June 11, 2016 email (screens/hearth tiles/molding/parquet, etc.)? If yes, please share the original files (not screenshots) and indicate the date taken so the restoration assessment can compare pre-existing vs move-out conditions.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T05:48:24.724Z"
+  },
+  {
+   "id": "message:e7a0e0a60752f6b9dfda13be114cd9ca0e157b24b46395965789f38d7ae17ad8",
+   "title": "Reply received",
+   "body": "The requested information is not yet available from this correspondent. The question remains open.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:608f7e8d02c97341bb158ad43d6b3d4848de5f7dd71bfc84c5e2d03660b0f36b",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T05:50:32.651Z"
+  },
+  {
+   "id": "message:78bdbbe65b443af6c30aaa632e203a2503867c9911a392694416e783b98db3da",
+   "title": "Information requested",
+   "body": "Do you have the original arrival-condition photos referenced in the June 11, 2016 email (screens/hearth tiles/molding/parquet, etc.)? If yes, please share the original files (not screenshots) and the date taken so the restoration assessment can compare pre-existing vs move-out conditions.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T05:51:32.391Z"
+  },
+  {
+   "id": "message:1ca410e2e676970c993d1c9309a81b7da2c866217b6c7fd2f0537816fe58e3b9",
+   "title": "Reply received",
+   "body": "The requested information is not yet available from this correspondent. The question remains open.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:78bdbbe65b443af6c30aaa632e203a2503867c9911a392694416e783b98db3da",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T05:53:25.048Z"
+  },
+  {
+   "id": "message:e82f68933260ed4797989714d0961c9cc059c78a4074b7c491a4594293e94a22",
+   "title": "Information requested",
+   "body": "Do you still have the original arrival-condition photos referenced in the June 11, 2016 email (screens/hearth tiles/molding/parquet, etc.)? If yes, please share the original files (not screenshots) and indicate the date taken so the restoration assessment can compare pre-existing vs move-out conditions.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T05:55:32.189Z"
+  },
+  {
+   "id": "message:192cc28604a1df44c91092d6933b995ec1123661d91d1167063b5398bf544241",
+   "title": "Reply received",
+   "body": "The requested information is not yet available from this correspondent. The question remains open.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:e82f68933260ed4797989714d0961c9cc059c78a4074b7c491a4594293e94a22",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T05:57:32.553Z"
+  },
+  {
+   "id": "message:ab33782704e6684e583a5e076a4313728826ab0e96b0e2e6715bd0d76e8d9771",
+   "title": "Information requested",
+   "body": "Do you have the original arrival-condition photos referenced in the June 11, 2016 email (screens/hearth tiles/molding/parquet, etc.)? If yes, please share the original files (not screenshots) and the date taken so the restoration assessment can compare pre-existing vs move-out conditions.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T05:58:32.524Z"
+  },
+  {
+   "id": "message:07e80e2b914ea433dadc64972ad1597f43012f113b4b71b61e977940cc0b9c57",
+   "title": "Information requested",
+   "body": "To lock in Architect A\u2019s assessment visit within the quote validity window: please confirm 2\u20133 appointment windows you can meet on-site with keys, and (if available) share the original March 1 walk-through photo set (link or files). Also confirm the SE bedroom loft-ladder railing area will be kept blocked off/out of use during entry/inspection (no contact with the damaged railing).",
+   "recipientPartyId": "party:a6e1d2c46ec2f4a448ca61e7396b39ffb4fcf332c4595d73ac2918ab11de398e",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T05:59:32.545Z"
+  },
+  {
+   "id": "message:7fcc74b91bcba8db3010439e69974884dd87b5baa308fbe8e6703169c8ed7064",
+   "title": "Information requested",
+   "body": "Please confirm you can proceed with the non-destructive move-out restoration assessment if the SE bedroom loft-ladder railing area is blocked off and inspected only from a safe position with no contact/leaning on the damaged railing. If you require a temporary make-safe before entry, can you provide a separate, non-assessment quote (kitchen-water remains out of scope)?",
+   "recipientPartyId": "party:e90b5b81f165efdf9742083bc6c4b3b98fb96d8f2be3d885be4cda9123332de7",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T05:59:32.545Z"
+  },
+  {
+   "id": "message:a543f23b19171f32978a7ed3e7a27d00bd523ca30d3795123ecddc43c145f916",
+   "title": "Reply received",
+   "body": "The requested information is not yet available from this correspondent. The question remains open.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:ab33782704e6684e583a5e076a4313728826ab0e96b0e2e6715bd0d76e8d9771",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T06:01:32.454Z"
+  },
+  {
+   "id": "message:8befe8d03334f9085bf2f83484cae44ee7f7004609ab6c219e4a9b2e11bdc867",
+   "title": "Reply received",
+   "body": "Move-out inspection: Resident A, Owner A, Broker A and Witness B attended the March 1, 2018 walk-through. Owner A reportedly took 60 photographs. Reported findings include scratches, gouges and missing inlay in living/dining-room floors; stained or gouged window woodwork; broken hearth tiles and damaged doorway casing; torn stair-carpet edges; and dark floor staining in bedrooms and the great room. The southeast bedroom loft-ladder railing was pulled away, with protruding nails and torn wood. Other items include a broken bedroom door, damaged plaster, chipped bathtub porcelain, ceiling/lighting-area damage, stair trim and a sheared veneer section on the common-foyer door. Broker A also reported odors. These are reported findings, not new measurements or completed repairs. Repair methods, quantities and prices need assessment against earlier condition records.\nAssessment access arrangements: The prepared operating scenario supplies these logistics: the premises are vacant, Owner A controls the keys and will meet the provider at the agreed appointment, and electricity and water are available for the non-destructive inspection. Coordinate directly with Owner A through the existing conversation; no lockbox code is needed. Do not use or lean on the damaged loft-ladder railing. Keep that immediate area out of use and inspect it only from a safe position; this is not a claim that the railing has been repaired. The provider should obtain fresh photographs and measurements during its visit. The historic move-out photographs and arrival attachments were not included in the supplied original package; treat that as a preparation/source-acquisition limit, not a task for the operator to repeatedly retrieve the same missing archive. Do not relabel archival property pictures as move-out evidence. Retain the available written condition history and qualify any later responsibility assessment accordingly. These logistics supplement the demonstration; they are not newly verified historic events.\nOwner instructions: Prepare a practical, costed restoration plan using the move-out findings, tenancy terms and earlier condition history. Keep kitchen-water work separate from the move-out restoration assessment. Identify immediate safety concerns. Do not equate repair cost with resident liability, or an assessment with completed repairs. The outgoing account is considered separately. Obtain the appropriate operator decision before new commitments; investigate and obtain information without making the operator a message relay.",
+   "recipientPartyId": "party:a6e1d2c46ec2f4a448ca61e7396b39ffb4fcf332c4595d73ac2918ab11de398e",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:07e80e2b914ea433dadc64972ad1597f43012f113b4b71b61e977940cc0b9c57",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T06:01:40.089Z"
+  },
+  {
+   "id": "message:c5da0a83765cedf4f9271edb3c5aa94b4295a16484ff901af88061c80374cf1f",
+   "title": "Reply received",
+   "body": "Restoration assessment: Restoration assessment. site assessment: 60000 minor units; condition and quantity schedule: 30000 minor units; scope and preliminary budget note: 30000 minor units. Invoice on report delivery, payable within 14 days.",
+   "recipientPartyId": "party:e90b5b81f165efdf9742083bc6c4b3b98fb96d8f2be3d885be4cda9123332de7",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:7fcc74b91bcba8db3010439e69974884dd87b5baa308fbe8e6703169c8ed7064",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T06:02:24.661Z"
+  },
+  {
+   "id": "message:03ed103954eb2da4ec6348e689ad1b5efc6f566b0c7de3176568b7dab6a42e0b",
+   "title": "Information requested",
+   "body": "Please confirm your earliest available appointment times this week and that you can proceed with the non-destructive move-out restoration assessment if the SE bedroom loft-ladder railing area is blocked off and inspected only from a safe position with no contact. If scheduling slips past Mar 9, can you confirm whether your quote AS-2018-0302-01 can be extended (or re-issued) at the same rates? (Kitchen-water remains out of scope.)",
+   "recipientPartyId": "party:e90b5b81f165efdf9742083bc6c4b3b98fb96d8f2be3d885be4cda9123332de7",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T06:04:37.267Z"
+  },
+  {
+   "id": "message:c9c32af692c72687953bd840ec1f850e4c1f4a3cc650298b6329ef88e1f3be45",
+   "title": "Information requested",
+   "body": "To schedule Architect A within the quote validity window (through Mar 9): please provide 2\u20133 appointment windows you can meet on-site with keys, confirm electric + water will be on, and confirm the SE bedroom loft-ladder railing area will be blocked off/out of use (no contact/leaning). If the March 1 walk-through photo set is readily available, please share it via link/files.",
+   "recipientPartyId": "party:a6e1d2c46ec2f4a448ca61e7396b39ffb4fcf332c4595d73ac2918ab11de398e",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T06:04:37.267Z"
+  },
+  {
+   "id": "message:4309b525f74483b0d0fcfc42cec985f4ef5e58e3582590edf84a5039b202ab1e",
+   "title": "Reply received",
+   "body": "Restoration assessment: Restoration assessment. site assessment: 60000 minor units; condition and quantity schedule: 30000 minor units; scope and preliminary budget note: 30000 minor units. Invoice on report delivery, payable within 14 days.",
+   "recipientPartyId": "party:e90b5b81f165efdf9742083bc6c4b3b98fb96d8f2be3d885be4cda9123332de7",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:03ed103954eb2da4ec6348e689ad1b5efc6f566b0c7de3176568b7dab6a42e0b",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T06:06:32.446Z"
+  },
+  {
+   "id": "message:eb1c45b6cf62db042d5e483043500af4e0b158ad9878996baf764f143d3365ad",
+   "title": "Reply received",
+   "body": "Move-out inspection: Resident A, Owner A, Broker A and Witness B attended the March 1, 2018 walk-through. Owner A reportedly took 60 photographs. Reported findings include scratches, gouges and missing inlay in living/dining-room floors; stained or gouged window woodwork; broken hearth tiles and damaged doorway casing; torn stair-carpet edges; and dark floor staining in bedrooms and the great room. The southeast bedroom loft-ladder railing was pulled away, with protruding nails and torn wood. Other items include a broken bedroom door, damaged plaster, chipped bathtub porcelain, ceiling/lighting-area damage, stair trim and a sheared veneer section on the common-foyer door. Broker A also reported odors. These are reported findings, not new measurements or completed repairs. Repair methods, quantities and prices need assessment against earlier condition records.\nAssessment access arrangements: The prepared operating scenario supplies these logistics: the premises are vacant, Owner A controls the keys and will meet the provider at the agreed appointment, and electricity and water are available for the non-destructive inspection. Coordinate directly with Owner A through the existing conversation; no lockbox code is needed. Do not use or lean on the damaged loft-ladder railing. Keep that immediate area out of use and inspect it only from a safe position; this is not a claim that the railing has been repaired. The provider should obtain fresh photographs and measurements during its visit. The historic move-out photographs and arrival attachments were not included in the supplied original package; treat that as a preparation/source-acquisition limit, not a task for the operator to repeatedly retrieve the same missing archive. Do not relabel archival property pictures as move-out evidence. Retain the available written condition history and qualify any later responsibility assessment accordingly. These logistics supplement the demonstration; they are not newly verified historic events.\nOwner instructions: Prepare a practical, costed restoration plan using the move-out findings, tenancy terms and earlier condition history. Keep kitchen-water work separate from the move-out restoration assessment. Identify immediate safety concerns. Do not equate repair cost with resident liability, or an assessment with completed repairs. The outgoing account is considered separately. Obtain the appropriate operator decision before new commitments; investigate and obtain information without making the operator a message relay.",
+   "recipientPartyId": "party:a6e1d2c46ec2f4a448ca61e7396b39ffb4fcf332c4595d73ac2918ab11de398e",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:c9c32af692c72687953bd840ec1f850e4c1f4a3cc650298b6329ef88e1f3be45",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T06:06:35.93Z"
+  },
+  {
+   "id": "message:e000dfe472c9ad58aa1f3c643cf6a646b0c1794b10a77278197c6fe85a41aef1",
+   "title": "Information requested",
+   "body": "Do you still have the original arrival-condition photos referenced in the June 11, 2016 email (screens/hearth tiles/molding/parquet, etc.)? If yes, please share the original files (not screenshots) and indicate the date taken so the restoration assessment can compare pre-existing vs move-out conditions.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T06:10:25.072Z"
+  },
+  {
+   "id": "message:118a3ddaabb08a24cd200552f279825c7cd9f3610ff5d86b49782b5a90b35ca2",
+   "title": "Information requested",
+   "body": "Do you have the original arrival-condition photos referenced in the June 11, 2016 email (screens/hearth tiles/molding/parquet, etc.)? If yes, please share the original files (not screenshots) and the date taken/metadata so the restoration assessment can compare pre-existing vs move-out conditions.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T06:11:24.496Z"
+  },
+  {
+   "id": "message:620b9e948ea14f45bc49c3fba6e89318637a38481513577c4ce0465f5602c21a",
+   "title": "Information requested",
+   "body": "Please confirm your earliest available appointment times this week and confirm you can proceed with the non-destructive move-out restoration assessment if the SE bedroom loft-ladder railing area is blocked off and inspected only from a safe position with no contact/leaning. If scheduling slips past Mar 9, can you extend or re-issue quote AS-2018-0302-01 at the same rates? (Kitchen-water remains out of scope.)",
+   "recipientPartyId": "party:e90b5b81f165efdf9742083bc6c4b3b98fb96d8f2be3d885be4cda9123332de7",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T06:11:24.496Z"
+  },
+  {
+   "id": "message:6f08bb30f8e9a93d28fc514d22ca312905cb5987a3cb4df9f43b7dc4fa51152f",
+   "title": "Information requested",
+   "body": "To schedule Architect A\u2019s assessment within the Mar 9 quote validity window: please provide 2\u20133 appointment windows you can meet on-site with keys, confirm electric + water will be on, and confirm the SE bedroom loft-ladder railing area will be blocked off/out of use during entry/inspection (no contact/leaning). If the March 1 walk-through photo set is readily available, please share via link/files (optional).",
+   "recipientPartyId": "party:a6e1d2c46ec2f4a448ca61e7396b39ffb4fcf332c4595d73ac2918ab11de398e",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T06:11:24.496Z"
+  },
+  {
+   "id": "message:76f7bc610d7e901e6545d5f5cf68a7b3390e7e29cbe3abd946a442e8dc3851ba",
+   "title": "Reply received",
+   "body": "The requested information is not yet available from this correspondent. The question remains open.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:e000dfe472c9ad58aa1f3c643cf6a646b0c1794b10a77278197c6fe85a41aef1",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T06:12:32.48Z"
+  },
+  {
+   "id": "message:d41cf6affc9fe02a960db5d5acf92445d7026f32d3e7a051b7f2f126c47582b2",
+   "title": "Reply received",
+   "body": "The requested information is not yet available from this correspondent. The question remains open.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:118a3ddaabb08a24cd200552f279825c7cd9f3610ff5d86b49782b5a90b35ca2",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T06:12:37.05Z"
+  },
+  {
+   "id": "message:e1ab8d3590dec94b3877edfbf64ab3e20caa0745ab9d4ee115eff9214afffb64",
+   "title": "Reply received",
+   "body": "Restoration assessment: Restoration assessment. site assessment: 60000 minor units; condition and quantity schedule: 30000 minor units; scope and preliminary budget note: 30000 minor units. Invoice on report delivery, payable within 14 days.",
+   "recipientPartyId": "party:e90b5b81f165efdf9742083bc6c4b3b98fb96d8f2be3d885be4cda9123332de7",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:620b9e948ea14f45bc49c3fba6e89318637a38481513577c4ce0465f5602c21a",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T06:13:32.471Z"
+  },
+  {
+   "id": "message:a80af6533cf006d4a60d72b4d479883f979b5b7fc7b95ee5a0972bebe2eb7db6",
+   "title": "Reply received",
+   "body": "Move-out inspection: Resident A, Owner A, Broker A and Witness B attended the March 1, 2018 walk-through. Owner A reportedly took 60 photographs. Reported findings include scratches, gouges and missing inlay in living/dining-room floors; stained or gouged window woodwork; broken hearth tiles and damaged doorway casing; torn stair-carpet edges; and dark floor staining in bedrooms and the great room. The southeast bedroom loft-ladder railing was pulled away, with protruding nails and torn wood. Other items include a broken bedroom door, damaged plaster, chipped bathtub porcelain, ceiling/lighting-area damage, stair trim and a sheared veneer section on the common-foyer door. Broker A also reported odors. These are reported findings, not new measurements or completed repairs. Repair methods, quantities and prices need assessment against earlier condition records.\nAssessment access arrangements: The prepared operating scenario supplies these logistics: the premises are vacant, Owner A controls the keys and will meet the provider at the agreed appointment, and electricity and water are available for the non-destructive inspection. Coordinate directly with Owner A through the existing conversation; no lockbox code is needed. Do not use or lean on the damaged loft-ladder railing. Keep that immediate area out of use and inspect it only from a safe position; this is not a claim that the railing has been repaired. The provider should obtain fresh photographs and measurements during its visit. The historic move-out photographs and arrival attachments were not included in the supplied original package; treat that as a preparation/source-acquisition limit, not a task for the operator to repeatedly retrieve the same missing archive. Do not relabel archival property pictures as move-out evidence. Retain the available written condition history and qualify any later responsibility assessment accordingly. These logistics supplement the demonstration; they are not newly verified historic events.\nOwner instructions: Prepare a practical, costed restoration plan using the move-out findings, tenancy terms and earlier condition history. Keep kitchen-water work separate from the move-out restoration assessment. Identify immediate safety concerns. Do not equate repair cost with resident liability, or an assessment with completed repairs. The outgoing account is considered separately. Obtain the appropriate operator decision before new commitments; investigate and obtain information without making the operator a message relay.",
+   "recipientPartyId": "party:a6e1d2c46ec2f4a448ca61e7396b39ffb4fcf332c4595d73ac2918ab11de398e",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:6f08bb30f8e9a93d28fc514d22ca312905cb5987a3cb4df9f43b7dc4fa51152f",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T06:14:32.371Z"
+  },
+  {
+   "id": "message:d4cb6fc01c9c1d4b30fd66625cd48457748f54e6e777e8eefd98469f24dbdf3d",
+   "title": "Information requested",
+   "body": "Do you have the original arrival-condition photos referenced in the June 11, 2016 email (screens/hearth tiles/molding/parquet, etc.)? If yes, please share the original files (not screenshots) and the date taken so the restoration assessment can compare pre-existing vs move-out conditions.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T06:15:32.491Z"
+  },
+  {
+   "id": "message:3aef579b98a0c7b2b04b989f861db69204d363ea327fb1bc8a0528cfe7514999",
+   "title": "Reply received",
+   "body": "The requested information is not yet available from this correspondent. The question remains open.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:d4cb6fc01c9c1d4b30fd66625cd48457748f54e6e777e8eefd98469f24dbdf3d",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T06:17:32.317Z"
+  },
+  {
+   "id": "message:8e5ff10dd7f998afe26b300495fadb9658b48c8721fd3fe9127e6dca6c505413",
+   "title": "Information requested",
+   "body": "If you still have the original arrival-condition photos referenced in the June 11, 2016 email (screens/hearth tiles/molding/parquet, etc.), please share the original files (not screenshots) and the date taken/metadata. If you do not have them anymore, please confirm so we can proceed without them.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T06:17:37.267Z"
+  },
+  {
+   "id": "message:92ef6c4650e7b7175e92b490471a5d15924d59607de820c8a41d507116f38f12",
+   "title": "Information requested",
+   "body": "Please confirm your earliest available appointment times this week for the non-destructive move-out restoration assessment and confirm you can proceed if the SE bedroom loft-ladder railing area is blocked off and inspected only from a safe position with no contact/leaning. If scheduling slips past Mar 9, can you extend or re-issue quote AS-2018-0302-01 at the same rates? Kitchen-water remains out of scope.",
+   "recipientPartyId": "party:e90b5b81f165efdf9742083bc6c4b3b98fb96d8f2be3d885be4cda9123332de7",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T06:17:37.267Z"
+  },
+  {
+   "id": "message:af89472228cb52fed3b3c7407d31bddc7d65dd9baa6fa0efd6ae7df1ac629eea",
+   "title": "Information requested",
+   "body": "To schedule Architect A\u2019s non-destructive move-out restoration assessment within the quote window (through Mar 9): please provide 2\u20133 appointment windows you can meet on-site with keys, confirm electricity + water will be on, and confirm the SE bedroom loft-ladder railing area will be blocked off/out of use during entry/inspection (no contact/leaning). If the March 1 walk-through photo set is readily available, please share via link/files (optional).",
+   "recipientPartyId": "party:a6e1d2c46ec2f4a448ca61e7396b39ffb4fcf332c4595d73ac2918ab11de398e",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T06:17:37.267Z"
+  },
+  {
+   "id": "message:a11662a9875f9741b60426e31422bc844b83691c41f55e463a74fc843dc96fdd",
+   "title": "Reply received",
+   "body": "The requested information is not yet available from this correspondent. The question remains open.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:8e5ff10dd7f998afe26b300495fadb9658b48c8721fd3fe9127e6dca6c505413",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T06:19:32.392Z"
+  },
+  {
+   "id": "message:502249b0c7f68299f1f254deef278161b2266d5654efbc316b3d57c76eb991ca",
+   "title": "Reply received",
+   "body": "Restoration assessment: Restoration assessment. site assessment: 60000 minor units; condition and quantity schedule: 30000 minor units; scope and preliminary budget note: 30000 minor units. Invoice on report delivery, payable within 14 days.",
+   "recipientPartyId": "party:e90b5b81f165efdf9742083bc6c4b3b98fb96d8f2be3d885be4cda9123332de7",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:92ef6c4650e7b7175e92b490471a5d15924d59607de820c8a41d507116f38f12",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T06:19:39.305Z"
+  },
+  {
+   "id": "message:fcb56111bd29791dd8b069f0ab3958ac276222d033878058efe250d4411bfc48",
+   "title": "Reply received",
+   "body": "Move-out inspection: Resident A, Owner A, Broker A and Witness B attended the March 1, 2018 walk-through. Owner A reportedly took 60 photographs. Reported findings include scratches, gouges and missing inlay in living/dining-room floors; stained or gouged window woodwork; broken hearth tiles and damaged doorway casing; torn stair-carpet edges; and dark floor staining in bedrooms and the great room. The southeast bedroom loft-ladder railing was pulled away, with protruding nails and torn wood. Other items include a broken bedroom door, damaged plaster, chipped bathtub porcelain, ceiling/lighting-area damage, stair trim and a sheared veneer section on the common-foyer door. Broker A also reported odors. These are reported findings, not new measurements or completed repairs. Repair methods, quantities and prices need assessment against earlier condition records.\nAssessment access arrangements: The prepared operating scenario supplies these logistics: the premises are vacant, Owner A controls the keys and will meet the provider at the agreed appointment, and electricity and water are available for the non-destructive inspection. Coordinate directly with Owner A through the existing conversation; no lockbox code is needed. Do not use or lean on the damaged loft-ladder railing. Keep that immediate area out of use and inspect it only from a safe position; this is not a claim that the railing has been repaired. The provider should obtain fresh photographs and measurements during its visit. The historic move-out photographs and arrival attachments were not included in the supplied original package; treat that as a preparation/source-acquisition limit, not a task for the operator to repeatedly retrieve the same missing archive. Do not relabel archival property pictures as move-out evidence. Retain the available written condition history and qualify any later responsibility assessment accordingly. These logistics supplement the demonstration; they are not newly verified historic events.\nOwner instructions: Prepare a practical, costed restoration plan using the move-out findings, tenancy terms and earlier condition history. Keep kitchen-water work separate from the move-out restoration assessment. Identify immediate safety concerns. Do not equate repair cost with resident liability, or an assessment with completed repairs. The outgoing account is considered separately. Obtain the appropriate operator decision before new commitments; investigate and obtain information without making the operator a message relay.",
+   "recipientPartyId": "party:a6e1d2c46ec2f4a448ca61e7396b39ffb4fcf332c4595d73ac2918ab11de398e",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:af89472228cb52fed3b3c7407d31bddc7d65dd9baa6fa0efd6ae7df1ac629eea",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T06:20:32.475Z"
+  },
+  {
+   "id": "message:0dfac9a317a961bb7aac71dda5ab273dc3827b575454ea0f6184a66e9d5b581b",
+   "title": "Information requested",
+   "body": "Do you still have the original arrival-condition photos referenced in the June 11, 2016 email (screens/hearth tiles/molding/parquet, etc.)? If yes, please share the original files (not screenshots) and indicate the date taken so the restoration assessment can compare pre-existing vs move-out conditions.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T06:24:24.712Z"
+  },
+  {
+   "id": "message:dc82a3b90b788ec1c0e92faa03e9fb03bf938394e54d3cc673c99ef33b597c5a",
+   "title": "Information requested",
+   "body": "Do you have the original arrival-condition photos referenced in the June 11, 2016 email (screens/hearth tiles/molding/parquet, etc.)? If yes, please share the original files (not screenshots) and the date taken/metadata so the restoration assessment can compare pre-existing vs move-out conditions.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T06:24:28.979Z"
+  },
+  {
+   "id": "message:98dc86f147dadebdabbbee7a68e6b08e553c7cd98c9a0bac63396e7b333f23ae",
+   "title": "Reply received",
+   "body": "The requested information is not yet available from this correspondent. The question remains open.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:0dfac9a317a961bb7aac71dda5ab273dc3827b575454ea0f6184a66e9d5b581b",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T06:26:24.577Z"
+  },
+  {
+   "id": "message:8249edc316bdcd121fba54b3c71a9ef81a5f47f5713d4b2c3985f0ef932c9897",
+   "title": "Reply received",
+   "body": "The requested information is not yet available from this correspondent. The question remains open.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:dc82a3b90b788ec1c0e92faa03e9fb03bf938394e54d3cc673c99ef33b597c5a",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T06:26:30.629Z"
+  },
+  {
+   "id": "message:5279811cd653dbff50e7a231fbc802f8ddd1d6a5719e2deb4eac523555cdb07a",
+   "title": "Information requested",
+   "body": "To schedule the non-destructive move-out restoration assessment this week: please provide 2\u20133 appointment windows you can meet on-site with keys. Also confirm electricity + water will be on, and that the SE bedroom loft-ladder railing area will be blocked off/out of use during entry/inspection (no contact/leaning). If the March 1 walk-through photo set is readily available, please share it (optional).",
+   "recipientPartyId": "party:a6e1d2c46ec2f4a448ca61e7396b39ffb4fcf332c4595d73ac2918ab11de398e",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T06:28:32.475Z"
+  },
+  {
+   "id": "message:b188c428273ef342ea35e740ac386ce48640d03f1ceda9d5f5c43600cb3fef3c",
+   "title": "Information requested",
+   "body": "Please confirm your earliest appointment availability this week and that you can proceed with the non-destructive move-out restoration assessment if the SE bedroom loft-ladder railing area is blocked off and inspected only from a safe position with no contact/leaning. If scheduling slips beyond Mar 9, can the current rates be extended or the quote re-issued at the same rates? (Kitchen-water remains out of scope.)",
+   "recipientPartyId": "party:e90b5b81f165efdf9742083bc6c4b3b98fb96d8f2be3d885be4cda9123332de7",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T06:28:32.475Z"
+  },
+  {
+   "id": "message:3014ec77d471022a182f0eafd1a867ac258beebdace526ae7fbc902a97445237",
+   "title": "Information requested",
+   "body": "Do you have the original arrival-condition photos referenced in the June 11, 2016 email (screens/hearth tiles/molding/parquet, etc.)? If yes, please share the original files (not screenshots) and the date taken so the restoration assessment can compare pre-existing vs move-out conditions.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T06:29:37.63Z"
+  },
+  {
+   "id": "message:d01fffe1f88c36963dfe010dabeb7f9a50d2038728e1c9d4f8c7a6379ef531bb",
+   "title": "Reply received",
+   "body": "Move-out inspection: Resident A, Owner A, Broker A and Witness B attended the March 1, 2018 walk-through. Owner A reportedly took 60 photographs. Reported findings include scratches, gouges and missing inlay in living/dining-room floors; stained or gouged window woodwork; broken hearth tiles and damaged doorway casing; torn stair-carpet edges; and dark floor staining in bedrooms and the great room. The southeast bedroom loft-ladder railing was pulled away, with protruding nails and torn wood. Other items include a broken bedroom door, damaged plaster, chipped bathtub porcelain, ceiling/lighting-area damage, stair trim and a sheared veneer section on the common-foyer door. Broker A also reported odors. These are reported findings, not new measurements or completed repairs. Repair methods, quantities and prices need assessment against earlier condition records.\nAssessment access arrangements: The prepared operating scenario supplies these logistics: the premises are vacant, Owner A controls the keys and will meet the provider at the agreed appointment, and electricity and water are available for the non-destructive inspection. Coordinate directly with Owner A through the existing conversation; no lockbox code is needed. Do not use or lean on the damaged loft-ladder railing. Keep that immediate area out of use and inspect it only from a safe position; this is not a claim that the railing has been repaired. The provider should obtain fresh photographs and measurements during its visit. The historic move-out photographs and arrival attachments were not included in the supplied original package; treat that as a preparation/source-acquisition limit, not a task for the operator to repeatedly retrieve the same missing archive. Do not relabel archival property pictures as move-out evidence. Retain the available written condition history and qualify any later responsibility assessment accordingly. These logistics supplement the demonstration; they are not newly verified historic events.\nOwner instructions: Prepare a practical, costed restoration plan using the move-out findings, tenancy terms and earlier condition history. Keep kitchen-water work separate from the move-out restoration assessment. Identify immediate safety concerns. Do not equate repair cost with resident liability, or an assessment with completed repairs. The outgoing account is considered separately. Obtain the appropriate operator decision before new commitments; investigate and obtain information without making the operator a message relay.",
+   "recipientPartyId": "party:a6e1d2c46ec2f4a448ca61e7396b39ffb4fcf332c4595d73ac2918ab11de398e",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:5279811cd653dbff50e7a231fbc802f8ddd1d6a5719e2deb4eac523555cdb07a",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T16:35:14.661Z"
+  },
+  {
+   "id": "message:32a90af4475ff3e5972dbeba56ce49e22da886451baa144ba2510b7244e39ab0",
+   "title": "Reply received",
+   "body": "Restoration assessment: Restoration assessment. site assessment: 60000 minor units; condition and quantity schedule: 30000 minor units; scope and preliminary budget note: 30000 minor units. Invoice on report delivery, payable within 14 days.",
+   "recipientPartyId": "party:e90b5b81f165efdf9742083bc6c4b3b98fb96d8f2be3d885be4cda9123332de7",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:b188c428273ef342ea35e740ac386ce48640d03f1ceda9d5f5c43600cb3fef3c",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T16:35:21.662Z"
+  },
+  {
+   "id": "message:1d29256c3db99d035ddb236aed49a7eb96e1082d0db7ab3e7b7ec5af02cc1a7e",
+   "title": "Reply received",
+   "body": "The requested information is not yet available from this correspondent. The question remains open.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:3014ec77d471022a182f0eafd1a867ac258beebdace526ae7fbc902a97445237",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T16:36:14.576Z"
+  },
+  {
+   "id": "message:5f9bb0749cd1897123b33d097c377fc2c474287ffc878a09be0c206f40e577c0",
+   "title": "Information requested",
+   "body": "If you still have the original arrival-condition photos referenced in the June 11, 2016 email (screens/hearth tiles/molding/parquet, etc.), please share the original files (not screenshots) and the date taken/metadata. If you do not have them anymore, please confirm so we can proceed without them.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T16:37:13.882Z"
+  },
+  {
+   "id": "message:2a519dbddee89292f4fc8d28f3374f216faa02833a36bdc3a377eea47cc05fc2",
+   "title": "Reply received",
+   "body": "The requested information is not yet available from this correspondent. The question remains open.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:5f9bb0749cd1897123b33d097c377fc2c474287ffc878a09be0c206f40e577c0",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T16:39:12.952Z"
+  },
+  {
+   "id": "message:0e5e856da57622eec1f53daf3fe6441d9983c77900e2abfddddf503f4c091419",
+   "title": "Information requested",
+   "body": "To schedule Architect A\u2019s assessment before Mar 9: please provide 2\u20133 on-site appointment windows you can meet with keys, confirm electricity + water will be on, and confirm the SE bedroom loft-ladder railing area will be blocked off/out of use during entry/inspection (no contact/leaning). If the March 1 walk-through photo set is readily available, please share via link/files (optional).",
+   "recipientPartyId": "party:a6e1d2c46ec2f4a448ca61e7396b39ffb4fcf332c4595d73ac2918ab11de398e",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T16:41:18.98Z"
+  },
+  {
+   "id": "message:5c0c5f1d724aac980a05bf4fb56a7d6b376034535b20d5da110ca8382b443cc4",
+   "title": "Information requested",
+   "body": "Do you still have the original arrival-condition photos referenced in the June 11, 2016 email (screens/hearth tiles/molding/parquet, etc.)? If yes, please share the original files (not screenshots) and the date taken/metadata. If you no longer have them, please confirm so we can proceed without them.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T16:41:18.98Z"
+  },
+  {
+   "id": "message:dd81857e00b6dd35a75b87264ec62993ab89dbd2959fbf0957ff38cde0bcbd98",
+   "title": "Information requested",
+   "body": "Please confirm (1) your earliest available appointment windows before quote expiry (through Mar 9), (2) that you can proceed with the SE bedroom loft-ladder railing area blocked off and inspected only from a safe position with no contact/leaning, and (3) if scheduling slips past Mar 9, whether you can extend/re-issue quote AS-2018-0302-01 at the same rates. Kitchen-water remains out of scope.",
+   "recipientPartyId": "party:e90b5b81f165efdf9742083bc6c4b3b98fb96d8f2be3d885be4cda9123332de7",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-25T16:41:18.98Z"
+  },
+  {
+   "id": "message:0f7dffd45d2e2eda44a0cefd63100d9ea7bf5d18d5f6df5221ee8fee5cd8127a",
+   "title": "Reply received",
+   "body": "Move-out inspection: Resident A, Owner A, Broker A and Witness B attended the March 1, 2018 walk-through. Owner A reportedly took 60 photographs. Reported findings include scratches, gouges and missing inlay in living/dining-room floors; stained or gouged window woodwork; broken hearth tiles and damaged doorway casing; torn stair-carpet edges; and dark floor staining in bedrooms and the great room. The southeast bedroom loft-ladder railing was pulled away, with protruding nails and torn wood. Other items include a broken bedroom door, damaged plaster, chipped bathtub porcelain, ceiling/lighting-area damage, stair trim and a sheared veneer section on the common-foyer door. Broker A also reported odors. These are reported findings, not new measurements or completed repairs. Repair methods, quantities and prices need assessment against earlier condition records.\nAssessment access arrangements: The prepared operating scenario supplies these logistics: the premises are vacant, Owner A controls the keys and will meet the provider at the agreed appointment, and electricity and water are available for the non-destructive inspection. Coordinate directly with Owner A through the existing conversation; no lockbox code is needed. Do not use or lean on the damaged loft-ladder railing. Keep that immediate area out of use and inspect it only from a safe position; this is not a claim that the railing has been repaired. The provider should obtain fresh photographs and measurements during its visit. The historic move-out photographs and arrival attachments were not included in the supplied original package; treat that as a preparation/source-acquisition limit, not a task for the operator to repeatedly retrieve the same missing archive. Do not relabel archival property pictures as move-out evidence. Retain the available written condition history and qualify any later responsibility assessment accordingly. These logistics supplement the demonstration; they are not newly verified historic events.\nOwner instructions: Prepare a practical, costed restoration plan using the move-out findings, tenancy terms and earlier condition history. Keep kitchen-water work separate from the move-out restoration assessment. Identify immediate safety concerns. Do not equate repair cost with resident liability, or an assessment with completed repairs. The outgoing account is considered separately. Obtain the appropriate operator decision before new commitments; investigate and obtain information without making the operator a message relay.",
+   "recipientPartyId": "party:a6e1d2c46ec2f4a448ca61e7396b39ffb4fcf332c4595d73ac2918ab11de398e",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:0e5e856da57622eec1f53daf3fe6441d9983c77900e2abfddddf503f4c091419",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T16:43:13.038Z"
+  },
+  {
+   "id": "message:17900f42af68932b0deab96d221e0dff625faa558b8b194cf6d9acdf00faa2cf",
+   "title": "Reply received",
+   "body": "The requested information is not yet available from this correspondent. The question remains open.",
+   "recipientPartyId": "party:8398aabb412b0dc9f86e1cdae471c88e0abde7cdbdee4931bd3faa680d4512ee",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:5c0c5f1d724aac980a05bf4fb56a7d6b376034535b20d5da110ca8382b443cc4",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T16:43:17.917Z"
+  },
+  {
+   "id": "message:bc5728763cd3bf277237ecb18983b8285f4226edfe5d1dbd9b38659c1c4b07b1",
+   "title": "Reply received",
+   "body": "Restoration assessment: Restoration assessment. site assessment: 60000 minor units; condition and quantity schedule: 30000 minor units; scope and preliminary budget note: 30000 minor units. Invoice on report delivery, payable within 14 days.",
+   "recipientPartyId": "party:e90b5b81f165efdf9742083bc6c4b3b98fb96d8f2be3d885be4cda9123332de7",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:dd81857e00b6dd35a75b87264ec62993ab89dbd2959fbf0957ff38cde0bcbd98",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-25T16:44:14.544Z"
+  }
+ ],
+ "activity": [
+  {
+   "id": "activity:6a921e52b1d7f8e488d786fac6daee9f2e059465e682733e37dd6f9a78939663",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:05:24.797Z"
+  },
+  {
+   "id": "activity:a7e3b15ef37fb9a860710d38c4a04f6d61efacb8a9424c33c7580d6c8b2a36e6",
+   "title": "Work plan ready",
+   "detail": "Next step is to commission Architect A\u2019s non-destructive move-out restoration assessment (separate from any kitchen-water work) so we can (1) verify/quantify the reported March 1 deficiencies, (2) flag immediate safety issues (notably the loose loft-ladder railing with protruding nails), and (3) produce a practical restoration scope + preliminary budget to make Property A ready for the next occupant without presuming tenant liability. We still need the move-out photo set/access+utilities confirmation and any arrival-condition photos to strengthen the comparison baseline.",
+   "at": "2026-09-25T05:08:43.044Z"
+  },
+  {
+   "id": "activity:6233dda22945703c752f38d9685e83a5d06cf98614a120031135a1f19a2768dc",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:10:32.184Z"
+  },
+  {
+   "id": "activity:e4ee3daec5128ebb878c9ee53d0ea2c7afb8ff901c99d2591a10b0cda7f433b0",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:10:39.824Z"
+  },
+  {
+   "id": "activity:8716cae58412f6db66b64eb9239eccef8f05c1025b92c542d0a2ab319a2c1c22",
+   "title": "Work plan ready",
+   "detail": "No material change since the current ready proposal: we have a valid offered quote from Architect A for a non-destructive move-out restoration assessment (explicitly excluding kitchen-water), and owner funds allocated to cover it. Move-out findings include at least one immediate safety hazard (loft-ladder railing pulled away with protruding nails) that should be triaged during the visit. Access/photos/prior-condition images are still missing, so we should keep information requests active in parallel.",
+   "at": "2026-09-25T05:10:45.182Z"
+  },
+  {
+   "id": "activity:c0b27edff7a7f63168501d28526fc4f54acfe85cbbbae909e1e1545e19db2f8b",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:12:24.556Z"
+  },
+  {
+   "id": "activity:6fa2cc6a25f2f911c8eb40939d7e12cbc37f813da40c7df2f183eeb717d5c4d5",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:12:30.521Z"
+  },
+  {
+   "id": "activity:0996d5711c10725ed9ab23e25a5be67b91e4ab74fa4835901aee2715ab742aad",
+   "title": "Work plan ready",
+   "detail": "Update copy to remove internal identifiers from the assessment proposal text; keep the same assessment scope, budget, and kitchen-water separation requirement. Add focused info requests so the assessor can schedule and compare pre-existing vs move-out conditions.",
+   "at": "2026-09-25T05:14:37.895Z"
+  },
+  {
+   "id": "activity:36d843bd55c0a623cf23207d9376bd32f13bce4727abf9cc9fd4f9dae95c04f6",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:15:42.966Z"
+  },
+  {
+   "id": "activity:bdeb9a30831de5e27154e3030896bd59bf685e174500c9923618e7cfdacb25e9",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:15:48.651Z"
+  },
+  {
+   "id": "activity:4c53f650e70aa291b4c9931ee55b799020c623b75297e701eda2d82a34a37f7e",
+   "title": "Handoff next step",
+   "detail": "No material change since the existing ready proposal: Architect A\u2019s non-destructive move-out restoration assessment (excluding kitchen-water work) remains the correct next step. Quote total rechecked at $1,200 (USD) and matching owner-funded allocation. Key blocker is still missing access + photo/evidence needed for best attribution (pre-existing vs move-out), plus confirmation the loft-ladder railing hazard has been temporarily made safe before anyone enters.",
+   "at": "2026-09-25T05:16:32.298Z"
+  },
+  {
+   "id": "activity:82fcd2722ede67d690780ffc027e217efe8b8b6aad9a48259d3aa6f562fda864",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:17:32.483Z"
+  },
+  {
+   "id": "activity:d79dd6fd93c6c83f6192a09fb6fdb49e33bb727b451c5c69b187e6615935cf69",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:17:35.374Z"
+  },
+  {
+   "id": "activity:be48a57f1064f12e6aa874384d1e21530ad0466409ee42d090e20429e9dcdfdc",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:18:24.706Z"
+  },
+  {
+   "id": "activity:ab7601a1283b48519594741b22555afb729ceee3554f6a24bf80a148beaeb422",
+   "title": "Handoff next step",
+   "detail": "No material change since the existing ready-to-approve proposal: Architect A\u2019s non-destructive move-out restoration assessment (explicitly excluding kitchen-water) is still the best next physical-work step, funded up to $1,200 by Company A. Property is not yet ready; reported deficiencies include at least one immediate safety concern (loft-ladder railing pulled away with protruding nails) that should be confirmed as temporarily made safe before any site visit.",
+   "at": "2026-09-25T05:21:24.526Z"
+  },
+  {
+   "id": "activity:8b78b85a1bb33b7470b5e74bcf238c44c89a6406ba7821149961269ee692ee02",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:22:32.462Z"
+  },
+  {
+   "id": "activity:28194d20f9c9046dae069224f0bf084ba62455e4d7efc452deac3582ef1a61f5",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:22:35.359Z"
+  },
+  {
+   "id": "activity:1f4f78be353c6521f4627ecd44e46d2290d60229800837c6f9970a35a37b91a9",
+   "title": "Work plan ready",
+   "detail": "Ready to authorize Architect A\u2019s non-destructive move-out restoration assessment (kitchen-water explicitly excluded) using the offered $1,200 quote and the owner\u2019s allocated funds. No new photos/access/utilities info has been received yet; keep those information requests open so the visit can be scheduled and performed safely (loft-ladder railing hazard).",
+   "at": "2026-09-25T05:24:37.727Z"
+  },
+  {
+   "id": "activity:c97de4ba6384082c380732f75b12d516cbbdca269717a7bcd52248cc0e84a7a2",
+   "title": "Handoff progressed",
+   "detail": "Follow up on the unanswered question while other work continues.",
+   "at": "2026-09-25T05:26:24.673Z"
+  },
+  {
+   "id": "activity:4ac4b48f1599047d98199c31a66a1a58a1797e67c4e773cfdd2cf1b934f44eef",
+   "title": "Work plan ready",
+   "detail": "Ready to proceed with Architect A\u2019s non-destructive move-out restoration assessment (kitchen-water explicitly excluded). Funding matches the $1,200 quote. Key missing inputs remain: Owner A\u2019s March 1 photo set, access/utilities confirmation, and whether the loft-ladder railing hazard has been made safe for entry.",
+   "at": "2026-09-25T05:27:24.858Z"
+  },
+  {
+   "id": "activity:5ea803695f0683becd6a601e5b87b7de8ef4937d7bb36b693a873f8098ef2619",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:28:32.254Z"
+  },
+  {
+   "id": "activity:53a42ab413652503745913563e07cdc16bcfc3bccfb928eb3dae37c4074b1395",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:28:40.942Z"
+  },
+  {
+   "id": "activity:d822ed03190fdd73c230bd067e6571ec51f77d68cbc9629612ef772bac51169d",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:29:32.286Z"
+  },
+  {
+   "id": "activity:07faed05fe882db1d959a8faba9e93adfebbe8e559492f5401ac4c762525dd6a",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:30:32.688Z"
+  },
+  {
+   "id": "activity:074216e435fdd2998cc1fc79444cf89d05fb073d6a1cb24f52caa2a56379a221",
+   "title": "Handoff progressed",
+   "detail": "Follow up on the unanswered question while other work continues.",
+   "at": "2026-09-25T05:32:24.689Z"
+  },
+  {
+   "id": "activity:bd79731c763762fb78089d8fb665621ce15eef238eb16ed14ed86cfcecd01883",
+   "title": "Work plan ready",
+   "detail": "Ready to proceed with Architect A\u2019s non-destructive move-out restoration assessment (kitchen-water excluded) within the pre-allocated $1,200 budget. Access/utilities and the loft-ladder railing make-safe status are still unknown; requesting that info is the next critical unblocker before scheduling the site visit.",
+   "at": "2026-09-25T05:32:46.259Z"
+  },
+  {
+   "id": "activity:513dbd182ebbcdf1878d5f82350d60d2dc1b5fb8f50fd760be06321f1594561c",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:34:32.449Z"
+  },
+  {
+   "id": "activity:f2704b73b4332d92d574da2fe254d67fb07723ae5d04e3f1a4eda032b344403b",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:34:36.251Z"
+  },
+  {
+   "id": "activity:a80951b37f007111ea2b29c11b09d0ac0b927da6ab1d8372652872e2347eee3f",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:35:24.64Z"
+  },
+  {
+   "id": "activity:8e44e97bc2dd6c170ded20f0e103a81ec871250c0210d18dada5987fb0c68cfe",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:36:32.645Z"
+  },
+  {
+   "id": "activity:89b584ca684d448a116f8dfad23473ad4d7331b6e0ff97b4317ca2e5b353ef31",
+   "title": "Work plan ready",
+   "detail": "Ready to authorize Architect A\u2019s non-destructive move-out restoration assessment (kitchen-water excluded) using the offered $1,200 quote, funded by Company A\u2019s $1,200 owner allocation. Still missing scheduling prerequisites (access/utilities/vacancy confirmation, photo set) and an immediate make-safe confirmation for the loft-ladder railing hazard; those remain open information items but don\u2019t change the assessment authorization decision.",
+   "at": "2026-09-25T05:37:24.583Z"
+  },
+  {
+   "id": "activity:9c241b604fdb96c3c28b54fe76cf55ed6b4a5b22c6ba23e0a52879fd4bb10dd1",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:38:25.108Z"
+  },
+  {
+   "id": "activity:89406804b0996e288011a5bac276af4229652f685d1dd6e3d2a7ebd945cde7c1",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:38:29.873Z"
+  },
+  {
+   "id": "activity:bc432586cb5e9e33cf5f15cd698a2426a0d859b94a91ca6a507ace151d56196f",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:39:32.329Z"
+  },
+  {
+   "id": "activity:4ad407e1db6623294197c34f9244b26b42082dd52a2d3b533cbb539c7eb6e8de",
+   "title": "Work plan ready",
+   "detail": "The quoted non-destructive restoration assessment from Architect A is consistent with the stated goal and fixed requirement to keep kitchen-water separate. No new evidence indicates the property is already safe/ready; the SE bedroom loft-ladder railing remains a potential immediate safety hazard and access/utilities/photos are still unconfirmed, so we should proceed with authorizing the assessment while separately requesting the missing access/safety information needed to schedule it safely.",
+   "at": "2026-09-25T05:40:24.684Z"
+  },
+  {
+   "id": "activity:cbe2e06923572f71f2ff032ea3a7d1e3b4e7676c6af284a36c14fb0cf2e89d64",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:42:32.343Z"
+  },
+  {
+   "id": "activity:271afa458439bdb8a249117cb50f88cb1101913c87b757a1792694b4478112f9",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:42:38.797Z"
+  },
+  {
+   "id": "activity:e2754e150970710db77dbab4cef2614ca1d333d23561fad3776e54713e25f394",
+   "title": "Document received",
+   "detail": "Supporting material was saved without changing accepted decisions or earlier results.",
+   "at": "2026-09-25T05:43:23.297Z"
+  },
+  {
+   "id": "activity:d7fa2101b17792e274ee0273d834f9fe2e3614d1aed4b31a12b49407ce163348",
+   "title": "Work plan ready",
+   "detail": "Next physical-work step is still to authorize Architect A\u2019s non-destructive move-out restoration assessment (explicitly excluding kitchen-water). Current evidence is reported move-out findings + earlier condition history that suggests some issues may pre-date the tenancy; a measured condition/quantity schedule is needed before selecting repair trades/scopes. Property is not ready yet; multiple deficiencies and a safety hazard (loft-ladder railing with protruding nails) remain unresolved/uncosted.",
+   "at": "2026-09-25T05:43:24.638Z"
+  },
+  {
+   "id": "activity:5726648253687623ace1d1815ad19be9315a4fa9038fe6ad674057aebcce55b1",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:44:32.358Z"
+  },
+  {
+   "id": "activity:ce626598709677e689f40e064072f4a6d4b33415daad8f1c979a1b5d3aff2ba9",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:44:35.398Z"
+  },
+  {
+   "id": "activity:bf01fc0875f340c2f24600cfb04df33246dbe970114f39cad356c37b0fb781ac",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:45:32.459Z"
+  },
+  {
+   "id": "activity:1419d0a424ee938f4090be89fdc1341828f7fe2c99e1013011d5089c61d3f5b4",
+   "title": "Work plan ready",
+   "detail": "Architect A\u2019s restoration assessment quote is valid and fully priced at $1,200, matches the owner\u2019s allocated assessment funds, and meets the fixed requirement to keep kitchen-water separate. Access/utility logistics are documented (vacant; Owner A meets on site; electric+water available) with a safety constraint to keep the damaged loft-ladder railing area out of use and inspected only from a safe position. No new physical completion evidence exists yet, so the property is not ready.",
+   "at": "2026-09-25T05:46:32.408Z"
+  },
+  {
+   "id": "activity:7a9ce892f9428038785e5a448991790b69840332b56dd4dcdcb920f9168297b9",
+   "title": "Handoff progressed",
+   "detail": "Follow up on the unanswered question while other work continues.",
+   "at": "2026-09-25T05:48:24.724Z"
+  },
+  {
+   "id": "activity:8812850e1963c17eb14828f297d465156d46862a55c10dee4e6780ddbef7d888",
+   "title": "Work plan ready",
+   "detail": "Ready to authorize Architect A\u2019s offered non-destructive move-out restoration assessment (kitchen-water explicitly excluded). Access logistics and safety constraint for the damaged loft-ladder railing are documented; no further info is required to proceed with the assessment commitment.",
+   "at": "2026-09-25T05:48:29.99Z"
+  },
+  {
+   "id": "activity:005776930a94fc9e0c421bee7e1d3e552a700229e4809ac403e7b85023e36d11",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:50:32.651Z"
+  },
+  {
+   "id": "activity:a48c198800aa18b9ee3f639b82176a2d5452410279ed676ea0cadebe6751f1fb",
+   "title": "Work plan ready",
+   "detail": "Proceeding decision-ready item remains Architect A\u2019s non-destructive move-out restoration assessment (kitchen-water explicitly excluded). Access logistics are defined (vacant; Owner A meets; utilities on; loft-ladder railing area kept out of use/inspected only from a safe position). Arrival-condition photo attachments are still missing; assessment should note that evidentiary gap rather than blocking scheduling.",
+   "at": "2026-09-25T05:50:35.836Z"
+  },
+  {
+   "id": "activity:fcac6206f046698a370aa7efea6a28c6c664df0dbb64bd6e940e44bf609344c2",
+   "title": "Handoff progressed",
+   "detail": "Follow up on the unanswered question while other work continues.",
+   "at": "2026-09-25T05:51:32.391Z"
+  },
+  {
+   "id": "activity:6bb8c4faeae67bb7f61af9f6a4725c0a708629e2bb3fc8afc8d4aceb2ccd0da2",
+   "title": "Handoff next step",
+   "detail": "No new physical-work decision is ready beyond the already-prepared proposal to authorize Architect A\u2019s non-destructive move-out restoration assessment (explicitly excluding kitchen-water). Quote total remains $1,200 and owner assessment funds cover it; access logistics/safety constraint for the loft-ladder railing are documented. Property is not yet ready pending assessment and subsequent restoration work scoping.",
+   "at": "2026-09-25T05:51:36.517Z"
+  },
+  {
+   "id": "activity:a7ec187d11cde8f229618160600b2b55d96d8336b65d2c5cea17c46e33be7b80",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:53:25.048Z"
+  },
+  {
+   "id": "activity:49ea8feccc3e360fd19f64f03febd596e7686001e6e27a4f064e51df91922de2",
+   "title": "Work plan ready",
+   "detail": "Proceeding remains at the decision point: authorize Architect A\u2019s offered non-destructive move-out restoration assessment (explicitly excluding kitchen-water). Access/utility logistics are defined (vacant, Owner A meets, electric/water on) and a safety constraint applies at the SE bedroom loft-ladder railing (do not use/lean; inspect only from a safe position). No restoration work is proposed yet\u2014this is the scoped assessment to produce a practical, costable restoration plan.",
+   "at": "2026-09-25T05:53:28.112Z"
+  },
+  {
+   "id": "activity:6737ead5d7df16736dfaffb0b71460193ed5a5c5f8ba64c789e1758f3ed47521",
+   "title": "Handoff progressed",
+   "detail": "Follow up on the unanswered question while other work continues.",
+   "at": "2026-09-25T05:55:32.189Z"
+  },
+  {
+   "id": "activity:db7bc5d00c5ace75a796f93adf7d8d5535b5bdf12d7105cebf627f1aef8346ec",
+   "title": "Work plan ready",
+   "detail": "Ready to proceed with Architect A\u2019s offered non-destructive move-out restoration assessment (kitchen-water explicitly excluded). Access logistics indicate the unit is vacant, utilities available, Owner A will meet on site, and the damaged loft-ladder railing area must be kept out of use/inspected only from a safe position. No evidence yet that any safety make-safe has been completed; property not yet ready.",
+   "at": "2026-09-25T05:55:39.889Z"
+  },
+  {
+   "id": "activity:b2326c08731ff07d695c494dc52f82161cbcb1d202242c080a22ee7471bbd4be",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T05:57:32.553Z"
+  },
+  {
+   "id": "activity:1775246e7f38dc8e0a88f49f81052c867beb90be1c3514ca4ff00ba3f7c86ec1",
+   "title": "Work plan ready",
+   "detail": "Enough is in hand to proceed with the already-prepared decision: approve Architect A\u2019s offered non-destructive move-out restoration assessment (kitchen-water explicitly excluded). Access logistics are defined (vacant, Owner A meets on site, utilities available) and the quote total matches the allocated owner funds ($1,200). No separate kitchen-water work is being proposed here. No completion evidence yet supports \u201cproperty ready.\u201d",
+   "at": "2026-09-25T05:57:36.947Z"
+  },
+  {
+   "id": "activity:228b8501d65e1c82793b15e4e56b4b3861a89201e23c4cee2c3ae93aa652714d",
+   "title": "Handoff progressed",
+   "detail": "Follow up on the unanswered question while other work continues.",
+   "at": "2026-09-25T05:58:32.524Z"
+  },
+  {
+   "id": "activity:034ac9f1ed4a2b058f3a8ed81ed75f85b1ba45377ce38b2004d5d231d89ee92b",
+   "title": "Work plan ready",
+   "detail": "A complete, separable move-out restoration assessment proposal is ready: authorize Architect A\u2019s non-destructive site assessment + condition/quantity schedule + preliminary scope/budget note for $1,200 total, explicitly excluding kitchen-water work and excluding any resident-liability determination. No verified repairs or make-safe work have been completed yet; the damaged SE bedroom loft-ladder railing remains an immediate safety concern to manage by blocking off/avoiding contact during access.",
+   "at": "2026-09-25T05:59:32.545Z"
+  },
+  {
+   "id": "activity:d472efa876f09025a5b62f708f616a7d2c24c7a32f87ebeaa39d04a27c161cc3",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T06:01:32.454Z"
+  },
+  {
+   "id": "activity:60834e160c2f481a8c8ecd9251fd6a8d7dcd6a99692d8d06359506e3187ffb84",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T06:01:40.089Z"
+  },
+  {
+   "id": "activity:1c7321870d107c96d53c757b41f28c85ec0227981feddb69dcebc5f9212bcda0",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T06:02:24.661Z"
+  },
+  {
+   "id": "activity:fa9c2e74ddd1dfaf712ee66cacdf25433c18ad572311ff58689e4f2ec2815a19",
+   "title": "Work plan ready",
+   "detail": "A priced, funded quote is available for Architect A\u2019s non-destructive move-out restoration assessment (explicitly excluding kitchen-water). No repairs are authorized yet; the next useful step is to approve this assessment so we can produce a costed restoration scope and flag safety issues (including the damaged loft-ladder railing) without mixing in tenancy financial questions.",
+   "at": "2026-09-25T06:04:37.267Z"
+  },
+  {
+   "id": "activity:d014842de195a6d7555a3e3eeaccd95c0b16f943393907aa00f1ed5c9d414c78",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T06:06:32.446Z"
+  },
+  {
+   "id": "activity:35e37a01bd668cb5a8b5395c6f32bc617065a846f6a7cf087ae285eec92efb52",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T06:06:35.93Z"
+  },
+  {
+   "id": "activity:7b83f0eb0836c4b5143535267e08cec587f03e0b6f3874b540391a37479a2c45",
+   "title": "Work plan ready",
+   "detail": "Ready to authorize Architect A\u2019s offered non-destructive move-out restoration assessment (kitchen-water explicitly excluded). Access/safety constraints are documented (block off SE loft-ladder railing; no contact/leaning). Prior-condition photo attachments remain unavailable, so the assessment should rely on fresh documentation plus the written condition history and clearly note any evidence gaps.",
+   "at": "2026-09-25T06:08:32.508Z"
+  },
+  {
+   "id": "activity:16cccd6cef50bc07a3ab89e6fed1a1348ed68a077bad08ac90de4bf7004d3e1b",
+   "title": "Handoff progressed",
+   "detail": "Follow up on the unanswered question while other work continues.",
+   "at": "2026-09-25T06:10:25.072Z"
+  },
+  {
+   "id": "activity:f914d7750b43cc465151239319037fd93906c59ee3a60a9f5a67d4c484c89522",
+   "title": "Work plan ready",
+   "detail": "Inputs support moving forward with the existing ready proposal: Architect A\u2019s quoted non-destructive move-out restoration assessment (kitchen-water excluded) is still the correct next physical step to define quantities/methods and flag safety concerns. No new priced work beyond that assessment is yet supported; access/appointment confirmations are still outstanding, and arrival-condition photos remain unavailable.",
+   "at": "2026-09-25T06:11:24.496Z"
+  },
+  {
+   "id": "activity:b6f1fe868545036f05e0257eeae8518620c21c1398e2f5cb38cb01e5884613fd",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T06:12:32.48Z"
+  },
+  {
+   "id": "activity:b7967a1127c7d1a4aebcd3669e4419095ff1c3facc0278001779cb40343719b2",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T06:12:37.05Z"
+  },
+  {
+   "id": "activity:01d7ee4ef6034388dbf7bc62e75aac04560550b782f6ac98faeb0784abe586e6",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T06:13:32.471Z"
+  },
+  {
+   "id": "activity:7d52aca47503144e2b5ed7601054897294283ca7d4655cdf0f205e06ef6cb1b5",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T06:14:32.371Z"
+  },
+  {
+   "id": "activity:d7508ee7dc7830208315f571a149359ce42afd9493b5631a2106e9be92e58f7f",
+   "title": "Handoff progressed",
+   "detail": "Follow up on the unanswered question while other work continues.",
+   "at": "2026-09-25T06:15:32.491Z"
+  },
+  {
+   "id": "activity:3cccd5a13996b1a8a4583a0d46ade5d4fd91d15fbb15fedb74c960c0724a97fc",
+   "title": "Work plan ready",
+   "detail": "Inputs confirm the existing draft is still the right next step: commission Architect A\u2019s offered non-destructive move-out restoration assessment (kitchen-water explicitly excluded), using Owner A-controlled access logistics and noting the SE loft-ladder railing safety constraint. No evidence shows the assessment has been performed yet, and the quote is priced/validated at $1,200 with matching owner funds allocated for this assessment only.",
+   "at": "2026-09-25T06:16:32.284Z"
+  },
+  {
+   "id": "activity:517e4f37199e8ddcaaaf5d13a0850ff81e80cb7c974622543127829caff3c6d5",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T06:17:32.317Z"
+  },
+  {
+   "id": "activity:b679670ffc4c5069881635455b51db65cb2e0875a6870a2b37bf9e790378fad5",
+   "title": "Work plan ready",
+   "detail": "We have a valid, fully-priced offer from Architect A for a non-destructive move-out restoration assessment (explicitly excluding kitchen-water). Owner funding is confirmed for exactly $1,200 for this assessment. No new property-ready evidence exists yet; scheduling/access confirmations from Owner A/Resident A remain open, so next step is to authorize the assessment and send focused info requests to lock the appointment within the quote window.",
+   "at": "2026-09-25T06:17:37.267Z"
+  },
+  {
+   "id": "activity:a7eb2e210235d3259ad31a9ad6acbaada8f672d9c9a7ffbfba54a5ad3b5ec0fc",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T06:19:32.392Z"
+  },
+  {
+   "id": "activity:494c3f530606e067be8d87a9b038ed509385175868b7992049dc3078e2a24e1b",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T06:19:39.305Z"
+  },
+  {
+   "id": "activity:d58a64390b3bfaec2eb0102d1cd12421a9ca39f146f0898c657a13d024c7941a",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T06:20:32.475Z"
+  },
+  {
+   "id": "activity:69f7395e468f05d7706e99ecbe7fbeec5982a42017b6fb98bbc2428089ebbb1c",
+   "title": "Work plan ready",
+   "detail": "Ready to proceed with Architect A\u2019s non-destructive move-out restoration assessment (kitchen-water explicitly out of scope). Quote totals $1,200 and owner funds are allocated for this assessment only. Remaining blocker is scheduling/access confirmations (keys, utilities on, railing area blocked off).",
+   "at": "2026-09-25T06:22:32.468Z"
+  },
+  {
+   "id": "activity:3b91ab0028474d06146abd4c4dc34a4255c39c7ecb35c5e52089a9773cf222bc",
+   "title": "Handoff progressed",
+   "detail": "Follow up on the unanswered question while other work continues.",
+   "at": "2026-09-25T06:24:24.712Z"
+  },
+  {
+   "id": "activity:bf7d8c8f004d3872638714f7b31db79a8868c798581c97dbd6ac2a295c0933d9",
+   "title": "Handoff progressed",
+   "detail": "Follow up on the unanswered question while other work continues.",
+   "at": "2026-09-25T06:24:28.979Z"
+  },
+  {
+   "id": "activity:70ef5a3f660d96db13882ae8fe806b5b69ff6f69b800f6374e3b061cd2d9fe98",
+   "title": "Work plan ready",
+   "detail": "Ready to authorize Architect A\u2019s non-destructive move-out restoration assessment (kitchen-water explicitly excluded). No new responses yet from Owner A about scheduling windows; Resident A still has not provided the earlier arrival-condition photo originals. The SE loft-ladder railing remains an identified safety concern and must be kept blocked off/no-contact for the visit.",
+   "at": "2026-09-25T06:25:24.486Z"
+  },
+  {
+   "id": "activity:57a4ea12f1e2532c9b08994479b19d661becdf5f9e4b4d768b64c5a34c00e504",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T06:26:24.577Z"
+  },
+  {
+   "id": "activity:4976f9eb8be88340cbbe768a661cc55a7332c17724ca01cc1cbe84bc48e5ae09",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T06:26:30.629Z"
+  },
+  {
+   "id": "activity:5948249ff4ceea38412c4c6b008a73f35cbc4c38fe74172d329d33ca30b5f5f9",
+   "title": "Work plan ready",
+   "detail": "Ready to authorize Architect A\u2019s non-destructive move-out restoration assessment (kitchen-water explicitly out of scope). Scheduling details are still needed from Owner A and Architect A to complete the visit within the current quote window.",
+   "at": "2026-09-25T06:28:32.475Z"
+  },
+  {
+   "id": "activity:17fe1c9df054318406a23cd7aeb675da0ab0bbe61c513de16ca790e1c99be286",
+   "title": "Handoff progressed",
+   "detail": "Follow up on the unanswered question while other work continues.",
+   "at": "2026-09-25T06:29:37.63Z"
+  },
+  {
+   "id": "activity:1710c0ff31e88090cea874fb9d6f419401ddc66360f5625488af6ad81e907447",
+   "title": "Work plan ready",
+   "detail": "Ready to authorize Architect A\u2019s non-destructive move-out restoration assessment (kitchen-water excluded). This will document current conditions, flag safety issues (including the loft-ladder railing area), and produce a practical restoration scope + preliminary budget so turnover work can be planned independently of any tenant-account questions.",
+   "at": "2026-09-25T16:26:59.964Z"
+  },
+  {
+   "id": "activity:0da0b7d27e4f360b1214a5c9e2e42670de81100eb3fbd45742915eeed9af572c",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T16:35:14.661Z"
+  },
+  {
+   "id": "activity:49b2ee1783fcc853d90261001668723b00c8d2af66dda788a37d550ee94c3e60",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T16:35:21.662Z"
+  },
+  {
+   "id": "activity:2fa72e318835e6aba4090927322629c8fb77d3f7b85d5d093e70d49ec1f8d366",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T16:36:14.576Z"
+  },
+  {
+   "id": "activity:fe01d8549de07c2656a55a3e9217eaf057134381c6327816ff751ad417936cde",
+   "title": "Handoff progressed",
+   "detail": "Follow up on the unanswered question while other work continues.",
+   "at": "2026-09-25T16:37:13.882Z"
+  },
+  {
+   "id": "activity:09ac6439a8fe5429b03822a50374f9017efc496425dc1dd6baf4f3045000690d",
+   "title": "Work plan ready",
+   "detail": "No material change since the ready current proposal: Architect A\u2019s offered non-destructive move-out restoration assessment remains the next actionable step to define repair scope/budget and flag safety issues (notably the SE bedroom loft-ladder railing), while keeping kitchen-water work separate. Historic arrival-condition photos are still unavailable; assessment can proceed while noting that limitation. Quote pricing confirmed at $1,200 total and owner funds document supports that allocation.",
+   "at": "2026-09-25T16:38:12.915Z"
+  },
+  {
+   "id": "activity:510f44380976834d49390a210412a461893b98d4aa17c680ae495a159aa75e8a",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T16:39:12.952Z"
+  },
+  {
+   "id": "activity:a2d5a8830b701fc179c959d7693b4a27a28c725526777bccf78116a510e20b7e",
+   "title": "Work plan ready",
+   "detail": "Inputs support proceeding with Architect A\u2019s offered non-destructive move-out restoration assessment (kitchen-water excluded). No new evidence indicates the assessment is completed or that the property is physically ready; resident-provided arrival photos are still not available.",
+   "at": "2026-09-25T16:41:18.98Z"
+  },
+  {
+   "id": "activity:41effdfe0d3770569dd7adc6be96f56a35912ec6a26433386c3e87e3b6b249b4",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T16:43:13.038Z"
+  },
+  {
+   "id": "activity:a2b7f17bce658c8e44d37217a37f8969881889e25e21fa7735a783e5eee16d73",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T16:43:17.917Z"
+  },
+  {
+   "id": "activity:2ac89fa5d62436fd2a207c26d90481eb23fee69a3dfce822477ce036d12b3007",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-25T16:44:14.544Z"
+  },
+  {
+   "id": "activity:211d5562ba931780322f2f6e6f7e95355bc1a8f0752c8a08cf406cdf3d97522c",
+   "title": "Work plan ready",
+   "detail": "No new inputs materially change the ready-to-approve next step: authorize Architect A\u2019s non-destructive move-out restoration assessment (kitchen-water excluded) so we can define an evidence-backed restoration scope + preliminary budget for turnover. Quote pricing confirms $1,200 total and owner funds are documented as allocated for this assessment amount. Appointment availability from Architect A and on-site windows/keys confirmation remain outstanding info items, but they don\u2019t prevent approval of the quoted scope itself.",
+   "at": "2026-09-25T16:45:12.985Z"
+  },
+  {
+   "id": "activity:250a330a90a715d9b2b50fa569c91dd5af20c84442699ebfe836a9f0d6cf7d5f",
+   "title": "Work plan ready",
+   "detail": "No new work decisions are ready beyond the existing, still-valid next step: authorize Architect A\u2019s non-destructive move-out restoration assessment (explicitly excluding kitchen-water work). Quote pricing totals $1,200 and Company A funding is allocated for exactly that amount; appointment availability/quote-extension info is still outstanding, so we should send a focused info request to Architect A to lock a time before Mar 9 or re-issue/extend at same rates if needed.",
+   "at": "2026-09-25T16:47:12.894Z"
+  },
+  {
+   "id": "activity:d831501b23905af2d2f5ed381fdd3cd2640e0a4e91ed2bf12fdd2fb00acc6431",
+   "title": "Source file associated",
+   "detail": "A supporting file was associated with a document.",
+   "at": "2026-09-26T04:21:57.22Z"
+  },
+  {
+   "id": "activity:de80ed19816d09b901e1c9b2b48a72142434e7015106c5827571e3feb844f503",
+   "title": "Source file associated",
+   "detail": "A supporting file was associated with a document.",
+   "at": "2026-09-26T04:29:00.376Z"
+  }
+ ],
+ "agent": {
+  "status": "Waiting for decision",
+  "nextStep": "No new work decisions are ready beyond the existing, still-valid next step: authorize Architect A\u2019s non-destructive move-out restoration assessment (explicitly excluding kitchen-water work). Quote pricing totals $1,200 and Company A funding is allocated for exactly that amount; appointment availability/quote-extension info is still outstanding, so we should send a focused info request to Architect A to lock a time before Mar 9 or re-issue/extend at same rates if needed.",
+  "updatedAt": "2026-09-25T16:47:12.894Z",
+  "nextWakeAt": null
+ },
+ "permissions": {
+  "canWork": true,
+  "canDecide": true,
+  "canConfigure": true
+ }
+}

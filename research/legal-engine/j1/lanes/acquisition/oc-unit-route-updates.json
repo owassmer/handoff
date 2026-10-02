@@ -1,0 +1,89 @@
+{
+  "instrument": "CA-OC:CODE",
+  "observed_at": "2026-10-01",
+  "unit_route_updates": [
+    {
+      "unit": "Charter",
+      "toc_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=CH",
+      "observed_identifier": "CH",
+      "source_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances/364200?nodeId=CH",
+      "evidence": "Exact parent node observed in historical publisher route; current parent route not independently rendered",
+      "acquisition_status": "Source-grounded selector; live API enumeration not run or independently verified"
+    },
+    {
+      "unit": "Title 1 Government and Administration",
+      "toc_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=TIT1GOAD",
+      "observed_identifier": "TIT1GOAD",
+      "source_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=TIT1GOAD_DIV2DEOFCO_ART26CAFIETCO_S1-2-365AU",
+      "evidence": "Parent identifier is first component of observed publisher descendant node",
+      "acquisition_status": "Source-grounded selector; live API enumeration not run or independently verified"
+    },
+    {
+      "unit": "Title 2 Public Facilities",
+      "toc_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=TIT2PUFA",
+      "observed_identifier": "TIT2PUFA",
+      "source_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=TIT2PUFA_DIV5PABEREAR_ART1GEPR",
+      "evidence": "Parent identifier is first component of observed publisher descendant node",
+      "acquisition_status": "Source-grounded selector; live API enumeration not run or independently verified"
+    },
+    {
+      "unit": "Title 3 Public Morals, Safety and Welfare",
+      "toc_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=TIT3PUMOSAWE",
+      "observed_identifier": "TIT3PUMOSAWE",
+      "source_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=TIT3PUMOSAWE",
+      "evidence": "Exact title node observed in publisher mini-TOC search snapshot",
+      "acquisition_status": "Source-grounded selector; live API enumeration not run or independently verified"
+    },
+    {
+      "unit": "Title 4 Health, Sanitation and Animal Regulations",
+      "toc_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=TIT4HESAANRE",
+      "observed_identifier": "TIT4HESAANRE",
+      "source_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances/364200?nodeId=TIT4HESAANRE_DIV1ANCOWELIRE",
+      "evidence": "Parent identifier is first component of observed historical publisher descendant node; current parent not independently rendered",
+      "acquisition_status": "Source-grounded selector; live API enumeration not run or independently verified"
+    },
+    {
+      "unit": "Title 5 Business and Special Licenses, Regulations",
+      "toc_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=TIT5BUSPLIRE",
+      "observed_identifier": "TIT5BUSPLIRE",
+      "source_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances/364200?nodeId=TIT5BUSPLIRE",
+      "evidence": "Exact parent node observed in historical publisher route; current parent route not independently rendered",
+      "acquisition_status": "Source-grounded selector; live API enumeration not run or independently verified"
+    },
+    {
+      "unit": "Title 6 Highways, Bridges, Rights-of-Way, Vehicles",
+      "toc_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=TIT6HIBRRI-WVE",
+      "observed_identifier": "TIT6HIBRRI-WVE",
+      "source_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=TIT6HIBRRI-WVE_DIV3IMCORE_ART3EXFIOBHI_S6-3-28EXFIOBUPINHI",
+      "evidence": "Parent identifier is first component of observed publisher descendant node",
+      "acquisition_status": "Source-grounded selector; live API enumeration not run or independently verified"
+    },
+    {
+      "unit": "Title 7 Land Use and Building Regulations",
+      "toc_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=TIT7LAUSBURE",
+      "observed_identifier": "TIT7LAUSBURE",
+      "source_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=TIT7LAUSBURE_DIV1BURE_ART8ORCOGREXCO_SUBARTICLE_7SE",
+      "evidence": "Parent identifier is first component of observed publisher descendant node",
+      "acquisition_status": "Source-grounded selector; live API enumeration not run or independently verified"
+    },
+    {
+      "unit": "Title 9 Water Quality\u2014Orange County Flood Control District",
+      "toc_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=TIT9WAQURACOFLCODI",
+      "observed_identifier": "TIT9WAQURACOFLCODI",
+      "source_url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances?nodeId=TIT9WAQURACOFLCODI_DIV1STMAURRURACOFLCODIRE_ART2ILCOPRDI",
+      "evidence": "Parent identifier is first component of observed publisher descendant node",
+      "acquisition_status": "Source-grounded selector; live API enumeration not run or independently verified"
+    }
+  ],
+  "unresolved_units": [
+    {
+      "unit": "Title 8 Fees",
+      "reason": "Title heading observed but exact publisher nodeId not recovered; no heading abbreviation guessed."
+    },
+    {
+      "unit": "Supplement/ordinance history",
+      "reason": "Publisher index names supplement history and code comparative ordinance tables, but exact publisher targets not recovered. Do not assume a single table node has descendants: existing toc reader only enumerates children, so a leaf table needs explicit section_list."
+    }
+  ],
+  "limits": "Public Municode pages render empty application shells through web open; search-index snapshots expose actual node IDs. The supplied parent selectors reuse observed identifier components, not inferred title-name abbreviations. Historical-node observations do not certify current text. No full harvest."
+}

@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-01",
+  "scope": ["OC Title 8 Fees", "OC supplement/history tables"],
+  "result": "Unresolved: no observed OC destination node identifiers recovered; no additive route update justified.",
+  "attempts": [
+    {"url": "https://api.municode.com/Clients/stateAbbr?stateAbbr=CA", "result": "Shell curl failed DNS (exit 6, HTTP 000, zero bytes); web open returned Internal Error. No publisher JSON acquired."},
+    {"url": "https://library.municode.com/ca/orange_county/codes/code_of_ordinances/364200", "result": "Publisher search snapshot lists Title 8 Fees, Supplement History Table and comparative tables but exposes no destination links. Direct web open returned zero lines. Snapshot is historical Supplement 144 (2020), not currentness evidence."},
+    {"url": "https://www.ocsheriff.gov/commands-divisions/investigations-special-operations-command/coroner/faqs", "result": "Official fee discussion accessible, but no code-title or supplement-history link. Does not resolve Title 8 route."},
+    {"url": "https://iad.oc.gov/sites/ocia/files/2022-05/AOC%20Agenda%20and%20Attachments_Distributed%2005.16.2022.pdf", "result": "Indexed PDF sidebar lists requested headings, but only code-root URL appears in extracted text; no observed destination identifier."}
+  ],
+  "rejected_candidates": [
+    {"nodeId": "TIT8FE", "reason": "Unobserved abbreviation; candidate direct page returned zero lines, which does not verify identity."},
+    {"nodeId": "SUHITA", "reason": "Observed on other municipalities only; OC candidate returned tool error. Cross-jurisdiction convention does not verify OC node."}
+  ],
+  "implementation_boundary": {
+    "title": "Existing municode.toc can recursively enumerate a verified parent node; missing input is actual OC node identity, not a demonstrated need for a new reader.",
+    "history": "Once observed, a table that is a leaf should use explicit units[].section_list with source_unit_kind=document, because toc enumerates children rather than the selected node itself.",
+    "historical_version": "Current municode.product chooses Jobs/latest and does not honor /364200 in the library URL. Historical URL evidence can establish a node identifier but does not pin acquisition to that edition. No historical-edition acquisition is claimed."
+  },
+  "next_required_evidence": "A publisher TOC JSON payload or actual sidebar href for Orange County Title 8 and the history tables, followed by matching Heading/Id. Keep existing unresolved selections visible until that evidence is obtained."
+}

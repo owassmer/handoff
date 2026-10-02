@@ -1,0 +1,415 @@
+{
+  "format": "section-semantics-focused-control-proposals-1",
+  "reviewer": "/root/reference_final_audit",
+  "model_responses_seen_for_prior_diagnostic": true,
+  "model_responses_seen_for_these_controls": false,
+  "status": "proposed_next_development_controls; native preparation and separate review required before dispatch",
+  "controls": [
+    {
+      "id": "emergency_pos",
+      "unit": "or_entry",
+      "source_evidence_refs": [
+        "emergency"
+      ],
+      "task": "meaning_only",
+      "candidate": "Includes, but is not limited to, an immediately necessary repair to prevent likely serious damage to the premises.",
+      "expected": true,
+      "reason": "Retains both severity and inclusive definition.",
+      "status": "source_adjudicated_proposal_not_dispatched",
+      "source_evidence": {
+        "emergency": {
+          "text": "(b) In case of an\nemergency, a landlord may enter the dwelling unit or any portion of the\npremises under a tenant\u2019s exclusive control without consent of the tenant,\nwithout notice to the tenant and at any time. \u201cEmergency\u201d includes but is not\nlimited to a repair problem that, unless remedied immediately, is likely to\ncause serious damage to the premises. If a landlord makes an emergency entry in\nthe tenant\u2019s absence, the landlord shall give the tenant actual notice within\n24 hours after the entry, and the notice shall include the fact of the entry,\nthe date and time of the entry, the nature of the emergency and the names of\nthe persons who entered.",
+          "source": {
+            "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+            "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+            "start": 140545,
+            "end": 141201,
+            "offset_unit": "unicode_codepoint",
+            "encoding": "utf-8"
+          }
+        }
+      }
+    },
+    {
+      "id": "emergency_neg",
+      "unit": "or_entry",
+      "source_evidence_refs": [
+        "emergency"
+      ],
+      "task": "meaning_only",
+      "candidate": "Means only an immediately necessary repair to prevent likely serious damage to the premises.",
+      "expected": false,
+      "reason": "Only improperly turns inclusive example into exhaustive definition.",
+      "status": "source_adjudicated_proposal_not_dispatched",
+      "source_evidence": {
+        "emergency": {
+          "text": "(b) In case of an\nemergency, a landlord may enter the dwelling unit or any portion of the\npremises under a tenant\u2019s exclusive control without consent of the tenant,\nwithout notice to the tenant and at any time. \u201cEmergency\u201d includes but is not\nlimited to a repair problem that, unless remedied immediately, is likely to\ncause serious damage to the premises. If a landlord makes an emergency entry in\nthe tenant\u2019s absence, the landlord shall give the tenant actual notice within\n24 hours after the entry, and the notice shall include the fact of the entry,\nthe date and time of the entry, the nature of the emergency and the names of\nthe persons who entered.",
+          "source": {
+            "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+            "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+            "start": 140545,
+            "end": 141201,
+            "offset_unit": "unicode_codepoint",
+            "encoding": "utf-8"
+          }
+        }
+      }
+    },
+    {
+      "id": "yard_pos",
+      "unit": "or_entry",
+      "source_evidence_refs": [
+        "yard"
+      ],
+      "task": "meaning_only",
+      "candidate": "Includes, but is not limited to, weeding, mowing grass, and pruning trees and shrubs.",
+      "expected": true,
+      "reason": "Examples are nonexhaustive activities, not conjunctive mandatory tasks.",
+      "status": "source_adjudicated_proposal_not_dispatched",
+      "source_evidence": {
+        "yard": {
+          "text": "(e)(A) If a\nwritten agreement requires the landlord to perform yard maintenance or grounds\nkeeping for the premises:\n(i) A landlord\nand tenant may agree that the landlord or landlord\u2019s agent may enter for that\npurpose upon the premises under the tenant\u2019s exclusive control not including\nthe dwelling unit, without notice to the tenant, at reasonable times and with\nreasonable frequency. The terms of the right of entry must be described in the\nrental agreement or in a separate written agreement.\n(ii) A tenant may\ndeny consent for a landlord or landlord\u2019s agent to enter upon the premises\npursuant to this paragraph if the entry is at an unreasonable time or with\nunreasonable frequency. The tenant must assert the denial by giving actual\nnotice of the denial to the landlord or landlord\u2019s agent prior to, or at the\ntime of, the attempted entry.\n(B) As used in\nthis paragraph:\n(i) \u201cYard\nmaintenance or grounds keeping\u201d includes, but is not limited to, weeding,\nmowing grass and pruning trees and shrubs.\n(ii) \u201cUnreasonable\ntime\u201d refers to a time of day, day of the week or particular time that\nconflicts with the tenant\u2019s reasonable and specific plans to use the premises.",
+          "source": {
+            "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+            "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+            "start": 142575,
+            "end": 143748,
+            "offset_unit": "unicode_codepoint",
+            "encoding": "utf-8"
+          }
+        }
+      }
+    },
+    {
+      "id": "yard_neg",
+      "unit": "or_entry",
+      "source_evidence_refs": [
+        "yard"
+      ],
+      "task": "meaning_only",
+      "candidate": "Requires all of weeding, mowing grass, and pruning trees and shrubs on every visit.",
+      "expected": false,
+      "reason": "Examples are nonexhaustive activities, not conjunctive mandatory tasks.",
+      "status": "source_adjudicated_proposal_not_dispatched",
+      "source_evidence": {
+        "yard": {
+          "text": "(e)(A) If a\nwritten agreement requires the landlord to perform yard maintenance or grounds\nkeeping for the premises:\n(i) A landlord\nand tenant may agree that the landlord or landlord\u2019s agent may enter for that\npurpose upon the premises under the tenant\u2019s exclusive control not including\nthe dwelling unit, without notice to the tenant, at reasonable times and with\nreasonable frequency. The terms of the right of entry must be described in the\nrental agreement or in a separate written agreement.\n(ii) A tenant may\ndeny consent for a landlord or landlord\u2019s agent to enter upon the premises\npursuant to this paragraph if the entry is at an unreasonable time or with\nunreasonable frequency. The tenant must assert the denial by giving actual\nnotice of the denial to the landlord or landlord\u2019s agent prior to, or at the\ntime of, the attempted entry.\n(B) As used in\nthis paragraph:\n(i) \u201cYard\nmaintenance or grounds keeping\u201d includes, but is not limited to, weeding,\nmowing grass and pruning trees and shrubs.\n(ii) \u201cUnreasonable\ntime\u201d refers to a time of day, day of the week or particular time that\nconflicts with the tenant\u2019s reasonable and specific plans to use the premises.",
+          "source": {
+            "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+            "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+            "start": 142575,
+            "end": 143748,
+            "offset_unit": "unicode_codepoint",
+            "encoding": "utf-8"
+          }
+        }
+      }
+    },
+    {
+      "id": "rent_pos",
+      "unit": "or_entry",
+      "source_evidence_refs": [
+        "def_41"
+      ],
+      "task": "meaning_component",
+      "candidate": "Rent excludes security deposits and fees.",
+      "expected": true,
+      "reason": "90.100(41)(b) expressly excludes both categories.",
+      "status": "source_adjudicated_proposal_not_dispatched",
+      "source_evidence": {
+        "def_41": {
+          "text": "(41)(a) \u201cRent\u201d\nmeans any payment to be made to the landlord under the rental agreement,\nperiodic or otherwise, in exchange for the right of a tenant and any permitted\npet to occupy a dwelling unit to the exclusion of others and to use the\npremises.\n(b) \u201cRent\u201d does\nnot include security deposits, fees or utility or service charges as described\nin ORS 90.315 (4) and 90.562.",
+          "source": {
+            "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+            "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+            "start": 23704,
+            "end": 24077,
+            "offset_unit": "unicode_codepoint",
+            "encoding": "utf-8"
+          }
+        }
+      }
+    },
+    {
+      "id": "rent_neg",
+      "unit": "or_entry",
+      "source_evidence_refs": [
+        "def_41"
+      ],
+      "task": "meaning_component",
+      "candidate": "Rent includes security deposits and fees.",
+      "expected": false,
+      "reason": "90.100(41)(b) expressly excludes both categories.",
+      "status": "source_adjudicated_proposal_not_dispatched",
+      "source_evidence": {
+        "def_41": {
+          "text": "(41)(a) \u201cRent\u201d\nmeans any payment to be made to the landlord under the rental agreement,\nperiodic or otherwise, in exchange for the right of a tenant and any permitted\npet to occupy a dwelling unit to the exclusion of others and to use the\npremises.\n(b) \u201cRent\u201d does\nnot include security deposits, fees or utility or service charges as described\nin ORS 90.315 (4) and 90.562.",
+          "source": {
+            "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+            "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+            "start": 23704,
+            "end": 24077,
+            "offset_unit": "unicode_codepoint",
+            "encoding": "utf-8"
+          }
+        }
+      }
+    },
+    {
+      "id": "landlord_pos",
+      "unit": "ca_return",
+      "source_evidence_refs": [
+        "def_Landlord"
+      ],
+      "task": "meaning_component",
+      "candidate": "Landlord includes the operator\u2019s agent or successor in interest.",
+      "expected": true,
+      "reason": "1980(a) expressly includes agent/successor.",
+      "status": "source_adjudicated_proposal_not_dispatched",
+      "source_evidence": {
+        "def_Landlord": {
+          "text": "(a)\u00a0\u201cLandlord\u201d means any operator, keeper, lessor, or sublessor of any furnished or unfurnished premises for hire, or his or her agent or successor in interest.",
+          "source": {
+            "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1980.txt",
+            "sha256": "4d96366e899b45063c589a04dd795c5cfaa043f64f2e5f7a095857fa52bb98ea",
+            "start": 1196,
+            "end": 1356,
+            "offset_unit": "unicode_codepoint",
+            "encoding": "utf-8"
+          }
+        }
+      }
+    },
+    {
+      "id": "landlord_neg",
+      "unit": "ca_return",
+      "source_evidence_refs": [
+        "def_Landlord"
+      ],
+      "task": "meaning_component",
+      "candidate": "Landlord excludes the operator\u2019s agent or successor in interest.",
+      "expected": false,
+      "reason": "1980(a) expressly includes agent/successor.",
+      "status": "source_adjudicated_proposal_not_dispatched",
+      "source_evidence": {
+        "def_Landlord": {
+          "text": "(a)\u00a0\u201cLandlord\u201d means any operator, keeper, lessor, or sublessor of any furnished or unfurnished premises for hire, or his or her agent or successor in interest.",
+          "source": {
+            "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1980.txt",
+            "sha256": "4d96366e899b45063c589a04dd795c5cfaa043f64f2e5f7a095857fa52bb98ea",
+            "start": 1196,
+            "end": 1356,
+            "offset_unit": "unicode_codepoint",
+            "encoding": "utf-8"
+          }
+        }
+      }
+    },
+    {
+      "id": "presale_notice_pos",
+      "unit": "ca_return",
+      "source_evidence_refs": [
+        "b"
+      ],
+      "task": "condition_component_presence",
+      "candidate": "The notice stated that the property would be sold at public sale.",
+      "expected": true,
+      "reason": "1987(b) specifies public-sale notice, not the alternate low-value retention notice.",
+      "status": "source_adjudicated_proposal_not_dispatched",
+      "source_evidence": {
+        "b": {
+          "text": "(b)\u00a0Where personal\nproperty is not released pursuant to subdivision (a) and the notice stated that the personal property would be sold at a public sale, the landlord shall release the personal property to the former tenant if he or she claims it prior to the time it is sold and pays the reasonable cost of storage, advertising, and sale incurred prior to the time the property is withdrawn from sale.",
+          "source": {
+            "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1987.txt",
+            "sha256": "4dc999fbc774738744c09cf63fdd8dc3a8d88508d615a9344045d60f7d1e8d32",
+            "start": 1547,
+            "end": 1948,
+            "offset_unit": "unicode_codepoint",
+            "encoding": "utf-8"
+          }
+        }
+      }
+    },
+    {
+      "id": "presale_notice_neg",
+      "unit": "ca_return",
+      "source_evidence_refs": [
+        "b"
+      ],
+      "task": "condition_component_presence",
+      "candidate": "The notice stated that the landlord would retain the property for personal use.",
+      "expected": false,
+      "reason": "1987(b) specifies public-sale notice, not the alternate low-value retention notice.",
+      "status": "source_adjudicated_proposal_not_dispatched",
+      "source_evidence": {
+        "b": {
+          "text": "(b)\u00a0Where personal\nproperty is not released pursuant to subdivision (a) and the notice stated that the personal property would be sold at a public sale, the landlord shall release the personal property to the former tenant if he or she claims it prior to the time it is sold and pays the reasonable cost of storage, advertising, and sale incurred prior to the time the property is withdrawn from sale.",
+          "source": {
+            "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1987.txt",
+            "sha256": "4dc999fbc774738744c09cf63fdd8dc3a8d88508d615a9344045d60f7d1e8d32",
+            "start": 1547,
+            "end": 1948,
+            "offset_unit": "unicode_codepoint",
+            "encoding": "utf-8"
+          }
+        }
+      }
+    },
+    {
+      "id": "nonrelease_pos",
+      "unit": "ca_return",
+      "source_evidence_refs": [
+        "b"
+      ],
+      "task": "condition_component_presence",
+      "candidate": "Property was not released pursuant to subdivision(a).",
+      "expected": true,
+      "reason": "The source negates prior(a)release.",
+      "status": "source_adjudicated_proposal_not_dispatched",
+      "source_evidence": {
+        "b": {
+          "text": "(b)\u00a0Where personal\nproperty is not released pursuant to subdivision (a) and the notice stated that the personal property would be sold at a public sale, the landlord shall release the personal property to the former tenant if he or she claims it prior to the time it is sold and pays the reasonable cost of storage, advertising, and sale incurred prior to the time the property is withdrawn from sale.",
+          "source": {
+            "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1987.txt",
+            "sha256": "4dc999fbc774738744c09cf63fdd8dc3a8d88508d615a9344045d60f7d1e8d32",
+            "start": 1547,
+            "end": 1948,
+            "offset_unit": "unicode_codepoint",
+            "encoding": "utf-8"
+          }
+        }
+      }
+    },
+    {
+      "id": "nonrelease_neg",
+      "unit": "ca_return",
+      "source_evidence_refs": [
+        "b"
+      ],
+      "task": "condition_component_presence",
+      "candidate": "Property had already been released pursuant to subdivision(a).",
+      "expected": false,
+      "reason": "The source negates prior(a)release.",
+      "status": "source_adjudicated_proposal_not_dispatched",
+      "source_evidence": {
+        "b": {
+          "text": "(b)\u00a0Where personal\nproperty is not released pursuant to subdivision (a) and the notice stated that the personal property would be sold at a public sale, the landlord shall release the personal property to the former tenant if he or she claims it prior to the time it is sold and pays the reasonable cost of storage, advertising, and sale incurred prior to the time the property is withdrawn from sale.",
+          "source": {
+            "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1987.txt",
+            "sha256": "4dc999fbc774738744c09cf63fdd8dc3a8d88508d615a9344045d60f7d1e8d32",
+            "start": 1547,
+            "end": 1948,
+            "offset_unit": "unicode_codepoint",
+            "encoding": "utf-8"
+          }
+        }
+      }
+    },
+    {
+      "id": "reclaimer_pos",
+      "unit": "ca_return",
+      "source_evidence_refs": [
+        "c"
+      ],
+      "task": "condition_component_presence",
+      "candidate": "The former tenant reclaims the property.",
+      "expected": true,
+      "reason": "Former tenant is one listed alternative; unrelated nonowner is not.",
+      "status": "source_adjudicated_proposal_not_dispatched",
+      "source_evidence": {
+        "c": {
+          "text": "(c)\u00a0Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling.",
+          "source": {
+            "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1987.txt",
+            "sha256": "4dc999fbc774738744c09cf63fdd8dc3a8d88508d615a9344045d60f7d1e8d32",
+            "start": 1949,
+            "end": 2341,
+            "offset_unit": "unicode_codepoint",
+            "encoding": "utf-8"
+          }
+        }
+      }
+    },
+    {
+      "id": "reclaimer_neg",
+      "unit": "ca_return",
+      "source_evidence_refs": [
+        "c"
+      ],
+      "task": "condition_component_presence",
+      "candidate": "An unrelated person not reasonably believed to be an owner reclaims the property.",
+      "expected": false,
+      "reason": "Former tenant is one listed alternative; unrelated nonowner is not.",
+      "status": "source_adjudicated_proposal_not_dispatched",
+      "source_evidence": {
+        "c": {
+          "text": "(c)\u00a0Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling.",
+          "source": {
+            "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1987.txt",
+            "sha256": "4dc999fbc774738744c09cf63fdd8dc3a8d88508d615a9344045d60f7d1e8d32",
+            "start": 1949,
+            "end": 2341,
+            "offset_unit": "unicode_codepoint",
+            "encoding": "utf-8"
+          }
+        }
+      }
+    },
+    {
+      "id": "tenant_individually_necessary",
+      "unit": "ca_return",
+      "source_evidence_refs": [
+        "c"
+      ],
+      "task": "necessity_separate",
+      "candidate": "The former tenant personally reclaims in every case satisfying the reclaimant condition.",
+      "expected": false,
+      "reason": "Other reasonably-believed owner is an alternative; do not confuse presence with necessity.",
+      "status": "source_adjudicated_proposal_not_dispatched",
+      "source_evidence": {
+        "c": {
+          "text": "(c)\u00a0Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling.",
+          "source": {
+            "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1987.txt",
+            "sha256": "4dc999fbc774738744c09cf63fdd8dc3a8d88508d615a9344045d60f7d1e8d32",
+            "start": 1949,
+            "end": 2341,
+            "offset_unit": "unicode_codepoint",
+            "encoding": "utf-8"
+          }
+        }
+      }
+    },
+    {
+      "id": "reclaimer_or_relation",
+      "unit": "ca_return",
+      "source_evidence_refs": [
+        "c"
+      ],
+      "task": "logic_separate",
+      "candidate": "Former-tenant reclaim OR reasonably-believed-other-owner reclaim satisfies the claimant component.",
+      "expected": true,
+      "reason": "The statutory connector is or; dwelling/timing remain separate conjuncts.",
+      "status": "source_adjudicated_proposal_not_dispatched",
+      "source_evidence": {
+        "c": {
+          "text": "(c)\u00a0Notwithstanding subdivision (a), the landlord shall release the personal property described in the notice to the former tenant and shall not require the former tenant to pay the cost of storage if the property remained in the dwelling and the former tenant or other person reasonably believed by the landlord to be its owner reclaims the property within two days of vacating the dwelling.",
+          "source": {
+            "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1987.txt",
+            "sha256": "4dc999fbc774738744c09cf63fdd8dc3a8d88508d615a9344045d60f7d1e8d32",
+            "start": 1949,
+            "end": 2341,
+            "offset_unit": "unicode_codepoint",
+            "encoding": "utf-8"
+          }
+        }
+      }
+    }
+  ],
+  "balance": {
+    "positive": 8,
+    "negative": 8
+  },
+  "scope_controls_needed": "Add separate scope question with actual heading/subsection evidence. Test local emergency paragraph versus whole-chapter scope; local yard paragraph versus ordinary entry. Do not reuse90.100 global preamble as evidence of a90.322 local definition scope.",
+  "not_heldout": "These controls are purpose-built after observed diagnostic uncertainty, so are development material."
+}

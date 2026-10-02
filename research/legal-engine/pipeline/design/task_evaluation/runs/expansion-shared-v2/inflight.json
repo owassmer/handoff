@@ -1,0 +1,37 @@
+{
+  "case_id": "exp064+exp078",
+  "request_hash": "ea9460942667b7f1dc521ede9a5dc9793b43bc917c52e4322369e9fbce4f1610",
+  "started_at": "2026-10-01T16:51:31.165982+00:00",
+  "transport": [
+    {
+      "url": "https://openrouter.ai/api/v1/systemone",
+      "body": {
+        "state": {
+          "requirement": "(f) In all other\ncases, unless there is an agreement between the landlord and the tenant to the\ncontrary regarding a specific entry, the landlord shall give the tenant at\nleast 24 hours’ actual notice of the intent of the landlord to enter and the\nlandlord or landlord’s agent may enter only at reasonable times. The landlord\nor landlord’s agent may not enter if the tenant, after receiving the landlord’s\nnotice, denies consent to enter. The tenant must assert this denial of consent\nby giving actual notice of the denial to the landlord or the landlord’s agent\nor by attaching a written notice of the denial in a secure manner to the main\nentrance to that portion of the premises or dwelling unit of which the tenant\nhas exclusive control, prior to or at the time of the attempt by the landlord\nor landlord’s agent to enter.",
+          "candidate": "(b) In case of an\nemergency, a landlord may enter the dwelling unit or any portion of the\npremises under a tenant’s exclusive control without consent of the tenant,\nwithout notice to the tenant and at any time. “Emergency” includes but is not\nlimited to a repair problem that, unless remedied immediately, is likely to\ncause serious damage to the premises. If a landlord makes an emergency entry in\nthe tenant’s absence, the landlord shall give the tenant actual notice within\n24 hours after the entry, and the notice shall include the fact of the entry,\nthe date and time of the entry, the nature of the emergency and the names of\nthe persons who entered."
+        },
+        "model": "typesafe/jev-1.13",
+        "questions": {
+          "exp064": {
+            "type": "noul",
+            "instructions": "Does the candidate create an exception to the requirement?",
+            "criteria": {
+              "true": "The candidate removes or reduces what the requirement demands in stated circumstances.",
+              "false": "The requirement remains unchanged; the candidate merely adds an obligation, remedy or option without reducing what is required."
+            }
+          },
+          "exp078": {
+            "type": "noul",
+            "instructions": "Does the candidate change the timing rule stated in the requirement?",
+            "criteria": {
+              "true": "The candidate changes the stated time limit, triggering event or time-computation rule.",
+              "false": "The stated timing rule remains unchanged."
+            }
+          }
+        }
+      },
+      "body_text": "{\"state\":{\"requirement\":\"(f) In all other\\ncases, unless there is an agreement between the landlord and the tenant to the\\ncontrary regarding a specific entry, the landlord shall give the tenant at\\nleast 24 hours’ actual notice of the intent of the landlord to enter and the\\nlandlord or landlord’s agent may enter only at reasonable times. The landlord\\nor landlord’s agent may not enter if the tenant, after receiving the landlord’s\\nnotice, denies consent to enter. The tenant must assert this denial of consent\\nby giving actual notice of the denial to the landlord or the landlord’s agent\\nor by attaching a written notice of the denial in a secure manner to the main\\nentrance to that portion of the premises or dwelling unit of which the tenant\\nhas exclusive control, prior to or at the time of the attempt by the landlord\\nor landlord’s agent to enter.\",\"candidate\":\"(b) In case of an\\nemergency, a landlord may enter the dwelling unit or any portion of the\\npremises under a tenant’s exclusive control without consent of the tenant,\\nwithout notice to the tenant and at any time. “Emergency” includes but is not\\nlimited to a repair problem that, unless remedied immediately, is likely to\\ncause serious damage to the premises. If a landlord makes an emergency entry in\\nthe tenant’s absence, the landlord shall give the tenant actual notice within\\n24 hours after the entry, and the notice shall include the fact of the entry,\\nthe date and time of the entry, the nature of the emergency and the names of\\nthe persons who entered.\"},\"model\":\"typesafe/jev-1.13\",\"questions\":{\"exp064\":{\"type\":\"noul\",\"instructions\":\"Does the candidate create an exception to the requirement?\",\"criteria\":{\"true\":\"The candidate removes or reduces what the requirement demands in stated circumstances.\",\"false\":\"The requirement remains unchanged; the candidate merely adds an obligation, remedy or option without reducing what is required.\"}},\"exp078\":{\"type\":\"noul\",\"instructions\":\"Does the candidate change the timing rule stated in the requirement?\",\"criteria\":{\"true\":\"The candidate changes the stated time limit, triggering event or time-computation rule.\",\"false\":\"The stated timing rule remains unchanged.\"}}}}",
+      "body_sha256": "f87455f6e5183c330e48cee6a842498a8200c0f90551785c592b3b053c5167ba"
+    }
+  ]
+}

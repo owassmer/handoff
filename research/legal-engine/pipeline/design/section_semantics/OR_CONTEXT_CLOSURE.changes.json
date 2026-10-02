@@ -1,0 +1,494 @@
+[
+  {
+    "consumer": "or_entry.j011",
+    "group": "conditions.access_purposes.root",
+    "producer": "or_entry.j005",
+    "field": "conditions.access_purposes.purpose_inspect.predicate"
+  },
+  {
+    "consumer": "or_entry.j011",
+    "group": "conditions.access_purposes.root",
+    "producer": "or_entry.j006",
+    "field": "conditions.access_purposes.purpose_work.predicate"
+  },
+  {
+    "consumer": "or_entry.j011",
+    "group": "conditions.access_purposes.root",
+    "producer": "or_entry.j007",
+    "field": "conditions.access_purposes.purpose_services.predicate"
+  },
+  {
+    "consumer": "or_entry.j011",
+    "group": "conditions.access_purposes.root",
+    "producer": "or_entry.j008",
+    "field": "conditions.access_purposes.purpose_yard.predicate"
+  },
+  {
+    "consumer": "or_entry.j011",
+    "group": "conditions.access_purposes.root",
+    "producer": "or_entry.j009",
+    "field": "conditions.access_purposes.purpose_exhibit.predicate"
+  },
+  {
+    "consumer": "or_entry.j020",
+    "group": "conditions.service_entry.root",
+    "producer": "or_entry.j017",
+    "field": "conditions.service_entry.notice_purpose.predicate"
+  },
+  {
+    "consumer": "or_entry.j020",
+    "group": "conditions.service_entry.root",
+    "producer": "or_entry.j018",
+    "field": "conditions.service_entry.outside_unit.predicate"
+  },
+  {
+    "consumer": "or_entry.j060",
+    "group": "conditions.emergency_post_notice.root",
+    "producer": "or_entry.j057",
+    "field": "conditions.emergency_post_notice.emergency_entry_occurred.predicate"
+  },
+  {
+    "consumer": "or_entry.j060",
+    "group": "conditions.emergency_post_notice.root",
+    "producer": "or_entry.j058",
+    "field": "conditions.emergency_post_notice.tenant_absent.predicate"
+  },
+  {
+    "consumer": "or_entry.j078",
+    "group": "conditions.repair_entry.root",
+    "producer": "or_entry.j074",
+    "field": "conditions.repair_entry.written_request.predicate"
+  },
+  {
+    "consumer": "or_entry.j078",
+    "group": "conditions.repair_entry.root",
+    "producer": "or_entry.j075",
+    "field": "conditions.repair_entry.requested_purpose.predicate"
+  },
+  {
+    "consumer": "or_entry.j078",
+    "group": "conditions.repair_entry.root",
+    "producer": "or_entry.j076",
+    "field": "conditions.repair_entry.not_completed.predicate"
+  },
+  {
+    "consumer": "or_entry.j106",
+    "group": "conditions.repair_expiration.root",
+    "producer": "or_entry.j103",
+    "field": "conditions.repair_expiration.repairs_in_progress.predicate"
+  },
+  {
+    "consumer": "or_entry.j106",
+    "group": "conditions.repair_expiration.root",
+    "producer": "or_entry.j104",
+    "field": "conditions.repair_expiration.reasonable_effort.predicate"
+  },
+  {
+    "consumer": "or_entry.j115",
+    "group": "conditions.repair_authority_proof.root",
+    "producer": "or_entry.j112",
+    "field": "conditions.repair_authority_proof.not_landlord.predicate"
+  },
+  {
+    "consumer": "or_entry.j115",
+    "group": "conditions.repair_authority_proof.root",
+    "producer": "or_entry.j113",
+    "field": "conditions.repair_authority_proof.tenant_request.predicate"
+  },
+  {
+    "consumer": "or_entry.j127",
+    "group": "conditions.sale_entry.root",
+    "producer": "or_entry.j120",
+    "field": "conditions.sale_entry.agreement.predicate"
+  },
+  {
+    "consumer": "or_entry.j127",
+    "group": "conditions.sale_entry.root",
+    "producer": "or_entry.j121",
+    "field": "conditions.sale_entry.actively_selling_at_execution.predicate"
+  },
+  {
+    "consumer": "or_entry.j127",
+    "group": "conditions.sale_entry.root",
+    "producer": "or_entry.j122",
+    "field": "conditions.sale_entry.separate_writing.predicate"
+  },
+  {
+    "consumer": "or_entry.j127",
+    "group": "conditions.sale_entry.root",
+    "producer": "or_entry.j123",
+    "field": "conditions.sale_entry.both_signatures.predicate"
+  },
+  {
+    "consumer": "or_entry.j127",
+    "group": "conditions.sale_entry.root",
+    "producer": "or_entry.j124",
+    "field": "conditions.sale_entry.separate_consideration.predicate"
+  },
+  {
+    "consumer": "or_entry.j127",
+    "group": "conditions.sale_entry.root",
+    "producer": "or_entry.j125",
+    "field": "conditions.sale_entry.prospective_buyer.predicate"
+  },
+  {
+    "consumer": "or_entry.j141",
+    "group": "conditions.yard_entry.root",
+    "producer": "or_entry.j135",
+    "field": "conditions.yard_entry.written_duty.predicate"
+  },
+  {
+    "consumer": "or_entry.j141",
+    "group": "conditions.yard_entry.root",
+    "producer": "or_entry.j136",
+    "field": "conditions.yard_entry.entry_agreement.predicate"
+  },
+  {
+    "consumer": "or_entry.j141",
+    "group": "conditions.yard_entry.root",
+    "producer": "or_entry.j137",
+    "field": "conditions.yard_entry.outside_dwelling.predicate"
+  },
+  {
+    "consumer": "or_entry.j141",
+    "group": "conditions.yard_entry.root",
+    "producer": "or_entry.j138",
+    "field": "conditions.yard_entry.reasonable_time.predicate"
+  },
+  {
+    "consumer": "or_entry.j141",
+    "group": "conditions.yard_entry.root",
+    "producer": "or_entry.j139",
+    "field": "conditions.yard_entry.reasonable_frequency.predicate"
+  },
+  {
+    "consumer": "or_entry.j149",
+    "group": "conditions.yard_terms.root",
+    "producer": "or_entry.j146",
+    "field": "conditions.yard_terms.rental_document.predicate"
+  },
+  {
+    "consumer": "or_entry.j149",
+    "group": "conditions.yard_terms.root",
+    "producer": "or_entry.j147",
+    "field": "conditions.yard_terms.separate_document.predicate"
+  },
+  {
+    "consumer": "or_entry.j157",
+    "group": "conditions.yard_denial.root",
+    "producer": "or_entry.j154",
+    "field": "conditions.yard_denial.unreasonable_time.predicate"
+  },
+  {
+    "consumer": "or_entry.j157",
+    "group": "conditions.yard_denial.root",
+    "producer": "or_entry.j155",
+    "field": "conditions.yard_denial.unreasonable_frequency.predicate"
+  },
+  {
+    "consumer": "or_entry.j175",
+    "group": "conditions.ordinary_notice.root",
+    "producer": "or_entry.j172",
+    "field": "conditions.ordinary_notice.other_cases.predicate"
+  },
+  {
+    "consumer": "or_entry.j175",
+    "group": "conditions.ordinary_notice.root",
+    "producer": "or_entry.j173",
+    "field": "conditions.ordinary_notice.no_specific_agreement.predicate"
+  },
+  {
+    "consumer": "or_entry.j193",
+    "group": "conditions.ordinary_no_entry_after_denial.root",
+    "producer": "or_entry.j189",
+    "field": "conditions.ordinary_no_entry_after_denial.received_notice.predicate"
+  },
+  {
+    "consumer": "or_entry.j193",
+    "group": "conditions.ordinary_no_entry_after_denial.root",
+    "producer": "or_entry.j190",
+    "field": "conditions.ordinary_no_entry_after_denial.denies_consent.predicate"
+  },
+  {
+    "consumer": "or_entry.j193",
+    "group": "conditions.ordinary_no_entry_after_denial.root",
+    "producer": "or_entry.j191",
+    "field": "conditions.ordinary_no_entry_after_denial.assertion_timely.predicate"
+  },
+  {
+    "consumer": "or_entry.j201",
+    "group": "conditions.ordinary_denial_method.root",
+    "producer": "or_entry.j198",
+    "field": "conditions.ordinary_denial_method.actual_notice.predicate"
+  },
+  {
+    "consumer": "or_entry.j201",
+    "group": "conditions.ordinary_denial_method.root",
+    "producer": "or_entry.j199",
+    "field": "conditions.ordinary_denial_method.secured_written_notice.predicate"
+  },
+  {
+    "consumer": "or_entry.j226",
+    "group": "conditions.facility_exclusion.root",
+    "producer": "or_entry.j223",
+    "field": "conditions.facility_exclusion.rental_space.predicate"
+  },
+  {
+    "consumer": "or_entry.j226",
+    "group": "conditions.facility_exclusion.root",
+    "producer": "or_entry.j224",
+    "field": "conditions.facility_exclusion.facility.predicate"
+  },
+  {
+    "consumer": "or_entry.j235",
+    "group": "conditions.space_only.root",
+    "producer": "or_entry.j231",
+    "field": "conditions.space_only.tenant_owns_home.predicate"
+  },
+  {
+    "consumer": "or_entry.j235",
+    "group": "conditions.space_only.root",
+    "producer": "or_entry.j232",
+    "field": "conditions.space_only.rented_space.predicate"
+  },
+  {
+    "consumer": "or_entry.j235",
+    "group": "conditions.space_only.root",
+    "producer": "or_entry.j233",
+    "field": "conditions.space_only.not_facility.predicate"
+  },
+  {
+    "consumer": "or_entry.j245",
+    "group": "conditions.other_rights_limit.root",
+    "producer": "or_entry.j240",
+    "field": "conditions.other_rights_limit.court_order.predicate"
+  },
+  {
+    "consumer": "or_entry.j245",
+    "group": "conditions.other_rights_limit.root",
+    "producer": "or_entry.j241",
+    "field": "conditions.other_rights_limit.absence_route.predicate"
+  },
+  {
+    "consumer": "or_entry.j245",
+    "group": "conditions.other_rights_limit.root",
+    "producer": "or_entry.j242",
+    "field": "conditions.other_rights_limit.abandoned.predicate"
+  },
+  {
+    "consumer": "or_entry.j245",
+    "group": "conditions.other_rights_limit.root",
+    "producer": "or_entry.j243",
+    "field": "conditions.other_rights_limit.relinquished.predicate"
+  },
+  {
+    "consumer": "or_entry.j256",
+    "group": "conditions.government_safe_harbor.root",
+    "producer": "or_entry.j250",
+    "field": "conditions.government_safe_harbor.government_required.predicate"
+  },
+  {
+    "consumer": "or_entry.j256",
+    "group": "conditions.government_safe_harbor.root",
+    "producer": "or_entry.j251",
+    "field": "conditions.government_safe_harbor.failed_access.predicate"
+  },
+  {
+    "consumer": "or_entry.j256",
+    "group": "conditions.government_safe_harbor.root",
+    "producer": "or_entry.j252",
+    "field": "conditions.government_safe_harbor.good_faith_effort.predicate"
+  },
+  {
+    "consumer": "or_entry.j256",
+    "group": "conditions.government_safe_harbor.root",
+    "producer": "or_entry.j253",
+    "field": "conditions.government_safe_harbor.section_compliance.predicate"
+  },
+  {
+    "consumer": "or_entry.j256",
+    "group": "conditions.government_safe_harbor.root",
+    "producer": "or_entry.j254",
+    "field": "conditions.government_safe_harbor.causal_scope.predicate"
+  },
+  {
+    "consumer": "or_entry.j285",
+    "group": "conditions.tenant_injunction.root",
+    "producer": "or_entry.j281",
+    "field": "conditions.tenant_injunction.unlawful_entry.predicate"
+  },
+  {
+    "consumer": "or_entry.j285",
+    "group": "conditions.tenant_injunction.root",
+    "producer": "or_entry.j282",
+    "field": "conditions.tenant_injunction.unreasonable_manner.predicate"
+  },
+  {
+    "consumer": "or_entry.j285",
+    "group": "conditions.tenant_injunction.root",
+    "producer": "or_entry.j283",
+    "field": "conditions.tenant_injunction.repeated_harassment.predicate"
+  },
+  {
+    "consumer": "or_entry.j294",
+    "group": "conditions.tenant_termination.root",
+    "producer": "or_entry.j290",
+    "field": "conditions.tenant_termination.unlawful_entry.predicate"
+  },
+  {
+    "consumer": "or_entry.j294",
+    "group": "conditions.tenant_termination.root",
+    "producer": "or_entry.j291",
+    "field": "conditions.tenant_termination.unreasonable_manner.predicate"
+  },
+  {
+    "consumer": "or_entry.j294",
+    "group": "conditions.tenant_termination.root",
+    "producer": "or_entry.j292",
+    "field": "conditions.tenant_termination.repeated_harassment.predicate"
+  },
+  {
+    "consumer": "or_entry.j303",
+    "group": "conditions.tenant_damages.root",
+    "producer": "or_entry.j299",
+    "field": "conditions.tenant_damages.unlawful_entry.predicate"
+  },
+  {
+    "consumer": "or_entry.j303",
+    "group": "conditions.tenant_damages.root",
+    "producer": "or_entry.j300",
+    "field": "conditions.tenant_damages.unreasonable_manner.predicate"
+  },
+  {
+    "consumer": "or_entry.j303",
+    "group": "conditions.tenant_damages.root",
+    "producer": "or_entry.j301",
+    "field": "conditions.tenant_damages.repeated_harassment.predicate"
+  },
+  {
+    "consumer": "or_entry.j330",
+    "group": "conditions.actual_notice_methods.root",
+    "producer": "or_entry.j325",
+    "field": "conditions.actual_notice_methods.verbal.predicate"
+  },
+  {
+    "consumer": "or_entry.j330",
+    "group": "conditions.actual_notice_methods.root",
+    "producer": "or_entry.j326",
+    "field": "conditions.actual_notice_methods.written.predicate"
+  },
+  {
+    "consumer": "or_entry.j330",
+    "group": "conditions.actual_notice_methods.root",
+    "producer": "or_entry.j327",
+    "field": "conditions.actual_notice_methods.other_written.predicate"
+  },
+  {
+    "consumer": "or_entry.j330",
+    "group": "conditions.actual_notice_methods.root",
+    "producer": "or_entry.j328",
+    "field": "conditions.actual_notice_methods.agreed_method.predicate"
+  },
+  {
+    "consumer": "or_entry.j343",
+    "group": "conditions.extended_absence_entry.root",
+    "producer": "or_entry.j340",
+    "field": "conditions.extended_absence_entry.more_than_7_days.predicate"
+  },
+  {
+    "consumer": "or_entry.j343",
+    "group": "conditions.extended_absence_entry.root",
+    "producer": "or_entry.j341",
+    "field": "conditions.extended_absence_entry.necessary_time.predicate"
+  },
+  {
+    "consumer": "or_entry.j406",
+    "group": "conditions.written_notice_methods.root",
+    "producer": "or_entry.j401",
+    "field": "conditions.written_notice_methods.personal.predicate"
+  },
+  {
+    "consumer": "or_entry.j406",
+    "group": "conditions.written_notice_methods.root",
+    "producer": "or_entry.j402",
+    "field": "conditions.written_notice_methods.first_class.predicate"
+  },
+  {
+    "consumer": "or_entry.j406",
+    "group": "conditions.written_notice_methods.root",
+    "producer": "or_entry.j403",
+    "field": "conditions.written_notice_methods.mail_attach.predicate"
+  },
+  {
+    "consumer": "or_entry.j406",
+    "group": "conditions.written_notice_methods.root",
+    "producer": "or_entry.j404",
+    "field": "conditions.written_notice_methods.email_addendum.predicate"
+  },
+  {
+    "consumer": "or_entry.j416",
+    "group": "conditions.email_notice_conditions.root",
+    "producer": "or_entry.j411",
+    "field": "conditions.email_notice_conditions.both_addresses.predicate"
+  },
+  {
+    "consumer": "or_entry.j416",
+    "group": "conditions.email_notice_conditions.root",
+    "producer": "or_entry.j412",
+    "field": "conditions.email_notice_conditions.post_occupancy_signatures.predicate"
+  },
+  {
+    "consumer": "or_entry.j416",
+    "group": "conditions.email_notice_conditions.root",
+    "producer": "or_entry.j413",
+    "field": "conditions.email_notice_conditions.change_or_end_right.predicate"
+  },
+  {
+    "consumer": "or_entry.j416",
+    "group": "conditions.email_notice_conditions.root",
+    "producer": "or_entry.j414",
+    "field": "conditions.email_notice_conditions.required_warning.predicate"
+  },
+  {
+    "consumer": "or_entry.j437",
+    "group": "conditions.landlord_cure_prevents.root",
+    "producer": "or_entry.j434",
+    "field": "conditions.landlord_cure_prevents.curable.predicate"
+  },
+  {
+    "consumer": "or_entry.j437",
+    "group": "conditions.landlord_cure_prevents.root",
+    "producer": "or_entry.j435",
+    "field": "conditions.landlord_cure_prevents.timely_cure.predicate"
+  },
+  {
+    "consumer": "or_entry.j448",
+    "group": "conditions.landlord_repeat_notice.root",
+    "producer": "or_entry.j444",
+    "field": "conditions.landlord_repeat_notice.same_act.predicate"
+  },
+  {
+    "consumer": "or_entry.j448",
+    "group": "conditions.landlord_repeat_notice.root",
+    "producer": "or_entry.j445",
+    "field": "conditions.landlord_repeat_notice.prior_six_months.predicate"
+  },
+  {
+    "consumer": "or_entry.j448",
+    "group": "conditions.landlord_repeat_notice.root",
+    "producer": "or_entry.j446",
+    "field": "conditions.landlord_repeat_notice.not_current_rent_only.predicate"
+  },
+  {
+    "consumer": "or_entry.j468",
+    "group": "conditions.tenant_termination_cure.root",
+    "producer": "or_entry.j465",
+    "field": "conditions.tenant_termination_cure.remediable.predicate"
+  },
+  {
+    "consumer": "or_entry.j468",
+    "group": "conditions.tenant_termination_cure.root",
+    "producer": "or_entry.j466",
+    "field": "conditions.tenant_termination_cure.adequate_timely_remedy.predicate"
+  }
+]

@@ -1,0 +1,1568 @@
+{
+ "version": "2",
+ "jobs": [
+  {
+   "id": "job:cc85bce4c6adf5751d7802636e6e22bf1d2d445a75b27ad6dc4bd65511d13c91",
+   "title": "Restoration assessment",
+   "kind": "Assessment",
+   "status": "Awaiting check",
+   "origin": "Handoff",
+   "providerPartyId": "party:96706a1ef99394c09c469dcceb8c90a7b232619149f0e8946bca2e1ba3278538",
+   "workPlanId": "plan:3f46ba06fbdd524ef94e5290e8609db3d3364ce66ebea219aecbc41c8a67f9c6",
+   "decisionId": "decision:dcd1743f9a448a8358140ac4cf6ad6896b17d22d8c62f61c8977caf78b14ba8a",
+   "quoteId": "quote:21787933e6343d7b499d960f55e4c305246744ceaf27b428286a0309b94656f5",
+   "scope": [
+    {
+     "lineId": "site-assessment",
+     "description": "Site assessment",
+     "amountCents": "60000",
+     "acceptedScope": "Schedule and perform on-site move-out restoration assessment walkthrough of the triplex (excluding kitchen water repair), documenting observed deficiencies and immediate safety issues."
+    },
+    {
+     "lineId": "condition-schedule",
+     "description": "Condition and quantity schedule",
+     "amountCents": "30000",
+     "acceptedScope": "Deliver a written condition and quantity schedule for move-out restoration items (excluding kitchen water work)."
+    },
+    {
+     "lineId": "scope-budget",
+     "description": "Scope and budget note",
+     "amountCents": "30000",
+     "acceptedScope": "Provide a scope and budget note for the move-out restoration based on the site assessment and condition schedule (excluding kitchen water work)."
+    }
+   ],
+   "committedCents": "120000",
+   "currency": "USD",
+   "appointmentAt": "2026-09-28T13:00:00Z",
+   "appointmentEndsAt": "2026-09-28T16:00:00Z",
+   "progressSummary": "Some of the job's scope still needs checking.",
+   "verificationInspectionId": "inspection:6e821d26171ef1fabbd7fa68a8a3fe3774b0281f10d6ae6ee4c0e880afb088d5"
+  },
+  {
+   "id": "job:e6bf16e0337aa7956dde13bf707eedc93c35f8433c6ed6628efd2d1d1adda6bb",
+   "title": "Stair and railing repair",
+   "kind": "Repair",
+   "status": "Complete",
+   "origin": "Handoff",
+   "providerPartyId": "party:e226d0facf151979cf6c6a8932a9112cac606f420216905e65cea8203359d67e",
+   "workPlanId": "plan:3f46ba06fbdd524ef94e5290e8609db3d3364ce66ebea219aecbc41c8a67f9c6",
+   "decisionId": "decision:dcd1743f9a448a8358140ac4cf6ad6896b17d22d8c62f61c8977caf78b14ba8a",
+   "quoteId": "quote:2bb6d0435d1f366d025d97dc3aad2877d60d704c38a8cf7e14277802caf01d17",
+   "scope": [
+    {
+     "lineId": "loft-railing",
+     "description": "Rebuild and secure loft-ladder railing",
+     "amountCents": "150000",
+     "acceptedScope": "Rebuild and secure the SE bedroom loft-ladder railing so it is structurally sound and safe to use; remove/secure protruding nails and torn wood; leave the area safe and usable."
+    }
+   ],
+   "committedCents": "150000",
+   "currency": "USD",
+   "appointmentAt": "2026-09-29T13:00:00Z",
+   "appointmentEndsAt": "2026-09-30T05:00:00Z",
+   "progressSummary": "The job's scope has supporting completion observations.",
+   "verificationInspectionId": "inspection:945fff8c86fd57f1e0e785f55fdd4e17eddb185042b0c3ab799d53c73af40d93"
+  }
+ ],
+ "quotes": [
+  {
+   "id": "quote:9df269a8a12702031b0b725a17341f81cd0e6deb048d02f47ea76f60583106e0",
+   "title": "Floor restoration",
+   "providerPartyId": "party:d61733c3dfd6ab40f1965315a4d636f5d922341d43cdafae4a5073f1697dd07b",
+   "kind": "Repair",
+   "status": "Offered",
+   "currency": "USD",
+   "lines": [
+    {
+     "lineId": "sand-refinish",
+     "description": "Sand and refinish parquet and plank floors",
+     "amountCents": "540000"
+    },
+    {
+     "lineId": "parquet-inlay",
+     "description": "Replace damaged parquet and inlay border pieces",
+     "amountCents": "185000"
+    },
+    {
+     "lineId": "stain-seal",
+     "description": "Treat and seal urine-stained plank floors",
+     "amountCents": "76900"
+    }
+   ],
+   "totalCents": "801900",
+   "depositCents": "200000",
+   "paymentTerms": "Deposit of $2,000 on booking; balance on completion, payable within 7 days.",
+   "requirements": [],
+   "availableFrom": "2026-10-12T13:00:00.000Z",
+   "validUntil": "2026-11-30T23:59:59.000Z",
+   "sourceDocumentId": "document:25eda71e466dcde28839efc9cb0a6faa56e416423cc27beb9eb26aa9a25e5bba"
+  },
+  {
+   "id": "quote:db28919e310bdeebc62854875cf41c2d539b14fae987059a5bac6714b79a60dc",
+   "title": "Stair runner and office carpet",
+   "providerPartyId": "party:bd0eb98de1957496ed287235f8aacd20ce85889262e12eaf468a9d1641903b8f",
+   "kind": "Repair",
+   "status": "Offered",
+   "currency": "USD",
+   "lines": [
+    {
+     "lineId": "runner",
+     "description": "Supply and install stair runner",
+     "amountCents": "250000"
+    },
+    {
+     "lineId": "office",
+     "description": "Replace office carpet",
+     "amountCents": "225784"
+    }
+   ],
+   "totalCents": "475784",
+   "depositCents": "0",
+   "paymentTerms": "Payment on installation, due within 14 days.",
+   "requirements": [],
+   "availableFrom": "2026-10-19T13:00:00.000Z",
+   "validUntil": "2026-11-30T23:59:59.000Z",
+   "sourceDocumentId": "document:acf9655dfc1f6e51f8654a567e1c5a0e9a516ee10990b00467c62e24332e759e"
+  },
+  {
+   "id": "quote:2bb6d0435d1f366d025d97dc3aad2877d60d704c38a8cf7e14277802caf01d17",
+   "title": "Stair and railing repair",
+   "providerPartyId": "party:e226d0facf151979cf6c6a8932a9112cac606f420216905e65cea8203359d67e",
+   "kind": "Repair",
+   "status": "Offered",
+   "currency": "USD",
+   "lines": [
+    {
+     "lineId": "stair",
+     "description": "Repair and refinish stair, newel, trim and rail edge",
+     "amountCents": "900000"
+    },
+    {
+     "lineId": "loft-railing",
+     "description": "Rebuild and secure loft-ladder railing",
+     "amountCents": "150000"
+    }
+   ],
+   "totalCents": "1050000",
+   "depositCents": "0",
+   "paymentTerms": "Invoice on completion, payable within 14 days.",
+   "requirements": [],
+   "availableFrom": "2026-09-29T13:00:00.000Z",
+   "validUntil": "2026-11-30T23:59:59.000Z",
+   "sourceDocumentId": "document:65832829997b06f30a6fb120878486576d9a0f27310d7053ade55533b20914fc"
+  },
+  {
+   "id": "quote:e1640af4559d11c25df441673e1b9b3c0daf99abb0f411f0f4ac60c62c983d69",
+   "title": "Plaster, paint and woodwork",
+   "providerPartyId": "party:d6d7f54cf11332faf3f209e19188715d78cb458ed0a597557af72d8b5825b0be",
+   "kind": "Repair",
+   "status": "Offered",
+   "currency": "USD",
+   "lines": [
+    {
+     "lineId": "plaster",
+     "description": "Plaster repair and soot cleanup",
+     "amountCents": "1136667"
+    },
+    {
+     "lineId": "paint",
+     "description": "Paint walls, ceilings and trim",
+     "amountCents": "1278332"
+    },
+    {
+     "lineId": "woodwork",
+     "description": "Woodwork and fireplace restoration",
+     "amountCents": "1000000"
+    },
+    {
+     "lineId": "bath",
+     "description": "Bathroom repairs and caulking",
+     "amountCents": "376250"
+    }
+   ],
+   "totalCents": "3791249",
+   "depositCents": "1000000",
+   "paymentTerms": "Deposit of $10,000 at start; balance on completion, payable within 14 days.",
+   "requirements": [],
+   "availableFrom": "2026-10-05T13:00:00.000Z",
+   "validUntil": "2026-11-30T23:59:59.000Z",
+   "sourceDocumentId": "document:0a5ca0116780df4ce995c43b7d9e86cc9317ffee8b3237412f4bf02947edec90"
+  },
+  {
+   "id": "quote:21787933e6343d7b499d960f55e4c305246744ceaf27b428286a0309b94656f5",
+   "title": "Restoration assessment",
+   "providerPartyId": "party:96706a1ef99394c09c469dcceb8c90a7b232619149f0e8946bca2e1ba3278538",
+   "kind": "Assessment",
+   "status": "Offered",
+   "currency": "USD",
+   "lines": [
+    {
+     "lineId": "site-assessment",
+     "description": "Site assessment",
+     "amountCents": "60000"
+    },
+    {
+     "lineId": "condition-schedule",
+     "description": "Condition and quantity schedule",
+     "amountCents": "30000"
+    },
+    {
+     "lineId": "scope-budget",
+     "description": "Scope and budget note",
+     "amountCents": "30000"
+    }
+   ],
+   "totalCents": "120000",
+   "depositCents": "0",
+   "paymentTerms": "Invoice on delivery of the report, payable within 14 days.",
+   "requirements": [
+    "Kitchen water work is excluded."
+   ],
+   "availableFrom": "2026-09-28T13:00:00.000Z",
+   "validUntil": "2026-10-31T23:59:59.000Z",
+   "sourceDocumentId": "document:e2ab62cc2ce0067fce79b0f980527aa55714e7326dd94b32af78497e022aa4f7"
+  }
+ ],
+ "inspections": [
+  {
+   "id": "inspection:6e821d26171ef1fabbd7fa68a8a3fe3774b0281f10d6ae6ee4c0e880afb088d5",
+   "title": "Restoration assessment \u2014 completion check",
+   "jobId": "job:cc85bce4c6adf5751d7802636e6e22bf1d2d445a75b27ad6dc4bd65511d13c91",
+   "observerPartyId": "party:96706a1ef99394c09c469dcceb8c90a7b232619149f0e8946bca2e1ba3278538",
+   "purpose": "Completion check",
+   "observedAt": "2026-09-28T16:00:00Z",
+   "findings": [
+    {
+     "lineId": "site-assessment",
+     "result": "Not checked",
+     "observation": "Parquet, inlay border and plank floors scratched, gouged and stained, with missing inlay pieces.: Deficient; Window sills, doorway casing, moldings and mantels stained, gouged or broken; foyer door veneer sheared.: Deficient; Dining-room hearth with missing and broken antique tiles.: Deficient; Newel post, stair trim, top molding and rail edge chipped and damaged.: Deficient; Southeast bedroom loft-ladder railing pulled away with protruding nails. Unsafe.: Deficient; Stair runner edges torn; office carpet heavily stained.: Deficient; Northeast bedroom door broken.: Deficient; Plaster damage in the great room and northeast bedroom; soot staining in the west master suite.: Deficient; Ceiling damage in the east master bedroom, east bathroom and third-floor great room.: Deficient; Third-floor tub porcelain chipped; vanity panel broken.: Deficient; Urine odor in the west master suite, great room and other rooms.: Not checked",
+     "method": "Inspect every room, photograph and measure each condition, and flag safety issues."
+    },
+    {
+     "lineId": "condition-schedule",
+     "result": "Not checked",
+     "observation": "Parquet, inlay border and plank floors scratched, gouged and stained, with missing inlay pieces.: Deficient; Window sills, doorway casing, moldings and mantels stained, gouged or broken; foyer door veneer sheared.: Deficient; Dining-room hearth with missing and broken antique tiles.: Deficient; Newel post, stair trim, top molding and rail edge chipped and damaged.: Deficient; Southeast bedroom loft-ladder railing pulled away with protruding nails. Unsafe.: Deficient; Stair runner edges torn; office carpet heavily stained.: Deficient; Northeast bedroom door broken.: Deficient; Plaster damage in the great room and northeast bedroom; soot staining in the west master suite.: Deficient; Ceiling damage in the east master bedroom, east bathroom and third-floor great room.: Deficient; Third-floor tub porcelain chipped; vanity panel broken.: Deficient; Urine odor in the west master suite, great room and other rooms.: Not checked",
+     "method": "Room-by-room schedule of conditions with quantities."
+    },
+    {
+     "lineId": "scope-budget",
+     "result": "Not checked",
+     "observation": "Parquet, inlay border and plank floors scratched, gouged and stained, with missing inlay pieces.: Deficient; Window sills, doorway casing, moldings and mantels stained, gouged or broken; foyer door veneer sheared.: Deficient; Dining-room hearth with missing and broken antique tiles.: Deficient; Newel post, stair trim, top molding and rail edge chipped and damaged.: Deficient; Southeast bedroom loft-ladder railing pulled away with protruding nails. Unsafe.: Deficient; Stair runner edges torn; office carpet heavily stained.: Deficient; Northeast bedroom door broken.: Deficient; Plaster damage in the great room and northeast bedroom; soot staining in the west master suite.: Deficient; Ceiling damage in the east master bedroom, east bathroom and third-floor great room.: Deficient; Third-floor tub porcelain chipped; vanity panel broken.: Deficient; Urine odor in the west master suite, great room and other rooms.: Not checked",
+     "method": "Written repair scope by trade with a preliminary budget."
+    }
+   ],
+   "sourceDocumentId": "document:549707ffad4d85bc710dbd1f75eb0964f6d6559f7d0fa7c103a5e474ea92d533"
+  },
+  {
+   "id": "inspection:945fff8c86fd57f1e0e785f55fdd4e17eddb185042b0c3ab799d53c73af40d93",
+   "title": "Stair and railing repair \u2014 completion check",
+   "jobId": "job:e6bf16e0337aa7956dde13bf707eedc93c35f8433c6ed6628efd2d1d1adda6bb",
+   "observerPartyId": "party:e226d0facf151979cf6c6a8932a9112cac606f420216905e65cea8203359d67e",
+   "purpose": "Completion check",
+   "observedAt": "2026-09-30T05:00:00Z",
+   "findings": [
+    {
+     "lineId": "loft-railing",
+     "result": "Satisfied",
+     "observation": "Southeast bedroom loft-ladder railing pulled away with protruding nails. Unsafe.: Satisfied",
+     "method": "Remove the damaged railing, rebuild and fasten it, and test it under load."
+    }
+   ],
+   "sourceDocumentId": "document:a32d4a0292c221f57a480a16e7345c50b11c70fff8bc40c3330c6172de0412e4"
+  }
+ ],
+ "invoices": [
+  {
+   "id": "invoice:e6bf16e0337aa7956dde13bf707eedc93c35f8433c6ed6628efd2d1d1adda6bb",
+   "title": "Invoice for Stair and railing repair",
+   "jobId": "job:e6bf16e0337aa7956dde13bf707eedc93c35f8433c6ed6628efd2d1d1adda6bb",
+   "providerPartyId": "party:e226d0facf151979cf6c6a8932a9112cac606f420216905e65cea8203359d67e",
+   "payerPartyId": "party:bd07d929e76157ed8e8e559fe06c64b27112659d55395a0c748ef7abeed49642",
+   "status": "Agreed",
+   "lines": [
+    {
+     "lineId": "loft-railing",
+     "description": "Rebuild and secure loft-ladder railing",
+     "amountCents": "150000"
+    }
+   ],
+   "totalCents": "150000",
+   "currency": "USD",
+   "dueAt": "2026-10-14T05:00:00Z",
+   "sourceDocumentId": "document:73a56511b5a24aba2d751879201d629aeb3af564fabebd21e3bfdda900640f95"
+  },
+  {
+   "id": "invoice:cc85bce4c6adf5751d7802636e6e22bf1d2d445a75b27ad6dc4bd65511d13c91",
+   "title": "Invoice for Restoration assessment",
+   "jobId": "job:cc85bce4c6adf5751d7802636e6e22bf1d2d445a75b27ad6dc4bd65511d13c91",
+   "providerPartyId": "party:96706a1ef99394c09c469dcceb8c90a7b232619149f0e8946bca2e1ba3278538",
+   "payerPartyId": "party:bd07d929e76157ed8e8e559fe06c64b27112659d55395a0c748ef7abeed49642",
+   "status": "Received",
+   "lines": [
+    {
+     "lineId": "site-assessment",
+     "description": "Site assessment",
+     "amountCents": "60000"
+    },
+    {
+     "lineId": "condition-schedule",
+     "description": "Condition and quantity schedule",
+     "amountCents": "30000"
+    },
+    {
+     "lineId": "scope-budget",
+     "description": "Scope and budget note",
+     "amountCents": "30000"
+    }
+   ],
+   "totalCents": "120000",
+   "currency": "USD",
+   "dueAt": "2026-10-12T16:00:00Z",
+   "sourceDocumentId": "document:8b7b44e3d383eda1449abf8bbc6b27839cab1607c52221245173280b83e81f79"
+  }
+ ],
+ "funding": [
+  {
+   "id": "funding:37620a8ed92bff53509738f0f55e12d0e01cd3bebd3d6e0a05e69e54261da455",
+   "title": "Restoration funds",
+   "ownerPartyId": "party:bd07d929e76157ed8e8e559fe06c64b27112659d55395a0c748ef7abeed49642",
+   "currency": "USD",
+   "confirmedCents": "6500000",
+   "committedOrSpentCents": "270000",
+   "availableCents": "6230000",
+   "sourceDocumentId": "document:37620a8ed92bff53509738f0f55e12d0e01cd3bebd3d6e0a05e69e54261da455"
+  }
+ ],
+ "payments": [
+  {
+   "id": "payment:e7dfe6a1512e35191a27a36e07a49c33152a80e203be932edf1c364d082b7dd4",
+   "title": "Pay Stair and railing repair",
+   "jobId": "job:e6bf16e0337aa7956dde13bf707eedc93c35f8433c6ed6628efd2d1d1adda6bb",
+   "purpose": "Invoice",
+   "status": "Settled",
+   "amountCents": "150000",
+   "currency": "USD",
+   "requestedAt": "2026-09-30T05:00:02Z",
+   "observedAt": "2026-09-30T09:00:02Z"
+  }
+ ],
+ "workspace": {
+  "id": "workspace:1adcfc427401c3ba3de3994693fa38bfc8cf296c192bf23655536b4bb12f2c0d",
+  "name": "Whitcomb Holdings",
+  "mode": "demo"
+ },
+ "handoff": {
+  "id": "handoff:e84dfe704404b6d594f054be08399b7a8597e39007eb98dc297a2aa4b713afbc",
+  "title": "142 West 88th Street move-out",
+  "goal": "Make the property ready for its next occupant and resolve the departing tenancy's financial relationship, allowing the two outcomes to progress independently.",
+  "businessDate": "2026-09-30",
+  "physicalProgress": "Plan ready",
+  "financialProgress": "Not started",
+  "nextStep": "Unit is not yet show-ready. Loft-ladder railing safety repair is complete, but floors, plaster/paint/woodwork, remaining stair damage, and carpets/runners still show as deficient. Ready to authorize the main move-out restoration package (kept separate from the kitchen water repair).",
+  "revision": "38",
+  "operativeDecisionId": "decision:dcd1743f9a448a8358140ac4cf6ad6896b17d22d8c62f61c8977caf78b14ba8a"
+ },
+ "property": {
+  "id": "property:c77d822eebe9a8734def974911ac63878c5b5eb2708f9f68a5ae28666682ede0",
+  "name": "142 West 88th Street, Triplex",
+  "address": "142 West 88th Street, New York, NY 10024",
+  "description": "Upper West Side brownstone. The rented triplex runs from the parlor floor to the third floor, with period parquet and inlay floors, mahogany woodwork, three fireplaces and a third-floor loft. The owner keeps the garden-level media room."
+ },
+ "tenancy": {
+  "id": "tenancy:b3e24c643419f45aec19575572107a576b9dcbfef71fcbc4621913de6b51a9dc",
+  "title": "Brenner tenancy, 142 West 88th Street",
+  "startDate": "2023-01-01",
+  "endDate": "2026-09-23",
+  "endingKind": "Tenancy ending"
+ },
+ "parties": [
+  {
+   "id": "party:1d0b879b54203301ad74079981f87592674357431f90d196ef959f95f49d2bce",
+   "name": "Laura Brenner",
+   "kind": "Person",
+   "description": "Departing tenant. Main contact with the owner during the tenancy."
+  },
+  {
+   "id": "party:96706a1ef99394c09c469dcceb8c90a7b232619149f0e8946bca2e1ba3278538",
+   "name": "Feld Architecture PLLC",
+   "kind": "Organization",
+   "description": "Architect already working for the owner on the kitchen water repair. Offers condition assessments and repair scoping."
+  },
+  {
+   "id": "party:bd07d929e76157ed8e8e559fe06c64b27112659d55395a0c748ef7abeed49642",
+   "name": "Whitcomb Holdings LLC",
+   "kind": "Organization",
+   "description": "Landlord of the triplex at 142 West 88th Street."
+  },
+  {
+   "id": "party:d6d7f54cf11332faf3f209e19188715d78cb458ed0a597557af72d8b5825b0be",
+   "name": "Westside Plaster & Paint",
+   "kind": "Organization",
+   "description": "Plaster repair, painting, woodwork refinishing and general finishing."
+  },
+  {
+   "id": "party:d61733c3dfd6ab40f1965315a4d636f5d922341d43cdafae4a5073f1697dd07b",
+   "name": "Hudson Floor Restoration",
+   "kind": "Organization",
+   "description": "Hardwood and parquet sanding, refinishing and repair."
+  },
+  {
+   "id": "party:bd0eb98de1957496ed287235f8aacd20ce85889262e12eaf468a9d1641903b8f",
+   "name": "Broadway Carpet & Runner",
+   "kind": "Organization",
+   "description": "Stair runners and carpet supply and installation."
+  },
+  {
+   "id": "party:e1683302f9fdc731b1b69a3f1df3e81fa5fa41353990dc17d7a0aaf75da086c5",
+   "name": "Michael Brenner",
+   "kind": "Person",
+   "description": "Departing tenant. Attended the move-out walk-through."
+  },
+  {
+   "id": "party:e226d0facf151979cf6c6a8932a9112cac606f420216905e65cea8203359d67e",
+   "name": "Carroll Stair & Millwork",
+   "kind": "Organization",
+   "description": "Stair, railing and millwork repair and refinishing."
+  },
+  {
+   "id": "party:34856fb43aac87d82edc55bef7570294002bf08e0b8ac68e4746aaf610d661a5",
+   "name": "Eleanor Whitcomb",
+   "kind": "Person",
+   "description": "Owner of 142 West 88th Street and principal of Whitcomb Holdings LLC."
+  }
+ ],
+ "agreements": [
+  {
+   "id": "agreement:af778779430f16bbafaadc5b24892d1c7d13476ac39384854be5126ea9d82f91",
+   "title": "Lease, renewal and September 2026 modification",
+   "termsText": "Return the apartment in its original condition, normal wear and tear excepted; the deposit may be applied to damage. As-is acceptance except latent defects. Pre-existing damage to be reported within two days of occupancy. Four named dogs permitted. Tenant pays half of water and gas. Walk-through within 48 hours of vacancy. Term ends September 23, 2026.",
+   "sourceDocumentId": "document:23020b5f14a28003c8397d5edfe5d3a411fb7258def17e3e65cfb58c311991a6"
+  }
+ ],
+ "obligations": [
+  {
+   "id": "obligation:01cd0afb7cd6818f6171912de24ac6f377c4e773fa80a56778ed8125adc944c6",
+   "title": "Return the apartment in its original condition",
+   "description": "Return the triplex in its original condition, normal wear and tear excepted.",
+   "status": "Under assessment"
+  },
+  {
+   "id": "obligation:f4cfe3243436867f934b0228e4c1360c901fdc0f2bbf12ae6802c2d967227e67",
+   "title": "Pay half of water and gas bills",
+   "description": "Pay one half of the water and gas bills within 30 days of receiving copies.",
+   "status": "Open"
+  }
+ ],
+ "documents": [
+  {
+   "id": "document:f2ece45c4ff8c697eea054869183cb23ad3d630b6f5a6b483ebf552683ee2976",
+   "title": "Westside Plaster & Paint: plaster, paint and woodwork",
+   "sourceKind": "Prepared",
+   "text": "Westside Plaster & Paint: plaster repair and soot cleanup in the great room, northeast bedroom and west master suite: $11,366.67. Paint walls, ceilings and trim throughout, including ceiling repairs at the light fixtures: $12,783.32. Restore woodwork and fireplaces: window sills, doorway casing, moldings, mantels, hearth tiles, foyer door veneer and the northeast bedroom door: $10,000. Bathroom repairs and caulking: tub chip repair and vanity panel: $3,762.50. Total $37,912.49. Deposit of $10,000 at start; balance on completion, payable within 14 days. About two weeks on site. Earliest start October 5. Offer valid through November 30, 2026.",
+   "kind": "Provider information",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-25",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:69bd4c71437f9fecba2520bec08a232e4d5d92e72ab8220b6a283f9d7508356b",
+   "title": "Property condition after work",
+   "sourceKind": "Prepared",
+   "text": "Parquet, inlay border and plank floors scratched, gouged and stained, with missing inlay pieces.: Deficient\nWindow sills, doorway casing, moldings and mantels stained, gouged or broken; foyer door veneer sheared.: Deficient\nDining-room hearth with missing and broken antique tiles.: Deficient\nNewel post, stair trim, top molding and rail edge chipped and damaged.: Deficient\nSoutheast bedroom loft-ladder railing pulled away with protruding nails. Unsafe.: Deficient\nStair runner edges torn; office carpet heavily stained.: Deficient\nNortheast bedroom door broken.: Deficient\nPlaster damage in the great room and northeast bedroom; soot staining in the west master suite.: Deficient\nCeiling damage in the east master bedroom, east bathroom and third-floor great room.: Deficient\nThird-floor tub porcelain chipped; vanity panel broken.: Deficient\nUrine odor in the west master suite, great room and other rooms.: Not checked",
+   "kind": "Property condition",
+   "sourceVersion": "2",
+   "mimeType": null,
+   "availableFrom": "2026-09-28",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:73a56511b5a24aba2d751879201d629aeb3af564fabebd21e3bfdda900640f95",
+   "title": "Invoice for Stair and railing repair",
+   "sourceKind": "Prepared",
+   "text": "Stair and railing repair: $1,500.00. Invoice on completion, payable within 14 days.",
+   "kind": "Invoice",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-30",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:e2ab62cc2ce0067fce79b0f980527aa55714e7326dd94b32af78497e022aa4f7",
+   "title": "Restoration assessment",
+   "sourceKind": "Prepared",
+   "text": "Restoration assessment. Site assessment: $600.00; Condition and quantity schedule: $300.00; Scope and budget note: $300.00. Invoice on delivery of the report, payable within 14 days.",
+   "kind": "Quote",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-26",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:7f75da9d341256250cb15c614e598057d71da27161250b830b9186759ba95803",
+   "title": "Condition and maintenance history",
+   "text": "Condition and maintenance history, compiled by Eleanor Whitcomb.\nBefore the tenancy: the apartment was painted and the floors redone in late 2022. Karen Liu's 2022 listing photographs show intact fireplace tiles and window woodwork, and good floors with a few dark spots and one diagonal scratch in the living room. A family stayed briefly over the 2022 holidays before the Brenners moved in on January 9, 2023.\nJune 11, 2024: Laura Brenner emailed 22 photographs of screens, a loose dining-room hearth, loose or broken tiles, missing molding and a small missing parquet piece, describing them as existing on arrival. None of this was reported within the two days required by rider \u00b614.\nComplaints during the tenancy: uneven room temperatures, a clogged toilet, a roof leak, weak dryer performance, bin lids and the intercom. Work done: screens repaired, window weather stripping and five temperature sensors added, a new intercom installed and the leaks repaired.\nJune 2024: during a screen inspection Eleanor found a dog accident on the floor; Laura apologized and cleaned it up.\nRepeated indoor grilling caused grease odors and set off smoke alarms. Eleanor asked the Brenners to stop.\nAugust 2026: Feld Architecture was hired about water in the kitchen. That repair is separate from the move-out work.",
+   "kind": "Condition report",
+   "sourceVersion": "5c149e1e93a03517597cc70af7db197f0c4e3a94e4afc587f25b1c39c3072c28",
+   "mimeType": null,
+   "availableFrom": "2026-09-25",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:ebf9edb212696ccee632a634c11207f8d8f2c6284dbe76ff0072f3dd8c91b2ba",
+   "title": "Carroll Stair & Millwork: stair and railing repair",
+   "sourceKind": "Prepared",
+   "text": "Carroll Stair & Millwork: repair and refinish the main stair, newel post, trim, top molding and rail edge: $9,000. Rebuild and secure the southeast bedroom loft-ladder railing: $1,500. Total $10,500. Invoice on completion, payable within 14 days. Two working days. We can make the loft-ladder railing safe as early as September 29. Offer valid through November 30, 2026.",
+   "kind": "Provider information",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-25",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:37620a8ed92bff53509738f0f55e12d0e01cd3bebd3d6e0a05e69e54261da455",
+   "title": "Restoration funds",
+   "sourceKind": "Prepared",
+   "text": "Whitcomb Holdings has set aside $65,000 for the move-out restoration of the triplex. This is separate from the Brenners' security deposit.",
+   "kind": "Owner funding",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-25",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:6dca799b5787180cc4b66b70d7ef911a446bbd33adf1fd0eb6f482aff26f2b9a",
+   "title": "Property condition after work",
+   "sourceKind": "Prepared",
+   "text": "Parquet, inlay border and plank floors scratched, gouged and stained, with missing inlay pieces.: Deficient\nWindow sills, doorway casing, moldings and mantels stained, gouged or broken; foyer door veneer sheared.: Deficient\nDining-room hearth with missing and broken antique tiles.: Deficient\nNewel post, stair trim, top molding and rail edge chipped and damaged.: Deficient\nSoutheast bedroom loft-ladder railing pulled away with protruding nails. Unsafe.: Satisfied\nStair runner edges torn; office carpet heavily stained.: Deficient\nNortheast bedroom door broken.: Deficient\nPlaster damage in the great room and northeast bedroom; soot staining in the west master suite.: Deficient\nCeiling damage in the east master bedroom, east bathroom and third-floor great room.: Deficient\nThird-floor tub porcelain chipped; vanity panel broken.: Deficient\nUrine odor in the west master suite, great room and other rooms.: Not checked",
+   "kind": "Property condition",
+   "sourceVersion": "3",
+   "mimeType": null,
+   "availableFrom": "2026-09-30",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:25eda71e466dcde28839efc9cb0a6faa56e416423cc27beb9eb26aa9a25e5bba",
+   "title": "Floor restoration",
+   "sourceKind": "Prepared",
+   "text": "Floor restoration. Sand and refinish parquet and plank floors: $5,400.00; Replace damaged parquet and inlay border pieces: $1,850.00; Treat and seal urine-stained plank floors: $769.00. Deposit of $2,000 on booking; balance on completion, payable within 7 days.",
+   "kind": "Quote",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-30",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:e052cbf39e5d5fe25352c4668f2567afa2df5bef4f0958ca43b7786be1023595",
+   "title": "Laura Brenner: apartment condition, June 11, 2024",
+   "sourceKind": "Prepared",
+   "sourceDocumentIds": [
+    "original:a55ab4cd1b7a6dae40033831490b312d4f4bea522d3a10120e77e9e7be1378d1"
+   ],
+   "text": "From: Laura Brenner\nTo: Eleanor Whitcomb\nDate: June 11, 2024\nSubject: Apartment condition\n\nAttached are photographs detailing the condition of the screens and other issues in the apartment, all of which were existing upon our arrival. I know you're aware of the terrace, the intercom/doorbell and perhaps others of these as well, but I've included everything that's not strictly cosmetic like the paint and wires. If you have questions about any of this please let me know.\n\nLaura\n\n22 photographs attached.",
+   "kind": "Correspondence",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2024-06-11",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:5c58d14ae774f43b67cfc69e960f7bbff0e7f7c63db281b6a101272f1a776245",
+   "title": "Hudson Floor Restoration: floor restoration",
+   "sourceKind": "Prepared",
+   "text": "Hudson Floor Restoration: restore the triplex floors, about 900 sq ft. Sand and refinish parquet and plank floors: $5,400. Replace damaged parquet and missing inlay border pieces with matched stock: $1,850. Treat and seal urine-stained plank floors: $769. Total $8,019. Deposit of $2,000 on booking; balance on completion, payable within 7 days. Three working days on site. Earliest start October 12. Offer valid through November 30, 2026.",
+   "kind": "Provider information",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-25",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:0a5ca0116780df4ce995c43b7d9e86cc9317ffee8b3237412f4bf02947edec90",
+   "title": "Plaster, paint and woodwork",
+   "sourceKind": "Prepared",
+   "text": "Plaster, paint and woodwork. Plaster repair and soot cleanup: $11,366.67; Paint walls, ceilings and trim: $12,783.32; Woodwork and fireplace restoration: $10,000.00; Bathroom repairs and caulking: $3,762.50. Deposit of $10,000 at start; balance on completion, payable within 14 days.",
+   "kind": "Quote",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-30",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:8b7b44e3d383eda1449abf8bbc6b27839cab1607c52221245173280b83e81f79",
+   "title": "Invoice for Restoration assessment",
+   "sourceKind": "Prepared",
+   "text": "Restoration assessment: $1,200.00. Invoice on delivery of the report, payable within 14 days.",
+   "kind": "Invoice",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-28",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:a32d4a0292c221f57a480a16e7345c50b11c70fff8bc40c3330c6172de0412e4",
+   "title": "Stair and railing repair \u2014 report",
+   "sourceKind": "Prepared",
+   "text": "Southeast bedroom loft-ladder railing pulled away with protruding nails. Unsafe.: Satisfied (Remove the damaged railing, rebuild and fasten it, and test it under load.)",
+   "kind": "Inspection",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-30",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:f29532c8d60b877dc68764157a9bd24036edae884d24398c9ccc6d6f7b621036",
+   "title": "Feld Architecture: restoration assessment",
+   "sourceKind": "Prepared",
+   "text": "Feld Architecture offers a restoration assessment of the triplex. One site visit of up to three hours. We produce a room-by-room condition schedule with photographs and measurements, a written scope of repairs with a preliminary budget, and flag any immediate safety issues. Fixed fee: site assessment $600; condition and quantity schedule $300; scope and budget note $300; total $1,200 including travel. Earliest visit Monday, September 28. Report within two business days of the visit. Invoice on delivery of the report, payable within 14 days. Kitchen water work is covered under our separate engagement and is excluded. Offer valid through October 31, 2026.",
+   "kind": "Provider information",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-25",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:8651d6d4e99ca37deadfe92fe24af427e5634b8e40281a2a76190b1d957aed0a",
+   "title": "Move-out walk-through, September 24, 2026",
+   "text": "Move-out walk-through, September 24, 2026. Present: Eleanor Whitcomb (owner), Michael Brenner (tenant), Karen Liu (broker) and Paul Novak. Eleanor took 60 photographs; Paul recorded a video.\nEntrance and stairs: front step chipped; saddle past the vestibule gouged with a broken corner; common-foyer mahogany door with veneer sheared off one section; newel post chipped and gouged; stair carpet edges scraped and torn on several steps; top molding and rail edge damaged between the second and third floors.\nLiving room: parquet scraped, scratched and gouged; decorative border missing inlay pieces and stained; finish worn through in places.\nDining room: paint blotches, gouges and a large stain on the parquet; damaged parquet corners; antique hearth tiles missing and broken; mahogany mantel damaged; a large piece of the doorway casing damaged or missing.\nOffice: carpet heavily stained; floor scratched. Mahogany window sills throughout: stains, ring marks and gouges.\nWest master suite: large dark stains on the plank floor, including in front of the fireplace, with a urine odor; scrapes and gouges; soot staining on the wall, ceiling, mantel and shelving; a deep gouge in the molding.\nEast master bedroom: ceiling damaged where the period chandeliers were replaced with the tenants' fixtures. East bathroom ceiling stained and damaged.\nThird floor: southeast bedroom loft-ladder railing pulled away, with protruding nails and torn wood; not safe to use. Northeast storage-ladder railing scraped. Northeast bedroom plank floor with a dark urine stain; bedroom door broken and the plaster behind it damaged. Bathroom tub porcelain chipped and vanity panel broken. Great-room plank floor heavily stained and gouged with a urine odor; plaster damage and staining down one wall; ceiling damaged around the light fixtures.\nKaren Liu also noted odors in several rooms.",
+   "kind": "Inspection report",
+   "sourceVersion": "515ab0f9abf9d0125d88f0c95dbb2e829a0d9c7dba32b210c4fc8591ef927e96",
+   "mimeType": null,
+   "availableFrom": "2026-09-24",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:23020b5f14a28003c8397d5edfe5d3a411fb7258def17e3e65cfb58c311991a6",
+   "title": "Lease, renewal and September 2026 modification",
+   "sourceKind": "Prepared",
+   "sourceDocumentIds": [
+    "original:415b51e3825a447832538473bd9469e4643f26a408a580b3b9e37c0ccc513ebd"
+   ],
+   "text": "Residential lease, 142 West 88th Street, Triplex. Landlord: Whitcomb Holdings LLC. Tenants: Laura and Michael Brenner. Signed November 22, 2022. Initial term January 1, 2023 to June 30, 2024. Renewed April 9, 2024 through June 30, 2027. Modified September 2, 2026 to end on September 23, 2026. Security deposit held by landlord: $43,800.\nLease \u00b631: Tenant has inspected the apartment and building, states they are in good order and repair, and takes the apartment as-is except for latent defects.\nRider \u00b64: Tenant pays one half of the water and gas bills within 30 days of receiving copies from the landlord.\nRider \u00b66: Tenant returns the apartment in its original condition, normal wear and tear excepted. Landlord may apply the security deposit to damage.\nRider \u00b614: Tenant must inform landlord of any pre-existing damage within two days of occupancy.\nRider \u00b639: Landlord permits the tenant's four existing dogs: two small mixed-breed dogs, one bulldog and one miniature dachshund. No additional pets without the landlord's prior permission.\nModification \u00b68: Landlord and tenant walk through the apartment for damage within 48 hours of vacancy.",
+   "kind": "Agreement",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-02",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:6f597c2c18912b6bab4ba180528ef1a5eca18c6b2faf090ccde208c324efb147",
+   "title": "Owner instructions",
+   "text": "From Eleanor Whitcomb, September 25, 2026.\nI want the triplex back on the market as soon as possible, ideally showing by late October for a December 1 move-in.\nHave Feld Architecture walk the apartment first and give me a condition schedule and a scope with a budget before we commit to repairs. Then line up the trades.\nThe loft-ladder railing is dangerous. Keep everyone off that ladder until it is fixed.\nThe kitchen water repair is a separate job Feld is already handling. Keep it out of this.\nYou can approve work within the funds I've set aside; I don't need to sign each contract. Deal with the contractors directly.\nI'll settle the Brenners' deposit separately once we know what the damage costs.",
+   "kind": "Instruction",
+   "sourceVersion": "1bac1ab2cb4726ac33259dad7ba1793cc3e0cfef96eb886eb79d60f17be00236",
+   "mimeType": null,
+   "availableFrom": "2026-09-25",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:dcf1ef76b773739c9ffa252ace7733edbde2cb3ac519d44578b476f9b91007cb",
+   "title": "Broadway Carpet & Runner: stair runner and office carpet",
+   "sourceKind": "Prepared",
+   "text": "Broadway Carpet & Runner: supply and install a new stair runner: $2,500. Replace the office carpet: $2,257.84. Total $4,757.84. Payment on installation, due within 14 days. One day on site, after floor work is finished. Earliest date October 19. Offer valid through November 30, 2026.",
+   "kind": "Provider information",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-25",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:acf9655dfc1f6e51f8654a567e1c5a0e9a516ee10990b00467c62e24332e759e",
+   "title": "Stair runner and office carpet",
+   "sourceKind": "Prepared",
+   "text": "Stair runner and office carpet. Supply and install stair runner: $2,500.00; Replace office carpet: $2,257.84. Payment on installation, due within 14 days.",
+   "kind": "Quote",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-30",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:549707ffad4d85bc710dbd1f75eb0964f6d6559f7d0fa7c103a5e474ea92d533",
+   "title": "Restoration assessment \u2014 report",
+   "sourceKind": "Prepared",
+   "text": "Parquet, inlay border and plank floors scratched, gouged and stained, with missing inlay pieces.: Deficient; Window sills, doorway casing, moldings and mantels stained, gouged or broken; foyer door veneer sheared.: Deficient; Dining-room hearth with missing and broken antique tiles.: Deficient; Newel post, stair trim, top molding and rail edge chipped and damaged.: Deficient; Southeast bedroom loft-ladder railing pulled away with protruding nails. Unsafe.: Deficient; Stair runner edges torn; office carpet heavily stained.: Deficient; Northeast bedroom door broken.: Deficient; Plaster damage in the great room and northeast bedroom; soot staining in the west master suite.: Deficient; Ceiling damage in the east master bedroom, east bathroom and third-floor great room.: Deficient; Third-floor tub porcelain chipped; vanity panel broken.: Deficient; Urine odor in the west master suite, great room and other rooms.: Not checked (Inspect every room, photograph and measure each condition, and flag safety issues.)\nParquet, inlay border and plank floors scratched, gouged and stained, with missing inlay pieces.: Deficient; Window sills, doorway casing, moldings and mantels stained, gouged or broken; foyer door veneer sheared.: Deficient; Dining-room hearth with missing and broken antique tiles.: Deficient; Newel post, stair trim, top molding and rail edge chipped and damaged.: Deficient; Southeast bedroom loft-ladder railing pulled away with protruding nails. Unsafe.: Deficient; Stair runner edges torn; office carpet heavily stained.: Deficient; Northeast bedroom door broken.: Deficient; Plaster damage in the great room and northeast bedroom; soot staining in the west master suite.: Deficient; Ceiling damage in the east master bedroom, east bathroom and third-floor great room.: Deficient; Third-floor tub porcelain chipped; vanity panel broken.: Deficient; Urine odor in the west master suite, great room and other rooms.: Not checked (Room-by-room schedule of conditions with quantities.)\nParquet, inlay border and plank floors scratched, gouged and stained, with missing inlay pieces.: Deficient; Window sills, doorway casing, moldings and mantels stained, gouged or broken; foyer door veneer sheared.: Deficient; Dining-room hearth with missing and broken antique tiles.: Deficient; Newel post, stair trim, top molding and rail edge chipped and damaged.: Deficient; Southeast bedroom loft-ladder railing pulled away with protruding nails. Unsafe.: Deficient; Stair runner edges torn; office carpet heavily stained.: Deficient; Northeast bedroom door broken.: Deficient; Plaster damage in the great room and northeast bedroom; soot staining in the west master suite.: Deficient; Ceiling damage in the east master bedroom, east bathroom and third-floor great room.: Deficient; Third-floor tub porcelain chipped; vanity panel broken.: Deficient; Urine odor in the west master suite, great room and other rooms.: Not checked (Written repair scope by trade with a preliminary budget.)",
+   "kind": "Inspection",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-28",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:550bda4445936e78bbd0028ef2c41c4fb05ef795e2bd78ea783aa7ee9042796d",
+   "title": "Condition after move-out",
+   "sourceKind": "Prepared",
+   "text": "Conditions found at the September 24 walk-through, by area.",
+   "kind": "Property condition",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-24",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:9e3ffc29b4251897beaaf4bc8d782abaa1971ddf9209dd3911bb6d700f332204",
+   "title": "Access arrangements",
+   "text": "The apartment is empty. Eleanor holds the keys and lets contractors in for agreed visits; call her the day before. Power, heat and water are on. Keep off the southeast bedroom loft ladder until the railing is repaired. Contractors protect the floors and stairs while they work.",
+   "kind": "Access arrangements",
+   "sourceVersion": "592a1c6d4cb779bf5acaf8638c94953614d6f8dda7eb9eaf523a3f08d1d6d37e",
+   "mimeType": null,
+   "availableFrom": "2026-09-25",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:65832829997b06f30a6fb120878486576d9a0f27310d7053ade55533b20914fc",
+   "title": "Stair and railing repair",
+   "sourceKind": "Prepared",
+   "text": "Stair and railing repair. Repair and refinish stair, newel, trim and rail edge: $9,000.00; Rebuild and secure loft-ladder railing: $1,500.00. Invoice on completion, payable within 14 days.",
+   "kind": "Quote",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-26",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "original:a55ab4cd1b7a6dae40033831490b312d4f4bea522d3a10120e77e9e7be1378d1",
+   "title": "Laura Brenner email, June 11, 2024.pdf",
+   "sourceKind": "Original",
+   "text": "Open the attached file.",
+   "kind": "Contextual material",
+   "sourceVersion": "1790475030701176",
+   "mimeType": "application/pdf",
+   "availableFrom": "2026-09-26",
+   "mediaSetRid": "ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427",
+   "mediaItemRid": "ri.mio.main.media-item.01a0e0a0-d0a1-73e2-b892-fa06d06b39be",
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "original:415b51e3825a447832538473bd9469e4643f26a408a580b3b9e37c0ccc513ebd",
+   "title": "Lease, 142 West 88th Street.pdf",
+   "sourceKind": "Original",
+   "text": "Open the attached file.",
+   "kind": "Contextual material",
+   "sourceVersion": "1790475029305504",
+   "mimeType": "application/pdf",
+   "availableFrom": "2026-09-26",
+   "mediaSetRid": "ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427",
+   "mediaItemRid": "ri.mio.main.media-item.01a0e0a0-cb39-7263-b035-4d07fe9c3ac5",
+   "pageStart": null,
+   "pageEnd": null
+  }
+ ],
+ "workPlan": {
+  "id": "plan:a8c47194618e4e7aca3b5cadb946d9a83b71c7fab40b4754b7a9c75d8f3c52b6",
+  "revision": "2",
+  "status": "Ready",
+  "title": "Move-out restoration: finishing + floors + remaining stair repair + stair runner/office carpet (kitchen water excluded)",
+  "summary": "Authorize the core move-out restoration trades to make the triplex clean, safe, and show-ready for late-October showings: (1) plaster/soot cleanup, painting, woodwork/fireplace and bathroom repairs; (2) floor restoration including inlay repairs and urine-stain sealing; (3) repair/refinish remaining stair/newel/trim damage (not the already-completed loft-ladder railing); and (4) install new stair runner and replace office carpet after floors are finished.",
+  "desiredOutcome": "Restore the triplex to a clean, safe, market-ready condition for the next occupant and late-October showings, while keeping the separate kitchen water repair out of the move-out scope and avoiding duplicate work (the loft-ladder railing safety repair is already complete).",
+  "scope": [
+   "Plaster repair and soot cleanup in areas documented as damaged/stained at move-out (including patching/skim-coating where needed) to prepare surfaces for painting; exclude kitchen water repair.",
+   "Paint walls, ceilings and trim throughout the triplex, including repairing/finishing ceiling and wall damage around light fixtures noted at move-out; exclude kitchen water repair.",
+   "Woodwork and fireplace restoration to address stained/gouged/broken window sills, moldings, door casing/millwork, mantels, and related trim noted at move-out; exclude kitchen water repair.",
+   "Bathroom repairs and caulking including repairing the chipped tub porcelain and broken vanity panel noted at move-out (as applicable), plus associated touch-ups; exclude kitchen water repair.",
+   "Sand and refinish parquet and plank floors throughout the triplex to remove scratches/wear and restore finish; coordinate timing after heavy plaster/paint/woodwork work; exclude kitchen water repair.",
+   "Replace damaged parquet and missing inlay border pieces documented at move-out, blending repairs into refinished floors; exclude kitchen water repair.",
+   "Treat and seal urine-stained plank floors in affected rooms to reduce staining and odor transfer, as part of floor restoration; exclude kitchen water repair.",
+   "Repair and refinish stair, newel, trim, and rail edge areas documented as chipped/gouged/damaged; exclude the SE bedroom loft-ladder railing (already completed) and exclude kitchen water repair.",
+   "Supply and install new stair runner after floor finishing is complete; exclude kitchen water repair.",
+   "Replace office carpet after floor work is complete/cleared, coordinating with other trades; exclude kitchen water repair."
+  ],
+  "estimatedCostCents": "5968933",
+  "budgetCents": "6500000",
+  "currency": "USD",
+  "fixedRequirements": [
+   "Keep the kitchen water repair separate from the move-out restoration."
+  ],
+  "rationale": "The move-out condition notes and the latest post-work condition update show multiple remaining deficiencies (floors, woodwork/hearth items, stairs, carpets, plaster/ceilings, bathroom items). With the loft-ladder railing now marked satisfied, we can proceed with the remaining stair work without re-ordering the safety repair. The combined quoted scope fits within the owner\u2019s stated restoration funds and supports the goal of getting the unit back on the market quickly.",
+  "sourceDocumentIds": [
+   "document:6f597c2c18912b6bab4ba180528ef1a5eca18c6b2faf090ccde208c324efb147",
+   "document:37620a8ed92bff53509738f0f55e12d0e01cd3bebd3d6e0a05e69e54261da455",
+   "document:550bda4445936e78bbd0028ef2c41c4fb05ef795e2bd78ea783aa7ee9042796d",
+   "document:6dca799b5787180cc4b66b70d7ef911a446bbd33adf1fd0eb6f482aff26f2b9a",
+   "document:0a5ca0116780df4ce995c43b7d9e86cc9317ffee8b3237412f4bf02947edec90",
+   "document:25eda71e466dcde28839efc9cb0a6faa56e416423cc27beb9eb26aa9a25e5bba",
+   "document:acf9655dfc1f6e51f8654a567e1c5a0e9a516ee10990b00467c62e24332e759e",
+   "document:65832829997b06f30a6fb120878486576d9a0f27310d7053ade55533b20914fc",
+   "document:a32d4a0292c221f57a480a16e7345c50b11c70fff8bc40c3330c6172de0412e4",
+   "document:73a56511b5a24aba2d751879201d629aeb3af564fabebd21e3bfdda900640f95",
+   "document:549707ffad4d85bc710dbd1f75eb0964f6d6559f7d0fa7c103a5e474ea92d533"
+  ],
+  "providerPartyId": "party:bd07d929e76157ed8e8e559fe06c64b27112659d55395a0c748ef7abeed49642",
+  "acceptedDecisionId": null,
+  "selections": [
+   {
+    "quoteId": "quote:e1640af4559d11c25df441673e1b9b3c0daf99abb0f411f0f4ac60c62c983d69",
+    "quoteLineId": "plaster",
+    "scope": "Plaster repair and soot cleanup in areas documented as damaged/stained at move-out (including patching/skim-coating where needed) to prepare surfaces for painting; exclude kitchen water repair.",
+    "reason": "Needed to address documented plaster damage and soot staining so the unit can be painted and shown; keeps the kitchen water project out of scope (per owner requirement)."
+   },
+   {
+    "quoteId": "quote:e1640af4559d11c25df441673e1b9b3c0daf99abb0f411f0f4ac60c62c983d69",
+    "quoteLineId": "paint",
+    "scope": "Paint walls, ceilings and trim throughout the triplex, including repairing/finishing ceiling and wall damage around light fixtures noted at move-out; exclude kitchen water repair.",
+    "reason": "Needed to address ceiling/light-fixture damage and restore a consistent finish for showings; matches the quoted paint scope and stays separate from kitchen water work."
+   },
+   {
+    "quoteId": "quote:e1640af4559d11c25df441673e1b9b3c0daf99abb0f411f0f4ac60c62c983d69",
+    "quoteLineId": "woodwork",
+    "scope": "Woodwork and fireplace restoration to address stained/gouged/broken window sills, moldings, door casing/millwork, mantels, and related trim noted at move-out; exclude kitchen water repair.",
+    "reason": "Directly targets the documented damage to historic woodwork/millwork and fireplace surrounds that materially affects marketability; excludes kitchen water work."
+   },
+   {
+    "quoteId": "quote:e1640af4559d11c25df441673e1b9b3c0daf99abb0f411f0f4ac60c62c983d69",
+    "quoteLineId": "bath",
+    "scope": "Bathroom repairs and caulking including repairing the chipped tub porcelain and broken vanity panel noted at move-out (as applicable), plus associated touch-ups; exclude kitchen water repair.",
+    "reason": "Brings bathrooms back to a clean, usable turnover condition based on the documented tub/vanity defects; excludes kitchen water work."
+   },
+   {
+    "quoteId": "quote:9df269a8a12702031b0b725a17341f81cd0e6deb048d02f47ea76f60583106e0",
+    "quoteLineId": "sand-refinish",
+    "scope": "Sand and refinish parquet and plank floors throughout the triplex to remove scratches/wear and restore finish; coordinate timing after heavy plaster/paint/woodwork work; exclude kitchen water repair.",
+    "reason": "Floors are documented as scratched/gouged/worn; refinishing is a core turnover item and should be sequenced to avoid damage from heavier work; excludes kitchen water work."
+   },
+   {
+    "quoteId": "quote:9df269a8a12702031b0b725a17341f81cd0e6deb048d02f47ea76f60583106e0",
+    "quoteLineId": "parquet-inlay",
+    "scope": "Replace damaged parquet and missing inlay border pieces documented at move-out, blending repairs into refinished floors; exclude kitchen water repair.",
+    "reason": "Move-out documentation notes missing inlay and damaged parquet; this line specifically covers the inlay/parquet repairs needed for a finished look; excludes kitchen water work."
+   },
+   {
+    "quoteId": "quote:9df269a8a12702031b0b725a17341f81cd0e6deb048d02f47ea76f60583106e0",
+    "quoteLineId": "stain-seal",
+    "scope": "Treat and seal urine-stained plank floors in affected rooms to reduce staining and odor transfer, as part of floor restoration; exclude kitchen water repair.",
+    "reason": "Dark stains and urine odor were noted at move-out; this is the included floor-level treatment step to help block staining/odor transfer as part of refinishing; excludes kitchen water work."
+   },
+   {
+    "quoteId": "quote:2bb6d0435d1f366d025d97dc3aad2877d60d704c38a8cf7e14277802caf01d17",
+    "quoteLineId": "stair",
+    "scope": "Repair and refinish stair, newel, trim, and rail edge areas documented as chipped/gouged/damaged; exclude the SE bedroom loft-ladder railing (already completed) and exclude kitchen water repair.",
+    "reason": "Latest condition update shows the loft-ladder railing is already satisfied, but stair/newel/trim damage remains; this completes the remaining stair scope without duplicating completed safety work; excludes kitchen water work."
+   },
+   {
+    "quoteId": "quote:db28919e310bdeebc62854875cf41c2d539b14fae987059a5bac6714b79a60dc",
+    "quoteLineId": "runner",
+    "scope": "Supply and install new stair runner after floor finishing is complete; exclude kitchen water repair.",
+    "reason": "Stair runner edges were documented as torn/scraped; replacement improves safety/appearance and should occur after floor finishing; excludes kitchen water work."
+   },
+   {
+    "quoteId": "quote:db28919e310bdeebc62854875cf41c2d539b14fae987059a5bac6714b79a60dc",
+    "quoteLineId": "office",
+    "scope": "Replace office carpet after floor work is complete/cleared, coordinating with other trades; exclude kitchen water repair.",
+    "reason": "Office carpet was documented as heavily stained; replacement improves cleanliness and showability and should be done after floor work; excludes kitchen water work."
+   }
+  ],
+  "fixedProviderPartyId": null
+ },
+ "decisions": [
+  {
+   "id": "decision:dcd1743f9a448a8358140ac4cf6ad6896b17d22d8c62f61c8977caf78b14ba8a",
+   "title": "Work plan accepted",
+   "workPlanId": "plan:3f46ba06fbdd524ef94e5290e8609db3d3364ce66ebea219aecbc41c8a67f9c6",
+   "revision": "1",
+   "by": "Owen Wassmer",
+   "at": "2026-09-27T03:36:42.73Z",
+   "budgetCents": "270000",
+   "currency": "USD",
+   "content": {
+    "title": "Move-out restoration: assessment + immediate loft-ladder railing safety repair (kitchen water excluded)",
+    "summary": "Authorize Feld Architecture to complete the move-out restoration assessment package, and authorize Carroll Stair & Millwork to complete the standalone SE bedroom loft-ladder railing safety repair immediately. Both are part of move-out restoration planning/safety and exclude the separate kitchen water repair.",
+    "desiredOutcome": "Create a clear, trade-ready scope and budget for the full move-out restoration while immediately removing the known safety hazard at the SE bedroom loft ladder, without mixing in the separate kitchen water repair.",
+    "scope": [
+     "Schedule and perform on-site move-out restoration assessment walkthrough of the triplex (excluding kitchen water repair), documenting observed deficiencies and immediate safety issues.",
+     "Deliver a written condition and quantity schedule for move-out restoration items (excluding kitchen water work).",
+     "Provide a scope and budget note for the move-out restoration based on the site assessment and condition schedule (excluding kitchen water work).",
+     "Rebuild and secure the SE bedroom loft-ladder railing so it is structurally sound and safe to use; remove/secure protruding nails and torn wood; leave the area safe and usable."
+    ],
+    "estimatedCostCents": "270000",
+    "budgetCents": "270000",
+    "currency": "USD",
+    "fixedRequirements": [
+     "Keep the kitchen water repair separate from the move-out restoration.",
+     "Proceed with the SE bedroom loft-ladder railing safety repair as an exception to the \u2018assess first\u2019 approach, due to the immediate hazard noted at move-out."
+    ],
+    "rationale": "Owner direction is to have Feld assess and produce a condition schedule and budget before committing to broad repairs, but the SE bedroom loft-ladder railing was documented at move-out as pulled away with protruding nails and unsafe; repairing that immediately reduces risk and supports safe access for upcoming work. These two items are low-cost relative to the restoration fund set-aside and keep the kitchen water repair out of scope.",
+    "sourceDocumentIds": [
+     "document:6f597c2c18912b6bab4ba180528ef1a5eca18c6b2faf090ccde208c324efb147",
+     "document:37620a8ed92bff53509738f0f55e12d0e01cd3bebd3d6e0a05e69e54261da455",
+     "document:8651d6d4e99ca37deadfe92fe24af427e5634b8e40281a2a76190b1d957aed0a",
+     "document:550bda4445936e78bbd0028ef2c41c4fb05ef795e2bd78ea783aa7ee9042796d",
+     "document:9e3ffc29b4251897beaaf4bc8d782abaa1971ddf9209dd3911bb6d700f332204",
+     "document:e2ab62cc2ce0067fce79b0f980527aa55714e7326dd94b32af78497e022aa4f7",
+     "document:65832829997b06f30a6fb120878486576d9a0f27310d7053ade55533b20914fc"
+    ],
+    "providerPartyId": "party:bd07d929e76157ed8e8e559fe06c64b27112659d55395a0c748ef7abeed49642",
+    "id": "plan:3f46ba06fbdd524ef94e5290e8609db3d3364ce66ebea219aecbc41c8a67f9c6",
+    "revision": "1",
+    "status": "Accepted",
+    "acceptedDecisionId": "decision:dcd1743f9a448a8358140ac4cf6ad6896b17d22d8c62f61c8977caf78b14ba8a",
+    "selections": [
+     {
+      "quoteId": "quote:21787933e6343d7b499d960f55e4c305246744ceaf27b428286a0309b94656f5",
+      "quoteLineId": "site-assessment",
+      "scope": "Schedule and perform on-site move-out restoration assessment walkthrough of the triplex (excluding kitchen water repair), documenting observed deficiencies and immediate safety issues.",
+      "reason": "Matches the owner\u2019s direction to have Feld walk first before broader commitments, and the assessment quote explicitly excludes kitchen water work."
+     },
+     {
+      "quoteId": "quote:21787933e6343d7b499d960f55e4c305246744ceaf27b428286a0309b94656f5",
+      "quoteLineId": "condition-schedule",
+      "scope": "Deliver a written condition and quantity schedule for move-out restoration items (excluding kitchen water work).",
+      "reason": "Needed to translate the move-out findings into itemized, trade-ready quantities so we can line up finishing, flooring, millwork, etc., for late-October showings."
+     },
+     {
+      "quoteId": "quote:21787933e6343d7b499d960f55e4c305246744ceaf27b428286a0309b94656f5",
+      "quoteLineId": "scope-budget",
+      "scope": "Provide a scope and budget note for the move-out restoration based on the site assessment and condition schedule (excluding kitchen water work).",
+      "reason": "Provides the budget framework to prioritize and authorize the next round of restoration work within the move-out restoration funds set aside."
+     },
+     {
+      "quoteId": "quote:2bb6d0435d1f366d025d97dc3aad2877d60d704c38a8cf7e14277802caf01d17",
+      "quoteLineId": "loft-railing",
+      "scope": "Rebuild and secure the SE bedroom loft-ladder railing so it is structurally sound and safe to use; remove/secure protruding nails and torn wood; leave the area safe and usable.",
+      "reason": "The move-out walk-through documented this as unsafe with protruding nails; addressing it now reduces risk and supports safe access for subsequent work, consistent with the owner\u2019s safety instruction."
+     }
+    ],
+    "fixedProviderPartyId": null
+   }
+  }
+ ],
+ "messages": [
+  {
+   "id": "message:0dae02d5a8f35ea3a2ba4e1a4f40c126aa7d0aff36f56ca5aeecaecb1d16cbe2",
+   "title": "Information requested",
+   "body": "You instructed Feld to assess before we commit to repairs, but the SE bedroom loft-ladder railing is unsafe. Do you want us to proceed immediately with just the loft-ladder railing safety repair as an exception (still keeping kitchen water repair separate), or wait until after Feld\u2019s assessment?",
+   "recipientPartyId": "party:34856fb43aac87d82edc55bef7570294002bf08e0b8ac68e4746aaf610d661a5",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-27T02:27:24.041Z"
+  },
+  {
+   "id": "message:1f39ce9a246ba56f277d0adcd42f118593c5557de19ae10780b6c14759266e9e",
+   "title": "Quote for Stair and railing repair",
+   "body": "Please provide a firm quote and earliest scheduling specifically to rebuild/secure the SE bedroom loft-ladder railing (safety repair). If possible, provide this as a standalone line item separable from any broader stair/newel/trim refinishing work. Confirm expected duration and access needs.",
+   "recipientPartyId": "party:e226d0facf151979cf6c6a8932a9112cac606f420216905e65cea8203359d67e",
+   "purpose": "Quote",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-27T02:27:24.041Z"
+  },
+  {
+   "id": "message:3e3afcdf9128d3a38d5a4ba47c2df3f3f18d3bce31de5eb9c370dc7c101f1b62",
+   "title": "Quote for Restoration assessment",
+   "body": "Please confirm a firm quote and earliest scheduling for the \u2018Restoration assessment\u2019 (site visit + condition/quantity schedule + scope/budget note) for the triplex move-out restoration. Please confirm kitchen water work is excluded and that you will flag immediate safety issues (including the SE bedroom loft-ladder railing).",
+   "recipientPartyId": "party:96706a1ef99394c09c469dcceb8c90a7b232619149f0e8946bca2e1ba3278538",
+   "purpose": "Quote",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-27T02:27:24.041Z"
+  },
+  {
+   "id": "message:a0bcbf075fc31d4f1946b8e6adf9de05938eefa93d26a70a37bdb1a6d4bdb7f1",
+   "title": "Reply received",
+   "body": "Condition and maintenance history: Condition and maintenance history, compiled by Eleanor Whitcomb.\nBefore the tenancy: the apartment was painted and the floors redone in late 2022. Karen Liu's 2022 listing photographs show intact fireplace tiles and window woodwork, and good floors with a few dark spots and one diagonal scratch in the living room. A family stayed briefly over the 2022 holidays before the Brenners moved in on January 9, 2023.\nJune 11, 2024: Laura Brenner emailed 22 photographs of screens, a loose dining-room hearth, loose or broken tiles, missing molding and a small missing parquet piece, describing them as existing on arrival. None of this was reported within the two days required by rider \u00b614.\nComplaints during the tenancy: uneven room temperatures, a clogged toilet, a roof leak, weak dryer performance, bin lids and the intercom. Work done: screens repaired, window weather stripping and five temperature sensors added, a new intercom installed and the leaks repaired.\nJune 2024: during a screen inspection Eleanor found a dog accident on the floor; Laura apologized and cleaned it up.\nRepeated indoor grilling caused grease odors and set off smoke alarms. Eleanor asked the Brenners to stop.\nAugust 2026: Feld Architecture was hired about water in the kitchen. That repair is separate from the move-out work.\nMove-out walk-through, September 24, 2026: Move-out walk-through, September 24, 2026. Present: Eleanor Whitcomb (owner), Michael Brenner (tenant), Karen Liu (broker) and Paul Novak. Eleanor took 60 photographs; Paul recorded a video.\nEntrance and stairs: front step chipped; saddle past the vestibule gouged with a broken corner; common-foyer mahogany door with veneer sheared off one section; newel post chipped and gouged; stair carpet edges scraped and torn on several steps; top molding and rail edge damaged between the second and third floors.\nLiving room: parquet scraped, scratched and gouged; decorative border missing inlay pieces and stained; finish worn through in places.\nDining room: paint blotches, gouges and a large stain on the parquet; damaged parquet corners; antique hearth tiles missing and broken; mahogany mantel damaged; a large piece of the doorway casing damaged or missing.\nOffice: carpet heavily stained; floor scratched. Mahogany window sills throughout: stains, ring marks and gouges.\nWest master suite: large dark stains on the plank floor, including in front of the fireplace, with a urine odor; scrapes and gouges; soot staining on the wall, ceiling, mantel and shelving; a deep gouge in the molding.\nEast master bedroom: ceiling damaged where the period chandeliers were replaced with the tenants' fixtures. East bathroom ceiling stained and damaged.\nThird floor: southeast bedroom loft-ladder railing pulled away, with protruding nails and torn wood; not safe to use. Northeast storage-ladder railing scraped. Northeast bedroom plank floor with a dark urine stain; bedroom door broken and the plaster behind it damaged. Bathroom tub porcelain chipped and vanity panel broken. Great-room plank floor heavily stained and gouged with a urine odor; plaster damage and staining down one wall; ceiling damaged around the light fixtures.\nKaren Liu also noted odors in several rooms.\nOwner instructions: From Eleanor Whitcomb, September 25, 2026.\nI want the triplex back on the market as soon as possible, ideally showing by late October for a December 1 move-in.\nHave Feld Architecture walk the apartment first and give me a condition schedule and a scope with a budget before we commit to repairs. Then line up the trades.\nThe loft-ladder railing is dangerous. Keep everyone off that ladder until it is fixed.\nThe kitchen water repair is a separate job Feld is already handling. Keep it out of this.\nYou can approve work within the funds I've set aside; I don't need to sign each contract. Deal with the contractors directly.\nI'll settle the Brenners' deposit separately once we know what the damage costs.\nAccess arrangements: The apartment is empty. Eleanor holds the keys and lets contractors in for agreed visits; call her the day before. Power, heat and water are on. Keep off the southeast bedroom loft ladder until the railing is repaired. Contractors protect the floors and stairs while they work.",
+   "recipientPartyId": "party:34856fb43aac87d82edc55bef7570294002bf08e0b8ac68e4746aaf610d661a5",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:0dae02d5a8f35ea3a2ba4e1a4f40c126aa7d0aff36f56ca5aeecaecb1d16cbe2",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-27T02:28:24.184Z"
+  },
+  {
+   "id": "message:9088ede148f454c1df172d7f452cd400fe8f332196d95fd91d1c02cc1857c29d",
+   "title": "Provider offer received",
+   "body": "Stair and railing repair. Repair and refinish stair, newel, trim and rail edge: $9,000.00; Rebuild and secure loft-ladder railing: $1,500.00. Invoice on completion, payable within 14 days.",
+   "recipientPartyId": "party:e226d0facf151979cf6c6a8932a9112cac606f420216905e65cea8203359d67e",
+   "purpose": "Quote",
+   "jobId": null,
+   "replyToMessageId": "message:1f39ce9a246ba56f277d0adcd42f118593c5557de19ae10780b6c14759266e9e",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-27T02:32:24.122Z"
+  },
+  {
+   "id": "message:d636702e9d43500b03255ed4c7146e9c2516dabeada111dfd730d4fdd845857e",
+   "title": "Provider offer received",
+   "body": "Restoration assessment. Site assessment: $600.00; Condition and quantity schedule: $300.00; Scope and budget note: $300.00. Invoice on delivery of the report, payable within 14 days.",
+   "recipientPartyId": "party:96706a1ef99394c09c469dcceb8c90a7b232619149f0e8946bca2e1ba3278538",
+   "purpose": "Quote",
+   "jobId": null,
+   "replyToMessageId": "message:3e3afcdf9128d3a38d5a4ba47c2df3f3f18d3bce31de5eb9c370dc7c101f1b62",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-27T02:32:32.123Z"
+  },
+  {
+   "id": "message:d47c870cf1336458c6ec38435f1e34b2713330f46805f9b533fd872dead5620f",
+   "title": "Owen Wassmer to Handoff",
+   "body": "Please go ahead with the accepted work.",
+   "recipientPartyId": null,
+   "purpose": "Discussion",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Operator",
+   "status": "Received",
+   "createdAt": "2026-09-27T18:43:46.367Z"
+  },
+  {
+   "id": "message:4926ca5c21afab34d9350cac936ee30cfbf525d894231efa08c733640c3161ba",
+   "title": "Arrange Restoration assessment",
+   "body": "Site assessment\nCondition and quantity schedule\nScope and budget note\nKeep the kitchen water repair separate from the move-out restoration.\nProceed with the SE bedroom loft-ladder railing safety repair as an exception to the \u2018assess first\u2019 approach, due to the immediate hazard noted at move-out.\nPlease confirm these requirements when you book the visit.\nInvoice on delivery of the report, payable within 14 days.",
+   "recipientPartyId": "party:96706a1ef99394c09c469dcceb8c90a7b232619149f0e8946bca2e1ba3278538",
+   "purpose": "Appointment",
+   "jobId": "job:cc85bce4c6adf5751d7802636e6e22bf1d2d445a75b27ad6dc4bd65511d13c91",
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-27T18:43:53.251Z"
+  },
+  {
+   "id": "message:7a42e82b3d0e565575df869c866fb01e13fc57ccd8d25608bfc83928357bba30",
+   "title": "Arrange Stair and railing repair",
+   "body": "Rebuild and secure loft-ladder railing\nKeep the kitchen water repair separate from the move-out restoration.\nProceed with the SE bedroom loft-ladder railing safety repair as an exception to the \u2018assess first\u2019 approach, due to the immediate hazard noted at move-out.\nPlease confirm these requirements when you book the visit.\nInvoice on completion, payable within 14 days.",
+   "recipientPartyId": "party:e226d0facf151979cf6c6a8932a9112cac606f420216905e65cea8203359d67e",
+   "purpose": "Appointment",
+   "jobId": "job:e6bf16e0337aa7956dde13bf707eedc93c35f8433c6ed6628efd2d1d1adda6bb",
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-27T18:44:24.005Z"
+  },
+  {
+   "id": "message:8cdb30a449cfee35f4edadbf92887d2ab3deb43ca2f83a5a1898f364bd461ca7",
+   "title": "Appointment",
+   "body": "Confirmed requirements: Keep the kitchen water repair separate from the move-out restoration. Proceed with the SE bedroom loft-ladder railing safety repair as an exception to the \u2018assess first\u2019 approach, due to the immediate hazard noted at move-out. The provider can attend at the next available time.",
+   "recipientPartyId": null,
+   "purpose": "Appointment",
+   "jobId": "job:cc85bce4c6adf5751d7802636e6e22bf1d2d445a75b27ad6dc4bd65511d13c91",
+   "replyToMessageId": "message:4926ca5c21afab34d9350cac936ee30cfbf525d894231efa08c733640c3161ba",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-27T18:46:24.062Z"
+  },
+  {
+   "id": "message:9c654192d4fcf98cfe239e73c1fcc7189ac3c57ffa7bb9ca81586f4e8925af49",
+   "title": "Appointment",
+   "body": "Confirmed requirements: Keep the kitchen water repair separate from the move-out restoration. Proceed with the SE bedroom loft-ladder railing safety repair as an exception to the \u2018assess first\u2019 approach, due to the immediate hazard noted at move-out. The provider can attend at the next available time.",
+   "recipientPartyId": null,
+   "purpose": "Appointment",
+   "jobId": "job:e6bf16e0337aa7956dde13bf707eedc93c35f8433c6ed6628efd2d1d1adda6bb",
+   "replyToMessageId": "message:7a42e82b3d0e565575df869c866fb01e13fc57ccd8d25608bfc83928357bba30",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-27T18:46:30.852Z"
+  },
+  {
+   "id": "message:549707ffad4d85bc710dbd1f75eb0964f6d6559f7d0fa7c103a5e474ea92d533",
+   "title": "Work report and invoice received",
+   "body": "Parquet, inlay border and plank floors scratched, gouged and stained, with missing inlay pieces.: Deficient; Window sills, doorway casing, moldings and mantels stained, gouged or broken; foyer door veneer sheared.: Deficient; Dining-room hearth with missing and broken antique tiles.: Deficient; Newel post, stair trim, top molding and rail edge chipped and damaged.: Deficient; Southeast bedroom loft-ladder railing pulled away with protruding nails. Unsafe.: Deficient; Stair runner edges torn; office carpet heavily stained.: Deficient; Northeast bedroom door broken.: Deficient; Plaster damage in the great room and northeast bedroom; soot staining in the west master suite.: Deficient; Ceiling damage in the east master bedroom, east bathroom and third-floor great room.: Deficient; Third-floor tub porcelain chipped; vanity panel broken.: Deficient; Urine odor in the west master suite, great room and other rooms.: Not checked\nParquet, inlay border and plank floors scratched, gouged and stained, with missing inlay pieces.: Deficient; Window sills, doorway casing, moldings and mantels stained, gouged or broken; foyer door veneer sheared.: Deficient; Dining-room hearth with missing and broken antique tiles.: Deficient; Newel post, stair trim, top molding and rail edge chipped and damaged.: Deficient; Southeast bedroom loft-ladder railing pulled away with protruding nails. Unsafe.: Deficient; Stair runner edges torn; office carpet heavily stained.: Deficient; Northeast bedroom door broken.: Deficient; Plaster damage in the great room and northeast bedroom; soot staining in the west master suite.: Deficient; Ceiling damage in the east master bedroom, east bathroom and third-floor great room.: Deficient; Third-floor tub porcelain chipped; vanity panel broken.: Deficient; Urine odor in the west master suite, great room and other rooms.: Not checked\nParquet, inlay border and plank floors scratched, gouged and stained, with missing inlay pieces.: Deficient; Window sills, doorway casing, moldings and mantels stained, gouged or broken; foyer door veneer sheared.: Deficient; Dining-room hearth with missing and broken antique tiles.: Deficient; Newel post, stair trim, top molding and rail edge chipped and damaged.: Deficient; Southeast bedroom loft-ladder railing pulled away with protruding nails. Unsafe.: Deficient; Stair runner edges torn; office carpet heavily stained.: Deficient; Northeast bedroom door broken.: Deficient; Plaster damage in the great room and northeast bedroom; soot staining in the west master suite.: Deficient; Ceiling damage in the east master bedroom, east bathroom and third-floor great room.: Deficient; Third-floor tub porcelain chipped; vanity panel broken.: Deficient; Urine odor in the west master suite, great room and other rooms.: Not checked",
+   "recipientPartyId": "party:96706a1ef99394c09c469dcceb8c90a7b232619149f0e8946bca2e1ba3278538",
+   "purpose": "Progress",
+   "jobId": "job:cc85bce4c6adf5751d7802636e6e22bf1d2d445a75b27ad6dc4bd65511d13c91",
+   "replyToMessageId": null,
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-27T18:48:24.412Z"
+  },
+  {
+   "id": "message:a32d4a0292c221f57a480a16e7345c50b11c70fff8bc40c3330c6172de0412e4",
+   "title": "Work report and invoice received",
+   "body": "Southeast bedroom loft-ladder railing pulled away with protruding nails. Unsafe.: Satisfied",
+   "recipientPartyId": "party:e226d0facf151979cf6c6a8932a9112cac606f420216905e65cea8203359d67e",
+   "purpose": "Progress",
+   "jobId": "job:e6bf16e0337aa7956dde13bf707eedc93c35f8433c6ed6628efd2d1d1adda6bb",
+   "replyToMessageId": null,
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-27T18:50:23.95Z"
+  },
+  {
+   "id": "message:91a9f6ed3d5dfd067280d79b04218865cd298d00cc3c0b9920e88acb5f41a845",
+   "title": "Information requested",
+   "body": "We have your restoration assessment report, but it reads as a deficiency summary and still lists \u201curine odor \u2026 Not checked.\u201d Please confirm whether the full deliverables are complete and provide (or point us to) the detailed condition/quantity schedule + written repair scope by trade with preliminary budget. Also advise whether you recommend specific odor testing/remediation beyond floor stain-seal, and your recommended trade sequencing to be ready for late-October showings (kitchen water repair remains excluded).",
+   "recipientPartyId": "party:96706a1ef99394c09c469dcceb8c90a7b232619149f0e8946bca2e1ba3278538",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-27T19:20:46.419Z"
+  },
+  {
+   "id": "message:ae484eea6203758949acd96f46556b892c6d05a47a1bed5ef790b2a63cc6e8b6",
+   "title": "Quote for Floor restoration",
+   "body": "Please confirm a firm quote (line-item if possible) and earliest scheduling for floor restoration per your provider information: sand/refinish parquet & plank; replace damaged parquet and missing inlay border pieces; treat & seal urine-stained plank floors. Confirm kitchen water work is excluded, square footage assumption, duration + dry/cure times, whether the stain-seal step is intended to address urine odor, and what prep you need from plaster/paint work before you start.",
+   "recipientPartyId": "party:d61733c3dfd6ab40f1965315a4d636f5d922341d43cdafae4a5073f1697dd07b",
+   "purpose": "Quote",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-27T19:20:46.419Z"
+  },
+  {
+   "id": "message:c87f2619eb5ba71ec5a3022c0e021cd26f232f3e10d6ef533a55aaf57516947c",
+   "title": "Quote for Stair runner and office carpet",
+   "body": "Please confirm a firm quote and earliest scheduling for (1) supply/install new stair runner and (2) replace office carpet, per your provider information. Confirm sequencing requirement \u201cafter floor work is finished,\u201d material/lead-time assumptions, and that kitchen water work is excluded.",
+   "recipientPartyId": "party:bd0eb98de1957496ed287235f8aacd20ce85889262e12eaf468a9d1641903b8f",
+   "purpose": "Quote",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-27T19:20:46.419Z"
+  },
+  {
+   "id": "message:ea9ef239e27e6038c59963744124ee93318ae5b3767c74eb4b78fab8f105ec03",
+   "title": "Quote for Plaster, paint and woodwork",
+   "body": "Please confirm a firm quote (line-item if possible) and earliest scheduling for the move-out restoration finishing scope shown in your provider information (plaster/soot cleanup; paint walls/ceilings/trim incl. ceiling repairs at light fixtures; woodwork & fireplace restoration incl. window sills/casing/moldings/mantels/hearth tiles/foyer door veneer/NE bedroom door; bathroom tub chip + vanity panel). Confirm kitchen water repair is excluded, expected duration, protection measures, and any exclusions/assumptions.",
+   "recipientPartyId": "party:d6d7f54cf11332faf3f209e19188715d78cb458ed0a597557af72d8b5825b0be",
+   "purpose": "Quote",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-27T19:20:46.419Z"
+  },
+  {
+   "id": "message:952f32e5cbfb77e3c1e6d2eb5ea6ec77a904a1a85b5023028fed4396bfb51f13",
+   "title": "Reply received",
+   "body": "Restoration assessment: earliest visit 2026-09-28 13:00 UTC; a visit takes about 3 hours; replies within 4 hours; offer valid until 2026-10-31 23:59 UTC. Invoice on delivery of the report, payable within 14 days. Requirements: Kitchen water work is excluded.. A visit time is agreed once the work is commissioned.",
+   "recipientPartyId": "party:96706a1ef99394c09c469dcceb8c90a7b232619149f0e8946bca2e1ba3278538",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:91a9f6ed3d5dfd067280d79b04218865cd298d00cc3c0b9920e88acb5f41a845",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-27T19:21:51.719Z"
+  },
+  {
+   "id": "message:92377dd3c179718d41653e81536e89c8685fb94fc2d9a5d9619efe3e97e2d953",
+   "title": "Provider offer received",
+   "body": "Floor restoration. Sand and refinish parquet and plank floors: $5,400.00; Replace damaged parquet and inlay border pieces: $1,850.00; Treat and seal urine-stained plank floors: $769.00. Deposit of $2,000 on booking; balance on completion, payable within 7 days.",
+   "recipientPartyId": "party:d61733c3dfd6ab40f1965315a4d636f5d922341d43cdafae4a5073f1697dd07b",
+   "purpose": "Quote",
+   "jobId": null,
+   "replyToMessageId": "message:ae484eea6203758949acd96f46556b892c6d05a47a1bed5ef790b2a63cc6e8b6",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-27T19:27:30.424Z"
+  },
+  {
+   "id": "message:ca25ab6693ec3fa30fca0165f97b4e6b9575d1ee97f2f2ac80b90aeacf2ec922",
+   "title": "Provider offer received",
+   "body": "Stair runner and office carpet. Supply and install stair runner: $2,500.00; Replace office carpet: $2,257.84. Payment on installation, due within 14 days.",
+   "recipientPartyId": "party:bd0eb98de1957496ed287235f8aacd20ce85889262e12eaf468a9d1641903b8f",
+   "purpose": "Quote",
+   "jobId": null,
+   "replyToMessageId": "message:c87f2619eb5ba71ec5a3022c0e021cd26f232f3e10d6ef533a55aaf57516947c",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-27T19:27:33.428Z"
+  },
+  {
+   "id": "message:dd7fb82cdfb64b2da59b12d012954167488050b3d0023e0ad94a88f6525f7f56",
+   "title": "Provider offer received",
+   "body": "Plaster, paint and woodwork. Plaster repair and soot cleanup: $11,366.67; Paint walls, ceilings and trim: $12,783.32; Woodwork and fireplace restoration: $10,000.00; Bathroom repairs and caulking: $3,762.50. Deposit of $10,000 at start; balance on completion, payable within 14 days.",
+   "recipientPartyId": "party:d6d7f54cf11332faf3f209e19188715d78cb458ed0a597557af72d8b5825b0be",
+   "purpose": "Quote",
+   "jobId": null,
+   "replyToMessageId": "message:ea9ef239e27e6038c59963744124ee93318ae5b3767c74eb4b78fab8f105ec03",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-27T19:28:23.954Z"
+  },
+  {
+   "id": "message:3085f617d6b69dfb1af9177a91b62665fcaa8c991e5a2ec907e104ae2b505716",
+   "title": "Information requested",
+   "body": "Please confirm whether your move-out restoration assessment deliverables are complete, and provide the detailed room-by-room condition/quantity schedule and the written repair scope by trade with preliminary budget (your report currently reads like a deficiency summary and still lists urine odor as \u201cNot checked\u201d). Also provide recommended trade sequencing to support late-October showings (kitchen water work remains excluded).",
+   "recipientPartyId": "party:96706a1ef99394c09c469dcceb8c90a7b232619149f0e8946bca2e1ba3278538",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-27T19:40:00.998Z"
+  },
+  {
+   "id": "message:79705d68c8b93b304a8aec8f1036d6aa73536287a1f1f67b28261789c55249e8",
+   "title": "Information requested",
+   "body": "For scheduling coordination: please confirm typical dry/cure times after sanding/refinishing before (a) other trades can work and (b) stair runner/office carpet can be installed. Also confirm whether the urine stain-seal step is intended to address odor transfer as well as staining.",
+   "recipientPartyId": "party:d61733c3dfd6ab40f1965315a4d636f5d922341d43cdafae4a5073f1697dd07b",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-27T19:40:00.998Z"
+  },
+  {
+   "id": "message:ae2c14d99ec8adb075303b4f3b145ee862c8c19985754eb37d291fc648ceb1fd",
+   "title": "Information requested",
+   "body": "Please confirm your recommended sequencing relative to floor sanding/refinishing (what must be completed before floors start, and what work can safely happen after floors without risking damage). Also confirm protection measures for historic floors/woodwork while your team works (kitchen water work excluded).",
+   "recipientPartyId": "party:d6d7f54cf11332faf3f209e19188715d78cb458ed0a597557af72d8b5825b0be",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": null,
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-27T19:40:00.998Z"
+  },
+  {
+   "id": "message:0e922957d2bbfcf8109c6a3d83090dc2c482e2afd45d4ffd6416a3d82193f4fb",
+   "title": "Reply received",
+   "body": "Restoration assessment: earliest visit 2026-09-28 13:00 UTC; a visit takes about 3 hours; replies within 4 hours; offer valid until 2026-10-31 23:59 UTC. Invoice on delivery of the report, payable within 14 days. Requirements: Kitchen water work is excluded.. A visit time is agreed once the work is commissioned.",
+   "recipientPartyId": "party:96706a1ef99394c09c469dcceb8c90a7b232619149f0e8946bca2e1ba3278538",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:3085f617d6b69dfb1af9177a91b62665fcaa8c991e5a2ec907e104ae2b505716",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-27T19:42:38.906Z"
+  },
+  {
+   "id": "message:ceb9ba3fa45c51e15b94a76d87d7a0f6edc404ad034ce786a001425fb977410c",
+   "title": "Reply received",
+   "body": "Floor restoration: earliest visit 2026-10-12 13:00 UTC; a visit takes about 24 hours; replies within 4 hours; offer valid until 2026-11-30 23:59 UTC. Deposit of $2,000 on booking; balance on completion, payable within 7 days. A visit time is agreed once the work is commissioned.",
+   "recipientPartyId": "party:d61733c3dfd6ab40f1965315a4d636f5d922341d43cdafae4a5073f1697dd07b",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:79705d68c8b93b304a8aec8f1036d6aa73536287a1f1f67b28261789c55249e8",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-27T19:42:43.43Z"
+  },
+  {
+   "id": "message:9323a9af5c34a1b67c2cb404e31661ef76924fb8db258a53912f6eef34ea20d2",
+   "title": "Reply received",
+   "body": "Plaster, paint and woodwork: earliest visit 2026-10-05 13:00 UTC; a visit takes about 80 hours; replies within 4 hours; offer valid until 2026-11-30 23:59 UTC. Deposit of $10,000 at start; balance on completion, payable within 14 days. A visit time is agreed once the work is commissioned.",
+   "recipientPartyId": "party:d6d7f54cf11332faf3f209e19188715d78cb458ed0a597557af72d8b5825b0be",
+   "purpose": "Information",
+   "jobId": null,
+   "replyToMessageId": "message:ae2c14d99ec8adb075303b4f3b145ee862c8c19985754eb37d291fc648ceb1fd",
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-27T19:42:50.934Z"
+  }
+ ],
+ "activity": [
+  {
+   "id": "activity:050885838d2f2c37055e4d2fdef0ca70204c054b08e560ab92926de2de2b0b92",
+   "title": "Move-out notice received",
+   "detail": "The property, tenancy and supporting documents are ready for a work recommendation.",
+   "at": "2026-09-27T02:10:27.461Z"
+  },
+  {
+   "id": "activity:7959246b1cc63e4cab9ff8399e21213858852b61ea01acd515d5d3475f191ebb",
+   "title": "Source file associated",
+   "detail": "A supporting file was associated with a document.",
+   "at": "2026-09-27T02:10:32.916Z"
+  },
+  {
+   "id": "activity:00b1d2ac28c47fa76b30e0b03b7a44d20d26775704204745afdb6c2006264e89",
+   "title": "Source file associated",
+   "detail": "A supporting file was associated with a document.",
+   "at": "2026-09-27T02:10:35.006Z"
+  },
+  {
+   "id": "activity:262c5ade9e27ecec8bf29947d724a2da3bdefb905c0e235d36666231a0a14e57",
+   "title": "Handoff next step",
+   "detail": "Walk-through (Sep 24) documented widespread floor damage/stains with urine odors, damaged woodwork/millwork (sills, casing, mantels, foyer door veneer), missing/broken dining-room hearth tiles, damaged main stair/newel/rail edge, torn stair runner and stained office carpet, broken NE bedroom door, plaster/ceiling damage and soot staining, and a dangerous SE bedroom loft-ladder railing pulled away with protruding nails. Owner funding set aside for move-out restoration is $65,000 (separate from deposit). Next step per owner instructions: Feld Architecture to perform a restoration assessment first (kitchen water work excluded), while keeping the loft-ladder off-limits; consider an exception for immediate safety repair of the loft-ladder railing.",
+   "at": "2026-09-27T02:27:24.041Z"
+  },
+  {
+   "id": "activity:2e4e4893eba9edd3356ea083df2c1bb9d12eac4dec3c83712876a5b377d731d7",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-27T02:28:24.184Z"
+  },
+  {
+   "id": "activity:996dd5c817a3802b8856f4f32baeb6b275f37337ac1f6e206f0bbf93f71ed459",
+   "title": "Handoff next step",
+   "detail": "We have clear move-out deficiencies documented (floors, plaster/paint, woodwork/hearth/doors, stair trim, carpets, bathroom chips/panels, odors) and one immediate safety item: the SE bedroom loft-ladder railing is unsafe. Owner direction is to (1) keep the kitchen water repair separate, (2) get Feld Architecture\u2019s restoration assessment before committing to broader restoration trades, but (3) keep everyone off the loft ladder until the railing is fixed. We cannot issue a priced work proposal yet because there are no formal quote objects in the record (only provider information documents), so next step is to obtain formal quotes for (a) Feld\u2019s move-out restoration assessment and (b) the standalone loft-ladder railing safety repair.",
+   "at": "2026-09-27T02:30:24.279Z"
+  },
+  {
+   "id": "activity:ac5381ec8b19cd88aa284fc4d6866e2cb15f38b7710ba519deeb30bbef616a15",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-27T02:32:24.122Z"
+  },
+  {
+   "id": "activity:ccb7a2395a2596ac4dbaa592aa0474bf104c8c998f32a0b490790b2b8af25517",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-27T02:32:32.123Z"
+  },
+  {
+   "id": "activity:6edbacc5310e488f6befe3745d88e13f9e5557ef6b18bd883558cefe9f91c292",
+   "title": "Work plan ready",
+   "detail": "Ready to move forward on two immediate next steps that keep the kitchen water project separate: (1) Feld Architecture move-out restoration assessment (walkthrough + condition/quantity schedule + scope/budget note), and (2) immediate safety repair to rebuild/secure the SE bedroom loft-ladder railing so the ladder area is safe to use.",
+   "at": "2026-09-27T02:36:41.757Z"
+  },
+  {
+   "id": "activity:33341f79082bd72031141dad200debeaff97f13271a4e06319fe32eb91fd1d4b",
+   "title": "Work plan accepted",
+   "detail": "The scope, budget and explicit requirements were accepted. Handoff will arrange delivery.",
+   "at": "2026-09-27T03:36:42.73Z"
+  },
+  {
+   "id": "activity:2358f51f8b9b023a6707ad35c4c095b95dd02e48de193018798e0b2afec7c9c3",
+   "title": "Handoff progressed",
+   "detail": "The owner's funding confirmation has been recorded. Check available funds before commissioning.",
+   "at": "2026-09-27T03:36:48.959Z"
+  },
+  {
+   "id": "activity:10c426bf9d3cfbaf4890e224844cb38041aa528635a1392c25d987a7e31ad07c",
+   "title": "Handoff next step",
+   "detail": "No new work decision is ready beyond the already-accepted scope. The current accepted proposal (Feld move-out restoration assessment + immediate SE bedroom loft-ladder railing safety repair) aligns with the owner instructions, keeps kitchen water work separate, and totals $2,700.00 per the offered quote lines. Property is not yet ready: multiple deficiencies remain (floors, woodwork, plaster/ceilings, odors, carpets, doors, bath chips, etc.) per the move-out walk-through/condition-after-move-out documents.",
+   "at": "2026-09-27T03:37:23.898Z"
+  },
+  {
+   "id": "activity:d8f352c5efb5e554f20135a7032134d13179515ae80fecb9b5779b883e298fc1",
+   "title": "Message received",
+   "detail": "Your message is saved for Handoff to consider. It is not an acceptance of work.",
+   "at": "2026-09-27T18:43:46.367Z"
+  },
+  {
+   "id": "activity:d3c3448caa8d4e91b4af7f8c9b6995d88b6e442207518d78439c78ca6f151b00",
+   "title": "Handoff progressed",
+   "detail": "The accepted work has been commissioned within the quoted scope and confirmed owner funds.",
+   "at": "2026-09-27T18:43:53.251Z"
+  },
+  {
+   "id": "activity:d8246d0f266b1b42fbb0ec1b39b11722fc4373ac95a7355b6f89ea247d8f3abd",
+   "title": "Handoff progressed",
+   "detail": "The accepted work has been commissioned within the quoted scope and confirmed owner funds.",
+   "at": "2026-09-27T18:44:24.005Z"
+  },
+  {
+   "id": "activity:beef908f81e59f7ce4c65052fd3c258816d443a37cde305012e23186ea2c915d",
+   "title": "Handoff progressed",
+   "detail": "The existing work is awaiting its provider response or scheduled report.",
+   "at": "2026-09-27T18:45:23.895Z"
+  },
+  {
+   "id": "activity:e5af782d532a47234dbc8bd943b1c8e66d0f0ac6f913c1892495f84406192e09",
+   "title": "Handoff progressed",
+   "detail": "Confirmed requirements: Keep the kitchen water repair separate from the move-out restoration. Proceed with the SE bedroom loft-ladder railing safety repair as an exception to the \u2018assess first\u2019 approach, due to the immediate hazard noted at move-out. The provider can attend at the next available time.",
+   "at": "2026-09-27T18:46:24.062Z"
+  },
+  {
+   "id": "activity:bf6c7948b701e776de13d3450cea069965bed903b28b5019d38244af1cad1916",
+   "title": "Handoff progressed",
+   "detail": "Confirmed requirements: Keep the kitchen water repair separate from the move-out restoration. Proceed with the SE bedroom loft-ladder railing safety repair as an exception to the \u2018assess first\u2019 approach, due to the immediate hazard noted at move-out. The provider can attend at the next available time.",
+   "at": "2026-09-27T18:46:30.852Z"
+  },
+  {
+   "id": "activity:1058a21f61e0e8f26ce0665310e14b95469ff32c4337308fce93555edbb109e7",
+   "title": "Handoff progressed",
+   "detail": "The existing work is awaiting its provider response or scheduled report.",
+   "at": "2026-09-27T18:47:23.815Z"
+  },
+  {
+   "id": "activity:ca40b6c2be559965e016851e01518363df7cf57f8ffb65e9b4d6d70a3e75b437",
+   "title": "Handoff progressed",
+   "detail": "The provider's work report and invoice are ready to check.",
+   "at": "2026-09-27T18:48:24.412Z"
+  },
+  {
+   "id": "activity:f2d6a3c36273eb5c0eda5e91fb488e417fd120fe47e8750de328bf9a70028e0c",
+   "title": "Handoff progressed",
+   "detail": "The report shows remaining work to resolve.",
+   "at": "2026-09-27T18:48:27.402Z"
+  },
+  {
+   "id": "activity:3f0c9bdaa7c30c38eb13decc6cd9c3711933ed739af4b7a3dcfbe26886b1b826",
+   "title": "Handoff progressed",
+   "detail": "The existing work is awaiting its provider response or scheduled report.",
+   "at": "2026-09-27T18:49:23.814Z"
+  },
+  {
+   "id": "activity:fcdd47828b733537ad66bcf05b3c17dc9b0cf837b6501c9d02a2a8232dd1fa4d",
+   "title": "Handoff progressed",
+   "detail": "The provider's work report and invoice are ready to check.",
+   "at": "2026-09-27T18:50:23.95Z"
+  },
+  {
+   "id": "activity:103e3c851d006b5fb972274f0ee18acad226a7e2fe5d2437f6814390a1a67b48",
+   "title": "Handoff progressed",
+   "detail": "The job's completion observations have been checked.",
+   "at": "2026-09-27T18:50:30.188Z"
+  },
+  {
+   "id": "activity:4621f812a9103f1e37b4502f11bbe7b6d5683a1b7e41409745e36b7963524a84",
+   "title": "Handoff progressed",
+   "detail": "The checked supplier balance has been requested. Payment is not yet confirmed.",
+   "at": "2026-09-27T18:51:24.218Z"
+  },
+  {
+   "id": "activity:34806f91e10cb2263309b93103aa96502b746f7321ddc73372330481b1e6687a",
+   "title": "Handoff progressed",
+   "detail": "The existing work is awaiting its provider response or scheduled report.",
+   "at": "2026-09-27T18:52:23.95Z"
+  },
+  {
+   "id": "activity:22798cb7bd4b7b93bdc0020b898897fa8e2f43d0445310734de8fe1137340332",
+   "title": "Handoff progressed",
+   "detail": "The payment service has returned an outcome. Continue with the confirmed result.",
+   "at": "2026-09-27T18:53:24.321Z"
+  },
+  {
+   "id": "activity:8df2a332a9e7cfe5e258fe747e50cf819a01e3681ae81871fd55b9040ac86512",
+   "title": "Handoff next step",
+   "detail": "Move-out restoration assessment deliverable has been received (report + $1,200 invoice), and the immediate SE bedroom loft-ladder railing safety repair is supported as complete (satisfied). The triplex still has multiple deficient conditions (floors, woodwork, hearth tiles, stairs/newel/rail edge, carpet/runner, NE bedroom door, plaster/soot, ceiling fixture areas, bath chip/vanity panel; urine odor still \u201cnot checked\u201d). We don\u2019t yet have firm, system-quote objects for the main restoration trades (finishing/paint, floors, carpet/runner), so the next actionable step is to request formal quotes and one clarification from Feld re: the missing detailed schedules/odor guidance. No new work proposal is ready to approve until those quotes arrive.",
+   "at": "2026-09-27T19:20:46.419Z"
+  },
+  {
+   "id": "activity:fa991712e7acdf5926cfb038884a9ff463bf11caf31a2f54ab09caf8b4af3423",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-27T19:21:51.719Z"
+  },
+  {
+   "id": "activity:54fc6f772334d59b690c5caf4687c77642281c291e27a1af424905bc6629f6fd",
+   "title": "Handoff next step",
+   "detail": "Loft-ladder railing safety repair is documented complete/satisfied, but most move-out deficiencies remain (floors, woodwork, hearth tiles, stairs/newel, carpet, NE bedroom door, plaster/soot, ceiling fixture areas, bathroom tub/vanity, and urine odor still \u201cNot checked\u201d). Feld\u2019s \u201cRestoration assessment \u2014 report\u201d reads like a deficiency summary with placeholders and does not yet include the promised detailed condition/quantity schedule or trade-by-trade scope + preliminary budget, so we don\u2019t yet have the owner\u2019s requested basis to commit to the broader restoration sequence for late-October showings.",
+   "at": "2026-09-27T19:26:23.783Z"
+  },
+  {
+   "id": "activity:22ddaece35f7c0539fa443d29c3cb6001791dfd91d0779251bb135d5e2dbe8b8",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-27T19:27:30.424Z"
+  },
+  {
+   "id": "activity:be65bbd66811e0820b71649aade68f61029d6ac574c0348cb76c399b1065eb25",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-27T19:27:33.428Z"
+  },
+  {
+   "id": "activity:465b469e924de7bc157b7390efa3743888bee20c87960e7f187c520a1717372b",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-27T19:28:23.954Z"
+  },
+  {
+   "id": "activity:a56f299658b8da112b255bf2d2b5171fb4946e4ee13651fbaf06c76720e4b3ef",
+   "title": "Work plan ready",
+   "detail": "We now have firm trade quotes to complete the main move-out restoration items (finishing, floors, stair refinishing, runner/office carpet), all within the owner\u2019s $65,000 restoration fund and still excluding the separate kitchen water repair. The SE bedroom loft-ladder railing safety repair is documented as complete; remaining deficiencies are still open.",
+   "at": "2026-09-27T19:40:00.998Z"
+  },
+  {
+   "id": "activity:1310edfa6aad9eb9c758654561377f13317050789eeda73ac314bbdb9a246d6b",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-27T19:42:38.906Z"
+  },
+  {
+   "id": "activity:3a6c7eb6e3c894be5a78a0f153b40ac7f4d750e8991f5bb65d7ed50d9bd8fcef",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-27T19:42:43.43Z"
+  },
+  {
+   "id": "activity:d9a58fe496f4ef3cf0352344bd076f88e26427ac39ee0f06090b1013a567ec5e",
+   "title": "Handoff progressed",
+   "detail": "A correspondent has replied. Review the new information and continue the work.",
+   "at": "2026-09-27T19:42:50.934Z"
+  },
+  {
+   "id": "activity:a971619f2f2ebcc38c0aa47700af8cdbc678e8cdf4e396d948b097dda70a5204",
+   "title": "Work plan ready",
+   "detail": "Unit is not yet show-ready. Loft-ladder railing safety repair is complete, but floors, plaster/paint/woodwork, remaining stair damage, and carpets/runners still show as deficient. Ready to authorize the main move-out restoration package (kept separate from the kitchen water repair).",
+   "at": "2026-09-27T19:43:24.545Z"
+  }
+ ],
+ "agent": {
+  "status": "Waiting for decision",
+  "nextStep": "Unit is not yet show-ready. Loft-ladder railing safety repair is complete, but floors, plaster/paint/woodwork, remaining stair damage, and carpets/runners still show as deficient. Ready to authorize the main move-out restoration package (kept separate from the kitchen water repair).",
+  "updatedAt": "2026-09-27T19:43:24.545Z",
+  "nextWakeAt": null
+ },
+ "permissions": {
+  "canWork": true,
+  "canDecide": true,
+  "canConfigure": true
+ }
+}

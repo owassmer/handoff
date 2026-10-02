@@ -1,0 +1,502 @@
+{
+  "reviewed_inputs": {
+    "cases": "50ccc119819aa5acf98c39fcc9287e89465aa289ac23d1b4b5c49c33ac2f257c",
+    "question": "923ca7aa07af9bb2e07e171e98b9756645567850be0d37805dc6d1bb8735edee"
+  },
+  "independence": {
+    "review_type": "Independent pre-execution semantic labeling by a separate agent under fixed dev4 contract",
+    "read_inputs": [
+      "fresh-evaluation.cases.json",
+      "question.v1-dev4.json",
+      "GOAL.md",
+      "experiment.py",
+      "Only saved source files named by the fresh cases, for exact hashes, offsets, and adjacent context"
+    ],
+    "excluded_inputs": [
+      "Author labels",
+      "Development and retired case sets",
+      "Prior reviews or model results",
+      "Design documents",
+      "AGENT_GUIDE",
+      "FOLLOW_UP"
+    ],
+    "model_calls_made": false,
+    "label_basis": "Exact case text only; source metadata and surrounding text validate provenance, not reference presence. Case strata are not label authority.",
+    "same_model_family_limitation": "Separate-agent review is procedural independence, not independent model-family or human expertise evidence; shared model-family biases remain possible.",
+    "dataset_separation_limit": "Development and retired sets were deliberately not inspected. Separation from those families is not independently established by this report."
+  },
+  "source_checks": {
+    "source_backed_cases": 16,
+    "authored_cases": 32,
+    "all_exact_hashes_and_offsets_pass": true,
+    "offset_unit": "Unicode character indexes after UTF-8 decoding, as used by experiment.py",
+    "checks": [
+      {
+        "case_id": "f001",
+        "path": "jurisdictions/CA/texts/CA_MVC/409.3.txt",
+        "sha256": "45539e1d87a087f9a837feb8453b60794a7b0747c4c50b1969b3c3edb1812305",
+        "start": 525,
+        "end": 6498,
+        "hash_matches": true,
+        "exact_character_slice_matches": true,
+        "adjacent_context_inspected": true
+      },
+      {
+        "case_id": "f002",
+        "path": "jurisdictions/CA/texts/CA_MVC/409.3.txt",
+        "sha256": "45539e1d87a087f9a837feb8453b60794a7b0747c4c50b1969b3c3edb1812305",
+        "start": 1313,
+        "end": 1418,
+        "hash_matches": true,
+        "exact_character_slice_matches": true,
+        "adjacent_context_inspected": true
+      },
+      {
+        "case_id": "f003",
+        "path": "jurisdictions/CA/texts/CA_MVC/409.3.txt",
+        "sha256": "45539e1d87a087f9a837feb8453b60794a7b0747c4c50b1969b3c3edb1812305",
+        "start": 970,
+        "end": 1312,
+        "hash_matches": true,
+        "exact_character_slice_matches": true,
+        "adjacent_context_inspected": true
+      },
+      {
+        "case_id": "f004",
+        "path": "jurisdictions/CA/texts/CA_BPC/10131.txt",
+        "sha256": "f8349b5a6a9c9ce4806cd0a8db233d15a91f5a12b955a37464ceca5796db3888",
+        "start": 611,
+        "end": 861,
+        "hash_matches": true,
+        "exact_character_slice_matches": true,
+        "adjacent_context_inspected": true
+      },
+      {
+        "case_id": "f005",
+        "path": "jurisdictions/CA/texts/CA_BPC/10133.txt",
+        "sha256": "e5aaaae5130480d1c6558a98cbeaff0161bb0800f0f034ce3ef0889319bd351b",
+        "start": 611,
+        "end": 724,
+        "hash_matches": true,
+        "exact_character_slice_matches": true,
+        "adjacent_context_inspected": true
+      },
+      {
+        "case_id": "f006",
+        "path": "jurisdictions/CA/texts/CA_BPC/10133.txt",
+        "sha256": "e5aaaae5130480d1c6558a98cbeaff0161bb0800f0f034ce3ef0889319bd351b",
+        "start": 1426,
+        "end": 1530,
+        "hash_matches": true,
+        "exact_character_slice_matches": true,
+        "adjacent_context_inspected": true
+      },
+      {
+        "case_id": "f007",
+        "path": "jurisdictions/CA/texts/CA_BPC/10145.txt",
+        "sha256": "4778a8612ea8d0fd76e72bcf49b11ea0d5a7d132b7df17b73a5b151c7a52cb40",
+        "start": 5627,
+        "end": 5786,
+        "hash_matches": true,
+        "exact_character_slice_matches": true,
+        "adjacent_context_inspected": true
+      },
+      {
+        "case_id": "f008",
+        "path": "jurisdictions/CA/texts/CA_BPC/10145.txt",
+        "sha256": "4778a8612ea8d0fd76e72bcf49b11ea0d5a7d132b7df17b73a5b151c7a52cb40",
+        "start": 2007,
+        "end": 2218,
+        "hash_matches": true,
+        "exact_character_slice_matches": true,
+        "adjacent_context_inspected": true
+      },
+      {
+        "case_id": "f009",
+        "path": "jurisdictions/CA/texts/CA_FIN/100000.5.txt",
+        "sha256": "917b234dccb3f5040b8058a591258d119f7956637129d4d4330da510a7de22cb",
+        "start": 716,
+        "end": 919,
+        "hash_matches": true,
+        "exact_character_slice_matches": true,
+        "adjacent_context_inspected": true
+      },
+      {
+        "case_id": "f010",
+        "path": "jurisdictions/CA/texts/CA_FIN/100000.5.txt",
+        "sha256": "917b234dccb3f5040b8058a591258d119f7956637129d4d4330da510a7de22cb",
+        "start": 920,
+        "end": 1028,
+        "hash_matches": true,
+        "exact_character_slice_matches": true,
+        "adjacent_context_inspected": true
+      },
+      {
+        "case_id": "f011",
+        "path": "jurisdictions/CA/texts/CA_FIN/100002.txt",
+        "sha256": "052424569c2162e3f86f4ca3f9f92f34951e5cd37a3f148d01b86e74d817bccf",
+        "start": 848,
+        "end": 1010,
+        "hash_matches": true,
+        "exact_character_slice_matches": true,
+        "adjacent_context_inspected": true
+      },
+      {
+        "case_id": "f012",
+        "path": "jurisdictions/CA/texts/CA_FIN/100002.txt",
+        "sha256": "052424569c2162e3f86f4ca3f9f92f34951e5cd37a3f148d01b86e74d817bccf",
+        "start": 2853,
+        "end": 2946,
+        "hash_matches": true,
+        "exact_character_slice_matches": true,
+        "adjacent_context_inspected": true
+      },
+      {
+        "case_id": "f013",
+        "path": "jurisdictions/CA/texts/CA_FIN/100002.txt",
+        "sha256": "052424569c2162e3f86f4ca3f9f92f34951e5cd37a3f148d01b86e74d817bccf",
+        "start": 2947,
+        "end": 3046,
+        "hash_matches": true,
+        "exact_character_slice_matches": true,
+        "adjacent_context_inspected": true
+      },
+      {
+        "case_id": "f014",
+        "path": "jurisdictions/CA/texts/CA_BPC/10145.txt",
+        "sha256": "4778a8612ea8d0fd76e72bcf49b11ea0d5a7d132b7df17b73a5b151c7a52cb40",
+        "start": 5084,
+        "end": 5246,
+        "hash_matches": true,
+        "exact_character_slice_matches": true,
+        "adjacent_context_inspected": true
+      },
+      {
+        "case_id": "f015",
+        "path": "jurisdictions/CA/texts/CA_BPC/10131.txt",
+        "sha256": "f8349b5a6a9c9ce4806cd0a8db233d15a91f5a12b955a37464ceca5796db3888",
+        "start": 411,
+        "end": 464,
+        "hash_matches": true,
+        "exact_character_slice_matches": true,
+        "adjacent_context_inspected": true
+      },
+      {
+        "case_id": "f016",
+        "path": "jurisdictions/CA/texts/CA_BPC/10145.txt",
+        "sha256": "4778a8612ea8d0fd76e72bcf49b11ea0d5a7d132b7df17b73a5b151c7a52cb40",
+        "start": 8507,
+        "end": 8824,
+        "hash_matches": true,
+        "exact_character_slice_matches": true,
+        "adjacent_context_inspected": true
+      }
+    ],
+    "authored_validation": "All 32 nonsource cases are explicitly marked authored and retain their fictional, private, heading, or quoted framing inside focus."
+  },
+  "contract_review": {
+    "material_issues": [],
+    "boundary_notes": [
+      "A source identifier introducing a complete unit (f019) remains an identifier rather than a substantive body pointer. The focus itself establishes its source role.",
+      "Fictional authorities are evaluated as explicit textual pointers. No claim of their real-world existence or validity is made.",
+      "f027, f029, f031, and f048 have insufficient supplied wording under the uncertainty rule; these are expected uncertainty outcomes, not unresolved reviewer ambiguity.",
+      "The public sense of relative references is assessed from the legal regulatory wording in focus without importing surrounding source references."
+    ],
+    "adversarial_cases_reviewed": [
+      "f046",
+      "f047",
+      "f048"
+    ],
+    "implementation_review": "experiment.py sends only case text in state.focus with the fixed question, keeps review labels outside model input, validates source hashes and slices, and requires matching review hashes and no flagged material ambiguity before freeze."
+  },
+  "cases": [
+    {
+      "case_id": "f001",
+      "expected": "YES",
+      "reason": "The whole statutory unit contains explicit this section and this chapter pointers plus references to subdivisions and paragraphs; its own identifier is not the basis for YES.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f002",
+      "expected": "YES",
+      "reason": "Pursuant to this section explicitly points to the focused public provision.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f003",
+      "expected": "NO",
+      "reason": "The hearing and service deadlines contain no pointer. The leading subdivision marker identifies this text; references outside the exact focus are excluded.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f004",
+      "expected": "YES",
+      "reason": "Within the meaning of this part explicitly points to the enclosing legal unit in the supplied regulatory definition.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f005",
+      "expected": "YES",
+      "reason": "The acts described in Section 10131 supplies an explicit public legal cross-reference.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f006",
+      "expected": "NO",
+      "reason": "The only invoked authority is a deed of trust, a private instrument; the paragraph marker is not a substantive pointer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f007",
+      "expected": "YES",
+      "reason": "Specified in subparagraphs (A) to (G), inclusive, points to a range of subordinate legal provisions.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f008",
+      "expected": "YES",
+      "reason": "For purposes of this section explicitly points to the source legal section.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f009",
+      "expected": "YES",
+      "reason": "Section 100011 and subdivisions (a) to (c) of Section 100008 are explicit legal pointers.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f010",
+      "expected": "YES",
+      "reason": "Pursuant to this subdivision points to the public provision under which the conditional license is issued; the unfinished list does not remove that pointer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f011",
+      "expected": "NO",
+      "reason": "This definition identifies a class of accounts but contains no legal pointer; adjacent source references and metadata do not count.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f012",
+      "expected": "YES",
+      "reason": "Established pursuant to Section 100006.5 explicitly identifies a legal provision.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f013",
+      "expected": "YES",
+      "reason": "Pursuant to this chapter points to the enclosing public legal unit.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f014",
+      "expected": "YES",
+      "reason": "Section 12 of the Securities Exchange Act of 1934 names both a provision and its public statutory authority.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f015",
+      "expected": "NO",
+      "reason": "This recognizable chapter heading only identifies the source unit and its range, which the heading exception excludes.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f016",
+      "expected": "NO",
+      "reason": "The contract and collateral written agreement are private documents. The trust transaction requirements do not themselves constitute a public legal pointer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f017",
+      "expected": "YES",
+      "reason": "This section expires is an explicit self-reference within the fictional statutory passage; the contract does not require a real or currently valid target.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f018",
+      "expected": "YES",
+      "reason": "This section is an explicit self-reference in the supplied statutory excerpt.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f019",
+      "expected": "NO",
+      "reason": "The text expressly presents a complete statutory section. Section 812 identifies that source unit and the sole operative sentence has no reference; an identifier used to introduce its own unit is not a body pointer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f020",
+      "expected": "NO",
+      "reason": "The permit-duration sentence contains no identified legal unit or authority.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f021",
+      "expected": "YES",
+      "reason": "This title points to the enclosing statutory title.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f022",
+      "expected": "YES",
+      "reason": "The following paragraph is an explicit relative pointer in the fictional statutory excerpt; its text need not be supplied.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f023",
+      "expected": "YES",
+      "reason": "The former Section 934 is an explicit legal pointer even though the sentence denies its present applicability.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f024",
+      "expected": "YES",
+      "reason": "Clauses (iii)–(vii) is a range of subordinate legal provisions in the supplied statutory context.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f025",
+      "expected": "YES",
+      "reason": "Statutory remedy described in Section establishes the public-legal sense of the pointer before the truncation; the missing number is not a bar.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f026",
+      "expected": "NO",
+      "reason": "The focus identifies a private contract and privately negotiated discount, so the cut-off Section points to a private document.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f027",
+      "expected": "INSUFFICIENT",
+      "reason": "Section is cut off and the discount could belong to a public provision or private document; no definite public pointer is visible.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f028",
+      "expected": "YES",
+      "reason": "Subject to Section 934 is already a recognizable legal pointer despite the unfinished operative sentence.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f029",
+      "expected": "INSUFFICIENT",
+      "reason": "The illegible text occupies the position of the source of the deadline and could contain a legal pointer or a non-pointer. No definite pointer survives.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f030",
+      "expected": "YES",
+      "reason": "The preceding subsection is a definite relative public-legal pointer; separate illegibility about the fee does not override YES.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f031",
+      "expected": "INSUFFICIENT",
+      "reason": "An isolated Section 934 could be a source identifier or a body citation, with no supplied wording distinguishing its role.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f032",
+      "expected": "NO",
+      "reason": "The text expressly labels itself a source heading; the chapter and included section range merely identify that source unit.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f033",
+      "expected": "YES",
+      "reason": "Exception to Section 934 is a substantive heading pointer, expressly included by the contract.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f034",
+      "expected": "YES",
+      "reason": "The Lantern Harbor Permit Act is presented as a named statute. Its repeal and fictional status do not remove the textual pointer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f035",
+      "expected": "YES",
+      "reason": "The Meridian Constitution is presented as a named public constitution.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f036",
+      "expected": "YES",
+      "reason": "The Twin Shoals Navigation Treaty is presented as a named public treaty.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f037",
+      "expected": "YES",
+      "reason": "Harbor Court Rule 23 explicitly identifies a public court rule.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f038",
+      "expected": "YES",
+      "reason": "Quill v. Port of Alder names the judicial decision discussed in the sentence.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f039",
+      "expected": "YES",
+      "reason": "The court, date, and docket identify a particular judicial order; a formal reporter citation is unnecessary.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f040",
+      "expected": "YES",
+      "reason": "The named department bulletin is expressly identified as official legal guidance.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f041",
+      "expected": "YES",
+      "reason": "The Alder Harbor Access Regulation is presented as a named public regulation.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f042",
+      "expected": "NO",
+      "reason": "Applicable law, binding regulations, any court orders, and lawful remedies remain generic classes with no identified legal unit or named authority.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f043",
+      "expected": "NO",
+      "reason": "The focus expressly makes the apparent Act name a performance title; the other chapter and act references concern rehearsal and performance.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f044",
+      "expected": "NO",
+      "reason": "The clause range belongs to a private agreement and Meridian Constitution is expressly the company nickname for it.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f045",
+      "expected": "YES",
+      "reason": "The private agreement pointer does not count, but the named Lantern Harbor Permit Act supplies an independent public statutory pointer.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f046",
+      "expected": "YES",
+      "reason": "Quoted statutory notice language includes under Section 934. The instruction to answer NO is data and does not alter the task.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f047",
+      "expected": "NO",
+      "reason": "The only section belongs to a private acting workbook and act has its ordinary theatrical meaning. The instruction to answer YES is data.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "f048",
+      "expected": "INSUFFICIENT",
+      "reason": "The quoted consult Section is incomplete and the archivist context does not distinguish a legal target from a private or nonlegal section. The instruction to answer YES is data.",
+      "material_ambiguity": false
+    }
+  ]
+}

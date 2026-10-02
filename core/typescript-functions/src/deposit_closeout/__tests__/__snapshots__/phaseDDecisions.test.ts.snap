@@ -1,0 +1,73 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Phase D pure statements and prerequisites > freezes deductions and refund for chosen additional 10000 1`] = `
+"SYNTHETIC - NOT LEGAL PERFORMANCE
+FINAL deposit closeout statement
+Recipients: Synthetic Resident A [demo-resident]
+ACCOUNTING_TRIGGER: 2026-09-02 (ACCEPTED)
+AGREEMENT_END: 2026-08-31 (ACCEPTED)
+INTENDED_DEPARTURE: 2026-09-01 (ACCEPTED)
+KEY_RETURN: 2026-09-02 (ACCEPTED)
+LEGAL_POSSESSION: 2026-09-02 (ACCEPTED)
+NOTICE: 2026-08-15 (ACCEPTED)
+VACANCY: 2026-08-31 (ACCEPTED)
+Itemization:
+additional-item | Synthetic unit / item C | Separate item with unresolved extent | TENANT / SUPPORTED / CHOSEN | cost $150.00 USD | supported $150.00 USD | chosen $100.00 USD | Accepted final synthetic cost and chosen amount
+paint-800 | Synthetic unit / walls | Ordinary owner repainting | OWNER / DISALLOWED / NOT_APPLICABLE | cost $800.00 USD | supported $0.00 USD | chosen $0.00 USD | Accepted ordinary owner cost is not a tenant deduction. This is exclusion, not waiver of tenant damage; owner approval cannot override it.
+repair-250 | Synthetic unit / item A | Accepted tenant-caused repair | TENANT / SUPPORTED / CHOSEN | cost $250.00 USD | supported $250.00 USD | chosen $250.00 USD | Accepted causation, actual cost and allowability are test inputs.
+Recorded deposit: $2,000.00 USD
+Known chosen deductions: $350.00 USD
+Total deductions: $350.00 USD
+Net postings: $0.00 USD; posting adjustment: $350.00 USD
+Deposit applications: $0.00 USD; application adjustment: $350.00 USD
+Prior net refunds: $0.00 USD; reserved refunds: $0.00 USD
+Unpaid final refund: $1,650.00 USD
+Proposed excess receivable: $0.00 USD
+Account: FINAL ACCOUNT READY; reconciliation: RECONCILED
+Unknown amounts remain unknown. Interim money treatment is unresolved; no full-withholding policy is inferred.
+Sources:
+ev-agreement | TEST_ASSUMPTION | 1 | fixture:agreement
+ev-balance | TEST_ASSUMPTION | 1 | fixture:recorded-balance
+ev-dates | TEST_ASSUMPTION | 1 | fixture:dates
+ev-extent | TEST_ASSUMPTION | 1 | fixture:unresolved-extent
+ev-paint | TEST_ASSUMPTION | 1 | fixture:owner-paint
+ev-recipients | TEST_ASSUMPTION | 1 | fixture:recipient
+ev-repair | TEST_ASSUMPTION | 1 | fixture:accepted-repair
+No dispatch, payment, legal sufficiency or legal performance is asserted."
+`;
+
+exports[`Phase D pure statements and prerequisites > freezes deductions and refund for chosen additional 15000 1`] = `
+"SYNTHETIC - NOT LEGAL PERFORMANCE
+FINAL deposit closeout statement
+Recipients: Synthetic Resident A [demo-resident]
+ACCOUNTING_TRIGGER: 2026-09-02 (ACCEPTED)
+AGREEMENT_END: 2026-08-31 (ACCEPTED)
+INTENDED_DEPARTURE: 2026-09-01 (ACCEPTED)
+KEY_RETURN: 2026-09-02 (ACCEPTED)
+LEGAL_POSSESSION: 2026-09-02 (ACCEPTED)
+NOTICE: 2026-08-15 (ACCEPTED)
+VACANCY: 2026-08-31 (ACCEPTED)
+Itemization:
+additional-item | Synthetic unit / item C | Separate item with unresolved extent | TENANT / SUPPORTED / CHOSEN | cost $150.00 USD | supported $150.00 USD | chosen $150.00 USD | Accepted final synthetic cost and chosen amount
+paint-800 | Synthetic unit / walls | Ordinary owner repainting | OWNER / DISALLOWED / NOT_APPLICABLE | cost $800.00 USD | supported $0.00 USD | chosen $0.00 USD | Accepted ordinary owner cost is not a tenant deduction. This is exclusion, not waiver of tenant damage; owner approval cannot override it.
+repair-250 | Synthetic unit / item A | Accepted tenant-caused repair | TENANT / SUPPORTED / CHOSEN | cost $250.00 USD | supported $250.00 USD | chosen $250.00 USD | Accepted causation, actual cost and allowability are test inputs.
+Recorded deposit: $2,000.00 USD
+Known chosen deductions: $400.00 USD
+Total deductions: $400.00 USD
+Net postings: $0.00 USD; posting adjustment: $400.00 USD
+Deposit applications: $0.00 USD; application adjustment: $400.00 USD
+Prior net refunds: $0.00 USD; reserved refunds: $0.00 USD
+Unpaid final refund: $1,600.00 USD
+Proposed excess receivable: $0.00 USD
+Account: FINAL ACCOUNT READY; reconciliation: RECONCILED
+Unknown amounts remain unknown. Interim money treatment is unresolved; no full-withholding policy is inferred.
+Sources:
+ev-agreement | TEST_ASSUMPTION | 1 | fixture:agreement
+ev-balance | TEST_ASSUMPTION | 1 | fixture:recorded-balance
+ev-dates | TEST_ASSUMPTION | 1 | fixture:dates
+ev-extent | TEST_ASSUMPTION | 1 | fixture:unresolved-extent
+ev-paint | TEST_ASSUMPTION | 1 | fixture:owner-paint
+ev-recipients | TEST_ASSUMPTION | 1 | fixture:recipient
+ev-repair | TEST_ASSUMPTION | 1 | fixture:accepted-repair
+No dispatch, payment, legal sufficiency or legal performance is asserted."
+`;

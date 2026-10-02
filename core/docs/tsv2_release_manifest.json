@@ -1,0 +1,309 @@
+{
+  "manifestVersion": "1.3.0",
+  "phase": "E.1_BACKEND_WORKSPACE_AND_QUEUE",
+  "runtimeLanguage": "typescript-v2",
+  "localSdkMode": true,
+  "ontologyRid": "ri.ontology.main.ontology.cfb1478a-5b0e-466a-aaff-b212870e8861",
+  "globalBranchRid": "ri.branch..branch.065df81c-5f66-41a3-bf2e-3c0c214715de",
+  "ontologyBranchRid": "ri.ontology.main.branch.267d57c9-763c-4ab9-a959-d2444f03a194",
+  "codeRepositoryBranchName": "ai-fde/owassmer1/deposit-closeout-phase-e-iZqyfb",
+  "deploymentStatus": "BRANCH_ONLY_BACKEND_FIRST_NOT_MERGED",
+  "statusAsOf": "2026-09-20",
+  "mainReleaseStatus": "1.2 remains active; Phase E 1.3 is branch-only and awaits user merge",
+  "releaseScope": "backend workspace query and compact queue only; no frontend changes",
+  "backendFirstApproved": true,
+  "standaloneReviewFunction": "reviewDepositCloseout",
+  "storedReviewFunction": "getCloseoutReview",
+  "workflowReviewFunction": "getCloseoutWorkflow",
+  "reviewTransport": "canonical JSON string; base ReviewEnvelope and explicit WorkflowReviewV2 remain distinct",
+  "queryCount": 4,
+  "workspaceQuery": {
+    "function": "getCloseoutWorkspace",
+    "apiName": "getCloseoutWorkspace",
+    "signature": "(client: Client, caseId: string, intentSpecJson?: string): Promise<string>",
+    "schemaVersion": "1.0.0",
+    "maximumWorkspaceJsonBytes": 1048576,
+    "maximumIntentSpecJsonBytes": 4096,
+    "contractSources": [
+      "workspace/types.ts",
+      "workspace/codec.ts",
+      "workspace/read.ts"
+    ],
+    "guide": "docs/phase_e.md",
+    "effects": "none; exact intent target construction only, not authorization, readiness or reservation",
+    "gateStatus": "backend branch acceptance complete; consumer SDK, published-query HTTP and browser acceptance remain pending user backend merge"
+  },
+  "inputJsonSchemaVersion": "1.0.0",
+  "outputJsonSchemaVersion": "1.1.0",
+  "workflowSchemaVersion": "2.0.0",
+  "workflowReviewMetadata": {
+    "schemaVersion": "1.1.0",
+    "workflowSchemaVersion": "2.0.0"
+  },
+  "nativeReviewLogicVersion": "phase-b.1",
+  "initializedRootWorkflowVersion": "2",
+  "caseProjectionVersion": "1",
+  "baseSnapshotFieldsRetained": ["requestJson", "reviewJson"],
+  "workflowSnapshotFields": [
+    "workflowStateJson",
+    "workflowStateHash",
+    "workflowReviewJson",
+    "workflowReviewHash"
+  ],
+  "historicalWorkflowValidationClock": "snapshot.createdAt, not current server or business clock",
+  "objectTypeCount": 11,
+  "objectTypes": [
+    "DcCloseoutCase",
+    "DcReviewSnapshot",
+    "DcExecutionEvent",
+    "DcChargeItem",
+    "DcEvidenceRecord",
+    "DcMoneyEvent",
+    "DcCaseParty",
+    "DcRequirement",
+    "DcStatementVersion",
+    "DcApproval",
+    "DcActionRequest"
+  ],
+  "namedEditFunctionCount": 30,
+  "retainedCaseActionCount": 15,
+  "workflowActionCount": 15,
+  "caseOperationInterface": "30 named function-backed Actions; no public arbitrary patch dispatcher; explicit INIT_WORKFLOW before other v2 commands",
+  "workflowActionParameters": "caseId, commandId, expectedRevision (numeric Long on Action), payloadJson; actorId bound server-side",
+  "workflowContractSources": [
+    "typescript-functions/src/deposit_closeout/lifecycle/types.ts",
+    "typescript-functions/src/deposit_closeout/lifecycle/codec.ts"
+  ],
+  "resultFields": [
+    "scopeRequirements",
+    "itemDecisions",
+    "account",
+    "missingInputs",
+    "actions",
+    "outcomes"
+  ],
+  "actorBinding": "Action server current_user_id; not caller-editable",
+  "authorityEvaluationClock": "actual server time, not caller or demonstration time",
+  "persistenceBoundary": "create root on opening; otherwise one update to the same loaded root; snapshot, command receipt and all projections in one shared edit batch",
+  "caseScope": {
+    "environmentId": "DC_PHASE_C_SYNTHETIC",
+    "managementCompanyId": "constructed-company-001",
+    "approvedOperatorIds": ["c47a52a0-0048-4607-931f-f4df283ae7c4"],
+    "dataOrigin": "CONSTRUCTED"
+  },
+  "numericWireType": "bounded exact integer JSON numbers; SDK Long strings mapped explicitly; native money aggregation uses BigInt",
+  "reviewClockPrecision": "exact milliseconds or coarser, explicit UTC",
+  "sourceTimestampPrecision": "exact microseconds, explicit UTC; ISO strings in source projections",
+  "maximumJsonBytes": 262144,
+  "workflowJsonBound": "UTF-8 byte length strictly less than maximumJsonBytes",
+  "maximumProjectionRowsPerType": 1000,
+  "limitBehavior": "fail closed; no truncation or guessed zero",
+  "statementFormat": "immutable structured content plus exact rendered text; no PDF engine",
+  "requestProjection": "one derived current request fact per request ID from immutable instruction and event history",
+  "executionEventCategories": [
+    "COMMAND_RECEIPT",
+    "REQUEST_LIFECYCLE",
+    "RAW_SIMULATED_RESULT",
+    "RESULT_ACCEPTED"
+  ],
+  "resultAcceptanceBoundary": "raw simulation alone has no native financial effect; only validated ingestion contributes accepted facts",
+  "ruleReleaseId": "NC_SYNTHETIC_REVIEW_V1",
+  "ruleAcceptance": "SYNTHETIC_ONLY_LEGAL_REVIEW_PENDING",
+  "legalReviewCardStatus": "PENDING",
+  "workflowMode": "SIMULATED",
+  "completionPolicy": {
+    "depositComplete": false,
+    "overallCaseComplete": false,
+    "legalPerformanceConfirmed": false,
+    "simulatedDepositWorkflowComplete": "derived boolean; may be true",
+    "simulatedOverallWorkflowComplete": "derived boolean; may be true"
+  },
+  "caseOntologyWritesImplemented": true,
+  "simulatedLifecycleImplemented": true,
+  "liveExternalExecutionImplemented": false,
+  "liveDataAllowed": false,
+  "externalEffectsAllowed": false,
+  "modelAssistanceEnabled": false,
+  "automationsEnabled": false,
+  "uiImplemented": false,
+  "liveConnectorsImplemented": false,
+  "productionMultiPrincipalIsolationValidated": false,
+  "legalCertificationPerformed": false,
+  "externalProviderExactlyOnceValidated": false,
+  "accessValidationLimit": "constructed operator only; Handoff project has broad Owner access within the organization",
+  "mainSeededOrMerged": false,
+  "phaseEStarted": true,
+  "inheritedPhaseDValidatedRuntime": {
+    "logicCommit": "b37873960e251e4c2aa644313d89e5a968475c75",
+    "functionTag": "1.2.0-branch-20260920-041008",
+    "taggedCi": "PASSED",
+    "nativeTestsPassed": 959,
+    "unchangedTemplateTestsSkipped": 5,
+    "actualWorkflowActionsExercised": 15,
+    "inheritedCaseBridgeCoverage": "selected recheck, choice, evidence and charge-decision operations; not all retained Actions under Phase D",
+    "scope": "known branch runtime; not a final documentation release or Main deployment"
+  },
+  "operatingGuide": "docs/phase_d.md",
+  "retainedCaseInterfaceGuide": "docs/phase_c.md",
+  "checks": {
+    "nativeTests": "cd typescript-functions && npm test",
+    "strictCompilation": "cd typescript-functions && npx tsc --noEmit -p src/tsconfig.json",
+    "functionDiscovery": "./rune discover"
+  },
+  "queueSummary": {
+    "schemaVersion": "1.0.0",
+    "rootSummaryVersion": "1",
+    "maximumJsonBytes": 32768,
+    "rootObjectType": "DcCloseoutCase",
+    "optionalPropertyApiNames": [
+      "queueSummaryVersion",
+      "queueAttentionKind",
+      "queueNearestLegalDueDate",
+      "queueNearestInternalTargetAtIso",
+      "queueNextRequirementKey",
+      "queueNextResponsibleRole",
+      "queueNextAssigneePartyId",
+      "queueSummaryJson"
+    ],
+    "attentionPriority": [
+      "RECONCILIATION",
+      "UNSUPPORTED_SCOPE",
+      "NEEDS_FACTS_OR_DECISION",
+      "LEGACY_INITIALIZATION",
+      "SIMULATED_COMPLETE",
+      "READY_WORK",
+      "WAITING"
+    ],
+    "source": "typescript-functions/src/deposit_closeout/workspace/queue.ts",
+    "persistence": "all keys included in the existing single root create/update and shared edit batch for all 30 edit Functions",
+    "clearing": "explicit undefined on batch.update; SDK wire null clears; JSON nullable values remain explicit null",
+    "validation": "all absent is known pre-E only; present version 1 must exactly match the pure expected summary at currentReviewId; all 8 fields included in workspace final root check",
+    "internalTargetFormat": "YYYY-MM-DDTHH:mm:ss.ffffffZ; exact microseconds, lexical-safe fixed six digits; tie requirement key",
+    "legalDueDateSource": "only existing applicable unfulfilled review LEGAL requirements; no independent deadline rules",
+    "amountSource": "copy effective review account values only; never recalculate money or repeated request details",
+    "effects": "organizational display only; no new business engine, authorization, backfill, external effects or legal performance"
+  },
+  "phaseEValidatedRuntime": {
+    "logicCommit": "159fcf1fee43264fd2014d1d72977dfe1c0d3649",
+    "functionTag": "1.3.0-branch-20260920-213828",
+    "taggedCi": "PASSED",
+    "scope": "exact runtime used for branch acceptance; not Main deployment",
+    "documentationCloseoutChangesLogic": false,
+    "documentationCloseoutRequiresRepublishing": false
+  },
+  "phaseEVerification": {
+    "testsPassed": 1107,
+    "inheritedTests": 959,
+    "workspaceTests": 90,
+    "queueTests": 58,
+    "unchangedTemplateSkips": 5,
+    "strictTypeScript": "PASSED",
+    "runeFunctionCount": 34,
+    "runeDiagnostics": 0,
+    "branchPreview": "earlier openCloseoutCase Rune preview returned 22 edits including queue and null clears; not an applied Action or part of the 15 acceptance submissions",
+    "branchActionRebinding": {
+      "status": "VERIFIED_ALL_30_ON_E",
+      "versionRange": ">=1.3.0-0 <1.3.1-0",
+      "actorBinding": "current_user_id unchanged",
+      "positiveApprovedPrincipalAdmissionUnchanged": true,
+      "editUnionObjectTypeCount": 11
+    },
+    "childTypeBranchInitialization": {
+      "existingTypeCount": 10,
+      "method": "identical complete definition get/put on E",
+      "importMainEdits": false,
+      "existingPropertiesUnchanged": 178,
+      "policiesUnchanged": true,
+      "semanticObjectSchemaChanges": "only the eight optional queue properties on the case root"
+    },
+    "actualActionAcceptance": {
+      "performedAfterBranchConfiguration": true,
+      "ontologyBranchRid": "ri.ontology.main.branch.267d57c9-763c-4ab9-a959-d2444f03a194",
+      "appliesToMain": false,
+      "submissions": 15,
+      "newCommandsApplied": 13,
+      "exactReplaysWithZeroEdits": 1,
+      "staleCommandsRejectedWithoutReceipt": 1,
+      "orphanReceipts": 0,
+      "caseA": {
+        "caseId": "dc-case:84a3ec2a7fe98158abc3d9779a95bac99ffb434180a4596881669c5bd04dc80b",
+        "finalRevision": "9",
+        "currentReviewId": "dc-review:c0e5ab68c9b12087a82764280f1e66e0c0810bdd9d4765ea1fa2f3ecd3dc5010",
+        "acceptedCommandCount": 9,
+        "observations": [
+          "open at revision 1, workflow initialization at 2, retained case charge choice of 20000 cents at 3; another unknown item keeps queue total deductions, unpaid liability and newly requestable refund null",
+          "assignment at revision 4 retains 2026-09-25T15:30:00.123456Z exactly in root, requirement and JSON",
+          "internal target clear at revision 5 yields SQL NULL on root and requirement and JSON null, retaining demo-accountant assignee and 2026-10-02 legal date",
+          "recheck at revision 6 then exact replay with original expected revision 5 returns zero edits; queue, hashes, pointer and counts unchanged",
+          "evidence addition at revision 7, association at 8, accepted constructed unsupported jurisdiction ZZ at 9 clears legal date and next assignee; old NC requirement isCurrent=false, not complete"
+        ],
+        "staleCommand": {
+          "commandId": "phase-e-20260920-accept-a-stale",
+          "expectedRevision": 8,
+          "actualRevision": 9,
+          "receiptCreated": false
+        }
+      },
+      "caseB": {
+        "caseId": "dc-case:f8b3f5a3f4b235627a74d395935c8bd9a31f3bfab4a6541b848bb57ebb3d2e40",
+        "fixture": "complete NC-A-002 case request",
+        "finalRevision": "4",
+        "currentReviewId": "dc-review:1f57ef171b8e32d3e8ac830bacf7023c955fb60ea9311df0ea43a9022d7000d4",
+        "acceptedCommandCount": 4,
+        "observations": "open at revision 1, initialization at 2, refund instructions UNCONFIRMED at 3, actual statement PREPARE at 4 despite missing refund route",
+        "statementId": "dc-statement:f10450d3dd5588c6a6cb52c09e91ac07daf44ed12fbde5c0daa0ac8432196358",
+        "statementStatus": "NOT_ISSUED",
+        "statementBasis": "current",
+        "approvalRequestDispatchOrMoneyEffectCreated": false
+      },
+      "generationIntegrity": "all 13 receipts linked to matching reviews; queue/root/snapshot revision, input hash, work-assignment hash, effective-review hash and current-review pointer match every accepted generation",
+      "coverageLimit": "selected branch Action sequence, not all thirty Actions or every native matrix variant"
+    },
+    "storedReadVerification": {
+      "method": "positive function_preview against actual stored E data, plus supplemental explicit-E Rune execution",
+      "workspaceModesObserved": [
+        "case A legacy at revision 1",
+        "case A workflow v2 at revision 9 with cleared fields",
+        "case B workflow v2 at revision 4"
+      ],
+      "intentPreview": "case B CONSTRUCTED exact intent with matching statement hash; no edits",
+      "storedBaseReview": "unchanged getCloseoutReview 1.1 envelope confirmed for A revision 1 and B revision 4; all six result fields retained",
+      "canonicalWorkspaceTopLevelFieldCount": 6,
+      "canonicalWorkspaceJsonVerified": true,
+      "revisionWireTypes": "metadata caseRevision is \"9\" (Long string); native request snapshot revision is 9 (JSON number)",
+      "publishedQueryHttpAcceptancePerformed": false,
+      "browserAcceptancePerformed": false
+    },
+    "finalBranchObjectCounts": {
+      "DcCloseoutCase": 2,
+      "DcReviewSnapshot": 13,
+      "DcExecutionEvent": 13,
+      "DcCaseParty": 8,
+      "DcEvidenceRecord": 18,
+      "DcChargeItem": 6,
+      "DcRequirement": 10,
+      "DcStatementVersion": 1,
+      "DcApproval": 0,
+      "DcActionRequest": 0,
+      "DcMoneyEvent": 0
+    },
+    "mainObjectCounts": {
+      "checkedTypeCount": 11,
+      "eachTypeBeforeAcceptance": 0,
+      "eachTypeAfterAcceptance": 0
+    },
+    "mainSeededOrMerged": false,
+    "financialOrExternalEffectsPerformed": false,
+    "realOrLegalCompletionAsserted": false
+  },
+  "phaseEConsumerGate": {
+    "status": "AWAITING_USER_BACKEND_MERGE",
+    "frontendIncludedInBackendProposal": false,
+    "separateFrontendEvidence": "81 passing mocked protocol/component tests, three skips, CI passed; read-only diagnostic evidence, not browser or published-query HTTP acceptance",
+    "currentFrontendSdk": "0.4 exposes only getCloseoutWorkflow 1.2; workspace branch import failed with generic SDK-generation error",
+    "developerConsoleObservation": "user confirmed getCloseoutWorkspace is not visible",
+    "afterMergeConfirmation": "verify Main 1.3 and new query schema; regenerate frontend SDK from Main definitions; continue already-approved full UI validation on a fresh global branch without Main seeding",
+    "additionalGoRequired": false,
+    "automaticMergeAuthorized": false
+  }
+}

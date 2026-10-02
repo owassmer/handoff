@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- ************* BEGIN HEADER ************* -->
+<html>
+	<head>
+		<title>California Public Utilities Commission</title>
+		<meta content="text/html; charset=iso-8859-1" http-equiv="content-type" />
+        <style type="text/css"> body { margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:0.8em; }
+	h2 { font-family: Georgia, "Times New Roman", Times, serif; font-weight: bold; font-size: 1.38em; color: #253b5a; border-bottom:2px dotted #999; margin:14px 0; width:99%;}
+	h3 { font-size:1.2em; text-transform:uppercase; margin-bottom:6px; }
+	h4 { font-size:1em; font-weight:bold; }
+	hr { color: #bc3e06; background-color: #bc3e06; height: 2px; border: 0; }
+	ca { color: #747474; font-size: .875rem; font-weight: 600;line-height: 1.3;text-transform: uppercase;}
+	puc { color: #000; font-size: 1.5rem; line-height: 1.5;font-weight:700;padding-right: 1em;}
+
+	</style>
+<!-- Google tag GA4 2023 (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WHTB8SV3V0"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());   gtag('config', 'G-WHTB8SV3V0'); </script>
+
+
+	</head>
+	<body>
+		<div align="left"><a name="top"></a>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%"  summary="this is a layout table">
+				<!--<tr bgcolor="#088110"><td height="4"></td></tr></table>-->
+				<tr bgcolor="#046b99"><td height="5"></td></tr></table>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" summary="this is a layout table">
+				<tr>
+					<!--<td width="12%"><a href="https://www.ca.gov"><img border="0" alt="Go to CA.Gov" src="images/calogo.gif" width="118" height="77" /></a></td>-->
+					<td width="10px"></td>
+					<!--<td width="520"><a href="https://www.cpuc.ca.gov/"><img border="0" alt="CPUC Logo" src="images/cpuc_logo_0.gif" /></a></td>-->
+					<td width="140px" height="112 px"><a href="https://www.cpuc.ca.gov/"><img alt="CPUC Logo" src="images/cpuc-logo-md.png" height="100px" /></a></td>
+					<td height="112px"><ca>CALIFORNIA</ca></br><puc>Public Utilities Commission</puc></td>					
+					<td id="skipto_container" width="52%" align="right" ><font color="#90897d" size="2"><a href="mailto:cssupport@cpuc.ca.gov">Help with Online Documents</a>  |  <a href="https://www.cpuc.ca.gov/about-cpuc/contacting-the-puc">Contact the CPUC</a></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					
+				</tr>
+			</table>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" summary="this is a layout table">
+				<!--<tr bgcolor="#088110">-->
+				<tr bgcolor="#046b99">
+				<td height="28">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.cpuc.ca.gov/" target="_blank" rel="noreferrer noopener"><font color="#ffffff" size="2"><b>CPUC Home</b></font></a></td>				
+				<td height="28"align=right><a href="https://www.cpuc.ca.gov/proceedings-and-rulemaking/locate-documents" target="_blank" rel="noreferrer noopener"><font color="#ffffff" size=2><b>Online Documents</a></font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://subscribecpuc.cpuc.ca.gov" target="_blank" rel="noreferrer noopener"><font color="#ffffff" size=2><b>Documents Subscription</a>&nbsp;&nbsp;&nbsp;&nbsp;</b></font></td>
+				</tr></table>
+		</div>
+        
+        
+    </body>
+</html>
+<!-- ************* END HEADER *************** -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- <script type="text/javascript" src="Scripts/jquery-1.6.4.min.js"></script> -->
+    <script type="text/javascript">
+        window.onload = function () {
+
+            // Check to see if this is an old IE.
+            var dataString = navigator.userAgent;
+            var
+                index = dataString.indexOf("MSIE");
+            if (index != -1) {
+                var version = parseFloat(dataString.substring(index + 5));
+                if (version < 8) {
+                    alert("Results cannot be displayed.\n\nThe version of Internet Explorer you are using is unsupported. Please upgrade to at least version 8, and ensure that compatibility mode is disabled.");
+                    return;
+                }
+
+            }
+
+            
+        //Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+            // Set the page title.
+            document.title = "Decision Search Results";
+
+            // Precache the sort images.
+            precacheDown = new Image()
+            precacheDown.src = "Images/down.gif";
+            precacheUp = new Image()
+            precacheUp.src = "Images/up.gif";
+
+            // Change the look of the current page number
+            currentPage = document.getElementById("rptPages_btnPage_0");
+            if (currentPage) {
+                currentPage.onclick = null;
+                currentPage.style.color = "black";
+                currentPage.style.fontWeight = "bold";
+                currentPage.style.textDecoration = "none";
+                currentPage.style.cursor = "default";
+                currentPage.href = "javascript: void(0)";
+            }
+
+            // Determine what to show on the page based on the number of results
+            // and if this is suppsed to download automatically or not.
+            var numResults = "1";
+            var noAppendix = "False"
+            var pageTable = document.getElementById("Pages");
+
+            if (numResults == "0") {
+                pageTable.style.display = "none";
+                document.getElementById("NoResults").style.display = "table";
+            }
+            else if ((numResults == "1") && (noAppendix.toLowerCase() == "true")) {
+                document.getElementById("Pages").style.display = "none";
+                document.getElementById("FileResult").style.display = "table";
+                window.location = "/PublishedDocs/PUBLISHED/FINAL_DECISION/45381.htm";
+            }
+            else {
+                document.getElementById("Pages").style.display = "table";
+                document.getElementById("ResultTable").style.display = "table";
+            }
+
+            // Setup the sort column display.
+            var sortCol = "PubDate"
+
+            if (sortCol != "") {
+                sortCol += "Dir";
+                sortDir = "desc";
+
+                targetCol = document.getElementById(sortCol);
+
+                if (targetCol != null) {
+                    if (sortDir.toLowerCase() == "asc") {
+                        targetCol.innerHTML = "&nbsp&nbsp<img src='Images/down.gif'>";
+                    }
+                    else {
+                        targetCol.innerHTML = "&nbsp&nbsp<img src='Images/up.gif'>";
+                    }
+                }
+            }
+
+            // Display over limit message if it applies.
+            var alertMsg = "";
+            if (alertMsg != "") {
+                alert(alertMsg);
+            }
+        }
+
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+    
+    </script>
+
+    <title>
+
+</title></head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Back to Top">&#9650;<br />TO TOP</button>
+    <form method="post" action="SearchRes.aspx" id="frmResultList">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTk4MTE4OTkyNQ9kFgICBQ9kFhACAQ8PFgIeB1Zpc2libGVoZGQCAg8PFgIfAGhkZAIDDw8WAh8AaGRkAgQPFgIeC18hSXRlbUNvdW50AgEWAmYPZBYEAgEPDxYCHg9Db21tYW5kQXJndW1lbnQFATFkFgJmDxUBATFkAgIPFQEBIGQCBQ8PFgIfAGhkZAIGDw8WAh8AaGRkAgcPDxYCHwBoZGQCCA8WAh8BAgEWAgIBD2QWAmYPFQVZRDA1MDQwMzEgT3JkZXIgTW9kaWZ5aW5nIERlY2lzaW9uIEQwNDExMDMzIGFuZCBkZW55aW5nIHJlaGVhcmluZyBvZiBkZWNpc2lvbiwgYXMgbW9kaWZpZWQeUHJvY2VlZGluZzogSTAzMDMwMTg7IFIwMzAzMDE3DkZpbmFsIERlY2lzaW9u7QE8YSBocmVmPScvUHVibGlzaGVkRG9jcy9QVUJMSVNIRUQvRklOQUxfREVDSVNJT04vNDUzODEuaHRtJz5IVE1MPC9hPiAoPDEgS0IpPGJyPjxhIGhyZWY9Jy9QdWJsaXNoZWREb2NzL1dPUkRfUERGL0ZJTkFMX0RFQ0lTSU9OLzQ1MzgxLlBERic+UERGPC9hPiAoMjAgS0IpPGJyPjxhIGhyZWY9Jy9QdWJsaXNoZWREb2NzL1dPUkRfUERGL0ZJTkFMX0RFQ0lTSU9OLzQ1MzgxLkRPQyc+V09SRDwvYT4gKDQ1IEtCKTxicj4KMDQvMTEvMjAwNWRkG5bF6DZKcZM151rEMC00xLRsthVCfzxuAZTz6wn/MKU=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F8727AE4" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAaMSvcUN+JC7HxNpfywxD5M+KzX0FwelcUOhBan/b5uzOgvnuFPcTGgEjLUkdWZc9Sa/TJqkqyulltIshkgQzt/s/sMJ+gWS+FR6U1PE84vOesZ4acLEhkAUmEnxdXVhz2qDk3PKzqnhuPe7vGbUYwBAcASm5JaYKsQ1j4o0e4RMw==" />
+            <div class="MainDiv">
+                
+        <div class="Title">
+            Decision Search Results
+        </div>
+
+        <br />
+        <span id="addcontent" class="AddContent"></span>
+        <!--<input type="submit" name="butSubscribe" value="Document Subscriptions" id="butSubscribe" class="SubscribeButton" />-->
+        <br />
+        <br />
+                <table id="Pages" class="PageTable">
+            <tr>
+                <td valign="top">
+                    Pages:
+                    
+                    
+                    
+                </td>
+                <td>                             
+                    
+                            <a id="rptPages_btnPage_0" href="javascript:__doPostBack(&#39;rptPages$ctl00$btnPage&#39;,&#39;&#39;)">1</a> 
+                        
+                </td>
+                <td valign="bottom">
+                    
+                    
+                    
+                </td>
+            </tr>
+        </table>
+
+        <table id="ResultTable" class="ResultTable">                
+            
+                
+                    <thead>
+                        <!--<tr style="background-color:#006699; color: white; font-weight: bold;">-->
+			<tr style="background-color:#eee; color:#003065; font-weight: bold; font-size: 15px">
+                            <td height="50px" width="48%"><a id="rptPubRepeater_DocTitle" class="SortLink" href="javascript:__doPostBack(&#39;rptPubRepeater$ctl00$DocTitle&#39;,&#39;&#39;)">Title</a><span id="DocTitleDir"></span></td>
+                            <td height="50px" width="20%"><a id="rptPubRepeater_DocTypeDesc" class="SortLink" href="javascript:__doPostBack(&#39;rptPubRepeater$ctl00$DocTypeDesc&#39;,&#39;&#39;)">Doc Type</a><span id="DocTypeDescDir"></span></td>
+                            <td height="50px" width="12%"><span id="rptPubRepeater_Label1">Doc Links</span></td>
+                            <td height="50px" width="20%"><a id="rptPubRepeater_PubDate" class="SortLink" href="javascript:__doPostBack(&#39;rptPubRepeater$ctl00$PubDate&#39;,&#39;&#39;)">Published Date</a><span id="PubDateDir"></span></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                
+                        <tr>
+                            <td class='ResultTitleTD'>D0504031 Order Modifying Decision D0411033 and denying rehearing of decision, as modified<br /><br />Proceeding: I0303018; R0303017</td>
+                            <td class='ResultTypeTD'>Final Decision</td>
+                            <td class='ResultLinkTD' ><a href='/PublishedDocs/PUBLISHED/FINAL_DECISION/45381.htm'>HTML</a> (<1 KB)<br><a href='/PublishedDocs/WORD_PDF/FINAL_DECISION/45381.PDF'>PDF</a> (20 KB)<br><a href='/PublishedDocs/WORD_PDF/FINAL_DECISION/45381.DOC'>WORD</a> (45 KB)<br></td>
+                            <td class='ResultDateTD'>04/11/2005</td>
+                        </tr>
+                
+                    <tr style="height:1px">
+                        <td colspan="5">
+                            <hr style="height:1px;border:0px;color:#006699;background-color:#006699" />
+                        </td>
+                    </tr>
+                    </tbody>
+                
+        </table>
+        <table id="NoResults" class="NoResultTable">
+        <tr><td>Your search returned no results.</td></tr>
+        </table>
+        <table id="FileResult" class="FileResultTable">
+        <tr><td>Click <a href="/PublishedDocs/PUBLISHED/FINAL_DECISION/45381.htm">here</a> if your file does not automatically begin downloading.</td></tr>
+        </table>
+
+
+    </div>
+    </form>
+    <br />
+    <br />
+</body>
+</html>
+
+<!-- ************* BEGIN FOOTER ************* -->
+<html>
+	<head>
+		<title>California Public Utilities Commission</title>
+		<meta content="text/html; charset=iso-8859-1" http-equiv="content-type" />
+        <style type="text/css"> body { margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:0.8em; }
+	h2 { font-family: Georgia, "Times New Roman", Times, serif; font-weight: bold; font-size: 1.38em; color: #253b5a; border-bottom:2px dotted #999; margin:14px 0; width:99%;}
+	h3 { font-size:1.2em; text-transform:uppercase; margin-bottom:6px; }
+	h4 { font-size:1em; font-weight:bold; }
+	hr { color: #003065; background-color: #003065; height: 2px; border: 0; }
+	</style>
+	</head>
+    <body>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" summary="This is a layout table">
+        <tr><a name="footer">
+            <td colspan="4" height="10" align="center" width="927" bgcolor="#003065">
+              <!--<p align="center"><a href="#top"><font color="#FFFFFF" size=2>Back to Top</a> | </font><a href="mailto:cssupport@cpuc.ca.gov"><font color="#FFFFFF" size=2>Help</a> | </font><a href="https://www.cpuc.ca.gov/about-cpuc/contacting-the-puc"><font color="#FFFFFF" size=2>Contact Us</a> | </font>
+              </p>-->
+		<p align="center"><a href="#top"><font color="#FFFFFF" size=2>Back to Top</a>&nbsp;&nbsp; | &nbsp;&nbsp;</font><a href="https://www.cpuc.ca.gov/about-cpuc/conditions-of-use"><font color="#FFFFFF" size=2>Condition of Use</a>&nbsp;&nbsp; | &nbsp;&nbsp;</font><a href="https://www.cpuc.ca.gov/about-cpuc/privacy-policy"><font color="#FFFFFF" size=2>Privacy Policy</a>&nbsp;&nbsp; | &nbsp;&nbsp;<a href="https://www.cpuc.ca.gov/about-cpuc/accessibility"><font color="#FFFFFF" size=2>Accessibility</a></font>
+              </p>
+	
+            </td></a>
+        </tr><!-- END BACK TO TOP -->
+        
+        <!-- FOOTER -->
+        <tr>
+            <td colspan="4" height="2" align="center" width="927">
+              <p align="center" ><font size="2">Copyright © 2007 State of California</font></p>
+            </td>
+        </tr><!-- END FOOTER -->
+
+    </table>
+    </body>
+</html>
+		
+
+<!-- ************* END FOOTER ************* -->
+<html>
+<head>
+    <style type="text/css">
+        .SortLink
+        {
+            color: #003065;	    
+        }
+        .ControlLink
+        {
+            font-weight:bold;
+            text-decoration:none;
+        }
+        .PageTable
+        {
+            margin:auto;
+            display:none;
+        }
+        .ResultTable
+        {
+            margin: auto;
+            width: 96%;
+            display:none;
+        }
+        .ResultTitleTD
+        {
+            text-align:left;
+            padding-left:10px;
+        }
+	    .ResultLinkTD
+	    {
+            min-width:125px;
+            width:auto;
+            text-align:left;
+            padding-left:15px;
+        }
+        .ResultTypeTD, .ResultDateTD
+        {
+            min-width:80px;
+        }
+        .FileResultTable
+        {
+            margin: auto;
+            width: 650px;
+            display:none;
+            font-weight:bold;
+            font-size:larger;
+        }
+        .NoResultTable
+        {
+            margin: auto;
+            width: 650px;
+            display:none;
+            font-weight:bold;
+            font-size:larger;
+        }
+        .AddContent
+        {
+            max-width:50%;
+            float:left;            
+        }
+        
+        .SubscribeButton
+        {
+            float:right;
+            margin-right:30px;
+        }
+        .MainDiv
+        {
+            text-align: center;
+            width:90%;
+            margin:auto;
+            //min-width:900px;            
+        }
+        .TitleBar
+        {
+            background-color:#088110;
+            height:20px;
+
+        }
+        .Title
+        {
+            text-align:left;
+            font-weight:bold;
+            font-size:x-large;            
+        }            
+        #myBtn {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 99;
+  font-size: 10px;
+  font-weight:bold;
+  border: 2px solid #003065;
+  outline: none;
+  background-color: #DDD;
+  color: #555;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  //height:48px;
+}
+
+#myBtn:hover {
+  //background-color: #555;
+  background-color: #DDF;
+    color: #000;
+}
+    </style>
+</head>
+</html>

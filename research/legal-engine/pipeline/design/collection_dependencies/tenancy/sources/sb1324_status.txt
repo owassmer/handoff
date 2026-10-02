@@ -1,0 +1,199 @@
+Bill Status - SB-1324 Rosenthal Fair Debt Collection Practices Act: rental debt.
+/* Hide page by default*/
+            html { display : none; }
+//<![CDATA[
+
+            if (self === top) {
+                // Show the page
+                document.documentElement.style.display = 'block';
+            } else {
+                // Inside a frame. Replace the frame.
+                var parentUrl = document.referrer;
+                var num = -1;
+                if (parentUrl !== '') {
+
+                    num = parseInt(parentUrl.indexOf('calchannel.granicus.com'));
+
+                    if (!(num >= 0)) {
+                        window.top.location.replace(window.location);
+                        top.location = self.location;
+                    }
+                }
+            }
+            // ]]>
+/* Hide page by default*/
+            html { display : inline; }
+//<![CDATA[
+function faceletsDebug(URL) {day = new Date();id = day.getTime();eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=800,height=600,left = 240,top = 212');"); };(function() { if (typeof jsfFaceletsDebug === 'undefined') { var jsfFaceletsDebug = false; } if (!jsfFaceletsDebug) {var faceletsOrigKeyup = document.onkeyup;document.onkeyup = function(e) { if (window.event) e = window.event; if (String.fromCharCode(e.keyCode) == 'D' & e.shiftKey & e.ctrlKey) faceletsDebug('/faces/billStatusClient.xhtml?facelets.ui.DebugOutput=1790813071182'); jsfFaceletsDebug = true; if (faceletsOrigKeyup) faceletsOrigKeyup(e); };
+}})();//]]>
+function changePlaceHolder() {
+
+            var x = document.getElementById("billheaderinit_form:quick_search_select_id");
+            var input = document.getElementById("billheaderinit_form:searchall");
+
+            if (x !== null) {
+                if (x.options[0].selected) {
+
+                    input.placeholder = "AB1 or ab 1 or ABX1-1";
+                } else {
+                    input.placeholder = "Search phrase";
+                }
+            }
+
+        }
+skip to content
+home
+accessibility
+FAQ
+feedback
+sitemap
+login
+x
+Quick Search:
+Bill Number
+Bill Keyword
+Home
+Bill Information
+California Law
+Publications
+Other Resources
+My Subscriptions
+My Favorites
+Bill Information
+>>
+Bill Search
+>>
+Status
+Status
+function asAmendsPopup() {
+            window.open("asAmendsInfo.xhtml", "Information", "width=330, height=220, toolbar=no, location=no, directories=no, menubar=no, scrollbars=no, top=270, left=150")
+        }
+
+        function selectVersion() {
+
+            var versionObj = document.getElementById("version");
+            var selectedVersionId = '20210SB132497AMD';
+            var len = versionObj.options.length;
+            //alert('selectedVersionId='+selectedVersionId);
+            for (i = 0; i < len; i++) {
+                if (versionObj.options[i].value == selectedVersionId) {
+                    versionObj.options[i].selected = true;
+                }
+            }
+        }
+
+        function  downLoadPDF() {
+            document.getElementById("pdf_link2").click();
+        }
+PDF2
+Bill PDF
+|
+Add To My Favorites
+|
+Version:
+04/21/22 - Amended Senate
+04/07/22 - Amended Senate
+02/18/22 - Introduced
+SB-1324 Rosenthal Fair Debt Collection Practices Act: rental debt.
+(2021-2022)
+Text
+>>
+Votes
+>>
+History
+>>
+Bill Analysis
+>>
+Today's Law As Amended
+>>
+Compare Versions
+>>
+Status
+>>
+Comments To Author
+>>
+Add To My Favorites
+>>
+selectVersion();
+.status-line { height: 3px; flex: 0 1 50px; background: #006633; margin: 2em 0; position: relative; font-size:8pt; font-family:Verdana, Helvetica, Sans-serif;}
+                        .status-line2 { height: 3px; flex: 0 1 50px; background: #006633; margin: 2em 0; position: relative; font-size:8pt; font-family:Verdana, Helvetica, Sans-serif;}
+                        .status-line-other { height: 3px; flex: 0 1 50px; background: #333333;; margin: 2em 0; position: relative; font-size:8pt; font-family:Verdana, Helvetica, Sans-serif;}
+                        .status-line2-other { height: 3px; flex: 0 1 50px; background: #333333;; margin: 2em 0; position: relative; font-size:8pt; font-family:Verdana, Helvetica, Sans-serif;}
+                        .status-line span { position: absolute; width: 100%; text-align: center; translate: 0 1.0em; }                        
+                        .status-line2 span { position: absolute; width: 100%; text-align: center; translate: 0 1.6em; }
+                        .status-line-other span { position: absolute; width: 100%; text-align: center; translate: 0 1.0em; }
+                        .status-line2-other span { position: absolute; width: 100%; text-align: center; translate: 0 1.6em; }
+                        
+                        .status-line-sen { background: #990033; height: 3px; flex: 0 1 50px; margin: 2em 0; position: relative; font-size:8pt; font-family:Verdana, Helvetica, Sans-serif;} 
+                        .status-line2-sen { background: #990033; height: 3px; flex: 0 1 50px; margin: 2em 0; position: relative; font-size:8pt; font-family:Verdana, Helvetica, Sans-serif;} 
+                        .status-line-sen span { position: absolute; width: 100%; text-align: center; translate: 0 -1.4em; }
+                        .status-line2-sen span { position: absolute; width: 100%; text-align: center; translate: 0 -2.3em; }
+                        .status-wrap { display: flex;margin-bottom: 1em; margin-left: 6em; }
+                        
+                        
+                        .status-house-title-sen { text-align: left; font-weight: bold; font-family: Verdana, Helvetica, Sans-serif; font-size: 10pt; translate: 0 3em; } 
+                        .status-house-title-asm { text-align: left; font-weight:bold; font-family: Verdana, Helvetica, Sans-serif; font-size: 10pt; translate: 0 4em; }
+Steps bill has passed through in each house:
+Senate
+Assembly
+1st
+Cmt
+2nd
+Cmt
+2nd
+Cmt
+Died
+Senate
+Assembly
+1st
+Cmt
+2nd
+Cmt
+2nd
+Cmt
+Died
+Bill Status
+Measure:
+SB-1324
+Lead Authors:
+Durazo (S)
+Principal Coauthors:
+-
+Coauthors:
+-
+Topic:
+Rosenthal Fair Debt Collection Practices Act: rental debt.
+31st Day in Print:
+-
+Title:
+An act to amend Sections
+1788.2 and 1788.11
+1788.2, 1788.11, and 1788.17
+of the Civil Code, and to amend Section 100002 of the Financial Code, relating to debt collection.
+House Location:
+Senate
+Last Amended Date:
+04/21/22
+Committee Location:
+Sen Appropriations
+Type of Measure
+Inactive Bill - Died
+Majority Vote Required
+Non-Appropriation
+Fiscal Committee
+Non-State-Mandated Local Program
+Non-Urgency
+Non-Tax levy
+Last 5 History Actions
+Date
+Action
+11/30/22
+From committee without further action.
+05/19/22
+May  19 hearing: Held in committee and under submission.
+05/13/22
+Set for hearing May  19.
+05/02/22
+May  2 hearing: Placed on  APPR suspense file.
+04/26/22
+Set for hearing May  2.

@@ -1,0 +1,211 @@
+Bill Text - SB-187 Rosenthal Fair Debt Collection Practices Act.
+/* Hide page by default*/
+            html { display : none; }
+//<![CDATA[
+
+            if (self === top) {
+                // Show the page
+                document.documentElement.style.display = 'block';
+            } else {
+                // Inside a frame. Replace the frame.
+                var parentUrl = document.referrer;
+                var num = -1;
+                if (parentUrl !== '') {
+
+                    num = parseInt(parentUrl.indexOf('calchannel.granicus.com'));
+
+                    if (!(num >= 0)) {
+                        window.top.location.replace(window.location);
+                        top.location = self.location;
+                    }
+                }
+            }
+            // ]]>
+/* Hide page by default*/
+            html { display : inline; }
+//<![CDATA[
+function faceletsDebug(URL) {day = new Date();id = day.getTime();eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=800,height=600,left = 240,top = 212');"); };(function() { if (typeof jsfFaceletsDebug === 'undefined') { var jsfFaceletsDebug = false; } if (!jsfFaceletsDebug) {var faceletsOrigKeyup = document.onkeyup;document.onkeyup = function(e) { if (window.event) e = window.event; if (String.fromCharCode(e.keyCode) == 'D' & e.shiftKey & e.ctrlKey) faceletsDebug('/faces/billNavClient.xhtml?facelets.ui.DebugOutput=1790813384574'); jsfFaceletsDebug = true; if (faceletsOrigKeyup) faceletsOrigKeyup(e); };
+}})();//]]>
+function changePlaceHolder() {
+
+            var x = document.getElementById("billheaderinit_form:quick_search_select_id");
+            var input = document.getElementById("billheaderinit_form:searchall");
+
+            if (x !== null) {
+                if (x.options[0].selected) {
+
+                    input.placeholder = "AB1 or ab 1 or ABX1-1";
+                } else {
+                    input.placeholder = "Search phrase";
+                }
+            }
+
+        }
+skip to content
+home
+accessibility
+FAQ
+feedback
+sitemap
+login
+x
+Quick Search:
+Bill Number
+Bill Keyword
+Home
+Bill Information
+California Law
+Publications
+Other Resources
+My Subscriptions
+My Favorites
+function getTableColumnCount(table) {
+                var columnCount = 0;
+                var rows = table.rows;
+                if (rows !== null) {
+                    if (rows.length > 0) {
+                        var cells = rows[0].cells;
+                        for (var i = 0, len = cells.length; i < len; ++i) {
+                                // alert("i=" + i + "colspan=" + cells[i].colSpan);
+                                columnCount += cells[i].colSpan;
+                        }
+                    }
+                }
+                return columnCount;
+            }
+
+          function findSubTableIds() {
+          //alert('inside findSubTableIds');
+            var allElements = document.getElementsByTagName("*");
+            //var ei = '';
+            for (var i = 0, n = allElements.length; i < n; ++i) {
+                var ei = allElements[i];
+                if (ei !== null) {
+                    if (ei.id) {
+                        if (ei.id.startsWith("subtable_")) {
+                        // console.log(el.id);
+                            var arrName = ei.id.split("_");
+                            var table = document.getElementById(ei.id);
+                            if (table !== null) {
+                                var colcount = getTableColumnCount(table);
+                                if (colcount !== 0) {
+                                        document.getElementById("tdColSpanId_" + arrName[1]).colSpan =colcount;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+          }
+Bill Information
+>>
+Bill Search
+>>
+Text
+Bill Text
+Bill Information
+function asAmendsPopup() {
+            window.open("asAmendsInfo.xhtml", "Information", "width=330, height=220, toolbar=no, location=no, directories=no, menubar=no, scrollbars=no, top=270, left=150")
+        }
+
+        function selectVersion() {
+
+            var versionObj = document.getElementById("version");
+            var selectedVersionId = '20190SB18795CHP';
+            var len = versionObj.options.length;
+            //alert('selectedVersionId='+selectedVersionId);
+            for (i = 0; i < len; i++) {
+                if (versionObj.options[i].value == selectedVersionId) {
+                    versionObj.options[i].selected = true;
+                }
+            }
+        }
+
+        function  downLoadPDF() {
+            document.getElementById("pdf_link2").click();
+        }
+PDF2
+Bill PDF
+|
+Add To My Favorites
+|
+Version:
+10/07/19 - Chaptered
+09/03/19 - Enrolled
+04/22/19 - Amended Senate
+03/18/19 - Amended Senate
+01/30/19 - Introduced
+SB-187 Rosenthal Fair Debt Collection Practices Act.
+(2019-2020)
+Text
+>>
+Votes
+>>
+History
+>>
+Bill Analysis
+>>
+Today's Law As Amended
+>>
+Compare Versions
+>>
+Status
+>>
+Comments To Author
+>>
+Add To My Favorites
+>>
+selectVersion();
+SHARE THIS:
+Date Published: 10/08/2019 02:00 PM
+SB187:v95#DOCUMENT
+Bill Start
+Senate Bill
+              
+                        No. 187
+CHAPTER 545
+An act to amend Section 1788.2 of the Civil Code, relating to debt collection.
+[
+Approved  by
+Governor
+October 07, 2019.
+Filed with
+Secretary of State
+October 07, 2019.
+]
+LEGISLATIVE COUNSEL'S DIGEST
+SB 187, Wieckowski.
+                          Rosenthal Fair Debt Collection Practices Act.
+Existing law, the Rosenthal Fair Debt Collection Practices Act, regulates the collection of consumer debts by debt collectors, as defined. The act defines “consumer debt” to mean money, property, or their equivalent, due or owing or alleged to be due or owing from a natural person by reason of a consumer credit transaction. The act further defines “consumer credit transaction” to mean a transaction between a natural person and another person in which property, services, or money is acquired on credit by that natural person from the other person primarily for personal, family, or household purposes. The act also defines “debt collector” to exclude an attorney or counselor at law.
+This bill would provide that consumer debt for purposes of the act includes mortgage debt. The bill would also remove the exception for an attorney or counselor at law
+		from the definition of debt collector. The bill would also make nonsubstantive changes.
+Digest Key
+Vote:
+MAJORITY
+Appropriation:
+NO
+Fiscal Committee:
+NO
+Local Program:
+NO
+Bill Text
+The people of the State of California do enact as follows:
+SECTION 1.
+The amendments of subdivision (f) of Section 1788.2 of the Civil Code made by this act do not constitute a change in, but are declaratory of, existing law.
+SEC. 2.
+Section 1788.2 of the Civil Code is amended to read:
+1788.2.
+(a) Definitions and rules of construction set forth in this section are applicable for the purpose of this title.
+(b) The term “debt collection” means any act or practice in connection with the collection of consumer debts.
+(c) The term “debt collector” means any person who, in the ordinary course of business, regularly, on behalf of that person or others, engages in debt collection. The term includes any person who composes and sells, or offers to compose and sell, forms, letters, and other collection media used or intended to be used for debt collection.
+(d) The term “debt” means money,
+				  property, or their equivalent that is due or owing or alleged to be due or owing from a natural person to another person.
+(e) The term “consumer credit transaction” means a transaction between a natural person and another person in which property, services, or money is acquired on credit by that natural person from the other person primarily for personal, family, or household purposes.
+(f) The terms “consumer debt” and “consumer credit” mean money, property, or their equivalent, due or owing or alleged to be due or owing from a natural person by reason of a consumer credit transaction. The term “consumer debt” includes a mortgage debt.
+(g) The term “person” means a natural person, partnership, corporation, limited liability company, trust, estate, cooperative, association, or other similar entity.
+(h) Except as provided in Section 1788.18, the term “debtor” means a natural person from whom a debt collector seeks to collect a consumer debt that is due and owing or alleged to be due and owing from such person.
+(i) The term “creditor” means a person who extends consumer credit to a debtor.
+(j) The term “consumer credit report” means any written, oral, or other communication of any information by a consumer reporting agency bearing on a consumer’s creditworthiness, credit standing, credit capacity, character, general reputation, personal characteristics, or mode of living that is used or expected to be used or collected in whole or in part for the purpose of serving as a factor in establishing the consumer’s eligibility for (1) credit or insurance to be used primarily for personal, family, or household purposes, or
+				  (2) employment purposes, or (3) other purposes authorized under any applicable federal or state law or regulation. The term does not include (a) any report containing information solely as to transactions or experiences between the consumer and the person making the report; (b) any authorization or approval of a specific extension of credit directly or indirectly by the issuer of a credit card or similar device; or (c) any report in which a person who has been requested by a third party to make a specific extension of credit directly or indirectly to a consumer conveys that person’s decision with respect to that request, if the third party advises the consumer of the name and address of the person to whom the request was made, and the person makes the disclosures to the consumer required under any applicable federal or state law or regulation.
+(k) The term “consumer reporting agency” means any person that, for monetary fees, dues, or on a
+				  cooperative nonprofit basis, regularly engages, in whole or in part, in the practice of assembling or evaluating consumer credit information or other information on consumers for the purpose of furnishing consumer credit reports to third parties and uses any means or facility for the purpose of preparing or furnishing consumer credit reports.

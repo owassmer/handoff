@@ -1,0 +1,49 @@
+{
+  "scope": "Two bounded J1 selection corrections requested by root; no canonical edits.",
+  "updates": [
+    {
+      "id": "CA-HB:ORD4348",
+      "set_fields": {
+        "adopted_date": "2026-06-02",
+        "status": "Adopted June 2, 2026; selected ordinance and incorporated First Amendment.",
+        "acquisition.status": "Official 143-page ordinance/amendment agenda attachment acquired. Certified June 2 minutes, item 24 (26-480), pages 14\u201316 establish final adoption; no duplicate signed ordinance required for J1."
+      },
+      "evidence": {
+        "source": "https://records.huntingtonbeachca.gov/WebLink/DocView.aspx?id=7348631&dbid=0&repo=COHB",
+        "direct_pdf": "https://records.huntingtonbeachca.gov/WebLink/ElectronicFile.aspx?docid=7348631&dbid=0&repo=COHB",
+        "local_pdf": "j1/lanes/acquisition/restored-local/june2-minutes.pdf",
+        "locator": "item 24 (26-480), PDF pages 14\u201316",
+        "finding": "Page 14 expressly says Adopted Ordinance No. 4348; page 15 records motion carried. Corrected vote is 4\u20132, Van Der Mark absent. Page 15 visually strikes Gruel and Williams from ayes; OCR loses the strikethrough. Page 16 records both vote corrections. Image inspected."
+      }
+    },
+    {
+      "id": "CA-HB:HOME-TBRA-PROVIDER-AGREEMENTS",
+      "append_fields": {
+        "functions": [
+          "data_security"
+        ],
+        "scope_notes": [
+          "Conditional program data_security applies to the selected HB TBRA provider sources. July 2024 guideline Appendix L emergency-transfer plan, PDF page 130, expressly requires confidentiality of transfer requests, transfer information, and new dwelling location, subject to stated releases/disclosures. Appendix J provider manual, PDF page 91, separately governs PII encryption, storage and disclosure. These are actual program operating terms; do not apply them to ordinary unassisted apartments by geography alone. The 2025 provider agreement \u00a75.2 and \u00a75.5 also govern recordkeeping and retention; no claim that its missing appended scan duplicates every 2024 term."
+        ]
+      },
+      "evidence": [
+        {
+          "source": "https://records.huntingtonbeachca.gov/WebLink/DocView.aspx?id=6780479&dbid=0&repo=COHB",
+          "locator": "Exhibit A Appendix L, PDF pages 128\u2013131, especially 130; Appendix J, PDF page 91",
+          "local_files": [
+            "lf-6780479-page130.json",
+            "lf-6780479-page91.json"
+          ]
+        },
+        {
+          "source": "https://records.huntingtonbeachca.gov/WebLink/DocView.aspx?id=7236879&dbid=0&repo=COHB",
+          "locator": "\u00a7\u00a75.2\u20135.5, PDF page 16",
+          "local_files": [
+            "lf-7236879-page16.json"
+          ]
+        }
+      ],
+      "layer_implication": "Replace HB data_security absence rationale that TBRA is unresolved with conditional selected-source coverage. No new standalone instrument is needed; existing provider bundle contains the operating terms."
+    }
+  ]
+}

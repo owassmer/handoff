@@ -1,0 +1,68 @@
+{
+  "reviewer": "/root/reference_final_audit",
+  "status": "changes_required",
+  "model_responses_seen": false,
+  "bindings": {
+    "or_entry": {
+      "preparation_sha256": "9bccc2b12318d72d888091c2e7e2fd5c8b1d0e9cf650f19baa6f045d3368e2e0",
+      "expectations_sha256": "bcaf368eeebb60738fa57e9b556c163c73aed8572e0170f52a583e1f3bb30483",
+      "snapshot": "research/legal-engine/pipeline/design/section_semantics/worked_units/history/or_entry.independent_recheck_2_snapshot.json"
+    },
+    "ca_return": {
+      "preparation_sha256": "f7940e01842d6b7704e875fefdc302f2e70824f8064fe24220b5b15229d3983a",
+      "expectations_sha256": "541df95f3c43a1fd18f3d395eaa1e7e9ba539f9e468d0d56afaa283bf4788ef7",
+      "snapshot": "research/legal-engine/pipeline/design/section_semantics/worked_units/history/ca_return.independent_recheck_2_snapshot.json"
+    }
+  },
+  "checks": {
+    "or_entry": {
+      "jobs": 472,
+      "records": 46,
+      "evidence_spans": 39,
+      "source_failures": []
+    },
+    "ca_return": {
+      "jobs": 349,
+      "records": 32,
+      "evidence_spans": 50,
+      "source_failures": []
+    }
+  },
+  "findings": {
+    "P01": {
+      "status": "open",
+      "reason": "Author finishing dependency compilation. Scope boundary may exclude detailed judicial execution and deposit accounting, but not90.360(4) restriction on the incorporated termination route."
+    },
+    "P02": {
+      "status": "partially_corrected",
+      "reason": "New source-bound links cover the prior cost, yard, time, notice and grant gaps. However facility exclusion connects entry grants/ordinary notice, not all90.322effects including emergency postnotice and remedies. Whole-unit exclusion must govern all applicable records."
+    },
+    "P03": {
+      "status": "partially_corrected",
+      "reason": "CA claimant identity is now explicit. OR actual_notice_methods retains listed-method/deictic wording without recipient/location detail; a downstream consumer cannot reconstruct the correct written-delivery route."
+    },
+    "P04": {
+      "status": "corrected_for_cited_examples",
+      "reason": "Actorless effect alternative, separate emergency objects, and distinct interval/anchor alternatives now present. This is a preparation judgment, not a model accuracy result."
+    },
+    "P05": {
+      "status": "partially_corrected",
+      "reason": "Relationship jobs now bind endpoint predicates, logic and timing. OR j390/391 DO provide explicit conditional floor/operator mappings (correcting interim omission of these added jobs). Residual: duplicate authority fromj306/307 andj390/391, plus CA granular timing andj131, needs explicit conflict reconciliation."
+    },
+    "P06": {
+      "status": "open",
+      "reason": "Generic semantic-edge labels still lack reviewed interpretation of inherited conditions, overridden payment fields, scope and timing. E.g qualifies_authorization_duration licenses only from/to/relation while prose question includes exception operation."
+    },
+    "P07": {
+      "status": "open",
+      "reason": "Modality state still omits selected action candidate. CA j081/j089 select claimant-condition wording while modality options regulate an unspecified affirmative action. Candidate-validation limitations remain; explicit action binding is needed."
+    },
+    "P08": {
+      "status": "pending_post_inference_evaluation",
+      "reason": "Actual consumer cases need not pass before development inference can begin. They remain mandatory before goal completion. This distinction does not excuse the open preparation defects above."
+    }
+  },
+  "coverage_assessment": "Recheck of P02\u2013P07 against corrected source-bound preparations and unchanged independent expectations. P01 remains open pending dependencies; P08 is a required post-inference evaluation, not alone a pre-inference defect. Neither unit is currently ready_for_evaluation because preparation defects remain.",
+  "freeze_contract_inspected": "pipeline/semantics/freeze.py requires exact preparation_sha256 and expectations_sha256, ready_for_evaluation, empty material_findings, reviewer, coverage_assessment, and model_responses_seen false. No false ready record issued.",
+  "mapping_followup": "Exact draft mappings preserve the full denominator. CA plan compilation fails for40jobs whose template sources are undeclared; OR compiles. See mapping plan_invalid_jobs. No ready record issued."
+}

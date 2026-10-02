@@ -1,0 +1,142 @@
+{
+  "as_of": "2026-10-01",
+  "relationship": "Additive to hb-home-tbra-delta.json; no newly recovered regular-TBRA agreement is claimed.",
+  "source_selection_refinements": [
+    {
+      "branch": "Mobilehome TBRA",
+      "named_instrument": "City-participant rent payment reimbursement contract",
+      "source": "https://huntingtonbeach.legistar.com/ViewReport.ashx?GID=716&GUID=LATEST&ID=5958&M=R&N=TextL5&Title=Staff+Report",
+      "locator": "November1,2022 item22-846, page5",
+      "finding": "Staff identifies reimbursement after proof of space-rent payment. The governing participant contract therefore needs selection separately from the park lease and city-provider PSA. Contract text/ref remains unrecovered.",
+      "scope": "Payment evidence, account credits, continued eligibility and assistance termination; no inference that this is regular TBRA payment mechanics."
+    },
+    {
+      "branch": "Ocean View Estates",
+      "named_instrument": "Item22-846 city-owned-park temporary space-rent reduction authorization",
+      "adopted_date": "2022-11-01",
+      "source": "https://huntingtonbeach.legistar.com/LegislationDetail.aspx?GUID=384D022D-0064-4084-9A7A-FC8005582BBB&ID=5898841&Options=&Search=",
+      "supporting_report": "https://huntingtonbeach.legistar.com/ViewReport.ashx?GID=716&GUID=LATEST&ID=5958&M=R&N=TextL5&Title=Staff+Report",
+      "finding": "Adopted package separately authorizes temporary rent reductions for qualifying Ocean View Estates seniors, instead of enrolling them in MHTBRA.",
+      "scope": "Retain this historical/time-limited city-landlord account branch and its actual rent amendment where applicable; do not classify all city-owned-park residents as MHTBRA recipients or presume the authorization continues in2026."
+    },
+    {
+      "branch": "Regular HOME TBRA",
+      "source": "https://www.families-forward.org/wp-content/uploads/2025/05/Families-Forward-FY24-Audited-Financials.pdf",
+      "locator": "Schedule of Expenditures of Federal Awards, printed page30",
+      "finding": "Provider identifies HOME TBRA awards by FY2023-2024 and FY2024-2025. Contract23-12957/311699 appears under separate CDBG awards.",
+      "scope": "Do not substitute that CDBG agreement for HOME TBRA. Annual HOME award identifiers narrow the agreement search but do not establish contract terms."
+    }
+  ],
+  "observed_publisher_search_routes": [
+    {
+      "url": "https://records.huntingtonbeachca.gov/WebLink/CustomSearch.aspx?SearchName=Contracts&dbid=0&repo=COHB",
+      "observed_from": "https://records.huntingtonbeachca.gov/WebLink/Welcome.aspx",
+      "result": "Only Loading returned; no query fields/results exposed to web reader.",
+      "needed_inputs": [
+        "Families Forward; HOME TBRA; FY2024-2025 and FY2025-2026",
+        "Mercy House; HOME TBRA; current annual agreement and amendments",
+        "City-participant MHTBRA reimbursement contract/form"
+      ]
+    },
+    {
+      "url": "https://records.huntingtonbeachca.gov/WebLink/CustomSearch.aspx?SearchName=Minutes&dbid=0&repo=COHB",
+      "observed_from": "https://records.huntingtonbeachca.gov/WebLink/Welcome.aspx",
+      "result": "Only Loading returned.",
+      "needed_inputs": [
+        "2020-07-06 item20-1726 adoption",
+        "2026-05-05 item26-340 final action"
+      ]
+    },
+    {
+      "url": "https://records.huntingtonbeachca.gov/WebLink/CustomSearch.aspx?SearchName=Resolutions&dbid=0&repo=COHB",
+      "observed_from": "https://records.huntingtonbeachca.gov/WebLink/Welcome.aspx",
+      "result": "Only Loading returned.",
+      "needed_inputs": [
+        "Resolution2026-10 signed/certified version"
+      ]
+    }
+  ],
+  "new_route_attempts": [
+    {
+      "url": "https://webapi.legistar.com/v1/huntingtonbeach/matters?$filter=MatterFile%20eq%20%2720-1726%27",
+      "result": "Attempted conventional API query; inaccessible. Endpoint/client acceptance not verified; not an acquisition ref."
+    },
+    {
+      "url": "https://huntingtonbeach.granicus.com/MediaPlayer.php?view_id=9&clip_id=1686",
+      "result": "Internal error; no agenda item metadata/attachment href recovered."
+    },
+    {
+      "url": "https://huntingtonbeach.granicus.com/ViewPublisher.php?view_id=9",
+      "result": "Publisher index exceeds web reader4MB content limit; final-minutes link cannot be extracted through current response."
+    },
+    {
+      "url": "https://records.huntingtonbeachca.gov/WebLink/DocView.aspx?dbid=0&id=7080590&repo=COHB",
+      "result": "Search false positive: Michael Baker professional design contract; no TBRA or FamiliesForward match. Excluded."
+    },
+    {
+      "url": "https://huntingtonbeach.legistar.com/View.ashx?GUID=063AB351-0799-45D8-A673-1FA1CC4DD658&ID=761826&M=M",
+      "result": "Derived from previously observed July6,2020meeting ID/GUID using verified minutes-reader format; inaccessible. No adoption claim."
+    }
+  ],
+  "provider_materials_not_governing_city_sources": [
+    {
+      "url": "https://www.families-forward.org/wp-content/uploads/2026/03/Housing-Partners-Flyer-2026-Families-Forward.pdf",
+      "result": "Observed provider2pagePDF linked from housing-partner page; not identified as HB HOME contract or incorporated exhibit."
+    },
+    {
+      "url": "https://www.families-forward.org/wp-content/uploads/2026/07/Housing-Partners-Incentives-Flyer-2026-Families-Forward.pdf",
+      "result": "Observed provider1pagePDF; general landlord incentives, no verified HB HOME incorporation."
+    }
+  ],
+  "completion_assessment": "FY2026-27plan adoption and amendments resolved from actual official minutes. Regular-TBRA operating guidelines/provider agreements and participant instruments remain unidentified at document-target level. Refined mobilehome reimbursement and separate OceanViewEstates historical branch. No semantic compilation or J2capture performed.",
+  "resolved_adoption": {
+    "identity": "26-340 / Resolution2026-10 / FY2026-27 Annual Action Plan",
+    "adopted_date": "2026-05-05",
+    "adoption_source": "https://huntingtonbeach.legistar.com/View.ashx?GUID=49C3E2E5-31DD-4650-9039-99BD8CC20A85&ID=1343924&M=M",
+    "locator": "Item15, printed pages14-15",
+    "vote": "6-0; Gruel out of room",
+    "amendments": "$10,000 from All For Kids to Save the Brave; $5,000 from Robyne's Nest to Pathways to Independence. No TBRA-specific change in carried motion.",
+    "supersedes": "Earlier delta observation of empty Legistar final-action table is superseded by actual minutes. Capture original package with recorded amendment; do not label unmodified agenda exhibit as final amended text."
+  },
+  "proposed_instruments": [
+    {
+      "id": "CA-HB:HOME-PLAN-RES2026-10",
+      "name": "Resolution2026-10 and FY2026-27 Annual Action Plan, as amended at adoption",
+      "jurisdiction": "CA-HB",
+      "adapter": "generic",
+      "source_unit_kind": "document",
+      "adopted_date": "2026-05-05",
+      "adoption_source": "https://huntingtonbeach.legistar.com/View.ashx?GUID=49C3E2E5-31DD-4650-9039-99BD8CC20A85&ID=1343924&M=M",
+      "scope_reason": "Regular HOME TBRA, mobilehome TBRA and housing-work/account-related program conditions/funding only; no standalone social-services expansion. Neither plan nor minutes substitutes for provider/participant agreements.",
+      "units": [
+        {
+          "id": "RES2026-10-plan",
+          "heading": "Resolution2026-10 and FY2026-27 Annual Action Plan",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "RES2026-10-plan",
+              "heading": "Resolution2026-10 and attached plan package",
+              "ref": "https://huntingtonbeach.legistar.com/View.ashx?GUID=B0FDCDB1-9E5B-40E7-9249-503DF204135E&ID=15424695&M=F",
+              "source_unit_kind": "document"
+            }
+          ]
+        },
+        {
+          "id": "adoption-amendment",
+          "heading": "May5,2026 item15 adoption and amendments",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "2026-05-05-minutes",
+              "heading": "May5minutes item15 pages14-15",
+              "ref": "https://huntingtonbeach.legistar.com/View.ashx?GUID=49C3E2E5-31DD-4650-9039-99BD8CC20A85&ID=1343924&M=M",
+              "source_unit_kind": "document"
+            }
+          ]
+        }
+      ],
+      "acquisition_note": "Minutes PDF verified20pages. Package target previously observed on official item; retain adoption amendment separately for J2version reconciliation."
+    }
+  ]
+}

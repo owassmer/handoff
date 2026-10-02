@@ -1,0 +1,61 @@
+{
+  "version": "prepared-tasks-2",
+  "status": "Research prototypes; reference question is evaluated separately. Other questions require their own task evaluation before routine use.",
+  "questions": {
+    "definition_present": {
+      "instructions": "Does this passage define a term?",
+      "state": [
+        "passage"
+      ],
+      "preparation": "Select intact operative text; keep source metadata separately. Preserve complete defining language."
+    },
+    "reference_present": {
+      "configuration_file": "statutory-pointer.question.json",
+      "scope": "Statutory text pointers; other authorities and definition dependencies remain separate research work.",
+      "state": [
+        "passage",
+        "source_kind"
+      ],
+      "preparation": "Agent selects the exact expression and governing context. The literal expression goes directly into the question. Code validates source and expression spans; retain the occurrence for target resolution. Adjacent citations and broad leads stay separately accounted. Candidate-discovery coverage and applicability are separate from this judgment."
+    },
+    "candidate_term_use": {
+      "instructions": "Does the term have the same sense in these two passages?",
+      "state": [
+        "term",
+        "definition_passage",
+        "use_passage"
+      ],
+      "preparation": "Find candidate occurrences first. Supply the complete definition and enough local context to establish the occurrence's meaning. Candidate connection is separate from whether the definition governs this use."
+    },
+    "exception_to_requirement": {
+      "instructions": "Does the candidate create an exception to the requirement?",
+      "state": [
+        "requirement",
+        "candidate"
+      ],
+      "preparation": "Agent selects one requirement and a candidate provision with necessary surrounding language. Separate each requirement and each candidate."
+    },
+    "changes_deadline": {
+      "instructions": "Does the candidate change the deadline for this requirement?",
+      "state": [
+        "requirement",
+        "candidate"
+      ],
+      "preparation": "Agent supplies one requirement, its stated deadline, and the candidate modification. Code calculates the resulting date after meaning and applicability are established."
+    },
+    "supports_claim": {
+      "instructions": "Does the supplied text support this claim?",
+      "state": [
+        "claim",
+        "text"
+      ],
+      "preparation": "Agent supplies one claim and the relevant operative text with necessary qualifications. Separate claims about requirements, exceptions, deadlines, and consequences. Retain source links outside the semantic payload."
+    }
+  },
+  "removed_from_jev": {
+    "scope_includes_use": "Agent reads the scope statement and establishes its legal unit and any limitations. Code compares explicit unit paths for plain containment. Ambiguous reach and exceptions return to agent investigation, not a guessed path.",
+    "role_and_chain_duty": "Stop using the combined relevance/applicability/exclusion judgment as proof that a section can be skipped. Agent establishes the operating question and investigates the relevant provisions. Any future semantic support is one prepared decision at a time.",
+    "quote_supports_every_branch": "Replace whole-rule support with supports_claim calls on individual claims. Agent checks whether the collection of claims and conditions represents the source correctly.",
+    "generic_runtime_template": "A rule ID and judgment-term placeholder do not define a task. Agent must state the actual factual question and supply the evidence it needs before any runtime question is registered."
+  }
+}

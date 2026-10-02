@@ -1,0 +1,486 @@
+{
+  "status": "Source-only development corrections; no inference; independent review still required",
+  "old_files": {
+    "development.v2.cases.json": "8b202c687bb6be8592ddb348ce8da1388eabeb2392c85fef507587d95055b203",
+    "expansion.cases.json": "16eb5c0437e620460df20c4f9f1c2cf14f18ef2a0d9ef52587ac3586ca821057"
+  },
+  "new_files": {
+    "development.v3.cases.json": "736146bb69d454b0346c90818e5b55c03170e925d25ee4094d4f5f60b2285811",
+    "expansion.v3.cases.json": "b922f32b653f074e6047c431fac29f4277d22faa62c5dd659636a57c549aafb1"
+  },
+  "source_adjudication": {
+    "EXPANSION_RELATION_FINDINGS.md": "b4673a0441f9c8fe2f21033476308e12cf367464a41cb1c503de1a6b1e5c0b25",
+    "EXPANSION_MEANING_CORRECTED_INPUTS.json": "1e46bdbc27a8c8fae3143ca7e5fd0f13f43077e5e503bea49cc6e87d0c2505cd"
+  },
+  "configuration_policy": "Source-only changes first validated with proposed-v2 fixed. Separately validated native construction under parent-provided proposed-v3; no configuration file edited by this author.",
+  "exposure": "Author read parent-requested source adjudication, including its reported disagreement values; this authoring step is not a blind review or fresh held-out evaluation. No raw response files opened and no inference performed.",
+  "changes": [
+    {
+      "id": "d032",
+      "changed_semantic_fields": [
+        "candidate",
+        "requirement"
+      ],
+      "reason": "Separate the tenant request deadline from description/address requirements; select the timing-bearing actual-damages provision with its liability lead-in; retain all surrender prerequisites in context.",
+      "old_sources": {
+        "requirement": {
+          "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1965.txt",
+          "sha256": "9d6628669c233d60147eab4e163a752ffaed6ad34fb9d7a4b8e8a5c0557f3375",
+          "start": 1577,
+          "end": 1827
+        },
+        "candidate": {
+          "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1965.txt",
+          "sha256": "9d6628669c233d60147eab4e163a752ffaed6ad34fb9d7a4b8e8a5c0557f3375",
+          "start": 4131,
+          "end": 5142
+        },
+        "context": {
+          "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1965.txt",
+          "sha256": "9d6628669c233d60147eab4e163a752ffaed6ad34fb9d7a4b8e8a5c0557f3375",
+          "start": 1158,
+          "end": 2986
+        }
+      },
+      "new_sources": {
+        "requirement": {
+          "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1965.txt",
+          "sha256": "9d6628669c233d60147eab4e163a752ffaed6ad34fb9d7a4b8e8a5c0557f3375",
+          "start": 1577,
+          "end": 1693
+        },
+        "candidate": {
+          "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1965.txt",
+          "sha256": "9d6628669c233d60147eab4e163a752ffaed6ad34fb9d7a4b8e8a5c0557f3375",
+          "start": 4131,
+          "end": 4844
+        },
+        "context": {
+          "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1965.txt",
+          "sha256": "9d6628669c233d60147eab4e163a752ffaed6ad34fb9d7a4b8e8a5c0557f3375",
+          "start": 1158,
+          "end": 2986
+        }
+      },
+      "criteria_changed": false
+    },
+    {
+      "id": "exp018",
+      "changed_semantic_fields": [
+        "context"
+      ],
+      "reason": "Merge independently recovered full two-branch governing business-day definition; preserve exact selected occurrence.",
+      "old_sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_2.txt",
+          "sha256": "28c3f5e5f0d20bfe4ac92580c6a8e4370e87363869ad6605e1361f5bc27efa73",
+          "start": 20790,
+          "end": 20910
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_2.txt",
+          "sha256": "28c3f5e5f0d20bfe4ac92580c6a8e4370e87363869ad6605e1361f5bc27efa73",
+          "start": 22226,
+          "end": 23255
+        }
+      },
+      "new_sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_2.txt",
+          "sha256": "28c3f5e5f0d20bfe4ac92580c6a8e4370e87363869ad6605e1361f5bc27efa73",
+          "start": 20790,
+          "end": 20910
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_2.txt",
+          "sha256": "28c3f5e5f0d20bfe4ac92580c6a8e4370e87363869ad6605e1361f5bc27efa73",
+          "start": 22226,
+          "end": 23255
+        },
+        "context": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_2.txt",
+          "sha256": "28c3f5e5f0d20bfe4ac92580c6a8e4370e87363869ad6605e1361f5bc27efa73",
+          "start": 20767,
+          "end": 21504
+        }
+      },
+      "criteria_changed": false
+    },
+    {
+      "id": "exp032",
+      "changed_semantic_fields": [
+        "context"
+      ],
+      "reason": "Merge independently recovered Washington dwelling-unit definition to resolve the use context.",
+      "old_sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+          "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+          "start": 17439,
+          "end": 17768
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 73154,
+          "end": 73554
+        }
+      },
+      "new_sources": {
+        "definition_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/OREGON_90.txt",
+          "sha256": "8e2c60dadfbed0d928420e2a67b8c625c7549c84f39091039e2f13f8211bbb94",
+          "start": 17439,
+          "end": 17768
+        },
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 73154,
+          "end": 73554
+        },
+        "context": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/WASHINGTON_59_18.txt",
+          "sha256": "5e374eae4e430b3dc4073ad3f26ed65316b05338a8ce9da1f0794517101aa8e8",
+          "start": 16322,
+          "end": 16630
+        }
+      },
+      "criteria_changed": false
+    },
+    {
+      "id": "exp038",
+      "changed_semantic_fields": [
+        "use_expression"
+      ],
+      "reason": "Merge independently selected unique noun-phrase occurrence of customer service representative; preserve offered criteria.",
+      "old_sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 24306,
+          "end": 25012
+        }
+      },
+      "new_sources": {
+        "use_passage": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 24306,
+          "end": 25012
+        }
+      },
+      "criteria_changed": false
+    },
+    {
+      "id": "exp049",
+      "changed_semantic_fields": [
+        "requirement"
+      ],
+      "reason": "Separate the employer accommodation duty from the employee-notification proposition, retaining all qualifiers in the selected duty and hardship candidate.",
+      "old_sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 10661,
+          "end": 10919
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 15685,
+          "end": 15883
+        }
+      },
+      "new_sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 10661,
+          "end": 10817
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_ACCOMMODATION.txt",
+          "sha256": "f044252b225bd14798150151ca059d8166cf03b2e03cfb52ee436c862d426d15",
+          "start": 15685,
+          "end": 15883
+        }
+      },
+      "criteria_changed": false
+    },
+    {
+      "id": "exp059",
+      "changed_semantic_fields": [
+        "candidate",
+        "context",
+        "requirement"
+      ],
+      "reason": "Replace the named-litigant requirement with the general statutory filing period and the argument-heavy introduction with the actual conditional holding plus remand reservation.",
+      "old_sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 11337,
+          "end": 11457
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 9719,
+          "end": 10298
+        }
+      },
+      "new_sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 13580,
+          "end": 13715
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 29417,
+          "end": 29892
+        },
+        "context": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 13546,
+          "end": 13795
+        }
+      },
+      "criteria_changed": false
+    },
+    {
+      "id": "exp068",
+      "changed_semantic_fields": [
+        "candidate",
+        "context",
+        "requirement"
+      ],
+      "reason": "Select the general per-event timing rule and retain its explicit ongoing-harassment qualification, rather than treating the demotion example as the selected requirement.",
+      "old_sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 5310,
+          "end": 5954
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 5974,
+          "end": 6235
+        }
+      },
+      "new_sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 5310,
+          "end": 5409
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 5859,
+          "end": 6235
+        },
+        "context": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/EEOC_CHARGE.txt",
+          "sha256": "4348e364e727a0635e36e9c826b4f86ca3011cd4da0065ca55cf3660ffb3fedf",
+          "start": 3483,
+          "end": 4406
+        }
+      },
+      "criteria_changed": false
+    },
+    {
+      "id": "exp072",
+      "changed_semantic_fields": [
+        "context",
+        "requirement"
+      ],
+      "reason": "Select effective as-of crediting rather than posting; supply the general legal receipt definition and original posting distinction alongside the specific conditional deemed-receipt rule.",
+      "old_sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 11314,
+          "end": 11509
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 13463,
+          "end": 14050
+        }
+      },
+      "new_sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 11431,
+          "end": 11509
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 13463,
+          "end": 14050
+        },
+        "context": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/CFPB_1026_10.txt",
+          "sha256": "ae15ee67f5692e8f294f375f44155373a7cb15364b72c5b154a65ef7cff92096",
+          "start": 11009,
+          "end": 11667
+        }
+      },
+      "criteria_changed": false
+    },
+    {
+      "id": "exp073",
+      "changed_semantic_fields": [
+        "candidate",
+        "context",
+        "requirement"
+      ],
+      "reason": "Select the general statutory filing period and retain the complete conditional equitable-tolling conclusion and reservation of actual entitlement on remand.",
+      "old_sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 11337,
+          "end": 11457
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 29417,
+          "end": 30023
+        }
+      },
+      "new_sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 13580,
+          "end": 13715
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 29417,
+          "end": 29892
+        },
+        "context": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/BOECHLER.txt",
+          "sha256": "d2601bfdc784e1f3d1dfc232bdaaa52eb08a60dd382ac02dc3ed1cae436d7b6e",
+          "start": 13546,
+          "end": 13795
+        }
+      },
+      "criteria_changed": false
+    },
+    {
+      "id": "exp076",
+      "changed_semantic_fields": [
+        "candidate",
+        "context",
+        "requirement"
+      ],
+      "reason": "Select one state-law limitation rule and add the Court’s actual stop-clock interpretation plus the claim’s federal supplemental-jurisdiction connection.",
+      "old_sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 18309,
+          "end": 18806
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 9387,
+          "end": 9732
+        }
+      },
+      "new_sources": {
+        "requirement": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 18627,
+          "end": 18806
+        },
+        "candidate": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 9387,
+          "end": 10992
+        },
+        "context": {
+          "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+          "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+          "start": 15266,
+          "end": 16874
+        }
+      },
+      "criteria_changed": false
+    }
+  ],
+  "unchanged_rechecks": [
+    {
+      "id": "exp066",
+      "reason": "Independent source review found existing input adequate. Preserved exactly; no preparation-only explanation manufactured for a judgment disagreement."
+    }
+  ],
+  "separately_accounted_source_components": [
+    {
+      "text": "(2) An amount not to exceed two hundred fifty dollars ($250) for each bad faith violation of this section. In determining the amount of the award, the court shall consider proof of matters as justice\nmay require.",
+      "source": {
+        "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1965.txt",
+        "sha256": "9d6628669c233d60147eab4e163a752ffaed6ad34fb9d7a4b8e8a5c0557f3375",
+        "start": 4845,
+        "end": 5057
+      },
+      "disposition": "Preserved statutory remedy for bad-faith violation, separately accounted; not part of the selected (e)(1) timing-bearing actual-damages candidate. This remedy does not change the tenant’s eighteen-day request period."
+    },
+    {
+      "text": "(3) The court may award reasonable attorney’s fees and cost to the prevailing party.",
+      "source": {
+        "path": "pipeline/design/coverage_tracking/fresh_research/sources/CIV_1965.txt",
+        "sha256": "9d6628669c233d60147eab4e163a752ffaed6ad34fb9d7a4b8e8a5c0557f3375",
+        "start": 5058,
+        "end": 5142
+      },
+      "disposition": "Preserved prevailing-party fee/cost remedy, separately accounted; not part of the selected timing relation and not a change to the tenant’s eighteen-day request period."
+    },
+    {
+      "text": "The D. C. False Claims Act and the tort of wrongful termination each\nhave a three-year statute of limitations that started to run on the day\nArtis lost her job in November 2010. See D. C. Code § 2–381.04(c) (2001)\n(D. C. False Claims Act); Stephenson v. American Dental Assn., 789 A. 2d\n1248, 1249, 1252 (D. C. 2002) (tort of wrongful termination governed by\nthe District's catchall three-year limitations period and claim accrues on\nthe date when plaintiff has unequivocal notice of termination).",
+      "source": {
+        "path": "pipeline/design/task_evaluation/expansion_sources/ARTIS.txt",
+        "sha256": "58a80cda0df64d6ced471014abe7537ac6b136d84dedd5856d49e52ac18ae35a",
+        "start": 18309,
+        "end": 18806
+      },
+      "disposition": "Original joint limitation passage preserved. The v3 selected rule concerns wrongful termination only; the D.C. False Claims Act limitation remains research evidence and is not silently negated or treated as an independent tested case."
+    }
+  ],
+  "preparation_verification": [
+    {
+      "contracts": "configurations/proposed-v2.json",
+      "contracts_sha256": "93b2ad6fbb6b4ba2438960c8f15527ad2906374f8bc6eee6f51ba6577d7cd86f",
+      "prepared_count": 144,
+      "method": "tasks.prepare with pinned native SDK construction; no network dispatch",
+      "request_hashes_sha256": "3b9e9a0536dfe988cbbb5ff3de73a55f76dc7b004109d83764241024067d5fe9"
+    },
+    {
+      "contracts": "configurations/proposed-v3.json",
+      "contracts_sha256": "22bf043cce6ac92f1cbfe72a09cd2e34713c4a1bee9b2c0575a22a0b3a8d2a87",
+      "prepared_count": 144,
+      "method": "tasks.prepare with pinned native SDK construction; no network dispatch",
+      "request_hashes_sha256": "208bc9c8c953bc716cc78b9692ce2f1274bb682e89fa3724009f2b233db4eeaa"
+    }
+  ],
+  "prior_artifacts_policy": "All earlier case files, labels, captured sources, configurations, bundles and results retained byte-for-byte."
+}

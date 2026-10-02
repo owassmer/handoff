@@ -1,0 +1,160 @@
+{
+  "id": "or_entry.j451",
+  "kind": "relationship",
+  "native": {
+    "primitive": "noul",
+    "instructions": "Does this notice/cure qualification constrain the90.322(7) landlord termination route, rather than authorize immediate self-help possession? Judge the concrete proposed_relationship_operation in state as well as the stated relationship; reject it if its transfer or scope goes beyond the text. The revised structured operation is the entire proposed executable effect. Judge its exact record/condition/field selectors and polarity; a source relationship alone is insufficient if this operation is wrong. No runtime support is implied by this proposal.",
+    "criteria": {
+      "true": "The supplied evidence establishes this particular relationship with its stated scope.",
+      "false": "It does not establish this particular relationship; do not infer any converse."
+    }
+  },
+  "state_template": {
+    "selected_text": {
+      "evidence_ref": "ORS90.392"
+    },
+    "governing_section": {
+      "evidence_ref": "primary"
+    },
+    "established_predecessor_fields": {
+      "from_actual_results": [
+        {
+          "job": "or_entry.j422",
+          "field": "records.landlord_cause_notice.actor"
+        },
+        {
+          "job": "or_entry.j423",
+          "field": "records.landlord_cause_notice.action"
+        },
+        {
+          "job": "or_entry.j424",
+          "field": "records.landlord_cause_notice.object"
+        },
+        {
+          "job": "or_entry.j425",
+          "field": "records.landlord_cause_notice.modality"
+        },
+        {
+          "job": "or_entry.j426",
+          "field": "records.landlord_cause_notice.required_content.breach"
+        },
+        {
+          "job": "or_entry.j427",
+          "field": "records.landlord_cause_notice.required_content.termination"
+        },
+        {
+          "job": "or_entry.j428",
+          "field": "records.landlord_cause_notice.required_content.cure"
+        },
+        {
+          "job": "or_entry.j261",
+          "field": "records.landlord_termination.actor"
+        },
+        {
+          "job": "or_entry.j262",
+          "field": "records.landlord_termination.action"
+        },
+        {
+          "job": "or_entry.j263",
+          "field": "records.landlord_termination.object"
+        },
+        {
+          "job": "or_entry.j264",
+          "field": "records.landlord_termination.modality"
+        },
+        {
+          "job": "or_entry.j271",
+          "field": "conditions.landlord_termination.refusal_lawful.predicate"
+        },
+        {
+          "job": "or_entry.j345",
+          "field": "records.landlord_termination.procedural_dependency"
+        },
+        {
+          "job": "or_entry.j492",
+          "field": "records.landlord_termination.possession_constraint"
+        },
+        {
+          "job": "or_entry.j429",
+          "field": "records.landlord_cause_notice.termination_periods"
+        },
+        {
+          "job": "or_entry.j472",
+          "field": "records.landlord_cause_notice.facility_route"
+        },
+        {
+          "job": "or_entry.j447",
+          "field": "conditions.landlord_repeat_notice.root"
+        }
+      ],
+      "bind_result_and_request_hashes": true
+    },
+    "proposed_relationship_operation": {
+      "operation": "attach_requirements",
+      "target": "records.landlord_termination",
+      "combine": "all",
+      "requirements": [
+        {
+          "kind": "termination_notice_rule",
+          "path": "records.landlord_cause_notice",
+          "unless": "conditions.landlord_repeat_notice.root"
+        }
+      ]
+    }
+  },
+  "evidence_refs": [
+    "ORS90.392",
+    "primary"
+  ],
+  "requires": [
+    "or_entry.j422",
+    "or_entry.j423",
+    "or_entry.j424",
+    "or_entry.j425",
+    "or_entry.j261",
+    "or_entry.j262",
+    "or_entry.j263",
+    "or_entry.j264",
+    "or_entry.j426",
+    "or_entry.j427",
+    "or_entry.j428",
+    "or_entry.j271",
+    "or_entry.j345",
+    "or_entry.j492",
+    "or_entry.j429",
+    "or_entry.j472",
+    "or_entry.j447"
+  ],
+  "licenses": [
+    {
+      "answer": "YES",
+      "target": "relations.procedure_landlord_cause_notice",
+      "value": {
+        "from": "landlord_cause_notice",
+        "to": "landlord_termination",
+        "relation": "qualifies_termination",
+        "execution": {
+          "operation": "attach_requirements",
+          "target": "records.landlord_termination",
+          "combine": "all",
+          "requirements": [
+            {
+              "kind": "termination_notice_rule",
+              "path": "records.landlord_cause_notice",
+              "unless": "conditions.landlord_repeat_notice.root"
+            }
+          ]
+        }
+      },
+      "operation": "establish_relation_only"
+    },
+    {
+      "answer": "NO",
+      "target": "relations.procedure_landlord_cause_notice",
+      "value": "rejected_candidate",
+      "operation": "reject_only"
+    }
+  ],
+  "no_other_fields_licensed": true,
+  "failure_policy": "Invalid/missing/tied/uncertain output establishes no semantic field; do not infer the contrary or collapse source coverage."
+}

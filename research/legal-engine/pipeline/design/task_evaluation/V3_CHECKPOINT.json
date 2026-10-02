@@ -1,0 +1,100 @@
+{
+  "runs": [
+    {
+      "run": "development-48-v3",
+      "summary": {
+        "requests": 48,
+        "answered": 48,
+        "reported_cost": "0.001146432",
+        "stopped": null
+      },
+      "findings": [
+        {
+          "id": "d032",
+          "task": "changes_deadline",
+          "family": "statutory",
+          "source_cluster": "CA_CIV_property_surrender",
+          "expected": "NO",
+          "answer": "YES",
+          "outcome": "disagreement"
+        }
+      ]
+    },
+    {
+      "run": "expansion-96-v3",
+      "summary": {
+        "requests": 96,
+        "answered": 96,
+        "reported_cost": "0.002041788",
+        "stopped": null
+      },
+      "findings": [
+        {
+          "id": "exp018",
+          "task": "candidate_term_use",
+          "family": "administrative",
+          "source_cluster": "business-precise",
+          "expected": "NO",
+          "answer": "YES",
+          "outcome": "disagreement"
+        },
+        {
+          "id": "exp032",
+          "task": "candidate_term_use",
+          "family": "statutory",
+          "source_cluster": "wa-dwelling",
+          "expected": "NO",
+          "answer": "YES",
+          "outcome": "disagreement"
+        },
+        {
+          "id": "exp049",
+          "task": "exception_to_requirement",
+          "family": "administrative",
+          "source_cluster": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:hardship_exception",
+          "expected": "YES",
+          "answer": "UNDECIDED",
+          "outcome": "disagreement"
+        },
+        {
+          "id": "exp066",
+          "task": "changes_deadline",
+          "family": "administrative",
+          "source_cluster": "EEOC_CHARGE:charge180|EEOC_CHARGE:holiday",
+          "expected": "YES",
+          "answer": "NO",
+          "outcome": "disagreement"
+        },
+        {
+          "id": "exp072",
+          "task": "changes_deadline",
+          "family": "administrative",
+          "source_cluster": "CFPB_1026_10:creditdate|CFPB_1026_10:webpay",
+          "expected": "YES",
+          "answer": "NO",
+          "outcome": "disagreement"
+        },
+        {
+          "id": "exp076",
+          "task": "changes_deadline",
+          "family": "judicial",
+          "source_cluster": "ARTIS:artis_law|ARTIS:artis_three_year",
+          "expected": "YES",
+          "answer": "NO",
+          "outcome": "disagreement"
+        },
+        {
+          "id": "exp078",
+          "task": "changes_deadline",
+          "family": "statutory",
+          "source_cluster": "OREGON_90:or_emergency|OREGON_90:or_entry",
+          "expected": "YES",
+          "answer": "NO",
+          "outcome": "disagreement"
+        }
+      ]
+    }
+  ],
+  "status": "development, remaining consequential findings open",
+  "next": "Source-specific question design or demonstrated completing agent/code methods for remaining difficult relations, then fresh validation. Definition/support fresh120 authorship in progress."
+}

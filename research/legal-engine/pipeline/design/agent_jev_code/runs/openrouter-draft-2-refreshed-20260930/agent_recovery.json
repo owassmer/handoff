@@ -1,0 +1,27 @@
+{
+  "status": "agent inspected recovered context; original two failures retained",
+  "source_scope_text": "As used in this chapter:\n",
+  "shared_unit": "Division 3 Part 4 Title 5 Chapter 5",
+  "cases": [
+    {
+      "case_id": "dev13",
+      "original_expected": "INSUFFICIENT",
+      "original_model_answer": "YES",
+      "action": "Recover omitted use hierarchy",
+      "resulting_payload_identical_to": "dev11",
+      "reused_complete_input_request_hash": "7005b28f07775cc70d06762bdff52bd91faa1088c0d4d851aa3f48e45ee32260",
+      "agent_finding": "Express chapter scope and source locations support textual inclusion only; case applicability and technical interpretation remain separate.",
+      "new_model_call": false
+    },
+    {
+      "case_id": "dev14",
+      "original_expected": "INSUFFICIENT",
+      "original_model_answer": "YES",
+      "action": "Restore omitted express chapter-scope sentence",
+      "resulting_payload_identical_to": "dev11",
+      "reused_complete_input_request_hash": "7005b28f07775cc70d06762bdff52bd91faa1088c0d4d851aa3f48e45ee32260",
+      "agent_finding": "Express chapter scope and source locations support textual inclusion only; case applicability and technical interpretation remain separate.",
+      "new_model_call": false
+    }
+  ]
+}

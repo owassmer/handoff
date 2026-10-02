@@ -1,0 +1,25 @@
+{
+  "status": "focused_E1_E2_proposal_corrections_accepted; no inference acceptance",
+  "reviewer": "ca_hb_review",
+  "preparation_sha256": "4aad3509eae2d91a9592bf4a0823585061734fa379a459b7c8605d345e2225b1",
+  "job_count": 494,
+  "findings": [],
+  "verified": [
+    "E1 repeat cure exception, common breach/date content and conditional cure/ordinary timing split",
+    "E2 specified-time entry constraint and no-specified-times guard; removed j095",
+    "repeat condition root and actual child meanings bound in j452/j503/j504",
+    "selected primary source bytes and offsets match",
+    "26 section semantic tests passed; blocker test covers27 known/unknown triples"
+  ],
+  "remaining_scope": [
+    "E3\u2013E9 from original review remain outside this focused acceptance",
+    "E5/E7 notice-method and whole-record required-field selections not closed",
+    "No actual Jev results, consumer completion or whole-unit legal outputs accepted"
+  ],
+  "hashes": {
+    "pipeline/design/section_semantics/worked_units/or_entry.next.preparation.json": "4aad3509eae2d91a9592bf4a0823585061734fa379a459b7c8605d345e2225b1",
+    "pipeline/semantics/consumer.py": "cad2dc7243e33601031200e9b48a321a4cd0abfbbce783f92b2c27b2950d39b7",
+    "pipeline/semantics/requirements.py": "76d4f86380fe6421a41e347fb0339540a0413a4c164e59fc963110b8cf435568",
+    "pipeline/tests/test_section_semantics.py": "2175cabe5188e4175b79554506da4f2ad12a7cfa9475540f2dea24510d7ae7e8"
+  }
+}

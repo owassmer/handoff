@@ -1,0 +1,208 @@
+California Code,  CIV 1788.30.
+/* Hide page by default*/
+html { display : none; }
+//
+= 0)) {
+window.top.location.replace(window.location);
+top.location = self.location;
+}
+}
+}
+// ]]>
+/* Hide page by default*/
+html { display : inline; }
+//
+function changePlaceHolder() {
+var x = document.getElementById("billheaderinit_form:quick_search_select_id");
+var input = document.getElementById("billheaderinit_form:searchall");
+if (x !== null) {
+if (x.options[0].selected) {
+input.placeholder = "AB1 or ab 1 or ABX1-1";
+} else {
+input.placeholder = "Search phrase";
+}
+}
+}
+skip to content
+home
+accessibility
+FAQ
+feedback
+sitemap
+login
+x
+Quick Search:
+Bill Number
+Bill Keyword
+Home
+Bill Information
+California Law
+Publications
+Other Resources
+My Subscriptions
+My Favorites
+button {
+background-image: url('/resources/images/print_24.gif');
+background-size: cover;
+width: 24px;
+height: 24px;
+font-size: 2rem; background-color: transparent;
+border: 0px;
+}
+function printPopup() {
+var lawCode = 'CIV';
+var sectionNum = '1788.30.';
+var op_statues = '1977'
+var op_chapter = '907';
+var op_section = '';
+var article = '4.';
+var url = "printCodeSectionWindow.xhtml?";
+if (lawCode)
+url += 'lawCode=' + lawCode;
+if (article) {
+url += '&article=' + article;
+//alert(url);
+}
+if (sectionNum)
+url += '§ionNum=' + sectionNum;
+if (op_statues)
+url += '&op_statues=' + op_statues;
+if (op_chapter)
+url += '&op_chapter=' + op_chapter;
+if (op_section)
+url += '&op_section=' + op_section;
+printWindow = window.open(url, "wind", "width=680," +
+"height=768,		" +
+"toolbar=no,		" +
+"location=no,		" +
+"directories=no,	" +
+"status=no,		" +
+"menubar=yes,		" +
+"scrollbars=yes,	" +
+"resizable=yes		"
+);
+printWindow.focus();
+}
+California Law
+>>
+>>
+Code Section
+Code Section
+function myPopup() {
+window.open("popupMessage.xhtml", "Information", "width=330, height=220, toolbar=no, location=no, directories=no, menubar=no, scrollbars=no, top=270, left=150");
+}
+function setCode() {
+//         button = document.getElementById('expertsearchformid:executeID');
+//              document.getElementById('expertsearchformid:parameterID1').value = document.getElementById('expertsearchformid:toctextcodeid').value;
+//              document.getElementById('expertsearchformid:parameterID2').value ='2'; //just a value to bypass validation
+//              button.click();
+if (document.getElementById('expertsearchformid:toctextcodeid').value == 'CONS') {
+document.getElementById('expertsearchformid:articlelblid').style.display = 'inline';
+document.getElementById('expertsearchformid:articleid').style.display = 'inline';
+} else {
+document.getElementById('expertsearchformid:articlelblid').style.display = 'none';
+document.getElementById('expertsearchformid:articleid').style.display = 'none';
+document.getElementById('expertsearchformid:articleid').value = "";
+}
+}
+Code:
+Select Code
+CONS
+BPC
+CIV
+CCP
+COM
+CORP
+EDC
+ELEC
+EVID
+FAM
+FIN
+FGC
+FAC
+GOV
+HNC
+HSC
+INS
+LAB
+MVC
+PEN
+PROB
+PCC
+PRC
+PUC
+RTC
+SHC
+UIC
+VEH
+WAT
+WIC
+Article:
+Section:
+Code:
+Select Code
+All
+BPC
+CIV
+CCP
+COM
+CORP
+EDC
+ELEC
+EVID
+FAM
+FIN
+FGC
+FAC
+GOV
+HNC
+HSC
+INS
+LAB
+MVC
+PEN
+PROB
+PCC
+PRC
+PUC
+RTC
+SHC
+UIC
+VEH
+WAT
+WIC
+Section:
+Keyword(s):
+setCode();
+Code Search
+Text Search
+Up^
+<< Previous
+Next >>
+cross-reference chaptered bills
+PDF
+|
+Add To My Favorites
+Search Phrase:
+Code Text
+Civil Code - CIV
+DIVISION 3. OBLIGATIONS [1427 - 3273.91]
+( Heading of Division 3 amended by Stats. 1988, Ch. 160, Sec. 14. )
+PART 4. OBLIGATIONS ARISING FROM PARTICULAR TRANSACTIONS [1738 - 3273.91]
+( Part 4 enacted 1872. )
+TITLE 1.6C. FAIR DEBT COLLECTION PRACTICES [1788 - 1788.33]
+( Title 1.6C added by Stats. 1977, Ch. 907. )
+ARTICLE 4. Enforcement [1788.30 - 1788.33]
+( Article 4 added by Stats. 1977, Ch. 907. )
+1788.30.
+(a) Any debt collector who violates this title with respect to any debtor shall be liable to that debtor only in an individual action, and his liability therein to that debtor shall be in an amount equal to the sum of any actual damages sustained by the debtor as a result of the violation.
+(b) Any debt collector who willfully and knowingly violates this title with respect to any debtor shall, in addition to actual damages sustained by the debtor as a result of the violation, also be liable to the debtor only in an individual action, and his additional liability therein to that debtor
+shall be for a penalty in such amount as the court may allow, which shall not be less than one hundred dollars ($100) nor greater than one thousand dollars ($1,000).
+(c) In the case of any action to enforce any liability under this title, the prevailing party shall be entitled to costs of the action. Reasonable attorney’s fees, which shall be based on time necessarily expended to enforce the liability, shall be awarded to a prevailing debtor; reasonable attorney’s fees may be awarded to a prevailing creditor upon a finding by the court that the debtor’s prosecution or defense of the action was not in good faith.
+(d) A debt collector shall have no civil liability under this title if, within 15 days either after discovering a violation which is able to be cured, or after the receipt of a written notice of such violation, the debt collector notifies the debtor of the violation, and
+makes whatever adjustments or corrections are necessary to cure the violation with respect to the debtor.
+(e) A debt collector shall have no civil liability to which such debt collector might otherwise be subject for a violation of this title, if the debt collector shows by a preponderance of evidence that the violation was not intentional and resulted notwithstanding the maintenance of procedures reasonably adapted to avoid any such violation.
+(f) Any action under this section may be brought in any appropriate court of competent jurisdiction in an individual capacity only, within one year from the date of the occurrence of the violation.
+(g) Any intentional violation of the provisions of this title by the debtor may be raised as a defense by the debt collector, if such violation is pertinent or relevant to any claim
+or action brought against the debt collector by or on behalf of the debtor.
+(Added by Stats. 1977, Ch. 907.)

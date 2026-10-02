@@ -1,0 +1,36 @@
+{
+  "base": {
+    "eligibleTurns": 29.166666666666668,
+    "buyerNet": 3572.916666666667,
+    "providerContribution": 1779.5138888888894,
+    "ownerValueOutsideBuyer": 0,
+    "providerCostFloorPerTurn": 38.988095238095234,
+    "buyerCeilingPerTurn": 222.5
+  },
+  "checks": [
+    "Independent arithmetic",
+    "Owner share changed to 0%",
+    "Time cash realization changed to 0%",
+    "Collected rent recovery changed to zero",
+    "Work volume changed to zero",
+    "Original assumptions restored"
+  ],
+  "inventories": {
+    "Decisions": {
+      "rows": 115,
+      "cols": 18
+    },
+    "Competitors": {
+      "rows": 38,
+      "cols": 13
+    },
+    "Public data": {
+      "rows": 106,
+      "cols": 8
+    }
+  },
+  "limitations": [
+    "Recalculation verified with artifact-tool; Excel desktop was not available for a native application check.",
+    "Illustrative commercial assumptions have not been validated by customer observations."
+  ]
+}

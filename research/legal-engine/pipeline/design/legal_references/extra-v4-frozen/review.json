@@ -1,0 +1,51 @@
+{
+  "review_type": "independent_development_control_labeling",
+  "review_date": "2026-09-30",
+  "question_version": "legal-reference-presence-1-dev4",
+  "reviewed_inputs": {
+    "cases": "7ba926ca352a2a1aba214916b9cd13104fba69c04b7f9f4217ce8e69cda79d3d",
+    "question": "923ca7aa07af9bb2e07e171e98b9756645567850be0d37805dc6d1bb8735edee"
+  },
+  "independence": {
+    "author_labels_read": false,
+    "model_outputs_read_for_these_cases": false,
+    "prior_dev2_development_outputs_known": true,
+    "evaluation_candidate_files_read": false,
+    "same_model_family_reviewer": true,
+    "held_out_evaluation": false
+  },
+  "cases": [
+    {
+      "case_id": "d049",
+      "expected": "NO",
+      "reason": "The possessive private lease establishes that Section belongs to a private agreement. Missing its number does not make public-legal sense uncertain; no separate public pointer appears.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d050",
+      "expected": "NO",
+      "reason": "The maintenance manual is a nonlegal instructional document in the supplied text. Its cut-off Section remains a manual pointer; no public legal source or unit is identified. Possible legal incorporation elsewhere is not a visible pointer here.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d051",
+      "expected": "YES",
+      "reason": "The heading substantively points to Section 70 of a named municipal ordinance through Exceptions to. It is not merely identifying the heading own unit.",
+      "material_ambiguity": false
+    },
+    {
+      "case_id": "d052",
+      "expected": "NO",
+      "reason": "The uppercase chapter label, descriptive title, and bracketed section range form a recognizable locator heading. Under dev4 a heading merely identifying its unit/range does not count as a substantive pointer.",
+      "material_ambiguity": false
+    }
+  ],
+  "source_validation": "All four cases are explicitly authored controls, with no saved-source or current-law claim. Model state must contain only text, not strata or reviewer judgments.",
+  "contract_findings": [
+    {
+      "material": false,
+      "finding": "These four contrasts are distinguishable under dev4. Established private/nonlegal source type survives truncation. Heading form alone does not disqualify a substantive pointer; identification-only locator headings are excluded."
+    }
+  ],
+  "acceptance": "All four controls accepted for development execution; no unresolved material ambiguity."
+}

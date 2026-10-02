@@ -1,0 +1,368 @@
+{
+  "output": {
+    "format": "section-semantics-output-1",
+    "plan_id": "balanced_development_controls_1",
+    "plan_hash": "6b711ad59cdb39c98eaac00f80bd23449950bdd67bf93f5f1fabf86bb5bda335",
+    "records": [],
+    "field_assignments": [
+      {
+        "job": "j001",
+        "status": "supported",
+        "target": "judgments.j001",
+        "value": true,
+        "operation": "establish_field_only",
+        "evidence": [
+          "or_entry_emergency"
+        ]
+      },
+      {
+        "job": "j002",
+        "status": "uncertain",
+        "candidate_targets": [
+          "judgments.j002"
+        ]
+      },
+      {
+        "job": "j003",
+        "status": "supported",
+        "target": "judgments.j003",
+        "value": true,
+        "operation": "establish_field_only",
+        "evidence": [
+          "or_entry_yard"
+        ]
+      },
+      {
+        "job": "j004",
+        "status": "supported",
+        "target": "judgments.j004",
+        "value": false,
+        "operation": "establish_field_only",
+        "evidence": [
+          "or_entry_yard"
+        ]
+      },
+      {
+        "job": "j005",
+        "status": "supported",
+        "target": "judgments.j005",
+        "value": true,
+        "operation": "establish_field_only",
+        "evidence": [
+          "or_entry_def_41"
+        ]
+      },
+      {
+        "job": "j006",
+        "status": "supported",
+        "target": "judgments.j006",
+        "value": false,
+        "operation": "establish_field_only",
+        "evidence": [
+          "or_entry_def_41"
+        ]
+      },
+      {
+        "job": "j007",
+        "status": "supported",
+        "target": "judgments.j007",
+        "value": true,
+        "operation": "establish_field_only",
+        "evidence": [
+          "ca_return_def_Landlord"
+        ]
+      },
+      {
+        "job": "j008",
+        "status": "supported",
+        "target": "judgments.j008",
+        "value": false,
+        "operation": "establish_field_only",
+        "evidence": [
+          "ca_return_def_Landlord"
+        ]
+      },
+      {
+        "job": "j009",
+        "status": "supported",
+        "target": "judgments.j009",
+        "value": true,
+        "operation": "establish_field_only",
+        "evidence": [
+          "ca_return_b"
+        ]
+      },
+      {
+        "job": "j010",
+        "status": "supported",
+        "target": "judgments.j010",
+        "value": false,
+        "operation": "establish_field_only",
+        "evidence": [
+          "ca_return_b"
+        ]
+      },
+      {
+        "job": "j011",
+        "status": "supported",
+        "target": "judgments.j011",
+        "value": true,
+        "operation": "establish_field_only",
+        "evidence": [
+          "ca_return_b"
+        ]
+      },
+      {
+        "job": "j012",
+        "status": "supported",
+        "target": "judgments.j012",
+        "value": false,
+        "operation": "establish_field_only",
+        "evidence": [
+          "ca_return_b"
+        ]
+      },
+      {
+        "job": "j013",
+        "status": "supported",
+        "target": "judgments.j013",
+        "value": true,
+        "operation": "establish_field_only",
+        "evidence": [
+          "ca_return_c"
+        ]
+      },
+      {
+        "job": "j014",
+        "status": "supported",
+        "target": "judgments.j014",
+        "value": false,
+        "operation": "establish_field_only",
+        "evidence": [
+          "ca_return_c"
+        ]
+      },
+      {
+        "job": "j015",
+        "status": "supported",
+        "target": "judgments.j015",
+        "value": false,
+        "operation": "establish_field_only",
+        "evidence": [
+          "ca_return_c"
+        ]
+      },
+      {
+        "job": "j016",
+        "status": "supported",
+        "target": "judgments.j016",
+        "value": true,
+        "operation": "establish_field_only",
+        "evidence": [
+          "ca_return_c"
+        ]
+      }
+    ],
+    "jobs": {
+      "j001": {
+        "status": "answered",
+        "answer": true,
+        "raw": {
+          "type": "noul",
+          "noul": 0.97
+        },
+        "plan_hash": "6b711ad59cdb39c98eaac00f80bd23449950bdd67bf93f5f1fabf86bb5bda335",
+        "request_hash": "6c7fe66f1a4716f3b15b30991f3c683099e96fbba046c11e378c8f47c07dd1a2",
+        "record_hash": "79cb8a0083456a403c0124d9c5fe169f6c77be56b4c6543c2a1b162bb6ca03a9",
+        "policy_hash": "397a5524e9d95dcaa83253ce0942fe0e8e15d2780a2e7ea5367879aa3bb61b28"
+      },
+      "j002": {
+        "status": "uncertain",
+        "raw": {
+          "type": "noul",
+          "noul": 0.24
+        },
+        "plan_hash": "6b711ad59cdb39c98eaac00f80bd23449950bdd67bf93f5f1fabf86bb5bda335",
+        "request_hash": "6c7fe66f1a4716f3b15b30991f3c683099e96fbba046c11e378c8f47c07dd1a2",
+        "record_hash": "79cb8a0083456a403c0124d9c5fe169f6c77be56b4c6543c2a1b162bb6ca03a9",
+        "policy_hash": "397a5524e9d95dcaa83253ce0942fe0e8e15d2780a2e7ea5367879aa3bb61b28"
+      },
+      "j003": {
+        "status": "answered",
+        "answer": true,
+        "raw": {
+          "type": "noul",
+          "noul": 0.98
+        },
+        "plan_hash": "6b711ad59cdb39c98eaac00f80bd23449950bdd67bf93f5f1fabf86bb5bda335",
+        "request_hash": "bbf9bb8adc89f2e938b2e3b508eb4bbcf784b01e878275f3afb6126be65a11bc",
+        "record_hash": "61f651db03ba55dad342ec5f5589ada0eb8fff7265766fa3996756404dafa38b",
+        "policy_hash": "397a5524e9d95dcaa83253ce0942fe0e8e15d2780a2e7ea5367879aa3bb61b28"
+      },
+      "j004": {
+        "status": "answered",
+        "answer": false,
+        "raw": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "plan_hash": "6b711ad59cdb39c98eaac00f80bd23449950bdd67bf93f5f1fabf86bb5bda335",
+        "request_hash": "bbf9bb8adc89f2e938b2e3b508eb4bbcf784b01e878275f3afb6126be65a11bc",
+        "record_hash": "61f651db03ba55dad342ec5f5589ada0eb8fff7265766fa3996756404dafa38b",
+        "policy_hash": "397a5524e9d95dcaa83253ce0942fe0e8e15d2780a2e7ea5367879aa3bb61b28"
+      },
+      "j005": {
+        "status": "answered",
+        "answer": true,
+        "raw": {
+          "type": "noul",
+          "noul": 0.98
+        },
+        "plan_hash": "6b711ad59cdb39c98eaac00f80bd23449950bdd67bf93f5f1fabf86bb5bda335",
+        "request_hash": "44c38cd8d4a214bea7e89d1df299fd755dab8e8f2393553f72ab71bb296ac1a1",
+        "record_hash": "363b7cce2a43a01f9bb3326ff4e34d9832172abda6bf65bbfd12ac2cf982b1fe",
+        "policy_hash": "397a5524e9d95dcaa83253ce0942fe0e8e15d2780a2e7ea5367879aa3bb61b28"
+      },
+      "j006": {
+        "status": "answered",
+        "answer": false,
+        "raw": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "plan_hash": "6b711ad59cdb39c98eaac00f80bd23449950bdd67bf93f5f1fabf86bb5bda335",
+        "request_hash": "44c38cd8d4a214bea7e89d1df299fd755dab8e8f2393553f72ab71bb296ac1a1",
+        "record_hash": "363b7cce2a43a01f9bb3326ff4e34d9832172abda6bf65bbfd12ac2cf982b1fe",
+        "policy_hash": "397a5524e9d95dcaa83253ce0942fe0e8e15d2780a2e7ea5367879aa3bb61b28"
+      },
+      "j007": {
+        "status": "answered",
+        "answer": true,
+        "raw": {
+          "type": "noul",
+          "noul": 0.98
+        },
+        "plan_hash": "6b711ad59cdb39c98eaac00f80bd23449950bdd67bf93f5f1fabf86bb5bda335",
+        "request_hash": "1d370af9e9bbf4b0db53a1ca5c56b0a98b868bdaecc927b4034dc2aa2acadb69",
+        "record_hash": "78a9f7858a7d2703b67221de88f8a6ad90dc19c81702df667de1e573b561d177",
+        "policy_hash": "397a5524e9d95dcaa83253ce0942fe0e8e15d2780a2e7ea5367879aa3bb61b28"
+      },
+      "j008": {
+        "status": "answered",
+        "answer": false,
+        "raw": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "plan_hash": "6b711ad59cdb39c98eaac00f80bd23449950bdd67bf93f5f1fabf86bb5bda335",
+        "request_hash": "1d370af9e9bbf4b0db53a1ca5c56b0a98b868bdaecc927b4034dc2aa2acadb69",
+        "record_hash": "78a9f7858a7d2703b67221de88f8a6ad90dc19c81702df667de1e573b561d177",
+        "policy_hash": "397a5524e9d95dcaa83253ce0942fe0e8e15d2780a2e7ea5367879aa3bb61b28"
+      },
+      "j009": {
+        "status": "answered",
+        "answer": true,
+        "raw": {
+          "type": "noul",
+          "noul": 0.98
+        },
+        "plan_hash": "6b711ad59cdb39c98eaac00f80bd23449950bdd67bf93f5f1fabf86bb5bda335",
+        "request_hash": "c0323f1e35b66c08dd85bf563f0b6204ccea12af1686c8d81664cfafdfdd95a5",
+        "record_hash": "fb324cb21492fc4216780583c55f018450a2f11261ee895680db7cd798bff8e1",
+        "policy_hash": "397a5524e9d95dcaa83253ce0942fe0e8e15d2780a2e7ea5367879aa3bb61b28"
+      },
+      "j010": {
+        "status": "answered",
+        "answer": false,
+        "raw": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "plan_hash": "6b711ad59cdb39c98eaac00f80bd23449950bdd67bf93f5f1fabf86bb5bda335",
+        "request_hash": "c0323f1e35b66c08dd85bf563f0b6204ccea12af1686c8d81664cfafdfdd95a5",
+        "record_hash": "fb324cb21492fc4216780583c55f018450a2f11261ee895680db7cd798bff8e1",
+        "policy_hash": "397a5524e9d95dcaa83253ce0942fe0e8e15d2780a2e7ea5367879aa3bb61b28"
+      },
+      "j011": {
+        "status": "answered",
+        "answer": true,
+        "raw": {
+          "type": "noul",
+          "noul": 0.97
+        },
+        "plan_hash": "6b711ad59cdb39c98eaac00f80bd23449950bdd67bf93f5f1fabf86bb5bda335",
+        "request_hash": "c0323f1e35b66c08dd85bf563f0b6204ccea12af1686c8d81664cfafdfdd95a5",
+        "record_hash": "fb324cb21492fc4216780583c55f018450a2f11261ee895680db7cd798bff8e1",
+        "policy_hash": "397a5524e9d95dcaa83253ce0942fe0e8e15d2780a2e7ea5367879aa3bb61b28"
+      },
+      "j012": {
+        "status": "answered",
+        "answer": false,
+        "raw": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "plan_hash": "6b711ad59cdb39c98eaac00f80bd23449950bdd67bf93f5f1fabf86bb5bda335",
+        "request_hash": "c0323f1e35b66c08dd85bf563f0b6204ccea12af1686c8d81664cfafdfdd95a5",
+        "record_hash": "fb324cb21492fc4216780583c55f018450a2f11261ee895680db7cd798bff8e1",
+        "policy_hash": "397a5524e9d95dcaa83253ce0942fe0e8e15d2780a2e7ea5367879aa3bb61b28"
+      },
+      "j013": {
+        "status": "answered",
+        "answer": true,
+        "raw": {
+          "type": "noul",
+          "noul": 0.95
+        },
+        "plan_hash": "6b711ad59cdb39c98eaac00f80bd23449950bdd67bf93f5f1fabf86bb5bda335",
+        "request_hash": "45ea00409aa69c906c65419f9d7ee63df53a905ad2304fa20cbef9de3114a325",
+        "record_hash": "5138fc711863a038deb4ec47540d75eafd9a03aa13d29a45d56db25b99e6e954",
+        "policy_hash": "397a5524e9d95dcaa83253ce0942fe0e8e15d2780a2e7ea5367879aa3bb61b28"
+      },
+      "j014": {
+        "status": "answered",
+        "answer": false,
+        "raw": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "plan_hash": "6b711ad59cdb39c98eaac00f80bd23449950bdd67bf93f5f1fabf86bb5bda335",
+        "request_hash": "45ea00409aa69c906c65419f9d7ee63df53a905ad2304fa20cbef9de3114a325",
+        "record_hash": "5138fc711863a038deb4ec47540d75eafd9a03aa13d29a45d56db25b99e6e954",
+        "policy_hash": "397a5524e9d95dcaa83253ce0942fe0e8e15d2780a2e7ea5367879aa3bb61b28"
+      },
+      "j015": {
+        "status": "answered",
+        "answer": false,
+        "raw": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "plan_hash": "6b711ad59cdb39c98eaac00f80bd23449950bdd67bf93f5f1fabf86bb5bda335",
+        "request_hash": "45ea00409aa69c906c65419f9d7ee63df53a905ad2304fa20cbef9de3114a325",
+        "record_hash": "5138fc711863a038deb4ec47540d75eafd9a03aa13d29a45d56db25b99e6e954",
+        "policy_hash": "397a5524e9d95dcaa83253ce0942fe0e8e15d2780a2e7ea5367879aa3bb61b28"
+      },
+      "j016": {
+        "status": "answered",
+        "answer": true,
+        "raw": {
+          "type": "noul",
+          "noul": 0.92
+        },
+        "plan_hash": "6b711ad59cdb39c98eaac00f80bd23449950bdd67bf93f5f1fabf86bb5bda335",
+        "request_hash": "45ea00409aa69c906c65419f9d7ee63df53a905ad2304fa20cbef9de3114a325",
+        "record_hash": "5138fc711863a038deb4ec47540d75eafd9a03aa13d29a45d56db25b99e6e954",
+        "policy_hash": "397a5524e9d95dcaa83253ce0942fe0e8e15d2780a2e7ea5367879aa3bb61b28"
+      }
+    },
+    "complete": false,
+    "scope": "Prepared jobs and candidates only; full-unit semantic completeness requires independent coverage validation.",
+    "decision_policy_hash": "63e9c8aeabb088c916201350b0d6b780f651c3689857a430874d31cb198fd417"
+  },
+  "next": {
+    "requests": [],
+    "waiting": [],
+    "inapplicable": []
+  }
+}

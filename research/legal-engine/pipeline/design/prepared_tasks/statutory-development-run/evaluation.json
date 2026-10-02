@@ -1,0 +1,192 @@
+{
+  "cases": 20,
+  "answered": 20,
+  "agreements": 18,
+  "disagreements": [
+    "xf011",
+    "xn007"
+  ],
+  "rows": [
+    {
+      "case_id": "xf004",
+      "expected": "YES",
+      "reason": "This part refers to the enclosing statutory part, not to the broker or transaction.",
+      "material_ambiguity": false,
+      "noul": 0.93,
+      "actual": "YES",
+      "agreement": true
+    },
+    {
+      "case_id": "xf008",
+      "expected": "YES",
+      "reason": "This section refers to the statutory section whose insurance rule is being stated.",
+      "material_ambiguity": false,
+      "noul": 0.95,
+      "actual": "YES",
+      "agreement": true
+    },
+    {
+      "case_id": "xf022",
+      "expected": "YES",
+      "reason": "Following paragraph points to the statutory paragraph supplying the filing deadline; the supplied statutory source context makes the referent legal.",
+      "material_ambiguity": false,
+      "noul": 0.77,
+      "actual": "YES",
+      "agreement": true
+    },
+    {
+      "case_id": "xf024",
+      "expected": "YES",
+      "reason": "Clauses (iii)–(vii) identify the statutory provisions containing the exemptions.",
+      "material_ambiguity": false,
+      "noul": 0.93,
+      "actual": "YES",
+      "agreement": true
+    },
+    {
+      "case_id": "xf017",
+      "expected": "YES",
+      "reason": "This section refers to the present statutory provision even though the passage supplies its own expiration rule.",
+      "material_ambiguity": false,
+      "noul": 0.92,
+      "actual": "YES",
+      "agreement": true
+    },
+    {
+      "case_id": "xf018",
+      "expected": "YES",
+      "reason": "This section points to the statutory provision whose expiration is stated.",
+      "material_ambiguity": false,
+      "noul": 0.95,
+      "actual": "YES",
+      "agreement": true
+    },
+    {
+      "case_id": "xf021",
+      "expected": "YES",
+      "reason": "This title points to the enclosing statutory title.",
+      "material_ambiguity": false,
+      "noul": 0.92,
+      "actual": "YES",
+      "agreement": true
+    },
+    {
+      "case_id": "xf003",
+      "expected": "NO",
+      "reason": "The date the petition is filed denotes an event date, not the provision prescribing a deadline.",
+      "material_ambiguity": false,
+      "noul": 0.39,
+      "actual": "NO",
+      "agreement": true
+    },
+    {
+      "case_id": "xf011",
+      "expected": "NO",
+      "reason": "California debtor accounts is the defined category of accounts, not a reference to the definition or another provision.",
+      "material_ambiguity": false,
+      "noul": 0.56,
+      "actual": "YES",
+      "agreement": false
+    },
+    {
+      "case_id": "xf016",
+      "expected": "NO",
+      "reason": "The contract denotes the transaction agreement as a document; it does not identify any contractual or statutory provision.",
+      "material_ambiguity": false,
+      "noul": 0.12,
+      "actual": "NO",
+      "agreement": true
+    },
+    {
+      "case_id": "xf019",
+      "expected": "NO",
+      "reason": "Six months denotes a duration, not a provision, despite being part of a legal rule.",
+      "material_ambiguity": false,
+      "noul": 0.16,
+      "actual": "NO",
+      "agreement": true
+    },
+    {
+      "case_id": "xf020",
+      "expected": "NO",
+      "reason": "A permit denotes the permission or instrument whose duration is regulated, not a provision.",
+      "material_ambiguity": false,
+      "noul": 0.14,
+      "actual": "NO",
+      "agreement": true
+    },
+    {
+      "case_id": "xn003",
+      "expected": "NO",
+      "reason": "Electronic record denotes the record to be stored or printed, not a legal provision.",
+      "material_ambiguity": false,
+      "noul": 0.29,
+      "actual": "NO",
+      "agreement": true
+    },
+    {
+      "case_id": "xn006",
+      "expected": "NO",
+      "reason": "This notice refers to the communication to the consumer, not to the statutory requirement governing it.",
+      "material_ambiguity": false,
+      "noul": 0.28,
+      "actual": "NO",
+      "agreement": true
+    },
+    {
+      "case_id": "xn007",
+      "expected": "NO",
+      "reason": "The notice refers to the communication being delivered, not to a legal provision.",
+      "material_ambiguity": false,
+      "noul": 0.5,
+      "actual": null,
+      "agreement": false
+    },
+    {
+      "case_id": "xn008",
+      "expected": "NO",
+      "reason": "The consumer denotes the recipient person, not a provision.",
+      "material_ambiguity": false,
+      "noul": 0.09,
+      "actual": "NO",
+      "agreement": true
+    },
+    {
+      "case_id": "xf005",
+      "expected": "YES",
+      "reason": "Section 10131 explicitly identifies the provision describing the acts.",
+      "material_ambiguity": false,
+      "noul": 0.98,
+      "actual": "YES",
+      "agreement": true
+    },
+    {
+      "case_id": "xf007",
+      "expected": "YES",
+      "reason": "Subparagraphs (A) to (G) explicitly identify the statutory provisions specifying lenders or purchasers.",
+      "material_ambiguity": false,
+      "noul": 0.9,
+      "actual": "YES",
+      "agreement": true
+    },
+    {
+      "case_id": "xf010",
+      "expected": "YES",
+      "reason": "This subdivision refers to the statutory subdivision authorizing the conditional license.",
+      "material_ambiguity": false,
+      "noul": 0.93,
+      "actual": "YES",
+      "agreement": true
+    },
+    {
+      "case_id": "xf012",
+      "expected": "YES",
+      "reason": "Section 100006.5 explicitly identifies the provision establishing the Fund.",
+      "material_ambiguity": false,
+      "noul": 0.97,
+      "actual": "YES",
+      "agreement": true
+    }
+  ],
+  "interpretation": "Development majority comparison, not production thresholds or probability calibration."
+}

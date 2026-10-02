@@ -1,0 +1,168 @@
+{
+  "format": "section-semantics-bounded-first-wave-expectations-1",
+  "reviewer": "/root/reference_final_audit",
+  "model_responses_seen": false,
+  "preparation_sha256": "9351d09d3a197cc0a7ce6d3d2b1a01c484b629e38ac964d93754244b7c46a00c",
+  "full_plan_hash": "5781822a0846a412bb29f2280bbbbb13e2ed6b935b1b1ea21ab54c96f1f03b8a",
+  "registry_fingerprint": "843ab79113fc3d25df5d64c1a39338be4498ef7818ea9cad695f00b2269fd521",
+  "groups_request_hashes": [
+    "7e002f62efe0e1265a167ec0da434845cb54a6cf96f901c8c6a8dfb89348389b",
+    "c505b5f3f3a04b6387bbd9fd463e2fb400b4460e2721d3e52d0948e3fca126bd",
+    "cc474b0449716b81705a544ad6219bb277b778558d1dfa5653a7c23373e3b26e",
+    "aa399cb5d3cb63e276780c066abcbc76426d0a5f0ff6247a162ddc4873a189ff"
+  ],
+  "jobs": {
+    "or_entry.j052": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "definitions.emergency_inclusion",
+          "value": {
+            "term": "Emergency",
+            "meaning": "Includes, but is not limited to, a repair problem that unless remedied immediately is likely to cause serious damage to the premises.",
+            "scope": "ORS90.322(1)(b)"
+          },
+          "operation": "establish_definition_only"
+        }
+      ],
+      "job_fingerprint": "b3c5ec03580b9ea59f1850ca13a03fa4eeef31544b9843f63cd42b1ba93a6dd5",
+      "native_question_fingerprint": "2cd9adca3a9bed287630a12f511edff8e54ac239937de40f06aa38366350c143",
+      "source_evidence_refs": [
+        "emergency",
+        "definition_scope"
+      ],
+      "reason": "90.322(1)(b) expressly assigns an inclusive, nonexhaustive emergency definition; proposed meaning retains immediate serious-damage qualification.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "or_entry.j061": {
+      "expected_answer": "INTERVAL",
+      "expected_licensed_outputs": [
+        {
+          "target": "records.emergency_post_notice.timing.post_entry.interval",
+          "value": {
+            "number": 24,
+            "unit": "hours"
+          },
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "a297105282023b5af334f9cc1c7c167b83f4fec078d94543da2d6606b0d81e10",
+      "native_question_fingerprint": "7997587e1e190232a286f58b6cf2e09dbb431f3034304300da47df44fc78b4b1",
+      "source_evidence_refs": [
+        "emergency",
+        "primary"
+      ],
+      "reason": "90.322(1)(b) requires notice within24hours after entry, not before or exactly24hours later; all five content categories are conjunctive. This establishes fields only, not an applicable notice duty without the separate trigger.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "or_entry.j062": {
+      "expected_answer": "MAXIMUM_AFTER",
+      "expected_licensed_outputs": [
+        {
+          "target": "records.emergency_post_notice.timing.post_entry.relation",
+          "value": "maximum_after",
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "fe636c23b43fd26e567709d064e3af9bbf38dd0b90d8a83d6ac7bb52e43f9836",
+      "native_question_fingerprint": "d9d78499c08ca3ca1c0a86ba25dce6a60b4ccfce1d2ea0d883b63a834b6dae4e",
+      "source_evidence_refs": [
+        "emergency",
+        "primary"
+      ],
+      "reason": "90.322(1)(b) requires notice within24hours after entry, not before or exactly24hours later; all five content categories are conjunctive. This establishes fields only, not an applicable notice duty without the separate trigger.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "or_entry.j063": {
+      "expected_answer": "ANCHOR",
+      "expected_licensed_outputs": [
+        {
+          "target": "records.emergency_post_notice.timing.post_entry.anchor",
+          "value": "the emergency entry",
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "2b3f5490aad05904b52048fb3b506968e06207aac0c16d10d0c1320ddc3f9a74",
+      "native_question_fingerprint": "9e61c3bf61ed47115b7bbe28da63e3ee8b63153fe7124c85f3c7f21dcab2522e",
+      "source_evidence_refs": [
+        "emergency",
+        "primary"
+      ],
+      "reason": "90.322(1)(b) requires notice within24hours after entry, not before or exactly24hours later; all five content categories are conjunctive. This establishes fields only, not an applicable notice duty without the separate trigger.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "or_entry.j389": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "records.emergency_post_notice.content_operator",
+          "value": {
+            "operator": "all",
+            "children": [
+              "entry_fact",
+              "entry_date",
+              "entry_time",
+              "nature",
+              "names"
+            ]
+          },
+          "operation": "establish_field_only"
+        }
+      ],
+      "job_fingerprint": "d9269e5266301d3efbf8d3ca37267c34d05177e150e1dacab33e460fa8a43208",
+      "native_question_fingerprint": "a1ea677eac402a0ad8e2f139acbb7a3d207cdb744d90f20e2044a6a0f2335856",
+      "source_evidence_refs": [
+        "emergency",
+        "primary"
+      ],
+      "reason": "90.322(1)(b) requires notice within24hours after entry, not before or exactly24hours later; all five content categories are conjunctive. This establishes fields only, not an applicable notice duty without the separate trigger.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "or_entry.j166": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "definitions.yard_activities",
+          "value": {
+            "term": "Yard maintenance or grounds keeping",
+            "meaning": "Includes but is not limited to weeding, mowing grass, and pruning trees and shrubs.",
+            "scope": "ORS90.322(1)(e)"
+          },
+          "operation": "establish_definition_only"
+        }
+      ],
+      "job_fingerprint": "07a99414d6aa1dd7925022972d011e7d145a0a155a4368c6aff03e6b8da90c24",
+      "native_question_fingerprint": "2cd9adca3a9bed287630a12f511edff8e54ac239937de40f06aa38366350c143",
+      "source_evidence_refs": [
+        "yard",
+        "definition_scope"
+      ],
+      "reason": "90.322(1)(e)(B)(i) gives nonexhaustive yard-work examples; proposed meaning preserves that scope.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    },
+    "or_entry.j317": {
+      "expected_answer": true,
+      "expected_licensed_outputs": [
+        {
+          "target": "definitions.or_41",
+          "value": {
+            "term": "Rent",
+            "meaning": "(41)(a) \u201cRent\u201d\nmeans any payment to be made to the landlord under the rental agreement,\nperiodic or otherwise, in exchange for the right of a tenant and any permitted\npet to occupy a dwelling unit to the exclusion of others and to use the\npremises.\n(b) \u201cRent\u201d does\nnot include security deposits, fees or utility or service charges as described\nin ORS 90.315 (4) and 90.562.",
+            "scope": "Chapter90 unless context otherwise requires; preserve special subpart qualifiers in this definition"
+          },
+          "operation": "establish_definition_only"
+        }
+      ],
+      "job_fingerprint": "ffb700edf3bba680dd2b7f1115e4fd37acbc72520fad411f28841338599e6e33",
+      "native_question_fingerprint": "2cd9adca3a9bed287630a12f511edff8e54ac239937de40f06aa38366350c143",
+      "source_evidence_refs": [
+        "def_41",
+        "definition_scope"
+      ],
+      "reason": "90.100(41) assigns rent meaning and excludes deposits, fees and identified utility/service charges. This tests faithful definition assignment, not classification of a particular charge.",
+      "license_limit": "Only listed fields are established. No global applicability, record completeness, relationship effect or operating outcome follows."
+    }
+  },
+  "full_denominator_count": 303,
+  "not_full_unit_acceptance": true
+}

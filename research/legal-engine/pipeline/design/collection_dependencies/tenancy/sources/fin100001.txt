@@ -1,0 +1,223 @@
+California Code,  FIN 100001.
+/* Hide page by default*/
+            html { display : none; }
+//<![CDATA[
+
+            if (self === top) {
+                // Show the page
+                document.documentElement.style.display = 'block';
+            } else {
+                // Inside a frame. Replace the frame.
+                var parentUrl = document.referrer;
+                var num = -1;
+                if (parentUrl !== '') {
+
+                    num = parseInt(parentUrl.indexOf('calchannel.granicus.com'));
+
+                    if (!(num >= 0)) {
+                        window.top.location.replace(window.location);
+                        top.location = self.location;
+                    }
+                }
+            }
+            // ]]>
+/* Hide page by default*/
+            html { display : inline; }
+//<![CDATA[
+function faceletsDebug(URL) {day = new Date();id = day.getTime();eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=800,height=600,left = 240,top = 212');"); };(function() { if (typeof jsfFaceletsDebug === 'undefined') { var jsfFaceletsDebug = false; } if (!jsfFaceletsDebug) {var faceletsOrigKeyup = document.onkeyup;document.onkeyup = function(e) { if (window.event) e = window.event; if (String.fromCharCode(e.keyCode) == 'D' & e.shiftKey & e.ctrlKey) faceletsDebug('/faces/codes_displaySection.xhtml?facelets.ui.DebugOutput=1790813384887'); jsfFaceletsDebug = true; if (faceletsOrigKeyup) faceletsOrigKeyup(e); };
+}})();//]]>
+function changePlaceHolder() {
+
+            var x = document.getElementById("billheaderinit_form:quick_search_select_id");
+            var input = document.getElementById("billheaderinit_form:searchall");
+
+            if (x !== null) {
+                if (x.options[0].selected) {
+
+                    input.placeholder = "AB1 or ab 1 or ABX1-1";
+                } else {
+                    input.placeholder = "Search phrase";
+                }
+            }
+
+        }
+skip to content
+home
+accessibility
+FAQ
+feedback
+sitemap
+login
+x
+Quick Search:
+Bill Number
+Bill Keyword
+Home
+Bill Information
+California Law
+Publications
+Other Resources
+My Subscriptions
+My Favorites
+button {
+                    background-image: url('/resources/images/print_24.gif');
+                    background-size: cover;
+                    width: 24px;
+                    height: 24px;
+                    font-size: 2rem; background-color: transparent;
+                    border: 0px;
+                }
+function printPopup() {
+                    var lawCode = 'FIN';
+                    var sectionNum = '100001.';
+                    var op_statues = '2024'
+                    var op_chapter = '522';
+                    var op_section = '16';
+                    var article = '2.';
+                    var url = "printCodeSectionWindow.xhtml?";
+                    if (lawCode)
+                        url += 'lawCode=' + lawCode;
+                    if (article) {
+                        url += '&article=' + article;
+                        //alert(url);
+                    }
+
+                    if (sectionNum)
+                        url += '&sectionNum=' + sectionNum;
+                    if (op_statues)
+                        url += '&op_statues=' + op_statues;
+                    if (op_chapter)
+                        url += '&op_chapter=' + op_chapter;
+                    if (op_section)
+                        url += '&op_section=' + op_section;
+                    printWindow = window.open(url, "wind", "width=680," +
+                            "height=768,		" +
+                            "toolbar=no,		" +
+                            "location=no,		" +
+                            "directories=no,	" +
+                            "status=no,		" +
+                            "menubar=yes,		" +
+                            "scrollbars=yes,	" +
+                            "resizable=yes		"
+                            );
+                    printWindow.focus();
+                }
+California Law
+>>
+>>
+Code Section
+Code Section
+function myPopup() {
+
+                window.open("popupMessage.xhtml", "Information", "width=330, height=220, toolbar=no, location=no, directories=no, menubar=no, scrollbars=no, top=270, left=150");
+            }
+
+            function setCode() {
+                //         button = document.getElementById('expertsearchformid:executeID');
+                //              document.getElementById('expertsearchformid:parameterID1').value = document.getElementById('expertsearchformid:toctextcodeid').value;
+                //              document.getElementById('expertsearchformid:parameterID2').value ='2'; //just a value to bypass validation
+                //              button.click();
+                if (document.getElementById('expertsearchformid:toctextcodeid').value == 'CONS') {
+                    document.getElementById('expertsearchformid:articlelblid').style.display = 'inline';
+                    document.getElementById('expertsearchformid:articleid').style.display = 'inline';
+                } else {
+                    document.getElementById('expertsearchformid:articlelblid').style.display = 'none';
+                    document.getElementById('expertsearchformid:articleid').style.display = 'none';
+                    document.getElementById('expertsearchformid:articleid').value = "";
+                }
+            }
+Code:
+Select Code
+CONS
+BPC
+CIV
+CCP
+COM
+CORP
+EDC
+ELEC
+EVID
+FAM
+FIN
+FGC
+FAC
+GOV
+HNC
+HSC
+INS
+LAB
+MVC
+PEN
+PROB
+PCC
+PRC
+PUC
+RTC
+SHC
+UIC
+VEH
+WAT
+WIC
+Article:
+Section:
+Code:
+Select Code
+All
+BPC
+CIV
+CCP
+COM
+CORP
+EDC
+ELEC
+EVID
+FAM
+FIN
+FGC
+FAC
+GOV
+HNC
+HSC
+INS
+LAB
+MVC
+PEN
+PROB
+PCC
+PRC
+PUC
+RTC
+SHC
+UIC
+VEH
+WAT
+WIC
+Section:
+Keyword(s):
+setCode();
+Code Search
+Text Search
+Up^
+<< Previous
+Next >>
+cross-reference chaptered bills
+PDF
+|
+Add To My Favorites
+Search Phrase:
+Code Text
+Financial Code - FIN
+DIVISION 25. Debt Collection Licensing Act [100000 - 100025]
+( Division 25 added by Stats. 2020, Ch. 163, Sec. 3. )
+CHAPTER 1. General Provisions [100000 - 100002]
+( Chapter 1 added by Stats. 2020, Ch. 163, Sec. 3. )
+ARTICLE 2. Requirements for Licensure [100001- 100001.]
+( Article 2 added by Stats. 2020, Ch. 163, Sec. 3. )
+100001.
+(a) No person shall engage in the business of debt collection in this state without first obtaining a license pursuant to this division. To the extent permitted by federal law, a person is acting in this state if the person is located in this state and is seeking to collect from a debtor that resides inside or outside the state, or is located outside of the state and is seeking to collect from a debtor that resides in this state. A license shall be obtained for the licensee’s principal place of business and shall not be transferred or assigned. A separate license is not required for each individual branch office.
+(b) (1) Except as provided in paragraph (2), this
+						division shall not apply to a depository institution, as defined in Section 1420, a person licensed pursuant to Division 9 (commencing with Section 22000) or Division 20 (commencing with Section 50000), a person licensed pursuant to Part 1 (commencing with Section 10000) of Division 4 of the Business and Professions Code, a person who is subject to the Karnette Rental-Purchase Act (Title 2.96 (commencing with Section 1812.620) of Part 4 of Division 3 of the Civil Code), or a trustee performing acts in connection with a nonjudicial foreclosure pursuant to Article 1 (commencing with Section 2920) of Chapter 2 of Title 14 of Part 4 of Division 3 of the Civil Code.
+(2) The commissioner may use the authority described in Section 100005 in connection with a violation of Title 1.6C (commencing with Section 1788) or Title 1.6C.5 (commencing
+						with Section 1788.50) of Part 4 of Division 3 of the Civil Code by a person described in paragraph (1).
+(c) This division shall not apply to debt collection regulated pursuant to Division 12.5 (commencing with Section 28100) or to the collection of covered commercial debt or covered commercial credit, as those terms are defined in Title 1.6C (commencing with Section 1788) of Part 4 of Division 3 of the Civil Code.
+(Amended by Stats. 2024, Ch. 522, Sec. 16.   (SB 1286)   Effective January 1, 2025.)

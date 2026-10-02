@@ -1,0 +1,128 @@
+{
+  "status": "Step 1 grounding and working specification only; no implementation resumed or Jev calls made",
+  "evidence_findings": [
+    {
+      "claim": "User connected Law Informs Code, atomic Jev logic and operator outcomes, then requested a durable jurisdiction method.",
+      "messages": [
+        29763,
+        32834,
+        32901,
+        38451,
+        38577
+      ]
+    },
+    {
+      "claim": "Ferro proposed narrow runtime judgments built from legal judgment terms; code computes dates/amounts.",
+      "messages": [
+        32875,
+        32976
+      ],
+      "authority": "Assistant proposal and surrounding user approval/corrections, not verbatim user technical specification."
+    },
+    {
+      "claim": "User requested Jev for source-register classification; Ferro later confined corpus use to triage/reviewer queues plus quote checking.",
+      "messages": [
+        35190,
+        35191,
+        38511,
+        38577,
+        38730
+      ],
+      "qualification": "User approved packaging the proposed pipeline. Current user instructions explicitly require richer semantic work and supersede this historical implementation boundary."
+    },
+    {
+      "claim": "The Slope design and implemented profile layer assign input construction and question selection to host code, with agent selecting profiles and source/object IDs.",
+      "sources": [
+        "/Users/owenwassmer/dev/Slope_Sparse_Events/Jev_Pivot.md",
+        "/Users/owenwassmer/dev/Slope_Sparse_Events/app/agent/jev_profiles.py"
+      ]
+    },
+    {
+      "claim": "Slope also includes agent-authored findings and dedicated candidate support checks. These are legitimate separate tasks; this is not evidence that all source semantics should be generated through agent-authored candidates.",
+      "sources": [
+        "/Users/owenwassmer/dev/Slope_Sparse_Events/Jev_Pivot.md"
+      ]
+    },
+    {
+      "claim": "Law Informs Code treats standards as reusable concepts for unenumerated situations, alongside determinate rules. It is not a Jev API or ready-made extraction specification.",
+      "source": "fe/context/arxiv_2209.13020.txt",
+      "sections": [
+        "II.A.2, pp328-330",
+        "III.A-B, pp365-368"
+      ]
+    },
+    {
+      "claim": "Current Handoff compile_proposal copies authored native questions, state templates and licenses; it does not enforce a source-to-task preparation profile.",
+      "source": "research/legal-engine/pipeline/semantics/prepare.py"
+    }
+  ],
+  "working_specification": {
+    "purpose": "Establish connected legal meaning from sources, then use it for physical-work and outgoing-account decisions, avoiding unnecessary expense, preserving justified recovery, and reducing disputes.",
+    "agent_responsibility": "Find sources, establish the research question and corpus boundary, request named semantic operations on source/object IDs, recover missing context, investigate conflicts, and synthesize results. Do not routinely supply paraphrased answers as extraction inputs.",
+    "host_responsibility": "Resolve source IDs, assemble the context required by the profile, select versioned questions and native configuration, enumerate work so source units cannot silently disappear, validate results, and compose established outputs. Compute exact time and money from established meaning and typed case facts.",
+    "jev_responsibility": "Make focused semantic judgments about source content, relationships, and application of established standards to case evidence. Multiple independent questions may share sufficient context; dependent questions receive actual predecessor meanings.",
+    "profiles": [
+      {
+        "task": "Source-unit analysis",
+        "inputs": "Complete operative unit with its governing hierarchy; no supplied legal conclusion.",
+        "judgments": "Which semantic functions occur, independently rather than one strongest-role label.",
+        "outputs": "Source-located definition/rule/condition/exception/time/amount/dependency work items.",
+        "consumer": "Detailed processing; every selected source unit accounted for."
+      },
+      {
+        "task": "Definition analysis",
+        "inputs": "Source definition plus governing scope language and recovered dependencies.",
+        "judgments": "Defined term, meaning, inclusion/exclusion, exhaustiveness, scope.",
+        "outputs": "Source-bound definition with these distinctions preserved.",
+        "consumer": "Interpret every governed use, including applying standards to facts."
+      },
+      {
+        "task": "Operative-rule analysis",
+        "inputs": "Operative source unit and necessary enclosing/defined context.",
+        "judgments": "Conduct and modality, applicability, qualifications, temporal/amount elements, consequences.",
+        "outputs": "Connected rule components; simultaneous effects preserved.",
+        "consumer": "Relationship assembly and case evaluation."
+      },
+      {
+        "task": "Relationship analysis",
+        "inputs": "Source-located expressions or established components selected under a repeatable pairing procedure, plus governing text.",
+        "judgments": "Whether/how a definition, condition, exception, timing rule or consequence attaches to the other component.",
+        "outputs": "Specific relationship and scope.",
+        "consumer": "Composition; no source rereading to reconstruct that relationship."
+      },
+      {
+        "task": "Case-standard application",
+        "inputs": "Established legal meaning and admissible case evidence selected under the task contract.",
+        "judgments": "Necessary semantic facts or standard applications; no arithmetic.",
+        "outputs": "Structured case judgments retaining uncertainty.",
+        "consumer": "Determinate calculation and operating recommendation."
+      },
+      {
+        "task": "Support checking",
+        "inputs": "An actual draft/finding and its evidence.",
+        "judgments": "Support, contradiction, omission, or unresolved content.",
+        "outputs": "Correction or further investigation.",
+        "consumer": "Quality control of a real proposed output; not a substitute for source analysis."
+      }
+    ],
+    "every_profile_must_define": [
+      "Eligible source/object IDs",
+      "Exact context assembly and recovery rules",
+      "Stable questions and result meanings",
+      "Applicable native Jev primitives/configuration",
+      "How source expressions are selected or returned",
+      "Downstream use",
+      "Coverage and failure handling"
+    ],
+    "not_yet_settled": "Exact expression-selection/return mechanism and complete operational question catalogue. Do not claim existing typed primitives provide unconstrained extraction. Resolve this in the concrete design, without hiding agent semantic conclusions inside candidates.",
+    "completion_demonstration": "A complete source-to-case walkthrough including both definitions and connected entry/denial rules in the supplied yard-maintenance passage, then unseen material under the same method. Evaluation checks missing semantics as well as wrong answers.",
+    "current_authority": "Current user instructions supersede historical triage-only restrictions and Slope-specific finding approval conventions."
+  },
+  "source_hashes": {
+    "fe/context/arxiv_2209.13020.txt": "adacedcd052c7cdf2f9a6082049d622aa695b20114f320979dedeaa7956a0ecc",
+    "/Users/owenwassmer/dev/Slope_Sparse_Events/Jev_Pivot.md": "74cd22539ec4b0155fb1aed6b67a091425aa98d8dad02426ef2709834f89e5fb",
+    "/Users/owenwassmer/dev/Slope_Sparse_Events/app/agent/jev_profiles.py": "90c75be7109db57add1dd8ea64c16097f1eac2c8d76cabbae466a377924461ee",
+    "research/legal-engine/pipeline/semantics/prepare.py": "e61ffadd13a029fdabce76d6f24f7b9eb34cfa9e9b169605286f351c9ca22172",
+    "research/legal-engine/pipeline/jev_questions.json": "0ac10a6419d559019006de20c859a6755d242ac3e972da23c9af5f8de44daa71"
+  }
+}

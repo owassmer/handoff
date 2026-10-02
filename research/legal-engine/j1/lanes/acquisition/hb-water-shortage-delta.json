@@ -1,0 +1,93 @@
+{
+  "as_of": "2026-10-01",
+  "proposed_instruments": [
+    {
+      "id": "CA-HB:WATER-SHORTAGE-RES2026-12",
+      "name": "Resolution2026-12: adopted2025 UWMP and updated Water Shortage Contingency Plan",
+      "adapter": "generic",
+      "jurisdiction": "CA-HB",
+      "source_unit_kind": "document",
+      "source_url": "https://huntingtonbeach.legistar.com/LegislationDetail.aspx?GUID=800D1805-3D5E-4EF7-BD57-86F6542BA27E&ID=7998071&Options=&Search=",
+      "adopted_date": "2026-05-05",
+      "adoption_source": "https://huntingtonbeach.legistar.com/View.ashx?GUID=49C3E2E5-31DD-4650-9039-99BD8CC20A85&ID=1343924&M=M",
+      "adoption_locator": "Item16, printed page15",
+      "adoption_vote": "7-0",
+      "scope_reason": "Select shortage declarations/activation, customer demand-reduction stages, water and landscape-use limits, notice/communication, hardship relief, enforcement and customer cost/reconnection consequences; retain definitions and incorporated operational dependencies.",
+      "units": [
+        {
+          "id": "resolution",
+          "heading": "Resolution2026-12",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "resolution",
+              "heading": "Resolution2026-12",
+              "ref": "https://huntingtonbeach.legistar.com/View.ashx?GUID=EC35768D-6A1B-4460-BE94-37BC284FDF7F&ID=15424702&M=F",
+              "source_unit_kind": "document"
+            }
+          ],
+          "fetch_result": "cache miss"
+        },
+        {
+          "id": "uwmp",
+          "heading": "2025 Urban Water Management Plan",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "uwmp",
+              "heading": "2025 Urban Water Management Plan",
+              "ref": "https://huntingtonbeach.legistar.com/View.ashx?GUID=F5F2BAF9-B397-40DA-9C41-87D88922374E&ID=15424696&M=F",
+              "source_unit_kind": "document"
+            }
+          ],
+          "fetch_result": "HTTP410"
+        },
+        {
+          "id": "wscp",
+          "heading": "2025 Water Shortage Contingency Plan (attachment label)",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "wscp",
+              "heading": "2025 Water Shortage Contingency Plan (attachment label)",
+              "ref": "https://huntingtonbeach.legistar.com/View.ashx?GUID=8E989787-F459-4F06-81B5-D90518D6DA87&ID=15424697&M=F",
+              "source_unit_kind": "document"
+            }
+          ],
+          "fetch_result": "HTTP410"
+        }
+      ],
+      "internal_scope_note": "2025 plan PDFs not readable in this pass; exact named document targets are observed, but internal2025chapter numbering is not asserted. Whole-document acquisition is transport only.",
+      "units_out_reason": "Internal city supply inventories, long-range forecasts, resource construction and modeling are outside this operational aperture unless expressly incorporated in a selected shortage trigger or customer obligation.",
+      "version_note": "Official item title says includes2020WSCP, attachment3 says2025WSCP, and adopted motion updates WSCP. Preserve original labels and resolve actual cover/version during acquisition; do not infer2020PDF is adopted2025replacement."
+    }
+  ],
+  "existing_code_connection": {
+    "chapter": "HBMC14.18 Water Shortage Contingency Response",
+    "observed_publisher_source": "https://ecode360.com/43800107",
+    "selected_connections": [
+      "14.18.010-.040 scope and definitions",
+      "14.18.041 shortage determination/implementation",
+      "14.18.042 communication protocols",
+      "14.18.050 permanent conservation requirements",
+      "14.18.060 shortage-level correlation",
+      "14.18.100 hardship waiver",
+      "14.18.110 violation/penalty"
+    ],
+    "scope_note": "Connect already selected municipal code rather than create duplicate code instrument. Activation and relief sources matter for customer obligations; plan adoption alone does not establish an active shortage level.",
+    "evidence_limit": "Official publisher search exposed chapter TOC; direct reader cache miss. Current canonical title reader remains separate."
+  },
+  "legacy_sources_not_current_substitutes": [
+    {
+      "url": "https://www.huntingtonbeachca.gov/Documents/Departments/Utilities/Urban%20Water%20Management%20Plan/urban-water-plan.pdf",
+      "observed_identity": "2015UWMP,288pages",
+      "disposition": "Not current2025plan despite undated URL."
+    },
+    {
+      "url": "https://www.huntingtonbeachca.gov/Documents/Departments/Utilities/Urban%20Water%20Management%20Plan/2020-Urban-Water-Management-Plan.pdf",
+      "observed_identity": "Final June2021 2020UWMP,133pages",
+      "disposition": "Historical baseline only; actual2025replacement target above governs version recovery."
+    }
+  ],
+  "J1_J2_boundary": "Named adopted package and acquisition targets resolved. Customer-oriented scope reason explicit; full transport/internal section enumeration remains J2. No semantic compilation, canonical edits or active-shortage declaration inferred."
+}

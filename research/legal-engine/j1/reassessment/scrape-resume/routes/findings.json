@@ -1,0 +1,59 @@
+{
+  "as_of": "2026-10-02",
+  "selection_change": null,
+  "actual_document_findings": [
+    {
+      "source": "FPPC native document search, newest2026 entries",
+      "documents": "fppc-oct-stip-0..3.pdf; exactURLs in fppc-oct-stip-sources.json",
+      "finding": "Four October streamline stipulations cite18360.1/18360.2 eligibility and18360.3 authority; none states the August amendment edition, filing date or operative date."
+    },
+    {
+      "source": "FPPC current regulation schedule",
+      "url": "https://www.fppc.ca.gov/siteassets/documents/legal_div/regulations/00_schedules/reg_schedule.pdf",
+      "document": "fppc-reg-schedule.pdf",
+      "finding": "DatedMarch9 with schedule updated8/21. Reports August adoption of enforcement penalties; no final filing date."
+    },
+    {
+      "source": "Actual newly amended FPPC1\u20133 PDFs and waterfee packages",
+      "documents": [
+        "fppc-adopted-portfolios.json",
+        "portfolio-inspection.json"
+      ],
+      "finding": "All three Aug24 amendment PDFs, signed fee resolution2026-0038 and proposed FY26\u201327 fee package have zero embedded documents. No hidden Form400 or endorsed text found."
+    },
+    {
+      "source": "DDW publisher generically named2026 regulatory PDFs",
+      "documents": [
+        "ddw-proposed-regulation-text-3.pdf",
+        "ddw-final-regulation-text.pdf",
+        "ddw-final-revised-proposed-regulation-05292026.pdf",
+        "ddw-notice-of-proposed-emergency-rulemaking.pdf",
+        "ddw-revised-notice-of-proposed-emergency-rulemaking-6-8-2026.pdf"
+      ],
+      "finding": "Actual first pages identify21-002E electronic reporting in64469 or22-001 onsite nonpotable reuse inChapter3.5. These are not the missing Chapter14\u201317 Section100 action. Exclusion from target is now based on actual text, not filename guesses."
+    },
+    {
+      "source": "Internet Archive inventories and actual historical fee page",
+      "documents": [
+        "fppc-archive-cdx.raw",
+        "ddw-archive2026.json",
+        "ddw-archive100.json",
+        "ddw-sept-all-cdx.decoded.txt",
+        "waterfees-archive2026.json",
+        "waterfees-sept30-snapshot.decoded.txt"
+      ],
+      "finding": "FPPC inventory exposes9 URLs: older current sections and July proposals. DDW September prefix exposes106 URLs, no matching correction package; narrowerSection100 range is empty. The Sept30 fee landing-page snapshot has only known current program links and meeting schedule, no final FY26\u201327 package."
+    },
+    {
+      "source": "Alternate official hosts",
+      "documents": [
+        "water-alt-section100.raw",
+        "water-alt-ddw2026.raw",
+        "water-alt-fee2026.raw"
+      ],
+      "finding": "water.waterboards.ca.gov exposes the same Section100, DDW2026 and fee2026 inventories. No additional final or corrective package."
+    }
+  ],
+  "outcome": "No actual final outcome, filing or DDW changed-unit inventory recovered. No authority to change the three open selections. Sources are retained for reuse; no canonical edits or external messages.",
+  "acquisition_limit": "CommonCrawl DDW prefix returned504; no result inferred. InternetArchive URL inventories establish captures only, not the whole publisher corpus. No auth bypass attempted."
+}

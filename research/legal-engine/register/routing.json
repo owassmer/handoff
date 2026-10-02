@@ -1,0 +1,40 @@
+{
+  "current": "v2",
+  "versions": {
+    "v1": {
+      "date": "2026-09-30",
+      "review_queue_if_any": {
+        "q1_p_decides_gte": 0.15,
+        "q2_chain_duty_gte": 0.3,
+        "q1_confidence_lt": 0.7,
+        "long_chars_gt": 12000,
+        "unfetched": true,
+        "definition_section_in_unit_with_stated_rule": true
+      },
+      "triaged_only_if": "Jev is confident on both questions: Q1 choice is NO_DECISION (-> triaged_no_decision) or EXCLUDED_REGIME (-> triaged_excluded), Q1 confidence >= 0.7, Q1 P(DECIDES) < 0.15 and Q2 chain_duty < 0.3.",
+      "why": "Missing law is the costly error, so routing is deliberately asymmetric (brief, Step 4)."
+    },
+    "v2": {
+      "date": "2026-09-30",
+      "review_queue_if_any": {
+        "q1_p_decides_gte": 0.15,
+        "q2_chain_duty_gte": 0.1,
+        "q1_confidence_lt": 0.7,
+        "long_chars_gt": 12000,
+        "unfetched": true,
+        "definition_section_in_unit_with_stated_rule": true,
+        "applicability_section_in_unit_with_stated_rule": true,
+        "cited_by_review_universe_4a_or_5a": true,
+        "excluded_regime_outside_regime_units": true
+      },
+      "regime_units": [
+        "NYC:ADC|tit. 26 > Chapter 3: Rent Control",
+        "NYC:ADC|tit. 26 > Chapter 4: Rent Stabilization",
+        "NY:9NYCRR|Part 2520",
+        "NY:9NYCRR|Part 2200"
+      ],
+      "triaged_only_if": "As v1, plus: the section is not cited by a 4A/5A universe item; it is not a definition or applicability section in a unit with a stated rule; and triaged_excluded is allowed only inside a regime unit (RS/RC routing units). Q2 threshold lowered from 0.3 to 0.10.",
+      "why": "v1 missed 14 of 315 gold positives (calibration.json). Every miss is caught by v2: LLC Law 206, RPL 441-c, STT 305, SCPA 1305/1802, Admin. Code 27-2097 are cited by the independent reviewers' universes; 24 CFR 982.404 and RPL 232-b were marked EXCLUDED_REGIME outside a regime unit (the Housing Choice Voucher program is inside the aperture); 28 RCNY 1-01 is an applicability section in a unit with stated rules; GCN 35, RPL 212, RPL 442, Admin. Code 26-414 and 26-520 have chain_duty between 0.10 and 0.29."
+    }
+  }
+}

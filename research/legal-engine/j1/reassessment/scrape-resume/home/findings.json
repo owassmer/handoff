@@ -1,0 +1,80 @@
+{
+  "as_of": "2026-10-02",
+  "target": "Edition of Exhibit A incorporated in the 2025 Families Forward and Mercy House HOME agreements",
+  "selection_result": "No edition established by this scrape. Existing 2025 contract identities remain selected; July 2024 guidelines cannot be relabeled as their actual attached edition.",
+  "new_routes": [
+    {
+      "route": "Internet Archive domain inventory for city housing pages and separate cms3.revize.com/revize/huntingtonbeachca asset host",
+      "files": [
+        "archive-housing.json",
+        "revize-cdx.json",
+        "revize-document-candidates.json"
+      ],
+      "finding": "592 Revize asset records returned; 88 distinct housing/program PDF candidates identified by path. No named regular TBRA Operating Guidelines or 2025 HOME contract exhibit. Inventory review, not a claim every PDF was read."
+    },
+    {
+      "route": "Archived city TBRA page, April and December 2025; CDBG/HOME document page, April 2024 and December 2025",
+      "files": [
+        "archived-tbra.html",
+        "archived-tbra-202512.html",
+        "archived-cdbg-home.html",
+        "archived-cdbg-home-202512.html",
+        "dec2025-cdbg-links.json"
+      ],
+      "finding": "TBRA pages link provider homepages, without a guideline attachment. December CDBG listing adds current funding handbooks, plans and reports, but no identified regular TBRA operating-guideline or incorporated-exhibit counterpart. General plans and CDBG application handbooks do not establish the HOME edition."
+    },
+    {
+      "route": "Laserfiche actual provider folder hierarchy using published GetBreadCrumbs and GetFolderListing2 methods",
+      "files": [
+        "lf-ff-breadcrumbs.json",
+        "lf-ff-root.json",
+        "lf-mercy-breadcrumbs.json",
+        "lf-mercy-root.json"
+      ],
+      "finding": "Both provider parent folders contain exactly 2024 and 2025 subfolders. No later-year or alternative exhibit sibling is exposed. Earlier review already established that actual 2025 entries omit exhibits and have no electronic-file/annotation/relationship counterpart."
+    },
+    {
+      "route": "Internet Archive all captured PDF URL inventory for both provider domains",
+      "files": [
+        "ff-archive-pdfs.json",
+        "mercy-archive-pdfs.json"
+      ],
+      "finding": "533 Families Forward and 44 Mercy House URL records. No identifiable HB TBRA operating-guideline or 2025 exhibit counterpart. Includes old paths absent from current WordPress media inventory."
+    },
+    {
+      "route": "Archived Mercy House pre-migration site and observed external Webflow asset hosts",
+      "files": [
+        "mercy-jan2025.html",
+        "mercy-feb2024.html",
+        "mercy-programs-2025.html",
+        "mercy-get-help-2025.html",
+        "mercy-webflow-assets.json",
+        "mercy-webflow-cms-assets.json",
+        "mercy-webflow-old-assets.json",
+        "mercy-oc-2025.html",
+        "mercy-program-assets-cdn.json",
+        "mercy-program-assets-assets-global.json.error"
+      ],
+      "finding": "Read archived January 2025 and February 2024 homepages, January 2025 programs/get-help pages and archived Orange County regional page. These expose actual separate Webflow asset hosts and three site/CMS prefixes. Modern and older main-site PDF inventories each return only internship and annual-report files; secondary homepage CMS prefix returns none. Orange County program cards have hidden empty Learn More links, not document links. Footer Google Drive link is expressly labeled Form 990, not an operating-guideline counterpart. Program-asset prefix inventory followthrough is separately saved. Program-specific modern-host archive inventory is empty; older-host inventory request timed out, which is a failed retrieval rather than an absence finding."
+    }
+  ],
+  "failed_routes": [
+    {
+      "route": "Current city sitemap/robots and direct Revize HTML",
+      "result": "HTTP 403; archived page and asset inventories successfully used instead."
+    },
+    {
+      "route": "Common Crawl 2026-39 city/Revize prefix queries and 2025-30 exact TBRA URL",
+      "result": "HTTP 504. These are failed retrievals, not absence findings. Exact request URLs saved in .error files."
+    }
+  ],
+  "public_archive_lf_2025_carrier_result": "No capture returned for the exact known HOME entry IDs in the queried archive inventory. This does not establish all representations were never archived.",
+  "canonical_edits": false,
+  "external_contact": false,
+  "read_vs_discovered": {
+    "read": "Saved HTML page bodies, extracted document links, actual Laserfiche folder listing results and archive-index results were read.",
+    "not_read": "The hundreds of historical PDF URLs are an inventory; their entire document bodies were not read. Excluded apparent funding plans, unrelated housing categories, provider job/financial/event material were not represented as incorporation evidence.",
+    "routes_from_observation": "Webflow hosts and each queried identifier came from recovered provider page source, not guessed private storage paths."
+  },
+  "full_text_followthrough": "See carrier-body-findings.json: actual 15 carrier PDFs and 129 OCR pages reviewed beyond filename inventories."
+}

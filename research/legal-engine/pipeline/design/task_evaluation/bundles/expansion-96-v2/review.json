@@ -1,0 +1,3275 @@
+{
+  "cases_sha256": "16eb5c0437e620460df20c4f9f1c2cf14f18ef2a0d9ef52587ac3586ca821057",
+  "contracts_sha256": "93b2ad6fbb6b4ba2438960c8f15527ad2906374f8bc6eee6f51ba6577d7cd86f",
+  "reviewer": "/root/prepared_input_review",
+  "author_labels_seen": false,
+  "model_responses_seen": false,
+  "status": "Complete independent source review of all 96 development cases under proposed v2; no author labels or model responses read.",
+  "material_findings": [],
+  "cases": [
+    {
+      "id": "exp001",
+      "expected": "YES",
+      "reason": "Expressly assigns undue hardship a meaning including nonfinancial difficulty.",
+      "edge_case": "EEOC_ACCOMMODATION:hardship",
+      "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp002",
+      "expected": "YES",
+      "reason": "Expressly defines date of receipt by arrival at the creditor.",
+      "edge_case": "CFPB_1026_10:receipt",
+      "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp003",
+      "expected": "YES",
+      "reason": "Expressly defines expedited crediting for the specified rule.",
+      "edge_case": "CFPB_1026_10:expedited",
+      "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp004",
+      "expected": "YES",
+      "reason": "Defines representative-assisted service and excludes purely automated means.",
+      "edge_case": "CFPB_1026_10:representative",
+      "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp005",
+      "expected": "NO",
+      "reason": "Permits choosing among effective accommodations without defining a term.",
+      "edge_case": "EEOC_ACCOMMODATION:choice",
+      "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp006",
+      "expected": "NO",
+      "reason": "Prescribes prompt handling rather than assigning a meaning.",
+      "edge_case": "EEOC_ACCOMMODATION:prompt",
+      "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp007",
+      "expected": "NO",
+      "reason": "Limits the accommodation duty and illustrates personal items without assigning a term a meaning.",
+      "edge_case": "EEOC_ACCOMMODATION:personal",
+      "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp008",
+      "expected": "NO",
+      "reason": "States the effect of grievance proceedings on filing limits, not a definition.",
+      "edge_case": "EEOC_CHARGE:grievance",
+      "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp009",
+      "expected": "YES",
+      "reason": "Defines jurisdictional requirements through the bounds of adjudicatory authority.",
+      "edge_case": "BOECHLER:boechler_def",
+      "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp010",
+      "expected": "YES",
+      "reason": "The Court expressly adopts stop-the-clock as the meaning of toll.",
+      "edge_case": "ARTIS:artis_def",
+      "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp011",
+      "expected": "NO",
+      "reason": "Reports competing proposed meanings and a lower court adoption, without adopting either in this passage.",
+      "edge_case": "ARTIS:artis_proposal",
+      "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp012",
+      "expected": "NO",
+      "reason": "Classifies a particular deadline and permits tolling; does not define a term.",
+      "edge_case": "BOECHLER:boechler_hold",
+      "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp013",
+      "expected": "YES",
+      "reason": "Operatively incorporates the meaning of distressed home from another statute.",
+      "edge_case": "WASHINGTON_59_18:wa_incorporation",
+      "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp014",
+      "expected": "YES",
+      "reason": "Expressly defines dwelling unit and its special rented-space sense.",
+      "edge_case": "OREGON_90:or_dwelling",
+      "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp015",
+      "expected": "NO",
+      "reason": "Imposes a prohibition on leasing condemned dwellings without defining a term.",
+      "edge_case": "WASHINGTON_59_18:wa_condemned",
+      "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp016",
+      "expected": "NO",
+      "reason": "Permits supplementary notice methods without assigning a meaning.",
+      "edge_case": "OREGON_90:or_alternative",
+      "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp017",
+      "expected": "YES",
+      "reason": "The selected expression introduces the precise calendar-day definition supplied.",
+      "edge_case": "business-precise",
+      "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp018",
+      "expected": "NO",
+      "reason": "The selected precise calendar-day sense differs from the creditor-open-for-business definition.",
+      "edge_case": "business-precise",
+      "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp019",
+      "expected": "YES",
+      "reason": "The selected creditor category includes the creditor-side service provider under the supplied definition.",
+      "edge_case": "creditor-scope",
+      "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp020",
+      "expected": "YES",
+      "reason": "The same defined creditor category is being denied to the consumer-side service; negation does not change the meaning of creditor.",
+      "edge_case": "creditor-scope",
+      "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp021",
+      "expected": "YES",
+      "reason": "Separate fee retains its defined payment-fee meaning even where the sentence excludes late fees from that category.",
+      "edge_case": "fee-scope",
+      "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp022",
+      "expected": "YES",
+      "reason": "The selected representative category remains the live-assistance sense while automated systems are excluded.",
+      "edge_case": "representative-scope",
+      "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp023",
+      "expected": "YES",
+      "reason": "The selected repeated use retains the supplied hardship meaning including nonfinancial difficulty.",
+      "edge_case": "hardship",
+      "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp024",
+      "expected": "YES",
+      "reason": "The selected accommodations are effective disability-related workplace adjustments under the supplied meaning.",
+      "edge_case": "accommodation",
+      "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp025",
+      "expected": "YES",
+      "reason": "The Court uses toll in its expressly adopted stop-the-clock sense.",
+      "edge_case": "artis-meaning",
+      "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp026",
+      "expected": "NO",
+      "reason": "The selected historical Hardin use characterizes a one-year grace period and expressly contrasts it with stopping the clock; the supplied current section 1367(d) stop-clock definition does not fit that occurrence.",
+      "edge_case": "ARTIS:Hardin-historical-grace-usage",
+      "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp027",
+      "expected": "YES",
+      "reason": "The declarative characterization and complete paragraph assign the selected historical tolling occurrence a one-year grace-period sense, matching the candidate definition.",
+      "edge_case": "ARTIS:Hardin-historical-grace-usage",
+      "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp028",
+      "expected": "YES",
+      "reason": "Jurisdictional retains the adjudicatory-authority sense in the Commissioner's rejected argument.",
+      "edge_case": "boechler-jurisdiction",
+      "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp029",
+      "expected": "YES",
+      "reason": "The dwelling unit is the residential structure covered by the supplied general definition.",
+      "edge_case": "wa-dwelling",
+      "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp030",
+      "expected": "YES",
+      "reason": "The notice-giving landlord is the owner/lessor/authorized manager identified by the supplied definition.",
+      "edge_case": "or-entry",
+      "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp031",
+      "expected": "YES",
+      "reason": "Receipt means arrival of the payment, not the later date of bookkeeping posting.",
+      "edge_case": "receipt-date",
+      "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp032",
+      "expected": "NO",
+      "reason": "The condemned residential structure is not the specially defined site rented separately from a manufactured or floating home.",
+      "edge_case": "wa-dwelling",
+      "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp033",
+      "expected": "A",
+      "reason": "The selected precise rule uses calendar days excluding Sundays and listed federal holidays.",
+      "edge_case": "business-precise",
+      "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp034",
+      "expected": "B",
+      "reason": "The precise calendar-day meaning is offered as B in this ordering.",
+      "edge_case": "business-precise",
+      "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp035",
+      "expected": "A",
+      "reason": "Creditor identifies the category including a service provider acting on the creditor's behalf.",
+      "edge_case": "creditor-scope",
+      "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp036",
+      "expected": "B",
+      "reason": "The defined creditor-side category is denied to this consumer-side service, without changing the word's sense.",
+      "edge_case": "creditor-scope",
+      "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp037",
+      "expected": "NONE",
+      "reason": "Neither adjudicatory authority nor a limitation expiry describes a payment fee.",
+      "edge_case": "fee-scope",
+      "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp038",
+      "expected": "B",
+      "reason": "Representative means a live assisting person or agent; automated means are expressly excluded.",
+      "edge_case": "representative-scope",
+      "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp039",
+      "expected": "A",
+      "reason": "The source defines hardship by significant difficulty or expense rather than a preference for cheaper accommodation.",
+      "edge_case": "hardship",
+      "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp040",
+      "expected": "B",
+      "reason": "The accommodation is a workplace adjustment rather than hotel lodging.",
+      "edge_case": "accommodation",
+      "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp041",
+      "expected": "A",
+      "reason": "The adopted toll meaning is suspension of the limitations clock.",
+      "edge_case": "artis-meaning",
+      "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp042",
+      "expected": "B",
+      "reason": "B fits the expressly identified historical grace-period use; the paragraph contrasts that atypical use with clock suspension. This is not the current section 1367(d) holding.",
+      "edge_case": "ARTIS:Hardin-historical-grace-usage",
+      "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp043",
+      "expected": "A",
+      "reason": "A fits the expressly identified historical grace-period use; reordered alternatives do not change the meaning. The paragraph expressly contrasts it with clock suspension.",
+      "edge_case": "ARTIS:Hardin-historical-grace-usage",
+      "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp044",
+      "expected": "B",
+      "reason": "The jurisdictional category means a limit on adjudicatory authority even though the Court rejects applying it to this deadline.",
+      "edge_case": "boechler-jurisdiction",
+      "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp045",
+      "expected": "NONE",
+      "reason": "Neither offered abstract litigation meaning fits a residential dwelling unit.",
+      "edge_case": "wa-dwelling",
+      "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp046",
+      "expected": "B",
+      "reason": "Landlord denotes the owner/lessor or authorized manager, not the resident tenant.",
+      "edge_case": "or-entry",
+      "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp047",
+      "expected": "A",
+      "reason": "Receipt denotes payment reaching the creditor rather than final check clearance.",
+      "edge_case": "receipt-date",
+      "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp048",
+      "expected": "B",
+      "reason": "The phrase identifies a residential structure, not only a site underneath a separately owned home.",
+      "edge_case": "wa-dwelling",
+      "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp049",
+      "expected": "YES",
+      "reason": "Undue hardship expressly excuses the accommodation obligation under stated circumstances.",
+      "edge_case": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:hardship_exception",
+      "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp050",
+      "expected": "YES",
+      "reason": "The candidate narrows the accommodation obligation by excluding personal-use items except job-specific needs.",
+      "edge_case": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:personal",
+      "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp051",
+      "expected": "NO",
+      "reason": "Choosing an effective accommodation is a way to satisfy the same duty, not an excuse from it.",
+      "edge_case": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:choice",
+      "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp052",
+      "expected": "NO",
+      "reason": "Prompt response adds procedural responsibility without excusing provision of accommodation.",
+      "edge_case": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:prompt",
+      "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp053",
+      "expected": "NO",
+      "reason": "The candidate defines receipt timing for website payments while retaining the same credit-as-of-receipt duty.",
+      "edge_case": "CFPB_1026_10:creditdate|CFPB_1026_10:webpay",
+      "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp054",
+      "expected": "NO",
+      "reason": "Preserving records while a charge remains unresolved adds or extends retention responsibility rather than excusing it.",
+      "edge_case": "EEOC_ACCOMMODATION:records_base|EEOC_ACCOMMODATION:records_extension",
+      "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp055",
+      "expected": "NO",
+      "reason": "Direct court access under the EPA does not excuse the distinct charge prerequisite for a Title VII claim.",
+      "edge_case": "EEOC_CHARGE:epa|EEOC_CHARGE:titlevii",
+      "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp056",
+      "expected": "YES",
+      "reason": "The 300-day branch narrows the general obligation to file within 180 days under the stated agency-law condition.",
+      "edge_case": "EEOC_CHARGE:charge180|EEOC_CHARGE:charge300",
+      "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp057",
+      "expected": "YES",
+      "reason": "Equitable tolling conditionally relaxes the 30-day filing requirement; it is not a finding that Boechler actually qualifies.",
+      "edge_case": "BOECHLER:boechler_hold|BOECHLER:boechler_req",
+      "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp058",
+      "expected": "NO",
+      "reason": "A general jurisdictional definition does not excuse the selected filing duty.",
+      "edge_case": "BOECHLER:boechler_def|BOECHLER:boechler_req",
+      "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp059",
+      "expected": "YES",
+      "reason": "The Court expressly rejects lack of equitable-tolling power, thereby recognizing conditional relief from the filing limit.",
+      "edge_case": "BOECHLER:boechler_intro|BOECHLER:boechler_req",
+      "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp060",
+      "expected": "NO",
+      "reason": "Reporting competing interpretations creates no operative exception to the quoted statute.",
+      "edge_case": "ARTIS:artis_law|ARTIS:artis_proposal",
+      "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp061",
+      "expected": "YES",
+      "reason": "The natural-disaster condition expressly excuses the selected relocation-payment duty.",
+      "edge_case": "WASHINGTON_59_18:wa_disaster|WASHINGTON_59_18:wa_relocation",
+      "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp062",
+      "expected": "YES",
+      "reason": "Illegal conduct without landlord knowledge expressly excuses the selected relocation-payment duty.",
+      "edge_case": "WASHINGTON_59_18:wa_illegal|WASHINGTON_59_18:wa_relocation",
+      "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp063",
+      "expected": "NO",
+      "reason": "Damages for violating the leasing prohibition are a remedy, not permission to violate it.",
+      "edge_case": "WASHINGTON_59_18:wa_condemned|WASHINGTON_59_18:wa_damages",
+      "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp064",
+      "expected": "YES",
+      "reason": "Emergency entry expressly excuses the ordinary advance notice, consent and reasonable-time requirements.",
+      "edge_case": "OREGON_90:or_emergency|OREGON_90:or_entry",
+      "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp065",
+      "expected": "YES",
+      "reason": "The candidate expressly substitutes 300 days for the general 180-day filing limit under the stated condition.",
+      "edge_case": "EEOC_CHARGE:charge180|EEOC_CHARGE:charge300",
+      "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp066",
+      "expected": "YES",
+      "reason": "The weekend/holiday rule adjusts the due date to the next business day.",
+      "edge_case": "EEOC_CHARGE:charge180|EEOC_CHARGE:holiday",
+      "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp067",
+      "expected": "NO",
+      "reason": "The candidate expressly denies the asserted extension for other dispute-resolution proceedings.",
+      "edge_case": "EEOC_CHARGE:charge180|EEOC_CHARGE:grievance",
+      "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp068",
+      "expected": "YES",
+      "reason": "Ongoing harassment uses the last incident as the filing trigger rather than each discrete event separately.",
+      "edge_case": "EEOC_CHARGE:events|EEOC_CHARGE:harassment",
+      "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp069",
+      "expected": "YES",
+      "reason": "Willful discrimination changes the stated EPA period from two years to three.",
+      "edge_case": "EEOC_CHARGE:epa_base|EEOC_CHARGE:epa_extension",
+      "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp070",
+      "expected": "NO",
+      "reason": "The candidate expressly says the Title VII charge does not extend the EPA lawsuit deadline.",
+      "edge_case": "EEOC_CHARGE:epa_base|EEOC_CHARGE:titlevii",
+      "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp071",
+      "expected": "YES",
+      "reason": "A filed charge changes the retention endpoint to resolution rather than expiration of the ordinary year.",
+      "edge_case": "EEOC_ACCOMMODATION:records_base|EEOC_ACCOMMODATION:records_extension",
+      "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp072",
+      "expected": "YES",
+      "reason": "The after-cutoff sentence legally deems immediate authorization to occur next business day, altering receipt-trigger computation. This is a stated deeming rule, not merely a later actual occurrence of the unchanged trigger; YES under v2.",
+      "edge_case": "CFPB_1026_10:creditdate|CFPB_1026_10:webpay",
+      "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp073",
+      "expected": "YES",
+      "reason": "The holding makes the selected filing deadline subject to conditional equitable tolling without granting it on these facts.",
+      "edge_case": "BOECHLER:boechler_hold|BOECHLER:boechler_req",
+      "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp074",
+      "expected": "NO",
+      "reason": "The abstract jurisdictional definition does not modify the selected 30-day filing deadline.",
+      "edge_case": "BOECHLER:boechler_def|BOECHLER:boechler_req",
+      "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp075",
+      "expected": "NO",
+      "reason": "Forfeiture of an objection is not a modification of the distinct Tax Court filing deadline.",
+      "edge_case": "BOECHLER:boechler_req|FORT_BEND:fort_objection",
+      "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp076",
+      "expected": "YES",
+      "reason": "The quoted federal tolling rule suspends the state limitations period when its federal-pendency conditions are met.",
+      "edge_case": "ARTIS:artis_law|ARTIS:artis_three_year",
+      "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp077",
+      "expected": "NO",
+      "reason": "Complete section 90.155 separates cancellation or address change of an electronic-service arrangement from compliance or termination of tenancy. The mail extension covers the latter periods, not this selected three-day electronic-service notice.",
+      "edge_case": "OREGON_90:or_email_cancel|OREGON_90:or_mail",
+      "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp078",
+      "expected": "YES",
+      "reason": "Emergency entry removes the ordinary advance-notice timing and creates a conditional post-entry notice rule for absence; this changes the temporal notice regime.",
+      "edge_case": "OREGON_90:or_emergency|OREGON_90:or_entry",
+      "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp079",
+      "expected": "NO",
+      "reason": "A government's advance after landlord nonpayment is a remedy; the seven-day landlord deadline remains.",
+      "edge_case": "WASHINGTON_59_18:wa_advance|WASHINGTON_59_18:wa_seven",
+      "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp080",
+      "expected": "NO",
+      "reason": "The damages rule for unlawful rental does not alter the separate relocation-payment deadline.",
+      "edge_case": "WASHINGTON_59_18:wa_damages|WASHINGTON_59_18:wa_seven",
+      "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp081",
+      "expected": "NO",
+      "reason": "The text expressly includes nonfinancial hardship, contradicting the claim of financial exclusivity.",
+      "edge_case": "EEOC_ACCOMMODATION:hardship",
+      "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp082",
+      "expected": "YES",
+      "reason": "The proposition preserves the express effectiveness condition.",
+      "edge_case": "EEOC_ACCOMMODATION:choice",
+      "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp083",
+      "expected": "NO",
+      "reason": "The text expressly preserves required job-specific items, defeating never.",
+      "edge_case": "EEOC_ACCOMMODATION:personal",
+      "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp084",
+      "expected": "YES",
+      "reason": "The proposition matches the first express condition barring documentation demands.",
+      "edge_case": "EEOC_ACCOMMODATION:documentation",
+      "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp085",
+      "expected": "NO",
+      "reason": "The example expressly excludes the consumer-side service from the creditor category.",
+      "edge_case": "CFPB_1026_10:provider_no",
+      "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp086",
+      "expected": "YES",
+      "reason": "The example expressly treats the observed Friday as a business day under the precise rule.",
+      "edge_case": "CFPB_1026_2:business",
+      "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp087",
+      "expected": "NO",
+      "reason": "The passage expressly says local law alone does not extend the age-discrimination deadline.",
+      "edge_case": "EEOC_CHARGE:charge",
+      "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp088",
+      "expected": "YES",
+      "reason": "The passage expressly permits direct court filing without an EEOC charge under the EPA.",
+      "edge_case": "EEOC_CHARGE:epa",
+      "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp089",
+      "expected": "NO",
+      "reason": "The Court expressly leaves Boechler's entitlement for remand.",
+      "edge_case": "BOECHLER:boechler_hold",
+      "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp090",
+      "expected": "YES",
+      "reason": "The claim accurately attributes the proposition to the Commissioner's argument rather than the Court's holding.",
+      "edge_case": "BOECHLER:boechler_intro",
+      "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp091",
+      "expected": "NO",
+      "reason": "The passage attributes adoption to the D.C. Court of Appeals, not the Supreme Court.",
+      "edge_case": "ARTIS:artis_proposal",
+      "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp092",
+      "expected": "YES",
+      "reason": "The proposition matches the Court's express stop-the-clock holding.",
+      "edge_case": "ARTIS:artis_def",
+      "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp093",
+      "expected": "NO",
+      "reason": "The claim omits notice and knowledge predicates and ignores the stated exceptions.",
+      "edge_case": "WASHINGTON_59_18:wa_relocation",
+      "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp094",
+      "expected": "YES",
+      "reason": "The candidate expressly excuses payment under the specified natural-disaster condition.",
+      "edge_case": "WASHINGTON_59_18:wa_disaster",
+      "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp095",
+      "expected": "NO",
+      "reason": "The passage expressly permits emergency entry without advance notice, with conditional later notice.",
+      "edge_case": "OREGON_90:or_emergency",
+      "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+      "material_ambiguity": false
+    },
+    {
+      "id": "exp096",
+      "expected": "YES",
+      "reason": "Supplied text now includes subsection (1)(b), identifying first-class mail, and subsection (2), adding three days to the compliance or tenancy-termination period. The complete conditional claim is supported.",
+      "edge_case": "OREGON_90:or_mail",
+      "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+      "material_ambiguity": false
+    }
+  ],
+  "prior_reviews": [
+    {
+      "cases_sha256": "c17ad9a7bbf37ceee8dc57ad27ad51aa095a7c6b1ffadb6e35d8eff3c2a235f7",
+      "contracts_sha256": "2de55d706a2e91904fa67deaf26ad4889470038119cb67828f38d4ea6de8a208",
+      "reviewer": "/root/prepared_input_review",
+      "author_labels_seen": false,
+      "model_responses_seen": false,
+      "status": "provisional independent expectations recorded before author discussion; source-context reconciliation ongoing",
+      "material_findings": [
+        {
+          "case_id": "exp026",
+          "issue": "Metalinguistic question presents a proposed meaning; selected occurrence does not itself adopt or straightforwardly use that meaning."
+        },
+        {
+          "case_id": "exp027",
+          "issue": "The candidate definition is an interrogative proposing a meaning, not a complete definition; same use/mention problem."
+        },
+        {
+          "case_id": "exp042",
+          "issue": "Choice asks for the meaning of a statutory word mentioned in an unanswered question about competing meanings; supplied context omits attribution and resolution."
+        },
+        {
+          "case_id": "exp043",
+          "issue": "Same defect as exp042 with reordered alternatives."
+        },
+        {
+          "case_id": "exp077",
+          "issue": "Recover section 90.155 context and decide whether service-agreement cancellation is compliance/tenancy termination before finalizing."
+        },
+        {
+          "case_id": "exp096",
+          "issue": "Claim specifies first-class mail but evidence only references subsection (1)(b); retrieve that operative cross-reference."
+        }
+      ],
+      "cases": [
+        {
+          "id": "exp001",
+          "expected": "YES",
+          "reason": "Expressly assigns undue hardship a meaning including nonfinancial difficulty.",
+          "edge_case": "EEOC_ACCOMMODATION:hardship",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp002",
+          "expected": "YES",
+          "reason": "Expressly defines date of receipt by arrival at the creditor.",
+          "edge_case": "CFPB_1026_10:receipt",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp003",
+          "expected": "YES",
+          "reason": "Expressly defines expedited crediting for the specified rule.",
+          "edge_case": "CFPB_1026_10:expedited",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp004",
+          "expected": "YES",
+          "reason": "Defines representative-assisted service and excludes purely automated means.",
+          "edge_case": "CFPB_1026_10:representative",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp005",
+          "expected": "NO",
+          "reason": "Permits choosing among effective accommodations without defining a term.",
+          "edge_case": "EEOC_ACCOMMODATION:choice",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp006",
+          "expected": "NO",
+          "reason": "Prescribes prompt handling rather than assigning a meaning.",
+          "edge_case": "EEOC_ACCOMMODATION:prompt",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp007",
+          "expected": "NO",
+          "reason": "Limits the accommodation duty and illustrates personal items without assigning a term a meaning.",
+          "edge_case": "EEOC_ACCOMMODATION:personal",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp008",
+          "expected": "NO",
+          "reason": "States the effect of grievance proceedings on filing limits, not a definition.",
+          "edge_case": "EEOC_CHARGE:grievance",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp009",
+          "expected": "YES",
+          "reason": "Defines jurisdictional requirements through the bounds of adjudicatory authority.",
+          "edge_case": "BOECHLER:boechler_def",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp010",
+          "expected": "YES",
+          "reason": "The Court expressly adopts stop-the-clock as the meaning of toll.",
+          "edge_case": "ARTIS:artis_def",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp011",
+          "expected": "NO",
+          "reason": "Reports competing proposed meanings and a lower court adoption, without adopting either in this passage.",
+          "edge_case": "ARTIS:artis_proposal",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp012",
+          "expected": "NO",
+          "reason": "Classifies a particular deadline and permits tolling; does not define a term.",
+          "edge_case": "BOECHLER:boechler_hold",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp013",
+          "expected": "YES",
+          "reason": "Operatively incorporates the meaning of distressed home from another statute.",
+          "edge_case": "WASHINGTON_59_18:wa_incorporation",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp014",
+          "expected": "YES",
+          "reason": "Expressly defines dwelling unit and its special rented-space sense.",
+          "edge_case": "OREGON_90:or_dwelling",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp015",
+          "expected": "NO",
+          "reason": "Imposes a prohibition on leasing condemned dwellings without defining a term.",
+          "edge_case": "WASHINGTON_59_18:wa_condemned",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp016",
+          "expected": "NO",
+          "reason": "Permits supplementary notice methods without assigning a meaning.",
+          "edge_case": "OREGON_90:or_alternative",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp017",
+          "expected": "YES",
+          "reason": "The selected expression introduces the precise calendar-day definition supplied.",
+          "edge_case": "business-precise",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp018",
+          "expected": "NO",
+          "reason": "The selected precise calendar-day sense differs from the creditor-open-for-business definition.",
+          "edge_case": "business-precise",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp019",
+          "expected": "YES",
+          "reason": "The selected creditor category includes the creditor-side service provider under the supplied definition.",
+          "edge_case": "creditor-scope",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp020",
+          "expected": "YES",
+          "reason": "The same defined creditor category is being denied to the consumer-side service; negation does not change the meaning of creditor.",
+          "edge_case": "creditor-scope",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp021",
+          "expected": "YES",
+          "reason": "Separate fee retains its defined payment-fee meaning even where the sentence excludes late fees from that category.",
+          "edge_case": "fee-scope",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp022",
+          "expected": "YES",
+          "reason": "The selected representative category remains the live-assistance sense while automated systems are excluded.",
+          "edge_case": "representative-scope",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp023",
+          "expected": "YES",
+          "reason": "The selected repeated use retains the supplied hardship meaning including nonfinancial difficulty.",
+          "edge_case": "hardship",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp024",
+          "expected": "YES",
+          "reason": "The selected accommodations are effective disability-related workplace adjustments under the supplied meaning.",
+          "edge_case": "accommodation",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp025",
+          "expected": "YES",
+          "reason": "The Court uses toll in its expressly adopted stop-the-clock sense.",
+          "edge_case": "artis-meaning",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp026",
+          "expected": "NO",
+          "reason": "Provisional: the selected interrogative presents a grace-period proposal rather than the supplied stop-the-clock reading; metalinguistic selection needs repair before scoring.",
+          "edge_case": "artis-meaning",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": "Metalinguistic question presents a proposed meaning; selected occurrence does not itself adopt or straightforwardly use that meaning."
+        },
+        {
+          "id": "exp027",
+          "expected": "YES",
+          "reason": "Provisional: the interrogative presents the same grace-period proposal as the candidate passage, but the candidate is a question rather than an assigned definition; repair before scoring.",
+          "edge_case": "artis-meaning",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": "The candidate definition is an interrogative proposing a meaning, not a complete definition; same use/mention problem."
+        },
+        {
+          "id": "exp028",
+          "expected": "YES",
+          "reason": "Jurisdictional retains the adjudicatory-authority sense in the Commissioner's rejected argument.",
+          "edge_case": "boechler-jurisdiction",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp029",
+          "expected": "YES",
+          "reason": "The dwelling unit is the residential structure covered by the supplied general definition.",
+          "edge_case": "wa-dwelling",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp030",
+          "expected": "YES",
+          "reason": "The notice-giving landlord is the owner/lessor/authorized manager identified by the supplied definition.",
+          "edge_case": "or-entry",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp031",
+          "expected": "YES",
+          "reason": "Receipt means arrival of the payment, not the later date of bookkeeping posting.",
+          "edge_case": "receipt-date",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp032",
+          "expected": "NO",
+          "reason": "The condemned residential structure is not the specially defined site rented separately from a manufactured or floating home.",
+          "edge_case": "wa-dwelling",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp033",
+          "expected": "A",
+          "reason": "The selected precise rule uses calendar days excluding Sundays and listed federal holidays.",
+          "edge_case": "business-precise",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp034",
+          "expected": "B",
+          "reason": "The precise calendar-day meaning is offered as B in this ordering.",
+          "edge_case": "business-precise",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp035",
+          "expected": "A",
+          "reason": "Creditor identifies the category including a service provider acting on the creditor's behalf.",
+          "edge_case": "creditor-scope",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp036",
+          "expected": "B",
+          "reason": "The defined creditor-side category is denied to this consumer-side service, without changing the word's sense.",
+          "edge_case": "creditor-scope",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp037",
+          "expected": "NONE",
+          "reason": "Neither adjudicatory authority nor a limitation expiry describes a payment fee.",
+          "edge_case": "fee-scope",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp038",
+          "expected": "B",
+          "reason": "Representative means a live assisting person or agent; automated means are expressly excluded.",
+          "edge_case": "representative-scope",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp039",
+          "expected": "A",
+          "reason": "The source defines hardship by significant difficulty or expense rather than a preference for cheaper accommodation.",
+          "edge_case": "hardship",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp040",
+          "expected": "B",
+          "reason": "The accommodation is a workplace adjustment rather than hotel lodging.",
+          "edge_case": "accommodation",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp041",
+          "expected": "A",
+          "reason": "The adopted toll meaning is suspension of the limitations clock.",
+          "edge_case": "artis-meaning",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp042",
+          "expected": "B",
+          "reason": "Provisional: B describes the interrogative's proposed grace-period reading; the quoted statutory word is under interpretation, so the selected-use object needs repair.",
+          "edge_case": "artis-meaning",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": "Choice asks for the meaning of a statutory word mentioned in an unanswered question about competing meanings; supplied context omits attribution and resolution."
+        },
+        {
+          "id": "exp043",
+          "expected": "A",
+          "reason": "Provisional: A describes that proposed reading in reversed order; same metalinguistic selection defect as exp042.",
+          "edge_case": "artis-meaning",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": "Same defect as exp042 with reordered alternatives."
+        },
+        {
+          "id": "exp044",
+          "expected": "B",
+          "reason": "The jurisdictional category means a limit on adjudicatory authority even though the Court rejects applying it to this deadline.",
+          "edge_case": "boechler-jurisdiction",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp045",
+          "expected": "NONE",
+          "reason": "Neither offered abstract litigation meaning fits a residential dwelling unit.",
+          "edge_case": "wa-dwelling",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp046",
+          "expected": "B",
+          "reason": "Landlord denotes the owner/lessor or authorized manager, not the resident tenant.",
+          "edge_case": "or-entry",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp047",
+          "expected": "A",
+          "reason": "Receipt denotes payment reaching the creditor rather than final check clearance.",
+          "edge_case": "receipt-date",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp048",
+          "expected": "B",
+          "reason": "The phrase identifies a residential structure, not only a site underneath a separately owned home.",
+          "edge_case": "wa-dwelling",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp049",
+          "expected": "YES",
+          "reason": "Undue hardship expressly excuses the accommodation obligation under stated circumstances.",
+          "edge_case": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:hardship_exception",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp050",
+          "expected": "YES",
+          "reason": "The candidate narrows the accommodation obligation by excluding personal-use items except job-specific needs.",
+          "edge_case": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:personal",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp051",
+          "expected": "NO",
+          "reason": "Choosing an effective accommodation is a way to satisfy the same duty, not an excuse from it.",
+          "edge_case": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:choice",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp052",
+          "expected": "NO",
+          "reason": "Prompt response adds procedural responsibility without excusing provision of accommodation.",
+          "edge_case": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:prompt",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp053",
+          "expected": "NO",
+          "reason": "The candidate defines receipt timing for website payments while retaining the same credit-as-of-receipt duty.",
+          "edge_case": "CFPB_1026_10:creditdate|CFPB_1026_10:webpay",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp054",
+          "expected": "NO",
+          "reason": "Preserving records while a charge remains unresolved adds or extends retention responsibility rather than excusing it.",
+          "edge_case": "EEOC_ACCOMMODATION:records_base|EEOC_ACCOMMODATION:records_extension",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp055",
+          "expected": "NO",
+          "reason": "Direct court access under the EPA does not excuse the distinct charge prerequisite for a Title VII claim.",
+          "edge_case": "EEOC_CHARGE:epa|EEOC_CHARGE:titlevii",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp056",
+          "expected": "YES",
+          "reason": "The 300-day branch narrows the general obligation to file within 180 days under the stated agency-law condition.",
+          "edge_case": "EEOC_CHARGE:charge180|EEOC_CHARGE:charge300",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp057",
+          "expected": "YES",
+          "reason": "Equitable tolling conditionally relaxes the 30-day filing requirement; it is not a finding that Boechler actually qualifies.",
+          "edge_case": "BOECHLER:boechler_hold|BOECHLER:boechler_req",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp058",
+          "expected": "NO",
+          "reason": "A general jurisdictional definition does not excuse the selected filing duty.",
+          "edge_case": "BOECHLER:boechler_def|BOECHLER:boechler_req",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp059",
+          "expected": "YES",
+          "reason": "The Court expressly rejects lack of equitable-tolling power, thereby recognizing conditional relief from the filing limit.",
+          "edge_case": "BOECHLER:boechler_intro|BOECHLER:boechler_req",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp060",
+          "expected": "NO",
+          "reason": "Reporting competing interpretations creates no operative exception to the quoted statute.",
+          "edge_case": "ARTIS:artis_law|ARTIS:artis_proposal",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp061",
+          "expected": "YES",
+          "reason": "The natural-disaster condition expressly excuses the selected relocation-payment duty.",
+          "edge_case": "WASHINGTON_59_18:wa_disaster|WASHINGTON_59_18:wa_relocation",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp062",
+          "expected": "YES",
+          "reason": "Illegal conduct without landlord knowledge expressly excuses the selected relocation-payment duty.",
+          "edge_case": "WASHINGTON_59_18:wa_illegal|WASHINGTON_59_18:wa_relocation",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp063",
+          "expected": "NO",
+          "reason": "Damages for violating the leasing prohibition are a remedy, not permission to violate it.",
+          "edge_case": "WASHINGTON_59_18:wa_condemned|WASHINGTON_59_18:wa_damages",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp064",
+          "expected": "YES",
+          "reason": "Emergency entry expressly excuses the ordinary advance notice, consent and reasonable-time requirements.",
+          "edge_case": "OREGON_90:or_emergency|OREGON_90:or_entry",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp065",
+          "expected": "YES",
+          "reason": "The candidate expressly substitutes 300 days for the general 180-day filing limit under the stated condition.",
+          "edge_case": "EEOC_CHARGE:charge180|EEOC_CHARGE:charge300",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp066",
+          "expected": "YES",
+          "reason": "The weekend/holiday rule adjusts the due date to the next business day.",
+          "edge_case": "EEOC_CHARGE:charge180|EEOC_CHARGE:holiday",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp067",
+          "expected": "NO",
+          "reason": "The candidate expressly denies the asserted extension for other dispute-resolution proceedings.",
+          "edge_case": "EEOC_CHARGE:charge180|EEOC_CHARGE:grievance",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp068",
+          "expected": "YES",
+          "reason": "Ongoing harassment uses the last incident as the filing trigger rather than each discrete event separately.",
+          "edge_case": "EEOC_CHARGE:events|EEOC_CHARGE:harassment",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp069",
+          "expected": "YES",
+          "reason": "Willful discrimination changes the stated EPA period from two years to three.",
+          "edge_case": "EEOC_CHARGE:epa_base|EEOC_CHARGE:epa_extension",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp070",
+          "expected": "NO",
+          "reason": "The candidate expressly says the Title VII charge does not extend the EPA lawsuit deadline.",
+          "edge_case": "EEOC_CHARGE:epa_base|EEOC_CHARGE:titlevii",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp071",
+          "expected": "YES",
+          "reason": "A filed charge changes the retention endpoint to resolution rather than expiration of the ordinary year.",
+          "edge_case": "EEOC_ACCOMMODATION:records_base|EEOC_ACCOMMODATION:records_extension",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp072",
+          "expected": "YES",
+          "reason": "The website-payment rule changes the legally assigned receipt date for scheduled or after-cutoff payments, which changes the effective crediting date.",
+          "edge_case": "CFPB_1026_10:creditdate|CFPB_1026_10:webpay",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp073",
+          "expected": "YES",
+          "reason": "The holding makes the selected filing deadline subject to conditional equitable tolling without granting it on these facts.",
+          "edge_case": "BOECHLER:boechler_hold|BOECHLER:boechler_req",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp074",
+          "expected": "NO",
+          "reason": "The abstract jurisdictional definition does not modify the selected 30-day filing deadline.",
+          "edge_case": "BOECHLER:boechler_def|BOECHLER:boechler_req",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp075",
+          "expected": "NO",
+          "reason": "Forfeiture of an objection is not a modification of the distinct Tax Court filing deadline.",
+          "edge_case": "BOECHLER:boechler_req|FORT_BEND:fort_objection",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp076",
+          "expected": "YES",
+          "reason": "The quoted federal tolling rule suspends the state limitations period when its federal-pendency conditions are met.",
+          "edge_case": "ARTIS:artis_law|ARTIS:artis_three_year",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp077",
+          "expected": "NO",
+          "reason": "Provisional: ending electronic-notice service is not compliance or termination of tenancy; the selected generic mail clause does not establish an extension for this distinct notice.",
+          "edge_case": "OREGON_90:or_email_cancel|OREGON_90:or_mail",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": "Recover section 90.155 context and decide whether service-agreement cancellation is compliance/tenancy termination before finalizing."
+        },
+        {
+          "id": "exp078",
+          "expected": "YES",
+          "reason": "Emergency entry removes the ordinary advance-notice timing and creates a conditional post-entry notice rule for absence; this changes the temporal notice regime.",
+          "edge_case": "OREGON_90:or_emergency|OREGON_90:or_entry",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp079",
+          "expected": "NO",
+          "reason": "A government's advance after landlord nonpayment is a remedy; the seven-day landlord deadline remains.",
+          "edge_case": "WASHINGTON_59_18:wa_advance|WASHINGTON_59_18:wa_seven",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp080",
+          "expected": "NO",
+          "reason": "The damages rule for unlawful rental does not alter the separate relocation-payment deadline.",
+          "edge_case": "WASHINGTON_59_18:wa_damages|WASHINGTON_59_18:wa_seven",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp081",
+          "expected": "NO",
+          "reason": "The text expressly includes nonfinancial hardship, contradicting the claim of financial exclusivity.",
+          "edge_case": "EEOC_ACCOMMODATION:hardship",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp082",
+          "expected": "YES",
+          "reason": "The proposition preserves the express effectiveness condition.",
+          "edge_case": "EEOC_ACCOMMODATION:choice",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp083",
+          "expected": "NO",
+          "reason": "The text expressly preserves required job-specific items, defeating never.",
+          "edge_case": "EEOC_ACCOMMODATION:personal",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp084",
+          "expected": "YES",
+          "reason": "The proposition matches the first express condition barring documentation demands.",
+          "edge_case": "EEOC_ACCOMMODATION:documentation",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp085",
+          "expected": "NO",
+          "reason": "The example expressly excludes the consumer-side service from the creditor category.",
+          "edge_case": "CFPB_1026_10:provider_no",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp086",
+          "expected": "YES",
+          "reason": "The example expressly treats the observed Friday as a business day under the precise rule.",
+          "edge_case": "CFPB_1026_2:business",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp087",
+          "expected": "NO",
+          "reason": "The passage expressly says local law alone does not extend the age-discrimination deadline.",
+          "edge_case": "EEOC_CHARGE:charge",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp088",
+          "expected": "YES",
+          "reason": "The passage expressly permits direct court filing without an EEOC charge under the EPA.",
+          "edge_case": "EEOC_CHARGE:epa",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp089",
+          "expected": "NO",
+          "reason": "The Court expressly leaves Boechler's entitlement for remand.",
+          "edge_case": "BOECHLER:boechler_hold",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp090",
+          "expected": "YES",
+          "reason": "The claim accurately attributes the proposition to the Commissioner's argument rather than the Court's holding.",
+          "edge_case": "BOECHLER:boechler_intro",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp091",
+          "expected": "NO",
+          "reason": "The passage attributes adoption to the D.C. Court of Appeals, not the Supreme Court.",
+          "edge_case": "ARTIS:artis_proposal",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp092",
+          "expected": "YES",
+          "reason": "The proposition matches the Court's express stop-the-clock holding.",
+          "edge_case": "ARTIS:artis_def",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp093",
+          "expected": "NO",
+          "reason": "The claim omits notice and knowledge predicates and ignores the stated exceptions.",
+          "edge_case": "WASHINGTON_59_18:wa_relocation",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp094",
+          "expected": "YES",
+          "reason": "The candidate expressly excuses payment under the specified natural-disaster condition.",
+          "edge_case": "WASHINGTON_59_18:wa_disaster",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp095",
+          "expected": "NO",
+          "reason": "The passage expressly permits emergency entry without advance notice, with conditional later notice.",
+          "edge_case": "OREGON_90:or_emergency",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp096",
+          "expected": "YES",
+          "reason": "Provisional: the effect is stated, but first-class service and the subsection identity require the omitted subsection (1)(b) to be supplied.",
+          "edge_case": "OREGON_90:or_mail",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": "Claim specifies first-class mail but evidence only references subsection (1)(b); retrieve that operative cross-reference."
+        }
+      ]
+    },
+    {
+      "cases_sha256": "16eb5c0437e620460df20c4f9f1c2cf14f18ef2a0d9ef52587ac3586ca821057",
+      "contracts_sha256": "93b2ad6fbb6b4ba2438960c8f15527ad2906374f8bc6eee6f51ba6577d7cd86f",
+      "reviewer": "/root/prepared_input_review",
+      "author_labels_seen": false,
+      "model_responses_seen": false,
+      "status": "Complete independent source review of all 96 development cases under proposed v2; no author labels or model responses read.",
+      "material_findings": [
+        {
+          "case_ids": [
+            "exp026",
+            "exp027",
+            "exp042",
+            "exp043"
+          ],
+          "status": "resolved_before_dispatch",
+          "issue": "Original quoted question did not establish an actual use of the disputed meaning; candidate definition was interrogative.",
+          "resolution": "Corrected selections include the full Artis majority paragraph characterizing Hardin historical usage as a grace period and expressly contrasting it with stopping the clock. The selected as “tolling” occurs once. This supports the historical meaning without asserting it governs section 1367(d)."
+        },
+        {
+          "case_ids": [
+            "exp077"
+          ],
+          "status": "resolved_before_dispatch",
+          "issue": "Relationship between electronic-service cancellation notice and statutory mail extension required governing context.",
+          "resolution": "Complete section 90.155 establishes that cancellation of an electronic-service arrangement is distinct from compliance or termination of tenancy. Candidate extension does not change this selected timing rule: NO."
+        },
+        {
+          "case_ids": [
+            "exp096"
+          ],
+          "status": "resolved_before_dispatch",
+          "issue": "Original supplied evidence omitted subsection (1)(b), which established first-class mail.",
+          "resolution": "Corrected text includes the lead-in and subsection (1)(b) through (2), directly supporting the full claim: YES."
+        }
+      ],
+      "cases": [
+        {
+          "id": "exp001",
+          "expected": "YES",
+          "reason": "Expressly assigns undue hardship a meaning including nonfinancial difficulty.",
+          "edge_case": "EEOC_ACCOMMODATION:hardship",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp002",
+          "expected": "YES",
+          "reason": "Expressly defines date of receipt by arrival at the creditor.",
+          "edge_case": "CFPB_1026_10:receipt",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp003",
+          "expected": "YES",
+          "reason": "Expressly defines expedited crediting for the specified rule.",
+          "edge_case": "CFPB_1026_10:expedited",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp004",
+          "expected": "YES",
+          "reason": "Defines representative-assisted service and excludes purely automated means.",
+          "edge_case": "CFPB_1026_10:representative",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp005",
+          "expected": "NO",
+          "reason": "Permits choosing among effective accommodations without defining a term.",
+          "edge_case": "EEOC_ACCOMMODATION:choice",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp006",
+          "expected": "NO",
+          "reason": "Prescribes prompt handling rather than assigning a meaning.",
+          "edge_case": "EEOC_ACCOMMODATION:prompt",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp007",
+          "expected": "NO",
+          "reason": "Limits the accommodation duty and illustrates personal items without assigning a term a meaning.",
+          "edge_case": "EEOC_ACCOMMODATION:personal",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp008",
+          "expected": "NO",
+          "reason": "States the effect of grievance proceedings on filing limits, not a definition.",
+          "edge_case": "EEOC_CHARGE:grievance",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp009",
+          "expected": "YES",
+          "reason": "Defines jurisdictional requirements through the bounds of adjudicatory authority.",
+          "edge_case": "BOECHLER:boechler_def",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp010",
+          "expected": "YES",
+          "reason": "The Court expressly adopts stop-the-clock as the meaning of toll.",
+          "edge_case": "ARTIS:artis_def",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp011",
+          "expected": "NO",
+          "reason": "Reports competing proposed meanings and a lower court adoption, without adopting either in this passage.",
+          "edge_case": "ARTIS:artis_proposal",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp012",
+          "expected": "NO",
+          "reason": "Classifies a particular deadline and permits tolling; does not define a term.",
+          "edge_case": "BOECHLER:boechler_hold",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp013",
+          "expected": "YES",
+          "reason": "Operatively incorporates the meaning of distressed home from another statute.",
+          "edge_case": "WASHINGTON_59_18:wa_incorporation",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp014",
+          "expected": "YES",
+          "reason": "Expressly defines dwelling unit and its special rented-space sense.",
+          "edge_case": "OREGON_90:or_dwelling",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp015",
+          "expected": "NO",
+          "reason": "Imposes a prohibition on leasing condemned dwellings without defining a term.",
+          "edge_case": "WASHINGTON_59_18:wa_condemned",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp016",
+          "expected": "NO",
+          "reason": "Permits supplementary notice methods without assigning a meaning.",
+          "edge_case": "OREGON_90:or_alternative",
+          "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp017",
+          "expected": "YES",
+          "reason": "The selected expression introduces the precise calendar-day definition supplied.",
+          "edge_case": "business-precise",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp018",
+          "expected": "NO",
+          "reason": "The selected precise calendar-day sense differs from the creditor-open-for-business definition.",
+          "edge_case": "business-precise",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp019",
+          "expected": "YES",
+          "reason": "The selected creditor category includes the creditor-side service provider under the supplied definition.",
+          "edge_case": "creditor-scope",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp020",
+          "expected": "YES",
+          "reason": "The same defined creditor category is being denied to the consumer-side service; negation does not change the meaning of creditor.",
+          "edge_case": "creditor-scope",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp021",
+          "expected": "YES",
+          "reason": "Separate fee retains its defined payment-fee meaning even where the sentence excludes late fees from that category.",
+          "edge_case": "fee-scope",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp022",
+          "expected": "YES",
+          "reason": "The selected representative category remains the live-assistance sense while automated systems are excluded.",
+          "edge_case": "representative-scope",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp023",
+          "expected": "YES",
+          "reason": "The selected repeated use retains the supplied hardship meaning including nonfinancial difficulty.",
+          "edge_case": "hardship",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp024",
+          "expected": "YES",
+          "reason": "The selected accommodations are effective disability-related workplace adjustments under the supplied meaning.",
+          "edge_case": "accommodation",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp025",
+          "expected": "YES",
+          "reason": "The Court uses toll in its expressly adopted stop-the-clock sense.",
+          "edge_case": "artis-meaning",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp026",
+          "expected": "NO",
+          "reason": "The selected historical Hardin use characterizes a one-year grace period and expressly contrasts it with stopping the clock; the supplied current section 1367(d) stop-clock definition does not fit that occurrence.",
+          "edge_case": "ARTIS:Hardin-historical-grace-usage",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp027",
+          "expected": "YES",
+          "reason": "The declarative characterization and complete paragraph assign the selected historical tolling occurrence a one-year grace-period sense, matching the candidate definition.",
+          "edge_case": "ARTIS:Hardin-historical-grace-usage",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp028",
+          "expected": "YES",
+          "reason": "Jurisdictional retains the adjudicatory-authority sense in the Commissioner's rejected argument.",
+          "edge_case": "boechler-jurisdiction",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp029",
+          "expected": "YES",
+          "reason": "The dwelling unit is the residential structure covered by the supplied general definition.",
+          "edge_case": "wa-dwelling",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp030",
+          "expected": "YES",
+          "reason": "The notice-giving landlord is the owner/lessor/authorized manager identified by the supplied definition.",
+          "edge_case": "or-entry",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp031",
+          "expected": "YES",
+          "reason": "Receipt means arrival of the payment, not the later date of bookkeeping posting.",
+          "edge_case": "receipt-date",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp032",
+          "expected": "NO",
+          "reason": "The condemned residential structure is not the specially defined site rented separately from a manufactured or floating home.",
+          "edge_case": "wa-dwelling",
+          "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp033",
+          "expected": "A",
+          "reason": "The selected precise rule uses calendar days excluding Sundays and listed federal holidays.",
+          "edge_case": "business-precise",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp034",
+          "expected": "B",
+          "reason": "The precise calendar-day meaning is offered as B in this ordering.",
+          "edge_case": "business-precise",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp035",
+          "expected": "A",
+          "reason": "Creditor identifies the category including a service provider acting on the creditor's behalf.",
+          "edge_case": "creditor-scope",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp036",
+          "expected": "B",
+          "reason": "The defined creditor-side category is denied to this consumer-side service, without changing the word's sense.",
+          "edge_case": "creditor-scope",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp037",
+          "expected": "NONE",
+          "reason": "Neither adjudicatory authority nor a limitation expiry describes a payment fee.",
+          "edge_case": "fee-scope",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp038",
+          "expected": "B",
+          "reason": "Representative means a live assisting person or agent; automated means are expressly excluded.",
+          "edge_case": "representative-scope",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp039",
+          "expected": "A",
+          "reason": "The source defines hardship by significant difficulty or expense rather than a preference for cheaper accommodation.",
+          "edge_case": "hardship",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp040",
+          "expected": "B",
+          "reason": "The accommodation is a workplace adjustment rather than hotel lodging.",
+          "edge_case": "accommodation",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp041",
+          "expected": "A",
+          "reason": "The adopted toll meaning is suspension of the limitations clock.",
+          "edge_case": "artis-meaning",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp042",
+          "expected": "B",
+          "reason": "B fits the expressly identified historical grace-period use; the paragraph contrasts that atypical use with clock suspension. This is not the current section 1367(d) holding.",
+          "edge_case": "ARTIS:Hardin-historical-grace-usage",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp043",
+          "expected": "A",
+          "reason": "A fits the expressly identified historical grace-period use; reordered alternatives do not change the meaning. The paragraph expressly contrasts it with clock suspension.",
+          "edge_case": "ARTIS:Hardin-historical-grace-usage",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp044",
+          "expected": "B",
+          "reason": "The jurisdictional category means a limit on adjudicatory authority even though the Court rejects applying it to this deadline.",
+          "edge_case": "boechler-jurisdiction",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp045",
+          "expected": "NONE",
+          "reason": "Neither offered abstract litigation meaning fits a residential dwelling unit.",
+          "edge_case": "wa-dwelling",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp046",
+          "expected": "B",
+          "reason": "Landlord denotes the owner/lessor or authorized manager, not the resident tenant.",
+          "edge_case": "or-entry",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp047",
+          "expected": "A",
+          "reason": "Receipt denotes payment reaching the creditor rather than final check clearance.",
+          "edge_case": "receipt-date",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp048",
+          "expected": "B",
+          "reason": "The phrase identifies a residential structure, not only a site underneath a separately owned home.",
+          "edge_case": "wa-dwelling",
+          "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp049",
+          "expected": "YES",
+          "reason": "Undue hardship expressly excuses the accommodation obligation under stated circumstances.",
+          "edge_case": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:hardship_exception",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp050",
+          "expected": "YES",
+          "reason": "The candidate narrows the accommodation obligation by excluding personal-use items except job-specific needs.",
+          "edge_case": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:personal",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp051",
+          "expected": "NO",
+          "reason": "Choosing an effective accommodation is a way to satisfy the same duty, not an excuse from it.",
+          "edge_case": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:choice",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp052",
+          "expected": "NO",
+          "reason": "Prompt response adds procedural responsibility without excusing provision of accommodation.",
+          "edge_case": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:prompt",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp053",
+          "expected": "NO",
+          "reason": "The candidate defines receipt timing for website payments while retaining the same credit-as-of-receipt duty.",
+          "edge_case": "CFPB_1026_10:creditdate|CFPB_1026_10:webpay",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp054",
+          "expected": "NO",
+          "reason": "Preserving records while a charge remains unresolved adds or extends retention responsibility rather than excusing it.",
+          "edge_case": "EEOC_ACCOMMODATION:records_base|EEOC_ACCOMMODATION:records_extension",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp055",
+          "expected": "NO",
+          "reason": "Direct court access under the EPA does not excuse the distinct charge prerequisite for a Title VII claim.",
+          "edge_case": "EEOC_CHARGE:epa|EEOC_CHARGE:titlevii",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp056",
+          "expected": "YES",
+          "reason": "The 300-day branch narrows the general obligation to file within 180 days under the stated agency-law condition.",
+          "edge_case": "EEOC_CHARGE:charge180|EEOC_CHARGE:charge300",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp057",
+          "expected": "YES",
+          "reason": "Equitable tolling conditionally relaxes the 30-day filing requirement; it is not a finding that Boechler actually qualifies.",
+          "edge_case": "BOECHLER:boechler_hold|BOECHLER:boechler_req",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp058",
+          "expected": "NO",
+          "reason": "A general jurisdictional definition does not excuse the selected filing duty.",
+          "edge_case": "BOECHLER:boechler_def|BOECHLER:boechler_req",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp059",
+          "expected": "YES",
+          "reason": "The Court expressly rejects lack of equitable-tolling power, thereby recognizing conditional relief from the filing limit.",
+          "edge_case": "BOECHLER:boechler_intro|BOECHLER:boechler_req",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp060",
+          "expected": "NO",
+          "reason": "Reporting competing interpretations creates no operative exception to the quoted statute.",
+          "edge_case": "ARTIS:artis_law|ARTIS:artis_proposal",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp061",
+          "expected": "YES",
+          "reason": "The natural-disaster condition expressly excuses the selected relocation-payment duty.",
+          "edge_case": "WASHINGTON_59_18:wa_disaster|WASHINGTON_59_18:wa_relocation",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp062",
+          "expected": "YES",
+          "reason": "Illegal conduct without landlord knowledge expressly excuses the selected relocation-payment duty.",
+          "edge_case": "WASHINGTON_59_18:wa_illegal|WASHINGTON_59_18:wa_relocation",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp063",
+          "expected": "NO",
+          "reason": "Damages for violating the leasing prohibition are a remedy, not permission to violate it.",
+          "edge_case": "WASHINGTON_59_18:wa_condemned|WASHINGTON_59_18:wa_damages",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp064",
+          "expected": "YES",
+          "reason": "Emergency entry expressly excuses the ordinary advance notice, consent and reasonable-time requirements.",
+          "edge_case": "OREGON_90:or_emergency|OREGON_90:or_entry",
+          "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp065",
+          "expected": "YES",
+          "reason": "The candidate expressly substitutes 300 days for the general 180-day filing limit under the stated condition.",
+          "edge_case": "EEOC_CHARGE:charge180|EEOC_CHARGE:charge300",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp066",
+          "expected": "YES",
+          "reason": "The weekend/holiday rule adjusts the due date to the next business day.",
+          "edge_case": "EEOC_CHARGE:charge180|EEOC_CHARGE:holiday",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp067",
+          "expected": "NO",
+          "reason": "The candidate expressly denies the asserted extension for other dispute-resolution proceedings.",
+          "edge_case": "EEOC_CHARGE:charge180|EEOC_CHARGE:grievance",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp068",
+          "expected": "YES",
+          "reason": "Ongoing harassment uses the last incident as the filing trigger rather than each discrete event separately.",
+          "edge_case": "EEOC_CHARGE:events|EEOC_CHARGE:harassment",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp069",
+          "expected": "YES",
+          "reason": "Willful discrimination changes the stated EPA period from two years to three.",
+          "edge_case": "EEOC_CHARGE:epa_base|EEOC_CHARGE:epa_extension",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp070",
+          "expected": "NO",
+          "reason": "The candidate expressly says the Title VII charge does not extend the EPA lawsuit deadline.",
+          "edge_case": "EEOC_CHARGE:epa_base|EEOC_CHARGE:titlevii",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp071",
+          "expected": "YES",
+          "reason": "A filed charge changes the retention endpoint to resolution rather than expiration of the ordinary year.",
+          "edge_case": "EEOC_ACCOMMODATION:records_base|EEOC_ACCOMMODATION:records_extension",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp072",
+          "expected": "YES",
+          "reason": "The after-cutoff sentence legally deems immediate authorization to occur next business day, altering receipt-trigger computation. This is a stated deeming rule, not merely a later actual occurrence of the unchanged trigger; YES under v2.",
+          "edge_case": "CFPB_1026_10:creditdate|CFPB_1026_10:webpay",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp073",
+          "expected": "YES",
+          "reason": "The holding makes the selected filing deadline subject to conditional equitable tolling without granting it on these facts.",
+          "edge_case": "BOECHLER:boechler_hold|BOECHLER:boechler_req",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp074",
+          "expected": "NO",
+          "reason": "The abstract jurisdictional definition does not modify the selected 30-day filing deadline.",
+          "edge_case": "BOECHLER:boechler_def|BOECHLER:boechler_req",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp075",
+          "expected": "NO",
+          "reason": "Forfeiture of an objection is not a modification of the distinct Tax Court filing deadline.",
+          "edge_case": "BOECHLER:boechler_req|FORT_BEND:fort_objection",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp076",
+          "expected": "YES",
+          "reason": "The quoted federal tolling rule suspends the state limitations period when its federal-pendency conditions are met.",
+          "edge_case": "ARTIS:artis_law|ARTIS:artis_three_year",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp077",
+          "expected": "NO",
+          "reason": "Complete section 90.155 separates cancellation or address change of an electronic-service arrangement from compliance or termination of tenancy. The mail extension covers the latter periods, not this selected three-day electronic-service notice.",
+          "edge_case": "OREGON_90:or_email_cancel|OREGON_90:or_mail",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp078",
+          "expected": "YES",
+          "reason": "Emergency entry removes the ordinary advance-notice timing and creates a conditional post-entry notice rule for absence; this changes the temporal notice regime.",
+          "edge_case": "OREGON_90:or_emergency|OREGON_90:or_entry",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp079",
+          "expected": "NO",
+          "reason": "A government's advance after landlord nonpayment is a remedy; the seven-day landlord deadline remains.",
+          "edge_case": "WASHINGTON_59_18:wa_advance|WASHINGTON_59_18:wa_seven",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp080",
+          "expected": "NO",
+          "reason": "The damages rule for unlawful rental does not alter the separate relocation-payment deadline.",
+          "edge_case": "WASHINGTON_59_18:wa_damages|WASHINGTON_59_18:wa_seven",
+          "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp081",
+          "expected": "NO",
+          "reason": "The text expressly includes nonfinancial hardship, contradicting the claim of financial exclusivity.",
+          "edge_case": "EEOC_ACCOMMODATION:hardship",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp082",
+          "expected": "YES",
+          "reason": "The proposition preserves the express effectiveness condition.",
+          "edge_case": "EEOC_ACCOMMODATION:choice",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp083",
+          "expected": "NO",
+          "reason": "The text expressly preserves required job-specific items, defeating never.",
+          "edge_case": "EEOC_ACCOMMODATION:personal",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp084",
+          "expected": "YES",
+          "reason": "The proposition matches the first express condition barring documentation demands.",
+          "edge_case": "EEOC_ACCOMMODATION:documentation",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp085",
+          "expected": "NO",
+          "reason": "The example expressly excludes the consumer-side service from the creditor category.",
+          "edge_case": "CFPB_1026_10:provider_no",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp086",
+          "expected": "YES",
+          "reason": "The example expressly treats the observed Friday as a business day under the precise rule.",
+          "edge_case": "CFPB_1026_2:business",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp087",
+          "expected": "NO",
+          "reason": "The passage expressly says local law alone does not extend the age-discrimination deadline.",
+          "edge_case": "EEOC_CHARGE:charge",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp088",
+          "expected": "YES",
+          "reason": "The passage expressly permits direct court filing without an EEOC charge under the EPA.",
+          "edge_case": "EEOC_CHARGE:epa",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp089",
+          "expected": "NO",
+          "reason": "The Court expressly leaves Boechler's entitlement for remand.",
+          "edge_case": "BOECHLER:boechler_hold",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp090",
+          "expected": "YES",
+          "reason": "The claim accurately attributes the proposition to the Commissioner's argument rather than the Court's holding.",
+          "edge_case": "BOECHLER:boechler_intro",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp091",
+          "expected": "NO",
+          "reason": "The passage attributes adoption to the D.C. Court of Appeals, not the Supreme Court.",
+          "edge_case": "ARTIS:artis_proposal",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp092",
+          "expected": "YES",
+          "reason": "The proposition matches the Court's express stop-the-clock holding.",
+          "edge_case": "ARTIS:artis_def",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp093",
+          "expected": "NO",
+          "reason": "The claim omits notice and knowledge predicates and ignores the stated exceptions.",
+          "edge_case": "WASHINGTON_59_18:wa_relocation",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp094",
+          "expected": "YES",
+          "reason": "The candidate expressly excuses payment under the specified natural-disaster condition.",
+          "edge_case": "WASHINGTON_59_18:wa_disaster",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp095",
+          "expected": "NO",
+          "reason": "The passage expressly permits emergency entry without advance notice, with conditional later notice.",
+          "edge_case": "OREGON_90:or_emergency",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        },
+        {
+          "id": "exp096",
+          "expected": "YES",
+          "reason": "Supplied text now includes subsection (1)(b), identifying first-class mail, and subsection (2), adding three days to the compliance or tenancy-termination period. The complete conditional claim is supported.",
+          "edge_case": "OREGON_90:or_mail",
+          "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+          "material_ambiguity": false
+        }
+      ],
+      "prior_reviews": [
+        {
+          "cases_sha256": "c17ad9a7bbf37ceee8dc57ad27ad51aa095a7c6b1ffadb6e35d8eff3c2a235f7",
+          "contracts_sha256": "2de55d706a2e91904fa67deaf26ad4889470038119cb67828f38d4ea6de8a208",
+          "reviewer": "/root/prepared_input_review",
+          "author_labels_seen": false,
+          "model_responses_seen": false,
+          "status": "provisional independent expectations recorded before author discussion; source-context reconciliation ongoing",
+          "material_findings": [
+            {
+              "case_id": "exp026",
+              "issue": "Metalinguistic question presents a proposed meaning; selected occurrence does not itself adopt or straightforwardly use that meaning."
+            },
+            {
+              "case_id": "exp027",
+              "issue": "The candidate definition is an interrogative proposing a meaning, not a complete definition; same use/mention problem."
+            },
+            {
+              "case_id": "exp042",
+              "issue": "Choice asks for the meaning of a statutory word mentioned in an unanswered question about competing meanings; supplied context omits attribution and resolution."
+            },
+            {
+              "case_id": "exp043",
+              "issue": "Same defect as exp042 with reordered alternatives."
+            },
+            {
+              "case_id": "exp077",
+              "issue": "Recover section 90.155 context and decide whether service-agreement cancellation is compliance/tenancy termination before finalizing."
+            },
+            {
+              "case_id": "exp096",
+              "issue": "Claim specifies first-class mail but evidence only references subsection (1)(b); retrieve that operative cross-reference."
+            }
+          ],
+          "cases": [
+            {
+              "id": "exp001",
+              "expected": "YES",
+              "reason": "Expressly assigns undue hardship a meaning including nonfinancial difficulty.",
+              "edge_case": "EEOC_ACCOMMODATION:hardship",
+              "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp002",
+              "expected": "YES",
+              "reason": "Expressly defines date of receipt by arrival at the creditor.",
+              "edge_case": "CFPB_1026_10:receipt",
+              "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp003",
+              "expected": "YES",
+              "reason": "Expressly defines expedited crediting for the specified rule.",
+              "edge_case": "CFPB_1026_10:expedited",
+              "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp004",
+              "expected": "YES",
+              "reason": "Defines representative-assisted service and excludes purely automated means.",
+              "edge_case": "CFPB_1026_10:representative",
+              "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp005",
+              "expected": "NO",
+              "reason": "Permits choosing among effective accommodations without defining a term.",
+              "edge_case": "EEOC_ACCOMMODATION:choice",
+              "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp006",
+              "expected": "NO",
+              "reason": "Prescribes prompt handling rather than assigning a meaning.",
+              "edge_case": "EEOC_ACCOMMODATION:prompt",
+              "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp007",
+              "expected": "NO",
+              "reason": "Limits the accommodation duty and illustrates personal items without assigning a term a meaning.",
+              "edge_case": "EEOC_ACCOMMODATION:personal",
+              "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp008",
+              "expected": "NO",
+              "reason": "States the effect of grievance proceedings on filing limits, not a definition.",
+              "edge_case": "EEOC_CHARGE:grievance",
+              "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp009",
+              "expected": "YES",
+              "reason": "Defines jurisdictional requirements through the bounds of adjudicatory authority.",
+              "edge_case": "BOECHLER:boechler_def",
+              "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp010",
+              "expected": "YES",
+              "reason": "The Court expressly adopts stop-the-clock as the meaning of toll.",
+              "edge_case": "ARTIS:artis_def",
+              "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp011",
+              "expected": "NO",
+              "reason": "Reports competing proposed meanings and a lower court adoption, without adopting either in this passage.",
+              "edge_case": "ARTIS:artis_proposal",
+              "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp012",
+              "expected": "NO",
+              "reason": "Classifies a particular deadline and permits tolling; does not define a term.",
+              "edge_case": "BOECHLER:boechler_hold",
+              "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp013",
+              "expected": "YES",
+              "reason": "Operatively incorporates the meaning of distressed home from another statute.",
+              "edge_case": "WASHINGTON_59_18:wa_incorporation",
+              "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp014",
+              "expected": "YES",
+              "reason": "Expressly defines dwelling unit and its special rented-space sense.",
+              "edge_case": "OREGON_90:or_dwelling",
+              "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp015",
+              "expected": "NO",
+              "reason": "Imposes a prohibition on leasing condemned dwellings without defining a term.",
+              "edge_case": "WASHINGTON_59_18:wa_condemned",
+              "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp016",
+              "expected": "NO",
+              "reason": "Permits supplementary notice methods without assigning a meaning.",
+              "edge_case": "OREGON_90:or_alternative",
+              "downstream_failure": "An incorrect answer adds a nonexistent definition or misses a real definition needing extraction.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp017",
+              "expected": "YES",
+              "reason": "The selected expression introduces the precise calendar-day definition supplied.",
+              "edge_case": "business-precise",
+              "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp018",
+              "expected": "NO",
+              "reason": "The selected precise calendar-day sense differs from the creditor-open-for-business definition.",
+              "edge_case": "business-precise",
+              "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp019",
+              "expected": "YES",
+              "reason": "The selected creditor category includes the creditor-side service provider under the supplied definition.",
+              "edge_case": "creditor-scope",
+              "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp020",
+              "expected": "YES",
+              "reason": "The same defined creditor category is being denied to the consumer-side service; negation does not change the meaning of creditor.",
+              "edge_case": "creditor-scope",
+              "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp021",
+              "expected": "YES",
+              "reason": "Separate fee retains its defined payment-fee meaning even where the sentence excludes late fees from that category.",
+              "edge_case": "fee-scope",
+              "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp022",
+              "expected": "YES",
+              "reason": "The selected representative category remains the live-assistance sense while automated systems are excluded.",
+              "edge_case": "representative-scope",
+              "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp023",
+              "expected": "YES",
+              "reason": "The selected repeated use retains the supplied hardship meaning including nonfinancial difficulty.",
+              "edge_case": "hardship",
+              "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp024",
+              "expected": "YES",
+              "reason": "The selected accommodations are effective disability-related workplace adjustments under the supplied meaning.",
+              "edge_case": "accommodation",
+              "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp025",
+              "expected": "YES",
+              "reason": "The Court uses toll in its expressly adopted stop-the-clock sense.",
+              "edge_case": "artis-meaning",
+              "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp026",
+              "expected": "NO",
+              "reason": "Provisional: the selected interrogative presents a grace-period proposal rather than the supplied stop-the-clock reading; metalinguistic selection needs repair before scoring.",
+              "edge_case": "artis-meaning",
+              "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+              "material_ambiguity": "Metalinguistic question presents a proposed meaning; selected occurrence does not itself adopt or straightforwardly use that meaning."
+            },
+            {
+              "id": "exp027",
+              "expected": "YES",
+              "reason": "Provisional: the interrogative presents the same grace-period proposal as the candidate passage, but the candidate is a question rather than an assigned definition; repair before scoring.",
+              "edge_case": "artis-meaning",
+              "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+              "material_ambiguity": "The candidate definition is an interrogative proposing a meaning, not a complete definition; same use/mention problem."
+            },
+            {
+              "id": "exp028",
+              "expected": "YES",
+              "reason": "Jurisdictional retains the adjudicatory-authority sense in the Commissioner's rejected argument.",
+              "edge_case": "boechler-jurisdiction",
+              "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp029",
+              "expected": "YES",
+              "reason": "The dwelling unit is the residential structure covered by the supplied general definition.",
+              "edge_case": "wa-dwelling",
+              "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp030",
+              "expected": "YES",
+              "reason": "The notice-giving landlord is the owner/lessor/authorized manager identified by the supplied definition.",
+              "edge_case": "or-entry",
+              "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp031",
+              "expected": "YES",
+              "reason": "Receipt means arrival of the payment, not the later date of bookkeeping posting.",
+              "edge_case": "receipt-date",
+              "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp032",
+              "expected": "NO",
+              "reason": "The condemned residential structure is not the specially defined site rented separately from a manufactured or floating home.",
+              "edge_case": "wa-dwelling",
+              "downstream_failure": "An incorrect answer connects this occurrence to the wrong candidate meaning.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp033",
+              "expected": "A",
+              "reason": "The selected precise rule uses calendar days excluding Sundays and listed federal holidays.",
+              "edge_case": "business-precise",
+              "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp034",
+              "expected": "B",
+              "reason": "The precise calendar-day meaning is offered as B in this ordering.",
+              "edge_case": "business-precise",
+              "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp035",
+              "expected": "A",
+              "reason": "Creditor identifies the category including a service provider acting on the creditor's behalf.",
+              "edge_case": "creditor-scope",
+              "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp036",
+              "expected": "B",
+              "reason": "The defined creditor-side category is denied to this consumer-side service, without changing the word's sense.",
+              "edge_case": "creditor-scope",
+              "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp037",
+              "expected": "NONE",
+              "reason": "Neither adjudicatory authority nor a limitation expiry describes a payment fee.",
+              "edge_case": "fee-scope",
+              "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp038",
+              "expected": "B",
+              "reason": "Representative means a live assisting person or agent; automated means are expressly excluded.",
+              "edge_case": "representative-scope",
+              "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp039",
+              "expected": "A",
+              "reason": "The source defines hardship by significant difficulty or expense rather than a preference for cheaper accommodation.",
+              "edge_case": "hardship",
+              "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp040",
+              "expected": "B",
+              "reason": "The accommodation is a workplace adjustment rather than hotel lodging.",
+              "edge_case": "accommodation",
+              "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp041",
+              "expected": "A",
+              "reason": "The adopted toll meaning is suspension of the limitations clock.",
+              "edge_case": "artis-meaning",
+              "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp042",
+              "expected": "B",
+              "reason": "Provisional: B describes the interrogative's proposed grace-period reading; the quoted statutory word is under interpretation, so the selected-use object needs repair.",
+              "edge_case": "artis-meaning",
+              "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+              "material_ambiguity": "Choice asks for the meaning of a statutory word mentioned in an unanswered question about competing meanings; supplied context omits attribution and resolution."
+            },
+            {
+              "id": "exp043",
+              "expected": "A",
+              "reason": "Provisional: A describes that proposed reading in reversed order; same metalinguistic selection defect as exp042.",
+              "edge_case": "artis-meaning",
+              "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+              "material_ambiguity": "Same defect as exp042 with reordered alternatives."
+            },
+            {
+              "id": "exp044",
+              "expected": "B",
+              "reason": "The jurisdictional category means a limit on adjudicatory authority even though the Court rejects applying it to this deadline.",
+              "edge_case": "boechler-jurisdiction",
+              "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp045",
+              "expected": "NONE",
+              "reason": "Neither offered abstract litigation meaning fits a residential dwelling unit.",
+              "edge_case": "wa-dwelling",
+              "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp046",
+              "expected": "B",
+              "reason": "Landlord denotes the owner/lessor or authorized manager, not the resident tenant.",
+              "edge_case": "or-entry",
+              "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp047",
+              "expected": "A",
+              "reason": "Receipt denotes payment reaching the creditor rather than final check clearance.",
+              "edge_case": "receipt-date",
+              "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp048",
+              "expected": "B",
+              "reason": "The phrase identifies a residential structure, not only a site underneath a separately owned home.",
+              "edge_case": "wa-dwelling",
+              "downstream_failure": "An incorrect answer selects the wrong legal sense for downstream interpretation.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp049",
+              "expected": "YES",
+              "reason": "Undue hardship expressly excuses the accommodation obligation under stated circumstances.",
+              "edge_case": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:hardship_exception",
+              "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp050",
+              "expected": "YES",
+              "reason": "The candidate narrows the accommodation obligation by excluding personal-use items except job-specific needs.",
+              "edge_case": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:personal",
+              "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp051",
+              "expected": "NO",
+              "reason": "Choosing an effective accommodation is a way to satisfy the same duty, not an excuse from it.",
+              "edge_case": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:choice",
+              "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp052",
+              "expected": "NO",
+              "reason": "Prompt response adds procedural responsibility without excusing provision of accommodation.",
+              "edge_case": "EEOC_ACCOMMODATION:accommodation_duty|EEOC_ACCOMMODATION:prompt",
+              "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp053",
+              "expected": "NO",
+              "reason": "The candidate defines receipt timing for website payments while retaining the same credit-as-of-receipt duty.",
+              "edge_case": "CFPB_1026_10:creditdate|CFPB_1026_10:webpay",
+              "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp054",
+              "expected": "NO",
+              "reason": "Preserving records while a charge remains unresolved adds or extends retention responsibility rather than excusing it.",
+              "edge_case": "EEOC_ACCOMMODATION:records_base|EEOC_ACCOMMODATION:records_extension",
+              "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp055",
+              "expected": "NO",
+              "reason": "Direct court access under the EPA does not excuse the distinct charge prerequisite for a Title VII claim.",
+              "edge_case": "EEOC_CHARGE:epa|EEOC_CHARGE:titlevii",
+              "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp056",
+              "expected": "YES",
+              "reason": "The 300-day branch narrows the general obligation to file within 180 days under the stated agency-law condition.",
+              "edge_case": "EEOC_CHARGE:charge180|EEOC_CHARGE:charge300",
+              "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp057",
+              "expected": "YES",
+              "reason": "Equitable tolling conditionally relaxes the 30-day filing requirement; it is not a finding that Boechler actually qualifies.",
+              "edge_case": "BOECHLER:boechler_hold|BOECHLER:boechler_req",
+              "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp058",
+              "expected": "NO",
+              "reason": "A general jurisdictional definition does not excuse the selected filing duty.",
+              "edge_case": "BOECHLER:boechler_def|BOECHLER:boechler_req",
+              "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp059",
+              "expected": "YES",
+              "reason": "The Court expressly rejects lack of equitable-tolling power, thereby recognizing conditional relief from the filing limit.",
+              "edge_case": "BOECHLER:boechler_intro|BOECHLER:boechler_req",
+              "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp060",
+              "expected": "NO",
+              "reason": "Reporting competing interpretations creates no operative exception to the quoted statute.",
+              "edge_case": "ARTIS:artis_law|ARTIS:artis_proposal",
+              "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp061",
+              "expected": "YES",
+              "reason": "The natural-disaster condition expressly excuses the selected relocation-payment duty.",
+              "edge_case": "WASHINGTON_59_18:wa_disaster|WASHINGTON_59_18:wa_relocation",
+              "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp062",
+              "expected": "YES",
+              "reason": "Illegal conduct without landlord knowledge expressly excuses the selected relocation-payment duty.",
+              "edge_case": "WASHINGTON_59_18:wa_illegal|WASHINGTON_59_18:wa_relocation",
+              "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp063",
+              "expected": "NO",
+              "reason": "Damages for violating the leasing prohibition are a remedy, not permission to violate it.",
+              "edge_case": "WASHINGTON_59_18:wa_condemned|WASHINGTON_59_18:wa_damages",
+              "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp064",
+              "expected": "YES",
+              "reason": "Emergency entry expressly excuses the ordinary advance notice, consent and reasonable-time requirements.",
+              "edge_case": "OREGON_90:or_emergency|OREGON_90:or_entry",
+              "downstream_failure": "An incorrect answer wrongly excuses a duty or misses a qualification.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp065",
+              "expected": "YES",
+              "reason": "The candidate expressly substitutes 300 days for the general 180-day filing limit under the stated condition.",
+              "edge_case": "EEOC_CHARGE:charge180|EEOC_CHARGE:charge300",
+              "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp066",
+              "expected": "YES",
+              "reason": "The weekend/holiday rule adjusts the due date to the next business day.",
+              "edge_case": "EEOC_CHARGE:charge180|EEOC_CHARGE:holiday",
+              "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp067",
+              "expected": "NO",
+              "reason": "The candidate expressly denies the asserted extension for other dispute-resolution proceedings.",
+              "edge_case": "EEOC_CHARGE:charge180|EEOC_CHARGE:grievance",
+              "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp068",
+              "expected": "YES",
+              "reason": "Ongoing harassment uses the last incident as the filing trigger rather than each discrete event separately.",
+              "edge_case": "EEOC_CHARGE:events|EEOC_CHARGE:harassment",
+              "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp069",
+              "expected": "YES",
+              "reason": "Willful discrimination changes the stated EPA period from two years to three.",
+              "edge_case": "EEOC_CHARGE:epa_base|EEOC_CHARGE:epa_extension",
+              "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp070",
+              "expected": "NO",
+              "reason": "The candidate expressly says the Title VII charge does not extend the EPA lawsuit deadline.",
+              "edge_case": "EEOC_CHARGE:epa_base|EEOC_CHARGE:titlevii",
+              "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp071",
+              "expected": "YES",
+              "reason": "A filed charge changes the retention endpoint to resolution rather than expiration of the ordinary year.",
+              "edge_case": "EEOC_ACCOMMODATION:records_base|EEOC_ACCOMMODATION:records_extension",
+              "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp072",
+              "expected": "YES",
+              "reason": "The website-payment rule changes the legally assigned receipt date for scheduled or after-cutoff payments, which changes the effective crediting date.",
+              "edge_case": "CFPB_1026_10:creditdate|CFPB_1026_10:webpay",
+              "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp073",
+              "expected": "YES",
+              "reason": "The holding makes the selected filing deadline subject to conditional equitable tolling without granting it on these facts.",
+              "edge_case": "BOECHLER:boechler_hold|BOECHLER:boechler_req",
+              "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp074",
+              "expected": "NO",
+              "reason": "The abstract jurisdictional definition does not modify the selected 30-day filing deadline.",
+              "edge_case": "BOECHLER:boechler_def|BOECHLER:boechler_req",
+              "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp075",
+              "expected": "NO",
+              "reason": "Forfeiture of an objection is not a modification of the distinct Tax Court filing deadline.",
+              "edge_case": "BOECHLER:boechler_req|FORT_BEND:fort_objection",
+              "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp076",
+              "expected": "YES",
+              "reason": "The quoted federal tolling rule suspends the state limitations period when its federal-pendency conditions are met.",
+              "edge_case": "ARTIS:artis_law|ARTIS:artis_three_year",
+              "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp077",
+              "expected": "NO",
+              "reason": "Provisional: ending electronic-notice service is not compliance or termination of tenancy; the selected generic mail clause does not establish an extension for this distinct notice.",
+              "edge_case": "OREGON_90:or_email_cancel|OREGON_90:or_mail",
+              "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+              "material_ambiguity": "Recover section 90.155 context and decide whether service-agreement cancellation is compliance/tenancy termination before finalizing."
+            },
+            {
+              "id": "exp078",
+              "expected": "YES",
+              "reason": "Emergency entry removes the ordinary advance-notice timing and creates a conditional post-entry notice rule for absence; this changes the temporal notice regime.",
+              "edge_case": "OREGON_90:or_emergency|OREGON_90:or_entry",
+              "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp079",
+              "expected": "NO",
+              "reason": "A government's advance after landlord nonpayment is a remedy; the seven-day landlord deadline remains.",
+              "edge_case": "WASHINGTON_59_18:wa_advance|WASHINGTON_59_18:wa_seven",
+              "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp080",
+              "expected": "NO",
+              "reason": "The damages rule for unlawful rental does not alter the separate relocation-payment deadline.",
+              "edge_case": "WASHINGTON_59_18:wa_damages|WASHINGTON_59_18:wa_seven",
+              "downstream_failure": "An incorrect answer changes the wrong deadline or misses a required temporal adjustment.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp081",
+              "expected": "NO",
+              "reason": "The text expressly includes nonfinancial hardship, contradicting the claim of financial exclusivity.",
+              "edge_case": "EEOC_ACCOMMODATION:hardship",
+              "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp082",
+              "expected": "YES",
+              "reason": "The proposition preserves the express effectiveness condition.",
+              "edge_case": "EEOC_ACCOMMODATION:choice",
+              "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp083",
+              "expected": "NO",
+              "reason": "The text expressly preserves required job-specific items, defeating never.",
+              "edge_case": "EEOC_ACCOMMODATION:personal",
+              "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp084",
+              "expected": "YES",
+              "reason": "The proposition matches the first express condition barring documentation demands.",
+              "edge_case": "EEOC_ACCOMMODATION:documentation",
+              "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp085",
+              "expected": "NO",
+              "reason": "The example expressly excludes the consumer-side service from the creditor category.",
+              "edge_case": "CFPB_1026_10:provider_no",
+              "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp086",
+              "expected": "YES",
+              "reason": "The example expressly treats the observed Friday as a business day under the precise rule.",
+              "edge_case": "CFPB_1026_2:business",
+              "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp087",
+              "expected": "NO",
+              "reason": "The passage expressly says local law alone does not extend the age-discrimination deadline.",
+              "edge_case": "EEOC_CHARGE:charge",
+              "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp088",
+              "expected": "YES",
+              "reason": "The passage expressly permits direct court filing without an EEOC charge under the EPA.",
+              "edge_case": "EEOC_CHARGE:epa",
+              "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp089",
+              "expected": "NO",
+              "reason": "The Court expressly leaves Boechler's entitlement for remand.",
+              "edge_case": "BOECHLER:boechler_hold",
+              "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp090",
+              "expected": "YES",
+              "reason": "The claim accurately attributes the proposition to the Commissioner's argument rather than the Court's holding.",
+              "edge_case": "BOECHLER:boechler_intro",
+              "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp091",
+              "expected": "NO",
+              "reason": "The passage attributes adoption to the D.C. Court of Appeals, not the Supreme Court.",
+              "edge_case": "ARTIS:artis_proposal",
+              "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp092",
+              "expected": "YES",
+              "reason": "The proposition matches the Court's express stop-the-clock holding.",
+              "edge_case": "ARTIS:artis_def",
+              "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp093",
+              "expected": "NO",
+              "reason": "The claim omits notice and knowledge predicates and ignores the stated exceptions.",
+              "edge_case": "WASHINGTON_59_18:wa_relocation",
+              "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp094",
+              "expected": "YES",
+              "reason": "The candidate expressly excuses payment under the specified natural-disaster condition.",
+              "edge_case": "WASHINGTON_59_18:wa_disaster",
+              "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp095",
+              "expected": "NO",
+              "reason": "The passage expressly permits emergency entry without advance notice, with conditional later notice.",
+              "edge_case": "OREGON_90:or_emergency",
+              "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+              "material_ambiguity": false
+            },
+            {
+              "id": "exp096",
+              "expected": "YES",
+              "reason": "Provisional: the effect is stated, but first-class service and the subsection identity require the omitted subsection (1)(b) to be supplied.",
+              "edge_case": "OREGON_90:or_mail",
+              "downstream_failure": "An incorrect answer admits an unsupported proposition or discards supported evidence.",
+              "material_ambiguity": "Claim specifies first-class mail but evidence only references subsection (1)(b); retrieve that operative cross-reference."
+            }
+          ]
+        }
+      ],
+      "contracts_path": "configurations/proposed-v2.json",
+      "preparation_review": {
+        "accepted": true,
+        "development_only": true,
+        "case_count": 96,
+        "family_counts": {
+          "administrative": 50,
+          "judicial": 24,
+          "statutory": 22
+        },
+        "exact_source_spans_validated": 145,
+        "source_hashes_and_unicode_offsets_valid": true,
+        "use_expression_unique_and_term_once": true,
+        "blindness": "Provisional expectations were saved before discussion of source corrections. Source defects and repairs were discussed with parent; author labels, author construction script, author recovery report and model responses were not read. V2 contract boundary changes were supplied by parent and independently assessed against sources.",
+        "v2_reassessment": "All 96 expectations retained. Exception scope and timing-rule boundaries reassessed, not inferred from answer agreement. Exp072 contains legal deeming of next-business-day authorization, distinct from later occurrence of an unchanged trigger.",
+        "source_context_limits": [
+          "Selections establish conditional textual relations, not legal applicability to a live matter. Incorporated definitions still require extraction from the incorporated source; RCW 61.34.020 capture was inspected independently.",
+          "EEOC general 300-day charge extension has a separate age-discrimination qualification in surrounding source. Positive relation judgments exp056/065 do not establish universal applicability.",
+          "Exp063 and exp080 candidate excerpts end before a list of additional recoveries. The omitted list does not alter the reviewed negative relation: remedies do not authorize prohibited renting or extend the relocation-payment deadline. Retain this capture limit for any later extraction or substantive synthesis.",
+          "Exp064/078 retain neighboring entry duties to preserve governing context. Their emergency candidate expressly removes advance notice and consent and permits any time, so the selected exception and timing relations do not depend on choosing between inconsistent duties."
+        ],
+        "choice_review": "Offered alternatives are distinct for each selected occurrence; corrected Artis cases now distinguish historical grace usage from clock suspension. NONE cases lack a fitting offered meaning rather than missing evidence.",
+        "unresolved_material_issues": []
+      }
+    }
+  ],
+  "contracts_path": "configurations/proposed-v2.json",
+  "preparation_review": {
+    "accepted": true,
+    "development_only": true,
+    "case_count": 96,
+    "family_counts": {
+      "administrative": 50,
+      "judicial": 24,
+      "statutory": 22
+    },
+    "exact_source_spans_validated": 145,
+    "source_hashes_and_unicode_offsets_valid": true,
+    "use_expression_unique_and_term_once": true,
+    "blindness": "Provisional expectations were saved before discussion of source corrections. Source defects and repairs were discussed with parent; author labels, author construction script, author recovery report and model responses were not read. V2 contract boundary changes were supplied by parent and independently assessed against sources.",
+    "v2_reassessment": "All 96 expectations retained. Exception scope and timing-rule boundaries reassessed, not inferred from answer agreement. Exp072 contains legal deeming of next-business-day authorization, distinct from later occurrence of an unchanged trigger.",
+    "source_context_limits": [
+      "Selections establish conditional textual relations, not legal applicability to a live matter. Incorporated definitions still require extraction from the incorporated source; RCW 61.34.020 capture was inspected independently.",
+      "EEOC general 300-day charge extension has a separate age-discrimination qualification in surrounding source. Positive relation judgments exp056/065 do not establish universal applicability.",
+      "Exp063 and exp080 candidate excerpts end before a list of additional recoveries. The omitted list does not alter the reviewed negative relation: remedies do not authorize prohibited renting or extend the relocation-payment deadline. Retain this capture limit for any later extraction or substantive synthesis.",
+      "Exp064/078 retain neighboring entry duties to preserve governing context. Their emergency candidate expressly removes advance notice and consent and permits any time, so the selected exception and timing relations do not depend on choosing between inconsistent duties."
+    ],
+    "choice_review": "Offered alternatives are distinct for each selected occurrence; corrected Artis cases now distinguish historical grace usage from clock suspension. NONE cases lack a fitting offered meaning rather than missing evidence.",
+    "unresolved_material_issues": []
+  },
+  "resolved_findings": [
+    {
+      "case_ids": [
+        "exp026",
+        "exp027",
+        "exp042",
+        "exp043"
+      ],
+      "status": "resolved_before_dispatch",
+      "issue": "Original quoted question did not establish an actual use of the disputed meaning; candidate definition was interrogative.",
+      "resolution": "Corrected selections include the full Artis majority paragraph characterizing Hardin historical usage as a grace period and expressly contrasting it with stopping the clock. The selected as “tolling” occurs once. This supports the historical meaning without asserting it governs section 1367(d)."
+    },
+    {
+      "case_ids": [
+        "exp077"
+      ],
+      "status": "resolved_before_dispatch",
+      "issue": "Relationship between electronic-service cancellation notice and statutory mail extension required governing context.",
+      "resolution": "Complete section 90.155 establishes that cancellation of an electronic-service arrangement is distinct from compliance or termination of tenancy. Candidate extension does not change this selected timing rule: NO."
+    },
+    {
+      "case_ids": [
+        "exp096"
+      ],
+      "status": "resolved_before_dispatch",
+      "issue": "Original supplied evidence omitted subsection (1)(b), which established first-class mail.",
+      "resolution": "Corrected text includes the lead-in and subsection (1)(b) through (2), directly supporting the full claim: YES."
+    }
+  ]
+}

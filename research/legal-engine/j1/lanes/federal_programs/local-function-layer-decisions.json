@@ -1,0 +1,364 @@
+{
+  "as_of": "2026-10-01",
+  "basis": "Current chain_map function definitions, J0 residential physical-work/outgoing-account aperture, current CA-OC/CA-HB registers, local lane REPORT/REMAINING_J1 and acquisition/hb-home-tbra-delta.json. No canonical edits.",
+  "mapping_additions": [
+    {
+      "id": "CA-HB:MUNICIPAL",
+      "add_functions": [
+        "rent_regulation"
+      ],
+      "selected_scope": "Charter \u00a7803",
+      "source_url": "https://ecode360.com/46474868",
+      "reason": "Local rent-control prohibition and explicit exceptions determine applicable regime; do not describe an absolute prohibition or infer a local rent-control program."
+    },
+    {
+      "id": "CA-HB:MUNICIPAL",
+      "add_functions": [
+        "anti_discrimination"
+      ],
+      "selected_scope": "Chapter17.77",
+      "source_url": "https://ecode360.com/43802508",
+      "reason": "Local housing reasonable-accommodation application, decision and appeal process implements FHA/FEHA; applies to qualifying housing modifications."
+    },
+    {
+      "id": "CA-HB:MUNICIPAL",
+      "add_functions": [
+        "tax_reporting"
+      ],
+      "selected_scope": "Chapter3.36 \u00a7\u00a7.120,.130,.190,.200",
+      "source_url": "https://ecode360.com/43792711",
+      "reason": "Residential utility-tax return, record and refund/credit consequences where the actor is a covered supplier, billing agent or self-collector. Section.200(F) requires corresponding tax refunds on ordered utility-charge refunds. No general tax-planning expansion."
+    },
+    {
+      "id": "CA-HB:WATER-SHUTOFF-POLICY",
+      "add_functions": [
+        "debt_collection",
+        "usury_payment_plans",
+        "electronic_records"
+      ],
+      "selected_scope": "Sections6\u20138,13\u201316",
+      "source_url": "https://cms3.revize.com/revize/huntingtonbeachca/Documents/Departments/Finance/Municipal%20Billing/Policy%20on%20Termination%20of%20Residential%20Water%20Service/Delinquent-Water-Account-Policy---English.pdf",
+      "reason": "Residential water debt notices, disputes, tenant takeover and written amortization govern outgoing utility balances. Section13(D) separately gives emailed bills/adverse decisions immediate delivery timing for the appeal clock; this does not authorize electronic eviction notices."
+    },
+    {
+      "id": "CA-OC:OCHA-ADMIN",
+      "add_functions": [
+        "debt_collection",
+        "usury_payment_plans"
+      ],
+      "selected_scope": "Chapter16 PartIV, \u00a716-IV.B",
+      "source_url": "https://www.ochousing.org/sites/ocha/files/2026-04/Final%20-%20Orange%20County%20Housing%20Authority%20Administrative%20Plan%204-14-2026.pdf",
+      "reason": "Agency tenant/owner debt repayment, written agreements, hardship adjustments and default consequences. Program-specific creditor conditions, independently of general collection law."
+    },
+    {
+      "id": "CA-OC:CODE",
+      "add_functions": [
+        "general_construction"
+      ],
+      "selected_scope": "\u00a7\u00a77-9-23.1,7-9-125.10",
+      "source_url": "https://pwds.oc.gov/sites/ocpwocds/files/2025-06/Adopted%20Orange%20County%20Zoning%20Code%206-19-2025.pdf",
+      "reason": "County zoning interpretation rules and calendar-day/last-working-day computation affect residential work approvals. Administrative appeal periods do not establish tenant-claim statutes of limitations."
+    }
+  ],
+  "function_layer_decisions": {
+    "CA-OC": [
+      {
+        "function": "unclaimed_property",
+        "reason": "The defined ordinary uncashed tenant refund/credit holder branch is the state Unclaimed Property Law. Municipal or county treasury unclaimed funds concern a different holder and do not replace the landlord reporting/remittance branch.",
+        "crosslayer_instruments": [
+          {
+            "id": "CA:CCP"
+          },
+          {
+            "id": "CA:SCO-HOLDER"
+          }
+        ],
+        "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+      },
+      {
+        "function": "broker_licensing",
+        "reason": "Real-estate license-trigger acts, exemptions, trust handling and compensation recovery are determined by California broker law. Local business licenses and HUD/OCHA management approval remain separate permission or program conditions, not a local occupational broker license.",
+        "crosslayer_instruments": [
+          {
+            "id": "CA:BPC"
+          },
+          {
+            "id": "CA:CCR10"
+          }
+        ],
+        "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+      },
+      {
+        "function": "credit_reporting",
+        "reason": "Consumer-report access, accuracy, furnishing and disputes are governed by federal/state reporting statutes and regulations. Local housing eligibility checks or water-credit decisions do not themselves create a distinct general furnisher/reporting regime.",
+        "crosslayer_instruments": [
+          {
+            "id": "US:15USC-ch41"
+          },
+          {
+            "id": "US:12CFR1022"
+          },
+          {
+            "id": "CA:CIV"
+          }
+        ],
+        "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+      },
+      {
+        "function": "limitations",
+        "reason": "This function is specifically landlord contract/damage and tenant deposit/statutory claims, including tolling and revival. State limitation statutes and conditional federal tolling govern. Local zoning, utility-tax or bill-appeal deadlines remain selected under their substantive/procedural functions; they are not substituted for these claim limitation rules.",
+        "crosslayer_instruments": [
+          {
+            "id": "CA:CCP"
+          },
+          {
+            "id": "US:50USC-ch50"
+          },
+          {
+            "id": "US:11USC"
+          }
+        ],
+        "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+      },
+      {
+        "function": "military",
+        "reason": "Military lease termination, interest caps, stays and default protections derive from SCRA and California military law. Local veteran preferences and assistance eligibility do not replace those protections.",
+        "crosslayer_instruments": [
+          {
+            "id": "US:50USC-ch50"
+          },
+          {
+            "id": "CA:MVC"
+          }
+        ],
+        "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+      },
+      {
+        "function": "bankruptcy",
+        "reason": "Stay, discharge, claims and estate treatment derive from federal bankruptcy law and the applicable federal court rules. OC Superior Court and municipal claims procedures are not bankruptcy courts or independent bankruptcy regimes.",
+        "crosslayer_instruments": [
+          {
+            "id": "US:11USC"
+          },
+          {
+            "id": "US:FRBP"
+          },
+          {
+            "id": "CA:CACB"
+          },
+          {
+            "id": "CA:BAP9"
+          }
+        ],
+        "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+      },
+      {
+        "function": "abandoned_property",
+        "reason": "Private landlord treatment of a former tenant\u2019s belongings derives from California notice, storage, disposition and unlawful-detainer law. County nuisance abatement, impoundment and public-property recovery concern different custody and authority and remain under their actual functions.",
+        "crosslayer_instruments": [
+          {
+            "id": "CA:CIV"
+          },
+          {
+            "id": "CA:CCP"
+          }
+        ],
+        "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+      },
+      {
+        "function": "electronic_records",
+        "reason": "General validity of an electronic tenancy notice, statement or signature and required consent/exceptions derive from E-SIGN/UETA. Local Rules352/601.01 govern court filing and service and remain selected as courts_procedure; they do not authorize electronic landlord termination or deposit notices.",
+        "crosslayer_instruments": [
+          {
+            "id": "US:15USC-ch96"
+          },
+          {
+            "id": "CA:CIV"
+          },
+          {
+            "id": "CA:CRC"
+          }
+        ],
+        "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+      },
+      {
+        "function": "tax_reporting",
+        "reason": "For the defined provider-payment, classification/withholding, deposit/credit, settlement and bad-debt reporting branch, operative reporting duties are federal/state. County property assessment, business licensing and fee schedules are not additional information-return regimes for those transactions. This is a bounded branch decision, not a claim that county taxes never affect residential property.",
+        "crosslayer_instruments": [
+          {
+            "id": "US:26USC-6041-6050"
+          },
+          {
+            "id": "US:26CFR1-info"
+          },
+          {
+            "id": "US:26USC166"
+          },
+          {
+            "id": "CA:RTC"
+          },
+          {
+            "id": "CA:UIC"
+          },
+          {
+            "id": "CA:CCR18"
+          }
+        ],
+        "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+      }
+    ],
+    "CA-HB": [
+      {
+        "function": "unclaimed_property",
+        "reason": "The defined ordinary uncashed tenant refund/credit holder branch is the state Unclaimed Property Law. Municipal or county treasury unclaimed funds concern a different holder and do not replace the landlord reporting/remittance branch.",
+        "crosslayer_instruments": [
+          {
+            "id": "CA:CCP"
+          },
+          {
+            "id": "CA:SCO-HOLDER"
+          }
+        ],
+        "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+      },
+      {
+        "function": "broker_licensing",
+        "reason": "Real-estate license-trigger acts, exemptions, trust handling and compensation recovery are determined by California broker law. Local business licenses and HUD/OCHA management approval remain separate permission or program conditions, not a local occupational broker license.",
+        "crosslayer_instruments": [
+          {
+            "id": "CA:BPC"
+          },
+          {
+            "id": "CA:CCR10"
+          }
+        ],
+        "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+      },
+      {
+        "function": "credit_reporting",
+        "reason": "Consumer-report access, accuracy, furnishing and disputes are governed by federal/state reporting statutes and regulations. Local housing eligibility checks or water-credit decisions do not themselves create a distinct general furnisher/reporting regime.",
+        "crosslayer_instruments": [
+          {
+            "id": "US:15USC-ch41"
+          },
+          {
+            "id": "US:12CFR1022"
+          },
+          {
+            "id": "CA:CIV"
+          }
+        ],
+        "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+      },
+      {
+        "function": "limitations",
+        "reason": "This function is specifically landlord contract/damage and tenant deposit/statutory claims, including tolling and revival. State limitation statutes and conditional federal tolling govern. Local zoning, utility-tax or bill-appeal deadlines remain selected under their substantive/procedural functions; they are not substituted for these claim limitation rules.",
+        "crosslayer_instruments": [
+          {
+            "id": "CA:CCP"
+          },
+          {
+            "id": "US:50USC-ch50"
+          },
+          {
+            "id": "US:11USC"
+          }
+        ],
+        "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+      },
+      {
+        "function": "military",
+        "reason": "Military lease termination, interest caps, stays and default protections derive from SCRA and California military law. Local veteran preferences and assistance eligibility do not replace those protections.",
+        "crosslayer_instruments": [
+          {
+            "id": "US:50USC-ch50"
+          },
+          {
+            "id": "CA:MVC"
+          }
+        ],
+        "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+      },
+      {
+        "function": "bankruptcy",
+        "reason": "Stay, discharge, claims and estate treatment derive from federal bankruptcy law and the applicable federal court rules. OC Superior Court and municipal claims procedures are not bankruptcy courts or independent bankruptcy regimes.",
+        "crosslayer_instruments": [
+          {
+            "id": "US:11USC"
+          },
+          {
+            "id": "US:FRBP"
+          },
+          {
+            "id": "CA:CACB"
+          },
+          {
+            "id": "CA:BAP9"
+          }
+        ],
+        "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+      },
+      {
+        "function": "estates_incapacity",
+        "reason": "Authority of a tenant\u2019s representative, estate-creditor process and survival are determined by California probate/guardianship law and OC court procedure. City utility-tax refund \u00a73.36.200(B) accepts a guardian/conservator/executor/administrator but does not constitute or determine that representative\u2019s probate authority.",
+        "crosslayer_instruments": [
+          {
+            "id": "CA:PROB"
+          },
+          {
+            "id": "CA:FAM"
+          },
+          {
+            "id": "CA:WIC"
+          },
+          {
+            "id": "CA:CRC"
+          },
+          {
+            "id": "CA-OC:SUPERIOR-RULES"
+          }
+        ],
+        "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+      },
+      {
+        "function": "data_security",
+        "reason": "General landlord/manager/collector record security, breach, disposal and privacy duties derive from federal/state sources. City accommodation \u00a717.77.040 confidentiality protects submissions held by the city; it is not a general private-landlord data-security regime. Separate unresolved TBRA contract data obligations remain expressly reserved below.",
+        "crosslayer_instruments": [
+          {
+            "id": "CA:CIV"
+          },
+          {
+            "id": "CA:CCR11"
+          },
+          {
+            "id": "US:12CFR1022"
+          },
+          {
+            "id": "US:16CFR682"
+          }
+        ],
+        "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+      }
+    ]
+  },
+  "unresolved_local_dependencies": [
+    {
+      "jurisdiction": "CA-HB",
+      "function": "deposit",
+      "disposition": "Do not insert a blanket function_layer absence yet.",
+      "parent_baseline": [
+        "CA:CIV",
+        "US:24CFR92"
+      ],
+      "reason": "Ordinary landlord deposit law is state law; municipal water security deposits are a different relationship. Conditional HOME/TBRA deposit-assistance or participant-contract terms require the actual selected program documents.",
+      "existing_sources": [
+        "CA-HB:MHTBRA-GUIDELINES-2022",
+        "CA-HB:HOME-PLAN-RES2025-32"
+      ],
+      "specific_gap": "Regular TBRA July6,2020 item20-1726 Operating Guidelines attachment1 and current participant/rental-assistance contracts/lease addenda: exact operative identities/amendments remain unresolved in existing acquisition delta. MHTBRA2022 exact adopted guidelines URL already identified; missing internal text alone is J2, but cannot support an unverified deposit/data clause mapping.",
+      "existing_gap_record": "j1/lanes/acquisition/hb-home-tbra-delta.json",
+      "related_reserved_function": "data_security: general parent-layer decision above does not close contractual participant-data dependencies."
+    }
+  ],
+  "limits": "No source absence is inferred merely from an unmapped label. All mapping additions use already-selected sources; no new broad source census. General cross-layer reasons are function-specific and do not exclude conditional program/contracts. Local tax and water rules are retained where actual outgoing-account consequences exist."
+}

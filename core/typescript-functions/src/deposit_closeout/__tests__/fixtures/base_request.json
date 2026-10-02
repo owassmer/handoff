@@ -1,0 +1,67 @@
+{
+  "ruleReleaseId": "NC_SYNTHETIC_DEMO_V1",
+  "reviewClock": "2026-09-16T12:00:00Z",
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "caseId": "constructed-nc-closeout-001",
+    "managementCompanyId": "constructed-company-001",
+    "homeId": "constructed-home-001",
+    "tenancyId": "constructed-tenancy-001",
+    "revision": 1,
+    "origin": "CONSTRUCTED",
+    "jurisdiction": "NC",
+    "tenancyRegime": "CONVENTIONAL_RESIDENTIAL",
+    "tenancyEndsInFull": true,
+    "cashSecurityDeposit": true,
+    "currency": "USD",
+    "agreementEvidenceIds": ["ev-agreement"],
+    "dates": [
+      {"factKey":"NOTICE","state":"ACCEPTED","value":"2026-08-15","evidenceIds":["ev-dates"],"acceptedBy":"demo-manager","reason":"Constructed notice event; not the accounting trigger."},
+      {"factKey":"INTENDED_DEPARTURE","state":"ACCEPTED","value":"2026-09-01","evidenceIds":["ev-dates"],"acceptedBy":"demo-manager","reason":"Constructed stated intention, distinct from actual possession."},
+      {"factKey":"AGREEMENT_END","state":"ACCEPTED","value":"2026-08-31","evidenceIds":["ev-agreement"],"acceptedBy":"demo-manager","reason":"Constructed agreement end."},
+      {"factKey":"VACANCY","state":"ACCEPTED","value":"2026-08-31","evidenceIds":["ev-dates"],"acceptedBy":"demo-manager","reason":"Constructed vacancy observation."},
+      {"factKey":"KEY_RETURN","state":"ACCEPTED","value":"2026-09-02","evidenceIds":["ev-dates"],"acceptedBy":"demo-manager","reason":"Constructed key receipt; no automatic legal equivalence."},
+      {"factKey":"LEGAL_POSSESSION","state":"ACCEPTED","value":"2026-09-02","evidenceIds":["ev-dates"],"acceptedBy":"demo-manager","reason":"Accepted for this synthetic scenario, not a legal finding."},
+      {"factKey":"ACCOUNTING_TRIGGER","state":"ACCEPTED","value":"2026-09-02","evidenceIds":["ev-dates"],"acceptedBy":"demo-manager","reason":"Separately stipulated synthetic trigger. Not computed by maximum of source dates."}
+    ],
+    "parties": [
+      {"partyId":"demo-manager","displayLabel":"Synthetic Manager","roles":["MANAGER"],"effectiveFrom":"2026-01-01","effectiveUntil":null,"principalId":null,"evidenceIds":["ev-authority"]},
+      {"partyId":"demo-accountant","displayLabel":"Synthetic Accountant","roles":["ACCOUNTANT"],"effectiveFrom":"2026-01-01","effectiveUntil":null,"principalId":null,"evidenceIds":["ev-authority"]},
+      {"partyId":"demo-resident","displayLabel":"Synthetic Resident A","roles":["RESIDENT","SIGNATORY"],"effectiveFrom":"2025-09-01","effectiveUntil":"2026-09-02","principalId":null,"evidenceIds":["ev-agreement"]},
+      {"partyId":"demo-custodian","displayLabel":"Synthetic Deposit Custodian","roles":["CUSTODIAN"],"effectiveFrom":"2025-09-01","effectiveUntil":null,"principalId":null,"evidenceIds":["ev-balance"]}
+    ],
+    "authorityGrants": [
+      {"grantId":"demo-grant-manager","partyId":"demo-manager","authorityVersion":"demo-authority-v1","allowedActionKinds":["ACCEPT_OR_CORRECT_FACT","RECORD_CHARGE_DECISION","CHOOSE_OR_WAIVE_CHARGE","PREPARE_STATEMENT","APPROVE_EXACT_VERSION","REQUEST_STATEMENT_DISPATCH"],"amountLimitCents":200000,"effectiveFrom":"2026-01-01T00:00:00Z","effectiveUntil":null,"revoked":false,"evidenceIds":["ev-authority"]},
+      {"grantId":"demo-grant-accountant","partyId":"demo-accountant","authorityVersion":"demo-authority-v1","allowedActionKinds":["RECONCILE_MONEY_RECORD","APPROVE_EXACT_VERSION","REQUEST_REFUND","REQUEST_LEDGER_POSTING"],"amountLimitCents":200000,"effectiveFrom":"2026-01-01T00:00:00Z","effectiveUntil":null,"revoked":false,"evidenceIds":["ev-authority"]}
+    ],
+    "recipients": {"versionId":"demo-recipients-v1","statementPartyIds":["demo-resident"],"refundPartyIds":["demo-resident"],"state":"VERIFIED","statementMethod":"DEMO_OUTBOX","refundMethod":"DEMO_OUTBOX","verifiedRouteReference":"demo-route-no-real-destination","evidenceIds":["ev-recipients"]},
+    "evidence": [
+      {"evidenceId":"ev-agreement","recordKind":"AGREEMENT","sourceClass":"TEST_ASSUMPTION","externalRecordId":"constructed-agreement","sourceVersion":"1","locator":"fixture:agreement","occurredAt":"2025-09-01T12:00:00Z","learnedAt":"2026-09-03T12:00:00Z","supersedesEvidenceId":null,"proposedItemIds":[],"associationAccepted":true,"excerpt":"Synthetic tenancy ending in full. No real lease or prospect record."},
+      {"evidenceId":"ev-dates","recordKind":"SOURCE_EVENT","sourceClass":"TEST_ASSUMPTION","externalRecordId":"constructed-dates","sourceVersion":"1","locator":"fixture:dates","occurredAt":"2026-09-02T12:00:00Z","learnedAt":"2026-09-03T12:00:00Z","supersedesEvidenceId":null,"proposedItemIds":[],"associationAccepted":true,"excerpt":"Source dates and accepted trigger are stipulated separately."},
+      {"evidenceId":"ev-balance","recordKind":"BALANCE_RECORD","sourceClass":"TEST_ASSUMPTION","externalRecordId":"constructed-balance","sourceVersion":"1","locator":"fixture:recorded-balance","occurredAt":"2026-09-03T12:00:00Z","learnedAt":"2026-09-03T12:00:00Z","supersedesEvidenceId":null,"proposedItemIds":[],"associationAccepted":true,"excerpt":"Recorded deposit balance is 200000 cents; no prior movements in this fixture."},
+      {"evidenceId":"ev-repair","recordKind":"INVOICE","sourceClass":"TEST_ASSUMPTION","externalRecordId":"constructed-repair","sourceVersion":"1","locator":"fixture:accepted-repair","occurredAt":"2026-09-04T12:00:00Z","learnedAt":"2026-09-04T12:00:00Z","supersedesEvidenceId":null,"proposedItemIds":["repair-250"],"associationAccepted":true,"excerpt":"Actual repair cost and tenant causation 25000 cents accepted for this test."},
+      {"evidenceId":"ev-paint","recordKind":"INVOICE","sourceClass":"TEST_ASSUMPTION","externalRecordId":"constructed-paint","sourceVersion":"1","locator":"fixture:owner-paint","occurredAt":"2026-09-04T12:00:00Z","learnedAt":"2026-09-04T12:00:00Z","supersedesEvidenceId":null,"proposedItemIds":["paint-800"],"associationAccepted":true,"excerpt":"80000 cents of ordinary owner repainting; not a resident charge."},
+      {"evidenceId":"ev-extent","recordKind":"FACT_ASSERTION","sourceClass":"TEST_ASSUMPTION","externalRecordId":"constructed-extent","sourceVersion":"1","locator":"fixture:unresolved-extent","occurredAt":"2026-09-04T12:00:00Z","learnedAt":"2026-09-04T12:00:00Z","supersedesEvidenceId":null,"proposedItemIds":["additional-item"],"associationAccepted":true,"excerpt":"Separate potentially chargeable item whose extent remains unknown; does not itself establish a statutory exception."},
+      {"evidenceId":"ev-authority","recordKind":"AUTHORITY_RECORD","sourceClass":"TEST_ASSUMPTION","externalRecordId":"constructed-authority","sourceVersion":"1","locator":"fixture:authority","occurredAt":"2026-01-01T00:00:00Z","learnedAt":"2026-09-03T12:00:00Z","supersedesEvidenceId":null,"proposedItemIds":[],"associationAccepted":true,"excerpt":"Synthetic authority inputs only; no Foundry principal or live permission granted."},
+      {"evidenceId":"ev-recipients","recordKind":"RECIPIENT_INSTRUCTIONS","sourceClass":"TEST_ASSUMPTION","externalRecordId":"constructed-recipient","sourceVersion":"1","locator":"fixture:recipient","occurredAt":"2026-09-03T12:00:00Z","learnedAt":"2026-09-03T12:00:00Z","supersedesEvidenceId":null,"proposedItemIds":[],"associationAccepted":true,"excerpt":"Demo outbox reference only, no real address, email or bank route."}
+    ],
+    "charges": [
+      {"itemId":"repair-250","location":"Synthetic unit / item A","description":"Accepted tenant-caused repair","category":"ORDINARY_DAMAGE","costState":"KNOWN","vendorCostCents":25000,"costVersionId":"ev-repair","proposedAllocation":"TENANT","acceptedAllocation":"TENANT","allowabilityState":"SUPPORTED","supportedAmountCents":25000,"choiceState":"CHOSEN","chosenAmountCents":25000,"reason":"Accepted causation, actual cost and allowability are test inputs.","evidenceIds":["ev-repair"],"unresolvedQuestionIds":[],"reviewRequired":false},
+      {"itemId":"paint-800","location":"Synthetic unit / walls","description":"Ordinary owner repainting","category":"ORDINARY_OWNER_REPAINTING","costState":"KNOWN","vendorCostCents":80000,"costVersionId":"ev-paint","proposedAllocation":"OWNER","acceptedAllocation":"OWNER","allowabilityState":"DISALLOWED","supportedAmountCents":0,"choiceState":"NOT_APPLICABLE","chosenAmountCents":0,"reason":"Owner cost, not a waiver of an otherwise supported resident charge.","evidenceIds":["ev-paint"],"unresolvedQuestionIds":[],"reviewRequired":false},
+      {"itemId":"additional-item","location":"Synthetic unit / item C","description":"Separate item with unresolved extent","category":"ORDINARY_DAMAGE","costState":"UNKNOWN","vendorCostCents":null,"costVersionId":null,"proposedAllocation":"UNRESOLVED","acceptedAllocation":"UNRESOLVED","allowabilityState":"UNRESOLVED","supportedAmountCents":null,"choiceState":"NOT_DECIDED","chosenAmountCents":null,"reason":"Unknown extent and accepted allowance; not zero.","evidenceIds":["ev-extent"],"unresolvedQuestionIds":["additional-extent"],"reviewRequired":true}
+    ],
+    "depositBalance": {"balanceId":"demo-balance-v1","amountCents":200000,"asOf":"2026-09-03T12:00:00Z","custodianPartyId":"demo-custodian","sourceEvidenceId":"ev-balance","basis":"SNAPSHOT_WITH_EXPLICIT_INCLUDED_TRANSACTIONS","includedTransactionIds":[],"reconciliationState":"RECONCILED"},
+    "moneyEvents": [],
+    "otherBalances": [],
+    "questions": [{"questionId":"additional-extent","question":"What actual cost and tenant responsibility are established for the additional item?","reason":"Needed to determine the remaining proposed deduction; unknown is not zero.","resolverRole":"MANAGER","resolverPartyId":"demo-manager","neededRecord":"Final itemized record and responsibility decision","affectedItemIds":["additional-item"],"affectedActionKinds":["PREPARE_STATEMENT","REQUEST_REFUND"]}],
+    "specialCircumstances": [],
+    "interimConditionState": "UNCONFIRMED",
+    "interimConditionEvidenceIds": [],
+    "interimConditionReason": "A missing cost alone does not establish the reviewed interim condition.",
+    "priorStatements": [],
+    "priorApprovals": [],
+    "priorRequests": [],
+    "executionEvents": [],
+    "relatedTasks": []
+  }
+}

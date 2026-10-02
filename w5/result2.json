@@ -1,0 +1,179 @@
+{
+ "steps": [
+  {
+   "at": "18:18:02",
+   "name": "accept plan rev 2",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "18:19:12",
+   "name": "order turn 1: Ready to continue | The owner's funding confirmation has been recorded. Check available funds before commissioning.",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "18:20:25",
+   "name": "order turn 2: Ready to continue | The accepted work has been commissioned within the quoted scope and confirmed owner funds.",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "18:21:34",
+   "name": "order turn 3: Ready to continue | The agreed provider advance has been requested. Wait for confirmation before delivery.",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "18:22:44",
+   "name": "order turn 4: Waiting for provider | The existing work is awaiting its provider response or scheduled report.",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "18:23:56",
+   "name": "order turn 5: Ready to continue | Confirmed requirements: Keep the existing entrance door. The provider requires the agreed advance before confirming delivery. Advance of 2500; balance after com",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "18:25:05",
+   "name": "order turn 6: Ready to continue | The payment service has returned an outcome. Continue with the confirmed result.",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "18:26:15",
+   "name": "order turn 7: Ready to continue | The advance is confirmed. Ask the provider to confirm the appointment.",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "18:27:23",
+   "name": "order turn 8: Waiting for provider | The existing work is awaiting its provider response or scheduled report.",
+   "code": 200,
+   "error": ""
+  },
+  {
+   "at": "18:28:32",
+   "name": "order turn 9: Ready to continue | The provider can attend at the next available time.",
+   "code": 200,
+   "error": ""
+  }
+ ],
+ "workspaceId": "workspace:a9578a5862eee0ba9020f3001e2e8d3ed8a19b6c7bf0ba1517c3dc4fc4d08cc0",
+ "handoffId": "handoff:0c20ec4c067600de5ac10ddd38b8098c8cc495893fe11b7a53a83091c0ec478c",
+ "mainBefore": {
+  "HandoffWorkspace": 3,
+  "HandoffCase": 3,
+  "HandoffJob": 0,
+  "HandoffMessage": 123
+ },
+ "planAccepted": {
+  "workPlanId": "plan:11ca8d3090562e068a46f705ca142c2cfb28eac9b13c1cd826c5878fd62ca50d",
+  "revision": "2",
+  "status": "Ready",
+  "fixedRequirements": [
+   "Keep the existing entrance door."
+  ]
+ },
+ "jobs": [
+  {
+   "title": "Make the entrance secure",
+   "status": "Scheduled",
+   "requirements": [
+    "Keep the existing entrance door."
+   ],
+   "appointmentAt": "2026-09-28T09:00:00Z",
+   "progressSummary": "The provider can attend at the next available time."
+  }
+ ],
+ "messages": [
+  {
+   "createdAt": "2026-09-27T05:09:17.067Z",
+   "direction": "Outgoing",
+   "purpose": "Quote",
+   "title": "Quote for Make the entrance secure",
+   "body": "Please issue a formal quote for serviceId \"entrance\" to: adjust and function-check the existing entrance latch so it catches reliably and the entrance is secure. Must keep the existing entrance door (no replacement). Include total price, any deposit/advance requirements, earliest availability, and any access requirements.",
+   "detailsJson": "{\"providerDocumentId\":\"document:088ef5e4fdc8f881487341d91787d22767db4fd434ddcbfd9c3027bf9a03df52\",\"purpose\":\"Quote\",\"question\":\"Please issue a formal quote for serviceId \\\"entrance\\\" to: adjust and function-check the existing entrance latch so it catches reliably and the entrance is secure. Must keep the existing entrance door (no replacement). Include total price, any deposit/advance requirements, earliest availability, and any access requirements.\",\"recipientPartyId\":\"party:56d16260929cdd656b7a7554a770b95f2e25e53157b2e757a3dfc41eb5064b99\",\"serviceId\":\"entrance\"}"
+  },
+  {
+   "createdAt": "2026-09-27T05:09:17.067Z",
+   "direction": "Outgoing",
+   "purpose": "Information",
+   "title": "Information requested",
+   "body": "Per the tenancy agreement requiring owner approval before arranging work: do you approve scheduling House Care to adjust and function-check the existing entrance latch (keeping the existing entrance door), to achieve a secure entrance for the next occupant? If yes, please confirm preferred access window (provider shows availability starting 2026-09-28).",
+   "detailsJson": "{\"purpose\":\"Information\",\"question\":\"Per the tenancy agreement requiring owner approval before arranging work: do you approve scheduling House Care to adjust and function-check the existing entrance latch (keeping the existing entrance door), to achieve a secure entrance for the next occupant? If yes, please confirm preferred access window (provider shows availability starting 2026-09-28).\",\"recipientPartyId\":\"party:3c2056399a2038582084fd1598b08181658a626bcf804cf0da80edf97bd65aa5\"}"
+  },
+  {
+   "createdAt": "2026-09-27T05:10:45.256Z",
+   "direction": "Incoming",
+   "purpose": "Information",
+   "title": "Reply received",
+   "body": "Owner funding confirmation: Owner funds are confirmed for property work.",
+   "detailsJson": "{\"quoteId\":null,\"unanswered\":false}"
+  },
+  {
+   "createdAt": "2026-09-27T05:11:55.118Z",
+   "direction": "Incoming",
+   "purpose": "Quote",
+   "title": "Provider offer received",
+   "body": "Make the entrance secure. Adjust and function-check entrance latch: $125.00. Advance of 2500; balance after completion",
+   "detailsJson": "{\"quoteId\":\"quote:359156833a3c20976b5dacfd6291dbb74957ffdcaa6b1a769061d62ecc61b05e\",\"unanswered\":false}"
+  },
+  {
+   "createdAt": "2026-09-27T05:17:20.351Z",
+   "direction": "Outgoing",
+   "purpose": "Information",
+   "title": "Information requested",
+   "body": "Per the agreement requiring owner approval before arranging work: do you approve scheduling House Care to adjust and function-check the existing entrance latch (keeping the existing entrance door) to secure the entrance? If yes, please confirm (1) preferred access window on/after 2026-09-28 and (2) who will provide access/keys.",
+   "detailsJson": "{\"purpose\":\"Information\",\"question\":\"Per the agreement requiring owner approval before arranging work: do you approve scheduling House Care to adjust and function-check the existing entrance latch (keeping the existing entrance door) to secure the entrance? If yes, please confirm (1) preferred access window on/after 2026-09-28 and (2) who will provide access/keys.\",\"recipientPartyId\":\"party:3c2056399a2038582084fd1598b08181658a626bcf804cf0da80edf97bd65aa5\"}"
+  },
+  {
+   "createdAt": "2026-09-27T05:19:10.833Z",
+   "direction": "Incoming",
+   "purpose": "Information",
+   "title": "Reply received",
+   "body": "Owner funding confirmation: Owner funds are confirmed for property work.",
+   "detailsJson": "{\"quoteId\":null,\"unanswered\":false}"
+  },
+  {
+   "createdAt": "2026-09-27T18:20:19.924Z",
+   "direction": "Outgoing",
+   "purpose": "Appointment",
+   "title": "Arrange Make the entrance secure",
+   "body": "Adjust and function-check entrance latch\nKeep the existing entrance door.\nPlease confirm these requirements when you book the visit.\nAdvance of 2500; balance after completion",
+   "detailsJson": "{\"jobId\":\"job:bd0ae16b14a1a5ef1de122c5a573244477a50b1e0516f5fe8b3349e8287b259c\",\"providerPartyId\":\"party:56d16260929cdd656b7a7554a770b95f2e25e53157b2e757a3dfc41eb5064b99\",\"purpose\":\"Appointment\",\"quoteId\":\"quote:359156833a3c20976b5dacfd6291dbb74957ffdcaa6b1a769061d62ecc61b05e\",\"scopeLineIds\":[\"latch\"]}"
+  },
+  {
+   "createdAt": "2026-09-27T18:23:51.311Z",
+   "direction": "Incoming",
+   "purpose": "Appointment",
+   "title": "Advance required",
+   "body": "Confirmed requirements: Keep the existing entrance door. The provider requires the agreed advance before confirming delivery. Advance of 2500; balance after completion",
+   "detailsJson": "{\"confirmedRequirements\":[\"Keep the existing entrance door.\"],\"inspectionIds\":[],\"invoiceIds\":[],\"outcome\":\"Advance required\",\"quoteIds\":[],\"summary\":\"Confirmed requirements: Keep the existing entrance door. The provider requires the agreed advance before confirming delivery. Advance of 2500; balance after completion\"}"
+  },
+  {
+   "createdAt": "2026-09-27T18:26:11.773Z",
+   "direction": "Outgoing",
+   "purpose": "Appointment",
+   "title": "Appointment for Make the entrance secure",
+   "body": "Appointment: Adjust and function-check entrance latch",
+   "detailsJson": "{\"jobId\":\"job:bd0ae16b14a1a5ef1de122c5a573244477a50b1e0516f5fe8b3349e8287b259c\",\"previousReplyId\":\"message:44bb56ded94c6ec269be8566fa9ea65c5674b546ecd515f64e72b865b4191aa6\",\"providerPartyId\":\"party:56d16260929cdd656b7a7554a770b95f2e25e53157b2e757a3dfc41eb5064b99\",\"purpose\":\"Appointment\",\"quoteId\":\"quote:359156833a3c20976b5dacfd6291dbb74957ffdcaa6b1a769061d62ecc61b05e\",\"scopeLineIds\":[\"latch\"]}"
+  },
+  {
+   "createdAt": "2026-09-27T18:28:29.625Z",
+   "direction": "Incoming",
+   "purpose": "Appointment",
+   "title": "Appointment",
+   "body": "The provider can attend at the next available time.",
+   "detailsJson": "{\"appointmentAt\":\"2026-09-28T09:00:00.000Z\",\"inspectionIds\":[],\"invoiceIds\":[],\"outcome\":\"Appointment\",\"quoteIds\":[],\"summary\":\"The provider can attend at the next available time.\"}"
+  }
+ ],
+ "mainAfter": {
+  "HandoffWorkspace": 3,
+  "HandoffCase": 3,
+  "HandoffJob": 0,
+  "HandoffMessage": 123
+ }
+}

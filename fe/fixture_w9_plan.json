@@ -1,0 +1,915 @@
+{
+ "version": "2",
+ "jobs": [],
+ "quotes": [
+  {
+   "id": "quote:b11bedea9cd39d92090247fcee39ee858deb1a217cb5bfe08abd85ebf6559ec5",
+   "title": "Restoration assessment",
+   "providerPartyId": "party:bb98dc5bc529b163e577070596d564f65aa76d2433df6862b1529c5289146d43",
+   "kind": "Assessment",
+   "status": "Offered",
+   "currency": "USD",
+   "lines": [
+    {
+     "lineId": "site-assessment",
+     "description": "Site assessment",
+     "amountCents": "60000"
+    },
+    {
+     "lineId": "condition-schedule",
+     "description": "Condition and quantity schedule",
+     "amountCents": "30000"
+    },
+    {
+     "lineId": "scope-budget",
+     "description": "Scope and budget note",
+     "amountCents": "30000"
+    }
+   ],
+   "totalCents": "120000",
+   "depositCents": "0",
+   "paymentTerms": "Invoice on delivery of the report, payable within 14 days.",
+   "requirements": [],
+   "availableFrom": "2026-09-29T13:00:00.000Z",
+   "validUntil": "2026-10-31T23:59:59.000Z",
+   "sourceDocumentId": "document:761d64e38c9caa1447580e25c1d606f0bd8d8f9c614532d552eb71bf81e5760a"
+  },
+  {
+   "id": "quote:3c84570206d7a9e056cbdf7778bce435ca335f17c23f4966aa970de9300c23aa",
+   "title": "Floor restoration",
+   "providerPartyId": "party:a617fa27d41bc5b59581abd863cfb38b0eb727c9129a91010b8ee9ad7ba2afa2",
+   "kind": "Repair",
+   "status": "Offered",
+   "currency": "USD",
+   "lines": [
+    {
+     "lineId": "sand-refinish",
+     "description": "Sand and refinish parquet and plank floors",
+     "amountCents": "540000"
+    },
+    {
+     "lineId": "parquet-inlay",
+     "description": "Replace damaged parquet and inlay border pieces",
+     "amountCents": "185000"
+    },
+    {
+     "lineId": "stain-seal",
+     "description": "Treat and seal urine-stained plank floors",
+     "amountCents": "76900"
+    }
+   ],
+   "totalCents": "801900",
+   "depositCents": "200000",
+   "paymentTerms": "Deposit of $2,000 on booking; balance on completion, payable within 7 days.",
+   "requirements": [],
+   "availableFrom": "2026-10-12T13:00:00.000Z",
+   "validUntil": "2026-11-30T23:59:59.000Z",
+   "sourceDocumentId": "document:d7aa9bf56f37a5016d8b007a55a595b3eebf57aad61ab88e55597aefe142b796"
+  }
+ ],
+ "inspections": [],
+ "invoices": [],
+ "funding": [],
+ "payments": [],
+ "workspace": {
+  "id": "workspace:5614d7483eef9b6c74c5c18cff0145cf581e8674caa64aa55a2d09ce966f8b5b",
+  "name": "Whitcomb Holdings",
+  "mode": "demo"
+ },
+ "handoff": {
+  "id": "handoff:c02c354aacd30a72a73bf2630d1b3ff2a5b7c11fe9783f143f90aea5e33b919a",
+  "title": "142 West 88th Street move-out",
+  "goal": "Make the property ready for its next occupant and resolve the departing tenancy's financial relationship, allowing the two outcomes to progress independently.",
+  "businessDate": "2026-09-28",
+  "physicalProgress": "Preparing plan",
+  "financialProgress": "Not started",
+  "nextStep": "Feld Architecture PLLC sent a quote.",
+  "revision": "21",
+  "operativeDecisionId": null
+ },
+ "property": {
+  "id": "property:d3fe15fc8effbdc8ef94e6d4fd9f9028310c85081284a209410937c03b7ae7c8",
+  "name": "142 West 88th Street, Triplex",
+  "address": "142 West 88th Street, New York, NY 10024",
+  "description": "Upper West Side brownstone. The rented triplex runs from the parlor floor to the third floor, with period parquet and inlay floors, mahogany woodwork, three fireplaces and a third-floor loft. The owner keeps the garden-level media room."
+ },
+ "tenancy": {
+  "id": "tenancy:1e7a9e4b5a4fe484ac52499590f46278d565e722f2d67b6a7059e49519a85327",
+  "title": "Brenner tenancy, 142 West 88th Street",
+  "startDate": "2023-01-01",
+  "endDate": "2026-09-23",
+  "endingKind": "Tenancy ending"
+ },
+ "parties": [
+  {
+   "id": "party:063acf682a050787a140840bae97ea623cbfc6ff1ff624fbf5703129f9938a60",
+   "name": "Westside Plaster & Paint",
+   "kind": "Organization",
+   "description": "Plaster repair, painting, woodwork refinishing and general finishing."
+  },
+  {
+   "id": "party:a617fa27d41bc5b59581abd863cfb38b0eb727c9129a91010b8ee9ad7ba2afa2",
+   "name": "Hudson Floor Restoration",
+   "kind": "Organization",
+   "description": "Hardwood and parquet sanding, refinishing and repair."
+  },
+  {
+   "id": "party:bb98dc5bc529b163e577070596d564f65aa76d2433df6862b1529c5289146d43",
+   "name": "Feld Architecture PLLC",
+   "kind": "Organization",
+   "description": "Architect who handled the owner's kitchen water repair in August 2026. Offers condition assessments and repair scoping."
+  },
+  {
+   "id": "party:dcabdf6a00cf5ed2008af45649cb867f797dc7b3ba60ccede4ecd81c3ea4650c",
+   "name": "Michael Brenner",
+   "kind": "Person",
+   "description": "Departing tenant. Attended the move-out walk-through."
+  },
+  {
+   "id": "party:62cd0895458611f3e86c6eec2f468204d4f4612191e09e57e8a6852082b65598",
+   "name": "Carroll Stair & Millwork",
+   "kind": "Organization",
+   "description": "Stair, railing and millwork repair and refinishing."
+  },
+  {
+   "id": "party:4f97857f982d00f90cbabfa840e2db305293a6791a2fd50fbe35b4d1556b6509",
+   "name": "Broadway Carpet & Runner",
+   "kind": "Organization",
+   "description": "Stair runners and carpet supply and installation."
+  },
+  {
+   "id": "party:ad3bef413e525068f7278ffcab69de34a129035a907abc63b21e2d1304ab72bf",
+   "name": "Laura Brenner",
+   "kind": "Person",
+   "description": "Departing tenant. Main contact with the owner during the tenancy."
+  },
+  {
+   "id": "party:501ef31d348030a095a8b336b644175bff9faf27f80a4b19a7b4c8a202059cbc",
+   "name": "Whitcomb Holdings LLC",
+   "kind": "Organization",
+   "description": "Landlord of the triplex at 142 West 88th Street."
+  },
+  {
+   "id": "party:d16d715e532b72b12c5a07cf9514ba0ca18c8192128acac29f71105102cf2548",
+   "name": "Eleanor Whitcomb",
+   "kind": "Person",
+   "description": "Owner of 142 West 88th Street and principal of Whitcomb Holdings LLC."
+  }
+ ],
+ "agreements": [
+  {
+   "id": "agreement:01f20272b7e2e78d423edfa6626a3c3a7f80c6f854d3716f40b3eaf8b20c16a1",
+   "title": "Lease, renewal and September 2026 modification",
+   "termsText": "Return the apartment in its original condition, normal wear and tear excepted; the deposit may be applied to damage. As-is acceptance except latent defects. Pre-existing damage to be reported within two days of occupancy. Four named dogs permitted. Tenant pays half of water and gas. Walk-through within 48 hours of vacancy. Term ends September 23, 2026.",
+   "sourceDocumentId": "document:c0dda946cce6d587164c7312fc5bbbd6f322eb379b60c7ebcb9d14cf9eb4ec2f"
+  }
+ ],
+ "obligations": [
+  {
+   "id": "obligation:496e92cd81ea8828aab4ff90432647a50afc7050d80d9589ccecff3606c06d1a",
+   "title": "Return the apartment in its original condition",
+   "description": "Return the triplex in its original condition, normal wear and tear excepted.",
+   "status": "Under assessment"
+  },
+  {
+   "id": "obligation:85c9c498205f2d4c7f423e720eeae0acf2893b6ac0ab646750e67d216ec01484",
+   "title": "Pay half of water and gas bills",
+   "description": "Pay one half of the water and gas bills within 30 days of receiving copies.",
+   "status": "Open"
+  }
+ ],
+ "documents": [
+  {
+   "id": "document:eaa31fe71c84a7741d9d112c722ee331b8a1f84038a96b39873ec4d6ad220e8b",
+   "title": "Restoration funds",
+   "sourceKind": "Prepared",
+   "sourceDocumentIds": [
+    "original:ed286e621700e73aee6449f3372bb3d017e294cf8a2928a1f772c38f08244bf4"
+   ],
+   "text": "Whitcomb Holdings has set aside $65,000 for the move-out restoration of the triplex. This is separate from the Brenners' security deposit.",
+   "kind": "Owner funding",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-25",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:0ab83a25e3d618954f003b0e01f94a4061bcabd1996d01e3d3376b6edd84729e",
+   "title": "Feld Architecture: restoration assessment",
+   "sourceKind": "Prepared",
+   "sourceDocumentIds": [
+    "original:d9e9fe0692eb08e98c698a5bc4f3130e971fbcc301b80167b935a0d96eb23a57"
+   ],
+   "text": "Feld Architecture offers a restoration assessment of the triplex. One site visit of up to three hours. We produce a room-by-room condition schedule with photographs and measurements, a written scope of repairs with a preliminary budget, and flag any immediate safety issues. Fixed fee: site assessment $600; condition and quantity schedule $300; scope and budget note $300; total $1,200 including travel. Earliest visit Tuesday, September 29. Report within two business days of the visit. Invoice on delivery of the report, payable within 14 days. Offer valid through October 31, 2026.",
+   "kind": "Provider information",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-25",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:1fc44e9a83963e7eaf44731e78e895d7bcef3ecc2ecd2b7a0e9122751e59c1c1",
+   "title": "Condition and maintenance history",
+   "sourceKind": "Prepared",
+   "sourceDocumentIds": [
+    "original:d88643c8db537b46f6a04fb071cd4d33d0c13af3689660d8cd4a90a0908ec56f"
+   ],
+   "text": "Condition and maintenance history, compiled by Eleanor Whitcomb.\nBefore the tenancy: the apartment was painted and the floors redone in late 2022. Karen Liu's 2022 listing photographs show intact fireplace tiles and window woodwork, and good floors with a few dark spots and one diagonal scratch in the living room. A family stayed briefly over the 2022 holidays before the Brenners moved in on January 9, 2023.\nJune 11, 2024: Laura Brenner emailed 22 photographs of screens, a loose dining-room hearth, loose or broken tiles, missing molding and a small missing parquet piece, describing them as existing on arrival. None of this was reported within the two days required by rider \u00b614.\nComplaints during the tenancy: uneven room temperatures, a clogged toilet, a roof leak, weak dryer performance, bin lids and the intercom. Work done: screens repaired, window weather stripping and five temperature sensors added, a new intercom installed and the leaks repaired.\nJune 2024: during a screen inspection Eleanor found a dog accident on the floor; Laura apologized and cleaned it up.\nRepeated indoor grilling caused grease odors and set off smoke alarms. Eleanor asked the Brenners to stop.\nAugust 2026: a slow leak under the kitchen sink damaged the cabinet base and subfloor. Feld Architecture managed the repair: new supply lines and shutoff valves, a replaced sink base and a patched subfloor. Work finished August 21; Feld signed it off on August 24 after a moisture check. No further work is needed.",
+   "kind": "Condition report",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-25",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:e42cc1bdb31db86264d76092aeb486a468f74b45c5bf3ab9ced28db3082b45a4",
+   "title": "Hudson Floor Restoration: floor restoration",
+   "sourceKind": "Prepared",
+   "sourceDocumentIds": [
+    "original:bf463c601bd50c3665a43f958919980776a7e152c80a0a67e6054a8894af940b"
+   ],
+   "text": "Hudson Floor Restoration: restore the triplex floors, about 900 sq ft. Sand and refinish parquet and plank floors: $5,400. Replace damaged parquet and missing inlay border pieces with matched stock: $1,850. Treat and seal urine-stained plank floors: $769. Total $8,019. Deposit of $2,000 on booking; balance on completion, payable within 7 days. Three working days on site. Earliest start October 12. Offer valid through November 30, 2026.",
+   "kind": "Provider information",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-25",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:e411d6c05ae9bd53deae62a61a6c0a7b3ec816a8f11420057d4c3f57f19de68a",
+   "title": "Condition after move-out",
+   "sourceKind": "Prepared",
+   "text": "Conditions found at the September 24 walk-through, by area.",
+   "kind": "Property condition",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-24",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:c0dda946cce6d587164c7312fc5bbbd6f322eb379b60c7ebcb9d14cf9eb4ec2f",
+   "title": "Lease, renewal and September 2026 modification",
+   "sourceKind": "Prepared",
+   "sourceDocumentIds": [
+    "original:e0df62dd9f79b25afb270acfd6e0c3c5a0805b744307fe6de8e38cd853709da9"
+   ],
+   "text": "Residential lease, 142 West 88th Street, Triplex. Landlord: Whitcomb Holdings LLC. Tenants: Laura and Michael Brenner. Signed November 22, 2022. Initial term January 1, 2023 to June 30, 2024. Renewed April 9, 2024 through June 30, 2027. Modified September 2, 2026 to end on September 23, 2026. Security deposit held by landlord: $43,800.\nLease \u00b631: Tenant has inspected the apartment and building, states they are in good order and repair, and takes the apartment as-is except for latent defects.\nRider \u00b64: Tenant pays one half of the water and gas bills within 30 days of receiving copies from the landlord.\nRider \u00b66: Tenant returns the apartment in its original condition, normal wear and tear excepted. Landlord may apply the security deposit to damage.\nRider \u00b614: Tenant must inform landlord of any pre-existing damage within two days of occupancy.\nRider \u00b639: Landlord permits the tenant's four existing dogs: two small mixed-breed dogs, one bulldog and one miniature dachshund. No additional pets without the landlord's prior permission.\nModification \u00b68: Landlord and tenant walk through the apartment for damage within 48 hours of vacancy.",
+   "kind": "Agreement",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-02",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:761d64e38c9caa1447580e25c1d606f0bd8d8f9c614532d552eb71bf81e5760a",
+   "title": "Restoration assessment",
+   "sourceKind": "Prepared",
+   "text": "Restoration assessment. Site assessment: $600.00; Condition and quantity schedule: $300.00; Scope and budget note: $300.00. Invoice on delivery of the report, payable within 14 days.",
+   "kind": "Quote",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-28",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:fffddaad431454914a721619c2797e0f99232a7170555be5f991eda70798197e",
+   "title": "Westside Plaster & Paint: plaster, paint and woodwork",
+   "sourceKind": "Prepared",
+   "sourceDocumentIds": [
+    "original:8689399d7ac742cc1bf125f2c68a667e3f3ceb823659bd9671ec758c9f227b3a"
+   ],
+   "text": "Westside Plaster & Paint: plaster repair and soot cleanup in the great room, northeast bedroom and west master suite: $11,366.67. Paint walls, ceilings and trim throughout, including ceiling repairs at the light fixtures: $12,783.32. Restore woodwork and fireplaces: window sills, doorway casing, moldings, mantels, hearth tiles, foyer door veneer and the northeast bedroom door: $10,000. Bathroom repairs and caulking: tub chip repair and vanity panel: $3,762.50. Total $37,912.49. Deposit of $10,000 at start; balance on completion, payable within 14 days. About two weeks on site. Earliest start October 5. Offer valid through November 30, 2026.",
+   "kind": "Provider information",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-25",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:fbe84321a4b264696f74c34c2fd81515bbeb508f70843df66f7ae390f4198c54",
+   "title": "Move-out walk-through, September 24, 2026",
+   "sourceKind": "Prepared",
+   "sourceDocumentIds": [
+    "original:30c897fad5c0d5db8c3824df29ef1ac42146d9237834109f3797b28a6b1b8ca6"
+   ],
+   "text": "Move-out walk-through, September 24, 2026. Present: Eleanor Whitcomb (owner), Michael Brenner (tenant), Karen Liu (broker) and Paul Novak. Eleanor took 60 photographs; Paul recorded a video.\nEntrance and stairs: front step chipped; saddle past the vestibule gouged with a broken corner; common-foyer mahogany door with veneer sheared off one section; newel post chipped and gouged; stair carpet edges scraped and torn on several steps; top molding and rail edge damaged between the second and third floors.\nLiving room: parquet scraped, scratched and gouged; decorative border missing inlay pieces and stained; finish worn through in places.\nDining room: paint blotches, gouges and a large stain on the parquet; damaged parquet corners; antique hearth tiles missing and broken; mahogany mantel damaged; a large piece of the doorway casing damaged or missing.\nOffice: carpet heavily stained; floor scratched. Mahogany window sills throughout: stains, ring marks and gouges.\nWest master suite: large dark stains on the plank floor, including in front of the fireplace, with a urine odor; scrapes and gouges; soot staining on the wall, ceiling, mantel and shelving; a deep gouge in the molding.\nEast master bedroom: ceiling damaged where the period chandeliers were replaced with the tenants' fixtures. East bathroom ceiling stained and damaged.\nThird floor: southeast bedroom loft-ladder railing pulled away, with protruding nails and torn wood; not safe to use. Northeast storage-ladder railing scraped. Northeast bedroom plank floor with a dark urine stain; bedroom door broken and the plaster behind it damaged. Bathroom tub porcelain chipped and vanity panel broken. Great-room plank floor heavily stained and gouged with a urine odor; plaster damage and staining down one wall; ceiling damaged around the light fixtures.\nKaren Liu also noted odors in several rooms.",
+   "kind": "Inspection report",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-24",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:bab5b34b09665be7e17cc2c7fa60336868ec9db52b66b41b54b701edf2ddd94f",
+   "title": "Feld Architecture: kitchen repair sign-off, August 24, 2026",
+   "sourceKind": "Prepared",
+   "sourceDocumentIds": [
+    "original:473176045366b13053d26a3c2af3bbcf24655f6676c98db4c59ba52285aac0c3"
+   ],
+   "text": "Feld Architecture PLLC to Eleanor Whitcomb, August 24, 2026. Kitchen water repair, 142 West 88th Street: completion and sign-off. The leak under the kitchen sink came from a failed supply line. The plumber replaced both supply lines and shutoff valves; the carpenter replaced the sink base cabinet and patched 6 sq ft of subfloor. A moisture check on August 24 read dry at every point. The repair is complete and signed off; no further work is needed.",
+   "kind": "Correspondence",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-08-24",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:a97a2d2537c06646dd65164f899f601b916a3a95b27b5f9851a575f106f2931f",
+   "title": "Owner instructions",
+   "sourceKind": "Prepared",
+   "sourceDocumentIds": [
+    "original:4452e58ec9a3131e2a80aad0b3bdfc3b1b4e973302ea725413aa9c7c299ed0eb"
+   ],
+   "text": "From Eleanor Whitcomb, September 25, 2026.\nI want the triplex back on the market as soon as possible, ideally showing by late October for a December 1 move-in.\nHave Feld Architecture walk the apartment first and give me a condition schedule and a scope with a budget before we commit to repairs. Then line up the trades.\nThe loft-ladder railing is dangerous. Keep everyone off that ladder until it is fixed.\nFeld finished the kitchen water repair in August and signed it off, so there's nothing left to do in the kitchen.\nYou can approve work within the funds I've set aside; I don't need to sign each contract. Deal with the contractors directly.\nI'll settle the Brenners' deposit separately once we know what the damage costs.",
+   "kind": "Instruction",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-25",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:453fb556539fa1f50da9e4731833f576e08a773b8a3b0dfcd625fac0ac5aa8f6",
+   "title": "Broadway Carpet & Runner: stair runner and office carpet",
+   "sourceKind": "Prepared",
+   "sourceDocumentIds": [
+    "original:2ad375ffef3b283d759c8e2399b337cbe81c2d4d726b6328b9a1464fd3f7fead"
+   ],
+   "text": "Broadway Carpet & Runner: supply and install a new stair runner: $2,500. Replace the office carpet: $2,257.84. Total $4,757.84. Payment on installation, due within 14 days. One day on site, after floor work is finished. Earliest date October 19. Offer valid through November 30, 2026.",
+   "kind": "Provider information",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-25",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:75c773a26c3aa3f694416b7276199846f51dc23d2e24320f5a155972569773de",
+   "title": "Carroll Stair & Millwork: loft railing and stair repair",
+   "sourceKind": "Prepared",
+   "sourceDocumentIds": [
+    "original:551c77ef03da1869e69eb049ff1898f554000a5ad030bb680b253e2592ba6091"
+   ],
+   "text": "Carroll Stair & Millwork: rebuild and secure the southeast bedroom loft-ladder railing: $1,500, about three hours, as early as September 30. Repair and refinish the main stair, newel post, trim, top molding and rail edge: $9,000, two working days from October 5. Each job is invoiced on completion, payable within 14 days. Offers valid through November 30, 2026.",
+   "kind": "Provider information",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-25",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:b1748a00fdbb4f675d7f8f0845dfd9edddadc93d7ade69432a1e3248585c142f",
+   "title": "Laura Brenner: apartment condition, June 11, 2024",
+   "sourceKind": "Prepared",
+   "sourceDocumentIds": [
+    "original:0d95cee5c588ce069991383a88e47d346d1a9941278b9840a4c06af343f4dde3"
+   ],
+   "text": "From: Laura Brenner\nTo: Eleanor Whitcomb\nDate: June 11, 2024\nSubject: Apartment condition\n\nAttached are photographs detailing the condition of the screens and other issues in the apartment, all of which were existing upon our arrival. I know you're aware of the terrace, the intercom/doorbell and perhaps others of these as well, but I've included everything that's not strictly cosmetic like the paint and wires. If you have questions about any of this please let me know.\n\nLaura\n\n22 photographs attached.",
+   "kind": "Correspondence",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2024-06-11",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:53ce7e4cf123553986331d3480f40632708315bce3209315499a1f65ca2a120e",
+   "title": "Access arrangements",
+   "sourceKind": "Prepared",
+   "sourceDocumentIds": [
+    "original:5fd7a63cd9ecb58efa3f8b4e0b0f4c6511d57e4639bee981489a45265e918301"
+   ],
+   "text": "The apartment is empty. Eleanor holds the keys and lets contractors in for agreed visits; call her the day before. Power, heat and water are on. Keep off the southeast bedroom loft ladder until the railing is repaired. Contractors protect the floors and stairs while they work.",
+   "kind": "Access arrangements",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-25",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "document:d7aa9bf56f37a5016d8b007a55a595b3eebf57aad61ab88e55597aefe142b796",
+   "title": "Floor restoration",
+   "sourceKind": "Prepared",
+   "text": "Floor restoration. Sand and refinish parquet and plank floors: $5,400.00; Replace damaged parquet and inlay border pieces: $1,850.00; Treat and seal urine-stained plank floors: $769.00. Deposit of $2,000 on booking; balance on completion, payable within 7 days.",
+   "kind": "Quote",
+   "sourceVersion": "1",
+   "mimeType": null,
+   "availableFrom": "2026-09-28",
+   "mediaSetRid": null,
+   "mediaItemRid": null,
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "original:d9e9fe0692eb08e98c698a5bc4f3130e971fbcc301b80167b935a0d96eb23a57",
+   "title": "Feld Architecture PLLC proposal.pdf",
+   "sourceKind": "Original",
+   "text": "Open the attached file.",
+   "kind": "Contextual material",
+   "sourceVersion": "1790562116082935",
+   "mimeType": "application/pdf",
+   "availableFrom": "2026-09-28",
+   "mediaSetRid": "ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427",
+   "mediaItemRid": "ri.mio.main.media-item.01a0e5d1-a1f2-72e8-9a77-dd10656b8ef4",
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "original:ed286e621700e73aee6449f3372bb3d017e294cf8a2928a1f772c38f08244bf4",
+   "title": "Restoration funds letter.pdf",
+   "sourceKind": "Original",
+   "text": "Open the attached file.",
+   "kind": "Contextual material",
+   "sourceVersion": "1790562113713172",
+   "mimeType": "application/pdf",
+   "availableFrom": "2026-09-28",
+   "mediaSetRid": "ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427",
+   "mediaItemRid": "ri.mio.main.media-item.01a0e5d1-98b0-7651-95b9-02b7eed2d4c4",
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "original:473176045366b13053d26a3c2af3bbcf24655f6676c98db4c59ba52285aac0c3",
+   "title": "Feld Architecture, kitchen repair sign-off.pdf",
+   "sourceKind": "Original",
+   "text": "Open the attached file.",
+   "kind": "Contextual material",
+   "sourceVersion": "1790562109059357",
+   "mimeType": "application/pdf",
+   "availableFrom": "2026-09-28",
+   "mediaSetRid": "ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427",
+   "mediaItemRid": "ri.mio.main.media-item.01a0e5d1-8683-71dc-badc-d9e781a6c201",
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "original:bf463c601bd50c3665a43f958919980776a7e152c80a0a67e6054a8894af940b",
+   "title": "Hudson Floor Restoration proposal.pdf",
+   "sourceKind": "Original",
+   "text": "Open the attached file.",
+   "kind": "Contextual material",
+   "sourceVersion": "1790562118029084",
+   "mimeType": "application/pdf",
+   "availableFrom": "2026-09-28",
+   "mediaSetRid": "ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427",
+   "mediaItemRid": "ri.mio.main.media-item.01a0e5d1-a98c-75a0-8077-b5fb8d5090b7",
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "original:8689399d7ac742cc1bf125f2c68a667e3f3ceb823659bd9671ec758c9f227b3a",
+   "title": "Westside Plaster & Paint proposal.pdf",
+   "sourceKind": "Original",
+   "text": "Open the attached file.",
+   "kind": "Contextual material",
+   "sourceVersion": "1790562120127325",
+   "mimeType": "application/pdf",
+   "availableFrom": "2026-09-28",
+   "mediaSetRid": "ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427",
+   "mediaItemRid": "ri.mio.main.media-item.01a0e5d1-b1bf-7129-8f27-f1b925cf20af",
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "original:d88643c8db537b46f6a04fb071cd4d33d0c13af3689660d8cd4a90a0908ec56f",
+   "title": "Condition and maintenance history.pdf",
+   "sourceKind": "Original",
+   "text": "Open the attached file.",
+   "kind": "Contextual material",
+   "sourceVersion": "1790562105234566",
+   "mimeType": "application/pdf",
+   "availableFrom": "2026-09-28",
+   "mediaSetRid": "ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427",
+   "mediaItemRid": "ri.mio.main.media-item.01a0e5d1-7792-72b1-9081-daa749bc1ade",
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "original:2ad375ffef3b283d759c8e2399b337cbe81c2d4d726b6328b9a1464fd3f7fead",
+   "title": "Broadway Carpet & Runner proposal.pdf",
+   "sourceKind": "Original",
+   "text": "Open the attached file.",
+   "kind": "Contextual material",
+   "sourceVersion": "1790562124438178",
+   "mimeType": "application/pdf",
+   "availableFrom": "2026-09-28",
+   "mediaSetRid": "ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427",
+   "mediaItemRid": "ri.mio.main.media-item.01a0e5d1-c295-76a0-a13f-f11ba0712108",
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "original:5fd7a63cd9ecb58efa3f8b4e0b0f4c6511d57e4639bee981489a45265e918301",
+   "title": "Access arrangements letter.pdf",
+   "sourceKind": "Original",
+   "text": "Open the attached file.",
+   "kind": "Contextual material",
+   "sourceVersion": "1790562111326332",
+   "mimeType": "application/pdf",
+   "availableFrom": "2026-09-28",
+   "mediaSetRid": "ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427",
+   "mediaItemRid": "ri.mio.main.media-item.01a0e5d1-8f5d-7674-a105-b673117f477a",
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "original:e0df62dd9f79b25afb270acfd6e0c3c5a0805b744307fe6de8e38cd853709da9",
+   "title": "Lease, 142 West 88th Street.pdf",
+   "sourceKind": "Original",
+   "text": "Open the attached file.",
+   "kind": "Contextual material",
+   "sourceVersion": "1790562098253613",
+   "mimeType": "application/pdf",
+   "availableFrom": "2026-09-28",
+   "mediaSetRid": "ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427",
+   "mediaItemRid": "ri.mio.main.media-item.01a0e5d1-5c4d-70b7-9310-ca9b478b8b94",
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "original:4452e58ec9a3131e2a80aad0b3bdfc3b1b4e973302ea725413aa9c7c299ed0eb",
+   "title": "Eleanor Whitcomb email, September 25, 2026.pdf",
+   "sourceKind": "Original",
+   "text": "Open the attached file.",
+   "kind": "Contextual material",
+   "sourceVersion": "1790562107151186",
+   "mimeType": "application/pdf",
+   "availableFrom": "2026-09-28",
+   "mediaSetRid": "ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427",
+   "mediaItemRid": "ri.mio.main.media-item.01a0e5d1-7f0e-7544-82b0-c7cfc3892d0d",
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "original:551c77ef03da1869e69eb049ff1898f554000a5ad030bb680b253e2592ba6091",
+   "title": "Carroll Stair & Millwork proposal.pdf",
+   "sourceKind": "Original",
+   "text": "Open the attached file.",
+   "kind": "Contextual material",
+   "sourceVersion": "1790562122045488",
+   "mimeType": "application/pdf",
+   "availableFrom": "2026-09-28",
+   "mediaSetRid": "ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427",
+   "mediaItemRid": "ri.mio.main.media-item.01a0e5d1-b93d-7432-aabc-59ee58ead443",
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "original:30c897fad5c0d5db8c3824df29ef1ac42146d9237834109f3797b28a6b1b8ca6",
+   "title": "Move-out walk-through, September 24, 2026.pdf",
+   "sourceKind": "Original",
+   "text": "Open the attached file.",
+   "kind": "Contextual material",
+   "sourceVersion": "1790562103311406",
+   "mimeType": "application/pdf",
+   "availableFrom": "2026-09-28",
+   "mediaSetRid": "ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427",
+   "mediaItemRid": "ri.mio.main.media-item.01a0e5d1-700f-7767-afb9-3ec500c48008",
+   "pageStart": null,
+   "pageEnd": null
+  },
+  {
+   "id": "original:0d95cee5c588ce069991383a88e47d346d1a9941278b9840a4c06af343f4dde3",
+   "title": "Laura Brenner email, June 11, 2024.pdf",
+   "sourceKind": "Original",
+   "text": "Open the attached file.",
+   "kind": "Contextual material",
+   "sourceVersion": "1790562100791208",
+   "mimeType": "application/pdf",
+   "availableFrom": "2026-09-28",
+   "mediaSetRid": "ri.mio.main.media-set.b820a6b1-478f-4cf8-bfd1-cc2fbad06427",
+   "mediaItemRid": "ri.mio.main.media-item.01a0e5d1-6636-77cd-a346-308693b0e13c",
+   "pageStart": null,
+   "pageEnd": null
+  }
+ ],
+ "workPlan": null,
+ "decisions": [],
+ "messages": [
+  {
+   "id": "message:c94d37145b36c77625cd419885560c07cdf429b9f398635ef1a139982f075fbf",
+   "title": "Owen Wassmer to Handoff",
+   "body": "Please get quotes and prepare the work plan",
+   "recipientPartyId": null,
+   "purpose": "Discussion",
+   "jobId": null,
+   "replyToMessageId": null,
+   "senderPartyId": null,
+   "attachmentDocumentIds": [],
+   "direction": "Operator",
+   "status": "Received",
+   "createdAt": "2026-09-28T03:46:04.608Z"
+  },
+  {
+   "id": "message:f20343370a3877384192df357021e16f73636debf785a2fccc85c93a4386c257",
+   "title": "Handoff",
+   "body": "Handoff couldn't prepare a plan it could check this time. Nothing new was proposed or ordered, and work already ordered continues. Send Handoff a message to try again.",
+   "recipientPartyId": null,
+   "purpose": "Discussion",
+   "jobId": null,
+   "replyToMessageId": "message:c94d37145b36c77625cd419885560c07cdf429b9f398635ef1a139982f075fbf",
+   "senderPartyId": null,
+   "attachmentDocumentIds": [],
+   "direction": "Handoff",
+   "status": "Sent",
+   "createdAt": "2026-09-28T03:46:23.819Z"
+  },
+  {
+   "id": "message:ed5ef9ed6119f6bc7ebcfec678890728fd1aeeb483a8630e7c026745b9256eff",
+   "title": "Owen Wassmer to Handoff",
+   "body": "Please get quotes and prepare the work plan",
+   "recipientPartyId": null,
+   "purpose": "Discussion",
+   "jobId": null,
+   "replyToMessageId": null,
+   "senderPartyId": null,
+   "attachmentDocumentIds": [],
+   "direction": "Operator",
+   "status": "Received",
+   "createdAt": "2026-09-28T03:58:07.772Z"
+  },
+  {
+   "id": "message:2300644701c5250a29b7ea3c2088a80a500a699d1eaf4729068bbd65c9e8e75e",
+   "title": "Handoff",
+   "body": "I reviewed the move-out condition notes and the provider offer documents. We have detailed scopes and prices in those documents, but there are no formal Quotes loaded in the file yet, so I can\u2019t build a priced, checkable proposal until the providers confirm their offers as quotes in-system.\n\nImmediate sequencing note from owner + walk-through: the southeast bedroom loft-ladder railing is unsafe; keep everyone off the ladder until it\u2019s repaired. Owner also wants Feld to walk first and deliver a condition schedule/scope/budget before committing to the broader restoration work.\n\nNext step: request formal quotes now (prioritizing Feld assessment + the safety railing + the two large restoration trades).",
+   "recipientPartyId": null,
+   "purpose": "Discussion",
+   "jobId": null,
+   "replyToMessageId": "message:ed5ef9ed6119f6bc7ebcfec678890728fd1aeeb483a8630e7c026745b9256eff",
+   "senderPartyId": null,
+   "attachmentDocumentIds": [],
+   "direction": "Handoff",
+   "status": "Sent",
+   "createdAt": "2026-09-28T03:58:24.489Z"
+  },
+  {
+   "id": "message:54cec45f587d9da2f46d3b2e0bd451abd1d45f4b4fc6f1523779c8fe942217bc",
+   "title": "Quote request: Floor restoration",
+   "body": "Hello,\n\nPlease confirm your floor restoration offer as a formal quote for 142 West 88th Street (approx. 900 sq ft): sand/refinish parquet and plank floors, replace damaged parquet and missing inlay border pieces with matched stock, and treat/seal urine-stained plank floors. Please confirm earliest start date, number of days on site, deposit, and payment terms.\n\nThanks,\nWhitcomb Holdings",
+   "recipientPartyId": "party:a617fa27d41bc5b59581abd863cfb38b0eb727c9129a91010b8ee9ad7ba2afa2",
+   "purpose": "Quote",
+   "jobId": null,
+   "replyToMessageId": null,
+   "senderPartyId": null,
+   "attachmentDocumentIds": [],
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-28T03:58:24.489Z"
+  },
+  {
+   "id": "message:5a068e1b8db7dcc7f55de03a46a7ef1b17e1481ee576b21b9b70bf9e2b196cdc",
+   "title": "Quote request: Restoration assessment",
+   "body": "Hello,\n\nPlease confirm your restoration assessment offer as a formal quote for 142 West 88th Street (triplex): site visit up to 3 hours, room-by-room condition schedule with photos/measurements, and written scope with preliminary budget, with the earliest available visit date and report turnaround. Please also confirm total price and payment terms as quoted.\n\nThanks,\nWhitcomb Holdings",
+   "recipientPartyId": "party:bb98dc5bc529b163e577070596d564f65aa76d2433df6862b1529c5289146d43",
+   "purpose": "Quote",
+   "jobId": null,
+   "replyToMessageId": null,
+   "senderPartyId": null,
+   "attachmentDocumentIds": [],
+   "direction": "Outgoing",
+   "status": "Sent",
+   "createdAt": "2026-09-28T03:58:24.489Z"
+  },
+  {
+   "id": "message:8a2fd832c52b73c3d248bf3bb91d03b3cd7bb52a20ace9c86ecdcca42d3d0b86",
+   "title": "Quote request: Loft railing repair",
+   "body": "Hello,\n\nPlease confirm a formal quote for the southeast bedroom loft-ladder railing rebuild/secure at 142 West 88th Street. The railing is pulled away with protruding nails and needs to be made safe for use. Please confirm earliest date, expected duration on site, and total cost/payment terms.\n\nThanks,\nWhitcomb Holdings",
+   "recipientPartyId": "party:62cd0895458611f3e86c6eec2f468204d4f4612191e09e57e8a6852082b65598",
+   "purpose": "Quote",
+   "jobId": null,
+   "replyToMessageId": null,
+   "senderPartyId": null,
+   "attachmentDocumentIds": [],
+   "direction": "Outgoing",
+   "status": "Queued",
+   "createdAt": "2026-09-28T03:58:24.489Z"
+  },
+  {
+   "id": "message:b830cbaa51d06542b9ec74f606ed484666dc8ee08b9219d6f22f01c7afa10458",
+   "title": "Quote request: Plaster, paint and woodwork",
+   "body": "Hello,\n\nPlease confirm your plaster/paint/woodwork restoration offer as a formal quote for 142 West 88th Street, including: plaster repair + soot cleanup, painting throughout with ceiling repairs at fixtures, woodwork/fireplace/hearth tile and door repairs (including foyer door veneer and NE bedroom door), and bathroom tub chip/vanity panel repairs and caulking. Please confirm earliest start date, expected duration, deposit, and payment terms.\n\nThanks,\nWhitcomb Holdings",
+   "recipientPartyId": "party:063acf682a050787a140840bae97ea623cbfc6ff1ff624fbf5703129f9938a60",
+   "purpose": "Quote",
+   "jobId": null,
+   "replyToMessageId": null,
+   "senderPartyId": null,
+   "attachmentDocumentIds": [],
+   "direction": "Outgoing",
+   "status": "Queued",
+   "createdAt": "2026-09-28T03:58:24.489Z"
+  },
+  {
+   "id": "message:2d159c26dd57fac01519fe2acab557a892a92f97a8a8c7d251f36a0383276cdf",
+   "title": "Re: Quote request: Floor restoration",
+   "body": "Hello,\n\nThanks for your request. Our quote for floor restoration is attached: $8,019.00 in total. Deposit of $2,000 on booking; balance on completion, payable within 7 days.\n\nBest,\nHudson Floor Restoration",
+   "recipientPartyId": "party:a617fa27d41bc5b59581abd863cfb38b0eb727c9129a91010b8ee9ad7ba2afa2",
+   "purpose": "Quote",
+   "jobId": null,
+   "replyToMessageId": "message:54cec45f587d9da2f46d3b2e0bd451abd1d45f4b4fc6f1523779c8fe942217bc",
+   "senderPartyId": "party:a617fa27d41bc5b59581abd863cfb38b0eb727c9129a91010b8ee9ad7ba2afa2",
+   "attachmentDocumentIds": [
+    "document:d7aa9bf56f37a5016d8b007a55a595b3eebf57aad61ab88e55597aefe142b796"
+   ],
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-28T07:58:24.489Z"
+  },
+  {
+   "id": "message:bcf659ca78b8b93effe7da8969ab385ec1d62ecf3bba763820f6761842c8834b",
+   "title": "Re: Quote request: Restoration assessment",
+   "body": "Hello,\n\nThanks for your request. Our quote for restoration assessment is attached: $1,200.00 in total. Invoice on delivery of the report, payable within 14 days.\n\nBest,\nFeld Architecture PLLC",
+   "recipientPartyId": "party:bb98dc5bc529b163e577070596d564f65aa76d2433df6862b1529c5289146d43",
+   "purpose": "Quote",
+   "jobId": null,
+   "replyToMessageId": "message:5a068e1b8db7dcc7f55de03a46a7ef1b17e1481ee576b21b9b70bf9e2b196cdc",
+   "senderPartyId": "party:bb98dc5bc529b163e577070596d564f65aa76d2433df6862b1529c5289146d43",
+   "attachmentDocumentIds": [
+    "document:761d64e38c9caa1447580e25c1d606f0bd8d8f9c614532d552eb71bf81e5760a"
+   ],
+   "direction": "Incoming",
+   "status": "Received",
+   "createdAt": "2026-09-28T07:58:57.57Z"
+  }
+ ],
+ "activity": [
+  {
+   "id": "activity:c9ef86a03aae5bab72a0fe09d1352e706c1c1b72d1e8933dcdf53cc9b22ab7f6",
+   "title": "Move-out notice received",
+   "detail": "The property, tenancy and supporting documents are ready for a work recommendation.",
+   "at": "2026-09-28T02:21:37.195Z"
+  },
+  {
+   "id": "activity:46e00018d6f1473b00a21eb789ffb7837d891642a268936b2e69b654cc16cb50",
+   "title": "Source file associated",
+   "detail": "A supporting file was associated with a document.",
+   "at": "2026-09-28T02:21:39.957Z"
+  },
+  {
+   "id": "activity:fa0d302e5535132ba3898fde25e053cba588e852baed6e284186092602280333",
+   "title": "Source file associated",
+   "detail": "A supporting file was associated with a document.",
+   "at": "2026-09-28T02:21:42.675Z"
+  },
+  {
+   "id": "activity:32bda2ba23a7902299ccbd26040440bd6086585df8b0246f607fe04dc7342fd5",
+   "title": "Source file associated",
+   "detail": "A supporting file was associated with a document.",
+   "at": "2026-09-28T02:21:44.583Z"
+  },
+  {
+   "id": "activity:8bc29e653518637b1b2d32f11a79a555af49642a79bd34c06737878d6791e02a",
+   "title": "Source file associated",
+   "detail": "A supporting file was associated with a document.",
+   "at": "2026-09-28T02:21:46.54Z"
+  },
+  {
+   "id": "activity:c84f6042466fce5d0749ca6f38bfeb06eec691126e0bbe1f4ea127e33142a8ae",
+   "title": "Source file associated",
+   "detail": "A supporting file was associated with a document.",
+   "at": "2026-09-28T02:21:48.468Z"
+  },
+  {
+   "id": "activity:bedb4a38a344be80dead545789496d5e86e377b32a7b4e1eb9defe92e91f2678",
+   "title": "Source file associated",
+   "detail": "A supporting file was associated with a document.",
+   "at": "2026-09-28T02:21:50.662Z"
+  },
+  {
+   "id": "activity:0ecba40fdd4e1d130bf50f32a0c86f727788afe3b9566c7155bc2ae2d711f7f7",
+   "title": "Source file associated",
+   "detail": "A supporting file was associated with a document.",
+   "at": "2026-09-28T02:21:52.867Z"
+  },
+  {
+   "id": "activity:909c146fe6bf623258b41324191b43e3b786eefcf1a6a9ce2b78ad03da36f991",
+   "title": "Source file associated",
+   "detail": "A supporting file was associated with a document.",
+   "at": "2026-09-28T02:21:55.099Z"
+  },
+  {
+   "id": "activity:3a96b0f1096aa7fa77227fecb0e7f6235c08e5cc84fd9552e6c9de71aaf82801",
+   "title": "Source file associated",
+   "detail": "A supporting file was associated with a document.",
+   "at": "2026-09-28T02:21:57.379Z"
+  },
+  {
+   "id": "activity:b7f348d63edffae9049de8b235c2ee207728ce2285f16fa3a493699bc2854c05",
+   "title": "Source file associated",
+   "detail": "A supporting file was associated with a document.",
+   "at": "2026-09-28T02:21:59.478Z"
+  },
+  {
+   "id": "activity:12d2ea3214cfa0db5d5a00be3da63a7e47708929c95a19b1baef6db439e4e9ad",
+   "title": "Source file associated",
+   "detail": "A supporting file was associated with a document.",
+   "at": "2026-09-28T02:22:01.426Z"
+  },
+  {
+   "id": "activity:7ed5903ef0501e852acefed121d1c2eee6e8b56141075631b810fdd6765a76af",
+   "title": "Source file associated",
+   "detail": "A supporting file was associated with a document.",
+   "at": "2026-09-28T02:22:03.772Z"
+  },
+  {
+   "id": "activity:3621077bc1fc31e69e4e9e92934c50bb811946e6ad501a1c4c6551f323d0f634",
+   "title": "Source file associated",
+   "detail": "A supporting file was associated with a document.",
+   "at": "2026-09-28T02:22:05.878Z"
+  },
+  {
+   "id": "activity:ca9450e7a6b3e0d4b90caa3a3c8010b0b9fc89f279293f8ec38e7f790dd3d046",
+   "title": "Recommendation unavailable",
+   "detail": "Handoff couldn't prepare a plan it could check this time. Nothing new was proposed or ordered, and work already ordered continues. Send Handoff a message to try again.",
+   "at": "2026-09-28T02:54:24.274Z"
+  },
+  {
+   "id": "activity:bd2cfe60d8c0525ed5b8ac8311a114c9676ee81919557e5e9c936a651dd1f668",
+   "title": "Message received",
+   "detail": "Your message is saved for Handoff to consider. It is not an acceptance of work.",
+   "at": "2026-09-28T03:46:04.608Z"
+  },
+  {
+   "id": "activity:034172a636b28a973fbe430d0d81108e1a799d2da9fb8b6b3a25350387b9f345",
+   "title": "Recommendation unavailable",
+   "detail": "Handoff couldn't prepare a plan it could check this time. Nothing new was proposed or ordered, and work already ordered continues. Send Handoff a message to try again.",
+   "at": "2026-09-28T03:46:23.819Z"
+  },
+  {
+   "id": "activity:feb3f56e5d7da22aa6747bb4ba830ed12feefc17c066c385d6951e2341bc6711",
+   "title": "Message received",
+   "detail": "Your message is saved for Handoff to consider. It is not an acceptance of work.",
+   "at": "2026-09-28T03:58:07.772Z"
+  },
+  {
+   "id": "activity:5982e0d3ac4db3379a95fad13901760158a0c250ec8a400140d77ef3112c2db3",
+   "title": "Handoff next step",
+   "detail": "I reviewed the move-out condition notes and the provider offer documents. We have detailed scopes and prices in those documents, but there are no formal Quotes loaded in the file yet, so I can\u2019t build a priced, checkable proposal until the providers confirm their offers as quotes in-system.\n\nImmediate sequencing note from owner + walk-through: the southeast bedroom loft-ladder railing is unsafe; keep everyone off the ladder until it\u2019s repaired. Owner also wants Feld to walk first and deliver a condition schedule/scope/budget before committing to the broader restoration work.\n\nNext step: request formal quotes now (prioritizing Feld assessment + the safety railing + the two large restoration trades).",
+   "at": "2026-09-28T03:58:24.489Z"
+  },
+  {
+   "id": "activity:59816154b43739dcdb0503385b9a90d5f921878b7453ca6d700ab8e0067d7127",
+   "title": "Handoff progressed",
+   "detail": "Hudson Floor Restoration sent a quote.",
+   "at": "2026-09-28T07:58:24.489Z"
+  },
+  {
+   "id": "activity:73927f34214177633a94ad6c3ecf15d324a65189f0fc333442c8e32b2f517356",
+   "title": "Handoff progressed",
+   "detail": "Feld Architecture PLLC sent a quote.",
+   "at": "2026-09-28T07:58:57.57Z"
+  }
+ ],
+ "agent": {
+  "status": "Ready to continue",
+  "nextStep": "Feld Architecture PLLC sent a quote.",
+  "updatedAt": "2026-09-28T04:00:24.141Z",
+  "nextWakeAt": "2026-09-28T04:00:25.141Z"
+ },
+ "permissions": {
+  "canWork": true,
+  "canDecide": true,
+  "canConfigure": true
+ }
+}

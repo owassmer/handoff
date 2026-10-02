@@ -1,0 +1,34 @@
+{
+  "kind": "prepared_product_design_example",
+  "currency": "USD",
+  "tenant": "Maya Chen",
+  "vacatedDate": "2026-09-01",
+  "ordinaryStatewideAccountDate": "2026-09-22",
+  "jurisdictionQualification": "California design example; actual property regime and local requirements must be established before implementation use",
+  "depositHeldCents": 200000,
+  "lines": [
+    {"id": "rent", "amountCents": 135000},
+    {"id": "utilities", "amountCents": 15000},
+    {"id": "cabinet", "amountCents": 35000},
+    {"id": "vanity", "amountCents": 50000},
+    {"id": "cleaning", "amountCents": 20000}
+  ],
+  "ownerOnlyCosts": [{"id": "routine_repaint", "amountCents": 60000}],
+  "earlierReceipts": [{"id": "utility_payment", "amountCents": 15000, "lineId": "utilities"}],
+  "initialDepositAllocation": [
+    {"lineId": "rent", "amountCents": 135000},
+    {"lineId": "cabinet", "amountCents": 35000},
+    {"lineId": "vanity", "amountCents": 30000}
+  ],
+  "initialBalanceOwedCents": 40000,
+  "subsequentPayment": {"id": "balance_payment", "amountCents": 40000, "settledDate": "2026-09-17"},
+  "correction": {"lineId": "vanity", "adjustmentCents": -50000, "reason": "Recovered maintenance acknowledgement and photographs confirm pre-existing damage"},
+  "revisedDepositAllocation": [
+    {"lineId": "rent", "amountCents": 135000},
+    {"lineId": "cabinet", "amountCents": 35000},
+    {"lineId": "cleaning", "amountCents": 20000}
+  ],
+  "refund": {"amountCents": 50000, "releasedDepositCents": 10000, "returnedSubsequentPaymentCents": 40000, "settledDate": "2026-09-21"},
+  "finalBalanceCents": 0,
+  "physicalReadyDate": "2026-09-25"
+}

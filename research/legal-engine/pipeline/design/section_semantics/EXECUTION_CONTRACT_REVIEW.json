@@ -1,0 +1,137 @@
+{
+  "status": "changes_required; proposal only; no inference or runtime/preparation edits",
+  "reviewer": "ca_hb_review",
+  "inputs": {
+    "worked_units/or_entry.next.preparation.json": "14dd1974b5dfaa2a54223e0cb456d536503825ea619de155fea39f029e32e11f",
+    "worked_units/ca_return.next.preparation.json": "01bf691814f75bf6cea0af212b487884e53fcf418ca03a55171b61be4e9995d9",
+    "worked_units/EXECUTION_TYPED_CONTRACTS.proposal.json": "abec93477519bea8eca28f0cbe08e801949df7e46c688fcdd47754956023ac39",
+    "worked_units/EXECUTION_ADAPTATION_NEXT.md": "b978ee77b778742733b6a533cd1475b82ea4c309900eb87424595d8d38d41dc2"
+  },
+  "findings": [
+    {
+      "id": "E1",
+      "severity": "high",
+      "jobs": [
+        "or_entry.j451",
+        "or_entry.j452",
+        "or_entry.j453"
+      ],
+      "title": "Repeat termination loses common notice content and incorrectly inherits cure",
+      "finding": "j452 blocks termination for curable+timely cure without excluding qualifying repeat; j451 excludes the entire ordinary cause-notice bundle in that repeat branch, although not every notice-content requirement disappears.",
+      "fix": "Judge and apply repeat exclusion to cure blocker; separate always-required acts/omissions content from ordinary/repeat timing and conditional cure content. Do not replace this with two competing whole notices.",
+      "counterexample": "Qualifying repeat with same noticed violation within six months and attempted cure; repeat notice must still identify violation and keep its proper date."
+    },
+    {
+      "id": "E2",
+      "severity": "high",
+      "jobs": [
+        "or_entry.j095",
+        "or_entry.j376",
+        "or_entry.j377"
+      ],
+      "title": "Specified repair times attached unconditionally",
+      "finding": "j095 attaches specified allowable-time action to the default reasonable-time record; j376 attaches it to repair entry without a when guard.",
+      "fix": "Make specified-times and no-specified-times branches explicit, scoped to same repair authorization. Remove unconditional attachment to default branch; preserve the accepted choice of branch and its case classification.",
+      "counterexample": "Written repair request contains no allowable times: consumer should require reasonable timing, not nonexistent specified hours."
+    },
+    {
+      "id": "E3",
+      "severity": "high",
+      "jobs": [
+        "ca_return.j069",
+        "ca_return.j207",
+        "ca_return.j208"
+      ],
+      "title": "Payment-condition waiver does not zero monetary assessment",
+      "finding": "Ordinary return sets storage_paid true while storage filter/rate operations remain available. Pre-sale has a component waiver; ordinary return lacks equivalent monetary effect.",
+      "fix": "License both removal/satisfaction of the payment prerequisite and zero storage assessment/prohibition on requiring storage under the qualifying waiver. Preserve actual payment facts; separate effective prerequisite satisfaction from factual payment. Define waiver precedence over rates/filtering.",
+      "counterexample": "Qualifying two-day return, actual storage ledger100: release prerequisite satisfied by waiver and assessed storage0, not paid100 or a later positive charge."
+    },
+    {
+      "id": "E4",
+      "severity": "high",
+      "jobs": [
+        "ca_return.j201",
+        "ca_return.j202",
+        "ca_return.j203"
+      ],
+      "title": "Any-person duplicate rule can erase the same claimants unpaid bill",
+      "finding": "parameters already_charged_to:any_person does not distinguish another person from the present claimant, or charged from paid.",
+      "fix": "Track stable incurred-cost identity, assessment identity, charged person and paid/unpaid state separately. Apply same-cost multiple-person restriction without erasing an existing unpaid assessment to this claimant; disallow duplicate addition to ledger separately.",
+      "counterexample": "An unpaid storage invoice already issued to the reclaiming former tenant remains part of the unpaid storage base; an identical incurred cost charged to another person must not also be allocated here."
+    },
+    {
+      "id": "E5",
+      "severity": "high",
+      "jobs": [
+        "or_entry.j335",
+        "or_entry.j378",
+        "or_entry.j379",
+        "or_entry.j380",
+        "or_entry.j421"
+      ],
+      "title": "Method selectors omit required logical and applicability links",
+      "finding": "Selecting records.actual_notice_methods or records.written_notice_methods does not inherently select separate conditions.* trees, email_notice_conditions fields, or classified sender/recipient/service branch. Terms such as compliant addendum still require assembled legal content.",
+      "fix": "Enumerate typed method alternatives with all conjunctive components and required field/condition selectors. Bind email addendum requirements, dual-service termination branch, written-method supplements, permitted locations and service timing to each applicable method. Keep actual-notice service date distinct from written-notice compliance-period extension.",
+      "counterexample": "Termination email alone cannot satisfy mail+email branch; a supplement cannot replace required service; ordinary first-class and mail+attachment must not receive indiscriminately identical clock treatment."
+    },
+    {
+      "id": "E6",
+      "severity": "high",
+      "jobs": [
+        "or_entry.j476",
+        "or_entry.j482",
+        "or_entry.j483",
+        "ca_return.j149",
+        "ca_return.j163",
+        "ca_return.j181"
+      ],
+      "title": "Scope declarations lack an executable record-membership contract",
+      "finding": "unit_scope uses all_primary_section_records and exceptions; present consumer does not execute these directives. Blocking one root does not suppress independently emitted waiver/postnotice/immunity records or define exceptions to scope.",
+      "fix": "Bind source/unit membership and independently sourced exceptions to exact affected record IDs; execute inherited scope before every branch/output, with unknown preserved. Specify priority of express scope exceptions such as the retained immunity record.",
+      "counterexample": "An excluded Oregon facility must not leak an OR90.322 standalone waiver or post-entry duty while entry permission is blocked; independent other-section obligations remain separately scoped."
+    },
+    {
+      "id": "E7",
+      "severity": "high",
+      "jobs": [],
+      "title": "Whole-record selection requires complete field sets",
+      "finding": "Root corrected requirements.select so prefix-only selections remain unresolved. Proposals still supply record prefixes without required field contracts.",
+      "fix": "Supply independently reviewed target_required_fields and per-item required_fields including necessary conditions, relationships and exact content/timing/method fields. A nonempty prefix is not completeness; rejected/missing fields must remain blockers.",
+      "counterexample": "Actor-only notice record must not yield resolved complete notice.",
+      "implementation_status": "Prefix guard corrected and reread; proposal field sets still pending."
+    },
+    {
+      "id": "E8",
+      "severity": "medium",
+      "jobs": [
+        "or_entry.j107"
+      ],
+      "title": "Conditional expiration lacks temporal state-transition semantics",
+      "finding": "Proposal says permission ends at expiry unless continuation holds, but does not specify evaluation time, later completion/loss of reasonable effort, or whether expired authority can revive.",
+      "fix": "Bind request instance, evaluation instant and event history. Preserve until-repairs-completed limit; classify in-progress and reasonable-effort at relevant times. Establish source-grounded transition rules before implementation; do not latch one day-seven answer forever or silently revive an expired request.",
+      "counterexample": "Repairs underway at day7 then completed day8: no day9 permission based only on day7 continuation."
+    },
+    {
+      "id": "E9",
+      "severity": "high",
+      "jobs": [
+        "or_entry.j395",
+        "or_entry.j396",
+        "ca_return.j198",
+        "ca_return.j204"
+      ],
+      "title": "Calendar and money operations lack complete determinate input schemas",
+      "finding": "Anchor phrases and cost parameters such as storage_term/fair_rental_value remain conceptual; runtime template only licenses satisfied/not-satisfied/insufficient predicates, not timestamp or amount values.",
+      "fix": "Define bound case-event identities, timestamp precision/timezone, service/entry distinction, selected calendar/version, cost currency/rate units/periods/rounding and classified allocation inputs. Supply value-selection/extraction jobs or verified structured business records, with exact licenses. Do not parse accepted prose into numbers or dates.",
+      "counterexample": "Emergency notice clock anchored to actual entry with mailing service separately assessed; fair rental storage rate has a stated unit and duration before any total."
+    }
+  ],
+  "positive_checks": [
+    "Low-value waive_duty correctly distinguishes no mandatory sale from prohibition; optional performance must still satisfy sale-route procedure and base unreleased-property scope.",
+    "Cure blockers correctly use constraints rather than invent missing affirmative prerequisites, subject to E1 branch fix.",
+    "1965 initiated/completed ANY candidate explicitly targets alternative-route exclusion rather than rewriting Chapter5 scope.",
+    "Explicit emergency entry anchor avoids blindly inheriting service anchor.",
+    "Typed operations explicitly refuse to infer fact compliance from legal-field existence."
+  ]
+}

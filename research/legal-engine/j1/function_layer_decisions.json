@@ -1,0 +1,370 @@
+{
+  "US": [
+    {
+      "function": "broker_licensing",
+      "reason": "The defined function concerns real-estate broker/property-manager licensing for leasing, rent collection and deposit handling, statutory exemptions, trust duties and recovery of compensation. No distinct general federal licensure source is warranted by these activities. California licensing determines this branch; HUD approval of a management agent is a separate program eligibility/contract condition and does not confer a state broker license.",
+      "crosslayer_instruments": [
+        {
+          "id": "CA:BPC",
+          "selected_unit": "division 4 / part 1 / chapter 3",
+          "references": [
+            "10130",
+            "10131(b)",
+            "10131.01",
+            "10133",
+            "10136",
+            "10145"
+          ],
+          "purpose": "License-trigger acts, specified exemptions, compensation recovery and handling of trust funds."
+        },
+        {
+          "id": "CA:CCR10",
+          "selected_unit": "Chapter 6 - Real Estate Commissioner",
+          "purpose": "Real estate regulatory duties, including trust-account controls."
+        }
+      ],
+      "conditional_federal_dependencies": [
+        {
+          "id": "US:HUD4381.5",
+          "selected_unit": "HUD 4381.5: Approval of Management Agents",
+          "references": [
+            "2.1",
+            "2.2",
+            "2.3",
+            "2.4"
+          ],
+          "existing_functions": [
+            "housing_assistance",
+            "provider_contracts",
+            "payments",
+            "landlord_tenant",
+            "work_standards"
+          ],
+          "reason": "Owner selection and agency approval depend on project and mortgage/program status. Treat this as an additional approval gate for the selected program, independently of California licensure/exemption; do not add broker_licensing merely because the handbook concerns managers."
+        }
+      ],
+      "review_source": "j1/lanes/federal_programs/us-function-absence-decisions.json"
+    },
+    {
+      "function": "unclaimed_property",
+      "reason": "The function explicitly concerns the state unclaimed-property act as applied to an uncashed deposit refund or ordinary credit balance. Keep that state-holder branch separate from money already administered in bankruptcy or deposited with a federal court. Federal distribution/custody rules do not establish a general federal dormancy-and-remittance regime for a landlord's unpaid tenant refund.",
+      "crosslayer_instruments": [
+        {
+          "id": "CA:CCP",
+          "selected_unit": "PART 3. OF SPECIAL PROCEEDINGS OF A CIVIL NATURE [1063 - 1822.60]",
+          "specific_scope": "Title10, Chapter7 Unclaimed Property Law",
+          "references": [
+            "1510",
+            "1518 (where fiduciary classification applies)",
+            "1520",
+            "1530",
+            "1532",
+            "1570"
+          ],
+          "purpose": "Classify holder/property and state custody, then apply reporting, remittance and record duties."
+        },
+        {
+          "id": "CA:SCO-HOLDER",
+          "selected_units": [
+            "NAUPA-II",
+            "DUE-DILIGENCE",
+            "CYCLE-2026",
+            "REMIT",
+            "UFS-1",
+            "HCR-1",
+            "DUE-DILIGENCE-MODEL"
+          ],
+          "purpose": "Selected state reporting instructions/forms implement the statutory holder branch; choose the actual property type rather than treating every credit as a deposit."
+        }
+      ],
+      "conditional_federal_dependencies": [
+        {
+          "id": "US:11USC",
+          "selected_unit": "chapter CHAPTER 3— CASE ADMINISTRATION > subchapter SUBCHAPTER III— ADMINISTRATION",
+          "references": [
+            "347"
+          ],
+          "existing_function": "bankruptcy",
+          "reason": "Special handling of unclaimed distributions in bankruptcy. Already selected; no new unit needed."
+        },
+        {
+          "id": "US:28USC",
+          "selected_unit": "Part V",
+          "specific_scope": "Chapter129, §§2041–2042",
+          "existing_function": "courts_procedure",
+          "reason": "Custody and withdrawal of money deposited with federal courts, including money routed there under bankruptcy law. Already selected; distinguish this court-held res from an ordinary landlord refund."
+        },
+        {
+          "id": "US:FRBP",
+          "selected_unit": "FRBP-2025",
+          "references": [
+            "Rule3011"
+          ],
+          "existing_function": "bankruptcy",
+          "reason": "Bankruptcy unclaimed-funds reporting procedural companion; fullRules1002–9038 already selected."
+        }
+      ],
+      "review_source": "j1/lanes/federal_programs/us-function-absence-decisions.json"
+    }
+  ],
+  "CA-OC": [
+    {
+      "function": "unclaimed_property",
+      "reason": "The defined ordinary uncashed tenant refund/credit holder branch is the state Unclaimed Property Law. Municipal or county treasury unclaimed funds concern a different holder and do not replace the landlord reporting/remittance branch.",
+      "crosslayer_instruments": [
+        {
+          "id": "CA:CCP"
+        },
+        {
+          "id": "CA:SCO-HOLDER"
+        }
+      ],
+      "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+    },
+    {
+      "function": "broker_licensing",
+      "reason": "Real-estate license-trigger acts, exemptions, trust handling and compensation recovery are determined by California broker law. Local business licenses and HUD/OCHA management approval remain separate permission or program conditions, not a local occupational broker license.",
+      "crosslayer_instruments": [
+        {
+          "id": "CA:BPC"
+        },
+        {
+          "id": "CA:CCR10"
+        }
+      ],
+      "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+    },
+    {
+      "function": "credit_reporting",
+      "reason": "Consumer-report access, accuracy, furnishing and disputes are governed by federal/state reporting statutes and regulations. Local housing eligibility checks or water-credit decisions do not themselves create a distinct general furnisher/reporting regime.",
+      "crosslayer_instruments": [
+        {
+          "id": "US:15USC-ch41"
+        },
+        {
+          "id": "US:12CFR1022"
+        },
+        {
+          "id": "CA:CIV"
+        }
+      ],
+      "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+    },
+    {
+      "function": "limitations",
+      "reason": "This function is specifically landlord contract/damage and tenant deposit/statutory claims, including tolling and revival. State limitation statutes and conditional federal tolling govern. Local zoning, utility-tax or bill-appeal deadlines remain selected under their substantive/procedural functions; they are not substituted for these claim limitation rules.",
+      "crosslayer_instruments": [
+        {
+          "id": "CA:CCP"
+        },
+        {
+          "id": "US:50USC-ch50"
+        },
+        {
+          "id": "US:11USC"
+        }
+      ],
+      "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+    },
+    {
+      "function": "military",
+      "reason": "Military lease termination, interest caps, stays and default protections derive from SCRA and California military law. Local veteran preferences and assistance eligibility do not replace those protections.",
+      "crosslayer_instruments": [
+        {
+          "id": "US:50USC-ch50"
+        },
+        {
+          "id": "CA:MVC"
+        }
+      ],
+      "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+    },
+    {
+      "function": "bankruptcy",
+      "reason": "Stay, discharge, claims and estate treatment derive from federal bankruptcy law and the applicable federal court rules. OC Superior Court and municipal claims procedures are not bankruptcy courts or independent bankruptcy regimes.",
+      "crosslayer_instruments": [
+        {
+          "id": "US:11USC"
+        },
+        {
+          "id": "US:FRBP"
+        },
+        {
+          "id": "CA:CACB"
+        },
+        {
+          "id": "CA:BAP9"
+        }
+      ],
+      "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+    },
+    {
+      "function": "abandoned_property",
+      "reason": "Private landlord treatment of a former tenant’s belongings derives from California notice, storage, disposition and unlawful-detainer law. County nuisance abatement, impoundment and public-property recovery concern different custody and authority and remain under their actual functions.",
+      "crosslayer_instruments": [
+        {
+          "id": "CA:CIV"
+        },
+        {
+          "id": "CA:CCP"
+        }
+      ],
+      "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+    },
+    {
+      "function": "electronic_records",
+      "reason": "General validity of an electronic tenancy notice, statement or signature and required consent/exceptions derive from E-SIGN/UETA. Local Rules352/601.01 govern court filing and service and remain selected as courts_procedure; they do not authorize electronic landlord termination or deposit notices.",
+      "crosslayer_instruments": [
+        {
+          "id": "US:15USC-ch96"
+        },
+        {
+          "id": "CA:CIV"
+        },
+        {
+          "id": "CA:CRC"
+        }
+      ],
+      "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+    },
+    {
+      "function": "tax_reporting",
+      "reason": "For the defined provider-payment, classification/withholding, deposit/credit, settlement and bad-debt reporting branch, operative reporting duties are federal/state. County property assessment, business licensing and fee schedules are not additional information-return regimes for those transactions. This is a bounded branch decision, not a claim that county taxes never affect residential property.",
+      "crosslayer_instruments": [
+        {
+          "id": "US:26USC-6041-6050"
+        },
+        {
+          "id": "US:26CFR1-info"
+        },
+        {
+          "id": "US:26USC166"
+        },
+        {
+          "id": "CA:RTC"
+        },
+        {
+          "id": "CA:UIC"
+        },
+        {
+          "id": "CA:CCR18"
+        }
+      ],
+      "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+    }
+  ],
+  "CA-HB": [
+    {
+      "function": "unclaimed_property",
+      "reason": "The defined ordinary uncashed tenant refund/credit holder branch is the state Unclaimed Property Law. Municipal or county treasury unclaimed funds concern a different holder and do not replace the landlord reporting/remittance branch.",
+      "crosslayer_instruments": [
+        {
+          "id": "CA:CCP"
+        },
+        {
+          "id": "CA:SCO-HOLDER"
+        }
+      ],
+      "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+    },
+    {
+      "function": "broker_licensing",
+      "reason": "Real-estate license-trigger acts, exemptions, trust handling and compensation recovery are determined by California broker law. Local business licenses and HUD/OCHA management approval remain separate permission or program conditions, not a local occupational broker license.",
+      "crosslayer_instruments": [
+        {
+          "id": "CA:BPC"
+        },
+        {
+          "id": "CA:CCR10"
+        }
+      ],
+      "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+    },
+    {
+      "function": "credit_reporting",
+      "reason": "Consumer-report access, accuracy, furnishing and disputes are governed by federal/state reporting statutes and regulations. Local housing eligibility checks or water-credit decisions do not themselves create a distinct general furnisher/reporting regime.",
+      "crosslayer_instruments": [
+        {
+          "id": "US:15USC-ch41"
+        },
+        {
+          "id": "US:12CFR1022"
+        },
+        {
+          "id": "CA:CIV"
+        }
+      ],
+      "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+    },
+    {
+      "function": "limitations",
+      "reason": "This function is specifically landlord contract/damage and tenant deposit/statutory claims, including tolling and revival. State limitation statutes and conditional federal tolling govern. Local zoning, utility-tax or bill-appeal deadlines remain selected under their substantive/procedural functions; they are not substituted for these claim limitation rules.",
+      "crosslayer_instruments": [
+        {
+          "id": "CA:CCP"
+        },
+        {
+          "id": "US:50USC-ch50"
+        },
+        {
+          "id": "US:11USC"
+        }
+      ],
+      "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+    },
+    {
+      "function": "military",
+      "reason": "Military lease termination, interest caps, stays and default protections derive from SCRA and California military law. Local veteran preferences and assistance eligibility do not replace those protections.",
+      "crosslayer_instruments": [
+        {
+          "id": "US:50USC-ch50"
+        },
+        {
+          "id": "CA:MVC"
+        }
+      ],
+      "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+    },
+    {
+      "function": "bankruptcy",
+      "reason": "Stay, discharge, claims and estate treatment derive from federal bankruptcy law and the applicable federal court rules. OC Superior Court and municipal claims procedures are not bankruptcy courts or independent bankruptcy regimes.",
+      "crosslayer_instruments": [
+        {
+          "id": "US:11USC"
+        },
+        {
+          "id": "US:FRBP"
+        },
+        {
+          "id": "CA:CACB"
+        },
+        {
+          "id": "CA:BAP9"
+        }
+      ],
+      "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+    },
+    {
+      "function": "estates_incapacity",
+      "reason": "Authority of a tenant’s representative, estate-creditor process and survival are determined by California probate/guardianship law and OC court procedure. City utility-tax refund §3.36.200(B) accepts a guardian/conservator/executor/administrator but does not constitute or determine that representative’s probate authority.",
+      "crosslayer_instruments": [
+        {
+          "id": "CA:PROB"
+        },
+        {
+          "id": "CA:FAM"
+        },
+        {
+          "id": "CA:WIC"
+        },
+        {
+          "id": "CA:CRC"
+        },
+        {
+          "id": "CA-OC:SUPERIOR-RULES"
+        }
+      ],
+      "review_source": "j1/lanes/federal_programs/local-function-layer-decisions.json"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "cases_sha256": "396222145bfd24fded4fc78dc24678bc52b3cbf8319e74ed8f8b4356c7189986",
+  "created_at": "2026-10-01T17:15:19.426809+00:00",
+  "recoveries": [
+    {
+      "id": "heading_probe",
+      "case_ids": [
+        "hds041"
+      ],
+      "initial": {
+        "path": "pipeline/design/task_evaluation/heldout_ds_sources/FL_83_43.txt",
+        "sha256": "8a89365ff5a009100f1fe80443a79a1b148c163622ee4fd4a2eb2285f30a92c4",
+        "start": 2232,
+        "end": 2411,
+        "text": "Definitions.\nF.S. 83.43\n83.43\nDefinitions.\n—\nAs used in this part, the following words and terms shall have the following meanings unless some other meaning is plainly indicated:\n"
+      },
+      "cause": "Heading names subject but supplies no meaning.",
+      "action": "Expanded to complete advance-rent subsection with exclusion.",
+      "completed": {
+        "path": "pipeline/design/task_evaluation/heldout_ds_sources/FL_83_43.txt",
+        "sha256": "8a89365ff5a009100f1fe80443a79a1b148c163622ee4fd4a2eb2285f30a92c4",
+        "start": 2484,
+        "end": 2659
+      },
+      "resolved_judgment": "YES: advance rent receives a complete meaning, unlike the heading-only probe."
+    },
+    {
+      "id": "hud_external_definitions",
+      "case_ids": [
+        "hds001",
+        "hds002"
+      ],
+      "cause": "Selected passage adopts definitions outside itself; do not fabricate extracted meanings from pointer.",
+      "action": "Captured annual part5 general, income, rent, and referenced family provisions.",
+      "retrieved_ids": [
+        "RECOVERY_CFR2024_24_5_100",
+        "RECOVERY_CFR2024_24_5_603",
+        "RECOVERY_CFR2024_24_5_609",
+        "RECOVERY_CFR2024_24_5_611",
+        "RECOVERY_CFR2024_24_5_403",
+        "RECOVERY_CFR2024_24_5_628"
+      ],
+      "recovered_example": {
+        "path": "pipeline/design/task_evaluation/heldout_ds_sources/RECOVERY_CFR2024_24_5_100.txt",
+        "sha256": "9079ce5788f5ddfd98cb6bc41a86355830c1a3a42107f57833122f4af3f73e66",
+        "start": 1323,
+        "end": 1389,
+        "text": "Department\nmeans the Department of Housing and Urban Development.\n"
+      },
+      "resolved_judgment": "YES for definition presence through adoption. The tenant-rent and utility-reimbursement exclusions remain express; supplied contrary application claim is NO. Retrieval resolves adoption before any extraction; this case does not purport to calculate a family rent or recursively operationalize every eligibility cross-reference."
+    },
+    {
+      "id": "commerce_incorporation",
+      "case_ids": [
+        "hds031",
+        "hds032"
+      ],
+      "cause": "Embedded duty adopts commerce from FTC Act.",
+      "action": "Retrieved official USC2023 section44 text.",
+      "recovered_example": {
+        "path": "pipeline/design/task_evaluation/heldout_ds_sources/RECOVERY_FTC_ACT_44.txt",
+        "sha256": "5bed985035cd77d6c9111ef4fe66793d6ab9e13183c1691e4bf2c6155a86047f",
+        "start": 463,
+        "end": 800,
+        "text": "\"Commerce\" means commerce among the several States or with foreign nations, or in any Territory of the United States or in the District of Columbia, or between any such Territory and another, or between any such Territory and any State or foreign nation, or between the District of Columbia and any State or Territory or foreign nation.\n"
+      },
+      "resolved_judgment": "YES: adopted commerce meaning, independently of whether assignment exceptions themselves define anything. Earned-wages exception expressly supports claim."
+    },
+    {
+      "id": "landlord_incorporation",
+      "case_ids": [
+        "hds063",
+        "hds064"
+      ],
+      "cause": "504B.211 adopts meaning from504B.001 and adds agent.",
+      "action": "Opened subdivision7 in separately captured504B.001, distinguishing incorporation target from unrelated distress definition.",
+      "recovered_example": {
+        "path": "pipeline/design/task_evaluation/heldout_ds_sources/MN_504B_001.txt",
+        "sha256": "67a321c0e5b15468c8ef01a5cae34c2fe4f82a49da946db20623e3ce4febf320",
+        "start": 7079,
+        "end": 7265,
+        "text": "\"Landlord\" means an owner of real property, a contract for deed vendee, receiver, executor, trustee, lessee, agent, or other person directly or indirectly in control of rental property.\n"
+      },
+      "resolved_judgment": "YES adoption. NO exclusion claim because agent is expressly included, both in source definition and local clause."
+    },
+    {
+      "id": "opinion_role_and_missing_holding",
+      "case_ids": [
+        "hds085",
+        "hds086",
+        "hds087",
+        "hds088",
+        "hds089",
+        "hds090",
+        "hds091",
+        "hds092",
+        "hds095",
+        "hds096",
+        "hds099",
+        "hds100"
+      ],
+      "cause": "A syllabus, reported litigant interpretation, judicial assumption or isolated late-filing sentence can conceal source role or legal limits.",
+      "action": "Read actual opinion bodies; retain dissent heading in Fischer, proposed-reading attribution in Pulsifer, assumed premise in Warner, remand disposition in Harrow; Dubin support evidence expanded to actual crux-versus-ancillary holding.",
+      "resolved_judgment": "Completed source-role judgments are recorded in author labels. None counted as INSUFFICIENT or deferred to future research."
+    },
+    {
+      "id": "historical_staff_letter",
+      "case_ids": [
+        "hds117",
+        "hds118"
+      ],
+      "cause": "An obligation sentence alone lacks date and authority needed for a present-governing-law assertion.",
+      "action": "Support evidence expanded from notice sentence to dated1999 letter including nonbinding staff disclaimer.",
+      "completed": {
+        "path": "pipeline/design/task_evaluation/heldout_ds_sources/FTC_RIDDLE.txt",
+        "sha256": "136c3fc8d32b9739c179ab48e3fed54554903bba81234ec33cb9bba49e1680b0",
+        "start": 6581,
+        "end": 11330
+      },
+      "resolved_judgment": "NO:1999 staff interpretation cannot establish intervening-law-free governing status in2026."
+    }
+  ],
+  "limits": "Author recovery is not independent confirmation. Same model-family authorship/review can share errors; blinded human or other-family validation remains stronger evidence."
+}

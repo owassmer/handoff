@@ -1,0 +1,143 @@
+{
+  "as_of": "2026-10-01",
+  "add": [
+    {
+      "id": "CA-HB:SBSD:CALRECYCLE-WAIVER2025",
+      "jurisdiction": "CA-HB",
+      "name": "CalRecycle \u2014 issued low-population waiver for Sunset Beach Sanitary District",
+      "level": "agency rule",
+      "instrument_kind": "issued agency waiver approval register",
+      "functions": [
+        "payments",
+        "preconditions",
+        "work_standards"
+      ],
+      "adapter": "generic",
+      "source_unit_kind": "document",
+      "units_in_scope": [
+        {
+          "unit": "SBSD-SB613-2025-07-10",
+          "heading": "SBSD SB613 low-population waiver \u2014 effective July 10, 2025",
+          "toc_url": "https://calrecycle.ca.gov/organics/slcp/waivers/approved/",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "SBSD-SB613-2025-07-10",
+              "heading": "SBSD SB613 low-population waiver \u2014 effective July 10, 2025",
+              "ref": "https://calrecycle.ca.gov/organics/slcp/waivers/approved/"
+            }
+          ],
+          "reason": "Official approving-agency register confirms issued waiver. Retain its effect on residential organic-waste collection; do not infer repeal of local ordinance or identify it with the proposed January2024 individual space-constraint amendment.",
+          "locator": "Low Population Waiver (SB 613) table, Orange / Sunset Beach Sanitary District row; enclosing category text"
+        }
+      ],
+      "units_out": [],
+      "applicability_condition": "Actual SBSD service territory within Huntington Beach, not all city parcels; Surfside/Seal Beach territory is outside current forum aperture.",
+      "effective_date": "2025-07-10",
+      "category_expiration": "2028-12-01",
+      "dependencies": [
+        {
+          "identity": "PRC 42652.8",
+          "source": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240SB613",
+          "role": "Chapter878, Statutes2023 operative section adds special-district waiver and discretionary renewal from January1,2027; body says December1,2028, unlike digest December31."
+        },
+        {
+          "identity": "14 CCR 18984.12 and collection requirements incorporated by waiver",
+          "role": "State regulatory scope; approval list establishes existence/date but not individualized conditions."
+        }
+      ],
+      "remaining": "Approval letter/application and individualized scope not exposed by approval list; do not treat every local recycling obligation as waived. January2024 local amendment disposition remains distinct."
+    },
+    {
+      "id": "CA-HB:SBSD:ASSESSMENT-NOTICES2025-2026",
+      "jurisdiction": "CA-HB",
+      "name": "Sunset Beach Sanitary District \u2014 published annual service charges and assessment report notices",
+      "level": "agency rule",
+      "instrument_kind": "district-issued legal notices published in designated newspaper",
+      "functions": [
+        "payments",
+        "preconditions",
+        "work_standards"
+      ],
+      "adapter": "generic",
+      "source_unit_kind": "document",
+      "units_in_scope": [
+        {
+          "unit": "FY2025-26-NOTICE",
+          "heading": "Notice of filing report \u2014 FY2025\u201326, dated May14,2025",
+          "toc_url": "https://www.sunnews.org/wp-content/uploads/2025/06/6-26-25-SBS-legals.pdf",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "FY2025-26-NOTICE",
+              "heading": "Notice of filing report \u2014 FY2025\u201326, dated May14,2025",
+              "ref": "https://www.sunnews.org/wp-content/uploads/2025/06/6-26-25-SBS-legals.pdf"
+            }
+          ],
+          "reason": "District publication states established annual charges and tax-roll election; proposed parcel assessment report/hearing is not itself final roll confirmation.",
+          "locator": "PDF page3 (zero-based2), SBSD notice \u00a7\u00a71\u20136, publication153157"
+        },
+        {
+          "unit": "FY2026-27-NOTICE",
+          "heading": "Notice of filing report \u2014 FY2026\u201327, dated May18,2026",
+          "toc_url": "https://www.sunnews.org/wp-content/uploads/2026/05/5-28-26-SBS-legals.pdf",
+          "source_unit_kind": "document",
+          "section_list": [
+            {
+              "number": "FY2026-27-NOTICE",
+              "heading": "Notice of filing report \u2014 FY2026\u201327, dated May18,2026",
+              "ref": "https://www.sunnews.org/wp-content/uploads/2026/05/5-28-26-SBS-legals.pdf"
+            }
+          ],
+          "reason": "District publication states established annual charges and tax-roll election; proposed parcel assessment report/hearing is not itself final roll confirmation.",
+          "locator": "SBSD Notice of Filing Report \u00a7\u00a71\u20136; publication163652; indexed text retrieved, PDF page locator unresolved",
+          "capture_method": "Indexed search extract only; direct PDF open failed. No downloaded original claimed.",
+          "local_evidence": "2026-notice-indexed-extract.txt; raw response in currentness-evidence.json publication"
+        }
+      ],
+      "units_out": [],
+      "applicability_condition": "Actual SBSD service territory within Huntington Beach, not all city parcels; Surfside/Seal Beach territory is outside current forum aperture.",
+      "observed_terms": {
+        "annual_trash_per_assessed_unit": 300,
+        "annual_sewer_per_assessed_unit": 300,
+        "trash_condition": "Residential/commercial unit not providing its own trash pickup, as counted by District Assessor.",
+        "owner_liability": "Notice states owner pays whether or not District services are utilized.",
+        "collection": "Election to collect service charges with general tax roll.",
+        "2026_hearing": "2026-06-11 at18:30; mailed protests postmarkedJune4; no protests afterJune11.",
+        "rate_change": "Each notice says no increase from preceding year.",
+        "excluded_term": "Restaurant sewer cleaning625 is not imported as ordinary residential charge."
+      },
+      "status_note": "Official district speech reproduced as legal publication, not newspaper reporting. Sections1\u20132 assert established charges/election; \u00a7\u00a75\u20136 announce proposed parcel roll and future hearing. Do not elevate these notices to evidence of final June11,2026 roll disposition or substitute them for Resolution2024-03-01 attachment.2026 footer incorrectlyprints2025 in publication line; notice date, hearing and fiscal year explicitly2026/2026\u201327. Preserve that typo."
+    }
+  ],
+  "remaining": [
+    {
+      "identity": "Resolution2024-03-01 attachment",
+      "status": "Adoption/rate amounts resolved through March14,2024 minutes; attachment text not recovered."
+    },
+    {
+      "identity": "January11,2024 organics waiver amendment",
+      "status": "Proposal and later waiver-project report observed; amendment vote/exact enacted text not recovered.2025statewaiver is separate."
+    },
+    {
+      "identity": "FY2026\u201327 assessment roll / June11,2026 BOE disposition",
+      "status": "Currentpublished generalcharges identified; final hearing outcome and any modifications remain unobserved."
+    },
+    {
+      "identity": "FY2026\u201327 commercial/extra-service provider schedule",
+      "status": "Latest district providerpage still linksJuly2025 sheet; no observed2026successor. District-paid residentialcompensation not ownerassessment authority."
+    }
+  ],
+  "additional_acquisition_leads": [
+    {
+      "identity": "May14,2026 minutes",
+      "ref": "https://www.sunsetbeachsd.org/wp-content/uploads/2026/06/May-14-2026-Minutes.pdf",
+      "status": "Actual index click resolved2-pagePDF, no parsedtext; screenshotscachemiss. Preceding rate-settingmeeting per district procedure; no action inferred."
+    },
+    {
+      "identity": "February8,2024 minutes",
+      "ref": "https://www.sunsetbeachsd.org/wp-content/uploads/2024/03/February-8-2024-Minutes.pdf",
+      "status": "Actual indexclick cachemiss; potential follow-up toJanuaryamendment, no result inferred."
+    }
+  ]
+}

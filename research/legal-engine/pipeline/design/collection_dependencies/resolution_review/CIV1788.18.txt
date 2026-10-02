@@ -1,0 +1,262 @@
+California Code,  CIV 1788.18.
+/* Hide page by default*/
+            html { display : none; }
+//<![CDATA[
+
+            if (self === top) {
+                // Show the page
+                document.documentElement.style.display = 'block';
+            } else {
+                // Inside a frame. Replace the frame.
+                var parentUrl = document.referrer;
+                var num = -1;
+                if (parentUrl !== '') {
+
+                    num = parseInt(parentUrl.indexOf('calchannel.granicus.com'));
+
+                    if (!(num >= 0)) {
+                        window.top.location.replace(window.location);
+                        top.location = self.location;
+                    }
+                }
+            }
+            // ]]>
+/* Hide page by default*/
+            html { display : inline; }
+//<![CDATA[
+function faceletsDebug(URL) {day = new Date();id = day.getTime();eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=800,height=600,left = 240,top = 212');"); };(function() { if (typeof jsfFaceletsDebug === 'undefined') { var jsfFaceletsDebug = false; } if (!jsfFaceletsDebug) {var faceletsOrigKeyup = document.onkeyup;document.onkeyup = function(e) { if (window.event) e = window.event; if (String.fromCharCode(e.keyCode) == 'D' & e.shiftKey & e.ctrlKey) faceletsDebug('/faces/codes_displaySection.xhtml?facelets.ui.DebugOutput=1790798051973'); jsfFaceletsDebug = true; if (faceletsOrigKeyup) faceletsOrigKeyup(e); };
+}})();//]]>
+function changePlaceHolder() {
+
+            var x = document.getElementById("billheaderinit_form:quick_search_select_id");
+            var input = document.getElementById("billheaderinit_form:searchall");
+
+            if (x !== null) {
+                if (x.options[0].selected) {
+
+                    input.placeholder = "AB1 or ab 1 or ABX1-1";
+                } else {
+                    input.placeholder = "Search phrase";
+                }
+            }
+
+        }
+skip to content
+home
+accessibility
+FAQ
+feedback
+sitemap
+login
+x
+Quick Search:
+Bill Number
+Bill Keyword
+Home
+Bill Information
+California Law
+Publications
+Other Resources
+My Subscriptions
+My Favorites
+button {
+                    background-image: url('/resources/images/print_24.gif');
+                    background-size: cover;
+                    width: 24px;
+                    height: 24px;
+                    font-size: 2rem; background-color: transparent;
+                    border: 0px;
+                }
+function printPopup() {
+                    var lawCode = 'CIV';
+                    var sectionNum = '1788.18.';
+                    var op_statues = '2024'
+                    var op_chapter = '522';
+                    var op_section = '12';
+                    var article = '2.';
+                    var url = "printCodeSectionWindow.xhtml?";
+                    if (lawCode)
+                        url += 'lawCode=' + lawCode;
+                    if (article) {
+                        url += '&article=' + article;
+                        //alert(url);
+                    }
+
+                    if (sectionNum)
+                        url += '&sectionNum=' + sectionNum;
+                    if (op_statues)
+                        url += '&op_statues=' + op_statues;
+                    if (op_chapter)
+                        url += '&op_chapter=' + op_chapter;
+                    if (op_section)
+                        url += '&op_section=' + op_section;
+                    printWindow = window.open(url, "wind", "width=680," +
+                            "height=768,		" +
+                            "toolbar=no,		" +
+                            "location=no,		" +
+                            "directories=no,	" +
+                            "status=no,		" +
+                            "menubar=yes,		" +
+                            "scrollbars=yes,	" +
+                            "resizable=yes		"
+                            );
+                    printWindow.focus();
+                }
+California Law
+>>
+>>
+Code Section
+Code Section
+function myPopup() {
+
+                window.open("popupMessage.xhtml", "Information", "width=330, height=220, toolbar=no, location=no, directories=no, menubar=no, scrollbars=no, top=270, left=150");
+            }
+
+            function setCode() {
+                //         button = document.getElementById('expertsearchformid:executeID');
+                //              document.getElementById('expertsearchformid:parameterID1').value = document.getElementById('expertsearchformid:toctextcodeid').value;
+                //              document.getElementById('expertsearchformid:parameterID2').value ='2'; //just a value to bypass validation
+                //              button.click();
+                if (document.getElementById('expertsearchformid:toctextcodeid').value == 'CONS') {
+                    document.getElementById('expertsearchformid:articlelblid').style.display = 'inline';
+                    document.getElementById('expertsearchformid:articleid').style.display = 'inline';
+                } else {
+                    document.getElementById('expertsearchformid:articlelblid').style.display = 'none';
+                    document.getElementById('expertsearchformid:articleid').style.display = 'none';
+                    document.getElementById('expertsearchformid:articleid').value = "";
+                }
+            }
+Code:
+Select Code
+CONS
+BPC
+CIV
+CCP
+COM
+CORP
+EDC
+ELEC
+EVID
+FAM
+FIN
+FGC
+FAC
+GOV
+HNC
+HSC
+INS
+LAB
+MVC
+PEN
+PROB
+PCC
+PRC
+PUC
+RTC
+SHC
+UIC
+VEH
+WAT
+WIC
+Article:
+Section:
+Code:
+Select Code
+All
+BPC
+CIV
+CCP
+COM
+CORP
+EDC
+ELEC
+EVID
+FAM
+FIN
+FGC
+FAC
+GOV
+HNC
+HSC
+INS
+LAB
+MVC
+PEN
+PROB
+PCC
+PRC
+PUC
+RTC
+SHC
+UIC
+VEH
+WAT
+WIC
+Section:
+Keyword(s):
+setCode();
+Code Search
+Text Search
+Up^
+<< Previous
+Next >>
+cross-reference chaptered bills
+PDF
+|
+Add To My Favorites
+Search Phrase:
+Code Text
+Civil Code - CIV
+DIVISION 3. OBLIGATIONS [1427 - 3273.91]
+( Heading of Division 3 amended by Stats. 1988, Ch. 160, Sec. 14. )
+PART 4. OBLIGATIONS ARISING FROM PARTICULAR TRANSACTIONS [1738 - 3273.91]
+( Part 4 enacted 1872. )
+TITLE 1.6C. FAIR DEBT COLLECTION PRACTICES [1788 - 1788.33]
+( Title 1.6C added by Stats. 1977, Ch. 907. )
+ARTICLE 2. Debt Collector Responsibilities [1788.10 - 1788.185]
+( Article 2 added by Stats. 1977, Ch. 907. )
+1788.18.
+(a) Upon receipt from a debtor of all of the following, a debt collector shall cease collection activities until completion of the review provided in subdivision (d):
+(1) A copy of a Federal Trade Commission (FTC) identity theft report, completed and signed by the debtor. The debtor may choose, instead, to send a copy of a police report filed by the debtor alleging that the debtor is the victim of an identity theft crime, including, but not limited to, a violation of Section 530.5 of the Penal Code, for the specific debt being collected by the debt collector; however, the debt collector shall not also require a police report if the debtor submits an FTC identity theft report.
+(2) The debtor’s written statement that the debtor claims to be the victim of identity theft with respect to the specific debt being collected by the debt collector.
+(b) The written statement described in paragraph (2) of subdivision (a) shall consist of either of the following:
+(1) A written statement that contains the content of the Identity Theft Victim’s Fraudulent Account Information Request offered to the public by the California Office of Privacy Protection.
+(2) A written statement that certifies that the representations are true, correct, and contain no material omissions of fact to the best knowledge and belief of the person submitting the certification.
+						A person submitting the certification who declares as true any material matter pursuant to this subdivision that they know to be false is guilty of a misdemeanor. The statement shall contain or be accompanied by the following, to the extent that an item listed below is relevant to the debtor’s allegation of identity theft with respect to the debt in question:
+(A) A statement that the debtor is a victim of identity theft.
+(B) A copy of the debtor’s driver’s license or identification card, as issued by the state.
+(C) Any other identification document that supports the statement of identity theft.
+(D) Specific facts supporting the claim of identity theft, if available.
+(E) Any explanation showing that the debtor did not incur the debt.
+(F) Any available correspondence disputing the debt after transaction information has been provided to the debtor.
+(G) Documentation of the residence of the debtor at the time of the alleged debt. This may include copies of bills and statements, such as utility bills, tax statements, or other statements from businesses sent to the debtor, showing that the debtor lived at another residence at the time the debt was incurred.
+(H) A telephone number for contacting the debtor concerning any additional information or questions, or direction that further communications to the debtor be in writing only,
+						with the mailing address specified in the statement.
+(I) To the extent the debtor has information concerning who may have incurred the debt, the identification of any person whom the debtor believes is responsible.
+(J) An express statement that the debtor did not authorize the use of the debtor’s name or personal information for incurring the debt.
+(K) The certification required pursuant to this paragraph shall be sufficient if it is in substantially the following form:
+“I certify the representations made are true, correct, and
+contain no material omissions of fact.
+_____
+	(Date and Place)
+		_____
+	
+		_____
+	(Signature)
+		_____
+	 ”
+(c) If a debtor notifies a debt collector orally that they are a victim of identity theft, the debt collector shall notify the debtor, orally or in writing, that the debtor’s claim must be in writing. If a debtor notifies a debt collector in writing that they are a victim of identity theft,
+						but omits information required pursuant to subdivision (a) or, if applicable, the certification required pursuant to paragraph (2) of subdivision (b), if the debt collector does not cease collection activities, the debt collector shall provide written notice to the debtor of the additional information that is required, or the certification required pursuant to paragraph (2) of subdivision (b), as applicable, or send the debtor a copy of the Federal Trade Commission’s identity theft form.
+(d) Within 10 business days of receiving the complete statement and information described in subdivision (a), the debt collector shall, if it furnished adverse information about the debtor to a consumer credit reporting agency, notify the consumer credit reporting agency that the account is disputed, and initiate a review considering all of the information
+						provided by the debtor and other information available to the debt collector in its file or from the creditor. The debt collector shall send notice of its determination to the debtor no later than 10 business days after concluding the review. The debt collector may recommence debt collection activities only upon making a good faith determination that the information does not establish that the debtor is not responsible for the specific debt in question. The debt collector’s determination shall be made in a manner consistent with the provisions of subsection (1) of Section 1692f of Title 15 of the United States Code, as incorporated by Section 1788.17 of this code. The debt collector shall notify the debtor in writing of that determination and the basis for that determination before proceeding with any further collection activities. The debt collector’s determination shall be based on all of
+						the information provided by the debtor and other information available to the debt collector in its file or from the creditor.
+(e) No inference or presumption that the debt is valid or invalid, or that the debtor is liable or not liable for the debt, shall arise if the debt collector decides after the review described in subdivision (d) to cease or recommence the debt collection activities. The exercise or nonexercise of rights under this section is not a waiver of any other right or defense of the debtor or debt collector.
+(f) The statement and supporting documents that comply with subdivision (a) may also satisfy, to the extent those documents meet the requirements of, the notice requirement of paragraph (5) of subdivision (c) of Section 1798.93.
+(g) A debt collector who ceases collection activities under this section and does not recommence those collection activities shall do both of the following:
+(1) If the debt collector has furnished adverse information to a consumer credit reporting agency, notify the agency to delete that
+						information no later than 10 business days after making its determination.
+(2) Notify the creditor no later than 10 business days after making its determination that debt collection activities have been terminated based upon the debtor’s claim of identity theft.
+(h) A debt collector who has possession of documents that the debtor is entitled to request from a creditor pursuant to Section 530.8 of the Penal Code is authorized to provide those documents to the debtor.
+(i) Notwithstanding subdivision (h) of Section 1788.2, for the purposes of this section, “debtor” means a natural person, firm, association, organization, partnership, business trust, company, corporation, or limited liability company from
+						which a debt collector seeks to collect a debt that is due and owing or alleged to be due and owing from the person or entity. The remedies provided by this title shall apply equally to violations of this section.
+(Amended by Stats. 2024, Ch. 522, Sec. 12.   (SB 1286)   Effective January 1, 2025.)

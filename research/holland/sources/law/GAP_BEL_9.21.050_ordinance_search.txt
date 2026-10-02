@@ -1,0 +1,16 @@
+SOURCE: https://bellevuewasearchservice.search.windows.net/indexes/bellevuewaprod-documentcenter-index-prod-v2/docs/search?api-version=2020-06-30
+RETRIEVED: 2026-09-30
+NOTE: City public Document Center search API; metadata-only result. Search completeness depends on index coverage and tokenization; no absence-of-amendment conclusion.
+------------------------------------------------------------------------
+REQUEST: {"search": "\"9.21.050\"", "filter": "prefix eq 'Ordinances'", "top": 100, "count": true, "searchMode": "all"}
+RESULT: {
+  "count": 1,
+  "rows": [
+    {
+      "ordinancenumber": "4354",
+      "description": "RELOCATION ASSISTANCE FOR LOW-INCOME TENANTS ADDING CHAPTER 9.21 TO BELLEVUE CITY CODE",
+      "adoptiondate": "1992-04-13T00:00:00Z",
+      "metadata_storage_name": "4354.pdf"
+    }
+  ]
+}
