@@ -17,7 +17,7 @@ The case is adapted from Laura Seigel's tenancy at Breakwater (`research/califor
 | Property | A large professionally managed apartment community in Huntington Beach, CA, built in the 1970s and renovated. Owned by a private institutional owner and run by a third-party manager. |
 | Unit | 3 bedrooms, 2 baths, 1,028 sq ft |
 | Tenant | One adult tenant who paid rent electronically |
-| Lease | November 11, 2025 to November 10, 2026. Move-in photos exist, as California requires for tenancies starting after July 1, 2025. |
+| Lease | November 11, 2025 to November 10, 2026. Move-in photos exist, as California requires for tenancies starting after July 1, 2025. A holdover clause makes days past the end rent at the contract daily rate (monthly rent ÷ days in that month), so the six days are $547.00 and come out of the deposit as unpaid rent. |
 | Rent, deposit | $2,735 a month; deposit $2,437.50 (both from the historical record) |
 | What happens | Notice at lease end; keys returned November 16, 2026, six days after the lease ends (as historically) |
 | What was found historically | Closet needing rebuild or repair, walls needing paint, carpet needing cleaning, unit needing cleaning, and a final utility bill |

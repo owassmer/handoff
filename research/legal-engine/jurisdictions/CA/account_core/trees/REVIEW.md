@@ -291,4 +291,4 @@ October 3, 2026. Owen accepted points 1, 2, 3, 5 (C8 on branch A; C14 stays cont
 - **Point 1.** An honest documentation miss leaves the charge as a provable claim recoverable by setoff or a later claim, not as money the landlord may simply keep. *Granberry* says the right to retain is then "not perfected". `good-faith-noncompliance` already states this. The agent shows each kept line as fully proven, defensible but unperfected, or at risk.
 - **Point 7.** Bad faith is read as intent: honest mistakes and carelessness do not count; a pattern does. The authorities report (`../AUTHORITIES.md`, C2) found no published definition and supports this reading.
 
-Point 4 (holdover) is still open. The record of the rulings is in `HANDOFF_CONTEXT.md`.
+- **Point 4.** The demonstration lease makes holdover days rent at the contract daily rate, and the schedule's daily rate is monthly rent ÷ days in that month ($547.00 for the six November days). `deduct-holdover` therefore passes on `holdover-is-rent`, and C6 does not arise. The record of the rulings is in `HANDOFF_CONTEXT.md`.
