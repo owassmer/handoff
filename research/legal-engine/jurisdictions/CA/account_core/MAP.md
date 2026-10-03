@@ -531,6 +531,26 @@ Physical-work track. Account effect only through 1942.4 and 1941.9.
 
 ---
 
+## Template check: can the map decide each chain-map test case for a California market-rate unit?
+
+| Template | Decisive provisions (map section) | Status |
+|---|---|---|
+| Standard move-out | 1950.5(b), (e), (f), (g), (h); Civ 10 and CCP 12a (DP5, DP6) | Decidable. Judgment needed on wear vs. damage, amounts and "vacated". |
+| Early departure | 1951.2–1951.5, 1671(d), 1935 (DP3.3, DP5.5) | Decidable. Mitigation is a Judgment. |
+| Co-tenants | 1950.5(h)(1)(C) (DP2.3, DP2.4, DP6.6) | Partly. C8 (electronic payment vs. check payable to all) and C13 (partial vacatur) are open. |
+| No forwarding address | (h)(6) to the vacated unit; CCP 1520, 1530, 1532 (DP6.5, DP6.8, DP9.2) | Decidable. The holder-notice duty for non-banks is a gap. |
+| Deadline on a holiday | Civ 7, 10, 11; GOV 6700, 6701; CCP 12a, 135 (DP6.3) | Decidable with two computed dates; which one governs is C5. |
+| Building sold | 1950.5(i)–(l), 1962(c) (DP2.1) | Decidable. |
+| Belongings left | 1980–1991, 1965, CCP 1174 (DP6.9; fresh_research FINDINGS) | Decidable. |
+| Voucher tenant | 24 CFR 982.311, .313, .451, .452; Gov 12955 (DP5.7; federal.md) | Mostly. The OCHA administrative plan is not read. |
+| Balance to a collector | Rosenthal, FDCPA, DCLA, BPC 10131 (DP8; OPERATING_BRANCHES) | Decidable by branch. Coverage is C3. |
+| Tenant bankruptcy | 11 U.S.C. 362, 541, 542, 553; *Strumpf* (DP6.7, DP8.7) | Decidable (federal). |
+| Tenant death | 1934; PROB 9100, 13100, 13101; CCP 366.2 (DP2.5) | Decidable. The current small-estate threshold figure is a gap. |
+| Servicemember | 50 U.S.C. 3955, 3931, 3937; 1950.5(c)(4) (DP3.4, DP8.8) | Decidable (federal). |
+| Domestic violence | 1946.7(d)–(f); 1950.5(h)(1)(C)(iii) (DP3.4) | Decidable. VAWA adds rules only for voucher households. |
+| Casualty or vacate order | 1932, 1933, 1935, 1941.9, 1942.4; HSC 17975 (DP2.6, DP3.6) | Decidable. Relocation amounts are not retrieved. |
+| Payment plan | CCP 360; Rosenthal C3; EFTA and TILA if applicable (DP8.9; federal.md) | Decidable by branch. Whether the plan creates credit is C3. |
+
 ## Standards: the factors California authority uses
 
 | Standard (text) | Factors with authority | Where authority is silent |
