@@ -118,11 +118,14 @@ OpenAI notes that host-specific usage attribution and revocation of plan access 
 - **Provider selection:** no paid fallback unless explicitly allowed, and never for a programming error.
 - **The coordinator through LangGraph** on this transport against a scripted stream.
 
-**Checked against the real API.** A request with no credentials reached `POST https://api.openai.com/v1/responses` and came back as a classified 401 with OpenAI's request ID.
+**Checked against the real API, October 3, with Owen's authorization:**
+- Owen signed in on his Mac and placed the access token in this environment's API credentials.
+- The proxy injects the header. A request to `GET /v1/models` with no Authorization header from the session returned 200, and the token never entered the session. The account's model list returned `gpt-6-astra`, `gpt-5.6-sol`, `gpt-5.6-terra`, `gpt-5.6-luna` and `gpt-5.5`.
+- `npm run smoke:chatgpt` with `gpt-6-astra` completed a full coordinator wake on the plan. Over several model steps the route accepted the namespaced tools, parallel tool calls, tool results returned by call ID, and replayed encrypted reasoning. The gateway refused a message, and the model recovered from a malformed proposal by itself.
 
-**Needs your authorization before it can be called tested:**
-- the first real sign-in, registration and consent in your browser, and the real ID token and granted scopes;
-- a real refresh;
-- the model list for your account;
-- a completed inference under your plan, including how this route treats the namespaced tools and replayed encrypted reasoning in practice;
-- whether this environment's API credentials can inject the header.
+**Still untested:**
+- a refresh in the stored flow;
+- a self-hosted VM import;
+- behavior at a usage limit.
+
+An injected access token expires about an hour after it was issued and cannot be renewed in the session. When it does, run `access-token --clipboard` on the Mac again and update the environment's credential.
