@@ -25,7 +25,7 @@ October 3, 2026. Three groups: provisions the map needs but that were not retrie
 - CCP 1513.5 covers banks only. The notice duty for non-bank business holders is in State Controller holder guidance (registered as CA:SCO-HOLDER, DUE-DILIGENCE). Not read.
 
 **2026 acts**
-- AB 1841, AB 2017, SB 1394 and AB 2294 (holidays): texts are being fetched into `sources/bills/`. Each must be checked for whether it amends GOV 6700, and from what date.
+- Holiday acts AB 1841, AB 2017, SB 1394 and AB 2294 are read (`sources/bills/`). Still open: their exact operative date, and how the double-jointing among them resolves. The presumption is Jan 1, 2027, under Gov 9600 (not read).
 - Already read, with no effect on the account:
   - AB 395 (Education and Government Code meeting provisions; it adds no GOV 6700 holiday);
   - AB 2025 (disclosure of digitally altered images in rental advertising; leasing);
