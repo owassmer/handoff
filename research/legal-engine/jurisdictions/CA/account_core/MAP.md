@@ -289,7 +289,7 @@ None in state or HB law identified (I). Code: 0.
 - [US] The tenant owes only the tenant share (24 CFR 982.451(b)(4)).
 - Housing assistance payments for the move-out month: the owner may keep the HAP for the month the family moves out (982.311(d)).
 - The deposit may be applied to amounts owed under the lease, with a list given to the tenant; 982.313 "promptly" is satisfied by the 21-day deadline (US atoms).
-- No damage claim lies against the PHA for the HCV program (I from the US atoms; confirm in federal.md).
+- There is no PHA or HUD reimbursement route for unpaid amounts in the HCV program; the owner collects from the tenant (US atom 24CFR982.313(e)). The OCHA administrative plan was not read (GAPS).
 - [CA] Gov 12955 (T) covers source of income, including vouchers, for equal treatment.
 
 **DP5.8 Deposits that are not cash**
@@ -446,7 +446,7 @@ None identified in OC or HB (I; search not exhaustive).
 
 **DP8.6 Credit reporting**
 - 1785.25(a) accuracy (T).
-- 1785.26(b)–(c) (T): a "creditor" must notify the consumer in writing before, or within 30 days after, reporting negative information. Whether a landlord is a "creditor" under 1785.26(a) is not resolved here (I; read (a)).
+- 1785.26(b)–(c) (T): a "creditor" must notify the consumer in writing before, or within 30 days after, reporting negative information. (a)(1) includes the creditor's agent or collector. But (a)(2) excludes information "arising from a nonconsumer transaction or any other credit transaction outside the scope of this title". So whether a rent balance is "credit" here is open (C12; compare C3). Safe practice: send the notice (I).
 - FCRA 1681s-2 [US].
 
 **DP8.7 Bankruptcy**
