@@ -1,0 +1,57 @@
+{
+  "id": "CA.bad-faith-retention",
+  "title": "Has the landlord lost the right to claim any of the security because it failed, in bad faith, to comply with the statement and refund requirements?",
+  "decisionPoint": "DP7.1",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "compliance.subdivisionHFailures",
+    "conduct.knowledge",
+    "conduct.pattern",
+    "tenancy.record",
+    "statement",
+    "deposit"
+  ],
+  "parameters": [],
+  "root": {"type": "all", "children": [
+    {"type": "condition", "id": "h-noncompliance", "kind": "determinate",
+     "statement": "The landlord failed to comply with a requirement of subdivision (h): the deadline, the statement's contents, the documents and photographs, completing an estimate, documents on request, the refund method or the mailing address.",
+     "compute": "count(compliance.subdivisionHFailures) > 0",
+     "source": {"citation": "Civ 1950.5(h)(7)", "quote": "The landlord shall not be entitled to claim any amount of the security if the landlord, in bad faith, fails to comply with this subdivision."}},
+    {"type": "condition", "id": "failure-in-bad-faith", "kind": "semantic",
+     "statement": "The failure to comply was in bad faith.",
+     "question": {"type": "yesno",
+       "wording": "Considering what the landlord knew about the requirement, whether the failure was deliberate or part of a practice across tenancies, whether the tenant's requests were ignored, and whether the charges involved had a reasonable basis in evidence, was this failure to comply made in bad faith rather than through an honest mistake or circumstances outside the landlord's control?",
+       "inputs": ["compliance.subdivisionHFailures", "conduct.knowledge", "conduct.pattern", "tenancy.record", "statement"]},
+     "source": {"citation": "Civ 1950.5(h)(7)", "quote": "The landlord shall not be entitled to claim any amount of the security if the landlord, in bad faith, fails to comply with this subdivision."}}
+  ]},
+  "effects": [
+    {"id": "security-forfeited", "kind": "prohibition", "when": "holds",
+     "statement": "The landlord may not claim any amount of the security; the whole deposit is owed back to the tenant.",
+     "amount": "deposit.amount",
+     "consequence": "CA.statutory-damages",
+     "source": {"citation": "Civ 1950.5(h)(7)", "quote": "The landlord shall not be entitled to claim any amount of the security if the landlord, in bad faith, fails to comply with this subdivision."}},
+    {"id": "no-forfeiture", "kind": "permission", "when": "fails",
+     "statement": "Without a bad-faith failure, subdivision (h)(7) does not forfeit the security; what a good-faith failure leaves recoverable is CA.good-faith-noncompliance."}
+  ],
+  "contested": [
+    {"issue": "C1",
+     "question": "After a bad-faith forfeiture under subdivision (h)(7), may the landlord still pursue the same rent, repair and cleaning amounts against the tenant by a separate claim?",
+     "branches": [
+       {"id": "A",
+        "reading": "Yes. Paragraph (7) removes only the entitlement to claim the security. Where the statute means to bar claims against the tenant it says so, as in subdivision (e)(2)(A). The committee analysis describes the effect as forfeiting the ability to claim the security deposit, and Granberry expressly left the rights of bad-faith landlords open.",
+        "authority": [
+          {"citation": "Civ 1950.5(h)(7)", "quote": "The landlord shall not be entitled to claim any amount of the security if the landlord, in bad faith, fails to comply with this subdivision."},
+          {"citation": "Civ 1950.5(e)(2)(A)", "quote": "The landlord shall not assert a claim against the tenant or the security for damages to the premises or any defective conditions that preexisted the tenancy"},
+          {"citation": "Senate Judiciary Committee, analysis of AB 2801 (June 11, 2024) p. 11", "quote": "deductions from the deposit, or forfeit their ability to claim any amount of the security deposit."},
+          {"citation": "Granberry v. Islay Investments (1995) 9 Cal.4th 738, 750 fn. 6 [mirror text]", "quote": "Because the jury did not find that defendants here acted in bad faith, we do not consider and therefore express no opinion regarding the rights of landlords who have acted in bad faith."}],
+        "effect": {"statement": "Return the whole deposit; the underlying charges may still be claimed separately, with bad-faith exposure under subdivision (m)."}},
+       {"id": "B",
+        "reading": "No. The Legislative Counsel's Digest of AB 2801 describes the provision as prohibiting any claim against the tenant or the security after a bad-faith failure.",
+        "authority": [
+          {"citation": "AB 2801 (Stats. 2024, ch. 280), Legislative Counsel's Digest", "quote": "The bill would prohibit the landlord from making a claim against the tenant or the security if the landlord, in bad faith, fails to comply with these itemized statement requirements."}],
+        "effect": {"statement": "Return the whole deposit and make no claim against the tenant for these items."}}
+     ],
+     "exposureBranch": "B"}
+  ]
+}

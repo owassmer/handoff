@@ -1,0 +1,47 @@
+{
+  "id": "CA.electronic-writing",
+  "title": "Does the tenant's electronic designation or agreement (for example one given on the tenant page) satisfy a requirement that it be in writing?",
+  "decisionPoint": "DP1.6",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "record",
+    "eAgreement",
+    "lease.isElectronicRecord",
+    "lease.eAgreementClause",
+    "tenancy.record"
+  ],
+  "parameters": [],
+  "root": {"type": "all", "children": [
+    {"type": "any", "children": [
+      {"type": "condition", "id": "separate-optional-agreement", "kind": "determinate",
+       "statement": "The tenant gave a separate and optional agreement whose primary purpose is to authorize conducting the transaction electronically.",
+       "compute": "eAgreement.separate and eAgreement.optional and eAgreement.primaryPurposeElectronic",
+       "source": {"citation": "Civ 1633.5(b)", "quote": "Except for a separate and optional agreement the primary purpose of which is to authorize a transaction to be conducted by electronic means, an agreement to conduct a transaction by electronic means may not be contained in a standard form contract that is not an electronic record."}},
+      {"type": "condition", "id": "electronic-lease-agreement", "kind": "determinate",
+       "statement": "The agreement to transact electronically is in a lease that is itself an electronic record.",
+       "compute": "lease.isElectronicRecord and lease.eAgreementClause",
+       "source": {"citation": "Civ 1633.5(b)", "quote": "an agreement to conduct a transaction by electronic means may not be contained in a standard form contract that is not an electronic record."}},
+      {"type": "condition", "id": "agreement-from-conduct", "kind": "semantic",
+       "statement": "The context, surrounding circumstances and the parties' conduct, beyond the tenant's use of electronic payment, show the tenant agreed to conduct this transaction electronically.",
+       "question": {"type": "yesno",
+         "wording": "Leaving aside that the tenant paid rent or the deposit electronically, do the tenant's own actions show agreement to handle this matter electronically (for example the tenant chose the electronic option when a paper option was offered, or initiated and carried on the exchange by email)?",
+         "inputs": ["record", "tenancy.record"]},
+       "source": {"citation": "Civ 1633.5(b)", "quote": "Whether the parties agree to conduct a transaction by electronic means is determined from the context and surrounding circumstances, including the parties’ conduct."}}
+    ]},
+    {"type": "not", "child":
+      {"type": "condition", "id": "tenant-refused-electronic", "kind": "determinate",
+       "statement": "The tenant has refused to conduct further transactions electronically.",
+       "compute": "tenancy.record.electronicRefusal",
+       "source": {"citation": "Civ 1633.5(c)", "quote": "A party that agrees to conduct a transaction by electronic means may refuse to conduct other transactions by electronic means."}}}
+  ]},
+  "effects": [
+    {"id": "electronic-record-is-writing", "kind": "permission", "when": "holds",
+     "statement": "The electronic designation or agreement satisfies the requirement that it be in writing, and an electronic signature satisfies a signature requirement.",
+     "source": {"citation": "Civ 1633.7(c)", "quote": "If a law requires a record to be in writing, an electronic record satisfies the law."}},
+    {"id": "not-a-writing", "kind": "prohibition", "when": "fails",
+     "statement": "The electronic record does not satisfy the writing requirement; agreement may not be inferred solely from electronic payment, and a clause in a paper form lease does not count. Obtain a separate, optional agreement or a signed paper writing.",
+     "source": {"citation": "Civ 1633.5(b)", "quote": "An agreement to conduct a transaction by electronic means may not be inferred solely from the fact that a party has used electronic means to pay an account or register a purchase or warranty."}}
+  ],
+  "contested": []
+}

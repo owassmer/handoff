@@ -1,0 +1,36 @@
+{
+  "id": "CA.refund-check-or-delivery",
+  "title": "Must the remaining security be returned by personal delivery or a first-class check payable to the tenant?",
+  "decisionPoint": "DP6.5",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "ledger.payments",
+    "adultTenants.residing",
+    "moveOut.vacateDate"
+  ],
+  "parameters": [
+    {"id": "statementDays", "value": 21, "unit": "calendarDays",
+     "source": {"citation": "Civ 1950.5(h)(1)", "quote": "No later than 21 calendar days after the tenant has vacated the premises"}}
+  ],
+  "root": {"type": "all", "children": [
+    {"type": "not", "child":
+      {"type": "condition", "id": "paid-electronically", "kind": "determinate",
+       "statement": "The landlord received the security or rental payments from the tenant electronically.",
+       "compute": "ledger.payments.anyElectronic([\"security\", \"rent\"])",
+       "source": {"citation": "Civ 1950.5(h)(1)(A)(i)", "quote": "Subject to subparagraph (C), and except as provided by clause (ii), the landlord shall return the remainder of the security by personal delivery or by a check made payable to the tenant and mailed by first-class mail, postage prepaid."}}},
+    {"type": "not", "child":
+      {"type": "condition", "id": "multiple-adults", "kind": "determinate",
+       "statement": "More than one adult tenant resides in the unit.",
+       "compute": "count(adultTenants.residing) > 1",
+       "source": {"citation": "Civ 1950.5(h)(1)(A)(i)", "quote": "Subject to subparagraph (C), and except as provided by clause (ii), the landlord shall return the remainder of the security by personal delivery or by a check made payable to the tenant and mailed by first-class mail, postage prepaid."}}}
+  ]},
+  "effects": [
+    {"id": "check-or-delivery", "kind": "duty", "when": "holds",
+     "statement": "Return the remainder by personal delivery or by a check payable to the tenant mailed first-class, postage prepaid, by day 21.",
+     "due": "moveOut.vacateDate + parameters.statementDays",
+     "consequence": "CA.bad-faith-retention",
+     "source": {"citation": "Civ 1950.5(h)(1)(A)(i)", "quote": "Subject to subparagraph (C), and except as provided by clause (ii), the landlord shall return the remainder of the security by personal delivery or by a check made payable to the tenant and mailed by first-class mail, postage prepaid."}}
+  ],
+  "contested": []
+}

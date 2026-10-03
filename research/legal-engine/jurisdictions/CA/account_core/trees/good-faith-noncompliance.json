@@ -1,0 +1,65 @@
+{
+  "id": "CA.good-faith-noncompliance",
+  "title": "After a good-faith failure to comply with the statement and refund requirements, may the landlord still recover rent, repair and cleaning damages?",
+  "decisionPoint": "DP7.2",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "compliance.subdivisionHFailures",
+    "conduct.knowledge",
+    "conduct.pattern",
+    "tenancy.record",
+    "statement",
+    "account.provenDamages"
+  ],
+  "parameters": [],
+  "root": {"type": "all", "children": [
+    {"type": "condition", "id": "h-noncompliance", "kind": "determinate",
+     "statement": "The landlord failed to comply with a requirement of subdivision (h).",
+     "compute": "count(compliance.subdivisionHFailures) > 0",
+     "source": {"citation": "Civ 1950.5(h)(7)", "quote": "The landlord shall not be entitled to claim any amount of the security if the landlord, in bad faith, fails to comply with this subdivision."}},
+    {"type": "not", "child":
+      {"type": "condition", "id": "failure-in-bad-faith", "kind": "semantic",
+       "statement": "The failure to comply was in bad faith.",
+       "question": {"type": "yesno",
+         "wording": "Considering what the landlord knew about the requirement, whether the failure was deliberate or part of a practice across tenancies, whether the tenant's requests were ignored, and whether the charges involved had a reasonable basis in evidence, was this failure to comply made in bad faith rather than through an honest mistake or circumstances outside the landlord's control?",
+         "inputs": ["compliance.subdivisionHFailures", "conduct.knowledge", "conduct.pattern", "tenancy.record", "statement"]},
+       "source": {"citation": "Civ 1950.5(h)(7)", "quote": "The landlord shall not be entitled to claim any amount of the security if the landlord, in bad faith, fails to comply with this subdivision."}}},
+    {"type": "condition", "id": "damages-proven-reasonable", "kind": "semantic",
+     "statement": "The landlord can prove the damages and that the amounts claimed are reasonable.",
+     "question": {"type": "yesno",
+       "wording": "Does the evidence (move-in and move-out records, photographs, invoices or hours and rates, and the rent ledger) prove each amount claimed and show it is reasonable?",
+       "inputs": ["account.provenDamages", "statement", "tenancy.record"]},
+     "source": {"citation": "Civ 1950.5(m)", "quote": "In an action under this section, the landlord or the landlord’s successors in interest shall have the burden of proof as to the reasonableness of the amounts claimed or the authority pursuant to this section to demand additional security deposits."}},
+    {"type": "condition", "id": "granberry-survives", "kind": "discretionary",
+     "statement": "A good-faith failure to follow the statutory procedure leaves the landlord able to recover proven damages by setoff or later claim.",
+     "decision": {"by": "operator", "what": "Whether to keep pursuing charges after a good-faith procedural failure, accepting the exposure on the reading that the failure cuts off setoff."},
+     "contested": "C1",
+     "source": {"citation": "Civ 1950.5(h)(7)", "quote": "The landlord shall not be entitled to claim any amount of the security if the landlord, in bad faith, fails to comply with this subdivision."}}
+  ]},
+  "effects": [
+    {"id": "may-recover-proven-damages", "kind": "permission", "when": "holds",
+     "statement": "The landlord may still recover proven, reasonable rent, repair and cleaning damages, by setoff against the tenant's deposit claim or in a later claim, subject to equitable defenses such as laches, unclean hands and estoppel.",
+     "amount": "account.provenDamages",
+     "source": {"citation": "Civ 1950.5(m)", "quote": "the landlord or the landlord’s successors in interest shall have the burden of proof as to the reasonableness of the amounts claimed"}}
+  ],
+  "contested": [
+    {"issue": "C1",
+     "question": "Does Granberry's rule, that a good-faith failure to follow the deposit procedure does not bar recovering proven damages, survive AB 2801?",
+     "branches": [
+       {"id": "A",
+        "reading": "Yes. Granberry held that good-faith noncompliance does not bar recovery of proven, reasonable damages. AB 2801 attached forfeiture only to bad-faith failures, and the Senate Judiciary Committee analysis of AB 2801 states that a good-faith violator may still offset the amounts it could properly have deducted.",
+        "authority": [
+          {"citation": "Granberry v. Islay Investments (1995) 9 Cal.4th 738, 749-750 [mirror text]", "quote": "we conclude that a landlord who has failed in good faith to take advantage of the summary nonjudicial deduct-and-retain procedure allowed under section 1950.5, subdivision (f), may recover damages for unpaid rent, repairs and cleaning (§ 1950.5, subd. (e)) in a subsequent judicial proceeding provided that he proves by a preponderance of the evidence that he has suffered such damages and that the amount claimed is"},
+          {"citation": "Senate Judiciary Committee, analysis of AB 2801 (June 11, 2024) p. 11", "quote": "However, if a landlord violates the provisions of Civil Code Section 1950.5 in good faith, a tenant may still pursue an action against the landlord, but the landlord may offset their damages by any amounts which they could have properly deducted from the tenant’s deposit originally."},
+          {"citation": "Civ 1950.5(h)(7)", "quote": "The landlord shall not be entitled to claim any amount of the security if the landlord, in bad faith, fails to comply with this subdivision."}],
+        "effect": {"statement": "Proven, reasonable damages remain recoverable after a good-faith failure.", "sets": {"granberry-survives": true}}},
+       {"id": "B",
+        "reading": "No. The Granberry dissent read the statutory period as cutting off setoff, so that a tenant suing for the deposit faces no surprise claims. No court has adopted it, and AB 2801's bad-faith condition points the other way; this branch is weak but is the least favorable reading.",
+        "authority": [
+          {"citation": "Granberry v. Islay Investments (1995) 9 Cal.4th 738, 762 (dissent) [mirror text]", "quote": "section 1950.5(f), by cutting off the landlord's right of setoff after the two-week statutory period, assures the tenant weighing whether to bring an action to recover security that he or she will not be met by a surprise claim of setoff never before raised by the landlord."}],
+        "effect": {"statement": "A late or defective statement cuts off claims the landlord did not timely assert.", "sets": {"granberry-survives": false}}}
+     ],
+     "exposureBranch": "B"}
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "CA.documentation-on-request",
+  "title": "Must the landlord send the repair and cleaning documents because the tenant asked for them, and by when?",
+  "decisionPoint": "DP6.4",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "message",
+    "statement.receivedDate",
+    "statement"
+  ],
+  "parameters": [
+    {"id": "requestWindowDays", "value": 14, "unit": "calendarDays",
+     "source": {"citation": "Civ 1950.5(h)(5)", "quote": "Notwithstanding paragraph (4), the landlord shall comply with paragraphs (2) and (3) when a tenant makes a request for documentation within 14 calendar days after receiving the itemized statement specified in paragraph (1)."}},
+    {"id": "responseDays", "value": 14, "unit": "calendarDays",
+     "source": {"citation": "Civ 1950.5(h)(5)", "quote": "The landlord shall comply within 14 calendar days after receiving the request from the tenant."}}
+  ],
+  "root": {"type": "all", "children": [
+    {"type": "condition", "id": "documentation-requested", "kind": "semantic",
+     "statement": "The tenant's message requests documentation of the deductions.",
+     "question": {"type": "yesno",
+       "wording": "Does this message from the tenant ask for documentation supporting the deductions, such as invoices, receipts, work descriptions with hours and rates, or photographs?",
+       "inputs": ["message", "statement"]},
+     "source": {"citation": "Civ 1950.5(h)(5)", "quote": "the landlord shall comply with paragraphs (2) and (3) when a tenant makes a request for documentation within 14 calendar days after receiving the itemized statement specified in paragraph (1)."}},
+    {"type": "condition", "id": "request-within-14-days", "kind": "determinate",
+     "statement": "The request was made within 14 days after the tenant received the itemized statement.",
+     "compute": "days(statement.receivedDate, message.sentDate) <= parameters.requestWindowDays",
+     "source": {"citation": "Civ 1950.5(h)(5)", "quote": "the landlord shall comply with paragraphs (2) and (3) when a tenant makes a request for documentation within 14 calendar days after receiving the itemized statement specified in paragraph (1)."}}
+  ]},
+  "effects": [
+    {"id": "send-documents", "kind": "duty", "when": "holds",
+     "statement": "Send the documents and photographs required by subdivision (h)(2), and the estimate details required by (h)(3), even if the $125 threshold or a waiver applied, within 14 days of receiving the request. Handoff does this without an operator decision.",
+     "due": "message.receivedDate + parameters.responseDays",
+     "consequence": "CA.bad-faith-retention",
+     "source": {"citation": "Civ 1950.5(h)(5)", "quote": "The landlord shall comply within 14 calendar days after receiving the request from the tenant."}}
+  ],
+  "contested": []
+}

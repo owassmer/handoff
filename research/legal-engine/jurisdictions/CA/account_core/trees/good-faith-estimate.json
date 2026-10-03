@@ -1,0 +1,78 @@
+{
+  "id": "CA.good-faith-estimate",
+  "title": "May a good-faith estimate be deducted for this repair or cleaning in place of final documents, and what must follow?",
+  "decisionPoint": "DP6.4",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "line",
+    "moveOut.vacateDate",
+    "workPlan.schedule",
+    "workPlan.scope",
+    "quotes",
+    "schedule",
+    "statement"
+  ],
+  "parameters": [
+    {"id": "statementDays", "value": 21, "unit": "calendarDays",
+     "source": {"citation": "Civ 1950.5(h)(3)", "quote": "If a repair to be done by the landlord or the landlord’s employee cannot reasonably be completed within 21 calendar days after the tenant has vacated the premises"}},
+    {"id": "completionDays", "value": 14, "unit": "calendarDays",
+     "source": {"citation": "Civ 1950.5(h)(3)", "quote": "Within 14 calendar days of completing the repair or receiving the documentation, the landlord shall complete the requirements in paragraphs (1) and (2) in the manner specified."}}
+  ],
+  "root": {"type": "all", "children": [
+    {"type": "any", "children": [
+      {"type": "all", "children": [
+        {"type": "condition", "id": "in-house-repair", "kind": "determinate",
+         "statement": "The repair is to be done by the landlord or the landlord's employee.",
+         "compute": "line.performedBy == \"inHouse\"",
+         "source": {"citation": "Civ 1950.5(h)(3)", "quote": "If a repair to be done by the landlord or the landlord’s employee cannot reasonably be completed within 21 calendar days after the tenant has vacated the premises"}},
+        {"type": "condition", "id": "cannot-finish-by-day-21", "kind": "semantic",
+         "statement": "The in-house repair cannot reasonably be completed within 21 days after the tenant vacated.",
+         "question": {"type": "yesno",
+           "wording": "Given the scope of this repair, the materials it needs, and the maintenance team's schedule, could it not reasonably be finished within 21 days after the tenant vacated?",
+           "inputs": ["line", "workPlan.scope", "workPlan.schedule", "moveOut.vacateDate"]},
+         "source": {"citation": "Civ 1950.5(h)(3)", "quote": "If a repair to be done by the landlord or the landlord’s employee cannot reasonably be completed within 21 calendar days after the tenant has vacated the premises"}}
+      ]},
+      {"type": "condition", "id": "provider-documents-missing", "kind": "determinate",
+       "statement": "The documents from the person or entity providing services, materials or supplies are not in the landlord's possession by day 21.",
+       "compute": "not line.providerDocumentsReceivedBy(moveOut.vacateDate + parameters.statementDays)",
+       "source": {"citation": "Civ 1950.5(h)(3)", "quote": "or if the documents from a person or entity providing services, materials, or supplies are not in the landlord’s possession within 21 calendar days after the tenant has vacated the premises"}}
+    ]},
+    {"type": "condition", "id": "estimate-in-good-faith", "kind": "semantic",
+     "statement": "The amount deducted is a good-faith estimate of the charges that will be incurred.",
+     "question": {"type": "yesno",
+       "wording": "Is the estimated amount a good-faith figure for the charges that will actually be incurred, grounded in a written quote, the agreed scope, or the company rate schedule, rather than a padded or unsupported number?",
+       "inputs": ["line", "quotes", "schedule", "workPlan.scope"]},
+     "source": {"citation": "Civ 1950.5(h)(3)", "quote": "the landlord may deduct the amount of a good faith estimate of the charges that will be incurred and provide that estimate with the itemized statement."}},
+    {"type": "condition", "id": "estimate-with-statement", "kind": "determinate",
+     "statement": "The estimate is provided with the itemized statement.",
+     "compute": "statement.includesEstimate(line)",
+     "source": {"citation": "Civ 1950.5(h)(3)", "quote": "the landlord may deduct the amount of a good faith estimate of the charges that will be incurred and provide that estimate with the itemized statement."}},
+    {"type": "any", "children": [
+      {"type": "not", "child":
+        {"type": "condition", "id": "estimate-because-documents-missing", "kind": "determinate",
+         "statement": "The reason for the estimate is that the provider's documents are not in the landlord's possession.",
+         "compute": "line.estimateReason == \"providerDocumentsMissing\"",
+         "source": {"citation": "Civ 1950.5(h)(3)", "quote": "If the reason for the estimate is because the documents from a person or entity providing services, materials, or supplies are not in the landlord’s possession, the itemized statement shall include the name, address, and telephone number of the person or entity."}}},
+      {"type": "condition", "id": "provider-contact-listed", "kind": "determinate",
+       "statement": "The itemized statement gives the provider's name, address and telephone number.",
+       "compute": "statement.providerContactComplete(line)",
+       "source": {"citation": "Civ 1950.5(h)(3)", "quote": "If the reason for the estimate is because the documents from a person or entity providing services, materials, or supplies are not in the landlord’s possession, the itemized statement shall include the name, address, and telephone number of the person or entity."}}
+    ]}
+  ]},
+  "effects": [
+    {"id": "may-deduct-estimate", "kind": "permission", "when": "holds",
+     "statement": "The good-faith estimate may be deducted on the day-21 statement in place of the final cost and documents.",
+     "amount": "line.estimate",
+     "source": {"citation": "Civ 1950.5(h)(3)", "quote": "the landlord may deduct the amount of a good faith estimate of the charges that will be incurred and provide that estimate with the itemized statement."}},
+    {"id": "complete-within-14-days", "kind": "duty", "when": "holds",
+     "statement": "Within 14 days of completing the repair or receiving the provider's documents, complete the statement and the documents for this line, and return any part of the estimate not needed (see CA.estimate-true-up).",
+     "due": "line.completedOrDocumentedDate + parameters.completionDays",
+     "consequence": "CA.bad-faith-retention",
+     "source": {"citation": "Civ 1950.5(h)(3)", "quote": "Within 14 calendar days of completing the repair or receiving the documentation, the landlord shall complete the requirements in paragraphs (1) and (2) in the manner specified."}},
+    {"id": "no-estimate", "kind": "prohibition", "when": "fails",
+     "statement": "No estimate may stand in for this line; it needs its final cost and documents on the day-21 statement, or it is left off.",
+     "consequence": "CA.bad-faith-retention"}
+  ],
+  "contested": []
+}

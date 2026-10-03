@@ -1,0 +1,67 @@
+{
+  "id": "CA.repair-cleaning-documentation",
+  "title": "Must work documents and photographs go with the itemized statement for the repair and cleaning deductions?",
+  "decisionPoint": "DP6.4",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "statement",
+    "waiver",
+    "moveOut.vacateDate",
+    "tenancy.rightToOccupyStart"
+  ],
+  "parameters": [
+    {"id": "documentationThreshold", "value": 12500, "unit": "cents",
+     "source": {"citation": "Civ 1950.5(h)(4)(A)", "quote": "The deductions for repairs and cleaning together do not exceed one hundred twenty-five dollars ($125)."}},
+    {"id": "statementDays", "value": 21, "unit": "calendarDays",
+     "source": {"citation": "Civ 1950.5(h)(1)", "quote": "No later than 21 calendar days after the tenant has vacated the premises"}},
+    {"id": "moveInPhotoDutyFrom", "value": "2025-07-01", "unit": "date",
+     "source": {"citation": "Civ 1950.5(g)(1)", "quote": "For tenancies that begin on or after July 1, 2025, the landlord shall take photographs of the unit immediately before, or at the inception of, the tenancy."}}
+  ],
+  "root": {"type": "unless",
+    "rule": {"type": "condition", "id": "has-repair-or-cleaning-deductions", "kind": "determinate",
+      "statement": "The statement deducts for repairing or cleaning the premises.",
+      "compute": "count(statement.lines.repairAndCleaning) > 0",
+      "source": {"citation": "Civ 1950.5(h)(2)", "quote": "The landlord shall also include, along with and at the same time the itemized statement is sent, copies of documents showing charges incurred and deducted by the landlord to repair or clean the premises, as follows:"}},
+    "exception": {"type": "any", "children": [
+      {"type": "condition", "id": "under-documentation-threshold", "kind": "determinate",
+       "statement": "Repair and cleaning deductions together do not exceed $125.",
+       "compute": "sum(statement.lines.repairAndCleaning.amount) <= parameters.documentationThreshold",
+       "source": {"citation": "Civ 1950.5(h)(4)(A)", "quote": "The deductions for repairs and cleaning together do not exceed one hundred twenty-five dollars ($125)."}},
+      {"type": "all", "children": [
+        {"type": "condition", "id": "waiver-timing", "kind": "determinate",
+         "statement": "The tenant signed a waiver of the documentation rights at or after a termination notice, or no earlier than 60 days before a fixed term expires.",
+         "compute": "waiver.signed and waiver.signedDate >= waiver.earliestValidDate",
+         "source": {"citation": "Civ 1950.5(h)(4)(B)", "quote": "The waiver shall only be effective if it is signed by the tenant at the same time or after a notice to terminate a tenancy under Section 1946 or 1946.1 has been given, a notice under Section 1161 of the Code of Civil Procedure has been given, or no earlier than 60 calendar days prior to the expiration of a fixed-term lease."}},
+        {"type": "condition", "id": "waiver-text", "kind": "semantic",
+         "statement": "The waiver substantially includes the text of Civil Code section 1950.5(h)(2).",
+         "question": {"type": "yesno",
+           "wording": "Does the signed waiver substantially include the text of Civil Code section 1950.5(h)(2), the paragraph requiring copies of work documents, invoices and photographs with the statement?",
+           "inputs": ["waiver"]},
+         "source": {"citation": "Civ 1950.5(h)(4)(B)", "quote": "The waiver shall substantially include the text of paragraph (2)."}}
+      ]}
+    ]}
+  },
+  "effects": [
+    {"id": "in-house-work", "kind": "duty", "when": "holds",
+     "statement": "For work by the landlord or its employees, describe the work reasonably and state the time spent and the reasonable hourly rate charged, with the statement.",
+     "due": "moveOut.vacateDate + parameters.statementDays",
+     "source": {"citation": "Civ 1950.5(h)(2)(A)", "quote": "If the landlord or landlord’s employee did the work, the itemized statement shall reasonably describe the work performed. The itemized statement shall include the time spent and the reasonable hourly rate charged."}},
+    {"id": "vendor-work", "kind": "duty", "when": "holds",
+     "statement": "For work by anyone else, give a copy of the bill, invoice or receipt, and the vendor's name, address and telephone if it is not on the document.",
+     "due": "moveOut.vacateDate + parameters.statementDays",
+     "source": {"citation": "Civ 1950.5(h)(2)(B)", "quote": "If the landlord or landlord’s employee did not do the work, the landlord shall provide the tenant a copy of the bill, invoice, or receipt supplied by the person or entity performing the work. The itemized statement shall provide the tenant with the name, address, and telephone number of the person or entity, if the bill, invoice, or receipt does not include that information."}},
+    {"id": "materials", "kind": "duty", "when": "holds",
+     "statement": "For materials or supplies, give a copy of the bill, invoice or receipt; for items bought on an ongoing basis, a vendor price list or other vendor document that reasonably documents the cost will do.",
+     "due": "moveOut.vacateDate + parameters.statementDays",
+     "source": {"citation": "Civ 1950.5(h)(2)(C)", "quote": "If a deduction is made for materials or supplies, the landlord shall provide a copy of the bill, invoice, or receipt. If a particular material or supply item is purchased by the landlord on an ongoing basis, the landlord may document the cost of the item by providing a copy of a bill, invoice, receipt, vendor price list, or other vendor document that reasonably documents the cost of the item used in the repair or cleaning of the unit."}},
+    {"id": "photographs", "kind": "duty", "when": "holds",
+     "statement": "Provide the subdivision (g) photographs (move-in photographs for tenancies beginning on or after July 1, 2025; photographs after possession returned and before the work; photographs after the work) with a written explanation of each cost, by mail, email, flash drive or an online link.",
+     "due": "moveOut.vacateDate + parameters.statementDays",
+     "source": {"citation": "Civ 1950.5(h)(2)(D)", "quote": "If a deduction is made for repairs or cleanings allowed by this section, the landlord shall provide photographs taken pursuant to subdivision (g), along with a written explanation of the cost of the allowable repairs or cleanings, as described in subparagraphs (A) to (C), inclusive. The landlord may provide such photographs to the tenant by mail, email, computer flash drive, or by providing a link where the tenant may view the photographs online."}},
+    {"id": "documents-on-request-only", "kind": "permission", "when": "fails",
+     "statement": "The documents need not accompany the statement, but a tenant request within 14 days of receiving it revives the duty (CA.documentation-on-request).",
+     "source": {"citation": "Civ 1950.5(h)(4)", "quote": "The landlord need not comply with paragraph (2) or (3) if either of the following applies:"}}
+  ],
+  "contested": []
+}

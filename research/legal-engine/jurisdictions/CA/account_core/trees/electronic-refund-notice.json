@@ -1,0 +1,38 @@
+{
+  "id": "CA.electronic-refund-notice",
+  "title": "Must the landlord tell the tenant in writing of the right to receive the security electronically, and by when?",
+  "decisionPoint": "DP6.5",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "ledger.payments",
+    "refundAgreement",
+    "tenancy.terminationGround",
+    "terminationNotice",
+    "lease.endDate"
+  ],
+  "parameters": [],
+  "root": {"type": "unless",
+    "rule": {"type": "condition", "id": "paid-electronically", "kind": "determinate",
+      "statement": "The landlord received the security or rental payments from the tenant electronically.",
+      "compute": "ledger.payments.anyElectronic([\"security\", \"rent\"])",
+      "source": {"citation": "Civ 1950.5(h)(1)(A)(ii)(II)", "quote": "Pursuant to subclause (I), if the landlord received the security or rental payments from the tenant electronically or the landlord’s successor in interest received rental payments from the tenant electronically"}},
+    "exception": {"type": "any", "children": [
+      {"type": "condition", "id": "prior-agreement-other-method", "kind": "determinate",
+       "statement": "The landlord and tenant previously entered a written agreement designating another method of return.",
+       "compute": "refundAgreement.designatesOtherMethod and refundAgreement.isWriting",
+       "source": {"citation": "Civ 1950.5(h)(1)(A)(ii)(II)", "quote": "The requirements of this subclause do not apply when the landlord or the landlord’s successor in interest and tenant have previously entered into a written agreement designating another method of return of the security pursuant to subclause (I)"}},
+      {"type": "condition", "id": "terminated-under-ccp-1161", "kind": "determinate",
+       "statement": "The tenancy is being terminated under Code of Civil Procedure section 1161, paragraph (2), (3) or (4).",
+       "compute": "tenancy.terminationGround in [\"CCP 1161(2)\", \"CCP 1161(3)\", \"CCP 1161(4)\"]",
+       "source": {"citation": "Civ 1950.5(h)(1)(A)(ii)(II)", "quote": "or when the tenancy is terminated pursuant to subdivision (2), (3), or (4) of Section 1161 of the Code of Civil Procedure."}}
+    ]}
+  },
+  "effects": [
+    {"id": "send-electronic-refund-notice", "kind": "duty", "when": "holds",
+     "statement": "Notify the tenant in writing of the right to receive the security electronically to an account the tenant designates, or by an electronic method the tenant agrees to in writing. The law says within a reasonable time after notice of termination or before the lease term ends; Handoff's operating date is the day the termination notice is received.",
+     "due": "earliest(terminationNotice.receivedDate, lease.endDate)",
+     "source": {"citation": "Civ 1950.5(h)(1)(A)(ii)(II)", "quote": "shall, within a reasonable time after notification of either party’s intention to terminate the tenancy, or before the end of the lease term, notify the tenant in writing of the tenant’s right to receive the security electronically to a bank account or other financial institution designated by the tenant, or by any electronic or virtual method available to the landlord or the landlord’s successor in interest, if agreed to in writing by the tenant, pursuant to subclause (I)."}}
+  ],
+  "contested": []
+}
