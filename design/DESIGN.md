@@ -127,6 +127,8 @@ The thesis is from Nay's *Law Informs Code*: law turns goals into directives tha
 4. **Evidence contracts.** For each condition: the records that settle it (photos taken before and after the work, an invoice with the vendor's name, address and phone, or hours and rate), or the Jev question that settles it and the exact inputs that question needs.
 5. **Actions.** Legal effects become duties on the clock (send the statement by December 7), checks at the action gateway (no deduction unless its contract is met), and required text in notices.
 
+Jev helps compile the trees as well as apply them. Under the section-semantics method, focused questions break each section into its conditions, exceptions, timing and effects, and reviewers and Owen adjudicate the result before it becomes a tree. Compilation and runtime use the same question discipline: one useful determination per question, enough context to answer it, and a defined consumer for every answer.
+
 **Three kinds of condition in a tree.**
 - **Determinate**, which code computes from records: dates, amounts, whether move-in photos exist, whether an initial inspection took place, the payment method, the number of adult tenants.
 - **Semantic**, which Jev answers. These are narrow, typed questions with a defined consumer:
