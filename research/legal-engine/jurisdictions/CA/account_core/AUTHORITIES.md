@@ -11,7 +11,7 @@ Milestone step A3. October 3, 2026. Research for the coordinator; no rule here i
 - **Persuasive.** Federal district court orders on California law; published appellate-division opinions outside their own county; legislative committee analyses; agency drafts.
 - **Not citable.** Unpublished California opinions (Cal. Rules of Court, rule 8.1115) and Court of Appeal opinions superseded by a grant of review under the pre-2016 rules. Kept only where they show how courts reason, and labelled.
 
-**Citator limit.** No paid citator (KeyCite or Shepard's) was available, and CourtListener is blocked. Later history was checked by open searches for citing cases. That covered Google Scholar's "cited by" list for *Granberry* filtered to "bad faith" (all 23 results read), a Scholar search for cases citing *Holland v. Nelson*, web and Scholar searches for later use of *De Dios*, the GovInfo dockets for *Leaser* and *Brooks*, and the Oct. 2 *Brooks* docket capture. Scholar intermittently returned robot checks or sign-in walls, and its case pages need a sign-in, so it served only as a search index. The checks did not cover a full citing history for *Reichert*, *McAdory*, *Romine*, *Prudential*, *Menefee* or *Jensen*. "No later authority located" below means located by these searches, not certified.
+**Citator limit.** No paid citator (KeyCite or Shepard's) was available, and CourtListener is blocked. Later history was checked by open searches for citing cases. That covered Google Scholar's "cited by" list for *Granberry* filtered to "bad faith" (all 23 results read), a Scholar search for cases citing *Holland v. Nelson*, web searches for later use of *De Dios* (the Scholar citing search hit a robot check), the GovInfo dockets for *Leaser* and *Brooks*, and the Oct. 2 *Brooks* docket capture. Scholar intermittently returned robot checks or sign-in walls, and its case pages need a sign-in, so it served only as a search index. The checks did not cover a full citing history for *Reichert*, *McAdory*, *Romine*, *Prudential*, *Menefee* or *Jensen*. "No later authority located" below means located by these searches, not certified.
 
 ---
 
@@ -220,7 +220,7 @@ This section takes the collection research of Oct. 1 as its base (OPERATING_BRAN
 - **SB 546 (2025–26), "Collection Licensing Act: exceptions: billing agents"** (official status and committee analysis).
   - It would have exempted a billing agent that "calculates, allocates and delivers consolidated statements for rent utility services ... arising from a residential ... tenancy" without buying, taking assignment of, or independently enforcing the obligation.
   - Committee staff noted that the bill's construction implies such billing agents are currently licensees, and that the sponsor (Conservice) is DCLA-licensed.
-  - It was moved to the Assembly inactive file on Aug. 17, 2026, and the 2026 deadline for passing bills was Aug. 31, so it is not law.
+  - It was moved to the Assembly inactive file on Aug. 17, 2026, with no later action on the official status page read Oct. 3, 2026 (the session's bill-passage deadline was Aug. 31), so it is not law.
 - **BPC 10131(b)** (collecting rents for others needs a broker licence) is a separate gate, already covered in DEPENDENCY_AUDIT section 3 and C18. It is not re-researched here.
 
 **Remaining disagreement**
