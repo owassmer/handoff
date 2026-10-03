@@ -279,9 +279,12 @@ describe("cross-tree formulas", () => {
     const j = jurisdictionOf(gate, repair);
     const r = await evaluate("CA.repair", { f: { listed: false } }, { jurisdiction: j, eventDate: "2026-11-16", decisions: { "skipped-no-bar": true } });
     expect(r.root).toBe(true);
-    // The repair tree has no contested point of its own, so it reports no exposure; the gate's does.
-    expect(r.exposure).toBeNull();
+    // The repair tree has no contested point of its own, but its exposure puts the gate on branch B.
+    expect(r.exposure).toMatchObject({ root: false, sets: {} });
     expect(r.references["CA.gate"]!.exposure!.root).toBe(false);
+    // A tree that reaches nothing contested reports no exposure.
+    const plain = await evaluate("CA.gate", { f: { listed: true } }, { jurisdiction: jurisdictionOf(makeTree("CA.gate", fact("listed"))), eventDate: "2026-11-16" });
+    expect(plain.exposure).toBeNull();
   });
 });
 

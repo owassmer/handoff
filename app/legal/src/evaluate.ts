@@ -126,9 +126,13 @@ export interface ContestedResult {
   branches: BranchResult[];
 }
 
-/** The tree on the branch least favorable to the operator, in it and in every tree it reaches. */
+/**
+ * The tree on the branch least favorable to the operator, in it and in every tree it reaches. Present
+ * when the tree or a tree it reaches has a contested point.
+ */
 export interface ExposureResult {
   root: Truth;
+  /** This tree's own exposure branches; the trees it reaches are on theirs too. */
   sets: Record<string, boolean>;
   effects: EffectResult[];
 }
@@ -194,6 +198,8 @@ interface TreeRun {
   leaves: Map<string, LeafEval>;
   root: Truth;
   effects: EffectResult[];
+  /** Trees this run evaluated through holds() or amount(). */
+  reached: Set<string>;
   result?: EvaluationResult;
 }
 
@@ -247,6 +253,11 @@ class Session {
     if (this.seen.has(k)) return;
     this.seen.add(k);
     this.diagnostics.push({ treeId, where, message });
+  }
+
+  private baseResult(id: string): EvaluationResult | undefined {
+    const t = this.options.jurisdiction?.select(id, this.eventDate);
+    return t ? this.done.get(`${versionKey(t)}:base`)?.result : undefined;
   }
 
   /** Base-mode results of every tree evaluated, except the one given. */
@@ -416,6 +427,7 @@ class Session {
     }
 
     const root = combine(tree.root, valueIn(modeSets));
+    const reached = new Set([...leaves.values()].flatMap((l) => l.references));
     const effects: EffectResult[] = [];
     for (const ce of c.effects) {
       const e = ce.effect;
@@ -429,7 +441,9 @@ class Session {
           r[k as EffectFormula] = { formula: f.source, status: "skipped" };
           continue;
         }
-        const o = outcome(f, await this.formula(c, `${e.id}.${k}`, f, mode, chain), k === "amount" ? "amount" : "date");
+        const fr = await this.formula(c, `${e.id}.${k}`, f, mode, chain);
+        for (const ref of fr.references) reached.add(ref);
+        const o = outcome(f, fr, k === "amount" ? "amount" : "date");
         if (o.error !== undefined) this.diagnose(tree.id, `${e.id}.${k}`, o.error);
         r[k as EffectFormula] = o;
       }
@@ -438,7 +452,7 @@ class Session {
       effects.push(r);
     }
 
-    const run: TreeRun = { key, c, leaves, root, effects };
+    const run: TreeRun = { key, c, leaves, root, effects, reached };
     if (mode === "base") run.result = await this.result(run, valueIn, chain);
     return run;
   }
@@ -487,8 +501,10 @@ class Session {
       }),
     }));
 
+    // Exposure is worked out when this tree, or a tree it reached, has a contested point.
+    const reachedContested = [...run.reached].some((id) => this.baseResult(id)?.exposure);
     let exposure: ExposureResult | null = null;
-    if (tree.contested.length) {
+    if (tree.contested.length || reachedContested) {
       const exp = await this.run(c, "exposure", chain);
       exposure = { root: exp.root, sets: exposureSets(tree), effects: exp.effects };
     }
@@ -535,10 +551,7 @@ class Session {
       } else if (node.kind === "semantic") {
         settle = { by: "question", question: node.question!.wording, inputs: node.question!.inputs, missing: le.basis.by === "evidence-missing" ? le.basis.missing : [] };
       } else {
-        const via = le.references.flatMap((ref) => {
-          const t = this.options.jurisdiction?.select(ref, this.eventDate);
-          return t ? (this.done.get(`${versionKey(t)}:base`)?.result?.investigation ?? []) : [];
-        });
+        const via = le.references.flatMap((ref) => this.baseResult(ref)?.investigation ?? []);
         settle = { by: "facts", facts: leaf.compute!.analysis.facts, missing: le.missing, via };
         if (le.basis.by === "compute" && le.basis.result.error !== undefined) settle.error = le.basis.result.error;
       }
