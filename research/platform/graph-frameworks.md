@@ -55,3 +55,53 @@ Sources: https://docs.langchain.com/oss/python/langgraph/interrupts · https://d
 Sources: https://adk.dev/2.0/ · https://adk.dev/graphs/ · https://adk.dev/graphs/human-input/index.md · https://adk.dev/runtime/resume/ · https://adk.dev/sessions/session/ · https://adk.dev/sessions/session/rewind/ · https://adk.dev/agents/models/ · https://adk.dev/evaluate/ · https://adk.dev/integrations/dbos/index.md · https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/ · https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes · https://cloud.google.com/vertex-ai/pricing · https://www.npmjs.com/package/@google/adk · https://github.com/google/adk-python · https://www.arthur.ai/column/litellm-supply-chain-attack-pypi-compromise-2026 (secondary)
 
 ---
+## 3. Microsoft Agent Framework + Foundry Agent Service
+
+**Status.** MIT. 1.0 went GA on 2026-04-03 for **.NET and Python**. A Go SDK entered public preview on 2026-07-10. **There is no TypeScript SDK.** Python `agent-framework` is at 1.20.0 (2026-10-02), but many integrations are still pre-release: `-anthropic` 1.0.0b, `-durabletask` 1.0.0b, `-azure-cosmos` 1.0.0b, and `-postgres` 1.0.0a (a pgvector store only). Agent Framework is the declared successor to Semantic Kernel and AutoGen. AutoGen has been in maintenance since October 2025, and Semantic Kernel now gets only critical fixes (secondary source). Foundry **Hosted Agents** went GA on 2026-07-09.
+
+| # | Fit | Mechanism / evidence |
+|---|---|---|
+| 1 Agent-led | **A** | Workflows are built from executors with typed edges, switch-case edges and fan-out/fan-in, and agents can act as executors. The orchestrations add handoff (agents decide handoffs), group chat and **Magentic** (a manager agent plans dynamically). Microsoft's own docs reserve workflows for "fixed graph topologies" and point to orchestrations for imperative coordination. |
+| 2 Waking | **A** | `ctx.request_info()` / `RequestPort` pauses a run. Pending requests are saved in checkpoints and "re-emitted" on restore, and a run resumes via `run(checkpoint_id=…, responses=…)`. Python checkpoint stores: in-memory, file and **Cosmos DB only**, so Postgres needs a custom `CheckpointStorage`. Durable timers and "waits that can last hours, days, or weeks" come from the Durable Task extension. Its portable SDKs use only the **Azure-managed Durable Task Scheduler** ("Azure connectivity required"; there is a local emulator). Timers run on orchestration wall-clock time, and entity state is capped at 1 MB. |
+| 3 Operator authority | **A** (primitive only) | Tool approval (`function_approval_request`) and RequestPorts. Enforcement is up to the app. |
+| 4 Deterministic checks | **A** | Executors are plain code run in supersteps. Durable orchestrations must be deterministic code, and Durable Task activities run at-least-once. |
+| 5 Owned records | **W/A** | Checkpoints are pickled (behind a restricted unpickler) to file or Cosmos. The durable path relies on an Azure service. In-process workflows can be self-hosted. |
+| 6 Multi-provider | **A** | Foundry, Azure OpenAI, OpenAI, Anthropic, Bedrock, Gemini and Ollama. OpenRouter works through the OpenAI-compatible client. The Python Anthropic package is still beta. |
+| 7 Simulation / fork | **A** | A checkpoint can be rehydrated into a new workflow instance, which works as a fork, as long as the topology and executor IDs are identical. Since Python 1.13.0, entry checkpoints make "the complete workflow run replayable". Evaluations run through Foundry (Preview). I found no built-in user simulator. |
+| 8 Surfaces | **A** | Streaming workflow events. AG-UI/CopilotKit adapters and DevUI are in Preview. |
+| 9 Velocity | **W** | No TypeScript. Python integrations are pre-release, and checkpoint semantics changed in 1.13. |
+| 10 Lock-in / cost | **A** | The core is MIT, but production storage and durability lean on Azure (Cosmos, Durable Task Scheduler, Foundry). Foundry prompt agents and workflows carry no charge; Hosted Agents are billed by container compute. |
+
+**Verdict: weak to adequate.** The workflow engine is capable, but it has no TS SDK, Postgres is not a first-class store, and its durable timer path depends on Azure.
+
+Sources: https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/ · https://learn.microsoft.com/en-us/agent-framework/workflows/checkpoints · https://learn.microsoft.com/en-us/agent-framework/workflows/human-in-the-loop · https://learn.microsoft.com/en-us/agent-framework/workflows/ · https://learn.microsoft.com/en-us/azure/durable-task/sdks/durable-agents-microsoft-agent-framework · https://learn.microsoft.com/en-us/azure/durable-task/common/durable-task-storage-providers?pivots=durable-task-sdks · https://devblogs.microsoft.com/go/microsoft-agent-framework-for-go-public-preview/ · https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-july-august-2026/ · https://azure.microsoft.com/pricing/details/foundry-agent-service/ · https://pypi.org/project/agent-framework-postgres/ · https://atlan.com/know/ai-agent/what-is-autogen/ (secondary)
+
+---
+
+## 4. LlamaIndex Workflows (brief)
+
+**Status.** MIT, Python. `llama-index-workflows` is at 2.25.0 (2026-09-25). The TS `@llamaindex/workflow-core` was last published at 1.3.4 on 2026-03-09, so it lags.
+
+**Mechanisms.** Steps are event-driven: the type of event a step emits at runtime picks the next step, so routing is dynamic. `AgentWorkflow` supports handoffs. For human input, `InputRequiredEvent` and `HumanResponseEvent` (or `ctx.wait_for_event`) pause a run. To persist across restarts you store `ctx.to_dict()` yourself and restore with `Context.from_dict`. Alternatively, `llama-agents-dbos` journals each step completion to SQLite or Postgres and releases idle workflows after `idle_timeout`. Models are broadly provider-neutral. There is no timer primitive; DBOS added wall-clock delay scheduling in April 2026. There are no fork or simulation harnesses comparable to LangGraph's or ADK's.
+
+**Ratings.** Requirements 1, 6 and 9 (Python only): A. Requirements 2 and 5: A, via DBOS on Postgres. Requirements 3 and 4: A, as primitives only. Requirements 7 and 8: W. Requirement 10: S (MIT, light footprint). **Verdict: weak to adequate.** A lightweight Python orchestrator with too little platform around it for Handoff.
+
+Sources: https://pypi.org/project/llama-index-workflows/ · https://developers.llamaindex.ai/python/llamaagents/workflows/human_in_the_loop/ · https://developers.llamaindex.ai/python/llamaagents/workflows/dbos/ · https://www.dbos.dev/blog/dbos-new-features-april-2026
+
+---
+
+## Cross-cutting findings for Handoff
+
+1. **No option provides a controllable clock.** Every timer that exists (LangGraph `after_seconds` and UTC cron, Durable Task timers, DBOS delays) runs on the wall clock. Handoff should keep a `deadlines` table in Postgres driven by its own business clock and deliver each wake-up as an ordinary event. This also keeps the 21-day statutory deadline logic deterministic and testable.
+2. **No option enforces operator authority.** Resume and approval payloads come from the client. The framework pause should carry only a decision reference. A server-side tool gateway then checks the accepted decision in Postgres, including that its content matches, before committing money.
+3. **Forking the whole world.** The frameworks fork agent state only. The practical route is to keep checkpoints or sessions in the same Postgres as the records and simulator state, then snapshot the database (template database or a per-case schema copy). That favours LangGraph `PostgresSaver` and ADK `DatabaseSessionService`. It counts against MAF (file, Cosmos or Durable Task Scheduler) and against managed sessions (Agent Runtime, Foundry, Agent Server copy).
+4. **Re-execution is the norm.** LangGraph re-runs a node on resume, and ADK resume and Durable Task activities are at-least-once. Idempotency keys on every side effect are mandatory regardless of which option is chosen. Deterministic replay needs recorded model and tool responses in all four.
+
+## Ranking for Handoff
+
+1. **LangGraph** (OSS library + `PostgresSaver`, self-run; Agent Server optional). Fits best on steering, TS/Python parity, provider neutrality, Postgres-native state and fork/time-travel primitives.
+2. **Google ADK** (Python). Best built-in evaluation and user simulation. Weaker on TS models and forking, and pulls toward GCP.
+3. **Microsoft Agent Framework.** A solid workflow engine, but no TS, no first-class Postgres store, and durable timers tied to Azure.
+4. **LlamaIndex Workflows.** Clean and lightweight, but too little platform for the requirements.
+
+**Most important unknown.** I could not verify how LangGraph's Postgres checkpointer behaves for **weeks-long, event-heavy threads**: storage growth, `DeltaChannel` (still beta) correctness, resume latency and fork cost at hundreds or thousands of checkpoints per case. I found no public production evidence at that duration, only vendor customer logos and a forum report of 12-minute thread copies. Handoff should measure this in a spike before committing.
