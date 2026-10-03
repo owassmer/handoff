@@ -3,7 +3,10 @@
   "title": "When does a month-to-month tenancy end on the tenant's written notice, so that rent stops?",
   "decisionPoint": "DP3.2",
   "layer": "CA",
-  "effective": {"from": "2026-01-01", "to": null},
+  "effective": {
+    "from": "2026-01-01",
+    "to": null
+  },
   "inputs": [
     "tenancy.period",
     "terminationNotice",
@@ -11,43 +14,112 @@
     "ledger"
   ],
   "parameters": [
-    {"id": "monthToMonthNoticeDays", "value": 30, "unit": "calendarDays",
-     "source": {"citation": "Civ 1946(a)", "quote": "either of the parties may terminate the same by giving at least 30 days’ written notice thereof at any time and the rent shall be due and payable to and including the date of termination."}},
-    {"id": "minimumAgreedNoticeDays", "value": 7, "unit": "calendarDays",
-     "source": {"citation": "Civ 1946(a)", "quote": "It shall be competent for the parties to provide by an agreement at the time the tenancy is created that a notice of the intention to terminate the same may be given at any time not less than seven days before the expiration of the term thereof."}}
+    {
+      "id": "monthToMonthNoticeDays",
+      "value": 30,
+      "unit": "calendarDays",
+      "source": {
+        "citation": "Civ 1946(a)",
+        "quote": "either of the parties may terminate the same by giving at least 30 days’ written notice thereof at any time and the rent shall be due and payable to and including the date of termination."
+      }
+    },
+    {
+      "id": "minimumAgreedNoticeDays",
+      "value": 7,
+      "unit": "calendarDays",
+      "source": {
+        "citation": "Civ 1946(a)",
+        "quote": "It shall be competent for the parties to provide by an agreement at the time the tenancy is created that a notice of the intention to terminate the same may be given at any time not less than seven days before the expiration of the term thereof."
+      }
+    }
   ],
-  "root": {"type": "all", "children": [
-    {"type": "condition", "id": "month-to-month", "kind": "determinate",
-     "statement": "The tenancy is from month to month.",
-     "compute": "tenancy.period == \"month\"",
-     "source": {"citation": "Civ 1946(a)", "quote": "provided, however, that as to tenancies from month to month either of the parties may terminate the same by giving at least 30 days’ written notice thereof at any time"}},
-    {"type": "condition", "id": "written-notice-by-tenant", "kind": "determinate",
-     "statement": "The tenant gave the landlord written notice of intention to terminate, stating the termination date.",
-     "compute": "terminationNotice.by == \"tenant\" and terminationNotice.inWriting and exists(terminationNotice.terminationDate)",
-     "source": {"citation": "Civ 1946(a)", "quote": "unless one of the parties gives written notice to the other of that party’s intention to terminate the same"}},
-    {"type": "condition", "id": "notice-delivered-properly", "kind": "determinate",
-     "statement": "The notice was served as Code of Civil Procedure section 1162 prescribes, sent by certified or registered mail, or mailed by certified or registered mail or handed to the landlord's agent to whom rent was paid.",
-     "compute": "terminationNotice.method in [\"CCP 1162\", \"certifiedMail\", \"registeredMail\", \"personalToRentAgent\"]",
-     "source": {"citation": "Civ 1946(a)", "quote": "The notice herein required shall be given in the manner prescribed in Section 1162 of the Code of Civil Procedure or by sending a copy by certified or registered mail addressed to the other party. In addition, the lessee may give the notice by sending a copy by certified or registered mail addressed to the agent of the lessor to whom the lessee has paid the rent for the month prior to the date of the notice or by delivering a copy to the agent personally."}},
-    {"type": "any", "children": [
-      {"type": "condition", "id": "thirty-days-notice", "kind": "determinate",
-       "statement": "The termination date is at least 30 days after the notice was given.",
-       "compute": "days(terminationNotice.givenDate, terminationNotice.terminationDate) >= parameters.monthToMonthNoticeDays",
-       "source": {"citation": "Civ 1946(a)", "quote": "either of the parties may terminate the same by giving at least 30 days’ written notice thereof at any time and the rent shall be due and payable to and including the date of termination."}},
-      {"type": "condition", "id": "agreed-shorter-notice", "kind": "determinate",
-       "statement": "An agreement made when the tenancy was created allows a shorter notice of at least seven days, and the notice met it.",
-       "compute": "exists(lease.agreedNoticeDays) and lease.agreedNoticeDays >= parameters.minimumAgreedNoticeDays and days(terminationNotice.givenDate, terminationNotice.terminationDate) >= lease.agreedNoticeDays",
-       "source": {"citation": "Civ 1946(a)", "quote": "It shall be competent for the parties to provide by an agreement at the time the tenancy is created that a notice of the intention to terminate the same may be given at any time not less than seven days before the expiration of the term thereof."}}
-    ]}
-  ]},
+  "root": {
+    "type": "all",
+    "children": [
+      {
+        "type": "condition",
+        "id": "month-to-month",
+        "kind": "determinate",
+        "statement": "The tenancy is from month to month.",
+        "compute": "tenancy.period == \"month\"",
+        "source": {
+          "citation": "Civ 1946(a)",
+          "quote": "provided, however, that as to tenancies from month to month either of the parties may terminate the same by giving at least 30 days’ written notice thereof at any time"
+        }
+      },
+      {
+        "type": "condition",
+        "id": "written-notice-by-tenant",
+        "kind": "determinate",
+        "statement": "The tenant gave the landlord written notice of intention to terminate, stating the termination date.",
+        "compute": "terminationNotice.by == \"tenant\" and terminationNotice.inWriting and exists(terminationNotice.terminationDate)",
+        "source": {
+          "citation": "Civ 1946(a)",
+          "quote": "unless one of the parties gives written notice to the other of that party’s intention to terminate the same"
+        }
+      },
+      {
+        "type": "condition",
+        "id": "notice-delivered-properly",
+        "kind": "determinate",
+        "statement": "The notice was served as Code of Civil Procedure section 1162 prescribes or sent to the landlord by certified or registered mail, or the tenant mailed it by certified or registered mail to, or handed it to, the landlord's agent to whom rent was last paid.",
+        "compute": "terminationNotice.method in [\"CCP 1162\", \"certifiedMail\", \"registeredMail\", \"personalToRentAgent\"]",
+        "source": {
+          "citation": "Civ 1946(a)",
+          "quote": "The notice herein required shall be given in the manner prescribed in Section 1162 of the Code of Civil Procedure or by sending a copy by certified or registered mail addressed to the other party. In addition, the lessee may give the notice by sending a copy by certified or registered mail addressed to the agent of the lessor to whom the lessee has paid the rent for the month prior to the date of the notice or by delivering a copy to the agent personally."
+        }
+      },
+      {
+        "type": "any",
+        "children": [
+          {
+            "type": "condition",
+            "id": "thirty-days-notice",
+            "kind": "determinate",
+            "statement": "The termination date is at least 30 days after the notice was given.",
+            "compute": "days(terminationNotice.givenDate, terminationNotice.terminationDate) >= parameters.monthToMonthNoticeDays",
+            "source": {
+              "citation": "Civ 1946(a)",
+              "quote": "either of the parties may terminate the same by giving at least 30 days’ written notice thereof at any time and the rent shall be due and payable to and including the date of termination."
+            }
+          },
+          {
+            "type": "condition",
+            "id": "agreed-shorter-notice",
+            "kind": "determinate",
+            "statement": "An agreement made when the tenancy was created allows a shorter notice of at least seven days, and the notice met it.",
+            "compute": "exists(lease.agreedNoticeDays) and lease.agreedNoticeDays >= parameters.minimumAgreedNoticeDays and days(terminationNotice.givenDate, terminationNotice.terminationDate) >= lease.agreedNoticeDays",
+            "source": {
+              "citation": "Civ 1946(a)",
+              "quote": "It shall be competent for the parties to provide by an agreement at the time the tenancy is created that a notice of the intention to terminate the same may be given at any time not less than seven days before the expiration of the term thereof."
+            }
+          }
+        ]
+      }
+    ]
+  },
   "effects": [
-    {"id": "rent-through-termination-date", "kind": "duty", "when": "holds",
-     "statement": "The tenancy ends on the notice's termination date, and rent is due and payable to and including that date, prorated for a partial month by the company schedule's daily rate.",
-     "amount": "ledger.rentDueThrough(terminationNotice.terminationDate)",
-     "source": {"citation": "Civ 1946(a)", "quote": "the rent shall be due and payable to and including the date of termination."}},
-    {"id": "notice-ineffective-for-date", "kind": "duty", "when": "fails",
-     "statement": "The notice does not end the tenancy on its stated date; rent continues until a compliant notice period has run.",
-     "source": {"citation": "Civ 1946(a)", "quote": "A hiring of real property, for a term not specified by the parties, is deemed to be renewed as stated in Section 1945, at the end of the term implied by law unless one of the parties gives written notice to the other of that party’s intention to terminate the same, at least as long before the expiration thereof as the term of the hiring itself, not exceeding 30 days"}}
+    {
+      "id": "rent-through-termination-date",
+      "kind": "duty",
+      "when": "holds",
+      "statement": "The tenancy ends on the notice's termination date, and rent is due and payable to and including that date, prorated for a partial month by the company schedule's daily rate.",
+      "amount": "ledger.rentDueThrough(terminationNotice.terminationDate)",
+      "source": {
+        "citation": "Civ 1946(a)",
+        "quote": "the rent shall be due and payable to and including the date of termination."
+      }
+    },
+    {
+      "id": "notice-ineffective-for-date",
+      "kind": "duty",
+      "when": "fails",
+      "statement": "The notice does not end the tenancy on its stated date; rent continues until a compliant notice period has run.",
+      "source": {
+        "citation": "Civ 1946(a)",
+        "quote": "A hiring of real property, for a term not specified by the parties, is deemed to be renewed as stated in Section 1945, at the end of the term implied by law unless one of the parties gives written notice to the other of that party’s intention to terminate the same, at least as long before the expiration thereof as the term of the hiring itself, not exceeding 30 days"
+      }
+    }
   ],
   "contested": []
 }
