@@ -4,9 +4,7 @@ October 3, 2026. Three groups: provisions the map needs but that were not retrie
 
 ## 1. Needed but not retrieved or not read
 
-**Regulations** (both units are in the J1 register; neither text was attempted, because the CCR is hosted by Westlaw)
-- 10 CCR 2832 — broker trust-fund handling of deposits. DP1.2: matters when the manager, not the owner, holds the deposit.
-- 2 CCR 12185 et seq. — FEHA rules on assistance animals and reasonable accommodation. DP5.9: the state basis for "no pet deposit or fee for an assistance animal".
+**Regulations** — 10 CCR 2832 and 2 CCR 12185 were captured only from the Cornell LII mirror (`texts/CA_CCR10/2832.txt`, `texts/CA_CCR2/12185.txt`). The official OAL/Westlaw text was not retrieved, so currency is unverified.
 
 **Statutes not fetched** (all inside register units)
 - Civ 1633.5 — UETA's requirement that parties agree to transact electronically. DP1.6 and the E-SIGN question in federal.md.

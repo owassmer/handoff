@@ -92,7 +92,7 @@ These are the facts that switch branches below:
 **DP1.2 How the deposit is held**
 - 1950.5(d) (T): security is held for the tenant who is a party to the lease. The tenant's claim ranks ahead of the landlord's creditors.
 - No statewide rule on interest, a separate account or a bank notice was found in the deposit statutes read. No HB interest ordinance was identified (I; absence). Code: interest owed = 0.
-- If a DRE-licensed manager receives the deposit, BPC 10145 trust-fund rules apply (T); the regulation 10 CCR 2832 was not retrieved. A breach is a licensing matter. It does not change the tenant's account (I).
+- If a DRE-licensed manager receives the deposit, BPC 10145 (T) and 10 CCR 2832 (M; Cornell mirror) apply: funds go to the owner, into a neutral escrow, or into a trust account, no later than three business days after receipt. A breach is a licensing matter. It does not change the tenant's account (I).
 
 **DP1.3 Move-in condition record**
 - No statutory move-in inspection or checklist exists (I; absence in 1950.5).
@@ -296,8 +296,10 @@ None in state or HB law identified (I). Code: 0.
 No California statute on deposit-alternative or surety products was located. Guarantor law is suretyship (GAPS). Thin.
 
 **DP5.9 Disability**
-- [CA] 54.1(b)(6) (T): the landlord may not refuse a guide, signal or service dog. (B) keeps the tenant liable for property damage the dog causes "when proof of the damage exists". The no-pet-fee or deposit rule comes from the FEHA regulations (GAPS) and federal law.
-- FEHA regulations 2 CCR 12185 et seq. (GAPS).
+- [CA] 54.1(b)(6) (T): the landlord may not refuse a guide, signal or service dog. (B) keeps the tenant liable for property damage the dog causes "when proof of the damage exists".
+- 2 CCR 12185 (M; Cornell mirror; operative Jan 1, 2020):
+  - (2) no pet fee, additional rent, additional security deposit or liability insurance for an assistance animal;
+  - (3) the tenant may be required to cover repairs for damage the animal causes, excluding ordinary wear and tear.
 - [US] 42 U.S.C. 3604(f)(3)(B) and 24 CFR 100.204 (atoms).
 - Code: no pet fees or deposits for an assistance animal. Actual damage is chargeable like any other.
 
