@@ -284,3 +284,11 @@ The checker enforces these, and an evaluator can ignore the optional fields it d
    - restoration lines count toward the $125 threshold;
    - tenancies begun before 2003 are outside the cleaning tree;
    - a lease debt's existence rests on the lease (the 0.12 leaf).
+
+## Rulings
+
+October 3, 2026. Owen accepted points 1, 2, 3, 5 (C8 on branch A; C14 stays contested), 6, 7 and 8 above, with two refinements:
+- **Point 1.** An honest documentation miss leaves the charge as a provable claim recoverable by setoff or a later claim, not as money the landlord may simply keep. *Granberry* says the right to retain is then "not perfected". `good-faith-noncompliance` already states this. The agent shows each kept line as fully proven, defensible but unperfected, or at risk.
+- **Point 7.** Bad faith is read as intent: honest mistakes and carelessness do not count; a pattern does. The authorities report (`../AUTHORITIES.md`, C2) found no published definition and supports this reading.
+
+Point 4 (holdover) is still open. The record of the rulings is in `HANDOFF_CONTEXT.md`.
