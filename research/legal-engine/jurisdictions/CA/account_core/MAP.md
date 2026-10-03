@@ -87,7 +87,7 @@ These are the facts that switch branches below:
 - (c)(4): a servicemember's higher-than-standard security must be returned after six months without arrears.
 - (n): a lease may not call security "nonrefundable".
 - Code: compare the total of start-of-tenancy charges with the cap. An excess is a tenant claim, and bad-faith exposure under (m).
-- SB 1296 (2026) adds a pet-policy section, 1942.7.5, operative Apr 1, 2027. It is not in force for a 2026 move-out, and its text has not yet been retrieved (GAPS).
+- SB 1296 (Stats. 2026 ch. 1025) adds 1942.7.5, operative Apr 1, 2027: pet-policy disclosure, and refund of the application fee when the policy was not disclosed. It is pre-tenancy only, with no effect on the move-out account (read).
 
 **DP1.2 How the deposit is held**
 - 1950.5(d) (T): security is held for the tenant who is a party to the lease. The tenant's claim ranks ahead of the landlord's creditors.
@@ -651,7 +651,7 @@ ALL of the following:
 | Small-claims limits $6,250 / $12,500 | in force | CCP 116.220, 116.221 (T) |
 | 5% judgment interest on personal debt | Judgments from Jan 1, 2023 | CCP 685.010(a)(2) (T) |
 | Holiday calendar | GOV 6700 amended by AB 2156 (Stats. 2026 ch. 7), effective Mar 26, 2026 (T). Other 2026 holiday acts (AB 395, AB 1841, AB 2017, SB 1394, AB 2294) are dated entries; texts are being fetched (GAPS) | Matters when day 21 falls on or near a new holiday |
-| 2026 acts touching tenancy | SB 1072 (housing omnibus), AB 2025 (tenancy: digitally altered images), SB 1296 (pet policy, operative Apr 1, 2027) | Texts not yet read (GAPS). AB 2025 may affect (g) photographs. |
+| 2026 acts touching tenancy | SB 1072 (housing omnibus), AB 2025 (Civ 1940.11: altered images in rental ads), SB 1296 (Civ 1942.7.5 pet policy, operative Apr 1, 2027) | Read (`sources/bills/`). None changes the departing account. AB 2025 concerns advertising, not the (g) photographs. |
 | Rent cap and just cause sunset | Jan 1, 2030 | 1946.2, 1947.12 (T) |
 
 For a move-out in late December 2026 whose day 21 falls in January 2027: the duties attach at vacating under the 2026 text (I). Only the holiday calendar for counting may change.
