@@ -10,7 +10,7 @@ Compile the rules Handoff needs to build, issue and defend a departing tenant's 
 - [x] **A2. Decide and propose.** Done Oct 3 as 34 logic trees in the format of `design/legal-trees.md`, in `jurisdictions/CA/account_core/trees/`, with the quote checker and the Jev fidelity check (REVIEW.md).
 - [x] **A3. Authorities for contested questions only.** Done Oct 3: `jurisdictions/CA/account_core/AUTHORITIES.md`. For example bad-faith forfeiture under 1950.5(h)(7), Granberry, Rosenthal coverage of tenancy balances, public-entity owner consequences.
 - [x] **A4. Owen's ruling, then apply.** Owen ruled Oct 3 on every point raised; the rulings are in HANDOFF_CONTEXT.md and at the end of the trees' REVIEW.md. The trees replace `rules.json` as the compiled form.
-- [ ] **A5. Evaluate and walk.** The TypeScript tree evaluator in `app/legal` (three-valued, evidence contracts, contested branches, effects in cents and dates), and the demonstration case walked through the trees as tests. In progress.
+- [x] **A5. Evaluate and walk.** Done Oct 3: the TypeScript tree evaluator in `app/legal` (three-valued, evidence contracts, contested branches, exposure, investigation list, effects in cents and dates; 90 tests), with the demonstration case walked through the trees. Binding notes in `app/legal/BINDING.md`.
 
 ## Parallel track: J1 source register (does not block the milestone)
 
