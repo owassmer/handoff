@@ -65,7 +65,7 @@ Everything else Handoff does on its own: notices, scheduling, follow-up, defendi
 
 ## 5. How the system is built
 
-TypeScript throughout. Postgres for all records. The LangGraph library for the agent. Claude for the coordinator, compared against other models before the demo is frozen.
+TypeScript throughout. Postgres for all records. The LangGraph library for the agent. During development the models run on Owen's ChatGPT plan through Sign in with ChatGPT, with no paid fallback (`app/service/CHATGPT_PLAN.md`). The coordinator's model is compared against others before the demo is frozen.
 
 ### 5.1 The case runtime (Handoff's own platform)
 

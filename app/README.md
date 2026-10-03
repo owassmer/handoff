@@ -26,6 +26,8 @@ The platform the agent runs inside (DESIGN.md §5.1). It holds the records, and 
 | Imitations | `sim/`, `migrations/002_*`, `004_*` | Each outside system as a separate imitation with its own records in the `sim` schema, hidden scenarios (timeouts, declines, holidays, late invoices, a collector that lags corrections) and timers on the business clock. A world copy carries them. Agent tools never read the `sim` schema. |
 | Simulated world | `world.ts` | Records, imitations and clock in one in-process Postgres (PGlite). `advanceTo` fires everything due, in time order. `copy()` branches the whole world at any moment. |
 
+| Models | `agent/models.ts`, `llm/chatgpt/` | Each role's model comes from configuration. During development it runs on a ChatGPT plan through Sign in with ChatGPT. Paid providers are used only when chosen explicitly, never as a silent fallback. Setup: `service/CHATGPT_PLAN.md`. |
+
 ### Next
 
 - The agent itself (DESIGN.md §6 step 2): the LangGraph coordinator as a `CaseTurn`, its read and prepare tools over these records, and the evidence analyst.
