@@ -1,6 +1,6 @@
 # Agent platform: synthesis of the four evaluations
 
-October 3, 2026. Sources are the four evaluations in this folder, all checked against vendor documentation on that date. This is the coordinator's synthesis for Owen's decision, not a decision.
+October 3, 2026. Sources are the four evaluations in this folder, all checked against vendor documentation on that date. **Owen decided the same day: LangGraph is the agent layer** (see HANDOFF_CONTEXT.md). The recommendation below was the coordinator's before that decision.
 
 ## What every evaluation found
 
