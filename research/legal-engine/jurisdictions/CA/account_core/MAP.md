@@ -61,7 +61,7 @@ Chapter 2.5 (water submeters) applies only where submeters are used, or were req
   - Code: the citation date plus 35 days. Judgment: good cause, and whether the tenant caused the condition.
 - 1962(c) (T). A successor owner or manager who has not made the disclosures within 15 days may not evict for rent that accrued during the noncompliance. The tenant still owes that rent. This matters for the building-sold template.
 - The warranty of habitability is a rent-reduction defense in disputes. The leading case is *Green v. Superior Court* (1974) 10 Cal.3d 616 (N).
-- Capacity of the owner entity to sue: CORP 17708.07, CORP 2203 and RTC 23301. See DP8.9.
+- Capacity of the owner entity to sue: CORP 17708.07, CORP 2203 and RTC 23301 (queued). See DP8.9.
 
 **DP0.4 Status facts to record at intake**
 These are the facts that switch branches below:
@@ -166,7 +166,7 @@ The 21-day clock runs from when "the tenant has vacated the premises" ((h)(1)) (
   - The estate is liable for the rest of a fixed term, subject to the landlord's good-faith re-letting.
   - A periodic tenancy ends on the 30th day after the last rent payment.
 - The refund is the decedent's property and goes to the personal representative or a small-estate successor: PROB 13100 and 13101 (queued).
-- A balance claim against the estate has to fit the probate claim period (PROB 9100) and the one-year limit after death (CCP 366.2) (queued). Code: date of death + 1 year.
+- A balance claim against the estate has to fit the probate claim period (PROB 9100, queued) and the one-year limit after death (CCP 366.2 (T)). Code: date of death + 1 year.
 - Belongings: 1980–1991 and 1965 (DP6.9).
 
 **DP2.6 Casualty**
@@ -213,7 +213,7 @@ The 21-day clock runs from when "the tenant has vacated the premises" ((h)(1)) (
 
 **DP3.5 Holdover**
 - 1945 (renewal if rent is accepted).
-- 3334 (queued): the value of use during wrongful occupation.
+- 3334 (T): the value of use during wrongful occupation, measured as the greater of reasonable rental value or the benefit to the occupier ((b)(1)), plus restoration and recovery costs. 3334 does not apply where CCP 1174 governs.
 - CCP 1174(b) (T): unlawful-detainer damages, plus up to $600 statutory damages for malice.
 - 1671(d): any holdover premium (for example, 150% rent) faces the penalty test.
 - 1935: pro rata.
@@ -225,7 +225,7 @@ The 21-day clock runs from when "the tenant has vacated the premises" ((h)(1)) (
 
 **DP3.7 Surrender without eviction**
 - 1933(2) mutual consent (T); 1951.3; 1954(a)(3) entry after abandonment or surrender (T).
-- Self-help is barred while the tenant is in possession (789.3, queued).
+- Self-help is barred while the tenant is in possession: no utility interruption or lockout intended to end the occupancy (789.3 (T)).
 - "Vacated" (the DP6.2 trigger) is a Judgment over keys, belongings, a written surrender and access.
 
 **DP3.8 After an eviction case**
@@ -262,9 +262,9 @@ The 21-day clock runs from when "the tenant has vacated the premises" ((h)(1)) (
 
 **DP5.2 Fees and charges**
 See DP1.4.
-- Collection costs and attorney fees: only on an original lease clause, and only actual. 1717 makes fee clauses reciprocal (queued). See OPERATING_BRANCHES C12.
+- Collection costs and attorney fees: only on an original lease clause, and only actual. 1717 makes fee clauses reciprocal (T). See OPERATING_BRANCHES C12.
 - The flat "cleaning fee" theory survived a motion to dismiss in Brooks ECF 48 (nonbinding). Owen has excluded flat fees.
-- A returned-payment fee rests on 1719 (queued).
+- A returned-payment fee rests on 1719(a)(1) (T): up to $25 for the first check returned for insufficient funds and $35 for each later one. A treble-damages demand procedure is in (a)(2).
 
 **DP5.3 Wear and tear, painting, cleaning and turnover**
 - (e)(2)(A)–(C), (b)(3) (T).
@@ -296,7 +296,7 @@ None in state or HB law identified (I). Code: 0.
 No California statute on deposit-alternative or surety products was located. Guarantor law is suretyship (GAPS). Thin.
 
 **DP5.9 Disability**
-- [CA] 54.1(b)(6) (queued): no extra deposit for an assistance dog, but the tenant is liable for damage.
+- [CA] 54.1(b)(6) (T): the landlord may not refuse a guide, signal or service dog. (B) keeps the tenant liable for property damage the dog causes "when proof of the damage exists". The no-pet-fee or deposit rule comes from the FEHA regulations (GAPS) and federal law.
 - FEHA regulations 2 CCR 12185 et seq. (GAPS).
 - [US] 42 U.S.C. 3604(f)(3)(B) and 24 CFR 100.204 (atoms).
 - Code: no pet fees or deposits for an assistance animal. Actual damage is chargeable like any other.
@@ -322,13 +322,13 @@ A Judgment over the evidence: keys, belongings, written surrender, notice end da
 - Civ 10 (T): exclude the first day and include the last, unless the last day is a holiday.
 - Civ 7 (T): holidays are Sundays plus the days the Government Code makes holidays (GOV 6700 and 6701 queued; GOV 6700 was amended effective Mar 26, 2026).
 - Civ 11 (T): an act due on a holiday may be done on the next business day.
-- CCP 12a (sources/CA_CCP_12a.txt): extends any period set by law when its last day is a Saturday or a CCP 135 judicial holiday. 12a(b) applies it to all codes.
+- CCP 12a (T): extends any period set by law when its last day is a Saturday or a CCP 135 judicial holiday. 12a(b) applies it to all codes.
 - Whether "21 calendar days" displaces the extension is contested (C5).
 - Code computes:
   - the nominal day 21;
   - the extended date under Civ 10/11 (Gov Code holidays);
   - the extended date under CCP 12a (Saturdays and judicial holidays).
-- The two holiday calendars differ. Gov 6700 has extra days (for example, Admission Day and Columbus Day) not in CCP 135 (I; confirm when GOV 6700 and CCP 135 land).
+- The two holiday calendars differ. CCP 135 (T; AB 268, effective Jan 1, 2026) makes every Gov 6700 holiday a judicial holiday except Lunar New Year, Diwali, Apr 24 (Genocide Remembrance Day), Admission Day, Columbus Day and days appointed by the Governor. It adds every Saturday and the day after Thanksgiving. So Gov Code holidays that fall outside CCP 135 extend under Civ 10/11 only, and Saturdays extend under CCP 12a only.
 - Several 2026 holiday acts (AB 1841, AB 2017, AB 2156, SB 1394, AB 2294, AB 395) are dated entries, generally effective Jan 1, 2027 (GAPS).
 - Recommended operating date: the nominal day 21.
 
@@ -365,7 +365,7 @@ A Judgment over the evidence: keys, belongings, written surrender, notice end da
 
 **DP6.8 Unclaimed refund**
 - CCP 1520 (T): intangible property escheats after three years unclaimed.
-- Owner notice, and reporting and remitting: CCP 1513.5, 1530 and 1532 (queued).
+- Reporting: CCP 1530(d) (T): a report before Nov 1 each year as of Jun 30. Remitting: CCP 1532 (queued). CCP 1513.5 (T) covers banking organizations only; a holder-notice rule for other business holders was not identified (GAPS).
 - Code: check date + 3 years, and the report and remit windows. See DP9.2.
 
 **DP6.9 Belongings left behind**
@@ -377,7 +377,7 @@ A Judgment over the evidence: keys, belongings, written surrender, notice end da
 - Full analysis: `pipeline/design/coverage_tracking/fresh_research/FINDINGS.md`. The 1950.5(f)(1) notice carries the reclaim statement.
 
 **DP6.10 Tenant data at move-out**
-1798.81 (disposal, queued) and 1798.82 (breach) (T). They do not change the account. Retention is driven by limitation periods (DP7.6 and DP9.3).
+1798.81 (disposal) and 1798.82 (breach) (T). They do not change the account. Retention is driven by limitation periods (DP7.6 and DP9.3).
 
 ---
 
@@ -401,8 +401,8 @@ No owner-level rule (I). Brokers: BPC 10145 and 10176 (T). No effect on the tena
 
 **DP7.5 Damages and penalties**
 - (m) (T): for bad-faith claim or retention, statutory damages up to twice the security, plus actual damages. The court may award them on its own motion.
-- Prejudgment interest: 3287 (queued) and 3289 (T; 10% after breach where the contract sets no rate).
-- Attorney fees only under a lease clause, made reciprocal by 1717 (queued).
+- Prejudgment interest: 3287(a) (T; from the day a right to damages certain vests) and 3289 (T; 10% after breach where the contract sets no rate).
+- Attorney fees only under a lease clause, made reciprocal by 1717 (T).
 - UCL and class exposure for systemic practices (Brooks; RECORD.md).
 - Code, for each line: the exposure to show the operator = the disputed amount + up to 2× security + interest + (if a fee clause exists) fees.
 
@@ -410,12 +410,12 @@ No owner-level rule (I). Brokers: BPC 10145 and 10176 (T). No effect on the tena
 - Small claims (1950.5(o); CCP 116.220 and 116.221) (T): limits are $6,250 generally and $12,500 for a natural-person plaintiff. A tenant suing for a deposit is within the $12,500 limit.
 - CCP 116.231 (T) limits a plaintiff to two small-claims actions above $2,500 in a calendar year. Check against the entity limit for owner suits.
 - CCP 116.540(h) (T): the owner may appear through a property agent under contract to manage the property, if the agent was retained principally to manage and the claim relates to the property. A declaration is required ((j)).
-- CCP 116.710 (queued): the plaintiff cannot appeal; the defendant can, for a trial de novo.
+- CCP 116.710 (T): the plaintiff cannot appeal its own claim; the defendant can appeal to the superior court. In practice, the operator as defendant can appeal a tenant's deposit judgment, but not its own claim as plaintiff.
 - Venue: CCP 116.370 (T).
 - Limitations:
   - CCP 337 (T): 4 years on a written lease;
   - CCP 339: 2 years on an oral one (DRE guide p. 86);
-  - the period for the (m) statutory damages is contested: 338(a) 3 years, or 340(a) 1 year (C10).
+  - the period for the (m) statutory damages is contested: 338(a) 3 years (T: a liability created by statute other than a penalty), or 340(a) 1 year (T: an action on a statute for a penalty given to an individual) (C10).
 
 ---
 
@@ -425,7 +425,7 @@ The collection research is substantial and already integrated in `pipeline/desig
 
 **DP8.1 What the balance is**
 - Components: rent; utilities; damage and cleaning; lawful lease fees; interest; less credits.
-- Interest: 3289(b) 10% after breach where the contract is silent (T); 3287 prejudgment interest on certain sums (queued).
+- Interest: 3289(b) 10% after breach where the contract is silent (T); 3287(a) prejudgment interest on certain sums (T).
 - Collection fees only under the C12 limits.
 - Code: the amount by component.
 
@@ -456,8 +456,8 @@ None identified in OC or HB (I; search not exhaustive).
 [US] SCRA 3931 default-judgment affidavit; 3955 termination; 3937 the 6% cap on pre-service debt. [CA] MVC 409.3 (T).
 
 **DP8.9 Before suing**
-- Limitations: CCP 337(a) 4 years (written), 339 2 years (oral) (T). CCP 360 (queued): a signed written acknowledgment, or a part payment, restarts the period. This matters for payment plans.
-- After a death: CCP 366.2, one year (queued).
+- Limitations: CCP 337(a) 4 years (written), 339 2 years (oral) (T). CCP 360 (T): only a written acknowledgment or promise signed by the debtor takes a debt outside the limitation period. Its part-payment clause speaks of promissory notes. So a payment plan should carry the former tenant's signed acknowledgment.
+- After a death: CCP 366.2 (T), one year from death, which displaces the ordinary period.
 - Capacity:
   - a foreign LLC not registered may not maintain an action until it registers (CORP 17708.07, queued);
   - CORP 2203 for corporations (queued);
@@ -482,10 +482,10 @@ None identified in OC or HB (I; search not exhaustive).
 No California rule. [US] tax atoms (federal.md). Owen's net-recovery rule governs the decision.
 
 **DP9.2 Unclaimed funds**
-CCP 1520 (T): three years. CCP 1513.5 (notice to the owner), 1530 (report) and 1532 (remit) are queued. Code: the dates.
+CCP 1520 (T): three years. CCP 1530(d) (T): report before Nov 1 as of Jun 30. CCP 1532 (remit) is queued. Code: the dates.
 
 **DP9.3 Records**
-- 1798.81 (disposal, queued).
+- 1798.81 (T): disposal of records containing personal information.
 - BPC 10148 (queued): a broker keeps records for 3 years.
 - Practical retention runs at least to the limitation periods: 4 years from vacating (CCP 337), plus the small-claims appeal period (I).
 
@@ -502,14 +502,14 @@ CCP 1520 (T): three years. CCP 1513.5 (notice to the owner), 1530 (report) and 1
 
 **PW0.2 Possession recovered**
 - Surrender or abandonment (1951.3) or a writ (CCP 1174).
-- Self-help lockout or utility shutoff is barred (789.3, queued). Water shutoff is barred (1954.213(e)) (T).
+- Self-help lockout or utility shutoff is barred (789.3 (T)). Water shutoff is barred (1954.213(e)) (T).
 - Keys and access credentials: no specific statute; evidence of surrender (I).
 
 **PW0.3 Conditions requiring immediate action**
 Physical-work track. Account effect only through 1942.4 and 1941.9.
 
 **PW0.4 Authority to act**
-- The manager as the owner's agent: 1962(d) (T); BPC 10131(b) (T); 2343 (queued) on an agent's own liability to third persons where its acts are "wrongful in their nature".
+- The manager as the owner's agent: 1962(d) (T); BPC 10131(b) (T); 2343(3) (T) on an agent's own liability to third persons where its acts are "wrongful in their nature".
 - Death: PROB (DP2.5).
 - Public ownership and program limits: a later variation.
 
