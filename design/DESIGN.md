@@ -39,7 +39,7 @@ Handoff decides every amount from the evidence, the lease, the company charge sc
 | Dec 1 | The account goes out. | Emails the statement with invoices, work-order hours and a link to the photos. Sends the refund electronically to the designated account. Posts to the ledger. Updates the tenant's page. | — |
 | Dec 3 | **Live moment:** the tenant questions the closet charge on the page. | Answers with the move-in and move-out photos, the invoice and the rule. No decision needed from you. | — |
 | Dec 4 | The tenant either produces a move-in photo of a damaged closet, or threatens small claims. | Brings one recommendation. For new evidence, a correction. For rising stakes, hold or settle at a specific amount, with the likely small-claims result, the cost of appearing and the twice-the-deposit exposure. | **Hold, correct or settle** |
-| Dec 10 | The final gas and electric bill arrives, after day 21. | Bills it to the tenant separately as a small balance and decides whether to pursue it on net recovery. Water was already settled on the statement under its own statute. | Only if pursuing the balance needs your decision |
+| Dec 10 | The final gas and electric bill arrives, after day 21. | Drafts the bill to the tenant as the manager's own bill, itemized with the utility's statement. Water was already settled on the statement under its own statute. If the bill goes unpaid, recommends on net recovery whether to hand it to the licensed collector or write it off. Handoff never chases a utility balance itself. | **Send the utility bill** as your own, one tap; later, collector or write-off if unpaid |
 | By mid-Dec | Closure | Settles any correction or settlement, reconciles the ledger, and sends the tenant a closure confirmation. The account is resolved. The unit was ready once its work passed completion checks; the two outcomes finish independently. | — |
 
 ## 3. The balance-owed variation
@@ -59,6 +59,7 @@ This uses the same code with a different starting state. The tenant leaves owing
 | Work plan and budget | Each move-out | Result, scope, budget, explicit requirements |
 | Account | Each move-out | Every line, deposit applied, refund or balance, method, recipients |
 | Increase, correction, settlement, balance pursuit | When it arises | That change only |
+| Utility balance billed after the statement | When it arises | You send it as the manager's own bill; collection beyond that goes to the licensed collector |
 
 Everything else Handoff does on its own: notices, scheduling, follow-up, defending charges, legal duties such as sending documentation within 14 days of a request, and completing within an accepted estimate.
 
