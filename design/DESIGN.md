@@ -45,7 +45,7 @@ Handoff decides every amount from the evidence, the lease, the company charge sc
 ## 3. The balance-owed variation
 
 This uses the same code with a different starting state. The tenant leaves owing rent beyond the deposit.
-1. Handoff recommends whether to pursue the balance, hand it to a collector or write it off, on expected net recovery: likely recovery, the collector's fee, time, and the risks under debt-collection and credit-reporting rules.
+1. Handoff recommends whether to pursue the balance, hand it to a collector or write it off, on expected net recovery. That weighs likely recovery, the collector's fee, time, the risks under debt-collection and credit-reporting rules, and small-claims limits: no one may file more than two claims over $2,500 a year statewide, and an entity's claim limit is $6,250.
 2. Once you accept, Handoff hands the balance to the collector on the accepted terms.
 3. Later the tenant disputes a line and Handoff corrects it.
 4. The account is not resolved until the collector's balance matches the correction and Handoff has confirmation. Holland's own complaint record shows this exact failure.
@@ -207,7 +207,7 @@ They are compared on charges that are lawful and defensible, deadlines met, reco
   - decision screens for the list, plan, account and revisions, with evidence and before/after comparison;
   - a conversation with Handoff;
   - money.
-- **Tenant page:** a secure link plus an emailed code. It shows status and dates, and the account line by line with evidence. It collects the refund method and forwarding address in writing, lets the tenant question a line or pay a balance, and confirms closure.
+- **Tenant page:** a secure link plus an emailed code. It shows status and dates, and the account line by line with evidence. It collects in writing the refund method and the forwarding address. It also collects a separate, optional agreement to receive the statement and refund electronically, because California's electronic-transactions law (Civ 1633.5(b)) won't let that agreement sit inside a paper form lease. It lets the tenant question a line or pay a balance, and confirms closure.
 - **Email:** an imitated transport in the demo, stored and rendered; a real provider later.
 
 ### 5.5 The simulated world and evaluation
@@ -235,6 +235,7 @@ They are compared on charges that are lawful and defensible, deadlines met, reco
 
 ## 7. Open points for Owen
 
+- How unbilled final utilities are handled (see the legal map's utility section): the statutory final-month method for submetered water, plus either separate billing or a contested good-faith estimate for other utilities.
 - Neutral names for the property, owner, manager and tenant.
 - The demo dates above: notice October 12, keys November 16, deadline December 7.
 - Hosting and database provider, needed at first deployment.
