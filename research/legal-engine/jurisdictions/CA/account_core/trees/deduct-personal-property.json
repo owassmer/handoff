@@ -3,7 +3,10 @@
   "title": "May the cost of restoring, replacing or returning personal property or appurtenances (keys, fobs, remotes, furnishings) be deducted from the security deposit, and for how much?",
   "decisionPoint": "DP5.1",
   "layer": "CA",
-  "effective": {"from": "2026-01-01", "to": null},
+  "effective": {
+    "from": "2026-01-01",
+    "to": null
+  },
   "inputs": [
     "tenancy.isDwelling",
     "deposit",
@@ -16,77 +19,179 @@
     "moveOut.keysAndDevices",
     "tenancy.record",
     "quotes",
-    "schedule",
-    "statement"
+    "schedule"
   ],
-  "parameters": [
-    {"id": "documentationThreshold", "value": 12500, "unit": "cents",
-     "source": {"citation": "Civ 1950.5(h)(4)(A)", "quote": "The deductions for repairs and cleaning together do not exceed one hundred twenty-five dollars ($125)."}}
-  ],
-  "root": {"type": "all", "children": [
-    {"type": "condition", "id": "dwelling-security", "kind": "determinate",
-     "statement": "The deposit secures a rental agreement for residential property used as the tenant's dwelling.",
-     "compute": "tenancy.isDwelling",
-     "source": {"citation": "Civ 1950.5(a)", "quote": "This section applies to security for a rental agreement for residential property that is used as the dwelling of the tenant."}},
-    {"type": "condition", "id": "is-security", "kind": "determinate",
-     "statement": "The money held was imposed at the beginning of the tenancy (or as advance rent) and is not a screening fee under Section 1950.6.",
-     "compute": "(deposit.imposedAtTenancyStart or deposit.isAdvanceRent) and not deposit.isScreeningFee",
-     "source": {"citation": "Civ 1950.5(b)", "quote": "“security” means any payment, fee, deposit, or charge, including, but not limited to, any payment, fee, deposit, or charge, except as provided in Section 1950.6, that is imposed at the beginning of the tenancy to be used to reimburse the landlord for costs associated with processing a new tenant or that is imposed as an advance payment of rent, used or to be used for any purpose"}},
-    {"type": "condition", "id": "lease-obligation", "kind": "determinate",
-     "statement": "The rental agreement obliges the tenant to restore, replace or return this item of personal property or appurtenance.",
-     "compute": "lease.personalPropertyClause.covers(line.item)",
-     "source": {"citation": "Civ 1950.5(b)(4)", "quote": "To remedy future defaults by the tenant in any obligation under the rental agreement to restore, replace, or return personal property or appurtenances"}},
-    {"type": "condition", "id": "lease-authorizes-deposit", "kind": "determinate",
-     "statement": "The rental agreement authorizes applying the security deposit to that obligation.",
-     "compute": "lease.personalPropertyClause.authorizesDeposit",
-     "source": {"citation": "Civ 1950.5(b)(4)", "quote": "if the security deposit is authorized to be applied thereto by the rental agreement."}},
-    {"type": "condition", "id": "tenant-defaulted", "kind": "semantic",
-     "statement": "The tenant failed to restore, replace or return the item as the rental agreement requires.",
-     "question": {"type": "yesno",
-       "wording": "At move-out, had the tenant failed to return this item, or returned it damaged or not restored, as the rental agreement requires?",
-       "inputs": ["line", "lease.personalPropertyClause", "observation.moveOut", "moveOut.keysAndDevices", "tenancy.record"]},
-     "source": {"citation": "Civ 1950.5(b)(4)", "quote": "To remedy future defaults by the tenant in any obligation under the rental agreement to restore, replace, or return personal property or appurtenances"}},
-    {"type": "condition", "id": "not-preexisting", "kind": "semantic",
-     "statement": "The item's loss or damage did not exist before the tenancy began.",
-     "question": {"type": "yesno",
-       "wording": "Comparing the move-in record and photographs with the move-out observations, was this item present and in good order at the start of the tenancy?",
-       "inputs": ["line", "observation.moveIn", "photos.moveIn", "observation.moveOut"]},
-     "source": {"citation": "Civ 1950.5(e)(2)(A)", "quote": "The landlord shall not assert a claim against the tenant or the security for damages to the premises or any defective conditions that preexisted the tenancy"}},
-    {"type": "condition", "id": "not-ordinary-wear", "kind": "semantic",
-     "statement": "The item's condition or loss is not ordinary wear and tear.",
-     "question": {"type": "yesno",
-       "wording": "Is the item missing, or damaged through an accident, misuse or neglect, rather than worn through normal use or aging?",
-       "inputs": ["line", "observation.moveIn", "observation.moveOut", "moveOut.keysAndDevices"]},
-     "source": {"citation": "Civ 1950.5(b)(4)", "quote": "To remedy future defaults by the tenant in any obligation under the rental agreement to restore, replace, or return personal property or appurtenances, exclusive of ordinary wear and tear, if the security deposit is authorized to be applied thereto by the rental agreement."}},
-    {"type": "condition", "id": "inspection-gate", "kind": "determinate",
-     "statement": "The initial-inspection itemized statement does not bar this deduction where it involves a repair or cleaning.",
-     "compute": "holds(\"CA.inspection-list-gate\")",
-     "source": {"citation": "Civ 1950.5(f)(4)", "quote": "the landlord shall not use the security for deductions for repairs or cleanings that are not identified in the itemized statement described in paragraph (2)."}},
-    {"type": "condition", "id": "cost-reasonable", "kind": "semantic",
-     "statement": "The cost charged is no more than reasonably necessary to restore, replace or return the item with one of like kind.",
-     "question": {"type": "yesno",
-       "wording": "Is the cost charged no more than a reasonable price to restore the item or replace it with one of like kind and quality, judged against the receipt, the company rate schedule and any other quotes?",
-       "inputs": ["line", "schedule", "quotes"]},
-     "source": {"citation": "Civ 1950.5(e)(1)", "quote": "the landlord may claim of the security only those amounts as are reasonably necessary for the purposes specified in subdivision (b)."}},
-    {"type": "any", "children": [
-      {"type": "condition", "id": "receipt-provided", "kind": "determinate",
-       "statement": "The statement includes a bill, invoice or receipt (or, for items bought on an ongoing basis, a vendor price list) for the item or materials.",
-       "compute": "statement.documents.materialsComplete(line)",
-       "source": {"citation": "Civ 1950.5(h)(2)(C)", "quote": "If a deduction is made for materials or supplies, the landlord shall provide a copy of the bill, invoice, or receipt."}},
-      {"type": "condition", "id": "under-documentation-threshold", "kind": "determinate",
-       "statement": "Repair, cleaning and restoration deductions on the statement together do not exceed $125.",
-       "compute": "sum(statement.lines.repairAndCleaning.amount) + sum(statement.lines.personalProperty.amount) <= parameters.documentationThreshold",
-       "source": {"citation": "Civ 1950.5(h)(4)(A)", "quote": "The deductions for repairs and cleaning together do not exceed one hundred twenty-five dollars ($125)."}}
-    ]}
-  ]},
+  "parameters": [],
+  "root": {
+    "type": "all",
+    "children": [
+      {
+        "type": "condition",
+        "id": "dwelling-security",
+        "kind": "determinate",
+        "statement": "The deposit secures a rental agreement for residential property used as the tenant's dwelling.",
+        "compute": "tenancy.isDwelling",
+        "source": {
+          "citation": "Civ 1950.5(a)",
+          "quote": "This section applies to security for a rental agreement for residential property that is used as the dwelling of the tenant."
+        }
+      },
+      {
+        "type": "condition",
+        "id": "is-security",
+        "kind": "determinate",
+        "statement": "The money held was imposed at the beginning of the tenancy (or as advance rent) and is not a screening fee under Section 1950.6.",
+        "compute": "(deposit.imposedAtTenancyStart or deposit.isAdvanceRent) and not deposit.isScreeningFee",
+        "source": {
+          "citation": "Civ 1950.5(b)",
+          "quote": "“security” means any payment, fee, deposit, or charge, including, but not limited to, any payment, fee, deposit, or charge, except as provided in Section 1950.6, that is imposed at the beginning of the tenancy to be used to reimburse the landlord for costs associated with processing a new tenant or that is imposed as an advance payment of rent, used or to be used for any purpose"
+        }
+      },
+      {
+        "type": "condition",
+        "id": "lease-obligation",
+        "kind": "determinate",
+        "statement": "The rental agreement obliges the tenant to restore, replace or return this item of personal property or appurtenance.",
+        "compute": "lease.personalPropertyClause.covers(line.item)",
+        "source": {
+          "citation": "Civ 1950.5(b)(4)",
+          "quote": "To remedy future defaults by the tenant in any obligation under the rental agreement to restore, replace, or return personal property or appurtenances"
+        }
+      },
+      {
+        "type": "condition",
+        "id": "lease-authorizes-deposit",
+        "kind": "determinate",
+        "statement": "The rental agreement authorizes applying the security deposit to that obligation.",
+        "compute": "lease.personalPropertyClause.authorizesDeposit",
+        "source": {
+          "citation": "Civ 1950.5(b)(4)",
+          "quote": "if the security deposit is authorized to be applied thereto by the rental agreement."
+        }
+      },
+      {
+        "type": "condition",
+        "id": "tenant-defaulted",
+        "kind": "semantic",
+        "statement": "The tenant failed to restore, replace or return the item as the rental agreement requires.",
+        "question": {
+          "type": "yesno",
+          "wording": "At move-out, had the tenant failed to return this item, or returned it damaged or not restored, as the rental agreement requires?",
+          "inputs": [
+            "line",
+            "lease.personalPropertyClause",
+            "observation.moveOut",
+            "moveOut.keysAndDevices",
+            "tenancy.record"
+          ]
+        },
+        "source": {
+          "citation": "Civ 1950.5(b)(4)",
+          "quote": "To remedy future defaults by the tenant in any obligation under the rental agreement to restore, replace, or return personal property or appurtenances"
+        }
+      },
+      {
+        "type": "condition",
+        "id": "not-preexisting",
+        "kind": "semantic",
+        "statement": "The item's loss or damage did not exist before the tenancy began.",
+        "question": {
+          "type": "yesno",
+          "wording": "Comparing the move-in record and photographs with the move-out observations, was this item present and in good order at the start of the tenancy?",
+          "inputs": [
+            "line",
+            "observation.moveIn",
+            "photos.moveIn",
+            "observation.moveOut"
+          ]
+        },
+        "source": {
+          "citation": "Civ 1950.5(e)(2)(A)",
+          "quote": "The landlord shall not assert a claim against the tenant or the security for damages to the premises or any defective conditions that preexisted the tenancy"
+        }
+      },
+      {
+        "type": "condition",
+        "id": "not-ordinary-wear",
+        "kind": "semantic",
+        "statement": "The item's condition or loss is not ordinary wear and tear.",
+        "question": {
+          "type": "yesno",
+          "wording": "Is the item missing, or damaged through an accident, misuse or neglect, rather than worn through normal use or aging?",
+          "inputs": [
+            "line",
+            "observation.moveIn",
+            "observation.moveOut",
+            "moveOut.keysAndDevices"
+          ]
+        },
+        "source": {
+          "citation": "Civ 1950.5(b)(4)",
+          "quote": "To remedy future defaults by the tenant in any obligation under the rental agreement to restore, replace, or return personal property or appurtenances, exclusive of ordinary wear and tear, if the security deposit is authorized to be applied thereto by the rental agreement."
+        }
+      },
+      {
+        "type": "condition",
+        "id": "inspection-gate",
+        "kind": "determinate",
+        "statement": "The initial-inspection itemized statement does not bar this deduction where it involves a repair or cleaning.",
+        "compute": "holds(\"CA.inspection-list-gate\")",
+        "source": {
+          "citation": "Civ 1950.5(f)(4)",
+          "quote": "the landlord shall not use the security for deductions for repairs or cleanings that are not identified in the itemized statement described in paragraph (2)."
+        }
+      },
+      {
+        "type": "condition",
+        "id": "cost-reasonable",
+        "kind": "semantic",
+        "statement": "The cost charged is no more than reasonably necessary to restore, replace or return the item.",
+        "question": {
+          "type": "yesno",
+          "wording": "Is the cost charged no more than a reasonable price to restore the item or replace it with one of like kind and quality, judged against the receipt, the company rate schedule and any other quotes?",
+          "inputs": [
+            "line",
+            "schedule",
+            "quotes"
+          ]
+        },
+        "source": {
+          "citation": "Civ 1950.5(e)(1)",
+          "quote": "the landlord may claim of the security only those amounts as are reasonably necessary for the purposes specified in subdivision (b)."
+        }
+      }
+    ]
+  },
   "effects": [
-    {"id": "may-deduct", "kind": "permission", "when": "holds",
-     "statement": "The cost may be deducted at the reasonable cost times the tenant's share of the item's remaining useful life under the company schedule.",
-     "amount": "round(line.cost * schedule.tenantShare(line.item, line.itemAgeMonths))",
-     "source": {"citation": "Civ 1950.5(e)(1)", "quote": "the landlord may claim of the security only those amounts as are reasonably necessary for the purposes specified in subdivision (b)."}},
-    {"id": "must-not-deduct", "kind": "prohibition", "when": "fails",
-     "statement": "The cost may not be deducted from the security.",
-     "consequence": "CA.statutory-damages"}
+    {
+      "id": "may-deduct",
+      "kind": "permission",
+      "when": "holds",
+      "statement": "The cost may be deducted at the reasonable cost times the tenant's share of the item's remaining useful life under the company schedule.",
+      "amount": "round(line.cost * schedule.tenantShare(line.item, line.itemAgeMonths))",
+      "source": {
+        "citation": "Civ 1950.5(e)(1)",
+        "quote": "the landlord may claim of the security only those amounts as are reasonably necessary for the purposes specified in subdivision (b)."
+      }
+    },
+    {
+      "id": "document-deduction",
+      "kind": "duty",
+      "when": "holds",
+      "statement": "With the statement, provide a copy of the bill, invoice or receipt (or vendor price list) for the item or materials deducted, unless the subdivision (h)(4) threshold or a valid waiver excuses it; a request within 14 days revives the duty. A good-faith failure does not forfeit the deduction; a bad-faith failure forfeits the whole security.",
+      "consequence": "CA.bad-faith-retention",
+      "source": {
+        "citation": "Civ 1950.5(h)(2)(C)",
+        "quote": "If a deduction is made for materials or supplies, the landlord shall provide a copy of the bill, invoice, or receipt."
+      }
+    },
+    {
+      "id": "must-not-deduct",
+      "kind": "prohibition",
+      "when": "fails",
+      "statement": "The cost may not be deducted from the security.",
+      "consequence": "CA.statutory-damages"
+    }
   ],
   "contested": []
 }

@@ -3,7 +3,10 @@
   "title": "May this cleaning be deducted from the security deposit, and for how much?",
   "decisionPoint": "DP5.3",
   "layer": "CA",
-  "effective": {"from": "2026-01-01", "to": null},
+  "effective": {
+    "from": "2026-01-01",
+    "to": null
+  },
   "inputs": [
     "tenancy.isDwelling",
     "tenancy.rightToOccupyStart",
@@ -18,111 +21,225 @@
     "unit.workHistory",
     "workPlan.scope",
     "quotes",
-    "schedule",
-    "statement",
-    "waiver"
+    "schedule"
   ],
   "parameters": [
-    {"id": "inceptionStandardAfter", "value": "2003-01-01", "unit": "date",
-     "source": {"citation": "Civ 1950.5(b)(3)", "quote": "The amendments to this paragraph enacted by the act adding this sentence shall apply only to tenancies for which the tenant’s right to occupy begins after January 1, 2003."}},
-    {"id": "documentationThreshold", "value": 12500, "unit": "cents",
-     "source": {"citation": "Civ 1950.5(h)(4)(A)", "quote": "The deductions for repairs and cleaning together do not exceed one hundred twenty-five dollars ($125)."}}
+    {
+      "id": "inceptionStandardAfter",
+      "value": "2003-01-01",
+      "unit": "date",
+      "source": {
+        "citation": "Civ 1950.5(b)(3)",
+        "quote": "The amendments to this paragraph enacted by the act adding this sentence shall apply only to tenancies for which the tenant’s right to occupy begins after January 1, 2003."
+      }
+    }
   ],
-  "root": {"type": "all", "children": [
-    {"type": "condition", "id": "dwelling-security", "kind": "determinate",
-     "statement": "The deposit secures a rental agreement for residential property used as the tenant's dwelling.",
-     "compute": "tenancy.isDwelling",
-     "source": {"citation": "Civ 1950.5(a)", "quote": "This section applies to security for a rental agreement for residential property that is used as the dwelling of the tenant."}},
-    {"type": "condition", "id": "is-security", "kind": "determinate",
-     "statement": "The money held was imposed at the beginning of the tenancy (or as advance rent) and is not a screening fee under Section 1950.6.",
-     "compute": "(deposit.imposedAtTenancyStart or deposit.isAdvanceRent) and not deposit.isScreeningFee",
-     "source": {"citation": "Civ 1950.5(b)", "quote": "“security” means any payment, fee, deposit, or charge, including, but not limited to, any payment, fee, deposit, or charge, except as provided in Section 1950.6, that is imposed at the beginning of the tenancy to be used to reimburse the landlord for costs associated with processing a new tenant or that is imposed as an advance payment of rent, used or to be used for any purpose"}},
-    {"type": "condition", "id": "cleaning-of-premises", "kind": "determinate",
-     "statement": "The line pays for cleaning the premises upon termination of the tenancy.",
-     "compute": "line.purpose == \"cleaning\"",
-     "source": {"citation": "Civ 1950.5(b)(3)", "quote": "The cleaning of the premises upon termination of the tenancy necessary to return the unit to the same level of cleanliness it was in at the inception of the tenancy."}},
-    {"type": "condition", "id": "inception-standard-applies", "kind": "determinate",
-     "statement": "The tenant's right to occupy began after January 1, 2003, so the inception-of-tenancy cleanliness standard applies.",
-     "compute": "tenancy.rightToOccupyStart > parameters.inceptionStandardAfter",
-     "source": {"citation": "Civ 1950.5(b)(3)", "quote": "The amendments to this paragraph enacted by the act adding this sentence shall apply only to tenancies for which the tenant’s right to occupy begins after January 1, 2003."}},
-    {"type": "condition", "id": "less-clean-than-inception", "kind": "semantic",
-     "statement": "The area cleaned was left less clean than it was at the inception of the tenancy.",
-     "question": {"type": "yesno",
-       "wording": "Comparing the move-in record and photographs with the condition after the tenant returned possession, was this area left less clean than it was when the tenancy began?",
-       "inputs": ["line", "observation.moveIn", "photos.moveIn", "observation.moveOut", "photos.afterPossession"],
-       "basis": [{"citation": "DRE, California Tenants (2026) p. 83", "quote": "Instead, the landlord must look at how well the departing tenant cleaned the rental unit, and may charge cleaning costs only if the departing tenant left the rental unit (or a portion of it) less clean than when they moved in."}]},
-     "source": {"citation": "Civ 1950.5(b)(3)", "quote": "The cleaning of the premises upon termination of the tenancy necessary to return the unit to the same level of cleanliness it was in at the inception of the tenancy."}},
-    {"type": "condition", "id": "not-wear-soiling", "kind": "semantic",
-     "statement": "The soiling is not ordinary wear and tear, its effects, or wear accumulated over tenancies.",
-     "question": {"type": "yesno",
-       "wording": "Is the soiling something ordinary cleaning would remove, rather than the effect of ordinary wear or of wear accumulated over this and earlier tenancies (for example wax built up over years, fading, or traffic wear)?",
-       "inputs": ["line", "observation.moveIn", "observation.moveOut", "unit.workHistory"],
-       "basis": [{"citation": "DRE, California Tenants (2026) p. 84", "quote": "In addition, the landlord could not charge for the cumulative effects of wear and tear. Suppose, for example, that the tenant had washed the kitchen floor but that it remained dingy because of wax built up over the years."}]},
-     "source": {"citation": "Civ 1950.5(e)(2)(A)", "quote": "for ordinary wear and tear or the effects thereof, whether the wear and tear preexisted the tenancy or occurred during the tenancy, or for the cumulative effects of ordinary wear and tear occurring during any one or more tenancies."}},
-    {"type": "any", "children": [
-      {"type": "condition", "id": "not-professional-cleaning", "kind": "determinate",
-       "statement": "The line is not professional carpet cleaning or another professional cleaning service.",
-       "compute": "not line.isProfessionalCleaning",
-       "source": {"citation": "Civ 1950.5(e)(2)(C)", "quote": "The landlord shall not require a tenant to pay for, or assert a claim against the tenant or the security for, professional carpet cleaning or other professional cleaning services, unless reasonably necessary to return the premises to the condition it was in at the inception of tenancy, exclusive of ordinary wear and tear."}},
-      {"type": "condition", "id": "professional-cleaning-necessary", "kind": "semantic",
-       "statement": "Professional cleaning was reasonably necessary to return the premises to their condition at the inception of the tenancy, exclusive of ordinary wear and tear.",
-       "question": {"type": "yesno",
-         "wording": "Was professional cleaning (for example carpet extraction by a vendor) reasonably necessary to return this area to its move-in condition, because ordinary cleaning would not have removed soiling the tenant caused beyond ordinary wear?",
-         "inputs": ["line", "observation.moveIn", "photos.moveIn", "observation.moveOut", "photos.afterPossession"],
-         "basis": [{"citation": "DRE, California Tenants (2026) p. 83", "quote": "A landlord cannot routinely charge each tenant for cleaning carpets, drapes, walls, or windows in order to prepare the rental unit for the next tenancy."}]},
-       "source": {"citation": "Civ 1950.5(e)(2)(C)", "quote": "The landlord shall not require a tenant to pay for, or assert a claim against the tenant or the security for, professional carpet cleaning or other professional cleaning services, unless reasonably necessary to return the premises to the condition it was in at the inception of tenancy, exclusive of ordinary wear and tear."}}
-    ]},
-    {"type": "condition", "id": "inspection-gate", "kind": "determinate",
-     "statement": "The initial-inspection itemized statement does not bar this deduction.",
-     "compute": "holds(\"CA.inspection-list-gate\")",
-     "source": {"citation": "Civ 1950.5(f)(4)", "quote": "the landlord shall not use the security for deductions for repairs or cleanings that are not identified in the itemized statement described in paragraph (2)."}},
-    {"type": "condition", "id": "cost-reasonable", "kind": "semantic",
-     "statement": "The cost charged is no more than a reasonable amount for the cleaning needed to restore the area.",
-     "question": {"type": "yesno",
-       "wording": "Is the cost charged for this cleaning (the vendor invoice, or the hours and hourly rate for in-house work, plus supplies) no more than a reasonable amount for the cleaning needed, judged against the company rate schedule and any other quotes obtained?",
-       "inputs": ["line", "schedule", "quotes", "workPlan.scope"]},
-     "source": {"citation": "Civ 1950.5(e)(2)(B)", "quote": "Claims against the tenant or the security for materials or supplies and for work performed by a contractor, the landlord, or the landlord’s employee shall be limited to a reasonable amount necessary to restore the premises back to the condition it was in at the inception of the tenancy, exclusive of ordinary wear and tear."}},
-    {"type": "any", "children": [
-      {"type": "all", "children": [
-        {"type": "condition", "id": "work-documents", "kind": "determinate",
-         "statement": "The statement carries the work documents: for in-house work a description with time spent and a reasonable hourly rate; for vendor work the bill, invoice or receipt with the vendor's name, address and telephone; for supplies a bill, invoice, receipt or vendor price list.",
-         "compute": "statement.documents.workComplete(line)",
-         "source": {"citation": "Civ 1950.5(h)(2)", "quote": "The landlord shall also include, along with and at the same time the itemized statement is sent, copies of documents showing charges incurred and deducted by the landlord to repair or clean the premises, as follows:"}},
-        {"type": "condition", "id": "photos-and-explanation", "kind": "determinate",
-         "statement": "The statement provides the subdivision (g) photographs for this cleaning and a written explanation of its cost.",
-         "compute": "statement.documents.photosComplete(line) and statement.documents.costExplanation(line)",
-         "source": {"citation": "Civ 1950.5(h)(2)(D)", "quote": "If a deduction is made for repairs or cleanings allowed by this section, the landlord shall provide photographs taken pursuant to subdivision (g), along with a written explanation of the cost of the allowable repairs or cleanings, as described in subparagraphs (A) to (C), inclusive."}}
-      ]},
-      {"type": "condition", "id": "under-documentation-threshold", "kind": "determinate",
-       "statement": "Repair and cleaning deductions on the statement together do not exceed $125.",
-       "compute": "sum(statement.lines.repairAndCleaning.amount) <= parameters.documentationThreshold",
-       "source": {"citation": "Civ 1950.5(h)(4)(A)", "quote": "The deductions for repairs and cleaning together do not exceed one hundred twenty-five dollars ($125)."}},
-      {"type": "all", "children": [
-        {"type": "condition", "id": "waiver-timing", "kind": "determinate",
-         "statement": "The tenant signed a waiver of the documentation rights at or after a termination notice, or no earlier than 60 days before a fixed term expires.",
-         "compute": "waiver.signed and waiver.signedDate >= waiver.earliestValidDate",
-         "source": {"citation": "Civ 1950.5(h)(4)(B)", "quote": "The waiver shall only be effective if it is signed by the tenant at the same time or after a notice to terminate a tenancy under Section 1946 or 1946.1 has been given, a notice under Section 1161 of the Code of Civil Procedure has been given, or no earlier than 60 calendar days prior to the expiration of a fixed-term lease."}},
-        {"type": "condition", "id": "waiver-text", "kind": "semantic",
-         "statement": "The waiver substantially includes the text of Civil Code section 1950.5(h)(2).",
-         "question": {"type": "yesno",
-           "wording": "Does the signed waiver substantially include the text of Civil Code section 1950.5(h)(2), the paragraph requiring copies of work documents, invoices and photographs with the statement?",
-           "inputs": ["waiver"]},
-         "source": {"citation": "Civ 1950.5(h)(4)(B)", "quote": "The waiver shall substantially include the text of paragraph (2)."}}
-      ]},
-      {"type": "condition", "id": "estimate-path", "kind": "determinate",
-       "statement": "The deduction is a good-faith estimate made under subdivision (h)(3).",
-       "compute": "holds(\"CA.good-faith-estimate\")",
-       "source": {"citation": "Civ 1950.5(h)(3)", "quote": "the landlord may deduct the amount of a good faith estimate of the charges that will be incurred and provide that estimate with the itemized statement."}}
-    ]}
-  ]},
+  "root": {
+    "type": "all",
+    "children": [
+      {
+        "type": "condition",
+        "id": "dwelling-security",
+        "kind": "determinate",
+        "statement": "The deposit secures a rental agreement for residential property used as the tenant's dwelling.",
+        "compute": "tenancy.isDwelling",
+        "source": {
+          "citation": "Civ 1950.5(a)",
+          "quote": "This section applies to security for a rental agreement for residential property that is used as the dwelling of the tenant."
+        }
+      },
+      {
+        "type": "condition",
+        "id": "is-security",
+        "kind": "determinate",
+        "statement": "The money held was imposed at the beginning of the tenancy (or as advance rent) and is not a screening fee under Section 1950.6.",
+        "compute": "(deposit.imposedAtTenancyStart or deposit.isAdvanceRent) and not deposit.isScreeningFee",
+        "source": {
+          "citation": "Civ 1950.5(b)",
+          "quote": "“security” means any payment, fee, deposit, or charge, including, but not limited to, any payment, fee, deposit, or charge, except as provided in Section 1950.6, that is imposed at the beginning of the tenancy to be used to reimburse the landlord for costs associated with processing a new tenant or that is imposed as an advance payment of rent, used or to be used for any purpose"
+        }
+      },
+      {
+        "type": "condition",
+        "id": "cleaning-of-premises",
+        "kind": "determinate",
+        "statement": "The line pays for cleaning the premises upon termination of the tenancy.",
+        "compute": "line.purpose == \"cleaning\"",
+        "source": {
+          "citation": "Civ 1950.5(b)(3)",
+          "quote": "The cleaning of the premises upon termination of the tenancy necessary to return the unit to the same level of cleanliness it was in at the inception of the tenancy."
+        }
+      },
+      {
+        "type": "condition",
+        "id": "inception-standard-applies",
+        "kind": "determinate",
+        "statement": "The tenant's right to occupy began after January 1, 2003, so the inception-of-tenancy cleanliness standard applies.",
+        "compute": "tenancy.rightToOccupyStart > parameters.inceptionStandardAfter",
+        "source": {
+          "citation": "Civ 1950.5(b)(3)",
+          "quote": "The amendments to this paragraph enacted by the act adding this sentence shall apply only to tenancies for which the tenant’s right to occupy begins after January 1, 2003."
+        }
+      },
+      {
+        "type": "condition",
+        "id": "less-clean-than-inception",
+        "kind": "semantic",
+        "statement": "The area cleaned was left less clean than it was at the inception of the tenancy.",
+        "question": {
+          "type": "yesno",
+          "wording": "Comparing the move-in record and photographs with the condition after the tenant returned possession, was this area left less clean than it was when the tenancy began?",
+          "inputs": [
+            "line",
+            "observation.moveIn",
+            "photos.moveIn",
+            "observation.moveOut",
+            "photos.afterPossession"
+          ],
+          "basis": [
+            {
+              "citation": "DRE, California Tenants (2026) p. 83",
+              "quote": "Instead, the landlord must look at how well the departing tenant cleaned the rental unit, and may charge cleaning costs only if the departing tenant left the rental unit (or a portion of it) less clean than when they moved in."
+            }
+          ]
+        },
+        "source": {
+          "citation": "Civ 1950.5(b)(3)",
+          "quote": "The cleaning of the premises upon termination of the tenancy necessary to return the unit to the same level of cleanliness it was in at the inception of the tenancy."
+        }
+      },
+      {
+        "type": "condition",
+        "id": "not-wear-soiling",
+        "kind": "semantic",
+        "statement": "The soiling is not ordinary wear and tear, its effects, or wear accumulated over tenancies.",
+        "question": {
+          "type": "yesno",
+          "wording": "Is the soiling something ordinary cleaning would remove, rather than the effect of ordinary wear or of wear accumulated over this and earlier tenancies (for example wax built up over years, fading, or traffic wear)?",
+          "inputs": [
+            "line",
+            "observation.moveIn",
+            "observation.moveOut",
+            "unit.workHistory"
+          ],
+          "basis": [
+            {
+              "citation": "DRE, California Tenants (2026) p. 84",
+              "quote": "In addition, the landlord could not charge for the cumulative effects of wear and tear. Suppose, for example, that the tenant had washed the kitchen floor but that it remained dingy because of wax built up over the years."
+            }
+          ]
+        },
+        "source": {
+          "citation": "Civ 1950.5(e)(2)(A)",
+          "quote": "for ordinary wear and tear or the effects thereof, whether the wear and tear preexisted the tenancy or occurred during the tenancy, or for the cumulative effects of ordinary wear and tear occurring during any one or more tenancies."
+        }
+      },
+      {
+        "type": "any",
+        "children": [
+          {
+            "type": "condition",
+            "id": "not-professional-cleaning",
+            "kind": "determinate",
+            "statement": "The line is not professional carpet cleaning or another professional cleaning service.",
+            "compute": "not line.isProfessionalCleaning",
+            "source": {
+              "citation": "Civ 1950.5(e)(2)(C)",
+              "quote": "The landlord shall not require a tenant to pay for, or assert a claim against the tenant or the security for, professional carpet cleaning or other professional cleaning services, unless reasonably necessary to return the premises to the condition it was in at the inception of tenancy, exclusive of ordinary wear and tear."
+            }
+          },
+          {
+            "type": "condition",
+            "id": "professional-cleaning-necessary",
+            "kind": "semantic",
+            "statement": "Professional cleaning was reasonably necessary to return the premises to their condition at the inception of the tenancy, exclusive of ordinary wear and tear.",
+            "question": {
+              "type": "yesno",
+              "wording": "Was professional cleaning (for example carpet extraction by a vendor) reasonably necessary to return this area to its move-in condition, because ordinary cleaning would not have removed soiling the tenant caused beyond ordinary wear?",
+              "inputs": [
+                "line",
+                "observation.moveIn",
+                "photos.moveIn",
+                "observation.moveOut",
+                "photos.afterPossession"
+              ],
+              "basis": [
+                {
+                  "citation": "DRE, California Tenants (2026) p. 83",
+                  "quote": "A landlord cannot routinely charge each tenant for cleaning carpets, drapes, walls, or windows in order to prepare the rental unit for the next tenancy."
+                }
+              ]
+            },
+            "source": {
+              "citation": "Civ 1950.5(e)(2)(C)",
+              "quote": "The landlord shall not require a tenant to pay for, or assert a claim against the tenant or the security for, professional carpet cleaning or other professional cleaning services, unless reasonably necessary to return the premises to the condition it was in at the inception of tenancy, exclusive of ordinary wear and tear."
+            }
+          }
+        ]
+      },
+      {
+        "type": "condition",
+        "id": "inspection-gate",
+        "kind": "determinate",
+        "statement": "The initial-inspection itemized statement does not bar this deduction.",
+        "compute": "holds(\"CA.inspection-list-gate\")",
+        "source": {
+          "citation": "Civ 1950.5(f)(4)",
+          "quote": "the landlord shall not use the security for deductions for repairs or cleanings that are not identified in the itemized statement described in paragraph (2)."
+        }
+      },
+      {
+        "type": "condition",
+        "id": "cost-reasonable",
+        "kind": "semantic",
+        "statement": "The cost charged is no more than a reasonable amount for the cleaning needed to restore the area.",
+        "question": {
+          "type": "yesno",
+          "wording": "Is the cost charged for this cleaning (the vendor invoice, or the hours and hourly rate for in-house work, plus supplies) no more than a reasonable amount for the cleaning needed, judged against the company rate schedule and any other quotes obtained?",
+          "inputs": [
+            "line",
+            "schedule",
+            "quotes",
+            "workPlan.scope"
+          ]
+        },
+        "source": {
+          "citation": "Civ 1950.5(e)(2)(B)",
+          "quote": "Claims against the tenant or the security for materials or supplies and for work performed by a contractor, the landlord, or the landlord’s employee shall be limited to a reasonable amount necessary to restore the premises back to the condition it was in at the inception of the tenancy, exclusive of ordinary wear and tear."
+        }
+      }
+    ]
+  },
   "effects": [
-    {"id": "may-deduct", "kind": "permission", "when": "holds",
-     "statement": "The cleaning may be deducted at its reasonable cost (actual hours times a reasonable rate, or the vendor invoice); a good-faith estimate stands in for the cost where subdivision (h)(3) applies.",
-     "amount": "line.cost",
-     "source": {"citation": "Civ 1950.5(e)(1)", "quote": "the landlord may claim of the security only those amounts as are reasonably necessary for the purposes specified in subdivision (b)."}},
-    {"id": "must-not-deduct", "kind": "prohibition", "when": "fails",
-     "statement": "The cleaning may not be deducted from the security.",
-     "consequence": "CA.statutory-damages"}
+    {
+      "id": "may-deduct",
+      "kind": "permission",
+      "when": "holds",
+      "statement": "The cleaning may be deducted at its reasonable cost (actual hours times a reasonable rate, or the vendor invoice); a good-faith estimate stands in for the cost where subdivision (h)(3) applies.",
+      "amount": "line.cost",
+      "source": {
+        "citation": "Civ 1950.5(e)(1)",
+        "quote": "the landlord may claim of the security only those amounts as are reasonably necessary for the purposes specified in subdivision (b)."
+      }
+    },
+    {
+      "id": "document-deduction",
+      "kind": "duty",
+      "when": "holds",
+      "statement": "With the statement, provide this cleaning's documents and photographs as CA.repair-cleaning-documentation requires (or a good-faith estimate under CA.good-faith-estimate), unless the $125 threshold or a valid waiver excuses them; a request within 14 days revives the duty. A good-faith failure does not forfeit the deduction; a bad-faith failure forfeits the whole security.",
+      "consequence": "CA.bad-faith-retention",
+      "source": {
+        "citation": "Civ 1950.5(h)(2)(D)",
+        "quote": "If a deduction is made for repairs or cleanings allowed by this section, the landlord shall provide photographs taken pursuant to subdivision (g), along with a written explanation of the cost of the allowable repairs or cleanings, as described in subparagraphs (A) to (C), inclusive."
+      }
+    },
+    {
+      "id": "must-not-deduct",
+      "kind": "prohibition",
+      "when": "fails",
+      "statement": "The cleaning may not be deducted from the security.",
+      "consequence": "CA.statutory-damages"
+    }
   ],
   "contested": []
 }

@@ -43,10 +43,10 @@
       },
       {
         "type": "condition",
-        "id": "amount-owed-and-fixed",
+        "id": "amount-owed",
         "kind": "determinate",
-        "statement": "The charge is owed under the lease and has been billed to the tenant in a fixed amount before the statement.",
-        "compute": "line.owedUnderLease and exists(line.billedAmount)",
+        "statement": "The tenant owes this amount under the lease.",
+        "compute": "line.owedUnderLease and line.amount > 0",
         "source": {
           "citation": "Civ 1950.5(e)(1)",
           "quote": "the landlord may claim of the security only those amounts as are reasonably necessary for the purposes specified in subdivision (b)."
@@ -82,7 +82,7 @@
             "id": "energy-at-direct-rate",
             "kind": "determinate",
             "statement": "The gas or electricity charge does not exceed what the utility would charge the tenant directly for the same usage.",
-            "compute": "line.billedAmount <= utility.tariff.directCharge(line.usage)",
+            "compute": "line.amount <= utility.tariff.directCharge(line.usage)",
             "source": {
               "citation": "PUC 739.5(a)",
               "quote": "the master-meter customer shall charge each user of the service at the same rate that would be applicable if the user were receiving gas or electricity, or both, directly from the gas corporation or load-serving entity"
@@ -148,7 +148,7 @@
       "kind": "permission",
       "when": "holds",
       "statement": "The charge may be deducted at the billed amount.",
-      "amount": "line.billedAmount",
+      "amount": "line.amount",
       "source": {
         "citation": "Civ 1950.5(e)(1)",
         "quote": "the landlord may claim of the security only those amounts as are reasonably necessary for the purposes specified in subdivision (b)."

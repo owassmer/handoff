@@ -3,7 +3,10 @@
   "title": "Must the landlord give 48 hours' written notice of the initial inspection's date and time, and what must it say?",
   "decisionPoint": "DP4.1",
   "layer": "CA",
-  "effective": {"from": "2026-01-01", "to": null},
+  "effective": {
+    "from": "2026-01-01",
+    "to": null
+  },
   "inputs": [
     "inspection.request",
     "inspection.scheduledAt",
@@ -11,40 +14,96 @@
     "tenancy.terminationGround"
   ],
   "parameters": [
-    {"id": "noticeHours", "value": 48, "unit": "hours",
-     "source": {"citation": "Civ 1950.5(f)(1)", "quote": "The landlord shall give at least 48 hours’ prior written notice of the date and time of the inspection if either a mutual time is agreed upon, or if a mutually agreed time cannot be scheduled but the tenant still wishes an inspection."}}
+    {
+      "id": "noticeHours",
+      "value": 48,
+      "unit": "hours",
+      "source": {
+        "citation": "Civ 1950.5(f)(1)",
+        "quote": "The landlord shall give at least 48 hours’ prior written notice of the date and time of the inspection if either a mutual time is agreed upon, or if a mutually agreed time cannot be scheduled but the tenant still wishes an inspection."
+      }
+    }
   ],
-  "root": {"type": "unless",
-    "rule": {"type": "all", "children": [
-      {"type": "condition", "id": "inspection-requested", "kind": "determinate",
-       "statement": "The tenant requested an initial inspection and has not withdrawn the request.",
-       "compute": "inspection.request.made and not inspection.request.withdrawn",
-       "source": {"citation": "Civ 1950.5(f)(1)", "quote": "The landlord shall proceed with the inspection whether the tenant is present or not, unless the tenant previously withdrew their request for the inspection."}},
-      {"type": "condition", "id": "time-set", "kind": "determinate",
-       "statement": "A mutual time was agreed, or no mutual time could be agreed but the tenant still wishes an inspection, and the landlord has set the date and time.",
-       "compute": "exists(inspection.scheduledAt)",
-       "source": {"citation": "Civ 1950.5(f)(1)", "quote": "The landlord shall give at least 48 hours’ prior written notice of the date and time of the inspection if either a mutual time is agreed upon, or if a mutually agreed time cannot be scheduled but the tenant still wishes an inspection."}}
-    ]},
-    "exception": {"type": "any", "children": [
-      {"type": "condition", "id": "waiver-signed-by-both", "kind": "determinate",
-       "statement": "The tenant and landlord both signed a written waiver of the 48-hour notice.",
-       "compute": "inspection.noticeWaiver.signedByTenant and inspection.noticeWaiver.signedByLandlord",
-       "source": {"citation": "Civ 1950.5(f)(1)", "quote": "The tenant and landlord may agree to forgo the 48-hour prior written notice by both signing a written waiver."}},
-      {"type": "condition", "id": "terminated-under-ccp-1161", "kind": "determinate",
-       "statement": "The tenancy is being terminated under Code of Civil Procedure section 1161, paragraph (2), (3) or (4).",
-       "compute": "tenancy.terminationGround in [\"CCP 1161(2)\", \"CCP 1161(3)\", \"CCP 1161(4)\"]",
-       "source": {"citation": "Civ 1950.5(f)(7)", "quote": "The requirements of this subdivision do not apply when the tenancy is terminated pursuant to subdivision (2), (3), or (4) of Section 1161 of the Code of Civil Procedure."}}
-    ]}
+  "root": {
+    "type": "unless",
+    "rule": {
+      "type": "all",
+      "children": [
+        {
+          "type": "condition",
+          "id": "inspection-requested",
+          "kind": "determinate",
+          "statement": "The tenant requested an initial inspection and has not withdrawn the request.",
+          "compute": "inspection.request.made and not inspection.request.withdrawn",
+          "source": {
+            "citation": "Civ 1950.5(f)(1)",
+            "quote": "If an inspection is requested, the parties shall attempt to schedule the inspection at a mutually acceptable date and time."
+          }
+        },
+        {
+          "type": "condition",
+          "id": "time-set",
+          "kind": "determinate",
+          "statement": "A mutual time was agreed, or no mutual time could be agreed but the tenant still wishes an inspection, and the landlord has set the date and time.",
+          "compute": "exists(inspection.scheduledAt)",
+          "source": {
+            "citation": "Civ 1950.5(f)(1)",
+            "quote": "The landlord shall give at least 48 hours’ prior written notice of the date and time of the inspection if either a mutual time is agreed upon, or if a mutually agreed time cannot be scheduled but the tenant still wishes an inspection."
+          }
+        }
+      ]
+    },
+    "exception": {
+      "type": "any",
+      "children": [
+        {
+          "type": "condition",
+          "id": "waiver-signed-by-both",
+          "kind": "determinate",
+          "statement": "The tenant and landlord both signed a written waiver of the 48-hour notice.",
+          "compute": "inspection.noticeWaiver.signedByTenant and inspection.noticeWaiver.signedByLandlord",
+          "source": {
+            "citation": "Civ 1950.5(f)(1)",
+            "quote": "The tenant and landlord may agree to forgo the 48-hour prior written notice by both signing a written waiver."
+          }
+        },
+        {
+          "type": "condition",
+          "id": "terminated-under-ccp-1161",
+          "kind": "determinate",
+          "statement": "The tenancy is being terminated under Code of Civil Procedure section 1161, paragraph (2), (3) or (4).",
+          "compute": "tenancy.terminationGround in [\"CCP 1161(2)\", \"CCP 1161(3)\", \"CCP 1161(4)\"]",
+          "source": {
+            "citation": "Civ 1950.5(f)(7)",
+            "quote": "The requirements of this subdivision do not apply when the tenancy is terminated pursuant to subdivision (2), (3), or (4) of Section 1161 of the Code of Civil Procedure."
+          }
+        }
+      ]
+    }
   },
   "effects": [
-    {"id": "give-48-hour-notice", "kind": "duty", "when": "holds",
-     "statement": "Give written notice of the inspection's date and time at least 48 hours before it.",
-     "due": "inspection.scheduledAt - hours(parameters.noticeHours)",
-     "source": {"citation": "Civ 1950.5(f)(1)", "quote": "The landlord shall give at least 48 hours’ prior written notice of the date and time of the inspection"}},
-    {"id": "include-abandoned-property-text", "kind": "duty", "when": "holds",
-     "statement": "The written notice contains, in substantially the same form, the statement that former tenants may reclaim abandoned personal property subject to conditions and costs.",
-     "due": "inspection.scheduledAt - hours(parameters.noticeHours)",
-     "source": {"citation": "Civ 1950.5(f)(1)", "quote": "“State law permits former tenants to reclaim abandoned personal property left at the former address of the tenant, subject to certain conditions. You may or may not be able to reclaim property without incurring additional costs, depending on the cost of storing the property and the length of time before it is reclaimed. In general, these costs will be lower the sooner you contact your former landlord after being notified that property belonging to you was left behind after you moved out.”"}}
+    {
+      "id": "give-48-hour-notice",
+      "kind": "duty",
+      "when": "holds",
+      "statement": "Give written notice of the inspection's date and time at least 48 hours before it.",
+      "due": "inspection.scheduledAt - hours(parameters.noticeHours)",
+      "source": {
+        "citation": "Civ 1950.5(f)(1)",
+        "quote": "The landlord shall give at least 48 hours’ prior written notice of the date and time of the inspection"
+      }
+    },
+    {
+      "id": "include-abandoned-property-text",
+      "kind": "duty",
+      "when": "holds",
+      "statement": "The written notice contains, in substantially the same form, the statement that former tenants may reclaim abandoned personal property subject to conditions and costs.",
+      "due": "inspection.scheduledAt - hours(parameters.noticeHours)",
+      "source": {
+        "citation": "Civ 1950.5(f)(1)",
+        "quote": "“State law permits former tenants to reclaim abandoned personal property left at the former address of the tenant, subject to certain conditions. You may or may not be able to reclaim property without incurring additional costs, depending on the cost of storing the property and the length of time before it is reclaimed. In general, these costs will be lower the sooner you contact your former landlord after being notified that property belonging to you was left behind after you moved out.”"
+      }
+    }
   ],
   "contested": []
 }

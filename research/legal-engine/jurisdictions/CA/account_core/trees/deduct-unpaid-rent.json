@@ -3,7 +3,10 @@
   "title": "May unpaid rent for the tenancy be deducted from the security deposit, and how much?",
   "decisionPoint": "DP5.5",
   "layer": "CA",
-  "effective": {"from": "2026-01-01", "to": null},
+  "effective": {
+    "from": "2026-01-01",
+    "to": null
+  },
   "inputs": [
     "tenancy.isDwelling",
     "deposit",
@@ -14,59 +17,158 @@
     "tenancy.record"
   ],
   "parameters": [
-    {"id": "abatementDays", "value": 35, "unit": "calendarDays",
-     "source": {"citation": "Civ 1942.4(a)(3)", "quote": "The conditions have existed and have not been abated 35 days beyond the date of service of the notice specified in paragraph (2) and the delay is without good cause."}}
+    {
+      "id": "abatementDays",
+      "value": 35,
+      "unit": "calendarDays",
+      "source": {
+        "citation": "Civ 1942.4(a)(3)",
+        "quote": "The conditions have existed and have not been abated 35 days beyond the date of service of the notice specified in paragraph (2) and the delay is without good cause."
+      }
+    }
   ],
-  "root": {"type": "all", "children": [
-    {"type": "condition", "id": "dwelling-security", "kind": "determinate",
-     "statement": "The deposit secures a rental agreement for residential property used as the tenant's dwelling.",
-     "compute": "tenancy.isDwelling",
-     "source": {"citation": "Civ 1950.5(a)", "quote": "This section applies to security for a rental agreement for residential property that is used as the dwelling of the tenant."}},
-    {"type": "condition", "id": "is-security", "kind": "determinate",
-     "statement": "The money held was imposed at the beginning of the tenancy (or as advance rent) and is not a screening fee under Section 1950.6.",
-     "compute": "(deposit.imposedAtTenancyStart or deposit.isAdvanceRent) and not deposit.isScreeningFee",
-     "source": {"citation": "Civ 1950.5(b)", "quote": "“security” means any payment, fee, deposit, or charge, including, but not limited to, any payment, fee, deposit, or charge, except as provided in Section 1950.6, that is imposed at the beginning of the tenancy to be used to reimburse the landlord for costs associated with processing a new tenant or that is imposed as an advance payment of rent, used or to be used for any purpose"}},
-    {"type": "condition", "id": "rent-default", "kind": "determinate",
-     "statement": "Rent due under the tenancy for periods through the date the tenancy ended remains unpaid.",
-     "compute": "ledger.unpaidRentThrough(tenancy.endDate) > 0",
-     "source": {"citation": "Civ 1950.5(b)(1)", "quote": "The compensation of a landlord for a tenant’s default in the payment of rent."}},
-    {"type": "not", "child": {"type": "all", "children": [
-      {"type": "condition", "id": "substandard-condition", "kind": "semantic",
-       "statement": "The dwelling substantially lacked a standard characteristic of Section 1941.1, violated Health and Safety Code 17920.10, or was declared substandard under Health and Safety Code 17920.3 before the rent was demanded.",
-       "question": {"type": "yesno",
-         "wording": "Do the housing official's notice and the unit records show that, before the rent was demanded, the dwelling substantially lacked a basic habitability characteristic (such as weatherproofing, plumbing, heat, or safe wiring) or was declared substandard?",
-         "inputs": ["unit.housingCitation", "tenancy.record"]},
-       "source": {"citation": "Civ 1942.4(a)(1)", "quote": "The dwelling substantially lacks any of the affirmative standard characteristics listed in Section 1941.1 or violates Section 17920.10 of the Health and Safety Code, or is deemed and declared substandard as set forth in Section 17920.3 of the Health and Safety Code"}},
-      {"type": "condition", "id": "official-written-notice", "kind": "determinate",
-       "statement": "A public housing-law enforcement officer inspected the premises and notified the landlord in writing to abate or repair the conditions.",
-       "compute": "exists(unit.housingCitation.writtenNoticeDate)",
-       "source": {"citation": "Civ 1942.4(a)(2)", "quote": "A public officer or employee who is responsible for the enforcement of any housing law, after inspecting the premises, has notified the landlord or the landlord’s agent in writing of his or her obligations to abate the nuisance or repair the substandard conditions."}},
-      {"type": "condition", "id": "unabated-35-days", "kind": "determinate",
-       "statement": "The conditions remained unabated 35 days after the notice was served.",
-       "compute": "unit.housingCitation.abatedDate == null or days(unit.housingCitation.writtenNoticeDate, unit.housingCitation.abatedDate) > parameters.abatementDays",
-       "source": {"citation": "Civ 1942.4(a)(3)", "quote": "The conditions have existed and have not been abated 35 days beyond the date of service of the notice specified in paragraph (2) and the delay is without good cause."}},
-      {"type": "condition", "id": "delay-without-good-cause", "kind": "semantic",
-       "statement": "The landlord's delay in abating the conditions was without good cause.",
-       "question": {"type": "yesno",
-         "wording": "Was the landlord's failure to abate the cited conditions within 35 days without good cause (for example not explained by permit delays, tenant refusal of access, or unavailable parts)?",
-         "inputs": ["unit.housingCitation", "tenancy.record"]},
-       "source": {"citation": "Civ 1942.4(a)(3)", "quote": "The conditions have existed and have not been abated 35 days beyond the date of service of the notice specified in paragraph (2) and the delay is without good cause."}},
-      {"type": "condition", "id": "not-tenant-caused", "kind": "semantic",
-       "statement": "The conditions were not caused by an act or omission of the tenant in violation of Section 1929 or 1941.2.",
-       "question": {"type": "yesno",
-         "wording": "Do the records show the cited conditions were not caused by the tenant's own act or neglect?",
-         "inputs": ["unit.housingCitation", "tenancy.record", "observation.moveOut"]},
-       "source": {"citation": "Civ 1942.4(a)(4)", "quote": "The conditions were not caused by an act or omission of the tenant or lessee in violation of Section 1929 or 1941.2."}}
-    ]}}
-  ]},
+  "root": {
+    "type": "all",
+    "children": [
+      {
+        "type": "condition",
+        "id": "dwelling-security",
+        "kind": "determinate",
+        "statement": "The deposit secures a rental agreement for residential property used as the tenant's dwelling.",
+        "compute": "tenancy.isDwelling",
+        "source": {
+          "citation": "Civ 1950.5(a)",
+          "quote": "This section applies to security for a rental agreement for residential property that is used as the dwelling of the tenant."
+        }
+      },
+      {
+        "type": "condition",
+        "id": "is-security",
+        "kind": "determinate",
+        "statement": "The money held was imposed at the beginning of the tenancy (or as advance rent) and is not a screening fee under Section 1950.6.",
+        "compute": "(deposit.imposedAtTenancyStart or deposit.isAdvanceRent) and not deposit.isScreeningFee",
+        "source": {
+          "citation": "Civ 1950.5(b)",
+          "quote": "“security” means any payment, fee, deposit, or charge, including, but not limited to, any payment, fee, deposit, or charge, except as provided in Section 1950.6, that is imposed at the beginning of the tenancy to be used to reimburse the landlord for costs associated with processing a new tenant or that is imposed as an advance payment of rent, used or to be used for any purpose"
+        }
+      },
+      {
+        "type": "condition",
+        "id": "rent-default",
+        "kind": "determinate",
+        "statement": "The tenant has defaulted in paying rent due under the tenancy.",
+        "compute": "ledger.unpaidRentThrough(tenancy.endDate) > 0",
+        "source": {
+          "citation": "Civ 1950.5(b)(1)",
+          "quote": "The compensation of a landlord for a tenant’s default in the payment of rent."
+        }
+      },
+      {
+        "type": "not",
+        "child": {
+          "type": "all",
+          "children": [
+            {
+              "type": "condition",
+              "id": "substandard-condition",
+              "kind": "semantic",
+              "statement": "The dwelling substantially lacked a standard characteristic of Section 1941.1, violated Health and Safety Code 17920.10, or was declared substandard under Health and Safety Code 17920.3 before the rent was demanded.",
+              "question": {
+                "type": "yesno",
+                "wording": "Do the housing official's notice and the unit records show that, before the rent was demanded, the dwelling substantially lacked a basic habitability characteristic (such as weatherproofing, plumbing, heat, or safe wiring) or was declared substandard?",
+                "inputs": [
+                  "unit.housingCitation",
+                  "tenancy.record"
+                ]
+              },
+              "source": {
+                "citation": "Civ 1942.4(a)(1)",
+                "quote": "The dwelling substantially lacks any of the affirmative standard characteristics listed in Section 1941.1 or violates Section 17920.10 of the Health and Safety Code, or is deemed and declared substandard as set forth in Section 17920.3 of the Health and Safety Code"
+              }
+            },
+            {
+              "type": "condition",
+              "id": "official-written-notice",
+              "kind": "determinate",
+              "statement": "A public housing-law enforcement officer inspected the premises and notified the landlord in writing to abate or repair the conditions.",
+              "compute": "exists(unit.housingCitation.writtenNoticeDate)",
+              "source": {
+                "citation": "Civ 1942.4(a)(2)",
+                "quote": "A public officer or employee who is responsible for the enforcement of any housing law, after inspecting the premises, has notified the landlord or the landlord’s agent in writing of his or her obligations to abate the nuisance or repair the substandard conditions."
+              }
+            },
+            {
+              "type": "condition",
+              "id": "unabated-35-days",
+              "kind": "determinate",
+              "statement": "The conditions remained unabated 35 days after the notice was served.",
+              "compute": "unit.housingCitation.abatedDate == null or days(unit.housingCitation.writtenNoticeDate, unit.housingCitation.abatedDate) > parameters.abatementDays",
+              "source": {
+                "citation": "Civ 1942.4(a)(3)",
+                "quote": "The conditions have existed and have not been abated 35 days beyond the date of service of the notice specified in paragraph (2) and the delay is without good cause."
+              }
+            },
+            {
+              "type": "condition",
+              "id": "delay-without-good-cause",
+              "kind": "semantic",
+              "statement": "The landlord's delay in abating the conditions was without good cause.",
+              "question": {
+                "type": "yesno",
+                "wording": "Was the landlord's failure to abate the cited conditions within 35 days without good cause (for example not explained by permit delays, tenant refusal of access, or unavailable parts)?",
+                "inputs": [
+                  "unit.housingCitation",
+                  "tenancy.record"
+                ]
+              },
+              "source": {
+                "citation": "Civ 1942.4(a)(3)",
+                "quote": "The conditions have existed and have not been abated 35 days beyond the date of service of the notice specified in paragraph (2) and the delay is without good cause."
+              }
+            },
+            {
+              "type": "condition",
+              "id": "not-tenant-caused",
+              "kind": "semantic",
+              "statement": "The conditions were not caused by an act or omission of the tenant in violation of Section 1929 or 1941.2.",
+              "question": {
+                "type": "yesno",
+                "wording": "Do the records show the cited conditions were not caused by the tenant's own act or neglect?",
+                "inputs": [
+                  "unit.housingCitation",
+                  "tenancy.record",
+                  "observation.moveOut"
+                ]
+              },
+              "source": {
+                "citation": "Civ 1942.4(a)(4)",
+                "quote": "The conditions were not caused by an act or omission of the tenant or lessee in violation of Section 1929 or 1941.2."
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
   "effects": [
-    {"id": "may-deduct-rent", "kind": "permission", "when": "holds",
-     "statement": "Unpaid rent for periods through the end of the tenancy may be deducted, with a partial final period prorated by the company schedule's daily rate.",
-     "amount": "ledger.unpaidRentThrough(tenancy.endDate)",
-     "source": {"citation": "Civ 1950.5(e)(1)", "quote": "the landlord may claim of the security only those amounts as are reasonably necessary for the purposes specified in subdivision (b)."}},
-    {"id": "must-not-deduct-rent", "kind": "prohibition", "when": "fails",
-     "statement": "No rent may be deducted on this basis: none is unpaid, the money held is not security, or the landlord may not demand or collect rent while cited conditions remain unabated.",
-     "consequence": "CA.statutory-damages"}
+    {
+      "id": "may-deduct-rent",
+      "kind": "permission",
+      "when": "holds",
+      "statement": "Unpaid rent for periods through the end of the tenancy may be deducted, with a partial final period prorated by the company schedule's daily rate.",
+      "amount": "ledger.unpaidRentThrough(tenancy.endDate)",
+      "source": {
+        "citation": "Civ 1950.5(e)(1)",
+        "quote": "the landlord may claim of the security only those amounts as are reasonably necessary for the purposes specified in subdivision (b)."
+      }
+    },
+    {
+      "id": "must-not-deduct-rent",
+      "kind": "prohibition",
+      "when": "fails",
+      "statement": "No rent may be deducted on this basis: none is unpaid, the money held is not security, or the landlord may not demand or collect rent while cited conditions remain unabated.",
+      "consequence": "CA.statutory-damages"
+    }
   ],
   "contested": []
 }
