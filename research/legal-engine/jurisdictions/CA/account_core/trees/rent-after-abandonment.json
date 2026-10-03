@@ -1,0 +1,63 @@
+{
+  "id": "CA.rent-after-abandonment",
+  "title": "When the tenant breaches and abandons before the term ends, or the landlord ends possession for breach, when does the lease end and what rent may the landlord recover?",
+  "decisionPoint": "DP3.3",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "lease.endDate",
+    "lease.continuationRemedy",
+    "moveOut.vacateDate",
+    "abandonmentNotice",
+    "tenancy.terminatedForBreach",
+    "tenancy.endDate",
+    "tenancy.record",
+    "ledger",
+    "relet",
+    "mitigation.provenAvoidableLoss",
+    "asOfDate"
+  ],
+  "parameters": [],
+  "root": {"type": "unless",
+    "rule": {"type": "any", "children": [
+      {"type": "all", "children": [
+        {"type": "condition", "id": "left-before-term-end", "kind": "determinate",
+         "statement": "The tenant gave up possession before the end of the term.",
+         "compute": "moveOut.vacateDate < lease.endDate",
+         "source": {"citation": "Civ 1951.2(a)", "quote": "if a lessee of real property breaches the lease and abandons the property before the end of the term or if his right to possession is terminated by the lessor because of a breach of the lease, the lease terminates."}},
+        {"type": "condition", "id": "breach-and-abandonment", "kind": "semantic",
+         "statement": "In leaving, the tenant breached the lease and abandoned the property.",
+         "question": {"type": "yesno",
+           "wording": "Did the tenant leave before the end of the term without any right to end the lease early (no landlord agreement and no statutory early-termination notice) and with no intention of returning?",
+           "inputs": ["tenancy.record", "moveOut.vacateDate", "lease.endDate"]},
+         "source": {"citation": "Civ 1951.2(a)", "quote": "if a lessee of real property breaches the lease and abandons the property before the end of the term or if his right to possession is terminated by the lessor because of a breach of the lease, the lease terminates."}}
+      ]},
+      {"type": "condition", "id": "deemed-abandoned", "kind": "determinate",
+       "statement": "The landlord served a notice of belief of abandonment and the termination date it specified passed without the tenant's written response.",
+       "compute": "exists(abandonmentNotice.terminationDate) and asOfDate >= abandonmentNotice.terminationDate and not abandonmentNotice.tenantResponded",
+       "source": {"citation": "Civ 1951.3(b)", "quote": "Real property shall be deemed abandoned by the lessee, within the meaning of Section 1951.2, and the lease shall terminate if the lessor gives written notice of belief of abandonment as provided in this section and the lessee fails to give the lessor written notice, prior to the date of termination specified in the lessor’s notice"}},
+      {"type": "condition", "id": "possession-terminated-for-breach", "kind": "determinate",
+       "statement": "The landlord terminated the tenant's right to possession because of a breach of the lease.",
+       "compute": "tenancy.terminatedForBreach",
+       "source": {"citation": "Civ 1951.2(a)", "quote": "if a lessee of real property breaches the lease and abandons the property before the end of the term or if his right to possession is terminated by the lessor because of a breach of the lease, the lease terminates."}}
+    ]},
+    "exception": {"type": "condition", "id": "lease-continued-under-1951-4", "kind": "determinate",
+      "statement": "The lease provides for the Section 1951.4 remedy, its subletting or assignment conditions are met, and the landlord has kept the lease in effect.",
+      "compute": "lease.continuationRemedy.provided and lease.continuationRemedy.subletConditionsMet and lease.continuationRemedy.elected",
+      "source": {"citation": "Civ 1951.4(b)", "quote": "Even though a lessee of real property has breached the lease and abandoned the property, the lease continues in effect for so long as the lessor does not terminate the lessee’s right to possession, and the lessor may enforce all the lessor’s rights and remedies under the lease, including the right to recover the rent as it becomes due under the lease, if any of the following conditions is satisfied:"}}
+  },
+  "effects": [
+    {"id": "rent-earned-at-termination", "kind": "permission", "when": "holds",
+     "statement": "The lease has terminated; the landlord may recover the unpaid rent earned at termination.",
+     "amount": "ledger.unpaidRentThrough(tenancy.endDate)",
+     "source": {"citation": "Civ 1951.2(a)(1)", "quote": "The worth at the time of award of the unpaid rent which had been earned at the time of termination;"}},
+    {"id": "rent-loss-to-date", "kind": "permission", "when": "holds",
+     "statement": "The landlord may also recover the rent that would have been earned after termination to date, less the rental loss the tenant proves could reasonably have been avoided (re-letting income counts against it); interest to the time of award and rent after the award are litigation remedies outside the deposit statement.",
+     "amount": "max(0, ledger.rentWouldHaveAccrued(tenancy.endDate, asOfDate) - relet.rentReceivedThrough(asOfDate) - mitigation.provenAvoidableLoss)",
+     "source": {"citation": "Civ 1951.2(a)(2)", "quote": "The worth at the time of award of the amount by which the unpaid rent which would have been earned after termination until the time of award exceeds the amount of such rental loss that the lessee proves could have been reasonably avoided;"}},
+    {"id": "lease-continues", "kind": "permission", "when": "fails",
+     "statement": "If the landlord kept the lease in effect under Section 1951.4, rent is recoverable as it becomes due; otherwise this tree does not apply because the tenant did not abandon early.",
+     "source": {"citation": "Civ 1951.4(b)", "quote": "including the right to recover the rent as it becomes due under the lease"}}
+  ],
+  "contested": []
+}

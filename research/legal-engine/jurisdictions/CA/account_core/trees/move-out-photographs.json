@@ -1,0 +1,36 @@
+{
+  "id": "CA.move-out-photographs",
+  "title": "Must the unit be photographed after possession returns and again after the repairs or cleanings, and when?",
+  "decisionPoint": "PW3.3",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "moveOut.vacateDate",
+    "workPlan"
+  ],
+  "parameters": [
+    {"id": "moveOutPhotoDutyFrom", "value": "2025-04-01", "unit": "date",
+     "source": {"citation": "Civ 1950.5(g)(2)", "quote": "Beginning April 1, 2025, the landlord shall take photographs of the unit within a reasonable time after the possession of the unit is returned to the landlord, but prior to any repairs or cleanings for which the landlord will make a deduction from or claim against the security deposit pursuant to this section, and shall also take photographs of the unit within a reasonable time after such repairs or cleanings are completed."}}
+  ],
+  "root": {"type": "all", "children": [
+    {"type": "condition", "id": "returned-after-start-date", "kind": "determinate",
+     "statement": "Possession was returned on or after April 1, 2025.",
+     "compute": "moveOut.vacateDate >= parameters.moveOutPhotoDutyFrom",
+     "source": {"citation": "Civ 1950.5(g)(2)", "quote": "Beginning April 1, 2025, the landlord shall take photographs of the unit within a reasonable time after the possession of the unit is returned to the landlord"}},
+    {"type": "condition", "id": "deduction-planned", "kind": "determinate",
+     "statement": "The landlord will deduct from or claim against the security for repairs or cleanings.",
+     "compute": "workPlan.deductibleRepairOrCleaningPlanned",
+     "source": {"citation": "Civ 1950.5(g)(2)", "quote": "but prior to any repairs or cleanings for which the landlord will make a deduction from or claim against the security deposit pursuant to this section"}}
+  ]},
+  "effects": [
+    {"id": "photograph-before-work", "kind": "duty", "when": "holds",
+     "statement": "Photograph the unit within a reasonable time after possession returns and before any repair or cleaning that will be deducted or claimed begins; the hard limit is the start of the first such work.",
+     "due": "workPlan.firstDeductibleWorkStart",
+     "source": {"citation": "Civ 1950.5(g)(2)", "quote": "Beginning April 1, 2025, the landlord shall take photographs of the unit within a reasonable time after the possession of the unit is returned to the landlord, but prior to any repairs or cleanings for which the landlord will make a deduction from or claim against the security deposit pursuant to this section"}},
+    {"id": "photograph-after-work", "kind": "duty", "when": "holds",
+     "statement": "Photograph the unit within a reasonable time after those repairs or cleanings are completed; Handoff's operating date is the completion check of each job.",
+     "due": "workPlan.deductibleWorkCompletedDate",
+     "source": {"citation": "Civ 1950.5(g)(2)", "quote": "and shall also take photographs of the unit within a reasonable time after such repairs or cleanings are completed."}}
+  ],
+  "contested": []
+}

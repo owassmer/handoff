@@ -1,0 +1,59 @@
+{
+  "id": "CA.estimate-true-up",
+  "title": "When the final cost of an estimated line is known, what may be kept and what must be returned?",
+  "decisionPoint": "DP6.4",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "line"
+  ],
+  "parameters": [
+    {"id": "completionDays", "value": 14, "unit": "calendarDays",
+     "source": {"citation": "Civ 1950.5(h)(3)", "quote": "Within 14 calendar days of completing the repair or receiving the documentation, the landlord shall complete the requirements in paragraphs (1) and (2) in the manner specified."}}
+  ],
+  "root": {"type": "any", "children": [
+    {"type": "condition", "id": "final-within-estimate", "kind": "determinate",
+     "statement": "The final cost is no more than the estimate deducted.",
+     "compute": "line.finalCost <= line.estimate",
+     "source": {"citation": "Civ 1950.5(h)(3)", "quote": "the landlord may deduct the amount of a good faith estimate of the charges that will be incurred and provide that estimate with the itemized statement."}},
+    {"type": "condition", "id": "excess-retainable", "kind": "discretionary",
+     "statement": "A final cost above the estimate may be kept from security still held, as part of completing the statement.",
+     "decision": {"by": "operator", "what": "Whether to keep a final cost above the estimate from any security still held, rather than billing the excess as a balance."},
+     "contested": "C7",
+     "source": {"citation": "Civ 1950.5(h)(3)", "quote": "Within 14 calendar days of completing the repair or receiving the documentation, the landlord shall complete the requirements in paragraphs (1) and (2) in the manner specified."}}
+  ]},
+  "effects": [
+    {"id": "keep-final-cost", "kind": "permission", "when": "holds",
+     "statement": "The final cost may be kept (where above the estimate, only from security still held and under reading A of C7).",
+     "amount": "line.finalCost",
+     "source": {"citation": "Civ 1950.5(e)(1)", "quote": "the landlord may claim of the security only those amounts as are reasonably necessary for the purposes specified in subdivision (b)."}},
+    {"id": "refund-difference", "kind": "duty", "when": "holds",
+     "statement": "Return the part of the estimate the final cost did not use, with the completed statement and documents, within 14 days of completing the repair or receiving the documents.",
+     "amount": "max(0, line.estimate - line.finalCost)",
+     "due": "line.completedOrDocumentedDate + parameters.completionDays",
+     "consequence": "CA.bad-faith-retention",
+     "source": {"citation": "Civ 1950.5(h)(1)", "quote": "and shall return any remaining portion of the security to the tenant as follows:"}},
+    {"id": "bill-excess", "kind": "prohibition", "when": "fails",
+     "statement": "No more than the estimate may be kept from the security; the excess is billed separately as a balance, and under Owen's rule an increase returns to the operator for acceptance.",
+     "amount": "line.finalCost - line.estimate"}
+  ],
+  "contested": [
+    {"issue": "C7",
+     "question": "When a good-faith estimate turns out low, may the excess be kept from security, or must it be billed separately?",
+     "branches": [
+       {"id": "A",
+        "reading": "It may be kept from security still held. Completing \"the requirements in paragraphs (1) and (2)\" means restating the account at the actual cost, and subdivision (e)(1) allows keeping what is reasonably necessary. In practice little security is still held after day 21, so this matters mainly where the deposit was not yet refunded.",
+        "authority": [
+          {"citation": "Civ 1950.5(h)(3)", "quote": "Within 14 calendar days of completing the repair or receiving the documentation, the landlord shall complete the requirements in paragraphs (1) and (2) in the manner specified."},
+          {"citation": "Civ 1950.5(e)(1)", "quote": "the landlord may claim of the security only those amounts as are reasonably necessary for the purposes specified in subdivision (b)."}],
+        "effect": {"statement": "The excess may be kept from security still held.", "sets": {"excess-retainable": true}}},
+       {"id": "B",
+        "reading": "It must be billed separately. Paragraph (3) authorizes deducting \"the amount of a good faith estimate\", and paragraph (1) required the remaining security to be returned by day 21; the statute gives no route to take more later.",
+        "authority": [
+          {"citation": "Civ 1950.5(h)(3)", "quote": "the landlord may deduct the amount of a good faith estimate of the charges that will be incurred and provide that estimate with the itemized statement."},
+          {"citation": "Civ 1950.5(h)(1)", "quote": "and shall return any remaining portion of the security to the tenant as follows:"}],
+        "effect": {"statement": "Only the estimate is kept; the excess is billed as a balance.", "sets": {"excess-retainable": false}}}
+     ],
+     "exposureBranch": "B"}
+  ]
+}

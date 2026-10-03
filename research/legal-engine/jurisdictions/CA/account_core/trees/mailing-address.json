@@ -1,0 +1,25 @@
+{
+  "id": "CA.mailing-address",
+  "title": "Where must mailings about the statement and refund be sent?",
+  "decisionPoint": "DP6.5",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "tenant.forwardingAddress",
+    "unit.address"
+  ],
+  "parameters": [],
+  "root": {"type": "condition", "id": "address-provided", "kind": "determinate",
+    "statement": "The tenant provided an address for mailings.",
+    "compute": "exists(tenant.forwardingAddress)",
+    "source": {"citation": "Civ 1950.5(h)(6)", "quote": "Any mailings to the tenant pursuant to this subdivision shall be sent to the address provided by the tenant."}},
+  "effects": [
+    {"id": "mail-to-provided-address", "kind": "duty", "when": "holds",
+     "statement": "Send every mailing under subdivision (h) (statement, check, documents) to the address the tenant provided.",
+     "source": {"citation": "Civ 1950.5(h)(6)", "quote": "Any mailings to the tenant pursuant to this subdivision shall be sent to the address provided by the tenant."}},
+    {"id": "mail-to-vacated-unit", "kind": "duty", "when": "fails",
+     "statement": "Send every mailing under subdivision (h) to the unit that was vacated.",
+     "source": {"citation": "Civ 1950.5(h)(6)", "quote": "If the tenant does not provide an address, mailings pursuant to this subdivision shall be sent to the unit that has been vacated."}}
+  ],
+  "contested": []
+}

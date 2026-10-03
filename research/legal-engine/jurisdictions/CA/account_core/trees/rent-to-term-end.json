@@ -1,0 +1,62 @@
+{
+  "id": "CA.rent-to-term-end",
+  "title": "Does rent under a fixed-term lease stop at the end of the term?",
+  "decisionPoint": "DP3.1",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "lease.term",
+    "lease.endDate",
+    "lease.renewalClause",
+    "moveOut.vacateDate",
+    "ledger",
+    "terminationNotice",
+    "tenancy.record"
+  ],
+  "parameters": [],
+  "root": {"type": "unless",
+    "rule": {"type": "condition", "id": "fixed-term", "kind": "determinate",
+      "statement": "The lease is for a fixed term, which ends on its stated end date.",
+      "compute": "lease.term == \"fixed\"",
+      "source": {"citation": "Civ 1933", "quote": "The hiring of a thing terminates: 1. At the end of the term agreed upon;"}},
+    "exception": {"type": "any", "children": [
+      {"type": "all", "children": [
+        {"type": "condition", "id": "remained-after-expiry", "kind": "determinate",
+         "statement": "The tenant remained in possession after the term expired.",
+         "compute": "moveOut.vacateDate > lease.endDate",
+         "source": {"citation": "Civ 1945", "quote": "If a lessee of real property remains in possession thereof after the expiration of the hiring, and the lessor accepts rent from him, the parties are presumed to have renewed the hiring on the same terms and for the same time, not exceeding one month when the rent is payable monthly, nor in any case one year."}},
+        {"type": "condition", "id": "rent-accepted-after-expiry", "kind": "determinate",
+         "statement": "While the tenant remained in possession after the term expired, the landlord accepted rent from the tenant.",
+         "compute": "ledger.rentAcceptedAfter(lease.endDate, moveOut.vacateDate)",
+         "source": {"citation": "Civ 1945", "quote": "If a lessee of real property remains in possession thereof after the expiration of the hiring, and the lessor accepts rent from him, the parties are presumed to have renewed the hiring on the same terms and for the same time, not exceeding one month when the rent is payable monthly, nor in any case one year."}},
+        {"type": "not", "child":
+          {"type": "condition", "id": "renewal-rebutted", "kind": "semantic",
+           "statement": "The records show the parties did not intend to renew the hiring when the payment after expiry was accepted.",
+           "question": {"type": "yesno",
+             "wording": "Do the tenant's notice to vacate, the landlord's communications, and the way the post-expiry payment was described and receipted show that neither party intended to renew the lease (for example the payment was accepted only as a charge for the days before the tenant left)?",
+             "inputs": ["terminationNotice", "tenancy.record", "ledger"]},
+           "source": {"citation": "Civ 1945", "quote": "the parties are presumed to have renewed the hiring on the same terms and for the same time"}}}
+      ]},
+      {"type": "all", "children": [
+        {"type": "condition", "id": "renewal-clause-triggered", "kind": "determinate",
+         "statement": "The lease provides for automatic renewal or extension if the tenant remains in possession after expiry or fails to give notice of intent not to renew, and that event occurred.",
+         "compute": "lease.renewalClause.exists and lease.renewalClause.triggered",
+         "source": {"citation": "Civ 1945.5", "quote": "any term of a lease executed after the effective date of this section for the hiring of residential real property which provides for the automatic renewal or extension of the lease for all or part of the full term of the lease if the lessee remains in possession after the expiration of the lease or fails to give notice of his intent not to renew or extend before the expiration of the lease"}},
+        {"type": "condition", "id": "renewal-clause-enforceable", "kind": "determinate",
+         "statement": "The renewal clause is in at least eight-point boldface in the body of the lease with a boldface recital just above the tenant's signature, or the tenant has not elected to void it.",
+         "compute": "lease.renewalClause.boldfaceCompliant or not lease.renewalClause.voidedByTenant",
+         "source": {"citation": "Civ 1945.5", "quote": "shall be voidable by the party who did not prepare the lease unless such renewal or extension provision appears in at least eight-point boldface type, if the contract is printed, in the body of the lease agreement and a recital of the fact that such provision is contained in the body of the agreement appears in at least eight-point boldface type, if the contract is printed, immediately prior to the place where the lessee executes the agreement."}}
+      ]}
+    ]}
+  },
+  "effects": [
+    {"id": "rent-through-term-end", "kind": "duty", "when": "holds",
+     "statement": "The tenant owes rent under the lease through the last day of the term, and rent under the lease stops there; any stay after that is a holdover (CA.holdover-charge).",
+     "amount": "ledger.rentDueThrough(lease.endDate)",
+     "source": {"citation": "Civ 1933", "quote": "The hiring of a thing terminates: 1. At the end of the term agreed upon;"}},
+    {"id": "tenancy-continues", "kind": "duty", "when": "fails",
+     "statement": "The hiring continues: renewed by acceptance of rent on the same terms for one month at a time where rent is monthly, or extended under the lease's renewal clause; rent continues until that tenancy is ended by notice.",
+     "consequence": "CA.month-to-month-end"}
+  ],
+  "contested": []
+}

@@ -1,0 +1,84 @@
+{
+  "id": "CA.inspection-offer-notice",
+  "title": "Must the landlord tell the tenant in writing that they may request an initial inspection and be present at it, and by when?",
+  "decisionPoint": "DP4.1",
+  "layer": "CA",
+  "effective": {
+    "from": "2026-01-01",
+    "to": null
+  },
+  "inputs": [
+    "tenancy.isDwelling",
+    "terminationNotice",
+    "lease.term",
+    "lease.endDate",
+    "tenancy.terminationGround"
+  ],
+  "parameters": [],
+  "root": {
+    "type": "unless",
+    "rule": {
+      "type": "all",
+      "children": [
+        {
+          "type": "condition",
+          "id": "dwelling-security",
+          "kind": "determinate",
+          "statement": "The deposit secures a rental agreement for residential property used as the tenant's dwelling.",
+          "compute": "tenancy.isDwelling",
+          "source": {
+            "citation": "Civ 1950.5(a)",
+            "quote": "This section applies to security for a rental agreement for residential property that is used as the dwelling of the tenant."
+          }
+        },
+        {
+          "type": "condition",
+          "id": "termination-in-view",
+          "kind": "determinate",
+          "statement": "Either party has given notice of an intention to terminate the tenancy, or a fixed lease term is coming to an end.",
+          "compute": "exists(terminationNotice.receivedDate) or lease.term == \"fixed\"",
+          "source": {
+            "citation": "Civ 1950.5(f)(1)",
+            "quote": "Within a reasonable time after notification of either party’s intention to terminate the tenancy, or before the end of the lease term, the landlord shall notify the tenant in writing of the tenant’s option to request an initial inspection and of the tenant’s right to be present at the inspection."
+          }
+        }
+      ]
+    },
+    "exception": {
+      "type": "condition",
+      "id": "terminated-under-ccp-1161",
+      "kind": "determinate",
+      "statement": "The tenancy is being terminated under Code of Civil Procedure section 1161, paragraph (2), (3) or (4).",
+      "compute": "tenancy.terminationGround in [\"CCP 1161(2)\", \"CCP 1161(3)\", \"CCP 1161(4)\"]",
+      "source": {
+        "citation": "Civ 1950.5(f)(7)",
+        "quote": "The requirements of this subdivision do not apply when the tenancy is terminated pursuant to subdivision (2), (3), or (4) of Section 1161 of the Code of Civil Procedure."
+      }
+    }
+  },
+  "effects": [
+    {
+      "id": "send-offer-notice",
+      "kind": "duty",
+      "when": "holds",
+      "statement": "Notify the tenant in writing of the option to request an initial inspection and the right to be present. The law says within a reasonable time after notice of termination, or before the lease term ends; Handoff's operating date is the day the termination notice is received, and the lease end is the outer limit.",
+      "due": "earliest(terminationNotice.receivedDate, lease.endDate)",
+      "source": {
+        "citation": "Civ 1950.5(f)(1)",
+        "quote": "Within a reasonable time after notification of either party’s intention to terminate the tenancy, or before the end of the lease term, the landlord shall notify the tenant in writing of the tenant’s option to request an initial inspection and of the tenant’s right to be present at the inspection."
+      }
+    },
+    {
+      "id": "include-abandoned-property-text",
+      "kind": "duty",
+      "when": "holds",
+      "statement": "Include, in substantially the same form, the statement about reclaiming abandoned personal property; subdivision (f)(1) does not say which written notice must carry it, so Handoff includes it in this notice and in the 48-hour notice.",
+      "due": "earliest(terminationNotice.receivedDate, lease.endDate)",
+      "source": {
+        "citation": "Civ 1950.5(f)(1)",
+        "quote": "Written notice by the landlord shall contain, in substantially the same form, the following:"
+      }
+    }
+  ],
+  "contested": []
+}

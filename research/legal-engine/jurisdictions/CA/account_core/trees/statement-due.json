@@ -1,0 +1,67 @@
+{
+  "id": "CA.statement-due",
+  "title": "By when must the itemized statement be furnished and the remaining security returned, and what must the statement show?",
+  "decisionPoint": "DP6.1",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "tenancy.isDwelling",
+    "deposit",
+    "moveOut.vacateDate",
+    "moveOut.evidence",
+    "tenancy.record",
+    "terminationNotice",
+    "lease.endDate",
+    "holidays"
+  ],
+  "parameters": [
+    {"id": "statementDays", "value": 21, "unit": "calendarDays",
+     "source": {"citation": "Civ 1950.5(h)(1)", "quote": "No later than 21 calendar days after the tenant has vacated the premises"}},
+    {"id": "fixedTermWindowDays", "value": 60, "unit": "calendarDays",
+     "source": {"citation": "Civ 1950.5(h)(1)", "quote": "or not earlier than 60 calendar days prior to the expiration of a fixed-term lease"}}
+  ],
+  "root": {"type": "all", "children": [
+    {"type": "condition", "id": "dwelling-security", "kind": "determinate",
+     "statement": "The deposit secures a rental agreement for residential property used as the tenant's dwelling.",
+     "compute": "tenancy.isDwelling",
+     "source": {"citation": "Civ 1950.5(a)", "quote": "This section applies to security for a rental agreement for residential property that is used as the dwelling of the tenant."}},
+    {"type": "condition", "id": "security-received", "kind": "determinate",
+     "statement": "The landlord received security for the tenancy.",
+     "compute": "deposit.amount > 0",
+     "source": {"citation": "Civ 1950.5(h)(1)", "quote": "the landlord shall furnish the tenant, a copy of an itemized statement indicating the basis for, and the amount of, any security received and the disposition of the security, and shall return any remaining portion of the security to the tenant as follows:"}},
+    {"type": "condition", "id": "tenant-vacated", "kind": "semantic",
+     "statement": "The tenant had vacated the premises on the recorded vacate date.",
+     "question": {"type": "yesno",
+       "wording": "Do the records show the tenant had vacated the premises by the recorded vacate date: keys and access devices returned or surrendered, belongings removed, and no one occupying the unit after that date?",
+       "inputs": ["moveOut.vacateDate", "moveOut.evidence", "tenancy.record"]},
+     "source": {"citation": "Civ 1950.5(h)(1)", "quote": "No later than 21 calendar days after the tenant has vacated the premises"}}
+  ]},
+  "effects": [
+    {"id": "furnish-statement-and-refund", "kind": "duty", "when": "holds",
+     "statement": "Furnish the tenant an itemized statement showing the basis for and amount of the security received and its disposition, and return any remaining portion, no later than day 21 after the tenant vacated. Handoff works to the nominal day 21; the weekend and holiday extensions are recorded only as margin (C5). The statement may not go out before a termination notice under Civil Code 1946 or 1946.1 or Code of Civil Procedure 1161, or earlier than 60 days before a fixed term expires.",
+     "due": "moveOut.vacateDate + parameters.statementDays",
+     "margin": "latest(holidays.civ10Extend(moveOut.vacateDate + parameters.statementDays), holidays.ccp12aExtend(moveOut.vacateDate + parameters.statementDays))",
+     "notBefore": "earliest(terminationNotice.givenDate, lease.endDate - parameters.fixedTermWindowDays)",
+     "consequence": "CA.bad-faith-retention",
+     "source": {"citation": "Civ 1950.5(h)(1)", "quote": "No later than 21 calendar days after the tenant has vacated the premises, but not earlier than the time that either the landlord or the tenant provides a notice to terminate the tenancy under Section 1946 or 1946.1, Section 1161 of the Code of Civil Procedure, or not earlier than 60 calendar days prior to the expiration of a fixed-term lease, the landlord shall furnish the tenant, a copy of an itemized statement indicating the basis for, and the amount of, any security received and the disposition of the security, and shall return any remaining portion of the security to the tenant as follows:"}}
+  ],
+  "contested": [
+    {"issue": "C5",
+     "question": "When day 21 falls on a Saturday, Sunday or holiday, is the deadline extended to the next business day?",
+     "branches": [
+       {"id": "A",
+        "reading": "Yes. Civil Code 10 and 11 extend a period whose last day is a holiday (Sundays and Government Code 6700 holidays), and Code of Civil Procedure 12a extends any statutory period ending on a Saturday or a judicial holiday under CCP 135, in any code. The two calendars differ, so the later of the two extended dates is the outer margin.",
+        "authority": [
+          {"citation": "Civ 10", "quote": "The time in which any act provided by law is to be done is computed by excluding the first day and including the last, unless the last day is a holiday, and then it is also excluded."},
+          {"citation": "Civ 11", "quote": "Whenever any act of a secular nature, other than a work of necessity or mercy, is appointed by law or contract to be performed upon a particular day, which day falls upon a holiday, it may be performed upon the next business day, with the same effect as if it had been performed upon the day appointed."},
+          {"citation": "CCP 12a(b)", "quote": "This section applies to Sections 659, 659a, and 921, and to all other provisions of law providing or requiring an act to be performed on a particular day or within a specified period of time, whether expressed in this or any other code or statute, ordinance, rule, or regulation."}],
+        "effect": {"statement": "The statement is timely on the extended date (the margin)."}},
+       {"id": "B",
+        "reading": "No. The statute counts \"21 calendar days\", which may be read to fix the day without the general extension rules.",
+        "authority": [
+          {"citation": "Civ 1950.5(h)(1)", "quote": "No later than 21 calendar days after the tenant has vacated the premises"}],
+        "effect": {"statement": "The statement is due on the nominal day 21; Handoff's operating deadline follows this branch."}}
+     ],
+     "exposureBranch": "B"}
+  ]
+}

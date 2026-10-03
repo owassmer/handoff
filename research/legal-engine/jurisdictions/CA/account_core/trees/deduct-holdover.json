@@ -1,0 +1,158 @@
+{
+  "id": "CA.deduct-holdover",
+  "title": "May the holdover charge for days after the tenancy ended be deducted from the security deposit?",
+  "decisionPoint": "DP5.5",
+  "layer": "CA",
+  "effective": {
+    "from": "2026-01-01",
+    "to": null
+  },
+  "inputs": [
+    "tenancy.isDwelling",
+    "deposit",
+    "lease.holdoverClause"
+  ],
+  "parameters": [],
+  "root": {
+    "type": "all",
+    "children": [
+      {
+        "type": "condition",
+        "id": "dwelling-security",
+        "kind": "determinate",
+        "statement": "The deposit secures a rental agreement for residential property used as the tenant's dwelling.",
+        "compute": "tenancy.isDwelling",
+        "source": {
+          "citation": "Civ 1950.5(a)",
+          "quote": "This section applies to security for a rental agreement for residential property that is used as the dwelling of the tenant."
+        }
+      },
+      {
+        "type": "condition",
+        "id": "is-security",
+        "kind": "determinate",
+        "statement": "The money held was imposed at the beginning of the tenancy (or as advance rent) and is not a screening fee under Section 1950.6.",
+        "compute": "(deposit.imposedAtTenancyStart or deposit.isAdvanceRent) and not deposit.isScreeningFee",
+        "source": {
+          "citation": "Civ 1950.5(b)",
+          "quote": "“security” means any payment, fee, deposit, or charge, including, but not limited to, any payment, fee, deposit, or charge, except as provided in Section 1950.6, that is imposed at the beginning of the tenancy to be used to reimburse the landlord for costs associated with processing a new tenant or that is imposed as an advance payment of rent, used or to be used for any purpose"
+        }
+      },
+      {
+        "type": "condition",
+        "id": "holdover-chargeable",
+        "kind": "determinate",
+        "statement": "A holdover charge is allowed for the days after the tenancy ended.",
+        "compute": "holds(\"CA.holdover-charge\")",
+        "source": {
+          "citation": "Civ 3334(a)",
+          "quote": "is deemed to include the value of the use of the property for the time of that wrongful occupation"
+        }
+      },
+      {
+        "type": "any",
+        "children": [
+          {
+            "type": "condition",
+            "id": "holdover-is-rent",
+            "kind": "determinate",
+            "statement": "The lease makes rent payable for holdover days, so unpaid holdover is a default in the payment of rent.",
+            "compute": "lease.holdoverClause.rentPayable",
+            "source": {
+              "citation": "Civ 1950.5(b)(1)",
+              "quote": "The compensation of a landlord for a tenant’s default in the payment of rent."
+            }
+          },
+          {
+            "type": "condition",
+            "id": "any-purpose-reaches-holdover",
+            "kind": "discretionary",
+            "statement": "The security may be applied to holdover damages that are not rent under the lease, as a purpose within the open-ended list of subdivision (b).",
+            "decision": {
+              "by": "operator",
+              "what": "Whether to deduct holdover damages that the lease does not make rent, accepting the exposure on the narrower reading of subdivision (b)."
+            },
+            "contested": "C6",
+            "source": {
+              "citation": "Civ 1950.5(b)",
+              "quote": "used or to be used for any purpose, including, but not limited to, any of the following:"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "id": "may-deduct-holdover",
+      "kind": "permission",
+      "when": "holds",
+      "statement": "The holdover charge may be deducted from the security.",
+      "amount": "amount(\"CA.holdover-charge\", \"may-charge-holdover\")",
+      "source": {
+        "citation": "Civ 1950.5(e)(1)",
+        "quote": "the landlord may claim of the security only those amounts as are reasonably necessary for the purposes specified in subdivision (b)."
+      }
+    },
+    {
+      "id": "bill-holdover-separately",
+      "kind": "prohibition",
+      "when": "fails",
+      "statement": "The holdover charge may not be taken from the security on this basis; if it is otherwise owed it is billed separately as a balance.",
+      "consequence": "CA.statutory-damages"
+    }
+  ],
+  "contested": [
+    {
+      "issue": "C6",
+      "question": "May the security be applied to a lease debt outside the four listed purposes, here holdover damages that the lease does not make rent?",
+      "branches": [
+        {
+          "id": "A",
+          "reading": "Yes. Subdivision (b) defines security as money used for any purpose, and its four paragraphs are examples (\"including, but not limited to\"); subdivision (e)(1) then limits the amount to what is reasonably necessary for those purposes. A federal district court (Brooks v. Greystar, S.D. Cal. 2025, a nonbinding pleading-stage order) took this reading for utilities.",
+          "authority": [
+            {
+              "citation": "Civ 1950.5(b)",
+              "quote": "used or to be used for any purpose, including, but not limited to, any of the following:"
+            },
+            {
+              "citation": "Brooks v. Greystar, No. 3:23-cv-01729, ECF 56 (S.D. Cal. Aug. 7, 2025) p. 14",
+              "quote": "deposits to be used “for any purpose.” Subsection (b) provides four examples of"
+            },
+            {
+              "citation": "Brooks v. Greystar, No. 3:23-cv-01729, ECF 56 (S.D. Cal. Aug. 7, 2025) p. 14",
+              "quote": "Therefore, utility charges may be claimed from security"
+            }
+          ],
+          "effect": {
+            "statement": "Holdover damages may be deducted even without a lease clause making them rent.",
+            "sets": {
+              "any-purpose-reaches-holdover": true
+            }
+          }
+        },
+        {
+          "id": "B",
+          "reading": "No. Subdivision (e)(1) limits claims to amounts reasonably necessary \"for the purposes specified in subdivision (b)\", read as the four enumerated purposes; holdover damages under Civil Code 3334 are not a default in the payment of rent unless the lease makes them rent. No appellate decision has tested this.",
+          "authority": [
+            {
+              "citation": "Civ 1950.5(e)(1)",
+              "quote": "the landlord may claim of the security only those amounts as are reasonably necessary for the purposes specified in subdivision (b)."
+            },
+            {
+              "citation": "Civ 1950.5(b)(1)",
+              "quote": "The compensation of a landlord for a tenant’s default in the payment of rent."
+            }
+          ],
+          "effect": {
+            "statement": "Without a lease clause making holdover days rent, the holdover charge is billed separately and not taken from the security.",
+            "sets": {
+              "any-purpose-reaches-holdover": false
+            }
+          }
+        }
+      ],
+      "exposureBranch": "B"
+    }
+  ]
+}

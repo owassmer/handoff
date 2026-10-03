@@ -1,0 +1,72 @@
+{
+  "id": "CA.statutory-damages",
+  "title": "Is the landlord exposed to statutory damages of up to twice the security for a bad-faith claim or retention, and how much?",
+  "decisionPoint": "DP7.5",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "account.prohibitedRetentions",
+    "account.actualDamages",
+    "compliance.subdivisionHFailures",
+    "conduct.knowledge",
+    "conduct.pattern",
+    "tenancy.record",
+    "statement",
+    "deposit"
+  ],
+  "parameters": [
+    {"id": "statutoryMultiplier", "value": 2, "unit": "multiplier",
+     "source": {"citation": "Civ 1950.5(m)", "quote": "may subject the landlord or the landlord’s successors in interest to statutory damages of up to twice the amount of the security, in addition to actual damages."}}
+  ],
+  "root": {"type": "all", "children": [
+    {"type": "any", "children": [
+      {"type": "condition", "id": "retained-in-violation", "kind": "determinate",
+       "statement": "The landlord claimed or kept security that a provision of Section 1950.5 does not allow (a prohibited deduction, or security not returned when due).",
+       "compute": "count(account.prohibitedRetentions) > 0",
+       "source": {"citation": "Civ 1950.5(m)", "quote": "The bad faith claim or retention by a landlord or the landlord’s successors in interest of the security or any portion thereof in violation of this section"}},
+      {"type": "all", "children": [
+        {"type": "condition", "id": "h-failure-with-valid-charges", "kind": "determinate",
+         "statement": "The charges are otherwise allowed, but the landlord failed to comply with a documentation, timing, method or address requirement of subdivision (h).",
+         "compute": "count(account.prohibitedRetentions) == 0 and count(compliance.subdivisionHFailures) > 0",
+         "source": {"citation": "Civ 1950.5(h)(7)", "quote": "The landlord shall not be entitled to claim any amount of the security if the landlord, in bad faith, fails to comply with this subdivision."}},
+        {"type": "condition", "id": "forfeiture-retention-counts", "kind": "discretionary",
+         "statement": "Keeping security after a bad-faith subdivision (h) failure is itself a retention in violation of the section, even where the charges are valid.",
+         "decision": {"by": "operator", "what": "How to weigh exposure where only a documentation, timing or delivery requirement failed, accepting the reading least favorable to the operator for the exposure figure."},
+         "contested": "C2",
+         "source": {"citation": "Civ 1950.5(m)", "quote": "The bad faith claim or retention by a landlord or the landlord’s successors in interest of the security or any portion thereof in violation of this section"}}
+      ]}
+    ]},
+    {"type": "condition", "id": "claim-in-bad-faith", "kind": "semantic",
+     "statement": "The claim or retention was in bad faith.",
+     "question": {"type": "yesno",
+       "wording": "Considering what the landlord knew about the rule, whether the charge or retention had a reasonable basis in evidence, whether it was part of a practice across tenancies, and whether the tenant's requests or evidence were ignored, was this claim or retention made in bad faith rather than on an honest and reasonable belief that it was allowed?",
+       "inputs": ["account.prohibitedRetentions", "compliance.subdivisionHFailures", "conduct.knowledge", "conduct.pattern", "tenancy.record", "statement"]},
+     "source": {"citation": "Civ 1950.5(m)", "quote": "The bad faith claim or retention by a landlord or the landlord’s successors in interest of the security or any portion thereof in violation of this section"}}
+  ]},
+  "effects": [
+    {"id": "statutory-damages-exposure", "kind": "duty", "when": "holds",
+     "statement": "Exposure: a court may award statutory damages of up to twice the security in addition to actual damages, on its own motion where the facts warrant; in any action the landlord bears the burden of proving the amounts claimed are reasonable. The figure shown to the operator is the maximum.",
+     "amount": "parameters.statutoryMultiplier * deposit.amount + account.actualDamages",
+     "source": {"citation": "Civ 1950.5(m)", "quote": "The court may award damages for bad faith whenever the facts warrant that award, regardless of whether the injured party has specifically requested relief."}}
+  ],
+  "contested": [
+    {"issue": "C2",
+     "question": "Does a bad-faith failure to meet a subdivision (h) requirement (for example the photographs), where the charges themselves are valid, expose the landlord to statutory damages under subdivision (m)?",
+     "branches": [
+       {"id": "A",
+        "reading": "Yes. After a bad-faith subdivision (h) failure, paragraph (7) removes any entitlement to the security, so keeping any of it is a retention in violation of the section. The Senate Judiciary Committee analysis describes statutory damages as available for a bad-faith violation of AB 2801's provisions.",
+        "authority": [
+          {"citation": "Civ 1950.5(h)(7)", "quote": "The landlord shall not be entitled to claim any amount of the security if the landlord, in bad faith, fails to comply with this subdivision."},
+          {"citation": "Civ 1950.5(m)", "quote": "The bad faith claim or retention by a landlord or the landlord’s successors in interest of the security or any portion thereof in violation of this section"},
+          {"citation": "Senate Judiciary Committee, analysis of AB 2801 (June 11, 2024) p. 11", "quote": "A tenant may obtain statutory damages up to twice the amount of the security deposit, as well as actual damages, for a bad faith violation of AB 2801’s provisions."}],
+        "effect": {"statement": "Up to twice the security plus actual damages, on top of returning the deposit.", "sets": {"forfeiture-retention-counts": true}}},
+       {"id": "B",
+        "reading": "No. Subdivision (m) targets bad-faith claims or retentions of amounts the landlord was not entitled to; paragraph (7)'s forfeiture is the specific remedy for a procedural failure, and courts do not add penalties a statute does not expressly provide.",
+        "authority": [
+          {"citation": "Civ 1950.5(h)(7)", "quote": "The landlord shall not be entitled to claim any amount of the security if the landlord, in bad faith, fails to comply with this subdivision."},
+          {"citation": "Granberry v. Islay Investments (1995) 9 Cal.4th 738, 747 [mirror text]", "quote": "Courts will not impose penalties for noncompliance with statutory provisions in addition to those that are provided expressly or by necessary implication."}],
+        "effect": {"statement": "Forfeiture of the security only; no statutory damages for the procedural failure alone.", "sets": {"forfeiture-retention-counts": false}}}
+     ],
+     "exposureBranch": "A"}
+  ]
+}

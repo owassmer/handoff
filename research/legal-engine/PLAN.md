@@ -1,6 +1,20 @@
 # Legal-engine plan and to-do list
 
-Updated October 2, 2026. J0 recorded complete; proposed aperture correction below. J1 open. J2 has not begun.
+Updated October 3, 2026 (Claude, coordinator). Owen's direction is recorded in HANDOFF_CONTEXT.md under "October 2, 2026 — Owen's direction to the new coordinator". Earlier text below was written by previous coordinators and is not authority on its own.
+
+## Current milestone: California account rules for the Holland-ready demonstration
+
+Compile the rules Handoff needs to build, issue and defend a departing tenant's account at a California apartment community, one operating decision at a time: chain-map DP0–DP9, PW0 (entry for inspections and work) and PW3 (completed work and the account). Layers US, CA, Orange County and Huntington Beach, only where they actually contain such rules. The Breakwater case is one test, not the scope.
+
+- [x] **A1. Map and acquire.** Provision map by decision point, verbatim official texts, federal rules from `stage-a/US.json` assessed for California, gaps. Output in `jurisdictions/CA/account_core/` (MAP.md, corrected Oct 3 from the tree review).
+- [x] **A2. Decide and propose.** Done Oct 3 as 34 logic trees in the format of `design/legal-trees.md`, in `jurisdictions/CA/account_core/trees/`, with the quote checker and the Jev fidelity check (REVIEW.md).
+- [x] **A3. Authorities for contested questions only.** Done Oct 3: `jurisdictions/CA/account_core/AUTHORITIES.md`. For example bad-faith forfeiture under 1950.5(h)(7), Granberry, Rosenthal coverage of tenancy balances, public-entity owner consequences.
+- [x] **A4. Owen's ruling, then apply.** Owen ruled Oct 3 on every point raised; the rulings are in HANDOFF_CONTEXT.md and at the end of the trees' REVIEW.md. The trees replace `rules.json` as the compiled form.
+- [x] **A5. Evaluate and walk.** Done Oct 3: the TypeScript tree evaluator in `app/legal` (three-valued, evidence contracts, contested branches, exposure, investigation list, effects in cents and dates; 90 tests), with the demonstration case walked through the trees. Binding notes in `app/legal/BINDING.md`.
+
+## Parallel track: J1 source register (does not block the milestone)
+
+The four open status questions (J1-2 to J1-5 below) are to be registered as dated, version-conditional entries instead of gates. J1-1 and J1-6 appear applied in the register through `j1/reassessment/operator-scope.json`; J1-8 still decides completion. No J1 work is running.
 
 The requested reconciled task-list deliverable and Holland scope verification are complete. See [decisions and evidence](j1/reassessment/reconciled-next-steps.json). Completing the proposal does not claim the implementation tasks below are complete.
 

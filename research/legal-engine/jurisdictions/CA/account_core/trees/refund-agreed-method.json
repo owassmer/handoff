@@ -1,0 +1,55 @@
+{
+  "id": "CA.refund-agreed-method",
+  "title": "Must the remaining security be returned by a method the parties agreed in writing, or that a tenant who ended the lease under Section 1946.7 requested?",
+  "decisionPoint": "DP6.6",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "ledger.payments",
+    "refundAgreement",
+    "adultTenants.residing",
+    "cotenantAgreement",
+    "dvTermination",
+    "moveOut.vacateDate"
+  ],
+  "parameters": [
+    {"id": "statementDays", "value": 21, "unit": "calendarDays",
+     "source": {"citation": "Civ 1950.5(h)(1)", "quote": "No later than 21 calendar days after the tenant has vacated the premises"}}
+  ],
+  "root": {"type": "any", "children": [
+    {"type": "all", "children": [
+      {"type": "condition", "id": "paid-electronically", "kind": "determinate",
+       "statement": "The landlord received the security or rental payments from the tenant electronically.",
+       "compute": "ledger.payments.anyElectronic([\"security\", \"rent\"])",
+       "source": {"citation": "Civ 1950.5(h)(1)(A)(ii)(I)", "quote": "If the landlord received the security or rental payments from the tenant electronically, the landlord shall return the remainder of the security electronically"}},
+      {"type": "condition", "id": "other-method-agreed", "kind": "determinate",
+       "statement": "The landlord and tenant designated another method of return by written agreement (a paper writing, or an electronic one meeting CA.electronic-writing).",
+       "compute": "refundAgreement.designatesOtherMethod and refundAgreement.isWriting",
+       "source": {"citation": "Civ 1950.5(h)(1)(A)(ii)(I)", "quote": "Alternatively, the landlord and tenant may, by written agreement, designate another method of return, including, but not limited to, by personal delivery or by a check made payable to the tenant and mailed by first-class mail, postage prepaid, to an address provided by the tenant."}}
+    ]},
+    {"type": "all", "children": [
+      {"type": "condition", "id": "multiple-adults", "kind": "determinate",
+       "statement": "More than one adult tenant resides in the unit.",
+       "compute": "count(adultTenants.residing) > 1",
+       "source": {"citation": "Civ 1950.5(h)(1)(C)(ii)", "quote": "If multiple adult tenants reside in the unit, the landlord may enter into a mutual written agreement between the landlord and all adult tenants, at the commencement of the tenancy or at any time during or after the tenancy, that specifies both of the following:"}},
+      {"type": "any", "children": [
+        {"type": "condition", "id": "cotenant-agreement", "kind": "determinate",
+         "statement": "The landlord and all adult tenants residing in the unit entered a written agreement specifying how the remainder is returned (to whom, in what shares, by check or electronic deposit) and how each receives the statement.",
+         "compute": "cotenantAgreement.signedByAllResidingAdults and cotenantAgreement.specifiesReturnAndStatement",
+         "source": {"citation": "Civ 1950.5(h)(1)(C)(ii)(I)", "quote": "How any remaining portion of the security will be returned, including whether it will be returned to a specific adult tenant or divided among multiple tenants, with the allocation percentages."}},
+        {"type": "condition", "id": "dv-tenant-request", "kind": "determinate",
+         "statement": "With no all-tenant agreement, a tenant who ended the lease under Section 1946.7 asked for the security to be disbursed other than by a check payable to all adult tenants.",
+         "compute": "dvTermination.under19467 and dvTermination.requestedOtherMethod and not cotenantAgreement.signedByAllResidingAdults",
+         "source": {"citation": "Civ 1950.5(h)(1)(C)(iii)", "quote": "If multiple adult tenants reside in a unit and a tenant terminates the lease pursuant to Section 1946.7 and no written mutual agreement was entered into by the landlord and all adult tenants pursuant to clause (ii), and the tenant who terminated the lease pursuant to Section 1946.7 requests that the security be disbursed in a manner other than by check made payable to all adult tenants, the landlord may return the security in a manner other than by check made payable to all adult tenants."}}
+      ]}
+    ]}
+  ]},
+  "effects": [
+    {"id": "agreed-method", "kind": "duty", "when": "holds",
+     "statement": "Return the remainder, by day 21, by the method the written agreement designates (for several adult tenants, to the tenants, shares and accounts it specifies), or, on a Section 1946.7 tenant's request, by another manner than a check payable to all.",
+     "due": "moveOut.vacateDate + parameters.statementDays",
+     "consequence": "CA.bad-faith-retention",
+     "source": {"citation": "Civ 1950.5(h)(1)(C)(ii)(I)", "quote": "If any remaining portion of the security is to be returned to multiple adult tenants, the landlord may return the security by either a check by first-class mail, postage prepaid, or an electronic deposit to a bank account or other financial institution designated by each adult tenant, as specified in the written agreement."}}
+  ],
+  "contested": []
+}

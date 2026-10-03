@@ -1,0 +1,113 @@
+{
+  "id": "CA.inspection-list-gate",
+  "title": "Does the initial-inspection itemized statement leave this deduction open, or bar it because the item was not listed?",
+  "decisionPoint": "DP4.2",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "line",
+    "tenancy.terminationGround",
+    "notices.inspectionOffer",
+    "inspection.request",
+    "inspection.conductedAt",
+    "inspection.itemizedStatement",
+    "inspection.notes",
+    "inspection.photos",
+    "observation.preMoveOut",
+    "observation.moveOut",
+    "photos.afterPossession"
+  ],
+  "parameters": [],
+  "root": {"type": "any", "children": [
+    {"type": "condition", "id": "not-repair-or-cleaning", "kind": "determinate",
+     "statement": "The deduction is not for a repair or a cleaning.",
+     "compute": "not line.involvesRepairOrCleaning",
+     "source": {"citation": "Civ 1950.5(f)(4)", "quote": "the landlord shall not use the security for deductions for repairs or cleanings that are not identified in the itemized statement described in paragraph (2)."}},
+    {"type": "condition", "id": "terminated-under-ccp-1161", "kind": "determinate",
+     "statement": "The tenancy was terminated under Code of Civil Procedure section 1161, paragraph (2), (3) or (4).",
+     "compute": "tenancy.terminationGround in [\"CCP 1161(2)\", \"CCP 1161(3)\", \"CCP 1161(4)\"]",
+     "source": {"citation": "Civ 1950.5(f)(7)", "quote": "The requirements of this subdivision do not apply when the tenancy is terminated pursuant to subdivision (2), (3), or (4) of Section 1161 of the Code of Civil Procedure."}},
+    {"type": "all", "children": [
+      {"type": "condition", "id": "no-inspection-conducted", "kind": "determinate",
+       "statement": "No initial inspection was conducted.",
+       "compute": "not exists(inspection.conductedAt)",
+       "source": {"citation": "Civ 1950.5(f)(4)", "quote": "Subject to paragraphs (5) and (6), if an initial inspection is conducted pursuant to this subdivision and, at the time of inspection, the premises do not contain tenant possessions that prevent the landlord from identifying repairs or cleanings due to the presence of those possessions, the landlord shall not use the security for deductions for repairs or cleanings that are not identified in the itemized statement described in paragraph (2)."}},
+      {"type": "any", "children": [
+        {"type": "all", "children": [
+          {"type": "condition", "id": "offer-notice-given", "kind": "determinate",
+           "statement": "The landlord gave the written notice of the option to request an initial inspection.",
+           "compute": "exists(notices.inspectionOffer.sentAt)",
+           "source": {"citation": "Civ 1950.5(f)(1)", "quote": "the landlord shall notify the tenant in writing of the tenant’s option to request an initial inspection and of the tenant’s right to be present at the inspection."}},
+          {"type": "not", "child":
+            {"type": "condition", "id": "inspection-requested", "kind": "determinate",
+             "statement": "The tenant requested an initial inspection and did not withdraw the request.",
+             "compute": "inspection.request.made and not inspection.request.withdrawn",
+             "source": {"citation": "Civ 1950.5(f)(1)", "quote": "If a tenant chooses not to request an initial inspection, the duties of the landlord under this subdivision are discharged."}}}
+        ]},
+        {"type": "condition", "id": "skipped-duty-no-bar", "kind": "discretionary",
+         "statement": "Where the landlord skipped the offer notice or a requested inspection, repair and cleaning deductions an inspection would have identified remain available.",
+         "decision": {"by": "operator", "what": "Whether to take repair and cleaning deductions after the offer notice or a requested initial inspection was skipped, accepting the exposure on the reading that they are barred."},
+         "contested": "C9",
+         "source": {"citation": "Civ 1950.5(f)(4)", "quote": "if an initial inspection is conducted pursuant to this subdivision"}}
+      ]}
+    ]},
+    {"type": "condition", "id": "possessions-prevented-identification", "kind": "semantic",
+     "statement": "At the time of the initial inspection the premises contained tenant possessions that prevented the landlord from identifying repairs or cleanings.",
+     "question": {"type": "yesno",
+       "wording": "At the initial inspection, did the tenant's belongings in the unit prevent the inspector from seeing or assessing the condition of surfaces, fixtures or areas that could need repair or cleaning?",
+       "inputs": ["inspection.notes", "inspection.photos"]},
+     "source": {"citation": "Civ 1950.5(f)(4)", "quote": "at the time of inspection, the premises do not contain tenant possessions that prevent the landlord from identifying repairs or cleanings due to the presence of those possessions"}},
+    {"type": "all", "children": [
+      {"type": "condition", "id": "listed-in-statement", "kind": "determinate",
+       "statement": "The repair or cleaning was identified in the initial-inspection itemized statement.",
+       "compute": "line.item in inspection.itemizedStatement.items",
+       "source": {"citation": "Civ 1950.5(f)(5)", "quote": "Nothing in this subdivision shall prevent a landlord from using the security for deductions itemized in the statement provided for in paragraph (2) that were not cured by the tenant so long as the deductions are for damages authorized by this section."}},
+      {"type": "condition", "id": "not-cured", "kind": "semantic",
+       "statement": "The tenant did not cure the listed deficiency before the tenancy ended.",
+       "question": {"type": "yesno",
+         "wording": "Was the deficiency listed at the initial inspection still present when possession was returned, so that the tenant had not remedied it?",
+         "inputs": ["line", "inspection.itemizedStatement", "observation.preMoveOut", "observation.moveOut", "photos.afterPossession"]},
+       "source": {"citation": "Civ 1950.5(f)(5)", "quote": "Nothing in this subdivision shall prevent a landlord from using the security for deductions itemized in the statement provided for in paragraph (2) that were not cured by the tenant so long as the deductions are for damages authorized by this section."}}
+    ]},
+    {"type": "condition", "id": "arose-after-inspection", "kind": "semantic",
+     "statement": "The condition arose between completion of the initial inspection and the return of possession.",
+     "question": {"type": "yesno",
+       "wording": "Is this condition absent from the initial-inspection photographs and notes but present after possession was returned, showing it arose between the inspection and move-out?",
+       "inputs": ["line", "inspection.photos", "inspection.notes", "observation.preMoveOut", "observation.moveOut", "photos.afterPossession"]},
+     "source": {"citation": "Civ 1950.5(f)(6)", "quote": "Nothing in this subdivision shall prevent a landlord from using the security for any purpose specified in paragraphs (1) to (4), inclusive, of subdivision (b) that occurs between completion of the initial inspection when possession of the unit is returned to the landlord"}},
+    {"type": "condition", "id": "hidden-by-possessions", "kind": "semantic",
+     "statement": "The condition was not identified at the initial inspection because the tenant's possessions hid it.",
+     "question": {"type": "yesno",
+       "wording": "At the initial inspection, was the location of this condition covered or blocked by the tenant's belongings, so that it could not have been identified then?",
+       "inputs": ["line", "inspection.photos", "inspection.notes", "observation.moveOut"]},
+     "source": {"citation": "Civ 1950.5(f)(6)", "quote": "or that was not identified during the initial inspection due to the presence of a tenant’s possessions."}}
+  ]},
+  "effects": [
+    {"id": "not-barred-by-list", "kind": "permission", "when": "holds",
+     "statement": "The initial-inspection statement does not bar this deduction; the deduction's own tree decides it.",
+     "source": {"citation": "Civ 1950.5(f)(6)", "quote": "Nothing in this subdivision shall prevent a landlord from using the security for any purpose specified in paragraphs (1) to (4), inclusive, of subdivision (b)"}},
+    {"id": "barred-by-list", "kind": "prohibition", "when": "fails",
+     "statement": "The security may not be used for this repair or cleaning because it was not identified in the initial-inspection itemized statement.",
+     "consequence": "CA.statutory-damages",
+     "source": {"citation": "Civ 1950.5(f)(4)", "quote": "the landlord shall not use the security for deductions for repairs or cleanings that are not identified in the itemized statement described in paragraph (2)."}}
+  ],
+  "contested": [
+    {"issue": "C9",
+     "question": "When the landlord skipped the written offer of an initial inspection, or did not hold an inspection the tenant requested, may it still deduct repairs and cleanings an inspection would have identified?",
+     "branches": [
+       {"id": "A",
+        "reading": "Yes. Paragraph (4) bars unlisted deductions only if an initial inspection is conducted. Skipping the notice or the inspection is a violation of the section with no stated bar; its consequence runs through bad-faith damages under subdivision (m). Courts do not add penalties a statute does not provide.",
+        "authority": [
+          {"citation": "Civ 1950.5(f)(4)", "quote": "if an initial inspection is conducted pursuant to this subdivision"},
+          {"citation": "Granberry v. Islay Investments (1995) 9 Cal.4th 738, 747 [mirror text]", "quote": "Courts will not impose penalties for noncompliance with statutory provisions in addition to those that are provided expressly or by necessary implication."}],
+        "effect": {"statement": "Deductions remain available; the skipped duty is exposure under subdivision (m) only if in bad faith.", "sets": {"skipped-duty-no-bar": true}}},
+       {"id": "B",
+        "reading": "No. The inspection exists so the tenant can cure and avoid deductions; a landlord who denied that opportunity cannot take deductions an inspection would have identified, and retaining them is a retention in violation of the section.",
+        "authority": [
+          {"citation": "Civ 1950.5(f)(1)", "quote": "The purpose of the initial inspection shall be to allow the tenant an opportunity to remedy identified deficiencies, in a manner consistent with the rights and obligations of the parties under the rental agreement, in order to avoid deductions from the security."},
+          {"citation": "Civ 1950.5(m)", "quote": "The bad faith claim or retention by a landlord or the landlord’s successors in interest of the security or any portion thereof in violation of this section"}],
+        "effect": {"statement": "Repair and cleaning deductions an inspection would have identified are barred.", "sets": {"skipped-duty-no-bar": false}}}
+     ],
+     "exposureBranch": "B"}
+  ]
+}

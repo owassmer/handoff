@@ -1,0 +1,55 @@
+{
+  "id": "CA.initial-inspection",
+  "title": "Must the landlord make an initial (pre-move-out) inspection, when, and what must it hand the tenant?",
+  "decisionPoint": "DP4.1",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "inspection.request",
+    "inspection.conductedAt",
+    "tenancy.endDate",
+    "tenancy.terminationGround"
+  ],
+  "parameters": [
+    {"id": "inspectionWindowDays", "value": 14, "unit": "calendarDays",
+     "source": {"citation": "Civ 1950.5(f)(1)", "quote": "At a reasonable time, but no earlier than two weeks before the termination or the end of lease date, the landlord, or an agent of the landlord, shall, upon the request of the tenant, make an initial inspection of the premises prior to any final inspection the landlord makes after the tenant has vacated the premises."}}
+  ],
+  "root": {"type": "unless",
+    "rule": {"type": "all", "children": [
+      {"type": "condition", "id": "inspection-requested", "kind": "determinate",
+       "statement": "The tenant requested an initial inspection.",
+       "compute": "inspection.request.made",
+       "source": {"citation": "Civ 1950.5(f)(1)", "quote": "the landlord, or an agent of the landlord, shall, upon the request of the tenant, make an initial inspection of the premises prior to any final inspection the landlord makes after the tenant has vacated the premises."}},
+      {"type": "condition", "id": "request-not-withdrawn", "kind": "determinate",
+       "statement": "The tenant has not withdrawn the request.",
+       "compute": "not inspection.request.withdrawn",
+       "source": {"citation": "Civ 1950.5(f)(1)", "quote": "The landlord shall proceed with the inspection whether the tenant is present or not, unless the tenant previously withdrew their request for the inspection."}}
+    ]},
+    "exception": {"type": "condition", "id": "terminated-under-ccp-1161", "kind": "determinate",
+      "statement": "The tenancy is being terminated under Code of Civil Procedure section 1161, paragraph (2), (3) or (4).",
+      "compute": "tenancy.terminationGround in [\"CCP 1161(2)\", \"CCP 1161(3)\", \"CCP 1161(4)\"]",
+      "source": {"citation": "Civ 1950.5(f)(7)", "quote": "The requirements of this subdivision do not apply when the tenancy is terminated pursuant to subdivision (2), (3), or (4) of Section 1161 of the Code of Civil Procedure."}}
+  },
+  "effects": [
+    {"id": "schedule-mutually", "kind": "duty", "when": "holds",
+     "statement": "Attempt to schedule the inspection at a mutually acceptable date and time.",
+     "source": {"citation": "Civ 1950.5(f)(1)", "quote": "If an inspection is requested, the parties shall attempt to schedule the inspection at a mutually acceptable date and time."}},
+    {"id": "inspect", "kind": "duty", "when": "holds",
+     "statement": "Make the initial inspection at a reasonable time no earlier than two weeks before the tenancy ends, and before any final inspection after the tenant vacates, whether or not the tenant is present.",
+     "due": "tenancy.endDate",
+     "notBefore": "tenancy.endDate - parameters.inspectionWindowDays",
+     "source": {"citation": "Civ 1950.5(f)(1)", "quote": "At a reasonable time, but no earlier than two weeks before the termination or the end of lease date, the landlord, or an agent of the landlord, shall, upon the request of the tenant, make an initial inspection of the premises prior to any final inspection the landlord makes after the tenant has vacated the premises."}},
+    {"id": "itemized-list", "kind": "duty", "when": "holds",
+     "statement": "Based on the inspection, give the tenant an itemized statement of the repairs or cleanings proposed as the basis of deductions, with the texts of Section 1950.5(b)(1) to (4); hand it to the tenant if present, otherwise leave it inside the unit.",
+     "due": "inspection.conductedAt",
+     "source": {"citation": "Civ 1950.5(f)(2)", "quote": "Based on the inspection, the landlord shall give the tenant an itemized statement specifying repairs or cleanings that are proposed to be the basis of any deductions from the security the landlord intends to make pursuant to paragraphs (1) to (4), inclusive, of subdivision (b). This statement shall also include the texts of paragraphs (1) to (4), inclusive, of subdivision (b). The statement shall be given to the tenant, if the tenant is present for the inspection, or shall be left inside the premises."}},
+    {"id": "tenant-may-cure", "kind": "permission", "when": "holds",
+     "statement": "The tenant may remedy the listed deficiencies until the tenancy ends, to avoid deductions.",
+     "due": "tenancy.endDate",
+     "source": {"citation": "Civ 1950.5(f)(3)", "quote": "The tenant shall have the opportunity during the period following the initial inspection until termination of the tenancy to remedy identified deficiencies, in a manner consistent with the rights and obligations of the parties under the rental agreement, in order to avoid deductions from the security."}},
+    {"id": "duties-discharged", "kind": "permission", "when": "fails",
+     "statement": "No initial inspection is owed. If the tenant chose not to request one after a proper offer notice, the landlord's subdivision (f) duties are discharged.",
+     "source": {"citation": "Civ 1950.5(f)(1)", "quote": "If a tenant chooses not to request an initial inspection, the duties of the landlord under this subdivision are discharged."}}
+  ],
+  "contested": []
+}
