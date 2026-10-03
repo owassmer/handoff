@@ -320,7 +320,7 @@ A Judgment over the evidence: keys, belongings, written surrender, notice end da
 
 **DP6.3 Counting days**
 - Civ 10 (T): exclude the first day and include the last, unless the last day is a holiday.
-- Civ 7 (T): holidays are Sundays plus the days the Government Code makes holidays (GOV 6700 and 6701 queued; GOV 6700 was amended effective Mar 26, 2026).
+- Civ 7 (T): holidays are Sundays plus the days the Government Code makes holidays. GOV 6700 (T; amended by AB 2156, Stats. 2026 ch. 7, effective Mar 26, 2026) lists them. They include Lunar New Year, Mar 31 (Farmworkers Day), Apr 24, Diwali, Juneteenth, Admission Day (Sep 9), Native American Day and Columbus Day. Good Friday counts only from noon to 3 p.m., and days appointed by the President or Governor are included. GOV 6701 (T): a holiday on Sunday moves to Monday; Nov 11 on a Saturday moves to Friday. No other Saturday observance.
 - Civ 11 (T): an act due on a holiday may be done on the next business day.
 - CCP 12a (T): extends any period set by law when its last day is a Saturday or a CCP 135 judicial holiday. 12a(b) applies it to all codes.
 - Whether "21 calendar days" displaces the extension is contested (C5).
@@ -329,7 +329,7 @@ A Judgment over the evidence: keys, belongings, written surrender, notice end da
   - the extended date under Civ 10/11 (Gov Code holidays);
   - the extended date under CCP 12a (Saturdays and judicial holidays).
 - The two holiday calendars differ. CCP 135 (T; AB 268, effective Jan 1, 2026) makes every Gov 6700 holiday a judicial holiday except Lunar New Year, Diwali, Apr 24 (Genocide Remembrance Day), Admission Day, Columbus Day and days appointed by the Governor. It adds every Saturday and the day after Thanksgiving. So Gov Code holidays that fall outside CCP 135 extend under Civ 10/11 only, and Saturdays extend under CCP 12a only.
-- Several 2026 holiday acts (AB 1841, AB 2017, AB 2156, SB 1394, AB 2294, AB 395) are dated entries, generally effective Jan 1, 2027 (GAPS).
+- AB 2156 is already in force. The other 2026 holiday acts (AB 1841, AB 2017, SB 1394, AB 2294, AB 395) are dated entries pending their texts (GAPS).
 - Recommended operating date: the nominal day 21.
 
 **DP6.4 Contents and form**
@@ -649,7 +649,7 @@ ALL of the following:
 | No fee for serving notices; no fee for check payments | Jan 1 / Feb 1, 2025 (SB 611) | CCP 1161(6), 1947.3(b) (T) |
 | Small-claims limits $6,250 / $12,500 | in force | CCP 116.220, 116.221 (T) |
 | 5% judgment interest on personal debt | Judgments from Jan 1, 2023 | CCP 685.010(a)(2) (T) |
-| Holiday calendar | GOV 6700 amended effective Mar 26, 2026. 2026 acts AB 395, AB 1841, AB 2017, AB 2156, SB 1394 and AB 2294 change holidays, generally effective Jan 1, 2027 | GAPS; matters when day 21 falls in 2027 |
+| Holiday calendar | GOV 6700 amended by AB 2156 (Stats. 2026 ch. 7), effective Mar 26, 2026 (T). Other 2026 holiday acts (AB 395, AB 1841, AB 2017, SB 1394, AB 2294) are dated entries; texts are being fetched (GAPS) | Matters when day 21 falls on or near a new holiday |
 | 2026 acts touching tenancy | SB 1072 (housing omnibus), AB 2025 (tenancy: digitally altered images), SB 1296 (pet policy, operative Apr 1, 2027) | Texts not yet read (GAPS). AB 2025 may affect (g) photographs. |
 | Rent cap and just cause sunset | Jan 1, 2030 | 1946.2, 1947.12 (T) |
 
