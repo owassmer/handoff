@@ -53,8 +53,11 @@ export interface EvaluateOptions {
 
 export interface FormulaOutcome {
   formula: string;
-  /** known: a value; absent: the formula's facts say there is none; unknown: something is missing. */
-  status: "known" | "absent" | "unknown";
+  /**
+   * known: a value; absent: the formula's facts say there is none; unknown: something is missing;
+   * skipped: the effect does not apply and the formula would have evaluated another tree.
+   */
+  status: "known" | "absent" | "unknown" | "skipped";
   /** Integer cents for an amount; an ISO date or date-time for due, margin and notBefore; a truth value for compute. */
   value?: number | string | boolean;
   /** The amount before rounding to whole cents, when it was not whole. */
@@ -283,9 +286,12 @@ class Session {
       parameters: c.parameters,
       holds: async (id: string) => (await this.reference(id, mode, chain)).root,
       amount: async (id: string, effectId: string): Promise<Value> => {
+        // The amount of an effect that does not follow is absent; one that may follow keeps its figure.
         const run = await this.reference(id, mode, chain);
-        const a = run.effects.find((e) => e.id === effectId)?.amount;
-        if (!a) throw new FormulaError(`${id} has no amount on effect ${effectId}`);
+        const e = run.effects.find((x) => x.id === effectId);
+        if (!e?.amount) throw new FormulaError(`${id} has no amount on effect ${effectId}`);
+        if (e.applies === false) return null;
+        const a = e.amount;
         return a.status === "known" ? (a.value as number) : a.status === "absent" ? null : UNKNOWN;
       },
     };
@@ -417,6 +423,12 @@ class Session {
       for (const k of EFFECT_FORMULAS) {
         const f = ce.formulas[k];
         if (!f) continue;
+        // A formula from the case's own facts is shown even when the effect does not follow; one that
+        // reaches another tree waits until the effect can apply, so no tree is evaluated for nothing.
+        if (r.applies === false && (f.analysis.holds.length || f.analysis.amounts.length)) {
+          r[k as EffectFormula] = { formula: f.source, status: "skipped" };
+          continue;
+        }
         const o = outcome(f, await this.formula(c, `${e.id}.${k}`, f, mode, chain), k === "amount" ? "amount" : "date");
         if (o.error !== undefined) this.diagnose(tree.id, `${e.id}.${k}`, o.error);
         r[k as EffectFormula] = o;
