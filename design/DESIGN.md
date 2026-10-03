@@ -35,11 +35,11 @@ Handoff decides every amount from the evidence, the lease, the company charge sc
 | Nov 10–16 | The lease ends. The tenant stays six more days and returns the keys on the 16th. | Records the holdover. Photographs the unit before any work, as the law requires. Runs the move-out inspection. For each condition, records what was found and who is responsible: tenant damage, ordinary wear, or present at move-in. | — |
 | Nov 17 | The turn needs a plan. | Gets a vendor quote for the closet (repair against rebuild) and for carpet cleaning, and in-house time and rates for paint and cleaning. Proposes the work plan and budget. | **The work plan and budget** |
 | Nov 18 – Dec 1 | The work is done. Thanksgiving week affects scheduling. | Schedules in-house work orders and vendors, follows up, takes after-photos, checks completion, records hours and invoices. | — |
-| ~Nov 30 | The account is due before December 7. | Builds the account. Holdover rent for six days. A tenant share of each charge, from the company schedule and the evidence. Carpet cleaning only if it was needed to restore move-in condition. Actual cleaning hours. Final utilities handled as the law allows, because the biller has not billed yet. Whether that means estimating now or billing later is a question for the legal map. Applies the deposit and shows the refund or balance due. Each line shows its evidence, its rule and its exposure. | **The account**, with method and recipients |
+| ~Nov 30 | The account is due before December 7. | Builds the account. Holdover rent for six days. A tenant share of each charge, from the company schedule and the evidence. Carpet cleaning only if it was needed to restore move-in condition. Actual cleaning hours. Water at the statutory final-month amount, with its bill attached. Any other utility not yet billed is left off and billed separately when it arrives. Applies the deposit and shows the refund or balance due. Each line shows its evidence, its rule and its exposure. | **The account**, with method and recipients |
 | Dec 1 | The account goes out. | Emails the statement with invoices, work-order hours and a link to the photos. Sends the refund electronically to the designated account. Posts to the ledger. Updates the tenant's page. | — |
 | Dec 3 | **Live moment:** the tenant questions the closet charge on the page. | Answers with the move-in and move-out photos, the invoice and the rule. No decision needed from you. | — |
 | Dec 4 | The tenant either produces a move-in photo of a damaged closet, or threatens small claims. | Brings one recommendation. For new evidence, a correction. For rising stakes, hold or settle at a specific amount, with the likely small-claims result, the cost of appearing and the twice-the-deposit exposure. | **Hold, correct or settle** |
-| Dec 10 | The final utility bill arrives, after day 21. | Completes the utility charge the way the account set out. Where an estimate was used and the bill is at or below it, finishes within 14 days and refunds the difference under the same acceptance. If the bill is above, brings it back to you. | Only if the bill exceeds what was accepted |
+| Dec 10 | The final gas and electric bill arrives, after day 21. | Bills it to the tenant separately as a small balance and decides whether to pursue it on net recovery. Water was already settled on the statement under its own statute. | Only if pursuing the balance needs your decision |
 | By mid-Dec | Closure | Settles any correction or settlement, reconciles the ledger, and sends the tenant a closure confirmation. The account is resolved. The unit was ready once its work passed completion checks; the two outcomes finish independently. | — |
 
 ## 3. The balance-owed variation
@@ -235,7 +235,6 @@ They are compared on charges that are lawful and defensible, deadlines met, reco
 
 ## 7. Open points for Owen
 
-- How unbilled final utilities are handled (see the legal map's utility section): the statutory final-month method for submetered water, plus either separate billing or a contested good-faith estimate for other utilities.
 - Neutral names for the property, owner, manager and tenant.
 - The demo dates above: notice October 12, keys November 16, deadline December 7.
 - Hosting and database provider, needed at first deployment.
