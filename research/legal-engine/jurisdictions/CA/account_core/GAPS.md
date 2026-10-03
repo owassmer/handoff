@@ -50,8 +50,8 @@ CourtListener is blocked. The official courts.ca.gov archive holds only recent o
 - The HCV Administrative Plan (registered as CA-OC:OCHA-ADMIN) and owner notices (CA-OC:OCHA-OWNER) may add owner duties at move-out for the voucher template: HAP for the move-out month, notices, and any damage-claim policy. Not read.
 
 **Currency of the earlier captures**
-- Only a subset of the 166 sections captured on September 30 was re-fetched on October 3; the results are in `currency_recheck_2026-10-03.json`.
-- The full re-check failed on proxy and leginfo throttling. The rest remain "saved September 30".
+- 40 core mapped sections captured on September 30 were re-fetched on October 3. All are unchanged in text (`currency_recheck_2026-10-03.json`). 1950.5 was also confirmed through an alternate route: the page shows the single AB 414 version.
+- The other saved sections were not re-checked; the full sweep failed on leginfo throttling and proxy resets.
 
 ## 2. Needed but absent from the J1 register
 
