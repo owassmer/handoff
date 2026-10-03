@@ -154,7 +154,14 @@ Jev helps compile the trees as well as apply them. Under the section-semantics m
 - If a condition is unresolved: Handoff investigates before recommending, for example by getting the technician's note, closer photos, or the closet's install date.
 - Exposure comes from the consequence branch: a bad-faith claim forfeits the whole deposit and can add up to twice the deposit.
 
-**Observations first, then judgments.** Jev reads text only. Photos are therefore turned into neutral, per-condition observations by the evidence analyst, and Jev judges the legal questions over those observations together with the records. Observation and legal conclusion stay separate records, so a disputed photo can be re-observed without redoing the law. The service calls Jev's HTTP API directly, since its official SDK is Python-only.
+**One judgment layer, more than one provider.** Every semantic question is registered once: its wording, type, required inputs, decision policy and log. The layer sends it to the provider that measures best for that question.
+- Questions over photos go to OpenAI's Decisions API, which is multimodal and in limited preview, once Handoff has access.
+- Text questions go where they measure best, which is Jev today. Jev reads text only, and the service calls its HTTP API directly because its official SDK is Python-only.
+- A frontier vision model answering the same questions is the baseline.
+
+Provider choice per question is a measured decision on labelled sets (accuracy, calibration, cost), not a fixed allegiance.
+
+The evidence analyst's neutral, per-condition observations ("a 6-inch split in the closet door track") stay separate from legal conclusions. The statement, the tenant page and a small-claims judge read them, and text-only judgments use them. A disputed photo can be re-observed without redoing the law.
 
 **How Jev runs at a wake.**
 1. Code checks each question's evidence contract before asking it. Missing inputs become an investigation task, never a question. This guards against Jev answering yes on too little context, a failure seen in testing.
@@ -221,7 +228,7 @@ They are compared on charges that are lawful and defensible, deadlines met, reco
 
 1. The case runtime core: records, inbox, clock, decisions, gateway, adapter interfaces and the imitations.
 2. The agent: the coordinator, its tools and the evidence analyst. Physical work first, so the loop runs end to end.
-3. The legal engine: logic trees for the account decisions from the legal track, the tree evaluator, evidence contracts, the TypeScript Jev client, and labelled sets for each Jev question.
+3. The legal engine: logic trees for the account decisions from the legal track, the tree evaluator, evidence contracts, the provider-neutral judgment layer (Jev and, once available, the Decisions API), and labelled sets for each question.
 4. The account path and the operator decision screens.
 5. The tenant page, the simulated tenant and the email rendering.
 6. Scenarios, staged copies and evaluation, then the model comparison and the demo freeze.
