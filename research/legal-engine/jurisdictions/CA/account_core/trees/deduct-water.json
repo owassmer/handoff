@@ -1,0 +1,169 @@
+{
+  "id": "CA.deduct-water",
+  "title": "May the unpaid final submetered water bill be deducted from the security deposit, and for how much?",
+  "decisionPoint": "DP5.1",
+  "layer": "CA",
+  "effective": {
+    "from": "2026-01-01",
+    "to": null
+  },
+  "inputs": [
+    "tenancy.isDwelling",
+    "deposit",
+    "water.submetersRequiredByStandard",
+    "water.submetersUsedToBill",
+    "water.lastBill",
+    "statement.attachments",
+    "water.adminFeeCapAdjusted"
+  ],
+  "parameters": [
+    {
+      "id": "adminFeeBaseCap",
+      "value": 475,
+      "unit": "cents",
+      "source": {
+        "citation": "Civ 1954.205(a)(3)",
+        "quote": "A billing, administrative, or other fee for the landlord’s and billing agent’s costs, which shall be the lesser of an amount not to exceed four dollars and seventy-five cents ($4.75), as adjusted pursuant to this paragraph or 25 percent of the amount billed pursuant to paragraph (1)."
+      }
+    },
+    {
+      "id": "adminFeeUsageShare",
+      "value": 0.25,
+      "unit": "multiplier",
+      "source": {
+        "citation": "Civ 1954.205(a)(3)",
+        "quote": "A billing, administrative, or other fee for the landlord’s and billing agent’s costs, which shall be the lesser of an amount not to exceed four dollars and seventy-five cents ($4.75), as adjusted pursuant to this paragraph or 25 percent of the amount billed pursuant to paragraph (1)."
+      }
+    }
+  ],
+  "root": {
+    "type": "all",
+    "children": [
+      {
+        "type": "condition",
+        "id": "dwelling-security",
+        "kind": "determinate",
+        "statement": "The deposit secures a rental agreement for residential property used as the tenant's dwelling.",
+        "compute": "tenancy.isDwelling",
+        "source": {
+          "citation": "Civ 1950.5(a)",
+          "quote": "This section applies to security for a rental agreement for residential property that is used as the dwelling of the tenant."
+        }
+      },
+      {
+        "type": "condition",
+        "id": "is-security",
+        "kind": "determinate",
+        "statement": "The money held was imposed at the beginning of the tenancy (or as advance rent) and is not a screening fee under Section 1950.6.",
+        "compute": "(deposit.imposedAtTenancyStart or deposit.isAdvanceRent) and not deposit.isScreeningFee",
+        "source": {
+          "citation": "Civ 1950.5(b)",
+          "quote": "“security” means any payment, fee, deposit, or charge, including, but not limited to, any payment, fee, deposit, or charge, except as provided in Section 1950.6, that is imposed at the beginning of the tenancy to be used to reimburse the landlord for costs associated with processing a new tenant or that is imposed as an advance payment of rent, used or to be used for any purpose"
+        }
+      },
+      {
+        "type": "any",
+        "children": [
+          {
+            "type": "condition",
+            "id": "submeters-required",
+            "kind": "determinate",
+            "statement": "The unit is in a building where submeters were required to be installed under a building standard adopted under Health and Safety Code 17922.14.",
+            "compute": "water.submetersRequiredByStandard",
+            "source": {
+              "citation": "Civ 1954.216(a)(1)",
+              "quote": "All dwelling units offered for rent or rented in a building where submeters were required to be installed pursuant to a building standard adopted in accordance with Section 17922.14 of the Health and Safety Code."
+            }
+          },
+          {
+            "type": "condition",
+            "id": "submeters-used",
+            "kind": "determinate",
+            "statement": "Submeters are used to charge the tenant separately for water service.",
+            "compute": "water.submetersUsedToBill",
+            "source": {
+              "citation": "Civ 1954.216(a)(2)",
+              "quote": "All dwelling units where submeters are used to charge a tenant separately for water service."
+            }
+          }
+        ]
+      },
+      {
+        "type": "condition",
+        "id": "unpaid-water-bill",
+        "kind": "determinate",
+        "statement": "A water service bill to the tenant is unpaid.",
+        "compute": "water.lastBill.totalDue > 0",
+        "source": {
+          "citation": "Civ 1954.207(c)",
+          "quote": "The landlord may, at his or her discretion, deduct an unpaid water service bill from the security deposit during or upon termination of a tenancy"
+        }
+      },
+      {
+        "type": "condition",
+        "id": "final-bill-method",
+        "kind": "determinate",
+        "statement": "The final month's bill was priced from a reading taken within five days of the end of the tenancy or, if no such reading was possible, from the previous month's bill amount.",
+        "compute": "holds(\"CA.water-final-bill\") and water.lastBill.finalMonthBasis in [\"readingWithinFiveDays\", \"previousMonth\"]",
+        "source": {
+          "citation": "Civ 1954.207(b)",
+          "quote": "For a water-service bill at the end of a tenancy, the submeter shall be read within five days, if possible. If the submeter cannot be read within five days at the end of a tenancy, the bill amount for the final month shall be based on the bill amount for the previous month."
+        }
+      },
+      {
+        "type": "condition",
+        "id": "only-allowed-charges",
+        "kind": "determinate",
+        "statement": "The bill charges only volumetric usage, the tenant's share of the purveyor's fixed charges, an administrative fee no higher than the lesser of the CPI-adjusted $4.75 cap or 25 percent of the usage charge, and late charges allowed by Section 1954.213.",
+        "compute": "water.lastBill.chargeTypes in [\"usage\", \"fixedShare\", \"adminFee\", \"lateFee\"] and water.lastBill.adminFee <= min(water.adminFeeCapAdjusted, round(water.lastBill.usage * parameters.adminFeeUsageShare))",
+        "source": {
+          "citation": "Civ 1954.205(a)",
+          "quote": "As part of the regular bill for water service, a landlord shall only bill a tenant for the following water service:"
+        }
+      },
+      {
+        "type": "condition",
+        "id": "no-landlord-penalties",
+        "kind": "determinate",
+        "statement": "The bill does not pass on the landlord's own deposits, disconnection, reconnection or late-payment fees, or penalties assessed against the landlord.",
+        "compute": "not water.lastBill.includesLandlordPenalties",
+        "source": {
+          "citation": "Civ 1954.208",
+          "quote": "a landlord shall not charge, recover, or allow to be charged or recovered, fees incurred by the landlord from the water purveyors, billing agent, or any other person for any deposit, disconnection, reconnection, late payment by the landlord, or any other penalty assessed against the landlord."
+        }
+      },
+      {
+        "type": "condition",
+        "id": "bill-attached",
+        "kind": "determinate",
+        "statement": "The last water service bill showing the amount due is attached to the documentation sent with the itemized statement.",
+        "compute": "water.lastBill.id in statement.attachments",
+        "source": {
+          "citation": "Civ 1954.207(c)",
+          "quote": "if the last water service bill showing the amount due is attached to the documentation required by Section 1950.5."
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "id": "may-deduct-water",
+      "kind": "permission",
+      "when": "holds",
+      "statement": "The landlord may, at its discretion, deduct the amount due on the last water service bill.",
+      "amount": "water.lastBill.totalDue",
+      "source": {
+        "citation": "Civ 1954.207(c)",
+        "quote": "The landlord may, at his or her discretion, deduct an unpaid water service bill from the security deposit during or upon termination of a tenancy, if the last water service bill showing the amount due is attached to the documentation required by Section 1950.5."
+      }
+    },
+    {
+      "id": "must-not-deduct-water",
+      "kind": "prohibition",
+      "when": "fails",
+      "statement": "The water bill may not be deducted on this basis; without an attached final bill it stays off the statement and is billed separately as a balance.",
+      "consequence": "CA.statutory-damages"
+    }
+  ],
+  "contested": []
+}

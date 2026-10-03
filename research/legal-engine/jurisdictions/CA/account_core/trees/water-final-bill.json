@@ -1,0 +1,81 @@
+{
+  "id": "CA.water-final-bill",
+  "title": "How must the final submetered water bill be produced at the end of the tenancy?",
+  "decisionPoint": "PW3.3",
+  "layer": "CA",
+  "effective": {
+    "from": "2026-01-01",
+    "to": null
+  },
+  "inputs": [
+    "water.submetersRequiredByStandard",
+    "water.submetersUsedToBill",
+    "moveOut.vacateDate",
+    "water.finalReadDate",
+    "water.previousMonthBill",
+    "water.finalPeriod"
+  ],
+  "parameters": [
+    {
+      "id": "finalReadDays",
+      "value": 5,
+      "unit": "calendarDays",
+      "source": {
+        "citation": "Civ 1954.207(b)",
+        "quote": "For a water-service bill at the end of a tenancy, the submeter shall be read within five days, if possible."
+      }
+    }
+  ],
+  "root": {
+    "type": "any",
+    "children": [
+      {
+        "type": "condition",
+        "id": "submeters-required",
+        "kind": "determinate",
+        "statement": "The unit is in a building where submeters were required to be installed under a building standard adopted under Health and Safety Code 17922.14.",
+        "compute": "water.submetersRequiredByStandard",
+        "source": {
+          "citation": "Civ 1954.216(a)(1)",
+          "quote": "All dwelling units offered for rent or rented in a building where submeters were required to be installed pursuant to a building standard adopted in accordance with Section 17922.14 of the Health and Safety Code."
+        }
+      },
+      {
+        "type": "condition",
+        "id": "submeters-used",
+        "kind": "determinate",
+        "statement": "Submeters are used to charge the tenant separately for water service.",
+        "compute": "water.submetersUsedToBill",
+        "source": {
+          "citation": "Civ 1954.216(a)(2)",
+          "quote": "All dwelling units where submeters are used to charge a tenant separately for water service."
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "id": "read-within-five-days",
+      "kind": "duty",
+      "when": "holds",
+      "statement": "Read the submeter within five days of the end of the tenancy, if possible, and price the final bill from that reading under Section 1954.205; the anchor used is the day possession was returned.",
+      "due": "moveOut.vacateDate + parameters.finalReadDays",
+      "source": {
+        "citation": "Civ 1954.207(b)",
+        "quote": "For a water-service bill at the end of a tenancy, the submeter shall be read within five days, if possible."
+      }
+    },
+    {
+      "id": "previous-month-basis",
+      "kind": "duty",
+      "when": "holds",
+      "statement": "If the submeter cannot be read within five days, base the final month's bill amount on the previous month's bill amount, prorated by days for a partial final period unless Owen rules otherwise.",
+      "amount": "round(water.previousMonthBill.amount * water.finalPeriod.days / water.previousMonthBill.days)",
+      "source": {
+        "citation": "Civ 1954.207(b)",
+        "quote": "If the submeter cannot be read within five days at the end of a tenancy, the bill amount for the final month shall be based on the bill amount for the previous month."
+      }
+    }
+  ],
+  "contested": []
+}

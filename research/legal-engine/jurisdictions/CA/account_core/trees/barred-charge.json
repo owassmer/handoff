@@ -1,0 +1,93 @@
+{
+  "id": "CA.barred-charge",
+  "title": "Is this charge barred outright, whatever the lease says?",
+  "decisionPoint": "DP5.3",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "line",
+    "lease",
+    "observation.moveIn",
+    "photos.moveIn",
+    "observation.moveOut",
+    "photos.afterPossession",
+    "tenancy.record",
+    "unit.workHistory",
+    "workPlan.scope"
+  ],
+  "parameters": [],
+  "root": {"type": "any", "children": [
+    {"type": "not", "child":
+      {"type": "condition", "id": "not-preexisting", "kind": "semantic",
+       "statement": "The damage or condition did not exist before the tenancy began.",
+       "question": {"type": "yesno",
+         "wording": "Comparing the move-in record and photographs with the move-out observations, was this damage or condition absent at the start of the tenancy?",
+         "inputs": ["line", "observation.moveIn", "photos.moveIn", "observation.moveOut", "unit.workHistory"]},
+       "source": {"citation": "Civ 1950.5(e)(2)(A)", "quote": "The landlord shall not assert a claim against the tenant or the security for damages to the premises or any defective conditions that preexisted the tenancy"}}},
+    {"type": "not", "child": {"type": "all", "children": [
+      {"type": "condition", "id": "cause-not-normal-use", "kind": "semantic",
+       "statement": "The condition resulted from an accident, misuse, abuse or neglect, not from normal use or aging.",
+       "question": {"type": "yesno",
+         "wording": "Does the evidence show that this condition resulted from an accident, misuse, abuse or neglect, rather than from normal everyday use or the aging of the item?",
+         "inputs": ["line", "observation.moveOut", "observation.moveIn", "tenancy.record"],
+         "basis": [{"citation": "DRE, California Tenants (2026) p. 84", "quote": "Normal wear and tear includes simple wearing down of carpet and drapes because of normal use or aging and includes moderate dirt or spotting."}]},
+       "source": {"citation": "Civ 1950.5(e)(2)(A)", "quote": "for ordinary wear and tear or the effects thereof, whether the wear and tear preexisted the tenancy or occurred during the tenancy"}},
+      {"type": "condition", "id": "extent-beyond-wear", "kind": "semantic",
+       "statement": "The condition is more extensive than the deterioration normal use would produce over this tenancy.",
+       "question": {"type": "yesno",
+         "wording": "Is this condition more extensive than the deterioration normal use would cause over a tenancy of this length (for example a large rip, an indelible stain, many holes needing patching, or a large gouge, rather than simple wearing, moderate dirt or spotting, or minor marks or nicks)?",
+         "inputs": ["line", "observation.moveOut", "observation.moveIn", "tenancy.record"],
+         "basis": [
+           {"citation": "DRE, California Tenants (2026) p. 84", "quote": "In contrast, large rips or indelible stains justify a deduction from the tenant’s security deposit for repairing the carpet or drapes or replacing them if that is reasonably necessary."},
+           {"citation": "DRE, California Tenants (2026) p. 85", "quote": "Generally, minor marks or nicks in walls are the landlord’s responsibility as normal wear and tear (for example, worn paint caused by a sofa against the wall)."}]},
+       "source": {"citation": "Civ 1950.5(e)(2)(A)", "quote": "for ordinary wear and tear or the effects thereof, whether the wear and tear preexisted the tenancy or occurred during the tenancy"}}
+    ]}},
+    {"type": "not", "child":
+      {"type": "condition", "id": "not-cumulative-wear", "kind": "semantic",
+       "statement": "The condition is not the accumulated effect of ordinary wear over this or earlier tenancies.",
+       "question": {"type": "yesno",
+         "wording": "Is this condition something other than the accumulated effect of ordinary wear over this and earlier tenancies (such as gradual fading, traffic wear, or build-up from years of use)?",
+         "inputs": ["line", "observation.moveOut", "observation.moveIn", "unit.workHistory"]},
+       "source": {"citation": "Civ 1950.5(e)(2)(A)", "quote": "or for the cumulative effects of ordinary wear and tear occurring during any one or more tenancies."}}},
+    {"type": "condition", "id": "nonrefundable-term", "kind": "determinate",
+     "statement": "The charge rests on a lease term characterizing any security as nonrefundable.",
+     "compute": "line.basis == \"nonrefundableTerm\"",
+     "source": {"citation": "Civ 1950.5(n)", "quote": "A lease or rental agreement shall not contain a provision characterizing any security as “nonrefundable.”"}},
+    {"type": "all", "children": [
+      {"type": "condition", "id": "professional-cleaning-line", "kind": "determinate",
+       "statement": "The charge is for professional carpet cleaning or another professional cleaning service.",
+       "compute": "line.isProfessionalCleaning",
+       "source": {"citation": "Civ 1950.5(e)(2)(C)", "quote": "The landlord shall not require a tenant to pay for, or assert a claim against the tenant or the security for, professional carpet cleaning or other professional cleaning services"}},
+      {"type": "not", "child":
+        {"type": "condition", "id": "professional-cleaning-necessary", "kind": "semantic",
+         "statement": "Professional cleaning was reasonably necessary to return the premises to their condition at the inception of the tenancy, exclusive of ordinary wear and tear.",
+         "question": {"type": "yesno",
+           "wording": "Was professional cleaning (for example carpet extraction by a vendor) reasonably necessary to return this area to its move-in condition, because ordinary cleaning would not have removed soiling the tenant caused beyond ordinary wear?",
+           "inputs": ["line", "observation.moveIn", "photos.moveIn", "observation.moveOut", "photos.afterPossession"]},
+         "source": {"citation": "Civ 1950.5(e)(2)(C)", "quote": "unless reasonably necessary to return the premises to the condition it was in at the inception of tenancy, exclusive of ordinary wear and tear."}}}
+    ]},
+    {"type": "not", "child":
+      {"type": "condition", "id": "restores-not-improves", "kind": "semantic",
+       "statement": "The work restores the premises to their condition at the start of the tenancy and does not improve them.",
+       "question": {"type": "yesno",
+         "wording": "Does the work charged restore this item to its condition at the start of the tenancy, without upgrading it (for example a better material, a larger scope, or a replacement where a repair would restore it)?",
+         "inputs": ["line", "workPlan.scope", "observation.moveIn", "photos.moveIn"],
+         "basis": [{"citation": "AB 2801 (Stats. 2024, ch. 280) §1", "quote": "It is the intent of the Legislature, in enacting this measure, to ensure that landlords do not subsidize improvements to their rental properties with a former tenant’s security deposit."}]},
+       "source": {"citation": "Civ 1950.5(e)(2)(B)", "quote": "shall be limited to a reasonable amount necessary to restore the premises back to the condition it was in at the inception of the tenancy, exclusive of ordinary wear and tear."}}},
+    {"type": "condition", "id": "notice-fee-1161", "kind": "determinate",
+     "statement": "The charge is a fee for serving, posting or delivering a notice under Code of Civil Procedure section 1161.",
+     "compute": "line.purpose == \"noticeFee\" and line.noticeType == \"CCP 1161\"",
+     "source": {"citation": "CCP 1161(6)", "quote": "A landlord or its agent shall not charge a tenant a fee for serving, posting, or otherwise delivering any notice, as described in this section."}},
+    {"type": "condition", "id": "notice-fee-1946", "kind": "determinate",
+     "statement": "The charge is a fee for serving, posting or delivering a notice to terminate under Civil Code section 1946.",
+     "compute": "line.purpose == \"noticeFee\" and line.noticeType == \"Civ 1946\"",
+     "source": {"citation": "Civ 1946(b)", "quote": "A landlord or its agent shall not charge a tenant a fee for serving, posting, or otherwise delivering any notice, as described in this section."}}
+  ]},
+  "effects": [
+    {"id": "barred", "kind": "prohibition", "when": "holds",
+     "statement": "The charge, or the part of it that improves on the move-in condition, may not be claimed against the tenant or the security.",
+     "consequence": "CA.statutory-damages",
+     "source": {"citation": "Civ 1950.5(e)(2)(A)", "quote": "The landlord shall not assert a claim against the tenant or the security for damages to the premises or any defective conditions that preexisted the tenancy, for ordinary wear and tear or the effects thereof, whether the wear and tear preexisted the tenancy or occurred during the tenancy, or for the cumulative effects of ordinary wear and tear occurring during any one or more tenancies."}}
+  ],
+  "contested": []
+}

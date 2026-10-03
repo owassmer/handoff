@@ -1,0 +1,63 @@
+{
+  "id": "CA.holdover-charge",
+  "title": "May the landlord charge for days the tenant stays after the tenancy ends, and how much?",
+  "decisionPoint": "DP3.5",
+  "layer": "CA",
+  "effective": {"from": "2026-01-01", "to": null},
+  "inputs": [
+    "tenancy.endDate",
+    "moveOut.vacateDate",
+    "landlord.holdoverPermission",
+    "udAction",
+    "lease.holdoverClause",
+    "schedule",
+    "market.rentalValue",
+    "lease.monthlyRent",
+    "tenancy.record"
+  ],
+  "parameters": [],
+  "root": {"type": "all", "children": [
+    {"type": "condition", "id": "stayed-after-end", "kind": "determinate",
+     "statement": "The tenant remained in possession after the tenancy ended.",
+     "compute": "moveOut.vacateDate > tenancy.endDate",
+     "source": {"citation": "CCP 1161(1)", "quote": "When the tenant continues in possession, in person or by subtenant, of the property, or any part thereof, after the expiration of the term for which it is let to the tenant"}},
+    {"type": "condition", "id": "without-permission", "kind": "determinate",
+     "statement": "The landlord did not permit the tenant to stay after the tenancy ended.",
+     "compute": "not landlord.holdoverPermission.given",
+     "source": {"citation": "CCP 1161(5)", "quote": "When the tenant gives written notice as provided in Section 1946 of the Civil Code of the tenant’s intention to terminate the hiring of the real property, or makes a written offer to surrender which is accepted in writing by the landlord, but fails to deliver possession at the time specified in that written notice, without the permission of the landlord"}},
+    {"type": "condition", "id": "no-unlawful-detainer", "kind": "determinate",
+     "statement": "No unlawful detainer action governs the damages for the holdover.",
+     "compute": "not udAction.filed",
+     "source": {"citation": "Civ 3334(a)", "quote": "The detriment caused by the wrongful occupation of real property, in cases not embraced in Section 3335 of this code, the Eminent Domain Law (Title 7 (commencing with Section 1230.010) of Part 3 of the Code of Civil Procedure), or Section 1174 of the Code of Civil Procedure, is deemed to include the value of the use of the property for the time of that wrongful occupation"}},
+    {"type": "any", "children": [
+      {"type": "condition", "id": "rate-within-rental-value", "kind": "semantic",
+       "statement": "The daily holdover rate charged is no more than the unit's reasonable rental value per day.",
+       "question": {"type": "yesno",
+         "wording": "Is the daily holdover rate charged no more than the unit's reasonable rental value per day, judged from the contract rent and current rents for comparable units in the community?",
+         "inputs": ["schedule", "lease.monthlyRent", "market.rentalValue"]},
+       "source": {"citation": "Civ 3334(b)(1)", "quote": "the value of the use of the property shall be the greater of the reasonable rental value of that property or the benefits obtained by the person wrongfully occupying the property by reason of that wrongful occupation."}},
+      {"type": "all", "children": [
+        {"type": "condition", "id": "lease-fixes-holdover-rate", "kind": "determinate",
+         "statement": "The lease fixes in advance a holdover amount as liquidated damages for staying past the end, so its validity is tested under subdivision (d).",
+         "compute": "lease.holdoverClause.fixesRate",
+         "source": {"citation": "Civ 1671(c)", "quote": "The validity of a liquidated damages provision shall be determined under subdivision (d) and not under subdivision (b) where the liquidated damages are sought to be recovered from either:"}},
+        {"type": "condition", "id": "actual-damage-impracticable", "kind": "semantic",
+         "statement": "From the nature of the case it would have been impracticable or extremely difficult to fix the actual damage from a holdover, so the lease amount is presumed to be the damage.",
+         "question": {"type": "yesno",
+           "wording": "When the lease was signed, would it have been impracticable or extremely difficult to fix the landlord's actual damage from a tenant staying past the end of the lease (for example because a new tenant's move-in, relocation costs and lost rent could not be estimated), so that agreeing a fixed holdover amount was reasonable?",
+           "inputs": ["lease.holdoverClause", "tenancy.record"]},
+         "source": {"citation": "Civ 1671(d)", "quote": "a provision in a contract liquidating damages for the breach of the contract is void except that the parties to such a contract may agree therein upon an amount which shall be presumed to be the amount of damage sustained by a breach thereof, when, from the nature of the case, it would be impracticable or extremely difficult to fix the actual damage."}}
+      ]}
+    ]}
+  ]},
+  "effects": [
+    {"id": "may-charge-holdover", "kind": "permission", "when": "holds",
+     "statement": "The landlord may charge the value of the use of the unit for each day from the end of the tenancy through the day possession is returned, at the company schedule's daily holdover rate.",
+     "amount": "days(tenancy.endDate, moveOut.vacateDate) * schedule.holdoverDailyRate",
+     "source": {"citation": "Civ 3334(a)", "quote": "is deemed to include the value of the use of the property for the time of that wrongful occupation"}},
+    {"id": "no-holdover-charge-on-this-basis", "kind": "prohibition", "when": "fails",
+     "statement": "No holdover charge may be made at this rate on this basis: either there was no holdover, the landlord permitted the stay (charge only what was agreed), an unlawful detainer court assesses the damages, or the rate exceeds the reasonable rental value without a valid liquidated-damages clause.",
+     "consequence": "CA.statutory-damages"}
+  ],
+  "contested": []
+}

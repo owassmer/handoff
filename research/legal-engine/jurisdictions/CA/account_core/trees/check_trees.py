@@ -20,16 +20,21 @@ CA = HERE.parent.parent                       # research/legal-engine/jurisdicti
 LE = CA.parent.parent                         # research/legal-engine
 SECTIONS = CA / "sections.jsonl"
 
-CODES = {"Civ": "CA_CIV", "CCP": "CA_CCP", "Gov": "CA_GOV"}
-CODE_CITE = re.compile(r"^(Civ|CCP|Gov) (\d+(?:\.\d+)*[a-z]?)((?:\([0-9A-Za-z]+\))*)$")
+CODES = {"Civ": "CA_CIV", "CCP": "CA_CCP", "Gov": "CA_GOV", "PUC": "CA_PUC"}
+CODE_CITE = re.compile(r"^(Civ|CCP|Gov|PUC) (\d+(?:\.\d+)*[a-z]?)((?:\([0-9A-Za-z]+\))*)$")
 
 # Named sources other than code sections: citation prefix -> (file, class).
 # Classes: statute (official leginfo code text), bill (official leginfo bill text), guidance (official agency
-# guidance, not law), mirror (case text from an unofficial mirror).
+# guidance, not law), mirror (case text from an unofficial mirror), court (official court text, e.g. GovInfo),
+# leghist (official legislative committee analysis, not law).
 NAMED = [
     ("AB 2801", LE / "j1/lanes/enactments/sources/202320240AB2801.txt", "bill"),
     ("Granberry v. Islay Investments", CA / "account_core/sources/CASE_Granberry_v_Islay_1995_mirror.txt", "mirror"),
     ("DRE, California Tenants", CA / "account_core/sources/DRE_2026_Landlord_Tenant_Guide.txt", "guidance"),
+    # Captured by the authorities agent (account_core/authorities/, its ownership); cited only once committed.
+    ("Brooks v. Greystar", CA / "account_core/authorities/FED_Brooks_v_Greystar_SDCal_2025-08-07_ECF56.txt", "court"),
+    ("Senate Judiciary Committee, analysis of AB 2801",
+     CA / "account_core/authorities/LEGHIST_AB2801_SJUD_analysis_2024-06-11.txt", "leghist"),
 ]
 
 LAYERS = {"US", "CA", "CA-OC", "CA-HB"}
@@ -42,8 +47,8 @@ FUNCS = {"min", "max", "sum", "round", "days", "count", "len", "exists", "holds"
 WORDS = {"and", "or", "not", "in", "true", "false", "null", "if", "else"}
 DP = re.compile(r"^(DP\d+(\.\d+)?|PW\d+(\.\d+)?)$")
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
-NUMBER_TEXT = {14: ["two weeks", "14"], 2: ["twice", "two"], 48: ["48"], 21: ["21"], 60: ["60"], 5: ["five"],
-               30: ["30"], 15: ["15"], 18: ["18"], 12500: ["$125"], 600: ["$600"]}
+NUMBER_TEXT = {14: ["two weeks", "14"], 2: ["twice", "two"], 48: ["48"], 21: ["21"], 60: ["60"], 5: ["five"], 7: ["seven"],
+               30: ["30"], 15: ["15"], 18: ["18"]}
 
 
 def norm(s: str) -> str:
@@ -341,8 +346,12 @@ def check_tree(path: pathlib.Path, errors, all_ids):
         src = p.get("source") or {}
         check_quote(src.get("citation", ""), src.get("quote"), {"statute"}, pw, errors)
         v = p.get("value")
-        if isinstance(v, int) and src.get("quote"):
-            texts = NUMBER_TEXT.get(v, [str(v)])
+        if isinstance(v, (int, float)) and not isinstance(v, bool) and src.get("quote"):
+            texts = list(NUMBER_TEXT.get(v, [str(v)]))
+            if p.get("unit") == "cents":
+                texts += [f"${v / 100:.2f}", f"${v // 100}" if v % 100 == 0 else f"${v / 100:.2f}"]
+            if p.get("unit") == "multiplier" and isinstance(v, float):
+                texts += [f"{round(v * 100):g} percent"]
             if not any(t in norm(src["quote"]) for t in texts):
                 errors.append(f"{pw}: value {v} not stated in its quote")
         elif isinstance(v, str) and DATE.match(v) and src.get("quote"):
@@ -401,7 +410,7 @@ def check_tree(path: pathlib.Path, errors, all_ids):
             for a, au in enumerate(b.get("authority", [])):
                 if set(au) != {"citation", "quote"}:
                     errors.append(f"{bw}.authority[{a}]: must be {{citation, quote}}")
-                check_quote(au.get("citation", ""), au.get("quote"), {"statute", "bill", "mirror", "guidance"},
+                check_quote(au.get("citation", ""), au.get("quote"), {"statute", "bill", "mirror", "guidance", "court", "leghist"},
                             f"{bw}.authority[{a}]", errors)
             ef = b.get("effect") or {}
             if not isinstance(ef.get("statement"), str) or set(ef) - {"statement", "sets"}:

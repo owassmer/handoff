@@ -1,0 +1,214 @@
+{
+  "id": "CA.deduct-other-charge",
+  "title": "May a lease charge outside the four listed purposes (a utility other than submetered water already billed to the tenant, or a lawful lease fee) be deducted from the security deposit?",
+  "decisionPoint": "DP5.2",
+  "layer": "CA",
+  "effective": {
+    "from": "2026-01-01",
+    "to": null
+  },
+  "inputs": [
+    "tenancy.isDwelling",
+    "deposit",
+    "line",
+    "lease",
+    "utility.tariff",
+    "tenancy.record"
+  ],
+  "parameters": [],
+  "root": {
+    "type": "all",
+    "children": [
+      {
+        "type": "condition",
+        "id": "dwelling-security",
+        "kind": "determinate",
+        "statement": "The deposit secures a rental agreement for residential property used as the tenant's dwelling.",
+        "compute": "tenancy.isDwelling",
+        "source": {
+          "citation": "Civ 1950.5(a)",
+          "quote": "This section applies to security for a rental agreement for residential property that is used as the dwelling of the tenant."
+        }
+      },
+      {
+        "type": "condition",
+        "id": "is-security",
+        "kind": "determinate",
+        "statement": "The money held was imposed at the beginning of the tenancy (or as advance rent) and is not a screening fee under Section 1950.6.",
+        "compute": "(deposit.imposedAtTenancyStart or deposit.isAdvanceRent) and not deposit.isScreeningFee",
+        "source": {
+          "citation": "Civ 1950.5(b)",
+          "quote": "“security” means any payment, fee, deposit, or charge, including, but not limited to, any payment, fee, deposit, or charge, except as provided in Section 1950.6, that is imposed at the beginning of the tenancy to be used to reimburse the landlord for costs associated with processing a new tenant or that is imposed as an advance payment of rent, used or to be used for any purpose"
+        }
+      },
+      {
+        "type": "condition",
+        "id": "amount-owed-and-fixed",
+        "kind": "determinate",
+        "statement": "The charge is owed under the lease and has been billed to the tenant in a fixed amount before the statement.",
+        "compute": "line.owedUnderLease and exists(line.billedAmount)",
+        "source": {
+          "citation": "Civ 1950.5(e)(1)",
+          "quote": "the landlord may claim of the security only those amounts as are reasonably necessary for the purposes specified in subdivision (b)."
+        }
+      },
+      {
+        "type": "condition",
+        "id": "not-barred",
+        "kind": "determinate",
+        "statement": "The charge is not barred outright.",
+        "compute": "not holds(\"CA.barred-charge\")",
+        "source": {
+          "citation": "Civ 1950.5(e)(2)(A)",
+          "quote": "The landlord shall not assert a claim against the tenant or the security for damages to the premises or any defective conditions that preexisted the tenancy, for ordinary wear and tear or the effects thereof"
+        }
+      },
+      {
+        "type": "any",
+        "children": [
+          {
+            "type": "condition",
+            "id": "not-master-metered-energy",
+            "kind": "determinate",
+            "statement": "The charge is not for gas or electricity the landlord supplies through a master meter.",
+            "compute": "line.purpose != \"masterMeteredEnergy\"",
+            "source": {
+              "citation": "PUC 739.5(a)",
+              "quote": "whenever gas or electrical service, or both, is provided by a master-meter customer to users who are tenants of a mobilehome park, apartment building, or similar residential complex"
+            }
+          },
+          {
+            "type": "condition",
+            "id": "energy-at-direct-rate",
+            "kind": "determinate",
+            "statement": "The gas or electricity charge does not exceed what the utility would charge the tenant directly for the same usage.",
+            "compute": "line.billedAmount <= utility.tariff.directCharge(line.usage)",
+            "source": {
+              "citation": "PUC 739.5(a)",
+              "quote": "the master-meter customer shall charge each user of the service at the same rate that would be applicable if the user were receiving gas or electricity, or both, directly from the gas corporation or load-serving entity"
+            }
+          }
+        ]
+      },
+      {
+        "type": "any",
+        "children": [
+          {
+            "type": "condition",
+            "id": "not-fixed-sum-for-breach",
+            "kind": "determinate",
+            "statement": "The charge is not a sum fixed in the lease as damages for a breach (such as a late fee or a lease-break fee).",
+            "compute": "not line.isLiquidatedDamages",
+            "source": {
+              "citation": "Civ 1671(c)",
+              "quote": "The validity of a liquidated damages provision shall be determined under subdivision (d) and not under subdivision (b) where the liquidated damages are sought to be recovered from either:"
+            }
+          },
+          {
+            "type": "condition",
+            "id": "fixed-sum-valid",
+            "kind": "semantic",
+            "statement": "From the nature of the case it would have been impracticable or extremely difficult to fix the actual damage from the breach, so the lease sum is presumed to be the damage.",
+            "question": {
+              "type": "yesno",
+              "wording": "When the lease was signed, would it have been impracticable or extremely difficult to fix the landlord's actual damage from this breach (for example the cost of handling a late payment), so that a fixed amount agreed in advance is a reasonable estimate of it?",
+              "inputs": [
+                "line",
+                "lease",
+                "tenancy.record"
+              ]
+            },
+            "source": {
+              "citation": "Civ 1671(d)",
+              "quote": "a provision in a contract liquidating damages for the breach of the contract is void except that the parties to such a contract may agree therein upon an amount which shall be presumed to be the amount of damage sustained by a breach thereof, when, from the nature of the case, it would be impracticable or extremely difficult to fix the actual damage."
+            }
+          }
+        ]
+      },
+      {
+        "type": "condition",
+        "id": "any-purpose-reaches-charge",
+        "kind": "discretionary",
+        "statement": "The security may be applied to this lease debt as a purpose within the open-ended list of subdivision (b).",
+        "decision": {
+          "by": "operator",
+          "what": "Whether to deduct a lease debt outside the four listed purposes, accepting the exposure on the narrower reading of subdivision (b)."
+        },
+        "contested": "C6",
+        "source": {
+          "citation": "Civ 1950.5(b)",
+          "quote": "used or to be used for any purpose, including, but not limited to, any of the following:"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "id": "may-deduct-charge",
+      "kind": "permission",
+      "when": "holds",
+      "statement": "The charge may be deducted at the billed amount.",
+      "amount": "line.billedAmount",
+      "source": {
+        "citation": "Civ 1950.5(e)(1)",
+        "quote": "the landlord may claim of the security only those amounts as are reasonably necessary for the purposes specified in subdivision (b)."
+      }
+    },
+    {
+      "id": "bill-charge-separately",
+      "kind": "prohibition",
+      "when": "fails",
+      "statement": "The charge may not be taken from the security on this basis; if it is otherwise owed it is billed separately as a balance.",
+      "consequence": "CA.statutory-damages"
+    }
+  ],
+  "contested": [
+    {
+      "issue": "C6",
+      "question": "May the security be applied to a lease debt outside the four listed purposes, such as a utility other than submetered water or a lease fee?",
+      "branches": [
+        {
+          "id": "A",
+          "reading": "Yes. Subdivision (b) defines security as money used for any purpose, and its four paragraphs are examples; subdivision (e)(1) limits the amount to what is reasonably necessary. Brooks v. Greystar (S.D. Cal. Aug. 7, 2025; nonbinding, pleading stage) held utility charges may be claimed from security deposits on this reading.",
+          "authority": [
+            {
+              "citation": "Civ 1950.5(b)",
+              "quote": "used or to be used for any purpose, including, but not limited to, any of the following:"
+            },
+            {
+              "citation": "Brooks v. Greystar, No. 3:23-cv-01729, ECF 56 (S.D. Cal. Aug. 7, 2025) p. 14",
+              "quote": "deposits to be used “for any purpose.” Subsection (b) provides four examples of"
+            },
+            {
+              "citation": "Brooks v. Greystar, No. 3:23-cv-01729, ECF 56 (S.D. Cal. Aug. 7, 2025) p. 14",
+              "quote": "Therefore, utility charges may be claimed from security"
+            }
+          ],
+          "effect": {
+            "statement": "A billed utility or valid lease fee may be deducted.",
+            "sets": {
+              "any-purpose-reaches-charge": true
+            }
+          }
+        },
+        {
+          "id": "B",
+          "reading": "No. Subdivision (e)(1) limits claims to amounts reasonably necessary \"for the purposes specified in subdivision (b)\", read as the four enumerated purposes. This was the Brooks plaintiffs' argument; no appellate decision has tested it.",
+          "authority": [
+            {
+              "citation": "Civ 1950.5(e)(1)",
+              "quote": "the landlord may claim of the security only those amounts as are reasonably necessary for the purposes specified in subdivision (b)."
+            }
+          ],
+          "effect": {
+            "statement": "The charge is billed separately and not taken from the security.",
+            "sets": {
+              "any-purpose-reaches-charge": false
+            }
+          }
+        }
+      ],
+      "exposureBranch": "B"
+    }
+  ]
+}
