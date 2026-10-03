@@ -102,7 +102,7 @@ These are the facts that switch branches below:
 **DP1.4 Fees disclosed or barred at signing (they carry into the move-out account)**
 - Barred outright (T):
   - a fee for paying rent or deposit by check (1947.3(b));
-  - a fee for serving, posting or delivering any notice under CCP 1161 (1161(6); SB 611, operative Feb 1, 2025);
+  - a fee for serving, posting or delivering any notice under CCP 1161 (1161(6); SB 611, operative Feb 1, 2025), or any 30- or 60-day notice under Civ 1946 (1946(b); SB 611, effective Jan 1, 2025; added Oct 3, 2026);
   - any "nonrefundable" security (1950.5(n));
   - any lease clause requiring professional cleaning, unless reasonably necessary (1950.5(e)(2)(C));
   - lease waivers of 1950.5 or 1954 rights, which are void (1953(a)(1)).
@@ -188,7 +188,7 @@ The 21-day clock runs from when "the tenant has vacated the premises" ((h)(1)) (
 ## DP3 How the tenancy ends and when rent stops
 
 **DP3.1 End of a fixed term**
-- 1945 (T): if rent is accepted after the term expires, a renewal is presumed — month to month where rent is monthly.
+- 1945 (T): if the tenant remains in possession after the term expires and the landlord accepts rent, a renewal is presumed — month to month where rent is monthly. Accepting rent after the tenant has left does not renew. (Corrected Oct 3, 2026, from the tree review.)
 - 1945.5 (T): an automatic-renewal clause is voidable unless printed in at least 8-point bold in the body, with a bold recital just above the signature.
 - 1946.2 limits owner-initiated endings only.
 - Code: the lease end, the vacate date, and the dates rent was accepted.
@@ -217,8 +217,8 @@ The 21-day clock runs from when "the tenant has vacated the premises" ((h)(1)) (
 - No California age or disability early-termination right was identified (I).
 
 **DP3.5 Holdover**
-- 1945 (renewal if rent is accepted).
-- 3334 (T): the value of use during wrongful occupation, measured as the greater of reasonable rental value or the benefit to the occupier ((b)(1)), plus restoration and recovery costs. 3334 does not apply where CCP 1174 governs.
+- 1945 (renewal if the tenant stays on and rent is accepted).
+- 3334 (T): the value of use during wrongful occupation, measured as the greater of reasonable rental value or the benefit to the occupier ((b)(1)), or reasonable rental value alone where the occupation results from a mistake of fact ((b)(2)), plus restoration and recovery costs. 3334 does not apply where CCP 1174 governs.
 - CCP 1174(b) (T): unlawful-detainer damages, plus up to $600 statutory damages for malice.
 - 1671(d): any holdover premium (for example, 150% rent) faces the penalty test.
 - 1935: pro rata.
@@ -335,7 +335,7 @@ A Judgment over the evidence: keys, belongings, written surrender, notice end da
   - the nominal day 21;
   - the extended date under Civ 10/11 (Gov Code holidays);
   - the extended date under CCP 12a (Saturdays and judicial holidays).
-- The two holiday calendars differ. CCP 135 (T; AB 268, effective Jan 1, 2026) makes every Gov 6700 holiday a judicial holiday except Lunar New Year, Diwali, Apr 24 (Genocide Remembrance Day), Admission Day, Columbus Day and days appointed by the Governor. It adds every Saturday and the day after Thanksgiving. So Gov Code holidays that fall outside CCP 135 extend under Civ 10/11 only, and Saturdays extend under CCP 12a only.
+- The two holiday calendars differ. CCP 135 (T; AB 268, effective Jan 1, 2026) makes every Gov 6700 holiday a judicial holiday except Lunar New Year, Diwali, Apr 24 (Genocide Remembrance Day), Admission Day, Columbus Day and any day appointed by the President but not by the Governor. (Corrected Oct 3, 2026: a day the Governor appoints remains a judicial holiday.) It adds every Saturday and the day after Thanksgiving. So Gov Code holidays that fall outside CCP 135 extend under Civ 10/11 only, and Saturdays extend under CCP 12a only.
 - AB 2156 is already in force. AB 2017, AB 2294 and SB 1394 change GOV 6700 from (presumably) Jan 1, 2027: two Eid days, Apr 14 Sylvia Mendez Day, and Mar 31 naming. None of the new days is a CCP 135 judicial holiday (see the effective-date table).
 - Recommended operating date: the nominal day 21.
 
@@ -599,7 +599,7 @@ ALL of the following:
    - the (g)(2) before-work set exists, ONLY IF possession returned on or after Apr 1, 2025 [D];
    - a post-work set exists [D];
    - a move-in set exists, ONLY IF the tenancy began on or after Jul 1, 2025 [D].
-8. **Documents (h)(2)(A)–(C)** — UNLESS (h)(4) applies [D]: repair and cleaning total ≤ $125, OR a valid waiver (the timing [D] and whether it substantially includes the text of (h)(2) [S]). A tenant request under (h)(5) revives the duty [D].
+8. **Documents (h)(2)(A)–(C)** — corrected Oct 3, 2026: (h)(2) makes these a duty attached to the deduction ("shall also include"), not a condition of it; a failure forfeits the security only if in bad faith ((h)(7)), and a good-faith failure leaves setoff available (*Granberry*). The duty applies UNLESS (h)(4) applies [D]: repair and cleaning total ≤ $125, OR a valid waiver (the timing [D] and whether it substantially includes the text of (h)(2) [S]). A tenant request under (h)(5) revives the duty [D].
 
 ### 1950.5(g) photograph duties
 - **G1:** IF the tenancy begins on or after Jul 1, 2025 → photographs "immediately before, or at the inception of" the tenancy [D: timestamp ≤ the move-in date].
@@ -617,7 +617,7 @@ ALL of the following:
 - **H5 statement route.** Personal delivery or first-class mail; OR email or a provided address, ONLY IF mutually agreed [D].
 - **H6 address.** The tenant-provided address, ELSE the vacated unit [D].
 - **H7 documents.** As in item 8 above.
-- **H8 estimate.** ANY of: an in-house repair cannot reasonably be completed by day 21 [S]; vendor documents are not in hand by day 21 [D]. → Deduct a good-faith estimate [S] and include the vendor's name, address and phone if documents are missing [D]. Within 14 days of completion or receipt, complete the statement and documents [D].
+- **H8 estimate.** ANY of: an in-house repair cannot reasonably be completed by day 21 [S]; documents from anyone providing services, materials or supplies (including materials for in-house work) are not in hand by day 21 [D]. → Deduct a good-faith estimate [S] and include the vendor's name, address and phone if documents are missing [D]. Within 14 days of completion or receipt, complete the statement and documents [D].
 - **Effects.**
   - Compliance → the landlord keeps the itemized amounts.
   - Noncompliance AND bad faith [S] → no amount of the security may be claimed ((h)(7)), and exposure under (m).
@@ -636,6 +636,7 @@ ALL of the following:
   - The "water service bill" is the landlord's or billing agent's bill to the tenant under 1954.205 and 1954.206. It is not the purveyor's master bill (I from 1954.202 and 1954.206).
   - 1954.205(a)(1)(A) prices the tenant's usage as a share of the purveyor's bill for the period. The (B) and (C) methods use the purveyor's rate schedule instead.
   - 1954.212: if a reading is unavailable and the tenant gave access, the charge is 75% of the average of the last three months. Water charges are not rent (1954.213(d)).
+  - 1954.212 and 1954.207(b) conflict for the final month. The trees follow 1954.207(b), which is specific to the end of a tenancy. (Added Oct 3, 2026.)
 - **1950.5(h)(3)** (T): a good-faith estimate is allowed "if the documents from a person or entity providing services, materials, or supplies are not in the landlord's possession within 21 calendar days". The sentence sits inside a subdivision whose paragraph (2) concerns documents "to repair or clean".
 - **Ratio billing (RUBS), gas and electric:** no billing statute was read for RUBS. Chapter 2.5 expressly takes no position on it (1954.216(c)). The charge is contractual under the lease. 1940.9 (T) governs shared gas and electric meters. PUC 739.5(a) (T) limits submetered gas or electric charges to the utility's direct rate. The timing of the final gas or electric bill follows the master-meter billing cycle, which no statute addresses (I).
 

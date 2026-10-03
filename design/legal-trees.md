@@ -49,6 +49,19 @@ Unknown is never treated as false. An unknown that changes the outcome becomes a
 
 The evaluator reports every branch. Exposure is computed on the branch least favorable to the operator (`exposureBranch`). The agent explains the disagreement, and the operator decides where a choice is needed.
 
+## Additions adopted from the first compilation
+
+Adopted October 3, 2026, from the California account-core trees. The checker enforces them, and the evaluator ignores any optional field it does not use.
+
+- **Branch effects.** Each contested branch has an `id` and an `effect: {statement, sets: {leafId: true | false}}`, so the evaluator can run the tree under every branch.
+- **Contested leaves.** A leaf that a contested point decides carries `contested: "C6"`.
+- **Discretionary leaves** carry `decision: {by: "agent" | "operator", what}`.
+- **Question basis.** A semantic question may carry `basis: [{citation, quote}]`: guidance behind a factor, such as the DRE guide or a bill's stated intent. It is checked verbatim like any source.
+- **Effect fields.** An effect may carry a checked `source`. It may also carry `margin` and `notBefore` date formulas: the latest lawful date where an extension applies, and the earliest permitted date.
+- **Cross-tree references.** Formulas may use `holds("CA.tree")` and `amount("CA.tree", "effect-id")`.
+- **Parameter units.** In addition to `calendarDays` and `cents`: `hours`, `date` and `multiplier`.
+- **Citations.** These follow the forms `Civ 1950.5(h)(2)`, `CCP 1161`, `Gov …` and `PUC …`, or a named source the checker maps to its saved text, such as a case mirror, a bill analysis or the DRE guide.
+
 ## Example (abridged): may the closet repair be deducted?
 
 ```json
