@@ -10,6 +10,7 @@ export type RequestFinalBillsRequest = z.infer<typeof RequestFinalBillsRequest>;
 export function requestFinalBills(biller: UtilityBiller): ActionSpec<RequestFinalBillsRequest> {
   return {
     kind: "utility.request_final_bills",
+    description: "Ask the utility billing agent for the final meter reads and bills for this move-out. Routine.",
     request: RequestFinalBillsRequest,
     key: (_req, caseId) => `${caseId}`,
     authorize: async () => ({ basis: "routine", why: "every move-out needs its final utility reads; the request commits no money" }),

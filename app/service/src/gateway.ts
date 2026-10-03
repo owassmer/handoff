@@ -27,6 +27,8 @@ export type Outcome =
 
 export interface ActionSpec<Req> {
   kind: string;
+  /** What the action does and what authorizes it, in plain words. The agent reads this as the tool's description. */
+  description: string;
   request: z.ZodType<Req>;
   /** Derived from the request, so the same intended effect always carries the same key. */
   key(req: Req, caseId: string | null): string;
@@ -159,6 +161,11 @@ export class Gateway {
 
   kinds(): string[] {
     return [...this.specs.keys()];
+  }
+
+  /** The actions on offer, for building the agent's tools. */
+  catalog(): Array<{ kind: string; description: string; request: z.ZodType<unknown> }> {
+    return [...this.specs.values()].map((s) => ({ kind: s.kind, description: s.description, request: s.request }));
   }
 
   /**

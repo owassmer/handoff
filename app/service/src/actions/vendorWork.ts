@@ -20,6 +20,7 @@ export type RequestQuoteRequest = z.infer<typeof RequestQuoteRequest>;
 export function requestQuote(vendors: Vendors): ActionSpec<RequestQuoteRequest> {
   return {
     kind: "vendor.request_quote",
+    description: "Ask a vendor for a quote on a scope of work. Commits no money, so it needs no decision.",
     request: RequestQuoteRequest,
     key: (req, caseId) => `${caseId}:${req.key}`,
     authorize: async () => ({ basis: "routine", why: "a quote request commits no money" }),
@@ -47,6 +48,7 @@ export type PlaceVendorOrderRequest = z.infer<typeof PlaceVendorOrderRequest>;
 export function placeVendorOrder(vendors: Vendors): ActionSpec<PlaceVendorOrderRequest> {
   return {
     kind: "vendor.place_order",
+    description: "Order vendor work the accepted work plan gives to that vendor, with the scope exactly as planned and a not-to-exceed amount within its budget.",
     request: PlaceVendorOrderRequest,
     key: (req) => `${req.decisionId}:${req.workItemId}`,
     authorize: byDecision(["work.plan"], (req) => req.decisionId, (content, req) => {

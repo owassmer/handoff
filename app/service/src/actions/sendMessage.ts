@@ -24,6 +24,7 @@ const MESSAGE_DECISIONS = ["account.statement", "message.approval"];
 export function sendMessage(mail: Mail): ActionSpec<SendMessageRequest> {
   return {
     kind: "message.send",
+    description: "Email a party to the tenancy at the address on record. Allowed for a message whose exact wording an operator accepted in a decision (give decisionId), or for a routine purpose the standing instruction lists (give purpose). Sending again under the same key does nothing.",
     request: SendMessageRequest,
     key: (req, caseId) => `${caseId ?? "company"}:${req.key}`,
     authorize: eitherOf(

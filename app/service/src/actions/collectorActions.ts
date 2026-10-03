@@ -12,6 +12,7 @@ export type PlaceWithCollectorRequest = z.infer<typeof PlaceWithCollectorRequest
 export function placeWithCollector(collector: Collector): ActionSpec<PlaceWithCollectorRequest> {
   return {
     kind: "collector.place",
+    description: "Hand a balance to the licensed collector exactly as an accepted balance decision sets it out.",
     request: PlaceWithCollectorRequest,
     key: (req) => req.decisionId,
     authorize: byDecision(["balance.pursuit"], (req) => req.decisionId, (content) => {
@@ -47,6 +48,7 @@ export type AdjustCollectorRequest = z.infer<typeof AdjustCollectorRequest>;
 export function adjustCollector(collector: Collector): ActionSpec<AdjustCollectorRequest> {
   return {
     kind: "collector.adjust",
+    description: "Send an accepted balance correction to the collector.",
     request: AdjustCollectorRequest,
     key: (req) => req.decisionId,
     authorize: byDecision(["balance.correction"], (req) => req.decisionId, (content) =>

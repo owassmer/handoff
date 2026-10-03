@@ -24,6 +24,7 @@ async function acceptedLine(ctx: ActionContext, req: PostToLedgerRequest) {
 export function postToLedger(ledger: Ledger): ActionSpec<PostToLedgerRequest> {
   return {
     kind: "ledger.post",
+    description: "Post one line of an accepted account statement to the property-management ledger. The amount and wording come from the statement.",
     request: PostToLedgerRequest,
     key: (req) => `${req.decisionId}:${req.lineKey}`,
     authorize: byDecision(["account.statement"], (req) => req.decisionId, (content, req) => {

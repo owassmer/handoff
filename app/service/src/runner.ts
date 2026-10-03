@@ -26,6 +26,8 @@ export interface TurnContext {
   cancel(key: string): Promise<void>;
   /** Records something Handoff did or concluded, without waking the case again. */
   note(kind: string, payload: Record<string, unknown>): Promise<void>;
+  /** The actions on offer through the gateway. */
+  catalog(): ReturnType<Gateway["catalog"]>;
 }
 
 export type CaseTurn = (ctx: TurnContext) => Promise<void>;
@@ -109,6 +111,7 @@ export class CaseRunner {
       note: async (kind, payload) => {
         await appendEvent(this.db, { caseId, kind, source: "handoff", payload: { runId, ...payload }, occurredAt: await businessNow(this.db), wakes: false });
       },
+      catalog: () => this.gateway.catalog(),
     };
   }
 

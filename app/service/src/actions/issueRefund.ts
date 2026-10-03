@@ -20,6 +20,7 @@ export type IssueRefundRequest = z.infer<typeof IssueRefundRequest>;
 export function issueRefund(payments: Payments): ActionSpec<IssueRefundRequest> {
   return {
     kind: "payment.refund",
+    description: "Pay the deposit refund set by an accepted account statement, to the payee, amount and method in it. Paid once per statement.",
     request: IssueRefundRequest,
     key: (req) => req.decisionId,
     authorize: byDecision(["account.statement"], (req) => req.decisionId, (content, req) => {

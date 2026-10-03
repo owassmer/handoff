@@ -20,6 +20,7 @@ export type CreateWorkOrderRequest = z.infer<typeof CreateWorkOrderRequest>;
 export function createWorkOrder(maintenance: Maintenance): ActionSpec<CreateWorkOrderRequest> {
   return {
     kind: "maintenance.create_work_order",
+    description: "Create an in-house work order. Planned work needs the accepted work plan (give decisionId and workItemId, with the category and description exactly as planned). Routine work such as inspections is allowed if the standing instruction lists its category.",
     request: CreateWorkOrderRequest,
     key: (req, caseId) => `${caseId}:${req.key}`,
     authorize: eitherOf(
