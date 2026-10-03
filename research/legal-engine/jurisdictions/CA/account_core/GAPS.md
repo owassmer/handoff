@@ -60,7 +60,7 @@ CourtListener is blocked. The official courts.ca.gov archive holds only recent o
 
 - Every California code section the map uses falls within a unit marked in scope in `jurisdictions/CA/instruments.json` (checked read-only by heading range). No register gap for statutes.
 - **Absent:** the DRE *California Tenants* guide (2026 edition). It is official agency guidance and the only official source of factors for wear and tear, cleaning and the useful-life proration. Saved here at `sources/DRE_2026_Landlord_Tenant_Guide.txt`. Propose registering it as guidance, labeled not law.
-- **Absent:** AB 2801's uncodified intent section (Stats. 2024 ch. 802 §1). The act is listed among prior enactments, so check the entry keeps §1.
+- **Absent:** AB 2801's uncodified intent section (Stats. 2024 ch. 280 §1). The act is listed among prior enactments, so check the entry keeps §1.
 - **Absent:** the Judicial Council Prob 890 adjustment table, if the register does not already hold it under Judicial Council publications.
 - **Federal, outside this register:** 15 U.S.C. 1681t(b)(1)(F) was captured this session at `research/legal-engine/sources/US_15USC_1681t.txt`. The US register should hold it.
 

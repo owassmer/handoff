@@ -641,7 +641,7 @@ ALL of the following:
 | Deposit cap of one month | Security demanded or received on or after Jul 1, 2024 | 1950.5(c)(1), (c)(6) (T) |
 | Move-out photographs (before and after work) | Possession returned on or after Apr 1, 2025 | (g)(2) (T) |
 | Move-in photographs | Tenancy began on or after Jul 1, 2025 | (g)(1) (T) |
-| Bad-faith forfeiture; photographs with the statement | AB 2801, Stats. 2024 ch. 802 (Sep 19, 2024); operative text as amended | (h)(2)(D), (h)(7) (T) |
+| Bad-faith forfeiture; photographs with the statement | AB 2801, Stats. 2024 ch. 280 (approved Sep 19, 2024; effective Jan 1, 2025, with the (g) dates above); carried forward by AB 414 | (h)(2)(D), (h)(7) (T) |
 | Electronic refund duty; agreements among multiple tenants | Jan 1, 2026 (AB 414, ch. 340) | (h)(1)(A)(ii), (C) (T) |
 | Internet bulk-billing opt-out | Tenancies commenced, renewed or month-to-month on or after Jan 1, 2026 | 1942.8 (T) |
 | Advance-rent refund after casualty | Jan 1, 2026 (SB 610) | 1941.9 (T) |
