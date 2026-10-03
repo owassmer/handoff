@@ -1,3 +1,4 @@
+import { readdir } from "node:fs/promises";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { contentHash } from "../src/canonical.js";
 import { setupClock } from "../src/clock.js";
@@ -17,7 +18,8 @@ describe("records the database itself protects", () => {
   it("applies migrations once", async () => {
     await migrate(db);
     const rows = await db.query<{ name: string }>(`select name from schema_migrations order by name`);
-    expect(rows.map((r) => r.name)).toEqual(["001_core.sql", "002_imitations.sql"]);
+    const files = (await readdir(new URL("../src/migrations/", import.meta.url))).filter((f) => f.endsWith(".sql")).sort();
+    expect(rows.map((r) => r.name)).toEqual(files);
   });
 
   it("keeps events append-only, letting processed_at be set once", async () => {
