@@ -329,7 +329,7 @@ A Judgment over the evidence: keys, belongings, written surrender, notice end da
   - the extended date under Civ 10/11 (Gov Code holidays);
   - the extended date under CCP 12a (Saturdays and judicial holidays).
 - The two holiday calendars differ. CCP 135 (T; AB 268, effective Jan 1, 2026) makes every Gov 6700 holiday a judicial holiday except Lunar New Year, Diwali, Apr 24 (Genocide Remembrance Day), Admission Day, Columbus Day and days appointed by the Governor. It adds every Saturday and the day after Thanksgiving. So Gov Code holidays that fall outside CCP 135 extend under Civ 10/11 only, and Saturdays extend under CCP 12a only.
-- AB 2156 is already in force. The other 2026 holiday acts (AB 1841, AB 2017, SB 1394, AB 2294, AB 395) are dated entries pending their texts (GAPS).
+- AB 2156 is already in force. AB 2017 adds two Eid holidays to GOV 6700 from (presumably) Jan 1, 2027, and leaves them out of CCP 135. SB 1394 and AB 2294 are double-jointed with it (see the effective-date table).
 - Recommended operating date: the nominal day 21.
 
 **DP6.4 Contents and form**
@@ -650,7 +650,7 @@ ALL of the following:
 | No fee for serving notices; no fee for check payments | Jan 1 / Feb 1, 2025 (SB 611) | CCP 1161(6), 1947.3(b) (T) |
 | Small-claims limits $6,250 / $12,500 | in force | CCP 116.220, 116.221 (T) |
 | 5% judgment interest on personal debt | Judgments from Jan 1, 2023 | CCP 685.010(a)(2) (T) |
-| Holiday calendar | GOV 6700 amended by AB 2156 (Stats. 2026 ch. 7), effective Mar 26, 2026 (T). Other 2026 holiday acts (AB 395, AB 1841, AB 2017, SB 1394, AB 2294) are dated entries; texts are being fetched (GAPS) | Matters when day 21 falls on or near a new holiday |
+| Holiday calendar | GOV 6700 amended by AB 2156 (Stats. 2026 ch. 7), effective Mar 26, 2026 (T). AB 2017 (Stats. 2026 ch. 571, read) adds Eid al-Fitr and Eid al-Adha to GOV 6700, but excepts them from the CCP 135 judicial holidays. It has no urgency clause, so it is presumably effective Jan 1, 2027, and is double-jointed with AB 2294 and SB 1394. AB 1841 (state-employee holidays, Gov 19853) and AB 395 (schools, meetings) do not change counting. | The Eid dates fall in March and May 2027, so a 2026 move-out's day 21 is unaffected. Code: version the holiday table by effective date. |
 | 2026 acts touching tenancy | SB 1072 (housing omnibus), AB 2025 (Civ 1940.11: altered images in rental ads), SB 1296 (Civ 1942.7.5 pet policy, operative Apr 1, 2027) | Read (`sources/bills/`). None changes the departing account. AB 2025 concerns advertising, not the (g) photographs. |
 | Rent cap and just cause sunset | Jan 1, 2030 | 1946.2, 1947.12 (T) |
 
