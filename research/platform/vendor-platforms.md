@@ -36,7 +36,7 @@ On the platform side, Responses plus Conversations is now the supported path. Th
 ## 2. AWS Bedrock AgentCore and Strands Agents
 
 **Status.**
-- AgentCore went GA on 2025-10-13.
+- AgentCore went GA in October 2025 (13 October according to secondary sources).
 - Policy (Cedar) went GA 2026-03-03, and Evaluations went GA in March 2026.
 - The managed harness entered preview in April 2026 and went GA on 2026-06-17.
 - The Runtime **Instances** compute type arrived in August 2026: EC2 in the customer's account, with sessions of up to 14 days.
@@ -106,7 +106,7 @@ Launch customers: Notion, Rakuten, Asana and Sentry.
 | 6 | Claude only. | weak |
 | 7 | No API to fork or snapshot a session. `initial_events` accepts only `user.message` and `define_outcome` events (50 at most), so a case cannot be recreated at a staged point. | weak |
 | 8 | SSE streaming with event deltas. | strong |
-| 9 | SDKs in eight languages plus a CLI. Fastest path to a demo. | strong |
+| 9 | SDKs in seven languages (Python, TypeScript, Go, Java, C#, PHP, Ruby) plus the `ant` CLI. Fastest path to a demo. | strong |
 | 10 | Token costs plus $0.08 per session-hour while running; idle time is free. Rate limits are 300 create and 1,200 read requests per minute. Lock-in is the highest in this family. | weak |
 
 **Verdict.** An impressive hosted loop for a quick pilot, but it does not meet requirements 5, 6 and 7.
