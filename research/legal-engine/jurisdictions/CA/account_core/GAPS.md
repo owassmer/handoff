@@ -7,7 +7,6 @@ October 3, 2026. Three groups: provisions the map needs but that were not retrie
 **Regulations** — 10 CCR 2832 and 2 CCR 12185 were captured only from the Cornell LII mirror (`texts/CA_CCR10/2832.txt`, `texts/CA_CCR2/12185.txt`). The official OAL/Westlaw text was not retrieved, so currency is unverified.
 
 **Statutes not fetched** (all inside register units)
-- Civ 1633.5 — UETA's requirement that parties agree to transact electronically. DP1.6 and the E-SIGN question in federal.md.
 - Civ 1995.010 et seq. — assignment and sublet (DP2.2).
 - Civ 2787 et seq. — guarantors (DP2.3).
 - Civ 51 — Unruh Act (DP5.10).

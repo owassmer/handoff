@@ -128,7 +128,12 @@ These are the facts that switch branches below:
 - Statement by email: (h)(1)(B)(ii) (T), "upon mutual agreement … at the commencement of the tenancy or at any time during or after the tenancy." A written agreement collected on the tenant page satisfies it (I).
 - Refund: electronic return is mandatory where the tenant paid the security or rent electronically, to an account the tenant designates in writing ((h)(1)(A)(ii)).
 - Water bills: electronic delivery needs written agreement and can be rescinded (1954.206(b)) (T).
-- UETA (1633.7) (T): an electronic record satisfies a writing requirement once the parties have agreed to transact electronically (1633.5, not saved).
+- UETA 1633.7 (T): an electronic record satisfies a writing requirement.
+- UETA 1633.5(b) (T; a non-uniform California text) limits the agreement to transact electronically:
+  - it may not sit in a paper standard-form contract, except as a separate, optional agreement;
+  - it may not be inferred solely from the tenant paying electronically;
+  - (c) a party may refuse further electronic transactions.
+  - Consequence (I): a clause in a paper lease is weak support for emailing the statement. A separate written agreement collected on the tenant page, or an electronically signed lease, is the safer basis. Electronic rent payment alone triggers the (h)(1)(A)(ii) electronic-refund duty (by its own text), but it is not consent to electronic records generally.
 
 **DP1.7 Payment methods and receipts**
 1947.3(a)(1) (T): the landlord must accept at least one method that is neither cash nor electronic funds transfer. Cash-only is allowed for three months after a dishonored check (a)(2). Third-party payment rules are in (a)(3). No receipt rule specific to the account was identified (thin).
