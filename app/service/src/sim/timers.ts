@@ -1,3 +1,4 @@
+import { DAY_MS, businessDate } from "../clock.js";
 import type { Queryable } from "../db.js";
 
 export interface SimTimer {
@@ -25,14 +26,15 @@ export async function claimTimer(q: Queryable, id: number, at: Date): Promise<bo
   return (await q.query(`update sim.timers set fired_at = $2 where id = $1 and fired_at is null returning id`, [id, at])).length > 0;
 }
 
-/** Weekdays only; enough for settlement times. Holidays are not modelled. */
-export function addBusinessDays(t: Date, days: number): Date {
-  const d = new Date(t);
+/** Business days forward from `t`: weekdays in business time, skipping the given holidays (YYYY-MM-DD). */
+export function addBusinessDays(t: Date, days: number, holidays: readonly string[] = []): Date {
+  let d = new Date(t);
   let left = days;
   while (left > 0) {
-    d.setUTCDate(d.getUTCDate() + 1);
-    const wd = d.getUTCDay();
-    if (wd !== 0 && wd !== 6) left--;
+    d = new Date(d.getTime() + DAY_MS);
+    const date = businessDate(d);
+    const weekday = new Date(`${date}T12:00:00Z`).getUTCDay();
+    if (weekday !== 0 && weekday !== 6 && !holidays.includes(date)) left--;
   }
   return d;
 }

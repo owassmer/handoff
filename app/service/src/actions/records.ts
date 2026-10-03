@@ -9,3 +9,13 @@ export async function caseParties(q: Queryable, caseId: string): Promise<Array<{
     [caseId],
   )).map((r) => ({ partyId: r.party_id, relationship: r.relationship, name: r.name, email: r.email }));
 }
+
+/** The tenancy and unit behind a case, as Handoff records them. Outside systems are addressed by these. */
+export async function caseTenancy(q: Queryable, caseId: string): Promise<{ tenancyId: string; unitId: string }> {
+  const [r] = await q.query<{ tenancy_id: string; unit_id: string }>(
+    `select c.tenancy_id, t.unit_id from cases c join tenancies t on t.id = c.tenancy_id where c.id = $1`,
+    [caseId],
+  );
+  if (!r) throw new Error(`no case ${caseId}`);
+  return { tenancyId: r.tenancy_id, unitId: r.unit_id };
+}

@@ -3,7 +3,7 @@ import { businessNow, setSimulatedNow, setupClock } from "./clock.js";
 import { type PgliteDb, openDbFromDump, openMemoryDb } from "./db.js";
 import { Gateway } from "./gateway.js";
 import { type CaseTurn, CaseRunner } from "./runner.js";
-import { SimMail, SimPayments } from "./sim/index.js";
+import { SimCollector, SimLedger, SimMail, SimMaintenance, SimPayments, SimUtilities, SimVendors } from "./sim/index.js";
 import { fire, nextDue } from "./timeline.js";
 
 export interface AdvanceReport {
@@ -20,13 +20,23 @@ export interface AdvanceReport {
 export class World {
   readonly mail: SimMail;
   readonly payments: SimPayments;
+  readonly ledger: SimLedger;
+  readonly utilities: SimUtilities;
+  readonly maintenance: SimMaintenance;
+  readonly vendors: SimVendors;
+  readonly collector: SimCollector;
   readonly gateway: Gateway;
   readonly runner: CaseRunner;
 
   private constructor(readonly db: PgliteDb, private readonly turn: CaseTurn) {
     this.mail = new SimMail(db);
     this.payments = new SimPayments(db);
-    this.gateway = new Gateway(db, standardActions({ mail: this.mail, payments: this.payments }));
+    this.ledger = new SimLedger(db);
+    this.utilities = new SimUtilities(db);
+    this.maintenance = new SimMaintenance(db);
+    this.vendors = new SimVendors(db);
+    this.collector = new SimCollector(db);
+    this.gateway = new Gateway(db, standardActions(this));
     this.runner = new CaseRunner(db, this.gateway, turn);
   }
 
