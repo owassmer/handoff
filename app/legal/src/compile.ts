@@ -187,3 +187,13 @@ export function compiled(tree: Tree): CompiledTree {
 export function remember(c: CompiledTree): void {
   cache.set(c.tree, c);
 }
+
+/** What a tree reads from the case: its declared inputs, the fact paths its formulas use, and each question's evidence. */
+export function requiredFacts(tree: Tree): { inputs: string[]; formulas: string[]; questions: { leaf: string; inputs: string[] }[] } {
+  const c = compiled(tree);
+  const formulas = new Set<string>();
+  for (const leaf of c.leaves.values()) for (const f of leaf.compute?.analysis.facts ?? []) formulas.add(f);
+  for (const e of c.effects) for (const f of Object.values(e.formulas)) for (const p of f.analysis.facts) formulas.add(p);
+  const questions = [...c.leaves.values()].filter((l) => l.node.question).map((l) => ({ leaf: l.node.id, inputs: l.node.question!.inputs }));
+  return { inputs: tree.inputs, formulas: [...formulas].sort(), questions };
+}

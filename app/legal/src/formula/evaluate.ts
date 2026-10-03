@@ -68,7 +68,7 @@ function isThenable(v: unknown): v is PromiseLike<unknown> {
 }
 
 /** True if the value is unknown or a list holding an unknown anywhere. */
-function containsUnknown(v: Value): boolean {
+export function containsUnknown(v: Value): boolean {
   return v === UNKNOWN || (Array.isArray(v) && v.some((x) => x === undefined || containsUnknown(x)));
 }
 
@@ -140,7 +140,8 @@ class Run {
         const t = truthOf(await this.eval(e.test));
         if (t === true) return this.eval(e.then);
         if (t === false) return this.eval(e.otherwise);
-        const [a, b] = [await this.eval(e.then), await this.eval(e.otherwise)];
+        const a = await this.eval(e.then);
+        const b = await this.eval(e.otherwise);
         return equal3(a, b) === true ? a : UNKNOWN;
       }
     }
