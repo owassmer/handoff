@@ -1,0 +1,9 @@
+{
+  "name": "handoff-app",
+  "private": true,
+  "workspaces": ["service"],
+  "scripts": {
+    "test": "npm run test --workspaces",
+    "typecheck": "npm run typecheck --workspaces"
+  }
+}
