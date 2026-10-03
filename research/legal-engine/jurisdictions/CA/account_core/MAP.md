@@ -61,7 +61,7 @@ Chapter 2.5 (water submeters) applies only where submeters are used, or were req
   - Code: the citation date plus 35 days. Judgment: good cause, and whether the tenant caused the condition.
 - 1962(c) (T). A successor owner or manager who has not made the disclosures within 15 days may not evict for rent that accrued during the noncompliance. The tenant still owes that rent. This matters for the building-sold template.
 - The warranty of habitability is a rent-reduction defense in disputes. The leading case is *Green v. Superior Court* (1974) 10 Cal.3d 616 (N).
-- Capacity of the owner entity to sue: CORP 17708.07, CORP 2203 and RTC 23301 (queued). See DP8.9.
+- Capacity of the owner entity to sue: CORP 17708.07, CORP 2203 and RTC 23301 (T). See DP8.9.
 
 **DP0.4 Status facts to record at intake**
 These are the facts that switch branches below:
@@ -115,7 +115,7 @@ These are the facts that switch branches below:
   - a billing or administrative fee no higher than the lesser of $4.75 (adjusted by CPI) or 25% of the usage charge (1954.205(a)(3));
   - late fees under 1954.213;
   - no pass-through of the landlord's own deposits, penalties, disconnection or late fees to the purveyor (1954.208).
-- Gas and electric: 1940.9 shared meters (T). PUC 739.5 submeter pricing is queued (GAPS if it was not saved).
+- Gas and electric: 1940.9 shared meters (T). PUC 739.5(a) (T): a master-meter customer serving apartment tenants must charge each user the rate the utility would charge directly. Code: the tenant's gas or electric charge cannot exceed the utility tariff for that usage.
 - Internet: 1942.8 (T), from Jan 1, 2026. The tenant may opt out of bulk-billed internet. If the landlord refuses, the tenant may deduct the cost from rent. Code: credit the bulk-billing charges made after the opt-out.
 - The CLRA drip-pricing rule (1770(a)(29), SB 478) may not reach residential leases. One line in GAPS.
 
@@ -165,8 +165,8 @@ The 21-day clock runs from when "the tenant has vacated the premises" ((h)(1)) (
 - (G) DRE guide p. 88:
   - The estate is liable for the rest of a fixed term, subject to the landlord's good-faith re-letting.
   - A periodic tenancy ends on the 30th day after the last rent payment.
-- The refund is the decedent's property and goes to the personal representative or a small-estate successor: PROB 13100 and 13101 (queued).
-- A balance claim against the estate has to fit the probate claim period (PROB 9100, queued) and the one-year limit after death (CCP 366.2 (T)). Code: date of death + 1 year.
+- The refund is the decedent's property. It goes to the personal representative or to a small-estate successor under PROB 13100 and 13101 (T). The affidavit procedure applies 40 days after death when the estate is under the 13100 threshold. The text says $166,250, as adjusted under Prob 890; the current adjusted figure must be read from the Judicial Council table (GAPS). Code: date of death + 40 days, and an affidavit on file.
+- A balance claim against the estate has to fit the probate claim period (PROB 9100 (T): the later of four months after letters issue or 60 days after notice of administration, without extending CCP 366.2) and the one-year limit after death (CCP 366.2 (T)). Code: date of death + 1 year.
 - Belongings: 1980–1991 and 1965 (DP6.9).
 
 **DP2.6 Casualty**
@@ -176,7 +176,7 @@ The 21-day clock runs from when "the tenant has vacated the premises" ((h)(1)) (
   - termination date = the tenant's notice of intent, or other dates in (a)(3).
 - 1935 (T): rent is due only in proportion to use actually made.
 - Code: per-diem refund. Judgment: "greater part" or "material inducement", and the tenant's want of care.
-- Relocation is owed only for code-enforcement displacement attributable to the owner (HSC 17975 et seq., queued).
+- Relocation is owed when a local enforcement agency orders vacation because violations endanger health and safety (HSC 17975(a) (T); amounts in 17975.2 et seq., not retrieved). Untenantability alone does not trigger it.
 
 ---
 
@@ -365,7 +365,7 @@ A Judgment over the evidence: keys, belongings, written surrender, notice end da
 
 **DP6.8 Unclaimed refund**
 - CCP 1520 (T): intangible property escheats after three years unclaimed.
-- Reporting: CCP 1530(d) (T): a report before Nov 1 each year as of Jun 30. Remitting: CCP 1532 (queued). CCP 1513.5 (T) covers banking organizations only; a holder-notice rule for other business holders was not identified (GAPS).
+- Reporting: CCP 1530(d) (T): a report before Nov 1 each year as of Jun 30. Remitting: CCP 1532(a) (T), seven months to seven months and 15 days after the report deadline. CCP 1513.5 (T) covers banking organizations only; a holder-notice rule for other business holders was not identified (GAPS).
 - Code: check date + 3 years, and the report and remit windows. See DP9.2.
 
 **DP6.9 Belongings left behind**
@@ -459,9 +459,10 @@ None identified in OC or HB (I; search not exhaustive).
 - Limitations: CCP 337(a) 4 years (written), 339 2 years (oral) (T). CCP 360 (T): only a written acknowledgment or promise signed by the debtor takes a debt outside the limitation period. Its part-payment clause speaks of promissory notes. So a payment plan should carry the former tenant's signed acknowledgment.
 - After a death: CCP 366.2 (T), one year from death, which displaces the ordinary period.
 - Capacity:
-  - a foreign LLC not registered may not maintain an action until it registers (CORP 17708.07, queued);
-  - CORP 2203 for corporations (queued);
-  - a corporation suspended by the Franchise Tax Board under RTC 23301 cannot sue (queued).
+  - a foreign LLC transacting intrastate business without registration may not maintain an action, but may defend (CORP 17708.07(a)–(b) (T));
+  - CORP 2203 is the parallel rule for foreign corporations (T);
+  - RTC 23301 (T): a taxpayer suspended by the Franchise Tax Board loses its powers, rights and privileges.
+  - Code: check entity status before any filing.
 - Small claims: entity plaintiff limit $6,250 (116.220), with the property-agent appearance under 116.540(h).
 - Payment plans: no statute prescribes their terms. A plan that adds interest or finance charges may itself be a credit transaction that brings in Rosenthal (C3; OPERATING_BRANCHES A23).
 
@@ -482,11 +483,11 @@ None identified in OC or HB (I; search not exhaustive).
 No California rule. [US] tax atoms (federal.md). Owen's net-recovery rule governs the decision.
 
 **DP9.2 Unclaimed funds**
-CCP 1520 (T): three years. CCP 1530(d) (T): report before Nov 1 as of Jun 30. CCP 1532 (remit) is queued. Code: the dates.
+CCP 1520 (T): three years. CCP 1530(d) (T): report before Nov 1 as of Jun 30. CCP 1532(a) (T): remit 7 months to 7 months and 15 days after the report deadline. Code: the dates.
 
 **DP9.3 Records**
 - 1798.81 (T): disposal of records containing personal information.
-- BPC 10148 (queued): a broker keeps records for 3 years.
+- BPC 10148(a) (T): a broker keeps trust records and transaction documents for 3 years.
 - Practical retention runs at least to the limitation periods: 4 years from vacating (CCP 337), plus the small-claims appeal period (I).
 
 ---
@@ -609,7 +610,7 @@ ALL of the following:
   - 1954.205(a)(1)(A) prices the tenant's usage as a share of the purveyor's bill for the period. The (B) and (C) methods use the purveyor's rate schedule instead.
   - 1954.212: if a reading is unavailable and the tenant gave access, the charge is 75% of the average of the last three months. Water charges are not rent (1954.213(d)).
 - **1950.5(h)(3)** (T): a good-faith estimate is allowed "if the documents from a person or entity providing services, materials, or supplies are not in the landlord's possession within 21 calendar days". The sentence sits inside a subdivision whose paragraph (2) concerns documents "to repair or clean".
-- **Ratio billing (RUBS), gas and electric:** no billing statute was read for RUBS. Chapter 2.5 expressly takes no position on it (1954.216(c)). The charge is contractual under the lease. 1940.9 (T) governs shared gas and electric meters. PUC 739.5 governs gas and electric submeter pricing (queued).
+- **Ratio billing (RUBS), gas and electric:** no billing statute was read for RUBS. Chapter 2.5 expressly takes no position on it (1954.216(c)). The charge is contractual under the lease. 1940.9 (T) governs shared gas and electric meters. PUC 739.5(a) (T) limits submetered gas or electric charges to the utility's direct rate. The timing of the final gas or electric bill follows the master-meter billing cycle, which no statute addresses (I).
 
 **What the landlord may do**
 
