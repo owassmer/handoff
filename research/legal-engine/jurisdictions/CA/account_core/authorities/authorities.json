@@ -264,6 +264,34 @@
           "query": "California Court of Appeal property manager liable \"1950.5\" security deposit agent of owner \"landlord's agent\" statutory damages",
           "result": "No case law; bill text, lease forms and guides only.",
           "links": []
+        },
+        {
+          "n": 4,
+          "date": "2026-10-03",
+          "tool": "GovInfo-package",
+          "query": "USCOURTS-casd-3_23-cv-01729 (Brooks v. Greystar), items 0-4",
+          "result": "GovInfo holds ECF 44 (July 19, 2024), ECF 55 (Mar. 31, 2025, denying certification for interlocutory appeal of the arbitration order), ECF 56 (Aug. 7, 2025) and ECF 83 (Mar. 25, 2026 scheduling). ECF 48 not on GovInfo; the Oct. 2 CourtListener capture was copied into authorities/. Docket (captured Oct. 2) shows putative-class discovery under way through Sept. 2026, no class certification ruling, and the Ninth Circuit's Dec. 17, 2025 denial of a Rule 23(f) petition.",
+          "links": [
+            "https://www.govinfo.gov/app/details/USCOURTS-casd-3_23-cv-01729"
+          ]
+        },
+        {
+          "n": 5,
+          "date": "2026-10-03",
+          "tool": "repo-read",
+          "query": "CCP 116.540 (official capture, jurisdictions/CA/texts/CA_CCP/116.540.txt, Stats. 2022 ch. 620)",
+          "result": "(h): owner may appear through a property agent under contract to manage the rental, retained principally to manage, claim relating to the property; (j): declaration of authority required; (b): corporations appear through regular employee or officer. No case law search needed for this reading.",
+          "links": []
+        },
+        {
+          "n": 6,
+          "date": "2026-10-03",
+          "tool": "leginfo-statutes",
+          "query": "Civ 2330, 2338, 2343 (official leginfo, curl)",
+          "result": "Captured and saved (enacted 1872): 2330 agent's acts bind principal; 2338 principal responsible for agent's wrongful acts in the business of the agency; 2343(3) agent personally responsible when acts are wrongful in their nature.",
+          "links": [
+            "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=2343."
+          ]
         }
       ]
     },
@@ -583,5 +611,478 @@
       ]
     }
   },
-  "authorities": []
+  "authorities": [
+    {
+      "id": "granberry-1995",
+      "cite": "Granberry v. Islay Investments (1995) 9 Cal.4th 738",
+      "court": "Cal. Supreme Court",
+      "weight": "binding",
+      "questions": [
+        "C1",
+        "C2",
+        "C10"
+      ],
+      "file": "CASE_Granberry_v_Islay_Investments_1995_mirror.txt",
+      "source": "https://scocal.stanford.edu/opinion/granberry-v-islay-investments-31631",
+      "copy": "mirror (Stanford SCOCAL)",
+      "holding": "A landlord that in good faith failed to use the deduct-and-retain procedure may recover unpaid rent, repair and cleaning damages by setoff or claim in a later judicial proceeding on proof by a preponderance and of reasonableness; equitable defenses available (pp. 749-750).",
+      "dicta": "Fn. 6: no opinion on rights of bad-faith landlords. P. 745: without a timely accounting the right to retain is not perfected and the landlord must return the entire deposit. Characterizes bad-faith damages as a 'penalty'.",
+      "later_history": "Scholar cited-by list filtered to 'bad faith' (23 results) read 2026-10-03: no published case resolving fn. 6 or limiting the holding; applied by analogy in 250 L.L.C. v. PhotoPoint (2005). Partly superseded in practice by AB 2801's express bad-faith forfeiture (h)(7), which is consistent with the holding. No citator."
+    },
+    {
+      "id": "granberry-coa-1993",
+      "cite": "Granberry v. Islay Investments (Cal. Ct. App. 1993), superseded by grant of review",
+      "court": "Cal. Ct. App., 2d Dist.",
+      "weight": "not citable",
+      "questions": [
+        "C2"
+      ],
+      "file": "CASE_Granberry_CoA_1993_superseded_NOT_CITABLE_mirror.txt",
+      "source": "https://caselaw.findlaw.com/court/ca-court-of-appeal/1774861.html",
+      "copy": "mirror (FindLaw)",
+      "holding": "(Superseded) approved a subjective bad-faith instruction: retention with belief it was not authorized by statute; honest mistake or negligence is not bad faith.",
+      "dicta": "",
+      "later_history": "Superseded by the Supreme Court's grant of review; Supreme Court did not review the instruction ruling (9 Cal.4th at p. 743, fn. 4)."
+    },
+    {
+      "id": "photopoint-2005",
+      "cite": "250 L.L.C. v. PhotoPoint Corp. (USA) (2005) 131 Cal.App.4th 703",
+      "court": "Cal. Ct. App., 1st Dist., Div. 4",
+      "weight": "binding on Civ 1950.7; persuasive analogy for 1950.5",
+      "questions": [
+        "C1"
+      ],
+      "file": "CASE_250_LLC_v_PhotoPoint_2005_mirror.txt",
+      "source": "https://law.justia.com/cases/california/court-of-appeal/2005/a105231.html",
+      "copy": "mirror (Justia)",
+      "holding": "Under Civ 1950.7 a landlord may apply a deposit only to rent accrued by the statutory return date; reading Granberry, a good-faith violator may offset only amounts it properly could have claimed of the deposit.",
+      "dicta": "",
+      "later_history": "Cited in AB 2801 Senate Judiciary analysis (2024). Modified on denial of rehearing Aug. 29, 2005 without change in judgment. No citator."
+    },
+    {
+      "id": "peviani-2021",
+      "cite": "Peviani v. Arbors at California Oaks Property Owner, LLC (2021) 62 Cal.App.5th 874",
+      "court": "Cal. Ct. App., 4th Dist., Div. 2",
+      "weight": "binding",
+      "questions": [
+        "C2",
+        "C4",
+        "C10"
+      ],
+      "file": "CASE_Peviani_v_Arbors_at_California_Oaks_2021_mirror.txt",
+      "source": "https://law.justia.com/cases/california/court-of-appeal/2021/e073950.html",
+      "copy": "mirror (Justia)",
+      "holding": "Reversed denial of class certification, including a security-deposit class; liability turns on reasonableness of deductions (common), bad faith goes to statutory ('punitive') damages which can be decided separately.",
+      "dicta": "Statement of the elements of a 1950.5 wrongful-retention claim.",
+      "later_history": "Review denied July 14, 2021 (per Western Center summary; not independently verified). No citator."
+    },
+    {
+      "id": "orozco-2004",
+      "cite": "Orozco v. Casimiro (2004) 121 Cal.App.4th Supp. 7",
+      "court": "App. Div., L.A. Super. Ct.",
+      "weight": "persuasive outside L.A. County",
+      "questions": [
+        "C2"
+      ],
+      "file": "CASE_Orozco_v_Casimiro_2004_mirror.txt",
+      "source": "https://lawlink.com/research/cases/81557/orozco-v-casimiro-2004-121-cal-app-4th-supp-7",
+      "copy": "mirror (LawLink)",
+      "holding": "A residential lease's flat $50 late fee is void under Civ 1671(d) where the landlord neither pleads nor proves that damages were impracticable or extremely difficult to fix.",
+      "dicta": "",
+      "later_history": "Cited in DRE 2026 tenants guide. Not a deposit bad-faith case. No citator."
+    },
+    {
+      "id": "holland-1970",
+      "cite": "Holland v. Nelson (1970) 5 Cal.App.3d 308",
+      "court": "Cal. Ct. App., 1st Dist., Div. 4",
+      "weight": "binding",
+      "questions": [
+        "C10"
+      ],
+      "file": "CASE_Holland_v_Nelson_1970_mirror.txt",
+      "source": "https://law.justia.com/cases/california/court-of-appeal/3d/5/308.html",
+      "copy": "mirror (Justia)",
+      "holding": "Discretionary treble damages are not a 'penalty or forfeiture'; CCP 338 (three years) applies.",
+      "dicta": "",
+      "later_history": "Followed by Menefee (1991) and Jensen (1995); acknowledged in Hypertouch (2011); no disapproval located (Scholar search 2026-10-03). No citator."
+    },
+    {
+      "id": "menefee-1991",
+      "cite": "Menefee v. Ostawari (1991) 228 Cal.App.3d 239",
+      "court": "Cal. Ct. App., 1st Dist., Div. 3",
+      "weight": "binding",
+      "questions": [
+        "C10"
+      ],
+      "file": "CASE_Menefee_v_Ostawari_1991_mirror.txt",
+      "source": "https://lawlink.com/research/cases/68136/menefee-v-ostawari",
+      "copy": "mirror (LawLink)",
+      "holding": "Mandatory treble damages under SF rent ordinance are a penalty subject to CCP 340(1); discretionary multiple damages are not (following Holland).",
+      "dicta": "",
+      "later_history": "Followed in Jensen (1995); cited in Prudential (1998). No citator."
+    },
+    {
+      "id": "jensen-1995",
+      "cite": "Jensen v. BMW of North America, Inc. (1995) 35 Cal.App.4th 112",
+      "court": "Cal. Ct. App., 3d Dist.",
+      "weight": "binding",
+      "questions": [
+        "C10"
+      ],
+      "file": "CASE_Jensen_v_BMW_1995_mirror.txt",
+      "source": "https://caselaw.findlaw.com/court/ca-court-of-appeal/1775362.html",
+      "copy": "mirror (FindLaw)",
+      "holding": "Song-Beverly discretionary civil penalty (up to two times actual damages for willful violation) is governed by the four-year period of the underlying action; CCP 340(1) applies only to mandatory penalties (p. 133).",
+      "dicta": "",
+      "later_history": "Relied on in Hypertouch (2011) and Shamsian v. ARCO (2003). No citator."
+    },
+    {
+      "id": "prudential-1998",
+      "cite": "Prudential Home Mortgage Co. v. Superior Court (1998) 66 Cal.App.4th 1236",
+      "court": "Cal. Ct. App., 4th Dist., Div. 3",
+      "weight": "binding",
+      "questions": [
+        "C10"
+      ],
+      "file": "CASE_Prudential_Home_Mortgage_v_Superior_Court_1998_mirror.txt",
+      "source": "https://lawlink.com/research/cases/75687/prudential-home-mortgage-co-v-superior-court-1998",
+      "copy": "mirror (LawLink)",
+      "holding": "Mandatory $300 forfeiture under Civ 2941(d) is a penalty subject to CCP 340(1); discovery rule may apply.",
+      "dicta": "Restates 'settled rule' that double or treble damages are penal; disagrees with MacManus.",
+      "later_history": "Cited in Low v. Lan (2002). No citator."
+    },
+    {
+      "id": "hypertouch-2011",
+      "cite": "Hypertouch, Inc. v. ValueClick, Inc. (2011) 192 Cal.App.4th 805",
+      "court": "Cal. Ct. App., 2d Dist., Div. 7",
+      "weight": "binding",
+      "questions": [
+        "C10"
+      ],
+      "file": "CASE_Hypertouch_v_ValueClick_2011_mirror.txt",
+      "source": "https://law.justia.com/cases/california/court-of-appeal/2011/b218603a/",
+      "copy": "mirror (Justia)",
+      "holding": "Liquidated damages mandatory once claimed and proven are a penalty under CCP 340 even though the court sets the amount (following TJX Companies (2008) 163 Cal.App.4th 80).",
+      "dicta": "Reaffirms Jensen/Holland rationale for discretionary awards.",
+      "later_history": "Opinion on rehearing Feb. 10, 2011. No citator."
+    },
+    {
+      "id": "hagey-2023",
+      "cite": "Hagey v. Solar Service Experts, LLC (2023) 94 Cal.App.5th 1303",
+      "court": "Cal. Ct. App., 4th Dist., Div. 3",
+      "weight": "binding",
+      "questions": [
+        "DEBT-ROSENTHAL"
+      ],
+      "file": "CASE_Hagey_v_Solar_Service_Experts_2023_mirror.txt",
+      "source": "https://cases.justia.com/california/court-of-appeal/2023-g061836.pdf",
+      "copy": "mirror (Justia), copied from Oct. 1 capture",
+      "holding": "Monthly billing for electricity already supplied, with no prepayment, is a consumer credit transaction under Rosenthal.",
+      "dicta": "",
+      "later_history": "Modified Sept. 26, 2023 without change in judgment (Oct. 1 research). Echoed by Assembly Banking staff analysis of SB 546 (June 2026). No citator."
+    },
+    {
+      "id": "davidson-2018",
+      "cite": "Davidson v. Seterus, Inc. (2018) 21 Cal.App.5th 283",
+      "court": "Cal. Ct. App., 4th Dist., Div. 1",
+      "weight": "binding",
+      "questions": [
+        "DEBT-ROSENTHAL"
+      ],
+      "file": "CASE_Davidson_v_Seterus_2018_mirror.txt",
+      "source": "https://law.justia.com/cases/california/court-of-appeal/2018/d071502.html",
+      "copy": "mirror (Justia), copied from Oct. 1 capture",
+      "holding": "'Credit' means acquiring value without immediate payment on a promise of future payment; Rosenthal's collector definition does not import the FDCPA default-at-acquisition limit.",
+      "dicta": "",
+      "later_history": "Relied on by Assembly Banking staff (2026). No citator."
+    },
+    {
+      "id": "olson-2022",
+      "cite": "Olson v. La Jolla Neurological Associates (2022) 85 Cal.App.5th 723",
+      "court": "Cal. Ct. App., 4th Dist., Div. 1",
+      "weight": "binding",
+      "questions": [
+        "DEBT-ROSENTHAL"
+      ],
+      "file": "CASE_Olson_v_La_Jolla_Neurological_2022_mirror.txt",
+      "source": "https://law.justia.com/cases/california/court-of-appeal/2022/d079265.html",
+      "copy": "mirror (Justia), copied from Oct. 1 capture",
+      "holding": "A creditor that exclusively retains an unaffiliated billing company is not itself a Rosenthal debt collector on that record; actual participation and control decide.",
+      "dicta": "",
+      "later_history": "No citator."
+    },
+    {
+      "id": "dedios-2011",
+      "cite": "De Dios v. International Realty & Investments, 641 F.3d 1071 (9th Cir. 2011)",
+      "court": "9th Cir.",
+      "weight": "binding (federal law)",
+      "questions": [
+        "DEBT-FDCPA"
+      ],
+      "file": "FED_De_Dios_v_International_Realty_9thCir_2011.txt",
+      "source": "https://cdn.ca9.uscourts.gov/datastore/opinions/2011/04/11/08-56288.pdf",
+      "copy": "official",
+      "holding": "A residential property manager that obtained the right to collect rent before default is excluded from 'debt collector' by 1692a(6)(F)(iii); default is judged by contract and state law at the time the debt is obtained.",
+      "dicta": "Declined to decide whether a servicer meets the primary definition.",
+      "later_history": "Applied in Yatooma (C.D. Cal. 2017). No later published Ninth Circuit decision revisiting it located by web searches; Scholar citing search blocked. No citator."
+    },
+    {
+      "id": "reichert-2008",
+      "cite": "Reichert v. National Credit Systems, Inc., 531 F.3d 1002 (9th Cir. 2008)",
+      "court": "9th Cir.",
+      "weight": "binding (federal law)",
+      "questions": [
+        "DEBT-FDCPA"
+      ],
+      "file": "FED_Reichert_v_National_Credit_Systems_9thCir_2008.txt",
+      "source": "https://cdn.ca9.uscourts.gov/datastore/opinions/2008/07/07/0615503.pdf",
+      "copy": "official",
+      "holding": "A collector that added a landlord-supplied fee not authorized by the lease violated 1692f(1); reliance on the landlord's past accuracy and a conclusory procedures affidavit did not establish the bona fide error defense.",
+      "dicta": "",
+      "later_history": "Not checked beyond the Oct. 1 work. No citator."
+    },
+    {
+      "id": "mcadory-2020",
+      "cite": "McAdory v. M.N.S. & Associates, LLC, 952 F.3d 1089 (9th Cir. 2020)",
+      "court": "9th Cir.",
+      "weight": "binding (federal law)",
+      "questions": [
+        "DEBT-FDCPA"
+      ],
+      "file": "FED_McAdory_v_MNS_and_Associates_9thCir_2020.txt",
+      "source": "https://cdn.ca9.uscourts.gov/datastore/opinions/2020/03/09/18-35923.pdf",
+      "copy": "official",
+      "holding": "A debt purchaser whose principal purpose is collection is a debt collector even if it outsources contact.",
+      "dicta": "",
+      "later_history": "Not checked beyond the Oct. 1 work. No citator."
+    },
+    {
+      "id": "henson-2017",
+      "cite": "Henson v. Santander Consumer USA Inc., 582 U.S. 79 (2017)",
+      "court": "U.S. Supreme Court",
+      "weight": "binding (federal law)",
+      "questions": [
+        "DEBT-FDCPA"
+      ],
+      "file": "FED_Henson_v_Santander_SCOTUS_2017.txt",
+      "source": "https://www.supremecourt.gov/opinions/16pdf/16-349_c07d.pdf",
+      "copy": "official",
+      "holding": "A purchaser collecting defaulted debts for its own account is not collecting debts 'owed ... another'; principal-purpose prong left open.",
+      "dicta": "",
+      "later_history": "Principal-purpose prong addressed by McAdory (9th Cir. 2020)."
+    },
+    {
+      "id": "romine-1998",
+      "cite": "Romine v. Diversified Collection Services, Inc., 155 F.3d 1142 (9th Cir. 1998)",
+      "court": "9th Cir.",
+      "weight": "binding (federal law)",
+      "questions": [
+        "DEBT-FDCPA"
+      ],
+      "file": "FED_Romine_v_Diversified_Collection_9thCir_1998_mirror.txt",
+      "source": "https://law.resource.org/pub/us/case/reporter/F3/155/155.F3d.1142.97-15586.html",
+      "copy": "mirror (law.resource.org)",
+      "holding": "A service provider that contacted debtors, obtained their numbers and relayed collection messages for collectors may be a debt collector that collects 'indirectly'; reversed dismissal.",
+      "dicta": "",
+      "later_history": "Not checked. No citator."
+    },
+    {
+      "id": "yatooma-2017",
+      "cite": "Yatooma v. OP Property Management LP, No. 2:17-cv-02645 (C.D. Cal. July 20, 2017), ECF 27",
+      "court": "C.D. Cal.",
+      "weight": "persuasive",
+      "questions": [
+        "DEBT-FDCPA",
+        "DEBT-ROSENTHAL"
+      ],
+      "file": "FED_Yatooma_v_OP_Property_Mgmt_CDCal_2017_mirror.txt",
+      "source": "https://law.justia.com/cases/federal/district-courts/california/cacdce/2%3A2017cv02645/674922/27/",
+      "copy": "mirror (Justia), copied from Oct. 1 capture",
+      "holding": "Owner and manager not FDCPA debt collectors (property management primary function; originated the lease); advance rent later unpaid is not Rosenthal consumer credit.",
+      "dicta": "",
+      "later_history": "No citator."
+    },
+    {
+      "id": "brooks-ecf48-2024",
+      "cite": "Brooks v. Greystar Real Estate Partners, LLC, No. 3:23-cv-01729-LL-VET, ECF 48 (S.D. Cal. Sept. 26, 2024)",
+      "court": "S.D. Cal.",
+      "weight": "persuasive",
+      "questions": [
+        "C2",
+        "C4",
+        "C10"
+      ],
+      "file": "FED_Brooks_v_Greystar_SDCal_2024-09-26_ECF48_mirror.txt",
+      "source": "CourtListener RECAP (captured 2026-10-02)",
+      "copy": "mirror",
+      "holding": "1950.5 and UCL claims against the manager sufficiently pleaded (systematic missing documentation, flat cleaning fees, late refunds alleged in bad faith); owner entities indispensable only for relief extinguishing balances they own; UCL four-year period governs class period.",
+      "dicta": "",
+      "later_history": "Followed by ECF 56 (Aug. 7, 2025); case in putative-class discovery Sept. 2026; Ninth Circuit denied Rule 23(f) petition Dec. 17, 2025."
+    },
+    {
+      "id": "brooks-ecf56-2025",
+      "cite": "Brooks v. Greystar Real Estate Partners, LLC, ECF 56 (S.D. Cal. Aug. 7, 2025)",
+      "court": "S.D. Cal.",
+      "weight": "persuasive",
+      "questions": [
+        "C1",
+        "C4"
+      ],
+      "file": "FED_Brooks_v_Greystar_SDCal_2025-08-07_ECF56.txt",
+      "source": "https://www.govinfo.gov/content/pkg/USCOURTS-casd-3_23-cv-01729/pdf/USCOURTS-casd-3_23-cv-01729-2.pdf",
+      "copy": "official (GovInfo)",
+      "holding": "Owner SPEs not necessary parties because return of deposits is complete relief available from the manager (citing Granberry, (h)(7), Leaser); struck 'Unauthorized Deduction Class' because 1950.5(b) 'any purpose' allows utility charges.",
+      "dicta": "",
+      "later_history": "Ninth Circuit denied Rule 23(f) petition Dec. 17, 2025 (ECF 68)."
+    },
+    {
+      "id": "leaser-2024",
+      "cite": "Leaser v. Prime Ascot, L.P., No. 2:20-cv-02502-DJC-AC, ECF 60 (E.D. Cal. June 12, 2024), 2024 WL 3011226",
+      "court": "E.D. Cal.",
+      "weight": "persuasive",
+      "questions": [
+        "C4"
+      ],
+      "file": "FED_Leaser_v_Prime_Ascot_EDCal_2024-06-12_ECF60.txt",
+      "source": "https://www.govinfo.gov/content/pkg/USCOURTS-caed-2_20-cv-02502/pdf/USCOURTS-caed-2_20-cv-02502-7.pdf",
+      "copy": "official (GovInfo)",
+      "holding": "A manager that orchestrated alleged excessive-fee and deposit practices may be liable in UCL restitution even if the funds went to owners; absent owners not required parties.",
+      "dicta": "",
+      "later_history": "GovInfo package shows only a July 19, 2024 stipulation afterwards. No citator."
+    },
+    {
+      "id": "ab2801-sjud-2024",
+      "cite": "Sen. Judiciary Com., Analysis of AB 2801 (2023-2024 Reg. Sess.) as amended Apr. 25, 2024, hearing June 11, 2024",
+      "court": "legislative history",
+      "weight": "persuasive",
+      "questions": [
+        "C1",
+        "C2"
+      ],
+      "file": "LEGHIST_AB2801_SJUD_analysis_2024-06-11.txt",
+      "source": "https://sjud.senate.ca.gov/system/files/2024-06/ab-2801-friedman-sjud-analysis.pdf",
+      "copy": "official",
+      "holding": "",
+      "dicta": "(h)(7) requires a good-faith attempt, not strict adherence; good-faith violator may offset (citing PhotoPoint).",
+      "later_history": "Final Senate amendments chaptering-only (Assembly floor analysis, Aug. 2024)."
+    },
+    {
+      "id": "ab2801-floor-2024",
+      "cite": "Assem. Floor Analysis, Concurrence in Senate Amendments, AB 2801 as amended Aug. 23, 2024",
+      "court": "legislative history",
+      "weight": "persuasive",
+      "questions": [
+        "C1"
+      ],
+      "file": "LEGHIST_AB2801_Assembly_floor_concurrence_2024-08.txt",
+      "source": "https://leginfo.legislature.ca.gov/faces/billAnalysisClient.xhtml?bill_id=202320240AB2801",
+      "copy": "official",
+      "holding": "",
+      "dicta": "Senate amendments: chaptering amendments to resolve conflicts with SB 611.",
+      "later_history": ""
+    },
+    {
+      "id": "sb908-senate-2020",
+      "cite": "Sen. Com. on Banking & Fin. Institutions, Analysis of SB 908 (2019-2020 Reg. Sess.) as amended Apr. 15, 2020",
+      "court": "legislative history",
+      "weight": "persuasive",
+      "questions": [
+        "DEBT-DCLA"
+      ],
+      "file": "LEGHIST_SB908_2020_Senate_Banking_analysis.txt",
+      "source": "https://leginfo.legislature.ca.gov/faces/billAnalysisClient.xhtml?bill_id=201920200SB908",
+      "copy": "official",
+      "holding": "",
+      "dicta": "Senate Judiciary staff: licensing aimed at those spending a considerable portion of their business collecting consumer credit debt; incidental collectors excluded.",
+      "later_history": ""
+    },
+    {
+      "id": "sb908-assembly-2020",
+      "cite": "Assem. Com. on Banking & Finance, Analysis of SB 908, hearing Aug. 12, 2020",
+      "court": "legislative history",
+      "weight": "persuasive",
+      "questions": [
+        "DEBT-DCLA"
+      ],
+      "file": "LEGHIST_SB908_2020_Assembly_Banking_analysis.txt",
+      "source": "https://abnk.assembly.ca.gov/sites/abnk.assembly.ca.gov/files/SB%20908%20Bill%20Analysis.pdf",
+      "copy": "official",
+      "holding": "",
+      "dicta": "DCLA uses Rosenthal definitions; Real Estate Law licensees exempt.",
+      "later_history": ""
+    },
+    {
+      "id": "sb546-assembly-2026",
+      "cite": "Assem. Com. on Banking & Finance, Analysis of SB 546 (2025-2026 Reg. Sess.), hearing June 22, 2026",
+      "court": "legislative history (bill not enacted)",
+      "weight": "persuasive",
+      "questions": [
+        "DEBT-DCLA",
+        "DEBT-ROSENTHAL"
+      ],
+      "file": "LEGHIST_SB546_2026_Assembly_Banking_analysis.txt",
+      "source": "https://abnk.assembly.ca.gov/system/files/2026-06/sb-546-analysis.pdf",
+      "copy": "official",
+      "holding": "",
+      "dicta": "Advance rent not RFDCPA credit; postpaid utilities are; billing agents for rent/utility statements implied to be DCLA licensees; sponsor Conservice DCLA-licensed.",
+      "later_history": "SB 546 ordered to Assembly inactive file Aug. 17, 2026; not enacted."
+    },
+    {
+      "id": "dfpi-pro0521-draft3",
+      "cite": "DFPI PRO 05/21 third prefiling draft text (Oct. 24, 2025)",
+      "court": "agency draft regulation",
+      "weight": "not law",
+      "questions": [
+        "DEBT-DCLA"
+      ],
+      "file": "REG_DFPI_PRO-05-21_third_draft_2025-10_NOT_ADOPTED.txt",
+      "source": "https://dfpi.ca.gov/wp-content/uploads/2025/10/PRO-05-21-TEXT-DCLA-3rd-Prefiling.pdf",
+      "copy": "official draft",
+      "holding": "",
+      "dicta": "Draft 10 CCR 1850.2(a)(1): residential rental debt not consumer debt for DCLA (COVID exception struck); draft 1850.1: 100001(b)(1) exemption limited to listed licensees and employees.",
+      "later_history": "DFPI page (2026-10-03) shows no formal notice or adoption."
+    },
+    {
+      "id": "civ-2330-2338-2343",
+      "cite": "Civ. Code 2330, 2338, 2343",
+      "court": "statute",
+      "weight": "binding",
+      "questions": [
+        "C4"
+      ],
+      "file": "STAT_CIV_2330.txt; STAT_CIV_2338.txt; STAT_CIV_2343.txt",
+      "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=2343.",
+      "copy": "official",
+      "holding": "",
+      "dicta": "",
+      "later_history": "Enacted 1872; unchanged."
+    }
+  ],
+  "not_found": [
+    {
+      "name": "Ingalls v. Bell",
+      "question": "C2",
+      "note": "Named in the task brief as a bad-faith deposit case; not found by name searches (Nimble, Scholar). Existence unconfirmed; not relied on."
+    },
+    {
+      "name": "Kovarik v. DeVaul Properties",
+      "question": "C2",
+      "note": "Named in the task brief; not found by name search. Existence unconfirmed; not relied on."
+    },
+    {
+      "name": "Appellate decision construing Civ 1950.5(h)(7) (AB 2801)",
+      "question": "C1",
+      "note": "None located by Scholar, domain-limited web and Granberry cited-by searches as of 2026-10-03."
+    },
+    {
+      "name": "Appellate decision on the limitation period for 1950.5 statutory damages",
+      "question": "C10",
+      "note": "None located; analysis rests on general penalty-limitation cases."
+    },
+    {
+      "name": "DFPI opinion letter on rent, property managers or billing agents under the DCLA",
+      "question": "DEBT-DCLA",
+      "note": "None located (dfpi.ca.gov opinion-letter page timed out; domain-limited search found only rulemaking comments)."
+    }
+  ]
 }
