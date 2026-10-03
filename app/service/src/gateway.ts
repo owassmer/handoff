@@ -38,6 +38,11 @@ export interface ActionSpec<Req> {
   perform(ctx: ActionContext, req: Req, key: string): Promise<Outcome>;
   /** Asks the outside system whether the effect under this key happened; null if it certainly did not. */
   lookup(ctx: ActionContext, req: Req, key: string): Promise<Outcome | null>;
+  /**
+   * Updates Handoff's own records once the effect is confirmed, in the same transaction that marks the
+   * action succeeded, however the success was learned. A paid refund enters the account here.
+   */
+  onSucceeded?(tx: Queryable, ctx: ActionContext, req: Req, result: Record<string, unknown>): Promise<void>;
 }
 
 export type ActionStatus = "refused" | "pending" | "succeeded" | "failed" | "uncertain";
@@ -253,7 +258,7 @@ export class Gateway {
     } catch (e) {
       return this.record(claimed, "uncertain", { reason: `could not confirm with the outside system: ${message(e)}` }, ctx.now);
     }
-    if (found) return this.settle(claimed, found, ctx.now);
+    if (found) return this.settle(claimed, found, ctx, spec, req);
 
     // It certainly did not happen. Act only if it is still authorized now.
     try {
@@ -276,23 +281,32 @@ export class Gateway {
     } catch (e) {
       return this.record({ id: action.id }, "uncertain", { reason: `no confirmation from the outside system: ${message(e)}` }, ctx.now);
     }
-    return this.settle({ id: action.id }, outcome, ctx.now);
+    return this.settle({ id: action.id }, outcome, ctx, spec, req);
   }
 
-  private settle(row: { id: string | number }, outcome: Outcome, at: Date): Promise<ActionRecord> {
-    return outcome.status === "succeeded"
-      ? this.record(row, "succeeded", { result: outcome.result }, at)
-      : this.record(row, "failed", { reason: outcome.reason }, at);
+  private settle<Req>(row: { id: string | number }, outcome: Outcome, ctx: ActionContext, spec: ActionSpec<Req>, req: Req): Promise<ActionRecord> {
+    if (outcome.status === "failed") return this.record(row, "failed", { reason: outcome.reason }, ctx.now);
+    const after = spec.onSucceeded;
+    return this.record(row, "succeeded", { result: outcome.result }, ctx.now, after && ((tx) => after(tx, ctx, req, outcome.result)));
   }
 
-  private async record(row: { id: string | number }, status: ActionStatus, detail: { reason?: string; result?: Record<string, unknown> }, at: Date): Promise<ActionRecord> {
-    const [updated] = await this.db.query<ActionRow>(
-      `update actions set status = $2, reason = $3, result = $4,
-         completed_at = case when $2 in ('succeeded', 'failed') then $5::timestamptz else completed_at end
-       where id = $1 returning *`,
-      [row.id, status, detail.reason ?? null, detail.result ?? null, at],
-    );
-    return toRecord(updated!);
+  private async record(
+    row: { id: string | number },
+    status: ActionStatus,
+    detail: { reason?: string; result?: Record<string, unknown> },
+    at: Date,
+    alsoRecord?: (tx: Queryable) => Promise<void>,
+  ): Promise<ActionRecord> {
+    return this.db.transaction(async (tx) => {
+      const [updated] = await tx.query<ActionRow>(
+        `update actions set status = $2, reason = $3, result = $4,
+           completed_at = case when $2 in ('succeeded', 'failed') then $5::timestamptz else completed_at end
+         where id = $1 returning *`,
+        [row.id, status, detail.reason ?? null, detail.result ?? null, at],
+      );
+      if (alsoRecord) await alsoRecord(tx);
+      return toRecord(updated!);
+    });
   }
 }
 

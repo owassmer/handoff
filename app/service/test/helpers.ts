@@ -27,16 +27,18 @@ export async function seedCase(q: Queryable, caseId = "case-1"): Promise<void> {
   await q.query(`insert into cases (id, tenancy_id, opened_at) values ($1, 'ten-1', '2026-10-12T16:00:00Z')`, [caseId]);
 }
 
-export function statement(overrides: { amountCents?: number; payeePartyId?: string; method?: string } = {}) {
-  const amountCents = overrides.amountCents ?? 73259;
+export function statement(overrides: { amountCents?: number; payeePartyId?: string; method?: "mailed_check" | "electronic_transfer"; closetCents?: number } = {}) {
+  const lines = [
+    { lineKey: "holdover", kind: "rent_due" as const, description: "Rent for Nov 11-16, 6 days at $91.17", amountCents: 54700, documentIds: [], estimate: false },
+    { lineKey: "closet-repair", kind: "charge" as const, description: "Bedroom 2 closet door and track, tenant share", amountCents: overrides.closetCents ?? 55000, documentIds: [], estimate: false },
+    { lineKey: "cleaning", kind: "charge" as const, description: "Cleaning, 3.5 hours", amountCents: 60791, documentIds: [], estimate: false },
+  ];
+  const left = 243750 - lines.reduce((t, l) => t + l.amountCents, 0);
+  const amountCents = overrides.amountCents ?? left;
   return {
     depositCents: 243750,
-    lines: [
-      { item: "holdover rent, 6 days", cents: 54700 },
-      { item: "closet repair, tenant share", cents: 55000 },
-      { item: "cleaning, 3.5 hours", cents: 60791 },
-    ],
-    refund: { payeePartyId: overrides.payeePartyId ?? "tenant-1", amountCents, method: overrides.method ?? "electronic_transfer" },
+    lines,
+    refund: { payeePartyId: overrides.payeePartyId ?? "tenant-1", amountCents, method: overrides.method ?? ("electronic_transfer" as const) },
     message: { toPartyId: "tenant-1", subject: "Your deposit statement", body: `Your refund of $${(amountCents / 100).toFixed(2)} is on its way.` },
   };
 }

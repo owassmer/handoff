@@ -40,3 +40,11 @@ export const DAY_MS = 24 * 60 * 60 * 1000;
 export function addDays(t: Date, days: number): Date {
   return new Date(t.getTime() + days * DAY_MS);
 }
+
+/** Where the business day is counted. One time zone for now; it belongs to the property once there are others. */
+export const BUSINESS_TIME_ZONE = "America/Los_Angeles";
+
+/** The calendar date of a moment in business time, as YYYY-MM-DD. */
+export function businessDate(t: Date): string {
+  return new Intl.DateTimeFormat("en-CA", { timeZone: BUSINESS_TIME_ZONE, year: "numeric", month: "2-digit", day: "2-digit" }).format(t);
+}

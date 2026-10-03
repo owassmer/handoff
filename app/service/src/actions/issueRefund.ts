@@ -1,6 +1,10 @@
 import { z } from "zod";
+import { StatementContent, statementProblem } from "../account/statement.js";
 import { PaymentDeclined, type Payments } from "../adapters/payments.js";
+import { businessDate } from "../clock.js";
+import { getDecision } from "../decisions.js";
 import { type ActionSpec, byDecision } from "../gateway.js";
+import { addEntry } from "../records.js";
 import { caseParties } from "./records.js";
 
 export const IssueRefundRequest = z.object({
@@ -32,6 +36,12 @@ export function issueRefund(payments: Payments): ActionSpec<IssueRefundRequest> 
         const payee = (await caseParties(ctx.q, ctx.caseId)).find((p) => p.partyId === req.payeePartyId);
         return payee?.relationship === "tenant" ? null : `${req.payeePartyId} is not a tenant on this tenancy`;
       },
+      async (ctx, req) => {
+        const parsed = StatementContent.safeParse((await getDecision(ctx.q, req.decisionId))?.content);
+        if (!parsed.success) return "the accepted statement is not a well-formed statement";
+        const problem = statementProblem(parsed.data);
+        return problem ? `the accepted statement does not add up: ${problem}` : null;
+      },
     ],
     async perform(ctx, req, key) {
       try {
@@ -48,6 +58,20 @@ export function issueRefund(payments: Payments): ActionSpec<IssueRefundRequest> 
     async lookup(_ctx, _req, key) {
       const receipt = await payments.find(key);
       return receipt ? { status: "succeeded", result: { ...receipt } } : null;
+    },
+    async onSucceeded(tx, ctx, req, result) {
+      await addEntry(tx, {
+        caseId: ctx.caseId!,
+        kind: "refund_paid",
+        lineKey: "refund",
+        description: `Deposit refund by ${req.method === "electronic_transfer" ? "electronic transfer" : "mailed check"}`,
+        amountCents: req.amountCents,
+        effectiveOn: businessDate(ctx.now),
+        decisionId: req.decisionId,
+        source: "handoff",
+        ledgerRef: String(result.paymentId ?? ""),
+        recordedAt: ctx.now,
+      });
     },
   };
 }

@@ -96,7 +96,8 @@ describe("copies of a world", () => {
     worlds.push(accepts, changes);
 
     await decide(accepts.db, DECIDER, pending.id, pending.contentHash, { verdict: "accept" }, start);
-    await decide(changes.db, DECIDER, pending.id, pending.contentHash, { verdict: "change", content: statement({ amountCents: 90000 }) }, start);
+    // The operator lowers the closet charge, so the refund rises to $900.00.
+    await decide(changes.db, DECIDER, pending.id, pending.contentHash, { verdict: "change", content: statement({ closetCents: 38259 }) }, start);
     await accepts.advanceTo(at("2026-12-02T00:00:00Z"));
     await changes.advanceTo(at("2026-12-02T00:00:00Z"));
     // Replaying the same branch again pays nothing more.

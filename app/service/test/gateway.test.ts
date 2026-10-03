@@ -1,6 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { decide, propose } from "../src/decisions.js";
 import { receiveMessage } from "../src/inbound.js";
+import { accountEntries } from "../src/records.js";
 import { setScenario } from "../src/sim/index.js";
 import { World } from "../src/world.js";
 import { ADMIN, DECIDER, at, noTurn, refundOf, seedCase, statement } from "./helpers.js";
@@ -40,12 +41,20 @@ describe("refunds through the gateway", () => {
     expect(await w.payments.all()).toMatchObject([{ amountCents: 73259, payeePartyId: "tenant-1", status: "submitted" }]);
   });
 
-  it("never pays twice for the same decision", async () => {
+  it("never pays twice for the same decision, and enters the refund in the account once", async () => {
     const d = await acceptedStatement();
     const first = await refund(refundOf(d.id, statement()));
     const again = await refund(refundOf(d.id, statement()));
     expect(again.id).toBe(first.id);
     expect(await w.payments.all()).toHaveLength(1);
+    expect(await accountEntries(w.db, "case-1")).toMatchObject([{ kind: "refund_paid", amountCents: 73259, decisionId: d.id, effectiveOn: "2026-12-01" }]);
+  });
+
+  it("refuses to pay under a statement that does not add up, even an accepted one", async () => {
+    const content = statement({ amountCents: 80000 });
+    const d = await acceptedStatement(content);
+    expect((await refund(refundOf(d.id, content))).reason).toMatch(/does not add up: the refund must be 73259 cents/);
+    expect(await w.payments.all()).toHaveLength(0);
   });
 
   it("refuses an amount, payee or method other than the accepted one", async () => {
@@ -80,9 +89,12 @@ describe("refunds through the gateway", () => {
     await setScenario(w.db, "payments", "send", { mode: "timeout-after-send", remaining: 1 });
     const first = await refund(refundOf(d.id, statement()));
     expect(first.status).toBe("uncertain");
+    expect(await accountEntries(w.db, "case-1")).toHaveLength(0);
     const settled = await refund(refundOf(d.id, statement()));
     expect(settled).toMatchObject({ id: first.id, status: "succeeded" });
     expect(await w.payments.all()).toHaveLength(1);
+    // Confirmed late, but entered in the account all the same, and once.
+    expect(await accountEntries(w.db, "case-1")).toMatchObject([{ kind: "refund_paid", amountCents: 73259 }]);
   });
 
   it("pays when the bank never received the first attempt", async () => {
