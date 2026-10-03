@@ -46,6 +46,8 @@ describe("parsing", () => {
     expect(r.value).toBe(UNKNOWN);
     expect(r.missing).toEqual(["process"]);
     await expect(value("f.constructor", { f: {} })).rejects.toThrow(/cannot be read/);
+    await expect(value("constructor")).rejects.toThrow(/cannot be read/);
+    await expect(value("f.__proto__", { f: {} })).rejects.toThrow(/cannot be read/);
   });
 });
 

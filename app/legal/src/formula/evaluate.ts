@@ -111,6 +111,7 @@ class Run {
         return null;
       case "name":
         if (e.name === "parameters") return this.scope.parameters ?? {};
+        if (FORBIDDEN_PROPERTIES.has(e.name)) throw new FormulaError(`"${e.name}" cannot be read`);
         return this.read(this.scope.facts[e.name], e.name);
       case "member":
         return this.member(await this.eval(e.object), e.property, pathOf(e));

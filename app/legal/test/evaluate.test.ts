@@ -159,6 +159,31 @@ describe("discretionary leaves and contested points", () => {
     expect(r2.leaves["any-purpose"]!.basis).toMatchObject({ by: "decision", decided: { value: false, by: "operator-1" } });
   });
 
+  it("asks a question that matters only under one branch, so that branch can be reported", async () => {
+    const t = makeTree("CA.branchq", { type: "all", children: [discretionary("reach", "C6"), semantic("owed", ["e.ledger"])] }, {
+      inputs: ["f", "e.ledger"],
+      contested: [
+        {
+          issue: "C6",
+          question: "Does the deposit reach it?",
+          exposureBranch: "B",
+          branches: [
+            { id: "A", reading: "Yes.", authority: [{ citation: "Civ 1950.5(b)", quote: "any purpose" }], effect: { statement: "Yes.", sets: { reach: true } } },
+            { id: "B", reading: "No.", authority: [{ citation: "Civ 1950.5(b)", quote: "four purposes" }], effect: { statement: "No.", sets: { reach: false } } },
+          ],
+        },
+      ],
+    });
+    const answers = fixtureAnswers({ owed: true });
+    const r = await evaluate("CA.branchq", { e: { ledger: "late fee unpaid" } }, { jurisdiction: jurisdictionOf(t), eventDate: "2026-11-16", decisions: { reach: false }, answers });
+    expect(r.root).toBe(false);
+    expect(answers.asked.map((a) => a.leafId)).toEqual(["owed"]);
+    expect(r.contested[0]!.branches.map((b) => [b.id, b.root])).toEqual([
+      ["A", true],
+      ["B", false],
+    ]);
+  });
+
   it("when the lease makes it rent, every branch agrees", async () => {
     const r = await evaluate("CA.contest", { f: { ...facts.f, is_rent: true } }, { jurisdiction: j, eventDate: "2026-11-16" });
     expect(r.root).toBe(true);
