@@ -102,7 +102,7 @@ TypeScript throughout. Postgres for all records. The LangGraph library for the a
   2. The coordinator reasons and uses tools.
   3. The run ends once it has acted or is waiting on something. Waiting is stored as data, not as a paused run, so code can change between wakes.
 - **Specialists:**
-  - an evidence analyst compares move-in and move-out photos and records for each condition and reports findings with responsibility;
+  - an evidence analyst, on a model that can read images, records neutral observations of each condition from the move-in, inspection and move-out photos and notes: what is visible, where, and how extensive. These are observations, not legal conclusions;
   - a legal reader answers a specific question from the compiled rules and the saved texts.
 
   The coordinator does the rest. Jev handles narrow judgments where measurement shows it helps.
@@ -112,18 +112,83 @@ TypeScript throughout. Postgres for all records. The LangGraph library for the a
   - prepare: the pre-move-out list, the work plan, the account, a settlement;
   - act: messages, scheduling, quotes, orders, ledger postings, refunds, collector hand-offs. Act tools go through the gateway.
 
-### 5.3 The law inside the system
+### 5.3 The legal engine inside Handoff
 
-- California's compiled rules are loaded as data from the legal pipeline.
-- Code evaluates the determinate rules:
-  - the 21-day date and how it is computed;
-  - the estimate-then-complete path for repairs and invoices not yet received, and whether it extends to a late final utility bill;
-  - the $125 documentation threshold;
-  - documentation requests within 14 days;
-  - refund method and recipients, including several adult tenants;
-  - the holdover proration.
-- Standards such as ordinary wear and "reasonably necessary" go to the agent and the evidence analyst, with the rule text and the company schedule.
-- Each account line carries its rule reference, its evidence links and its exposure (bad-faith forfeiture, up to twice the deposit).
+The thesis is from Nay's *Law Informs Code*: law turns goals into directives that can be stated in advance (rules) or applied to situations nobody listed (standards). Handoff compiles the rules, breaks the standards into answerable questions, and binds both to the evidence the turn produces. Jev is the sensor at each joint between a piece of evidence and a legal condition. Code evaluates the logic. The agent investigates whatever is still unresolved. The same compiled law also limits what Handoff's own agent may do.
+
+**What the legal track compiles.** For each decision point, using CORDON's stages:
+1. **Legal meaning as logic trees.** Each provision becomes conditions joined by *all*, *any* and *not*, plus:
+   - exceptions ("unless") and requirements ("only if");
+   - effects: a permission, a prohibition or a duty, with its amount or date formula.
+
+   Every node carries its verbatim source quote, its effective dates and, where the law is genuinely contested, both branches with their authority.
+2. **Clocks and parameters:** the 21-day deadline, 14-day completion, 48 hours' notice, the two-week inspection window, the $125 threshold, twice the deposit, the photo dates, holiday rules.
+3. **Evaluators.** Code evaluates a tree over facts that are true, false or unknown, and returns effects plus a full trace. Unknown is a recorded state, never zero or false.
+4. **Evidence contracts.** For each condition: the records that settle it (photos taken before and after the work, an invoice with the vendor's name, address and phone, or hours and rate), or the Jev question that settles it and the exact inputs that question needs.
+5. **Actions.** Legal effects become duties on the clock (send the statement by December 7), checks at the action gateway (no deduction unless its contract is met), and required text in notices.
+
+**Three kinds of condition in a tree.**
+- **Determinate**, which code computes from records: dates, amounts, whether move-in photos exist, whether an initial inspection took place, the payment method, the number of adult tenants.
+- **Semantic**, which Jev answers. These are narrow, typed questions with a defined consumer:
+  - a yes/no probability (Noul);
+  - a choice among alternatives (Choice);
+  - a position on a defined scale (Score).
+
+  Standards are broken into the factors the authority uses. "Beyond ordinary wear" becomes questions about cause (accident, abuse or neglect versus normal use), extent, and age against useful life, each asked separately over the move-in and move-out evidence.
+- **Discretionary or contested**, which stays with the agent and the operator: whether to pursue a permitted charge, settlement, and which side of a genuine legal disagreement to take. The tree supplies both branches and their consequences.
+
+**Worked example: may the closet charge be deducted, and for how much?** It is allowed, up to the reasonable cost, when all of these hold:
+- The deposit is security under the lease. *(record)*
+- The damage was caused by the tenant or a guest. *(Jev, over the move-out evidence and the tenancy record)*
+- It was not present at move-in. *(The move-in photos exist for this tenancy: record. Jev answers whether they or the move-in record show it.)*
+- It goes beyond ordinary wear. *(Jev, factor by factor: cause, extent, and the closet's age against its useful life, with age from the unit's records.)*
+- It was on the pre-move-out list, **or** the tenant's belongings hid it at that inspection, **or** it happened after the inspection. *(List membership: record. Hidden or later: Jev, over the inspection photos and notes.)*
+- The amount does not exceed the reasonable cost of restoring move-in condition. *(Code, from the invoice or the hours and rate, and the company schedule's share. Jev answers whether the work restores rather than improves.)*
+- The statement includes photos after possession returned but before the repair, photos after it, and the invoice or hours and rate. The exception is when repair and cleaning deductions total $125 or less and the tenant has not asked for documentation. *(record)*
+- It goes out by day 21, or as a good-faith estimate completed within 14 days. *(clock)*
+
+**Effect and exposure.**
+- If every condition is satisfied: the deduction is allowed at the computed amount, with its evidence bundle.
+- If a condition is unresolved: Handoff investigates before recommending, for example by getting the technician's note, closer photos, or the closet's install date.
+- Exposure comes from the consequence branch: a bad-faith claim forfeits the whole deposit and can add up to twice the deposit.
+
+**Observations first, then judgments.** Jev reads text only. Photos are therefore turned into neutral, per-condition observations by the evidence analyst, and Jev judges the legal questions over those observations together with the records. Observation and legal conclusion stay separate records, so a disputed photo can be re-observed without redoing the law. The service calls Jev's HTTP API directly, since its official SDK is Python-only.
+
+**How Jev runs at a wake.**
+1. Code checks each question's evidence contract before asking it. Missing inputs become an investigation task, never a question. This guards against Jev answering yes on too little context, a failure seen in testing.
+2. Independent questions that share evidence go out as one batch, and Jev returns probabilities.
+3. A per-question policy, measured on labelled cases, maps each probability to established, negated or unresolved.
+4. The evaluator recomputes the tree.
+5. Each answer is logged with its inputs, the answer, and what it caused (used, prompted investigation, overridden with a reason). That log is the audit record and the next round's evaluation data.
+
+**Jev also reads every inbound message for facts that change the law's path:**
+- which account line a message disputes;
+- a documentation request within 14 days;
+- a new forwarding address;
+- bankruptcy, military orders or domestic-violence termination.
+
+Code routes each answer to the tree it switches.
+
+**Consistency at scale.** The same questions, the same company schedule and the same trees run on every unit. That is "one standard for every unit" made real, and it is the strongest defense against pattern claims. A free-form agent judging each case afresh cannot promise it.
+
+**The agent's place.**
+- The coordinator chooses which trees apply, gathers the evidence their contracts require, resolves unknowns by investigating, and writes the recommendation with each line's trace.
+- It cannot override a determinate prohibition; the gateway enforces it.
+- The legal reader specialist answers questions the compiled trees don't cover, and logs each one as a gap for the legal track.
+
+**Change.**
+- Trees are versioned by effective date. Each case is evaluated under the law in force on its event dates.
+- A change in law re-evaluates only the open cases it affects.
+- A changed fact re-evaluates only the nodes that depend on it.
+- Jev answers are reused only when the request is exactly the same.
+
+**Proving it earns its place.** Each Jev question has a labelled set: cases built from the scenarios and from reviewed real material. The scenario library runs a four-way comparison:
+1. today's process;
+2. a capable model with the same records;
+3. that model with the compiled trees;
+4. that model with the trees and Jev.
+
+They are compared on charges that are lawful and defensible, deadlines met, recovery, operator effort and cost. A component that doesn't improve the result is removed.
 
 ### 5.4 Surfaces
 
@@ -154,7 +219,7 @@ TypeScript throughout. Postgres for all records. The LangGraph library for the a
 
 1. The case runtime core: records, inbox, clock, decisions, gateway, adapter interfaces and the imitations.
 2. The agent: the coordinator, its tools and the evidence analyst. Physical work first, so the loop runs end to end.
-3. The law: the account-core rules from the legal track, and their evaluators.
+3. The legal engine: logic trees for the account decisions from the legal track, the tree evaluator, evidence contracts, the TypeScript Jev client, and labelled sets for each Jev question.
 4. The account path and the operator decision screens.
 5. The tenant page, the simulated tenant and the email rendering.
 6. Scenarios, staged copies and evaluation, then the model comparison and the demo freeze.
