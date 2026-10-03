@@ -258,7 +258,7 @@ The 21-day clock runs from when "the tenant has vacated the premises" ((h)(1)) (
   - (3) cleaning back to the cleanliness at the inception of the tenancy;
   - (4) restoring, replacing or returning personal property or appurtenances, if the rental agreement authorizes it.
 - The list follows "used or to be used for any purpose, including, but not limited to". (e)(1) limits claims to "amounts as are reasonably necessary for the purposes specified in subdivision (b)".
-- Whether other lease debts, such as utilities, can come out of the deposit is contested (C6). The Brooks v. Greystar order (ECF 56, S.D. Cal. Aug. 7, 2025) read (b) to permit deduction "for any purpose" (RECORD.md; nonbinding).
+- Whether other lease debts, such as utilities, can come out of the deposit is contested (C6). Brooks v. Greystar, ECF 56 (S.D. Cal. Aug. 7, 2025), pp. 13–14 (read from `research/california-case/sources/brooks-greystar-2025-08-07.pdf`): "the plain text of subsections (b) and (e) of Section 1950.5 expressly allow security deposits to be used 'for any purpose' … Therefore, utility charges may be claimed from security deposits." A nonbinding district-court order at the pleading stage.
 
 **DP5.2 Fees and charges**
 See DP1.4.
@@ -408,7 +408,7 @@ No owner-level rule (I). Brokers: BPC 10145 and 10176 (T). No effect on the tena
 
 **DP7.6 The tenant's claim: who, where, by when**
 - Small claims (1950.5(o); CCP 116.220 and 116.221) (T): limits are $6,250 generally and $12,500 for a natural-person plaintiff. A tenant suing for a deposit is within the $12,500 limit.
-- CCP 116.231 (T) limits a plaintiff to two small-claims actions above $2,500 in a calendar year. Check against the entity limit for owner suits.
+- CCP 116.231(a) (T): no person may file more than two small-claims actions demanding more than $2,500 anywhere in the state in a calendar year. A declaration is required ((b)). The public-entity exception in (d) does not apply to a private owner. This binds the operator as plaintiff (DP8.9).
 - CCP 116.540(h) (T): the owner may appear through a property agent under contract to manage the property, if the agent was retained principally to manage and the claim relates to the property. A declaration is required ((j)).
 - CCP 116.710 (T): the plaintiff cannot appeal its own claim; the defendant can appeal to the superior court. In practice, the operator as defendant can appeal a tenant's deposit judgment, but not its own claim as plaintiff.
 - Venue: CCP 116.370 (T).
@@ -463,7 +463,7 @@ None identified in OC or HB (I; search not exhaustive).
   - CORP 2203 is the parallel rule for foreign corporations (T);
   - RTC 23301 (T): a taxpayer suspended by the Franchise Tax Board loses its powers, rights and privileges.
   - Code: check entity status before any filing.
-- Small claims: entity plaintiff limit $6,250 (116.220), with the property-agent appearance under 116.540(h).
+- Small claims for the owner: an entity plaintiff is limited to $6,250 (116.220(a)(1)) and to two filings above $2,500 per calendar year statewide (116.231(a)). Each owner entity counts separately, so a single-asset owner entity gets two (I). The property agent may appear under 116.540(h). Code: the remaining filing count per owner entity per year. Balances above $6,250, or beyond the two filings, go to limited civil court with counsel, which changes net recovery.
 - Payment plans: no statute prescribes their terms. A plan that adds interest or finance charges may itself be a credit transaction that brings in Rosenthal (C3; OPERATING_BRANCHES A23).
 
 **DP8.10 Tax**
@@ -689,7 +689,7 @@ For a move-out in late December 2026 whose day 21 falls in January 2027: the dut
   - Consequence: one to three days of margin. Recommend acting by the nominal day 21.
 - **C6. Applying the deposit to utilities and other non-(b) lease debts.**
   - "Any purpose, including, but not limited to" against (e)(1) "reasonably necessary for the purposes specified in subdivision (b)".
-  - Brooks ECF 56 (S.D. Cal., nonbinding) allowed utility deductions. For submetered water, 1954.207(c) expressly permits it on conditions.
+  - Brooks ECF 56 at 13–14 (S.D. Cal., nonbinding; read) struck the utility-deduction class: (b)'s "any purpose, including, but not limited to" allows utility charges. The contrary reading, that (e)(1) limits claims to (b)'s four enumerated purposes, was the plaintiffs' argument and has no appellate test. For submetered water, 1954.207(c) expressly permits it on conditions.
 - **C7. Late final utility bills.**
   - Does (h)(3)'s estimate reach non-repair documents (utility bills)?
   - Can an estimate satisfy 1954.207(c)'s attached-bill condition?

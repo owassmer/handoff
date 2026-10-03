@@ -43,7 +43,7 @@ CourtListener is blocked. The official courts.ca.gov archive holds only recent o
 
 **Brooks v. Greystar**
 - ECF 48 is saved as text in `research/california-case/sources/`.
-- ECF 56 (Aug 7, 2025: the utility-deduction ruling) is saved only as a PDF (`brooks-greystar-2025-08-07.pdf`). The map relies on RECORD.md's summary of it; the wording should be confirmed from the PDF.
+- ECF 56 (Aug 7, 2025) is saved as a PDF (`brooks-greystar-2025-08-07.pdf`). Its utility passage (pp. 13–14) was read and quoted this session.
 
 **Huntington Beach**
 - No eCode360 search for deposit, rent, collection or utility-billing rules for tenants was run this session. The conclusion that HB has no account rules rests on the J0 profile, RESEARCH.md and the absence of HB rent or tenant ordinances in prior work.
